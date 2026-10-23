@@ -1,0 +1,21 @@
+✔ canonical and multiline CSV validate as one paired bundle (70.720584ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (67.906667ms)
+✔ rehashing CSV that disagrees with canonical fails (71.114834ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (61.282209ms)
+✔ missing canonical and symlink metadata reject (123.102ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (8.169208ms)
+✔ string byte widths and all long boundaries preserve every logical byte (15.14575ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.164333ms)
+✔ duplicate names must be rejected rather than shadowed (0.210334ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.546834ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (103.395334ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (126.528833ms)
+✔ row and output budgets reject with resource exit and no committed bundle (63.7825ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 424.021792

@@ -1,0 +1,72 @@
+✖ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (1.67625ms)
+✔ string byte widths and all long boundaries preserve every logical byte (20.558583ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.276125ms)
+✖ duplicate names must be rejected rather than shadowed (0.392542ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.984833ms)
+✖ CSV NUL representation failure is explicit; NDJSON retains it (33.685708ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (117.974666ms)
+✔ row and output budgets reject with resource exit and no committed bundle (59.482833ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 5
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 273.218333
+
+✖ failing tests:
+
+test at tests/core.test.mjs:4:1
+✖ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (1.67625ms)
+  Error: Incompatible value label association
+      at dispatch (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:16:19)
+      at readSav (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:23:10)
+      at read (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:2:15)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:4:210)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    code: 'InvalidDictionary',
+    byte_offset: 260
+  }
+
+test at tests/core.test.mjs:7:1
+✖ duplicate names must be rejected rather than shadowed (0.392542ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:7:74)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'InvalidDictionary' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/core.test.mjs:9:1
+✖ CSV NUL representation failure is explicit; NDJSON retains it (33.685708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 5
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:9:226)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

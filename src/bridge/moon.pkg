@@ -1,0 +1,20 @@
+import {
+  "z2823253773/moonsav",
+}
+
+supported_targets = "js"
+
+options(
+  "is-main": true,
+  link: {
+    "js": {
+      "exports": [
+        "run",
+        "check_manifest_bridge",
+        "check_start_bridge",
+        "check_row_bridge",
+        "check_end_bridge",
+      ],
+    },
+  },
+)

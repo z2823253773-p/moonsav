@@ -1,0 +1,13 @@
+✔ canonical and multiline CSV validate as one paired bundle (66.296833ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (67.306667ms)
+✔ rehashing CSV that disagrees with canonical fails (64.875291ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (60.525125ms)
+✔ missing canonical and symlink metadata reject (122.06275ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 410.199542

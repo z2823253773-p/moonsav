@@ -1,0 +1,611 @@
+Warning: Package `z2823253773/moonsav/bridge` uses legacy array syntax for `supported_targets`; use expression syntax like `<backend>` instead
+Warning: [0035]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:4:4 ]
+   │
+ 4 │ fn member(j : Json,key : String) -> Json raise SavError {match j.value(key) {Some(v)=>v;None=>{reject("IntegrityMismatch","Missing required field: "+key);Json::null()}}}
+   │    ───┬──  
+   │       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+───╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:21:10 ]
+    │
+ 21 │  if jstr(member(j,"type"))!=kind {reject("IntegrityMismatch","Atom type disagrees with variable")}
+    │          ───┬──  
+    │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:22:46 ]
+    │
+ 22 │  let atom : Atom={type_:kind,decimal:opt_str(member(j,"decimal")),ieee754_hex:opt_str(member(j,"ieee754_hex")),text:opt_str(member(j,"text")),logical_bytes_base64:opt_str(member(j,"logical_bytes_base64")),width:jnum(member(j,"width")),endpoint:opt_str(member(j,"endpoint"))}
+    │                                              ───┬──  
+    │                                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:22:87 ]
+    │
+ 22 │  let atom : Atom={type_:kind,decimal:opt_str(member(j,"decimal")),ieee754_hex:opt_str(member(j,"ieee754_hex")),text:opt_str(member(j,"text")),logical_bytes_base64:opt_str(member(j,"logical_bytes_base64")),width:jnum(member(j,"width")),endpoint:opt_str(member(j,"endpoint"))}
+    │                                                                                       ───┬──  
+    │                                                                                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:22:125 ]
+    │
+ 22 │  let atom : Atom={type_:kind,decimal:opt_str(member(j,"decimal")),ieee754_hex:opt_str(member(j,"ieee754_hex")),text:opt_str(member(j,"text")),logical_bytes_base64:opt_str(member(j,"logical_bytes_base64")),width:jnum(member(j,"width")),endpoint:opt_str(member(j,"endpoint"))}
+    │                                                                                                                             ───┬──  
+    │                                                                                                                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:22:172 ]
+    │
+ 22 │  let atom : Atom={type_:kind,decimal:opt_str(member(j,"decimal")),ieee754_hex:opt_str(member(j,"ieee754_hex")),text:opt_str(member(j,"text")),logical_bytes_base64:opt_str(member(j,"logical_bytes_base64")),width:jnum(member(j,"width")),endpoint:opt_str(member(j,"endpoint"))}
+    │                                                                                                                                                                            ───┬──  
+    │                                                                                                                                                                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:22:217 ]
+    │
+ 22 │  let atom : Atom={type_:kind,decimal:opt_str(member(j,"decimal")),ieee754_hex:opt_str(member(j,"ieee754_hex")),text:opt_str(member(j,"text")),logical_bytes_base64:opt_str(member(j,"logical_bytes_base64")),width:jnum(member(j,"width")),endpoint:opt_str(member(j,"endpoint"))}
+    │                                                                                                                                                                                                                         ───┬──  
+    │                                                                                                                                                                                                                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:22:253 ]
+    │
+ 22 │  let atom : Atom={type_:kind,decimal:opt_str(member(j,"decimal")),ieee754_hex:opt_str(member(j,"ieee754_hex")),text:opt_str(member(j,"text")),logical_bytes_base64:opt_str(member(j,"logical_bytes_base64")),width:jnum(member(j,"width")),endpoint:opt_str(member(j,"endpoint"))}
+    │                                                                                                                                                                                                                                                             ───┬──  
+    │                                                                                                                                                                                                                                                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:33:15 ]
+    │
+ 33 │  let raw=jnum(member(j,"raw"));let f=format(raw)
+    │               ───┬──  
+    │                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:34:18 ]
+    │
+ 34 │  if f.code!=jnum(member(j,"code")) || f.width!=jnum(member(j,"width")) || f.decimals!=jnum(member(j,"decimals")) {reject("IntegrityMismatch","Format fields disagree with raw code")};f
+    │                  ───┬──  
+    │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:34:53 ]
+    │
+ 34 │  if f.code!=jnum(member(j,"code")) || f.width!=jnum(member(j,"width")) || f.decimals!=jnum(member(j,"decimals")) {reject("IntegrityMismatch","Format fields disagree with raw code")};f
+    │                                                     ───┬──  
+    │                                                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:34:92 ]
+    │
+ 34 │  if f.code!=jnum(member(j,"code")) || f.width!=jnum(member(j,"width")) || f.decimals!=jnum(member(j,"decimals")) {reject("IntegrityMismatch","Format fields disagree with raw code")};f
+    │                                                                                            ───┬──  
+    │                                                                                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:38:10 ]
+    │
+ 38 │  if jstr(member(j,"schema_version"))!="moonsav.bundle/1" {reject("UnsupportedSchema","Unsupported manifest schema")}
+    │          ───┬──  
+    │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:39:19 ]
+    │
+ 39 │  let profile=jstr(member(j,"profile"));if profile!="csv_with_canonical" && profile!="ndjson" {reject("UnsupportedSchema","Unsupported bundle profile")}
+    │                   ───┬──  
+    │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:40:16 ]
+    │
+ 40 │  let rows=jnum(member(j,"actual_rows"));limit(rows,options.limits.rows,"rows")
+    │                ───┬──  
+    │                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:41:16 ]
+    │
+ 41 │  let cols=jnum(member(j,"logical_variables"));if cols==0 {reject("IntegrityMismatch","Bundle has no variables")};limit(cols,options.limits.variables,"variables")
+    │                ───┬──  
+    │                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:42:12 ]
+    │
+ 42 │  let input=member(j,"input");limit(jnum(member(input,"size_bytes")),options.limits.input_bytes,"input_bytes");check_sha(jstr(member(input,"sha256")))
+    │            ───┬──  
+    │               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:42:41 ]
+    │
+ 42 │  let input=member(j,"input");limit(jnum(member(input,"size_bytes")),options.limits.input_bytes,"input_bytes");check_sha(jstr(member(input,"sha256")))
+    │                                         ───┬──  
+    │                                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:42:126 ]
+    │
+ 42 │  let input=member(j,"input");limit(jnum(member(input,"size_bytes")),options.limits.input_bytes,"input_bytes");check_sha(jstr(member(input,"sha256")))
+    │                                                                                                                              ───┬──  
+    │                                                                                                                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:43:18 ]
+    │
+ 43 │  let files=match member(j,"files").as_object() {Some(o)=>o;None=>{reject("IntegrityMismatch","Expected manifest file map");Map::new()}}
+    │                  ───┬──  
+    │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:47:158 ]
+    │
+ 47 │  for name in expected {let f=match files.get(name) {Some(f)=>f;None=>{reject("IntegrityMismatch","Missing required manifest file");Json::null()}};let n=jnum(member(f,"size_bytes"));if n>options.limits.output_bytes-total {reject("ResourceLimit","Bundle total bytes exceed limit")};total+=n;check_sha(jstr(member(f,"sha256")))}
+    │                                                                                                                                                              ───┬──  
+    │                                                                                                                                                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:47:305 ]
+    │
+ 47 │  for name in expected {let f=match files.get(name) {Some(f)=>f;None=>{reject("IntegrityMismatch","Missing required manifest file");Json::null()}};let n=jnum(member(f,"size_bytes"));if n>options.limits.output_bytes-total {reject("ResourceLimit","Bundle total bytes exceed limit")};total+=n;check_sha(jstr(member(f,"sha256")))}
+    │                                                                                                                                                                                                                                                                                                                 ───┬──  
+    │                                                                                                                                                                                                                                                                                                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:59:10 ]
+    │
+ 59 │  if jstr(member(j,"schema_version"))!="moonsav.metadata/1" {reject("UnsupportedSchema","Unsupported metadata schema")}
+    │          ───┬──  
+    │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:60:10 ]
+    │
+ 60 │  if jstr(member(j,"validation_scope"))!="full" {reject("IncompleteBundle","Metadata does not describe full validation")}
+    │          ───┬──  
+    │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:61:25 ]
+    │
+ 61 │  let expected_rows=jnum(member(manifest,"actual_rows"));if jnum(member(j,"actual_rows"))!=expected_rows {reject("IntegrityMismatch","Metadata/manifest rows disagree")}
+    │                         ───┬──  
+    │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:61:65 ]
+    │
+ 61 │  let expected_rows=jnum(member(manifest,"actual_rows"));if jnum(member(j,"actual_rows"))!=expected_rows {reject("IntegrityMismatch","Metadata/manifest rows disagree")}
+    │                                                                 ───┬──  
+    │                                                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:62:28 ]
+    │
+ 62 │  let declared_rows=opt_int(member(j,"declared_rows"));if declared_rows is Some(n) && n!=expected_rows {reject("IntegrityMismatch","Declared and actual rows disagree")}
+    │                            ───┬──  
+    │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:63:10 ]
+    │
+ 63 │  let enc=member(j,"encoding");let effective=canonical_encoding(jstr(member(enc,"effective")))
+    │          ───┬──  
+    │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:63:69 ]
+    │
+ 63 │  let enc=member(j,"encoding");let effective=canonical_encoding(jstr(member(enc,"effective")))
+    │                                                                     ───┬──  
+    │                                                                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:64:19 ]
+    │
+ 64 │  let profile=jstr(member(enc,"profile"));let policy=jstr(member(enc,"string_matching_policy"))
+    │                   ───┬──  
+    │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:64:58 ]
+    │
+ 64 │  let profile=jstr(member(enc,"profile"));let policy=jstr(member(enc,"string_matching_policy"))
+    │                                                          ───┬──  
+    │                                                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:66:48 ]
+    │
+ 66 │  let encoding : EncodingInfo={declared:opt_str(member(enc,"declared")),machine_code:opt_int(member(enc,"machine_code")),effective,profile,selection_source:jstr(member(enc,"selection_source")),string_matching_policy:policy}
+    │                                                ───┬──  
+    │                                                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:66:93 ]
+    │
+ 66 │  let encoding : EncodingInfo={declared:opt_str(member(enc,"declared")),machine_code:opt_int(member(enc,"machine_code")),effective,profile,selection_source:jstr(member(enc,"selection_source")),string_matching_policy:policy}
+    │                                                                                             ───┬──  
+    │                                                                                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:66:161 ]
+    │
+ 66 │  let encoding : EncodingInfo={declared:opt_str(member(enc,"declared")),machine_code:opt_int(member(enc,"machine_code")),effective,profile,selection_source:jstr(member(enc,"selection_source")),string_matching_policy:policy}
+    │                                                                                                                                                                 ───┬──  
+    │                                                                                                                                                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:68:30 ]
+    │
+ 68 │  let system_missing_hex=jstr(member(j,"system_missing_hex"));let lowest_hex=jstr(member(j,"lowest_hex"));let highest_hex=jstr(member(j,"highest_hex"))
+    │                              ───┬──  
+    │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:68:82 ]
+    │
+ 68 │  let system_missing_hex=jstr(member(j,"system_missing_hex"));let lowest_hex=jstr(member(j,"lowest_hex"));let highest_hex=jstr(member(j,"highest_hex"))
+    │                                                                                  ───┬──  
+    │                                                                                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:68:127 ]
+    │
+ 68 │  let system_missing_hex=jstr(member(j,"system_missing_hex"));let lowest_hex=jstr(member(j,"lowest_hex"));let highest_hex=jstr(member(j,"highest_hex"))
+    │                                                                                                                               ───┬──  
+    │                                                                                                                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:71:20 ]
+    │
+ 71 │  let var_json=jarr(member(j,"variables"));if var_json.length()!=jnum(member(manifest,"logical_variables")) || var_json.length()!=jnum(member(j,"logical_variables")) {reject("IntegrityMismatch","Variable counts disagree")}
+    │                    ───┬──  
+    │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:71:70 ]
+    │
+ 71 │  let var_json=jarr(member(j,"variables"));if var_json.length()!=jnum(member(manifest,"logical_variables")) || var_json.length()!=jnum(member(j,"logical_variables")) {reject("IntegrityMismatch","Variable counts disagree")}
+    │                                                                      ───┬──  
+    │                                                                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:71:135 ]
+    │
+ 71 │  let var_json=jarr(member(j,"variables"));if var_json.length()!=jnum(member(manifest,"logical_variables")) || var_json.length()!=jnum(member(j,"logical_variables")) {reject("IntegrityMismatch","Variable counts disagree")}
+    │                                                                                                                                       ───┬──  
+    │                                                                                                                                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:74:18 ]
+    │
+ 74 │   let index=jnum(member(item,"index"));if index!=variables.length() {reject("IntegrityMismatch","Variable index/order mismatch")}
+    │                  ───┬──  
+    │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:75:17 ]
+    │
+ 75 │   let name=jstr(member(item,"name"));let short_name=jstr(member(item,"short_name"))
+    │                 ───┬──  
+    │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:75:58 ]
+    │
+ 75 │   let name=jstr(member(item,"name"));let short_name=jstr(member(item,"short_name"))
+    │                                                          ───┬──  
+    │                                                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:77:17 ]
+    │
+ 77 │   let kind=jstr(member(item,"type"));let width=jnum(member(item,"width"))
+    │                 ───┬──  
+    │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:77:53 ]
+    │
+ 77 │   let kind=jstr(member(item,"type"));let width=jnum(member(item,"width"))
+    │                                                     ───┬──  
+    │                                                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:79:21 ]
+    │
+ 79 │   let label=opt_str(member(item,"label"));let raw_label_base64=opt_str(member(item,"raw_label_base64"))
+    │                     ───┬──  
+    │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:79:72 ]
+    │
+ 79 │   let label=opt_str(member(item,"label"));let raw_label_base64=opt_str(member(item,"raw_label_base64"))
+    │                                                                        ───┬──  
+    │                                                                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:83:21 ]
+    │
+ 83 │   for entry in jarr(member(item,"value_labels")) {
+    │                     ───┬──  
+    │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:84:26 ]
+    │
+ 84 │    let value=parsed_atom(member(entry,"value"),kind,dec);let text=jstr(member(entry,"label"));let raw=jstr(member(entry,"raw_label_base64"))
+    │                          ───┬──  
+    │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:84:72 ]
+    │
+ 84 │    let value=parsed_atom(member(entry,"value"),kind,dec);let text=jstr(member(entry,"label"));let raw=jstr(member(entry,"raw_label_base64"))
+    │                                                                        ───┬──  
+    │                                                                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:84:108 ]
+    │
+ 84 │    let value=parsed_atom(member(entry,"value"),kind,dec);let text=jstr(member(entry,"label"));let raw=jstr(member(entry,"raw_label_base64"))
+    │                                                                                                            ───┬──  
+    │                                                                                                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:88:15 ]
+    │
+ 88 │   let missing=member(item,"user_missing");let missing_kind=jstr(member(missing,"kind"));let missing_values=jarr(member(missing,"values")).map(a=>parsed_atom(a,kind,dec))
+    │               ───┬──  
+    │                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:88:65 ]
+    │
+ 88 │   let missing=member(item,"user_missing");let missing_kind=jstr(member(missing,"kind"));let missing_values=jarr(member(missing,"values")).map(a=>parsed_atom(a,kind,dec))
+    │                                                                 ───┬──  
+    │                                                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:88:113 ]
+    │
+ 88 │   let missing=member(item,"user_missing");let missing_kind=jstr(member(missing,"kind"));let missing_values=jarr(member(missing,"values")).map(a=>parsed_atom(a,kind,dec))
+    │                                                                                                                 ───┬──  
+    │                                                                                                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:93:27 ]
+    │
+ 93 │   let physical_start=jnum(member(item,"physical_start"));let physical_slots=jnum(member(item,"physical_slots"));if physical_start!=slots || physical_slots==0 {reject("IntegrityMismatch","Physical slot ranges overlap or contain gaps")};if physical_slots>options.limits.physical_slots-slots {reject("ResourceLimit","physical_slots exceed limit")};slots+=physical_slots
+    │                           ───┬──  
+    │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:93:82 ]
+    │
+ 93 │   let physical_start=jnum(member(item,"physical_start"));let physical_slots=jnum(member(item,"physical_slots"));if physical_start!=slots || physical_slots==0 {reject("IntegrityMismatch","Physical slot ranges overlap or contain gaps")};if physical_slots>options.limits.physical_slots-slots {reject("ResourceLimit","physical_slots exceed limit")};slots+=physical_slots
+    │                                                                                  ───┬──  
+    │                                                                                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:100 ]
+    │
+ 94 │   variables.push({index,name,short_name,type_:kind,width,label,raw_label_base64,source_offset:jnum(member(item,"source_offset")),physical_start,physical_slots,print_format:parsed_format(member(item,"print_format")),write_format:parsed_format(member(item,"write_format")),value_labels:labels,missing_kind,missing_values,measure:opt_int(member(item,"measure")),display_width:opt_int(member(item,"display_width")),alignment:opt_int(member(item,"alignment")),segments:[]})
+    │                                                                                                    ───┬──  
+    │                                                                                                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:187 ]
+    │
+ 94 │   variables.push({index,name,short_name,type_:kind,width,label,raw_label_base64,source_offset:jnum(member(item,"source_offset")),physical_start,physical_slots,print_format:parsed_format(member(item,"print_format")),write_format:parsed_format(member(item,"write_format")),value_labels:labels,missing_kind,missing_values,measure:opt_int(member(item,"measure")),display_width:opt_int(member(item,"display_width")),alignment:opt_int(member(item,"alignment")),segments:[]})
+    │                                                                                                                                                                                           ───┬──  
+    │                                                                                                                                                                                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:243 ]
+    │
+ 94 │   variables.push({index,name,short_name,type_:kind,width,label,raw_label_base64,source_offset:jnum(member(item,"source_offset")),physical_start,physical_slots,print_format:parsed_format(member(item,"print_format")),write_format:parsed_format(member(item,"write_format")),value_labels:labels,missing_kind,missing_values,measure:opt_int(member(item,"measure")),display_width:opt_int(member(item,"display_width")),alignment:opt_int(member(item,"alignment")),segments:[]})
+    │                                                                                                                                                                                                                                                   ───┬──  
+    │                                                                                                                                                                                                                                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:336 ]
+    │
+ 94 │   variables.push({index,name,short_name,type_:kind,width,label,raw_label_base64,source_offset:jnum(member(item,"source_offset")),physical_start,physical_slots,print_format:parsed_format(member(item,"print_format")),write_format:parsed_format(member(item,"write_format")),value_labels:labels,missing_kind,missing_values,measure:opt_int(member(item,"measure")),display_width:opt_int(member(item,"display_width")),alignment:opt_int(member(item,"alignment")),segments:[]})
+    │                                                                                                                                                                                                                                                                                                                                                ───┬──  
+    │                                                                                                                                                                                                                                                                                                                                                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:382 ]
+    │
+ 94 │   variables.push({index,name,short_name,type_:kind,width,label,raw_label_base64,source_offset:jnum(member(item,"source_offset")),physical_start,physical_slots,print_format:parsed_format(member(item,"print_format")),write_format:parsed_format(member(item,"write_format")),value_labels:labels,missing_kind,missing_values,measure:opt_int(member(item,"measure")),display_width:opt_int(member(item,"display_width")),alignment:opt_int(member(item,"alignment")),segments:[]})
+    │                                                                                                                                                                                                                                                                                                                                                                                              ───┬──  
+    │                                                                                                                                                                                                                                                                                                                                                                                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:430 ]
+    │
+ 94 │   variables.push({index,name,short_name,type_:kind,width,label,raw_label_base64,source_offset:jnum(member(item,"source_offset")),physical_start,physical_slots,print_format:parsed_format(member(item,"print_format")),write_format:parsed_format(member(item,"write_format")),value_labels:labels,missing_kind,missing_values,measure:opt_int(member(item,"measure")),display_width:opt_int(member(item,"display_width")),alignment:opt_int(member(item,"alignment")),segments:[]})
+    │                                                                                                                                                                                                                                                                                                                                                                                                                                              ───┬──  
+    │                                                                                                                                                                                                                                                                                                                                                                                                                                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:96:17 ]
+    │
+ 96 │  if slots!=jnum(member(j,"physical_slots")) {reject("IntegrityMismatch","Physical slot total mismatch")}
+    │                 ───┬──  
+    │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:97:23 ]
+    │
+ 97 │  let compression=jnum(member(j,"compression"));if compression>1 {reject("IntegrityMismatch","Invalid compression metadata")}
+    │                       ───┬──  
+    │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:98:17 ]
+    │
+ 98 │  let bias=match member(j,"bias").as_number() {Some(n)=>n;None=>{reject("IntegrityMismatch","Expected numeric bias");0.0}}
+    │                 ───┬──  
+    │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:99:32 ]
+    │
+ 99 │  let warnings=[];for w in jarr(member(j,"warnings")) {warnings.push({warning_code:jstr(member(w,"warning_code")),scope:jstr(member(w,"scope")),suggested_action:jstr(member(w,"suggested_action"))})}
+    │                                ───┬──  
+    │                                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:99:88 ]
+    │
+ 99 │  let warnings=[];for w in jarr(member(j,"warnings")) {warnings.push({warning_code:jstr(member(w,"warning_code")),scope:jstr(member(w,"scope")),suggested_action:jstr(member(w,"suggested_action"))})}
+    │                                                                                        ───┬──  
+    │                                                                                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:99:125 ]
+    │
+ 99 │  let warnings=[];for w in jarr(member(j,"warnings")) {warnings.push({warning_code:jstr(member(w,"warning_code")),scope:jstr(member(w,"scope")),suggested_action:jstr(member(w,"suggested_action"))})}
+    │                                                                                                                             ───┬──  
+    │                                                                                                                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:99:166 ]
+    │
+ 99 │  let warnings=[];for w in jarr(member(j,"warnings")) {warnings.push({warning_code:jstr(member(w,"warning_code")),scope:jstr(member(w,"scope")),suggested_action:jstr(member(w,"suggested_action"))})}
+    │                                                                                                                                                                      ───┬──  
+    │                                                                                                                                                                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:100:118 ]
+     │
+ 100 │  let dictionary : Dictionary={variables,declared_rows,compression,bias,physical_slots:slots,encoding,file_label:jstr(member(j,"file_label")),creation_date:jstr(member(j,"creation_date")),creation_time:jstr(member(j,"creation_time")),product:jstr(member(j,"product")),weight_variable:opt_int(member(j,"weight_variable")),warnings,uninterpreted_metadata:[],system_missing_hex,lowest_hex,highest_hex,data_offset:0,options}
+     │                                                                                                                      ───┬──  
+     │                                                                                                                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:100:161 ]
+     │
+ 100 │  let dictionary : Dictionary={variables,declared_rows,compression,bias,physical_slots:slots,encoding,file_label:jstr(member(j,"file_label")),creation_date:jstr(member(j,"creation_date")),creation_time:jstr(member(j,"creation_time")),product:jstr(member(j,"product")),weight_variable:opt_int(member(j,"weight_variable")),warnings,uninterpreted_metadata:[],system_missing_hex,lowest_hex,highest_hex,data_offset:0,options}
+     │                                                                                                                                                                 ───┬──  
+     │                                                                                                                                                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:100:207 ]
+     │
+ 100 │  let dictionary : Dictionary={variables,declared_rows,compression,bias,physical_slots:slots,encoding,file_label:jstr(member(j,"file_label")),creation_date:jstr(member(j,"creation_date")),creation_time:jstr(member(j,"creation_time")),product:jstr(member(j,"product")),weight_variable:opt_int(member(j,"weight_variable")),warnings,uninterpreted_metadata:[],system_missing_hex,lowest_hex,highest_hex,data_offset:0,options}
+     │                                                                                                                                                                                                               ───┬──  
+     │                                                                                                                                                                                                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:100:247 ]
+     │
+ 100 │  let dictionary : Dictionary={variables,declared_rows,compression,bias,physical_slots:slots,encoding,file_label:jstr(member(j,"file_label")),creation_date:jstr(member(j,"creation_date")),creation_time:jstr(member(j,"creation_time")),product:jstr(member(j,"product")),weight_variable:opt_int(member(j,"weight_variable")),warnings,uninterpreted_metadata:[],system_missing_hex,lowest_hex,highest_hex,data_offset:0,options}
+     │                                                                                                                                                                                                                                                       ───┬──  
+     │                                                                                                                                                                                                                                                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:100:292 ]
+     │
+ 100 │  let dictionary : Dictionary={variables,declared_rows,compression,bias,physical_slots:slots,encoding,file_label:jstr(member(j,"file_label")),creation_date:jstr(member(j,"creation_date")),creation_time:jstr(member(j,"creation_time")),product:jstr(member(j,"product")),weight_variable:opt_int(member(j,"weight_variable")),warnings,uninterpreted_metadata:[],system_missing_hex,lowest_hex,highest_hex,data_offset:0,options}
+     │                                                                                                                                                                                                                                                                                                    ───┬──  
+     │                                                                                                                                                                                                                                                                                                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:107:33 ]
+     │
+ 107 │  let j=parse_json(line);if jnum(member(j,"row"))!=self.row {reject("IntegrityMismatch","Canonical row sequence mismatch")}
+     │                                 ───┬──  
+     │                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:108:17 ]
+     │
+ 108 │  let cells=jarr(member(j,"cells"));if cells.length()!=self.dictionary.variables.length() {reject("IntegrityMismatch","Wrong canonical column count")}
+     │                 ───┬──  
+     │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:111:67 ]
+     │
+ 111 │   let j=cells[i];let v=self.dictionary.variables[i];let kind=jstr(member(j,"kind"));let missing=jstr(member(j,"missing"))
+     │                                                                   ───┬──  
+     │                                                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:111:102 ]
+     │
+ 111 │   let j=cells[i];let v=self.dictionary.variables[i];let kind=jstr(member(j,"kind"));let missing=jstr(member(j,"missing"))
+     │                                                                                                      ───┬──  
+     │                                                                                                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:113:23 ]
+     │
+ 113 │   let decimal=opt_str(member(j,"decimal"));let hex=opt_str(member(j,"ieee754_hex"));let text=opt_str(member(j,"text"));let raw=opt_str(member(j,"logical_bytes_base64"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:113:60 ]
+     │
+ 113 │   let decimal=opt_str(member(j,"decimal"));let hex=opt_str(member(j,"ieee754_hex"));let text=opt_str(member(j,"text"));let raw=opt_str(member(j,"logical_bytes_base64"))
+     │                                                            ───┬──  
+     │                                                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:113:102 ]
+     │
+ 113 │   let decimal=opt_str(member(j,"decimal"));let hex=opt_str(member(j,"ieee754_hex"));let text=opt_str(member(j,"text"));let raw=opt_str(member(j,"logical_bytes_base64"))
+     │                                                                                                      ───┬──  
+     │                                                                                                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:113:136 ]
+     │
+ 113 │   let decimal=opt_str(member(j,"decimal"));let hex=opt_str(member(j,"ieee754_hex"));let text=opt_str(member(j,"text"));let raw=opt_str(member(j,"logical_bytes_base64"))
+     │                                                                                                                                        ───┬──  
+     │                                                                                                                                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:7 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.get(alias) is Some(previous) && previous!=vars.length() {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)};used[alias]=vars.length()}
+     │       ──┬──  
+     │         ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:34 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.get(alias) is Some(previous) && previous!=vars.length() {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)};used[alias]=vars.length()}
+     │                                  ──┬──  
+     │                                    ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:40 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.get(alias) is Some(previous) && previous!=vars.length() {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)};used[alias]=vars.length()}
+     │                                        ──┬──  
+     │                                          ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:69 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.get(alias) is Some(previous) && previous!=vars.length() {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)};used[alias]=vars.length()}
+     │                                                                     ──┬──  
+     │                                                                       ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:199 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.get(alias) is Some(previous) && previous!=vars.length() {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)};used[alias]=vars.length()}
+     │                                                                                                                                                                                                       ──┬──  
+     │                                                                                                                                                                                                         ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Total tests: 5, passed: 5, failed: 0.

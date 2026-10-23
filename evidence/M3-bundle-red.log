@@ -1,0 +1,118 @@
+✖ canonical and multiline CSV validate as one paired bundle (60.569292ms)
+✖ rehashing a wrong missing state cannot bypass semantic checker (56.768917ms)
+✖ rehashing CSV that disagrees with canonical fails (57.2075ms)
+✖ INCOMPLETE always rejects an otherwise completed bundle (57.543041ms)
+✖ missing canonical and symlink metadata reject (57.281625ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 323.484459
+
+✖ failing tests:
+
+test at tests/bundle.test.mjs:6:1
+✖ canonical and multiline CSV validate as one paired bundle (60.569292ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:6:132)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:7:1
+✖ rehashing a wrong missing state cannot bypass semantic checker (56.768917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:7:351)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:8:1
+✖ rehashing CSV that disagrees with canonical fails (57.2075ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:8:214)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:9:1
+✖ INCOMPLETE always rejects an otherwise completed bundle (57.543041ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:9:182)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:10:1
+✖ missing canonical and symlink metadata reject (57.281625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:10:138)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,45 @@
+{
+  "records": [
+    {
+      "utc": "2026-10-23T15:43:16.779204+00:00",
+      "command": [
+        "node",
+        "tools/ac01.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.1276422911323607,
+      "branch": "implementation",
+      "sha": "7b93a36035d7e1c28626dc69a579d835f51bad10",
+      "dirty": true,
+      "diff_summary": ".gitignore | 2 ++\n 1 file changed, 2 insertions(+)",
+      "status_porcelain": "M .gitignore\n?? bin/\n?? evidence/\n?? examples/\n?? fixtures/\n?? moon.mod.json\n?? node/\n?? package.json\n?? requirements-dev.lock\n?? src/\n?? tests/\n?? toolchain.json\n?? tools/",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "000-stdout.log",
+      "stderr": "000-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-23T15:43:16.989158+00:00",
+      "command": [
+        "python3",
+        "examples/read_bundle.py",
+        ".dev/first-bundle"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.04735516617074609,
+      "branch": "implementation",
+      "sha": "7b93a36035d7e1c28626dc69a579d835f51bad10",
+      "dirty": true,
+      "diff_summary": ".gitignore | 2 ++\n 1 file changed, 2 insertions(+)",
+      "status_porcelain": "M .gitignore\n?? bin/\n?? evidence/\n?? examples/\n?? fixtures/\n?? moon.mod.json\n?? node/\n?? package.json\n?? requirements-dev.lock\n?? src/\n?? tests/\n?? toolchain.json\n?? tools/",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "001-stdout.log",
+      "stderr": "001-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    }
+  ]
+}

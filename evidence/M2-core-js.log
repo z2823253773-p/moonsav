@@ -1,0 +1,834 @@
+Warning: Package `z2823253773/moonsav/bridge` uses legacy array syntax for `supported_targets`; use expression syntax like `<backend>` instead
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bridge/main.mbt:44:24 ]
+    │
+ 44 │       if s.has_prefix("\x00") {
+    │                        ──┬─  
+    │                          ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bridge/main.mbt:152:27 ]
+     │
+ 152 │       if text.has_prefix("\x00") {
+     │                           ──┬─  
+     │                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Error: [4192]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bridge/moon.pkg:5:21 ]
+   │
+ 5 │ supported_targets = [ "js" ]
+   │                     ────┬───  
+   │                         ╰───── Invalid configuration `supported_targets` in moon.pkg file.
+───╯
+Warning: [0020]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:3:21 ]
+   │
+ 3 │   @json.parse(text, max_nesting_depth=64) catch {
+   │                     ────────┬────────  
+   │                             ╰────────── Warning (deprecated): 
+───╯
+Warning: [0035]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:12:4 ]
+    │
+ 12 │ fn member(j : Json, key : String) -> Json raise SavError {
+    │    ───┬──  
+    │       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:13:11 ]
+    │
+ 13 │   match j.value(key) {
+    │           ──┬──  
+    │             ╰──── Warning (deprecated): Suggestion: `if json is Object(obj) { obj.get(key) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:24:11 ]
+    │
+ 24 │   match j.as_string() {
+    │           ────┬────  
+    │               ╰────── Warning (deprecated): Suggestion: `if json is String(s) { Some(s) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:35:11 ]
+    │
+ 35 │   match j.as_number() {
+    │           ────┬────  
+    │               ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:51:11 ]
+    │
+ 51 │   match j.as_array() {
+    │           ────┬───  
+    │               ╰───── Warning (deprecated): Suggestion: `if json is Array(array) { Some(array) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:94:11 ]
+    │
+ 94 │   let n = @strconv.parse_double(s) catch {
+    │           ──────────┬──────────  
+    │                     ╰──────────── Warning (deprecated): use `@string.parse_double` instead
+────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:111:11 ]
+     │
+ 111 │   if jstr(member(j, "type")) != kind {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:116:22 ]
+     │
+ 116 │     decimal: opt_str(member(j, "decimal")),
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:117:26 ]
+     │
+ 117 │     ieee754_hex: opt_str(member(j, "ieee754_hex")),
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:118:19 ]
+     │
+ 118 │     text: opt_str(member(j, "text")),
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:119:35 ]
+     │
+ 119 │     logical_bytes_base64: opt_str(member(j, "logical_bytes_base64")),
+     │                                   ───┬──  
+     │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:120:17 ]
+     │
+ 120 │     width: jnum(member(j, "width")),
+     │                 ───┬──  
+     │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:121:23 ]
+     │
+ 121 │     endpoint: opt_str(member(j, "endpoint")),
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:150:18 ]
+     │
+ 150 │   let raw = jnum(member(j, "raw"))
+     │                  ───┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:152:21 ]
+     │
+ 152 │   if f.code != jnum(member(j, "code")) ||
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:153:21 ]
+     │
+ 153 │     f.width != jnum(member(j, "width")) ||
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:154:24 ]
+     │
+ 154 │     f.decimals != jnum(member(j, "decimals")) {
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:166:11 ]
+     │
+ 166 │   if jstr(member(j, "schema_version")) != "moonsav.bundle/1" {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:169:22 ]
+     │
+ 169 │   let profile = jstr(member(j, "profile"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:173:19 ]
+     │
+ 173 │   let rows = jnum(member(j, "actual_rows"))
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:175:19 ]
+     │
+ 175 │   let cols = jnum(member(j, "logical_variables"))
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:180:15 ]
+     │
+ 180 │   let input = member(j, "input")
+     │               ───┬──  
+     │                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:182:10 ]
+     │
+ 182 │     jnum(member(input, "size_bytes")),
+     │          ───┬──  
+     │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:186:18 ]
+     │
+ 186 │   check_sha(jstr(member(input, "sha256")))
+     │                  ───┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:187:21 ]
+     │
+ 187 │   let files = match member(j, "files").as_object() {
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0020]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:187:40 ]
+     │
+ 187 │   let files = match member(j, "files").as_object() {
+     │                                        ────┬────  
+     │                                            ╰────── Warning (deprecated): This function is deprecated.
+─────╯
+Warning: [0020]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:191:7 ]
+     │
+ 191 │       Map::new()
+     │       ────┬───  
+     │           ╰───── Warning (deprecated): Use `Map([], capacity=...)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:202:24 ]
+     │
+ 202 │   let mut total = text.to_bytes().length()
+     │                        ────┬───  
+     │                            ╰───── Warning (deprecated): Check `@encoding/utf8.encode`
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:211:18 ]
+     │
+ 211 │     let n = jnum(member(f, "size_bytes"))
+     │                  ───┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:216:20 ]
+     │
+ 216 │     check_sha(jstr(member(f, "sha256")))
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:249:11 ]
+     │
+ 249 │   if jstr(member(j, "schema_version")) != "moonsav.metadata/1" {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:252:11 ]
+     │
+ 252 │   if jstr(member(j, "validation_scope")) != "full" {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:255:28 ]
+     │
+ 255 │   let expected_rows = jnum(member(manifest, "actual_rows"))
+     │                            ───┬──  
+     │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:256:11 ]
+     │
+ 256 │   if jnum(member(j, "actual_rows")) != expected_rows {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:259:31 ]
+     │
+ 259 │   let declared_rows = opt_int(member(j, "declared_rows"))
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:263:13 ]
+     │
+ 263 │   let enc = member(j, "encoding")
+     │             ───┬──  
+     │                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:264:43 ]
+     │
+ 264 │   let effective = canonical_encoding(jstr(member(enc, "effective")))
+     │                                           ───┬──  
+     │                                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:265:22 ]
+     │
+ 265 │   let profile = jstr(member(enc, "profile"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:266:21 ]
+     │
+ 266 │   let policy = jstr(member(enc, "string_matching_policy"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:274:23 ]
+     │
+ 274 │     declared: opt_str(member(enc, "declared")),
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:275:27 ]
+     │
+ 275 │     machine_code: opt_int(member(enc, "machine_code")),
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:278:28 ]
+     │
+ 278 │     selection_source: jstr(member(enc, "selection_source")),
+     │                            ───┬──  
+     │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:282:33 ]
+     │
+ 282 │   let system_missing_hex = jstr(member(j, "system_missing_hex"))
+     │                                 ───┬──  
+     │                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:283:25 ]
+     │
+ 283 │   let lowest_hex = jstr(member(j, "lowest_hex"))
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:284:26 ]
+     │
+ 284 │   let highest_hex = jstr(member(j, "highest_hex"))
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:291:36 ]
+     │
+ 291 │   let aliases : Map[String, Int] = {}
+     │                                    ─┬  
+     │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:292:23 ]
+     │
+ 292 │   let var_json = jarr(member(j, "variables"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:293:32 ]
+     │
+ 293 │   if var_json.length() != jnum(member(manifest, "logical_variables")) ||
+     │                                ───┬──  
+     │                                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:294:31 ]
+     │
+ 294 │     var_json.length() != jnum(member(j, "logical_variables")) {
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:299:22 ]
+     │
+ 299 │     let index = jnum(member(item, "index"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:303:21 ]
+     │
+ 303 │     let name = jstr(member(item, "name"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:304:27 ]
+     │
+ 304 │     let short_name = jstr(member(item, "short_name"))
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:314:21 ]
+     │
+ 314 │     let kind = jstr(member(item, "type"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:315:22 ]
+     │
+ 315 │     let width = jnum(member(item, "width"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:322:25 ]
+     │
+ 322 │     let label = opt_str(member(item, "label"))
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:323:36 ]
+     │
+ 323 │     let raw_label_base64 = opt_str(member(item, "raw_label_base64"))
+     │                                    ───┬──  
+     │                                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:331:23 ]
+     │
+ 331 │     for entry in jarr(member(item, "value_labels")) {
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:332:31 ]
+     │
+ 332 │       let value = parsed_atom(member(entry, "value"), kind, dec)
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:333:23 ]
+     │
+ 333 │       let text = jstr(member(entry, "label"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:334:22 ]
+     │
+ 334 │       let raw = jstr(member(entry, "raw_label_base64"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:340:19 ]
+     │
+ 340 │     let missing = member(item, "user_missing")
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:341:29 ]
+     │
+ 341 │     let missing_kind = jstr(member(missing, "kind"))
+     │                             ───┬──  
+     │                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:342:31 ]
+     │
+ 342 │     let missing_values = jarr(member(missing, "values")).map(a => {
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:360:31 ]
+     │
+ 360 │     let physical_start = jnum(member(item, "physical_start"))
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:361:31 ]
+     │
+ 361 │     let physical_slots = jnum(member(item, "physical_slots"))
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:379:27 ]
+     │
+ 379 │       source_offset: jnum(member(item, "source_offset")),
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:382:35 ]
+     │
+ 382 │       print_format: parsed_format(member(item, "print_format")),
+     │                                   ───┬──  
+     │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:383:35 ]
+     │
+ 383 │       write_format: parsed_format(member(item, "write_format")),
+     │                                   ───┬──  
+     │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:387:24 ]
+     │
+ 387 │       measure: opt_int(member(item, "measure")),
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:388:30 ]
+     │
+ 388 │       display_width: opt_int(member(item, "display_width")),
+     │                              ───┬──  
+     │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:389:26 ]
+     │
+ 389 │       alignment: opt_int(member(item, "alignment")),
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:393:20 ]
+     │
+ 393 │   if slots != jnum(member(j, "physical_slots")) {
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:396:26 ]
+     │
+ 396 │   let compression = jnum(member(j, "compression"))
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:400:20 ]
+     │
+ 400 │   let bias = match member(j, "bias").as_number() {
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0020]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:400:38 ]
+     │
+ 400 │   let bias = match member(j, "bias").as_number() {
+     │                                      ────┬────  
+     │                                          ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:408:17 ]
+     │
+ 408 │   for w in jarr(member(j, "warnings")) {
+     │                 ───┬──  
+     │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:410:26 ]
+     │
+ 410 │       warning_code: jstr(member(w, "warning_code")),
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:411:19 ]
+     │
+ 411 │       scope: jstr(member(w, "scope")),
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:412:30 ]
+     │
+ 412 │       suggested_action: jstr(member(w, "suggested_action")),
+     │                              ───┬──  
+     │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:422:22 ]
+     │
+ 422 │     file_label: jstr(member(j, "file_label")),
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:423:25 ]
+     │
+ 423 │     creation_date: jstr(member(j, "creation_date")),
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:424:25 ]
+     │
+ 424 │     creation_time: jstr(member(j, "creation_time")),
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:425:19 ]
+     │
+ 425 │     product: jstr(member(j, "product")),
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:426:30 ]
+     │
+ 426 │     weight_variable: opt_int(member(j, "weight_variable")),
+     │                              ───┬──  
+     │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:468:11 ]
+     │
+ 468 │   if jnum(member(j, "row")) != self.row {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:471:20 ]
+     │
+ 471 │   let cells = jarr(member(j, "cells"))
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:479:21 ]
+     │
+ 479 │     let kind = jstr(member(j, "kind"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:480:24 ]
+     │
+ 480 │     let missing = jstr(member(j, "missing"))
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:485:27 ]
+     │
+ 485 │     let decimal = opt_str(member(j, "decimal"))
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:486:23 ]
+     │
+ 486 │     let hex = opt_str(member(j, "ieee754_hex"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:487:24 ]
+     │
+ 487 │     let text = opt_str(member(j, "text"))
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:488:23 ]
+     │
+ 488 │     let raw = opt_str(member(j, "logical_bytes_base64"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bundle.mbt:584:14 ]
+     │
+ 584 │     if ch == '\x00' {
+     │              ───┬──  
+     │                 ╰──── Warning (deprecated_syntax): The syntax `\x..` in char literal for type Char is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/codec.mbt:93:26 ]
+    │
+ 93 │   let magic = input[0:4].to_bytes()
+    │                          ────┬───  
+    │                              ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+────╯
+Warning: [0004]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/cursor.mbt:2:8 ]
+   │
+ 2 │ struct Cursor {
+   │        ───┬──  
+   │           ╰──── Warning (missing_priv): The type 'Cursor' does not occur in public signature of current package, consider marking it as `priv`.
+───╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/cursor.mbt:20:47 ]
+    │
+ 20 │   let out = self.bytes[self.pos:self.pos + n].to_bytes()
+    │                                               ────┬───  
+    │                                                   ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+────╯
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:49:44 ]
+    │
+ 49 │     let item = item.to_owned().trim(chars="\x00 ").to_owned()
+    │                                            ──┬─  
+    │                                              ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:55:58 ]
+    │
+ 55 │         out.push((a.to_owned(), b.to_owned().trim(chars="\x00 ").to_owned()))
+    │                                                          ──┬─  
+    │                                                            ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:379:54 ]
+     │
+ 379 │             declared = Some(ascii(bytes).trim(chars="\x00 ").to_owned())
+     │                                                      ──┬─  
+     │                                                        ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:437:39 ]
+     │
+ 437 │   let raw_names : Map[String, Bool] = {}
+     │                                       ─┬  
+     │                                        ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:439:41 ]
+     │
+ 439 │     let key = dec(r.short).trim(chars=" \x00").to_owned().to_upper()
+     │                                         ──┬─  
+     │                                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:449:37 ]
+     │
+ 449 │   let names : Map[String, String] = {}
+     │                                     ─┬  
+     │                                      ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:450:35 ]
+     │
+ 450 │   let widths : Map[String, Int] = {}
+     │                                   ─┬  
+     │                                    ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:509:33 ]
+     │
+ 509 │   let used : Map[String, Int] = {}
+     │                                 ─┬  
+     │                                  ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:513:43 ]
+     │
+ 513 │     let short = dec(r.short).trim(chars=" \x00").to_owned()
+     │                                           ──┬─  
+     │                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:540:39 ]
+     │
+ 540 │             dec(s.short).trim(chars=" \x00").to_owned().to_upper(),
+     │                                       ──┬─  
+     │                                         ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:560:9 ]
+     │
+ 560 │     for alias in [short, name] {
+     │         ──┬──  
+     │           ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:561:11 ]
+     │
+ 561 │       let alias = alias.to_upper()
+     │           ──┬──  
+     │             ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:561:19 ]
+     │
+ 561 │       let alias = alias.to_upper()
+     │                   ──┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:562:19 ]
+     │
+ 562 │       if used.get(alias) is Some(previous) && previous != vars.length() {
+     │                   ──┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:565:12 ]
+     │
+ 565 │       used[alias] = vars.length()
+     │            ──┬──  
+     │              ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:727:50 ]
+     │
+ 727 │     file_label: dec(file_label).trim_end(chars=" \x00").to_owned(),
+     │                                                  ──┬─  
+     │                                                    ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0020]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:730:30 ]
+     │
+ 730 │     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
+     │                              ────┬───  
+     │                                  ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:730:59 ]
+     │
+ 730 │     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
+     │                                                           ──┬─  
+     │                                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/json.mbt:132:25 ]
+     │
+ 132 │       if text.contains("\x00") {
+     │                         ──┬─  
+     │                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯

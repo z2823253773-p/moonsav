@@ -1,0 +1,177 @@
+Warning: Package `z2823253773/moonsav/bridge` uses legacy array syntax for `supported_targets`; use expression syntax like `<backend>` instead
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/bridge/main.mbt:12:20 ]
+    │
+ 12 │   if s.has_prefix("\x00") {s[1:].to_owned()} else {raise @moonsav.SavFailure({code:if s.has_prefix("UnsupportedEncodingVariant") {"UnsupportedEncodingVariant"} else {"InvalidEncoding"},message:"Strict decoding failed for selected profile",byte_offset:None})}
+    │                    ──┬─  
+    │                      ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0020]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/codec.mbt:2:24 ]
+   │
+ 2 │  match name.to_lower().trim_space().to_string() {
+   │                        ─────┬────  
+   │                             ╰────── Warning (deprecated): Use `trim` with default whitespace characters instead
+───╯
+Warning: [0020]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/codec.mbt:2:37 ]
+   │
+ 2 │  match name.to_lower().trim_space().to_string() {
+   │                                     ────┬────  
+   │                                         ╰────── Warning (deprecated): Use `to_owned` to allocate an owned String from a StringView; use `Show::to_string` or format strings for display
+───╯
+Warning: [0020]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/codec.mbt:33:23 ]
+    │
+ 33 │  let magic=input[0:4].to_bytes()
+    │                       ────┬───  
+    │                           ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+────╯
+Warning: [0004]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/cursor.mbt:1:8 ]
+   │
+ 1 │ struct Cursor { bytes : Bytes; mut pos : Int }
+   │        ───┬──  
+   │           ╰──── Warning (missing_priv): The type 'Cursor' does not occur in public signature of current package, consider marking it as `priv`.
+───╯
+Warning: [0020]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/cursor.mbt:6:45 ]
+   │
+ 6 │   let out = self.bytes[self.pos:self.pos+n].to_bytes()
+   │                                             ────┬───  
+   │                                                 ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+───╯
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:17:40 ]
+    │
+ 17 │   let item=item.to_owned().trim(chars="\x00 ").to_owned()
+    │                                        ──┬─  
+    │                                          ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:20:65 ]
+    │
+ 20 │    Some((a,b))=>out.push((a.to_owned(),b.to_owned().trim(chars="\x00 ").to_owned()))
+    │                                                                 ──┬─  
+    │                                                                   ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:132:46 ]
+     │
+ 132 │       declared=Some(ascii(bytes).trim(chars="\x00 ").to_owned())
+     │                                              ──┬─  
+     │                                                ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:149:33 ]
+     │
+ 149 │  let names : Map[String,String]={};let widths : Map[String,Int]={}
+     │                                 ─┬  
+     │                                  ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:149:65 ]
+     │
+ 149 │  let names : Map[String,String]={};let widths : Map[String,Int]={}
+     │                                                                 ─┬  
+     │                                                                  ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:166:42 ]
+     │
+ 166 │  let vars=[];let used : Map[String,Bool]={};let mut i=0
+     │                                          ─┬  
+     │                                           ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:168:52 ]
+     │
+ 168 │   let r=raw[i];let short=dec(r.short).trim(chars=" \x00").to_owned();let key=short.to_upper()
+     │                                                    ──┬─  
+     │                                                      ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:177:134 ]
+     │
+ 177 │    if j>0 && (s.width<=0 || s.label!=None || s.missing_count!=0 || !s.labels.is_empty() || widths.contains(dec(s.short).trim(chars=" \x00").to_owned().to_upper())) {reject("InvalidDictionary","Overlapping or semantic very-long continuation",offset=s.offset)}
+     │                                                                                                                                      ──┬─  
+     │                                                                                                                                        ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:7 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.contains(alias) {if alias!=key {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)}};used[alias]=true}
+     │       ──┬──  
+     │         ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:34 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.contains(alias) {if alias!=key {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)}};used[alias]=true}
+     │                                  ──┬──  
+     │                                    ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:40 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.contains(alias) {if alias!=key {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)}};used[alias]=true}
+     │                                        ──┬──  
+     │                                          ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:74 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.contains(alias) {if alias!=key {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)}};used[alias]=true}
+     │                                                                          ──┬──  
+     │                                                                            ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:85 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.contains(alias) {if alias!=key {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)}};used[alias]=true}
+     │                                                                                     ──┬──  
+     │                                                                                       ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:181:175 ]
+     │
+ 181 │   for alias in [short,name] {let alias=alias.to_upper();if used.contains(alias) {if alias!=key {reject("InvalidDictionary","Ambiguous variable alias",offset=r.offset)}};used[alias]=true}
+     │                                                                                                                                                                               ──┬──  
+     │                                                                                                                                                                                 ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:203:85 ]
+     │
+ 203 │  for key,_ in names {let mut found=false;for r in raw {if dec(r.short).trim(chars=" \x00").to_owned().to_upper()==key {found=true}};if !found {reject("InvalidDictionary","Dangling long-name mapping")}}
+     │                                                                                     ──┬─  
+     │                                                                                       ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:211:128 ]
+     │
+ 211 │  {variables:vars,declared_rows:rows,compression,bias,physical_slots:slots,encoding,file_label:dec(file_label).trim_end(chars=" \x00").to_owned(),creation_date:ascii(date),creation_time:ascii(time),product:dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),weight_variable,warnings,uninterpreted_metadata:extras,system_missing_hex:hex_bits(system),lowest_hex:hex_bits(lowest),highest_hex:hex_bits(highest),data_offset:c.pos,options}
+     │                                                                                                                                ──┬─  
+     │                                                                                                                                  ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0020]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:211:222 ]
+     │
+ 211 │  {variables:vars,declared_rows:rows,compression,bias,physical_slots:slots,encoding,file_label:dec(file_label).trim_end(chars=" \x00").to_owned(),creation_date:ascii(date),creation_time:ascii(time),product:dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),weight_variable,warnings,uninterpreted_metadata:extras,system_missing_hex:hex_bits(system),lowest_hex:hex_bits(lowest),highest_hex:hex_bits(highest),data_offset:c.pos,options}
+     │                                                                                                                                                                                                                              ────┬───  
+     │                                                                                                                                                                                                                                  ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+─────╯
+Warning: [0027]
+     ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/dictionary.mbt:211:251 ]
+     │
+ 211 │  {variables:vars,declared_rows:rows,compression,bias,physical_slots:slots,encoding,file_label:dec(file_label).trim_end(chars=" \x00").to_owned(),creation_date:ascii(date),creation_time:ascii(time),product:dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),weight_variable,warnings,uninterpreted_metadata:extras,system_missing_hex:hex_bits(system),lowest_hex:hex_bits(lowest),highest_hex:hex_bits(highest),data_offset:c.pos,options}
+     │                                                                                                                                                                                                                                                           ──┬─  
+     │                                                                                                                                                                                                                                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0027]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/src/json.mbt:23:55 ]
+    │
+ 23 │   else {let text=cell.text.unwrap();if text.contains("\x00") {reject("ExportRepresentationError","NUL cannot be represented in CSV; retry --format ndjson")};out.push(csv_quote(text))}
+    │                                                       ──┬─  
+    │                                                         ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Total tests: 2, passed: 2, failed: 0.

@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "utc": "2026-10-23T15:43:17.112256+00:00",
+      "command": [
+        "node",
+        "--test",
+        "tests/core.test.mjs",
+        "tests/bundle.test.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.4652772501576692,
+      "branch": "implementation",
+      "sha": "7b93a36035d7e1c28626dc69a579d835f51bad10",
+      "dirty": true,
+      "diff_summary": ".gitignore | 2 ++\n 1 file changed, 2 insertions(+)",
+      "status_porcelain": "M .gitignore\n?? bin/\n?? evidence/\n?? examples/\n?? fixtures/\n?? moon.mod.json\n?? node/\n?? package.json\n?? requirements-dev.lock\n?? src/\n?? tests/\n?? toolchain.json\n?? tools/",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "000-stdout.log",
+      "stderr": "000-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    }
+  ]
+}

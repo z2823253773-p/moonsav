@@ -1,0 +1,98 @@
+Error: [4122]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:3:13 ]
+   │
+ 3 │  let data = @moonsav.read_bytes(fixture)
+   │             ──────────────┬─────────────  
+   │                           ╰─────────────── Function with error is not allowed in `fn init` or `fn main`.
+───╯
+Error: [4122]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:5:16 ]
+   │
+ 5 │  let summary = @moonsav.scan_bytes(fixture, fn(_d) {}, fn(row) { kept.push(row); @moonsav.Continue })
+   │                ───────────────────────────────────────────┬──────────────────────────────────────────  
+   │                                                           ╰──────────────────────────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+───╯
+Error: [4122]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:6:2 ]
+   │
+ 6 │  assert_eq(summary.actual_rows, 5)
+   │  ────────────────┬────────────────  
+   │                  ╰────────────────── Function with error is not allowed in `fn init` or `fn main`.
+───╯
+Error: [4122]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:7:2 ]
+   │
+ 7 │  assert_eq(kept[0][1].text, Some("0012  "))
+   │  ─────────────────────┬────────────────────  
+   │                       ╰────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+───╯
+Error: [4122]
+   ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:8:2 ]
+   │
+ 8 │  assert_eq(kept[1][1].text, Some("NA    "))
+   │  ─────────────────────┬────────────────────  
+   │                       ╰────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+───╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:10:2 ]
+    │
+ 10 │  assert_eq(score.value_label_for(data.rows[0][0]), Some("A"))
+    │  ──────────────────────────────┬─────────────────────────────  
+    │                                ╰─────────────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:10:12 ]
+    │
+ 10 │  assert_eq(score.value_label_for(data.rows[0][0]), Some("A"))
+    │            ───────────────────┬──────────────────  
+    │                               ╰──────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:11:2 ]
+    │
+ 11 │  assert_eq(score.value_label_for(data.rows[4][0]), None)
+    │  ───────────────────────────┬───────────────────────────  
+    │                             ╰───────────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:11:12 ]
+    │
+ 11 │  assert_eq(score.value_label_for(data.rows[4][0]), None)
+    │            ───────────────────┬──────────────────  
+    │                               ╰──────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:13:2 ]
+    │
+ 13 │  assert_eq(present.length(), 3)
+    │  ───────────────┬──────────────  
+    │                 ╰──────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:14:16 ]
+    │
+ 14 │  let stopped = @moonsav.scan_bytes(fixture, fn(_d) {}, fn(_row) { @moonsav.Stop })
+    │                ─────────────────────────────────┬─────────────────────────────────  
+    │                                                 ╰─────────────────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:15:2 ]
+    │
+ 15 │  assert_eq(stopped.completed, false)
+    │  ─────────────────┬─────────────────  
+    │                   ╰─────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:16:2 ]
+    │
+ 16 │  assert_eq(stopped.actual_rows, 1)
+    │  ────────────────┬────────────────  
+    │                  ╰────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯
+Error: [4122]
+    ╭─[ /Users/henryz/Desktop/比赛/moonsav/examples/consumer/main.mbt:18:2 ]
+    │
+ 18 │  assert_eq(failure, Some("ConsumerFailed"))
+    │  ─────────────────────┬────────────────────  
+    │                       ╰────────────────────── Function with error is not allowed in `fn init` or `fn main`.
+────╯

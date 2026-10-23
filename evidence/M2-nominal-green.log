@@ -1,0 +1,52 @@
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (7.341709ms)
+✖ string byte widths and all long boundaries preserve every logical byte (6.192333ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.20475ms)
+✔ duplicate names must be rejected rather than shadowed (0.122583ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.414542ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (96.207416ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (125.689417ms)
+✔ row and output budgets reject with resource exit and no committed bundle (61.231375ms)
+✖ legal unknown nominal case width derives actual slots from dictionary (0.209833ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 338.206583
+
+✖ failing tests:
+
+test at tests/core.test.mjs:5:1
+✖ string byte widths and all long boundaries preserve every logical byte (6.192333ms)
+  Error: Duplicate short variable name
+      at dispatch (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:16:19)
+      at readSav (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:23:10)
+      at read (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:2:15)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:5:216)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    code: 'InvalidDictionary',
+    byte_offset: 38064
+  }
+
+test at tests/core.test.mjs:12:1
+✖ legal unknown nominal case width derives actual slots from dictionary (0.209833ms)
+  Error: Case width must be positive
+      at dispatch (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:16:19)
+      at readSav (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:23:10)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:12:222)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    code: 'InvalidDictionary',
+    byte_offset: 68
+  }

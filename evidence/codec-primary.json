@@ -1,0 +1,14 @@
+{
+  "sources": {
+    "CP936.TXT": "b86f601c575e9ab457380b6f7abef03c75499cc6075bdc8b4b27f3f2de74bf6a",
+    "index-gb18030-ranges.txt": "874c6b6f6f74cf7d427ad228d5b41ddd9354fffd92a2259bf429f86e6baa7a1e"
+  },
+  "cp936_python_differences": [
+    {
+      "hex": "80",
+      "primary": 8364,
+      "python": null
+    }
+  ],
+  "note": "GB18030 Python/Node differences rejected by adapter; four-byte range mapping cross-check required"
+}

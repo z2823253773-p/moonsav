@@ -1,0 +1,25 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ [
++   '得分'
++ ]
+- '得分'
+
+    at file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tools/ac01.mjs:9:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [ '得分' ],
+  expected: '得分',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

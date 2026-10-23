@@ -1,0 +1,7 @@
+[z2823253773/moonsav] test header_test.mbt:1 ("reject FL3 by actual magic not extension") failed: src/header_test.mbt:3:3-3:59@z2823253773/moonsav FAILED: `"NotImplemented" != "UnsupportedCompression"`
+diff:
+-"NotImplemented" +"UnsupportedCompression"
+[z2823253773/moonsav] test header_test.mbt:5 ("short FL2 is truncated not unsupported") failed: src/header_test.mbt:7:3-7:46@z2823253773/moonsav FAILED: `"NotImplemented" != "Truncated"`
+diff:
+-"NotImplemented" +"Truncated"
+Total tests: 2, passed: 0, failed: 2.
