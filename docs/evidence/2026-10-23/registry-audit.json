@@ -1,0 +1,76 @@
+{
+  "endpoint": "https://mooncakes.io/api/v0/modules",
+  "module_count": 3240,
+  "snapshot_sha256": "66081bf2ac605fc4c49d607ecb19fb6bf7c0c6cfe3bcef11262880783c618649",
+  "exact_spss_readstat_moonsav_name_or_description_matches": [],
+  "adjacent": [
+    {
+      "name": "0Ayachi0/GB18030",
+      "version": "0.1.0",
+      "yanked": false,
+      "yanked_reason": null,
+      "license": "Apache-2.0",
+      "repository": "https://github.com/0Ayachi0/GB18030",
+      "keywords": [
+        "gb18030",
+        "encoding",
+        "decoding",
+        "chinese",
+        "moonbit"
+      ],
+      "description": "A comprehensive GB18030 encoding/decoding library for MoonBit",
+      "is_new": false,
+      "created_at": "2025-08-29T19:55:38.462199"
+    },
+    {
+      "name": "ihb2032/MoonFrame",
+      "version": "0.7.0",
+      "yanked": false,
+      "yanked_reason": null,
+      "license": "Apache-2.0",
+      "repository": "https://github.com/ihb2032/MoonFrame",
+      "keywords": [
+        "dataframe",
+        "data-analysis",
+        "csv",
+        "tabular"
+      ],
+      "description": "A lightweight DataFrame and tabular-data library for MoonBit",
+      "is_new": false,
+      "created_at": "2026-10-02T01:26:40.799407"
+    },
+    {
+      "name": "LL728/moon_encoding",
+      "version": "0.2.0",
+      "yanked": false,
+      "yanked_reason": null,
+      "license": "Apache-2.0",
+      "repository": "https://github.com/LL728/moon_encoding",
+      "keywords": [
+        "encoding",
+        "charset",
+        "whatwg",
+        "unicode",
+        "gbk",
+        "big5",
+        "shift_jis",
+        "iso-2022-jp"
+      ],
+      "description": "WHATWG Encoding Standard 的 MoonBit 实现：label 解析、流式解码与一次性编码 API，覆盖规范定义的全部 40 种编码（含 GBK、Big5、Shift_JIS、ISO-2022-JP）",
+      "is_new": false,
+      "created_at": "2026-10-21T15:43:46.902126"
+    },
+    {
+      "name": "tonyfettes/encoding",
+      "version": "0.3.9",
+      "yanked": false,
+      "yanked_reason": null,
+      "license": "Apache-2.0",
+      "repository": "https://github.com/moonbitlang/x",
+      "keywords": [],
+      "description": "Encoding package extracted from moonbitlang/x",
+      "is_new": false,
+      "created_at": "2025-11-05T06:20:46.417791"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.dev/
+node_modules/
+_build/
+target/
+dist/
+.cache/
+__pycache__/
+*.pyc
+.DS_Store
+evidence/**/payloads/

@@ -1,0 +1,16 @@
+{
+  "provenance": "Figshare official article 24792756 v1, file 43604517",
+  "url": "https://ndownloader.figshare.com/files/43604517",
+  "bytes": 379254,
+  "sha256": "e2b7f41ad4d0e3cc22c12db41976b755a68058ea706d80c1b0370d129b3814b6",
+  "md5": "b767257bafec62434cbe8797d5299cb8",
+  "magic_ascii": "$FL2",
+  "inspection_scope": "Python stdlib header only, not dictionary/data parsing, not MoonBit compatibility",
+  "little_endian_header_fields": {
+    "layout": 2,
+    "physical_case_slots": 336,
+    "compression": 1,
+    "weight_index": 0,
+    "declared_cases": 634
+  }
+}

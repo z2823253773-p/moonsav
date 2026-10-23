@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-23T13:05:22.676612+00:00",
+  "scope": "documentation and research evidence only",
+  "checks": [
+    "JSON files parse",
+    "PRD JSON examples parse",
+    "relative markdown links exist",
+    "code fences paired",
+    "registry gzip count and SHA256",
+    "required docs exist",
+    "no product code or PLAN claimed"
+  ],
+  "json_files_checked": 13,
+  "document_sha256": {
+    "docs/RESEARCH.md": "02708f88b1f33e6a4809546232d1e7abc9d9026310167803e784fc24b8b861fd",
+    "docs/PRD.md": "110663de64f8517f39183a9d97c0ab072f5b50169e4a086d2f5fc0dff140e41e",
+    "TASK_STATE.md": "5c89fa8a8d346ca93c98a32310181ef75ff8d642debdcfa3e30045b9ed5892cd"
+  },
+  "errors": [],
+  "exit_code": 0,
+  "product_tests_run": false,
+  "git_sha": null,
+  "git_branch": null
+}

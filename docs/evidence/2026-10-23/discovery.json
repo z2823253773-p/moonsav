@@ -1,0 +1,642 @@
+{
+  "date": "2026-10-23",
+  "scope": "Public indexed sources only; not exhaustive; no private registration projects.",
+  "repository_searches": [
+    {
+      "query": "MoonSav",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": [
+          {
+            "id": "1248151453",
+            "name": "moonsav",
+            "owner": {
+              "login": "UtsavBabu",
+              "id": 156440008,
+              "type": "User",
+              "avatar_url": "https://avatars.githubusercontent.com/u/156440008?v=4",
+              "url": "https://api.github.com/users/UtsavBabu"
+            },
+            "repository_full_name": "UtsavBabu/moonsav",
+            "permissions": {
+              "admin": false,
+              "maintain": false,
+              "pull": true,
+              "push": false,
+              "triage": false
+            },
+            "allow_auto_merge": null,
+            "allow_merge_commit": null,
+            "allow_rebase_merge": null,
+            "allow_squash_merge": null,
+            "allow_update_branch": null,
+            "clone_url": "https://github.com/UtsavBabu/moonsav.git",
+            "size": 0,
+            "default_branch": "prod",
+            "git_commits_url": "https://api.github.com/repos/UtsavBabu/moonsav/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/UtsavBabu/moonsav/git/refs{/sha}",
+            "git_url": "git://github.com/UtsavBabu/moonsav.git",
+            "master_branch": null,
+            "visibility": "public",
+            "archived": false,
+            "is_code_search_indexed": null,
+            "display_title": "UtsavBabu/moonsav",
+            "display_url": "https://github.com/UtsavBabu/moonsav"
+          },
+          {
+            "id": "1251323146",
+            "name": "MoonSaviors",
+            "owner": {
+              "login": "alfredwj24",
+              "id": 188222232,
+              "type": "User",
+              "avatar_url": "https://avatars.githubusercontent.com/u/188222232?v=4",
+              "url": "https://api.github.com/users/alfredwj24"
+            },
+            "repository_full_name": "alfredwj24/MoonSaviors",
+            "permissions": {
+              "admin": false,
+              "maintain": false,
+              "pull": true,
+              "push": false,
+              "triage": false
+            },
+            "allow_auto_merge": null,
+            "allow_merge_commit": null,
+            "allow_rebase_merge": null,
+            "allow_squash_merge": null,
+            "allow_update_branch": null,
+            "clone_url": "https://github.com/alfredwj24/MoonSaviors.git",
+            "size": 26663,
+            "default_branch": "main",
+            "git_commits_url": "https://api.github.com/repos/alfredwj24/MoonSaviors/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/alfredwj24/MoonSaviors/git/refs{/sha}",
+            "git_url": "git://github.com/alfredwj24/MoonSaviors.git",
+            "master_branch": null,
+            "visibility": "public",
+            "archived": false,
+            "is_code_search_indexed": null,
+            "display_title": "alfredwj24/MoonSaviors",
+            "display_url": "https://github.com/alfredwj24/MoonSaviors"
+          },
+          {
+            "id": "659920343",
+            "name": "MoonSavings",
+            "owner": {
+              "login": "WillyXiong",
+              "id": 98928724,
+              "type": "User",
+              "avatar_url": "https://avatars.githubusercontent.com/u/98928724?v=4",
+              "url": "https://api.github.com/users/WillyXiong"
+            },
+            "repository_full_name": "WillyXiong/MoonSavings",
+            "permissions": {
+              "admin": false,
+              "maintain": false,
+              "pull": true,
+              "push": false,
+              "triage": false
+            },
+            "allow_auto_merge": null,
+            "allow_merge_commit": null,
+            "allow_rebase_merge": null,
+            "allow_squash_merge": null,
+            "allow_update_branch": null,
+            "clone_url": "https://github.com/WillyXiong/MoonSavings.git",
+            "size": 25,
+            "default_branch": "main",
+            "git_commits_url": "https://api.github.com/repos/WillyXiong/MoonSavings/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/WillyXiong/MoonSavings/git/refs{/sha}",
+            "git_url": "git://github.com/WillyXiong/MoonSavings.git",
+            "master_branch": null,
+            "visibility": "public",
+            "archived": false,
+            "is_code_search_indexed": null,
+            "display_title": "WillyXiong/MoonSavings",
+            "display_url": "https://github.com/WillyXiong/MoonSavings"
+          }
+        ]
+      }
+    },
+    {
+      "query": "MoonBit SPSS",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": []
+      }
+    },
+    {
+      "query": "MoonBit sav",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": []
+      }
+    },
+    {
+      "query": "MoonBit readstat",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": []
+      }
+    }
+  ],
+  "extra_repositories": [
+    {
+      "query": "spss language:MoonBit",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": []
+      }
+    },
+    {
+      "query": "sav language:MoonBit",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": []
+      }
+    },
+    {
+      "query": "readstat language:MoonBit",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": []
+      }
+    },
+    {
+      "query": "MoonBit dataframe",
+      "result": {
+        "archive_filter_applied": null,
+        "repositories": [
+          {
+            "id": "1381195317",
+            "name": "moonbit-dataframe",
+            "owner": {
+              "login": "sdjm5",
+              "id": 331979729,
+              "type": "User",
+              "avatar_url": "https://avatars.githubusercontent.com/u/331979729?v=4",
+              "url": "https://api.github.com/users/sdjm5"
+            },
+            "repository_full_name": "sdjm5/moonbit-dataframe",
+            "permissions": {
+              "admin": false,
+              "maintain": false,
+              "pull": true,
+              "push": false,
+              "triage": false
+            },
+            "allow_auto_merge": null,
+            "allow_merge_commit": null,
+            "allow_rebase_merge": null,
+            "allow_squash_merge": null,
+            "allow_update_branch": null,
+            "clone_url": "https://github.com/sdjm5/moonbit-dataframe.git",
+            "size": 17262,
+            "default_branch": "main",
+            "git_commits_url": "https://api.github.com/repos/sdjm5/moonbit-dataframe/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/sdjm5/moonbit-dataframe/git/refs{/sha}",
+            "git_url": "git://github.com/sdjm5/moonbit-dataframe.git",
+            "master_branch": null,
+            "visibility": "public",
+            "archived": false,
+            "is_code_search_indexed": null,
+            "display_title": "sdjm5/moonbit-dataframe",
+            "display_url": "https://github.com/sdjm5/moonbit-dataframe"
+          },
+          {
+            "id": "1238718288",
+            "name": "MoonFrame",
+            "owner": {
+              "login": "ihb2032",
+              "id": 40718643,
+              "type": "User",
+              "avatar_url": "https://avatars.githubusercontent.com/u/40718643?v=4",
+              "url": "https://api.github.com/users/ihb2032"
+            },
+            "repository_full_name": "ihb2032/MoonFrame",
+            "permissions": {
+              "admin": false,
+              "maintain": false,
+              "pull": true,
+              "push": false,
+              "triage": false
+            },
+            "allow_auto_merge": null,
+            "allow_merge_commit": null,
+            "allow_rebase_merge": null,
+            "allow_squash_merge": null,
+            "allow_update_branch": null,
+            "clone_url": "https://github.com/ihb2032/MoonFrame.git",
+            "size": 3977,
+            "default_branch": "main",
+            "git_commits_url": "https://api.github.com/repos/ihb2032/MoonFrame/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/ihb2032/MoonFrame/git/refs{/sha}",
+            "git_url": "git://github.com/ihb2032/MoonFrame.git",
+            "master_branch": null,
+            "visibility": "public",
+            "archived": false,
+            "is_code_search_indexed": null,
+            "display_title": "ihb2032/MoonFrame",
+            "display_url": "https://github.com/ihb2032/MoonFrame"
+          },
+          {
+            "id": "1371511439",
+            "name": "moonsentinel",
+            "owner": {
+              "login": "STW135-2026",
+              "id": 286346751,
+              "type": "User",
+              "avatar_url": "https://avatars.githubusercontent.com/u/286346751?v=4",
+              "url": "https://api.github.com/users/STW135-2026"
+            },
+            "repository_full_name": "STW135-2026/moonsentinel",
+            "permissions": {
+              "admin": false,
+              "maintain": false,
+              "pull": true,
+              "push": false,
+              "triage": false
+            },
+            "allow_auto_merge": null,
+            "allow_merge_commit": null,
+            "allow_rebase_merge": null,
+            "allow_squash_merge": null,
+            "allow_update_branch": null,
+            "clone_url": "https://github.com/STW135-2026/moonsentinel.git",
+            "size": 484,
+            "default_branch": "main",
+            "git_commits_url": "https://api.github.com/repos/STW135-2026/moonsentinel/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/STW135-2026/moonsentinel/git/refs{/sha}",
+            "git_url": "git://github.com/STW135-2026/moonsentinel.git",
+            "master_branch": null,
+            "visibility": "public",
+            "archived": false,
+            "is_code_search_indexed": null,
+            "display_title": "STW135-2026/moonsentinel",
+            "display_url": "https://github.com/STW135-2026/moonsentinel"
+          }
+        ]
+      }
+    }
+  ],
+  "code_queries": [
+    {
+      "query": "\"$FL2\" language:MoonBit",
+      "result": {
+        "results": []
+      }
+    },
+    {
+      "query": "spss",
+      "result": [
+        {
+          "url": "https://github.com/OverflowCat/tiago/blob/b5e81fe334efb3e39ec3e9e7f763c9bd8c002426/renderer_svg/embedded_fonts.mbt",
+          "path": "renderer_svg/embedded_fonts.mbt",
+          "matches": [
+            [
+              "spSS"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/milkbobo/ffmpeg-moonbit/blob/4925415060be73cf7b970cc448d2cd508dc02ff7/libavcodec/aac_transient_realdata_wbtest.mbt",
+          "path": "libavcodec/aac_transient_realdata_wbtest.mbt",
+          "matches": [
+            [
+              "SPss"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/ZSeanYves/markitdown/blob/035d47a036e7541429113421e67256427c6b3bd7/internal/readers/pdf/font_encoding_tables.mbt",
+          "path": "internal/readers/pdf/font_encoding_tables.mbt",
+          "matches": [
+            [
+              "sPss"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/milkbobo/ffmpeg-moonbit/blob/4925415060be73cf7b970cc448d2cd508dc02ff7/libavcodec/h264_completion_realdata_wbtest.mbt",
+          "path": "libavcodec/h264_completion_realdata_wbtest.mbt",
+          "matches": [
+            [
+              "spsS"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/gaato/codecs.mbt/blob/92041410ebdf55bfe36fddf143a1b169aa9add14/conformance/src/png_vectors_test.mbt",
+          "path": "conformance/src/png_vectors_test.mbt",
+          "matches": [
+            [
+              "SPss"
+            ],
+            [
+              "SPss"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/gaato/codecs.mbt/blob/92041410ebdf55bfe36fddf143a1b169aa9add14/conformance/src/apng_vectors_test.mbt",
+          "path": "conformance/src/apng_vectors_test.mbt",
+          "matches": [
+            [
+              "spSS"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "query": "readstat",
+      "result": [
+        {
+          "url": "https://github.com/moonbit-community/MoonbitNES/blob/71845b4d4288d9769fd15296a59eb0933181377e/lib/apu.mbt",
+          "path": "lib/apu.mbt",
+          "matches": [
+            [
+              "readStat"
+            ],
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/MoonbitNES/blob/71845b4d4288d9769fd15296a59eb0933181377e/lib/ppu.mbt",
+          "path": "lib/ppu.mbt",
+          "matches": [
+            [
+              "readStat"
+            ],
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/core/softstate.mbt",
+          "path": "core/softstate.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ],
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/raft.mbt",
+          "path": "raft.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/moondiff/blob/45932cd171c5a83f07b16dc1185e06549e4a07c0/review-web/frontend/internal/comments/deprecated.mbt",
+          "path": "review-web/frontend/internal/comments/deprecated.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/f4ah6o/direct_sdk.mbt/blob/d67b064ac807cfb92806aa29b022149795eddf86/src/events/types/types.mbt",
+          "path": "src/events/types/types.mbt",
+          "matches": [
+            [
+              "ReadStat",
+              "ReadStat"
+            ],
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/core/ready.mbt",
+          "path": "core/ready.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/core/read_only.mbt",
+          "path": "core/read_only.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ],
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitlang/python.mbt/blob/2039ba9923418fd8171e9c4dda40a193d87c19a9/cpython/core.mbt",
+          "path": "cpython/core.mbt",
+          "matches": [
+            [
+              "readStat",
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitlang/python.mbt/blob/2039ba9923418fd8171e9c4dda40a193d87c19a9/cpython/ceval.mbt",
+          "path": "cpython/ceval.mbt",
+          "matches": [
+            [
+              "readStat"
+            ],
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/moondiff/blob/45932cd171c5a83f07b16dc1185e06549e4a07c0/review-web/frontend/internal/comments/region_read.mbt",
+          "path": "review-web/frontend/internal/comments/region_read.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ],
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/core/rawnode_port_wbtest.mbt",
+          "path": "core/rawnode_port_wbtest.mbt",
+          "matches": [
+            [
+              "ReadStat",
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/core/rawnode.mbt",
+          "path": "core/rawnode.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitstack/moonraft/blob/7abc22992de6c4c1861295638ff62396ec7e437b/core/raftnode_step.mbt",
+          "path": "core/raftnode_step.mbt",
+          "matches": [
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/hnlyxiaobing/MBOpenClacky/blob/36c4c49dc746d3d9ace325899ce9b993be7a6783/lib/tool/pty.mbt",
+          "path": "lib/tool/pty.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ],
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitlang/SWE-AGI-Eval/blob/8ff3dba541ed0a6d342620055c1a9c3f7dec9ae4/gpt-5.2-codex-high/lua/runtime/vm.mbt",
+          "path": "gpt-5.2-codex-high/lua/runtime/vm.mbt",
+          "matches": [
+            [
+              "readStat"
+            ],
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/wzzc-dev/MoUI/blob/0f73ef97c841afa4679025a583319b0913ac5951/moui_agent_mcp/router.mbt",
+          "path": "moui_agent_mcp/router.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ],
+            [
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitlang/SWE-AGI-Eval/blob/8ff3dba541ed0a6d342620055c1a9c3f7dec9ae4/gpt-5.2-codex-high/lua/runtime/types.mbt",
+          "path": "gpt-5.2-codex-high/lua/runtime/types.mbt",
+          "matches": [
+            [
+              "readStat"
+            ],
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbitlang/SWE-AGI-Eval/blob/8ff3dba541ed0a6d342620055c1a9c3f7dec9ae4/gpt-5.2-codex-high/lua/stdlib/coroutine.mbt",
+          "path": "gpt-5.2-codex-high/lua/stdlib/coroutine.mbt",
+          "matches": [
+            [
+              "readStat",
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/shiguri-01/mcp.mbt/blob/7e064d3d4783a9be8a22b240dad1580e04356dd4/src/http/body_limits.mbt",
+          "path": "src/http/body_limits.mbt",
+          "matches": [
+            [
+              "ReadStat"
+            ],
+            [
+              "ReadStat",
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/vscode.mbt/blob/05fc5f41bb12ddaadacacb0a218edfa92371b589/prelude.mbt",
+          "path": "prelude.mbt",
+          "matches": [
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/vscode.mbt/blob/05fc5f41bb12ddaadacacb0a218edfa92371b589/types/vscode_enums.mbt",
+          "path": "types/vscode_enums.mbt",
+          "matches": [
+            [
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/codex-sdk/blob/ae9e331d5d4332e7eadd4fe06f6f8a42d91de1d3/app_server.mbt",
+          "path": "app_server.mbt",
+          "matches": [
+            [
+              "readStat",
+              "readStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/win32.mbt/blob/6d0897bb6621224926850b773e799378f6338a44/generated/scc/5ba5d6d9f1c2d054/types_0.mbt",
+          "path": "generated/scc/5ba5d6d9f1c2d054/types_0.mbt",
+          "matches": [
+            [
+              "ReadStat",
+              "ReadStat"
+            ]
+          ]
+        },
+        {
+          "url": "https://github.com/moonbit-community/vscode.mbt/blob/05fc5f41bb12ddaadacacb0a218edfa92371b589/types/vscode_structs.mbt",
+          "path": "types/vscode_structs.mbt",
+          "matches": [
+            [
+              "readStat"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "source_revisions": {
+    "ReadStat": "4fbf1d8e516513dc06c7a73aab03b3daced87d4f",
+    "pyreadstat": "e6e23bc0021875f35fccc3c2707c3e5151c130bb",
+    "MoonFrame": "8717a723800aa448ed943169433ef657fb837230",
+    "Hackathon2026": "a879c208b261ca500f65707d42504d06572fa9b0",
+    "OSC2026_old": "fef368a3fe47d121843d708ed689997196d41869",
+    "moon_encoding": "dbb5a3b69c4b4cc35b3eed4b73d905c688008736",
+    "GB18030": "3116f70ebe2f98dd691daf5a4b4b0ec7769c0e88"
+  },
+  "failures": [
+    "Cua hidden event page timed out; no rendered UI claim.",
+    "GNU PSPP overview downloaded, multiple chapter fetches timed out; very-long-string chapter available via indexed GNU content.",
+    "Figshare HTML 403; official public API metadata succeeded.",
+    "Some Mooncakes requests failed TLS initially; later sav/readstat queries succeeded.",
+    "tonyfettes/encoding guessed repository URL returned 404; actual registry points to moonbitlang/x.",
+    "cran/foreign/COPYING returned 404; data redistribution not inferred from repository visibility."
+  ]
+}

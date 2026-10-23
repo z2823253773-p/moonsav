@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-23T14:46:18.603982+00:00",
+  "scope": "r0.2 design/documentation checks only; no MoonSav implementation or compatibility acceptance",
+  "command": [
+    "python3",
+    "-"
+  ],
+  "checks": [
+    "evidence JSON parse",
+    "markdown fences and relative links",
+    "JSON examples parse",
+    "numeric atom decimal/IEEE754 equality",
+    "NDJSON illustrative text/base64 equality",
+    "standard CSV preserves leading zero and literal backslash-N",
+    "single-column system-missing row count",
+    "AC01-AC18 contiguous",
+    "r0.1 archive unchanged",
+    "registry snapshot hash",
+    "no product code or PLAN claimed"
+  ],
+  "json_examples": 2,
+  "relative_links_checked": 11,
+  "acceptance_rows": 18,
+  "csv_example_rows": [
+    [
+      "id",
+      "group",
+      "note"
+    ],
+    [
+      "0012",
+      "9",
+      "ok"
+    ],
+    [
+      "0013",
+      "",
+      "\\N"
+    ]
+  ],
+  "document_sha256": {
+    "docs/PRD.md": "2db831f993b3f232e8b52ed72ca6aff59cf0012c69111b52a2be48fa0cb4744a",
+    "docs/PRD_REVIEW.md": "bc90183d13d8ac99abce778347a33fcdecac15416ab83b3ba665d10ef50957e6",
+    "docs/RESEARCH.md": "d7bdf494a93146c6450146fb8fa5958b596e6754c09ddaa5f0da072cb9b6861d",
+    "TASK_STATE.md": "141e7f25f6b2f774b56f2bb613d9c4e09c1e97650213164c56c97257adf6cd36"
+  },
+  "errors": [],
+  "exit_code": 0,
+  "product_tests_run": false,
+  "git_branch": null,
+  "git_sha": null
+}

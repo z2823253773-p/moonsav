@@ -1,0 +1,64 @@
+{
+  "scope": "decoder-only; no SAV parsing; no SPSS string matching proven",
+  "node": "v24.15.0",
+  "icu": "78.2",
+  "exit_code": 0,
+  "results": [
+    {
+      "encoding": "gbk",
+      "source_hex": "a1a1",
+      "decoded_codepoints": [
+        "U+3000"
+      ]
+    },
+    {
+      "encoding": "gbk",
+      "source_hex": "a3a0",
+      "decoded_codepoints": [
+        "U+3000"
+      ]
+    },
+    {
+      "encoding": "gbk",
+      "source_hex": "80",
+      "decoded_codepoints": [
+        "U+20AC"
+      ]
+    },
+    {
+      "encoding": "gbk",
+      "source_hex": "a2e3",
+      "decoded_codepoints": [
+        "U+20AC"
+      ]
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "a1a1",
+      "decoded_codepoints": [
+        "U+3000"
+      ]
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "a3a0",
+      "decoded_codepoints": [
+        "U+3000"
+      ]
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "80",
+      "decoded_codepoints": [
+        "U+20AC"
+      ]
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "a2e3",
+      "decoded_codepoints": [
+        "U+20AC"
+      ]
+    }
+  ]
+}

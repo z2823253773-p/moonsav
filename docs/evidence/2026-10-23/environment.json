@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-23T13:02:33.567240+00:00",
+  "git_sha": null,
+  "branch": null,
+  "reason": "documentation directory only, repository not initialized",
+  "commands": [
+    {
+      "argv": [
+        "moon",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "moon 0.1.20260713 (75c7e1f 2026-07-13)\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "moonc",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "v0.10.4+2cc641edf (2026-07-15)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.15.0\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.12.13\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uname",
+        "-sm"
+      ],
+      "exit_code": 0,
+      "stdout": "Darwin arm64\n",
+      "stderr": ""
+    }
+  ],
+  "executables": {
+    "moon": "/Users/henryz/.moon/bin/moon",
+    "moonc": "/Users/henryz/.moon/bin/moonc",
+    "node": "/usr/local/bin/node",
+    "python3": "/Users/henryz/.agent-reach-venv/bin/python3",
+    "gh": "/opt/homebrew/bin/gh",
+    "R": null,
+    "pspp": null
+  },
+  "no_product_tests_executed": true
+}

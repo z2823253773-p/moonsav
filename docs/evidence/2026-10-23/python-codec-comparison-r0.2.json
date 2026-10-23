@@ -1,0 +1,55 @@
+{
+  "scope": "Python codec-only; no SAV/SPSS behavior proven",
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "exit_code": 0,
+  "results": [
+    {
+      "encoding": "gbk",
+      "source_hex": "a1a1",
+      "decoded_codepoints": [
+        "U+3000"
+      ]
+    },
+    {
+      "encoding": "gbk",
+      "source_hex": "a3a0",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "encoding": "gbk",
+      "source_hex": "80",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "encoding": "gbk",
+      "source_hex": "a2e3",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "a1a1",
+      "decoded_codepoints": [
+        "U+3000"
+      ]
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "a3a0",
+      "decoded_codepoints": [
+        "U+E5E5"
+      ]
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "80",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "encoding": "gb18030",
+      "source_hex": "a2e3",
+      "decoded_codepoints": [
+        "U+20AC"
+      ]
+    }
+  ]
+}
