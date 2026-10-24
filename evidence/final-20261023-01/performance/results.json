@@ -1,0 +1,428 @@
+{
+  "reference_machine": "macOS-26.4-arm64-arm-64bit",
+  "seed": 20261023,
+  "rows": 10000,
+  "variables": 20,
+  "runs": [
+    {
+      "mode": "none",
+      "repeat": 0,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-none.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1215387498959899,
+      "peak_rss_bytes": 82395136,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 0,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-none-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.49642937490716577,
+      "peak_rss_bytes": 123322368,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 0,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-none-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5237859589979053,
+      "peak_rss_bytes": 118145024,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 1,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-none.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1240130418445915,
+      "peak_rss_bytes": 82198528,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 1,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-none-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.506435041083023,
+      "peak_rss_bytes": 123518976,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 1,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-none-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5226468748878688,
+      "peak_rss_bytes": 118145024,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 2,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-none.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12267179088667035,
+      "peak_rss_bytes": 82149376,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 2,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-none-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5000963748898357,
+      "peak_rss_bytes": 122601472,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "none",
+      "repeat": 2,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-none-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5309072497766465,
+      "peak_rss_bytes": 117964800,
+      "input_sha256": "e6e2ab5c06b4b8a9f88f3b963f40b960ce2c64c8a30aa1a25a3e051471cdee7c"
+    },
+    {
+      "mode": "row",
+      "repeat": 0,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-row.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13021720806136727,
+      "peak_rss_bytes": 82755584,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 0,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-row-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5095244999974966,
+      "peak_rss_bytes": 124157952,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 0,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-row-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5262055841740221,
+      "peak_rss_bytes": 118177792,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 1,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-row.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1257906670216471,
+      "peak_rss_bytes": 82919424,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 1,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-row-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5565988749731332,
+      "peak_rss_bytes": 124911616,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 1,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-row-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5289684999734163,
+      "peak_rss_bytes": 118145024,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 2,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-row.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12525016604922712,
+      "peak_rss_bytes": 83017728,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 2,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/perf-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-row-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5060974590014666,
+      "peak_rss_bytes": 123846656,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    },
+    {
+      "mode": "row",
+      "repeat": 2,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.cache/performance/bundle-row-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5208747501019388,
+      "peak_rss_bytes": 118177792,
+      "input_sha256": "6a420a8bf1dc9cff363ee654671e42d2c8056cacc54f517f3080c7ac18c29ac6"
+    }
+  ],
+  "summaries": [
+    {
+      "mode": "none",
+      "task": "validate",
+      "median_seconds": 0.12267179088667035,
+      "peak_rss_bytes": 82395136,
+      "passed": true
+    },
+    {
+      "mode": "none",
+      "task": "export",
+      "median_seconds": 0.5000963748898357,
+      "peak_rss_bytes": 123518976,
+      "passed": true
+    },
+    {
+      "mode": "none",
+      "task": "check-bundle",
+      "median_seconds": 0.5237859589979053,
+      "peak_rss_bytes": 118145024,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "validate",
+      "median_seconds": 0.1257906670216471,
+      "peak_rss_bytes": 83017728,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "export",
+      "median_seconds": 0.5095244999974966,
+      "peak_rss_bytes": 124911616,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "check-bundle",
+      "median_seconds": 0.5262055841740221,
+      "peak_rss_bytes": 118177792,
+      "passed": true
+    }
+  ],
+  "semantic_hashes": {
+    "none-0": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e35776042657a6828f9004c9dc2d1f99a776a55d613969eff2a7e3d621635fae",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "none-1": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e35776042657a6828f9004c9dc2d1f99a776a55d613969eff2a7e3d621635fae",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "none-2": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e35776042657a6828f9004c9dc2d1f99a776a55d613969eff2a7e3d621635fae",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "row-0": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e0895cc1e0051ae9706bb98b9ca81e2a77dc18f23deebae865403ed6d9f9abc9",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "row-1": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e0895cc1e0051ae9706bb98b9ca81e2a77dc18f23deebae865403ed6d9f9abc9",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "row-2": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e0895cc1e0051ae9706bb98b9ca81e2a77dc18f23deebae865403ed6d9f9abc9",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    }
+  },
+  "failures": [],
+  "status": "supported_pass"
+}

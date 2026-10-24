@@ -1,0 +1,112 @@
+{
+  "head": "8ae93f2b46ab7a81acbf7a120564c493693324fb",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "scope": "Independent reviewer agent, local macOS reproduction; not remote CI, human trial, or designated acceptance",
+  "records": [
+    {
+      "tag": "install",
+      "command": [
+        "/usr/local/bin/node",
+        "/usr/local/lib/node_modules/npm/bin/npm-cli.js",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-01/archives/moonsav-0.1.0.tgz"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-01/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.32411908311769366,
+      "stdout": "logs/install.stdout",
+      "stderr": "logs/install.stderr"
+    }
+  ],
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "26e79e5f6974551bcbea967090992ad771c91e363f3b30b7e53f0e2f24bfad3e",
+      "size_bytes": 284911
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
+      "size_bytes": 56708
+    }
+  },
+  "npm_members": [
+    "package/LICENSE",
+    "package/lib/moonsav.js",
+    "package/lib/build.json",
+    "package/node/codec-data.json",
+    "package/schemas/manifest.schema.json",
+    "package/schemas/metadata.schema.json",
+    "package/package.json",
+    "package/schemas/report.schema.json",
+    "package/schemas/row.schema.json",
+    "package/fixtures/synthetic/source.json",
+    "package/toolchain.json",
+    "package/docs/CODEC_PROFILES.md",
+    "package/README.md",
+    "package/THIRD_PARTY.md",
+    "package/node/api.mjs",
+    "package/node/checker.mjs",
+    "package/node/cli.mjs",
+    "package/node/codec.mjs",
+    "package/node/io.mjs",
+    "package/bin/moonsav.mjs",
+    "package/examples/read_bundle.py",
+    "package/fixtures/synthetic/survey-row.sav",
+    "package/licenses/Python-3.12-LICENSE.txt",
+    "package/licenses/Unicode-LICENSE.txt",
+    "package/licenses/WHATWG-Encoding-LICENSE.txt"
+  ],
+  "source_members": [
+    "moon.mod",
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "licenses/Python-3.12-LICENSE.txt",
+    "docs/CODEC_PROFILES.md",
+    "README.md",
+    "examples/consumer/moon.mod.json",
+    "examples/consumer/moon.pkg.json",
+    "examples/consumer/main.mbt",
+    "toolchain.json",
+    "src/moon.pkg",
+    "src/header_test.mbt",
+    "src/bundle.mbt",
+    "src/model.mbt",
+    "src/semantic_test.mbt",
+    "src/json.mbt",
+    "src/bridge/moon.pkg",
+    "src/bridge/main.mbt",
+    "src/bridge/pkg.generated.mbti",
+    "src/pkg.generated.mbti",
+    "src/dictionary.mbt",
+    "src/codec.mbt",
+    "src/cursor.mbt",
+    "src/invariants.mbt",
+    "src/limits_test.mbt",
+    "src/data.mbt"
+  ],
+  "node_only_environment": {
+    "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-01/node-only",
+    "moon_on_path": null,
+    "python_on_path": null
+  },
+  "status": "harness_failed",
+  "harness_failure": {
+    "action": "npm install from empty nested directory climbed to ancestor package",
+    "exception": "FileNotFoundError: isolated node_modules/.bin/moonsav absent",
+    "accidental_product_paths": [
+      "package.json",
+      "package-lock.json",
+      "node_modules"
+    ],
+    "restoration": "package.json and package-lock.json restored byte-for-byte with git show 8ae93f2:path; root node_modules moved to run-01/accidental-parent-node-modules",
+    "root_diff_after_restore": "",
+    "corrected_run": "../run-02/report.json"
+  },
+  "accidental_diff": "diff --git a/package-lock.json b/package-lock.json\nindex 9e8b917..1194da0 100644\n--- a/package-lock.json\n+++ b/package-lock.json\n@@ -8,6 +8,21 @@\n       \"name\": \"moonsav\",\n       \"version\": \"0.1.0\",\n       \"license\": \"Apache-2.0\",\n+      \"dependencies\": {\n+        \"moonsav\": \"file:.dev/reviewer-final/run-01/archives/moonsav-0.1.0.tgz\"\n+      },\n+      \"bin\": {\n+        \"moonsav\": \"bin/moonsav.mjs\"\n+      },\n+      \"engines\": {\n+        \"node\": \"24.15.0\"\n+      }\n+    },\n+    \"node_modules/moonsav\": {\n+      \"version\": \"0.1.0\",\n+      \"resolved\": \"file:.dev/reviewer-final/run-01/archives/moonsav-0.1.0.tgz\",\n+      \"integrity\": \"sha512-XgJQ45qBveZjyR8P8M05IRqI8/ZBrN58zqLUXDajnxMlj651u0JOlN0wo3RSb6HOlZ/bug+gQ0wQFYzejWj98w==\",\n+      \"license\": \"Apache-2.0\",\n       \"bin\": {\n         \"moonsav\": \"bin/moonsav.mjs\"\n       },\ndiff --git a/package.json b/package.json\nindex 03eb5c4..ab81de5 100644\n--- a/package.json\n+++ b/package.json\n@@ -29,5 +29,8 @@\n     \"build\": \"node tools/build.mjs\",\n     \"test\": \"node --test tests/*.test.mjs\",\n     \"test:core\": \"moon test --target js\"\n+  },\n+  \"dependencies\": {\n+    \"moonsav\": \"file:.dev/reviewer-final/run-01/archives/moonsav-0.1.0.tgz\"\n   }\n }\n"
+}

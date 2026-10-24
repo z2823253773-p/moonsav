@@ -1,0 +1,31 @@
+{
+  "delivery_scope": "local candidate; external platform and designated acceptance pending",
+  "product_git_sha": "8ae93f2b46ab7a81acbf7a120564c493693324fb",
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "8ae93f2b46ab7a81acbf7a120564c493693324fb",
+    "dirty": true,
+    "source_tree_sha256": "e77cf705f5e878e10a49cbb040336af9d990fb65b2e201ffab1502a29d936bf6",
+    "moon": "0.1.20260713",
+    "moonc": "v0.10.4+2cc641edf",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "26e79e5f6974551bcbea967090992ad771c91e363f3b30b7e53f0e2f24bfad3e",
+      "size_bytes": 284911
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
+      "size_bytes": 56708
+    }
+  },
+  "acceptance": "evidence/final-20261023-01/summary.json",
+  "independent_review": "docs/progress/INDEPENDENT_REVIEW.md",
+  "external_gaps": [
+    "Linux x64 Node full corpus CI not_run",
+    "Windows x64 Node CLI/corpus CI not_run",
+    "designated acceptance chat review pending"
+  ]
+}

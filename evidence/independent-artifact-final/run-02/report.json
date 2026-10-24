@@ -1,0 +1,338 @@
+{
+  "head": "8ae93f2b46ab7a81acbf7a120564c493693324fb",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "scope": "Independent reviewer agent, local macOS reproduction; not remote CI, human trial, or designated acceptance",
+  "records": [
+    {
+      "tag": "install",
+      "command": [
+        "/usr/local/bin/node",
+        "/usr/local/lib/node_modules/npm/bin/npm-cli.js",
+        "install",
+        "--prefix",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/archives/moonsav-0.1.0.tgz"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.15274270786903799,
+      "stdout": "logs/install.stdout",
+      "stderr": "logs/install.stderr"
+    },
+    {
+      "tag": "version",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/.bin/moonsav",
+        "--version"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 1.9814067920669913,
+      "stdout": "logs/version.stdout",
+      "stderr": "logs/version.stderr"
+    },
+    {
+      "tag": "inspect",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/.bin/moonsav",
+        "inspect",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/moonsav/fixtures/synthetic/survey-row.sav"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.038316708989441395,
+      "stdout": "logs/inspect.stdout",
+      "stderr": "logs/inspect.stderr"
+    },
+    {
+      "tag": "inspect-json",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/.bin/moonsav",
+        "inspect",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.0339307498652488,
+      "stdout": "logs/inspect-json.stdout",
+      "stderr": "logs/inspect-json.stderr"
+    },
+    {
+      "tag": "validate",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/.bin/moonsav",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.03381870803423226,
+      "stdout": "logs/validate.stdout",
+      "stderr": "logs/validate.stderr"
+    },
+    {
+      "tag": "export",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/.bin/moonsav",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/first bundle 中文"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.036428957944735885,
+      "stdout": "logs/export.stdout",
+      "stderr": "logs/export.stderr"
+    },
+    {
+      "tag": "check-bundle",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/.bin/moonsav",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.035553958965465426,
+      "stdout": "logs/check-bundle.stdout",
+      "stderr": "logs/check-bundle.stderr"
+    },
+    {
+      "tag": "python-consumer",
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "-I",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/node_modules/moonsav/examples/read_bundle.py",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/first bundle 中文"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.02346820803359151,
+      "stdout": "logs/python-consumer.stdout",
+      "stderr": "logs/python-consumer.stderr"
+    },
+    {
+      "tag": "u1-js",
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/source/examples/consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.2480950839817524,
+      "stdout": "logs/u1-js.stdout",
+      "stderr": "logs/u1-js.stderr"
+    },
+    {
+      "tag": "u1-native",
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "native"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/source/examples/consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.8008282498922199,
+      "stdout": "logs/u1-native.stdout",
+      "stderr": "logs/u1-native.stderr"
+    },
+    {
+      "tag": "u1-wasm-gc",
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/source/examples/consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.2534267499577254,
+      "stdout": "logs/u1-wasm-gc.stdout",
+      "stderr": "logs/u1-wasm-gc.stderr"
+    },
+    {
+      "tag": "installed-regressions",
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer/regressions.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/npm-consumer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 0.24022787483409047,
+      "stdout": "logs/installed-regressions.stdout",
+      "stderr": "logs/installed-regressions.stderr"
+    }
+  ],
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "26e79e5f6974551bcbea967090992ad771c91e363f3b30b7e53f0e2f24bfad3e",
+      "size_bytes": 284911
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
+      "size_bytes": 56708
+    }
+  },
+  "npm_members": [
+    "package/LICENSE",
+    "package/lib/moonsav.js",
+    "package/lib/build.json",
+    "package/node/codec-data.json",
+    "package/schemas/manifest.schema.json",
+    "package/schemas/metadata.schema.json",
+    "package/package.json",
+    "package/schemas/report.schema.json",
+    "package/schemas/row.schema.json",
+    "package/fixtures/synthetic/source.json",
+    "package/toolchain.json",
+    "package/docs/CODEC_PROFILES.md",
+    "package/README.md",
+    "package/THIRD_PARTY.md",
+    "package/node/api.mjs",
+    "package/node/checker.mjs",
+    "package/node/cli.mjs",
+    "package/node/codec.mjs",
+    "package/node/io.mjs",
+    "package/bin/moonsav.mjs",
+    "package/examples/read_bundle.py",
+    "package/fixtures/synthetic/survey-row.sav",
+    "package/licenses/Python-3.12-LICENSE.txt",
+    "package/licenses/Unicode-LICENSE.txt",
+    "package/licenses/WHATWG-Encoding-LICENSE.txt"
+  ],
+  "source_members": [
+    "moon.mod",
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "licenses/Python-3.12-LICENSE.txt",
+    "docs/CODEC_PROFILES.md",
+    "README.md",
+    "examples/consumer/moon.mod.json",
+    "examples/consumer/moon.pkg.json",
+    "examples/consumer/main.mbt",
+    "toolchain.json",
+    "src/moon.pkg",
+    "src/header_test.mbt",
+    "src/bundle.mbt",
+    "src/model.mbt",
+    "src/semantic_test.mbt",
+    "src/json.mbt",
+    "src/bridge/moon.pkg",
+    "src/bridge/main.mbt",
+    "src/bridge/pkg.generated.mbti",
+    "src/pkg.generated.mbti",
+    "src/dictionary.mbt",
+    "src/codec.mbt",
+    "src/cursor.mbt",
+    "src/invariants.mbt",
+    "src/limits_test.mbt",
+    "src/data.mbt"
+  ],
+  "node_only_environment": {
+    "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/node-only",
+    "moon_on_path": null,
+    "python_on_path": null
+  },
+  "installed_package_files": [
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY.md",
+    "bin/moonsav.mjs",
+    "docs/CODEC_PROFILES.md",
+    "examples/read_bundle.py",
+    "fixtures/synthetic/source.json",
+    "fixtures/synthetic/survey-row.sav",
+    "lib/build.json",
+    "lib/moonsav.js",
+    "licenses/Python-3.12-LICENSE.txt",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "node/api.mjs",
+    "node/checker.mjs",
+    "node/cli.mjs",
+    "node/codec-data.json",
+    "node/codec.mjs",
+    "node/io.mjs",
+    "package.json",
+    "schemas/manifest.schema.json",
+    "schemas/metadata.schema.json",
+    "schemas/report.schema.json",
+    "schemas/row.schema.json",
+    "toolchain.json"
+  ],
+  "extracted_source_root": "/Users/henryz/Desktop/比赛/moonsav/.dev/reviewer-final/run-02/source",
+  "extracted_source_hashes": {
+    "moon.mod": "2631baad7f54b846cc23e7e47854bd00054a6b59ffafa8dd4dc5f97573c15010",
+    "LICENSE": "86460c45017ffacb9aa9e18850fa9fdb036339dc8851125465f4a3f3442fc894",
+    "THIRD_PARTY.md": "6ff0e4b3b20345ec129f34a8d42b4e38eaa3ecb8cdd801400ffffb8fa228562b",
+    "README.md": "74e58a6dbcf508be68cdd0a12f414f968b78a80af2ba6154a3ae061e58447859",
+    "toolchain.json": "ef7cc4ef4a6f21abdb42f8a5d08df36c3d7faef77adc6c0785105fbb06799372",
+    "licenses/Unicode-LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "licenses/WHATWG-Encoding-LICENSE.txt": "85dc6f5ccb57a6fe8c33d158f9fc8fc7ee5655a5d3db2cdd131c6a3d0f48a864",
+    "licenses/Python-3.12-LICENSE.txt": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "docs/CODEC_PROFILES.md": "03d265f8a164127239ed2f71c0859608cdb8e4e81bf29516103d306af5fb9cb2",
+    "src/moon.pkg": "a2820cf4a62057a65a23527b690c91b9d235c2e75759e2db9448fa172678bf85",
+    "src/header_test.mbt": "bf8af98169665cc7a7fef59dce04d1083bbb211fa8c6c437ed8a8def9363e3cb",
+    "src/bundle.mbt": "ce10160c3a8bea22a132b065bbb1265b6e18304bc7fadc19bdf1899a7c1b4fe0",
+    "src/model.mbt": "cce5b77d1f7934035ca947ad6ede00e7a350e4f7a44d4c19c6ca2526c54f15f1",
+    "src/semantic_test.mbt": "87f4ab6c2785e8c47d3225ae6e25c85fc0f9d59c908dec82ea6a08b7dee526c5",
+    "src/json.mbt": "78a93ce9dbb7ae69c864c2ea9dc01850a258f51b16652aea557c3885fd013842",
+    "src/pkg.generated.mbti": "44bcdbd50ad8259e750aeb6468dfaba2be453144a2593e1bec664151de73db20",
+    "src/dictionary.mbt": "f76b820ff585f1f61e53d89b10ccca74c2fe92910d95cd7a613b8efbeb14b4fc",
+    "src/codec.mbt": "7b7761cfd57e82bee7e6f288181d1e69090c1352b1c7d2678a268b6c2c76e645",
+    "src/cursor.mbt": "1619d97299ee05db14c418aedc2912b2697f3839d8f21acbbc4ddf2d0e3e896f",
+    "src/invariants.mbt": "7325c35fe2b19927ef4f2183d9279c8de528bb866b488ae1b2ea73dbd7cb82db",
+    "src/limits_test.mbt": "4b096462e64faf6a89f1cb6587262c96216b6c88cb5b59467f6d5f7eae0831e4",
+    "src/data.mbt": "17eb7f63a3e8bf3c664a4ccc07aac62c204bb160167a0863a8a6f28606aeb558",
+    "src/bridge/moon.pkg": "a833f974d53710d86faae08d24b33222f98277c326341709df34c1b2ebc0a3ae",
+    "src/bridge/main.mbt": "a7c36bd6db1857ecaca2ac7bee12e1638d2bd38b6cde23abade676379ac6bc35",
+    "src/bridge/pkg.generated.mbti": "251cd4642b4f7679f0a78dc7f1bbdb429d7f1cffa95c5c10a11bc84a2f8dd829",
+    "examples/consumer/moon.mod.json": "93af851c95431f60a0b3a069735dbe84a3efce007a0b5d7c8f91035ef425f05b",
+    "examples/consumer/moon.pkg.json": "93c11389274e3182fff57e037de555841404099b32015a48206fca44c322fe70",
+    "examples/consumer/main.mbt": "70867755460a6b09d4d72cec9cb62ed55e7835886f0cabe5a862913b7cd34e1f"
+  },
+  "status": "passed",
+  "harness_first_attempt": "../run-01/report.json",
+  "root_package_restoration_verified": true,
+  "archive_hashes_unchanged": true,
+  "scope_inspection": {
+    "npm_runtime_dependencies": {},
+    "contains_forbidden_distribution_paths": [],
+    "source_consumer_dependency": {
+      "z2823253773/moonsav": {
+        "path": "../.."
+      }
+    },
+    "cli_input_source": "only installed package fixture",
+    "python_command_isolation": "python3 -I; standard library reader from installed package",
+    "source_archive_files_equal_reviewed_worktree": true
+  }
+}

@@ -40,47 +40,51 @@
 
 ## T1 / M1: Fixed environment and highest risk vertical slice
 
-- [ ] Initialize scoped Git and ignore .dev, public cache, generated builds and evidence payloads with identifiers; commit inherited documents without altering them.
-- [ ] Lock Python/ReadStat and obtain independently runnable PSPP. Capture versions, reference machine, source hashes and provenance. Freeze corpus categories before testing.
-- [ ] Write failing AC01 tests: two compression modes contain score [1,2,99,sysmis], labels, decimals, string IDs, blank/NA/backslash/multiline. Assert missing kinds, raw bits/width, dictionary references and retained rows, not just a row count.
-- [ ] Implement minimal MoonBit types/cursor/dictionary/compression/strict decoding and bridge. Run `moon test --target js` and `python tools/verify.py --case AC01 --output evidence/M1-ac01`; failures must be saved before green.
-- [ ] Resolve codec profiles against primary mapping/format evidence and PSPP/ReadStat; test A1A1/A3A0, illegal tails, real U+FFFD, 1252 control bytes and GB18030 four-byte sequences. Document variants explicitly.
-- [ ] Build U1 consumer in a separate directory using local library dependency; assert missing filtering, unlabeled legal values, safe retained rows, Stop and ConsumerFailed. Export initial canonical/CSV and run independent Python reader.
-- [ ] Capture M1 report and commit actual deliverable; continue immediately.
+- [x] Initialize scoped Git and ignore .dev, public cache, generated builds and evidence payloads with identifiers; commit inherited documents without altering them.
+- [x] Lock Python/ReadStat and obtain independently runnable PSPP. Capture versions, reference machine, source hashes and provenance. Freeze corpus categories before testing.
+- [x] Write failing AC01 tests: two compression modes contain score [1,2,99,sysmis], labels, decimals, string IDs, blank/NA/backslash/multiline. Assert missing kinds, raw bits/width, dictionary references and retained rows, not just a row count.
+- [x] Implement minimal MoonBit types/cursor/dictionary/compression/strict decoding and bridge. Run `moon test --target js` and `python tools/verify.py --case AC01 --output evidence/M1-ac01`; failures must be saved before green.
+- [x] Resolve codec profiles against primary mapping/format evidence and PSPP/ReadStat; test A1A1/A3A0, illegal tails, real U+FFFD, 1252 control bytes and GB18030 four-byte sequences. Document variants explicitly.
+- [x] Build U1 consumer in a separate directory using local library dependency; assert missing filtering, unlabeled legal values, safe retained rows, Stop and ConsumerFailed. Export initial canonical/CSV and run independent Python reader.
+- [x] Capture M1 report and commit actual deliverable; continue immediately.
 
 ## T2 / M2: Complete core semantics and rejection contract
 
-- [ ] Add failing tests for AC04–07/09/10: all compression opcodes, nondefault bias, all string boundaries, long names, extended labels/missings, range sentinels, -0, dates/display, declarations, invalid lengths/indices/unknown records and each limit boundary.
-- [ ] Implement dictionary extension parsing/reconstruction and missing/label semantics; recognized uninterpreted records retain payload and warning; never skip unknown semantic records.
-- [ ] Implement options/limits/encoding precedence and exact error context. Validate formats and strict strings only after reconstruction. `inspect` must not claim data validation.
-- [ ] Run `moon test --target js`, `--target native`, `--target wasm-gc`; run focused independent oracles for all AC04–07/09/10 classes. Review actual failing samples and preserve them.
-- [ ] Record M2 report + commit.
+- [x] Add failing tests for AC04–07/09/10: all compression opcodes, nondefault bias, all string boundaries, long names, extended labels/missings, range sentinels, -0, dates/display, declarations, invalid lengths/indices/unknown records and each limit boundary.
+- [x] Implement dictionary extension parsing/reconstruction and missing/label semantics; recognized uninterpreted records retain payload and warning; never skip unknown semantic records.
+- [x] Implement options/limits/encoding precedence and exact error context. Validate formats and strict strings only after reconstruction. `inspect` must not claim data validation.
+- [x] Run `moon test --target js`, `--target native`, `--target wasm-gc`; run focused independent oracles for all AC04–07/09/10 classes. Review actual failing samples and preserve them.
+- [x] Record M2 report + commit.
 
 ## T3 / M3: Product API, CLI, bundle and consumers
 
-- [ ] Write failing task tests for inspect/validate/export/check-bundle, CLI channels/exits, full JSON, summary truncation, zero/single-column/multiline/NUL, wrong metadata, rehashed-invalid cells, limits, extra files and symlinks.
-- [ ] Implement MoonBit canonical/CSV/metadata/codebook serialization and bounded structural/semantic checker; Node adapter handles hashes and bounded files, not SAV semantics.
-- [ ] Implement exclusive output transaction and input change detection. Test concurrent same-path exports, before/after-commit interrupts, write failures and strict warnings; assert unchanged input SHA.
-- [ ] Add schemas and runnable Python/MoonBit consumers. Build precompiled JS npm archive and test clean offline install with Node only on PATH.
-- [ ] Run AC08/11/12/14–17 and record developer U1–U3 reproduction. Save M3 report + commit.
+- [x] Write failing task tests for inspect/validate/export/check-bundle, CLI channels/exits, full JSON, summary truncation, zero/single-column/multiline/NUL, wrong metadata, rehashed-invalid cells, limits, extra files and symlinks.
+- [x] Implement MoonBit canonical/CSV/metadata/codebook serialization and bounded structural/semantic checker; Node adapter handles hashes and bounded files, not SAV semantics.
+- [x] Implement exclusive output transaction and input change detection. Test concurrent same-path exports, before/after-commit interrupts, write failures and strict warnings; assert unchanged input SHA.
+- [x] Add schemas and runnable Python/MoonBit consumers. Build precompiled JS npm archive and test clean offline install with Node only on PATH.
+- [x] Run AC08/11/12/14–17 and record developer U1–U3 reproduction. Save M3 report + commit.
 
 ## T4 / M4: Compatibility, performance and independent review
 
-- [ ] Audit public source licenses and identifiers, cache outside distributable. Compare every row/variable/label/missing/format field in >=2 public actual files; preserve normalization explanations.
-- [ ] Run `python tools/verify.py --all --require-public --require-pspp --output evidence/acceptance-current` with no skip-as-pass. Timeout each corrupt process at 10 seconds.
-- [ ] Run seeded 10000x20 compressed/uncompressed validate/export/check three times; median <=30s and peak RSS <=512MiB; deterministic semantic hashes (AC18).
-- [ ] Obtain fresh independent review and clean-directory reproduction (the delegated acceptance chat is the designated reviewer; optional review subagent if applicable skill requires). Fix confirmed findings with regression tests and rerun affected/full gates.
-- [ ] Save M4 actual findings, failures and untested platforms + commit. Do not claim acceptance before reviewer evidence exists.
+- [x] Audit public source licenses and identifiers, cache outside distributable. Compare every row/variable/label/missing/format field in >=2 public actual files; preserve normalization explanations.
+- [x] Run `python tools/verify.py --all --require-public --require-pspp --output evidence/acceptance-current` with no skip-as-pass. Timeout each corrupt process at 10 seconds.
+- [x] Run seeded 10000x20 compressed/uncompressed validate/export/check three times; median <=30s and peak RSS <=512MiB; deterministic semantic hashes (AC18).
+- [x] Obtain fresh independent review and clean-directory reproduction (the delegated acceptance chat is the designated reviewer; optional review subagent if applicable skill requires). Fix confirmed findings with regression tests and rerun affected/full gates.
+- [x] Save M4 actual findings, failures and untested platforms + commit. Do not claim acceptance before reviewer evidence exists.
 
 ## T5 / M5: Reproducible local delivery
 
-- [ ] Finalize README/API/help/examples, Apache-2.0 LICENSE, third party provenance, frozen dependencies and compatibility matrix tied to actual runs.
-- [ ] Add pinned macOS/Linux/Windows CI definitions and core backend jobs; label remote CI unrun until evidence exists.
-- [ ] Rebuild package, inspect contents, install in clean directory and run first-use sample offline; hash final artifacts. Fresh checkout reruns the same entry.
-- [ ] Update TASK_STATE and M5 report with exact branch/SHA/dirty, commands/exits, hashes, failures/uncovered and copy-ready acceptance steps. Public release/registration remain separate and unexecuted.
+- [x] Finalize README/API/help/examples, Apache-2.0 LICENSE, third party provenance, frozen dependencies and compatibility matrix tied to actual runs.
+- [x] Add pinned macOS/Linux/Windows CI definitions and core backend jobs; label remote CI unrun until evidence exists.
+- [x] Rebuild package, inspect contents, install in clean directory and run first-use sample offline; hash final artifacts. Fresh checkout reruns the same entry.
+- [x] Update TASK_STATE and M5 report with exact branch/SHA/dirty, commands/exits, hashes, failures/uncovered and copy-ready acceptance steps. Public release/registration remain separate and unexecuted.
+
+Completed checkboxes below mean the authorized **local** deliverable and captured runs. They do not approve the PRD on behalf of the designated acceptance chat or establish unrun remote platforms. External gates remain explicit in TASK_STATE and M5.
 
 ## Execution Ledger
 
 2026-10-23: Inspected inherited docs and applicable ancestor instructions; no AGENTS.md or Git exists. User authorization overrides stale design-pending lines and skill plan approval pause. New project directory is already isolated from neighboring projects; use it directly, no additional worktree required. Python default drift observed (3.14.6); use existing python3.12 for oracle venv. No tests or product baseline exists, so baseline is not a green test claim.
 
 2026-10-23 hardening rulings: retain the stable intersection GB18030 profile and reject ambiguous revision mappings rather than guess; preserve supplementary-plane fixture and record Mac system-iconv oracle limitation separately. Charge associated dictionary labels4096 bytes each (default16384), after the independent reviewer proved a100000-label compact input caused quadratic work and excessive object growth. Preserve BOM consistently across adapters. Source archives use root-anchored legacy include rules because this pinned Moon release did not apply .moonignore as expected; actual archive member inspection is the gate. Python verification subprocesses omit only the invalid inherited `_` last-command environment variable after it made the Moon tool panic; no global environment setting was changed.
+
+2026-10-23 final local run: product8ae93f2, evidence/final-20261023-01.17 supported passes + AC09 expected rejects; zero failures/unexpected/not-run local cases.48 Node tests and7 core tests per three backends pass. Independent final archive reproduction passed after a preserved reviewer harness correction. Final reports and exact artifact manifest are M4/M5/FINAL_HANDOFF; remote Linux/Windows and designated acceptance remain pending. Branch retained, no publication.
