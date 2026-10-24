@@ -1,0 +1,17 @@
+.dev/
+.cache/
+node_modules/
+lib/
+dist/
+evidence/
+tests/
+tools/
+node/
+bin/
+schemas/
+fixtures/
+examples/
+docs/evidence/
+docs/acceptance/
+docs/coordination/
+.git/

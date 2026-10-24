@@ -251,6 +251,12 @@ pub impl ToJson for ErrorInfo with fn to_json(self : ErrorInfo) -> Json {
     "code": self.code.to_json(),
     "message": self.message.to_json(),
     "byte_offset": optional(self.byte_offset),
+    "record": optional(self.record),
+    "subtype": optional(self.subtype),
+    "variable_index": optional(self.variable_index),
+    "row_index": optional(self.row_index),
+    "actual": optional(self.actual),
+    "limit": optional(self.limit),
   }
 }
 
@@ -275,6 +281,7 @@ pub impl ToJson for EncodingInfo with fn to_json(self : EncodingInfo) -> Json {
     "selection_source": self.selection_source.to_json(),
     "profile": self.profile.to_json(),
     "string_matching_policy": self.string_matching_policy.to_json(),
+    "decoder_identity": self.decoder_identity.to_json(),
   }
 }
 
@@ -286,4 +293,9 @@ pub impl ToJson for Extra with fn to_json(self : Extra) -> Json {
     "byte_offset": self.byte_offset.to_json(),
     "raw_base64": self.raw_base64.to_json(),
   }
+}
+
+///|
+pub impl ToJson for Atom with fn to_json(self : Atom) -> Json {
+  atom_json(self)
 }

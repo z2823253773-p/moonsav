@@ -1,0 +1,90 @@
+✔ canonical and multiline CSV validate as one paired bundle (84.51425ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (81.061334ms)
+✔ rehashing CSV that disagrees with canonical fails (78.402333ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (72.920959ms)
+✔ missing canonical and symlink metadata reject (152.84025ms)
+✔ rehashing metadata cannot admit duplicate semantic label (80.229333ms)
+✔ rehashing metadata cannot admit bad weight reference (78.4715ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (84.040375ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (79.543209ms)
+✔ canonical bytes parsed after a file swap must still match manifest hash (54.1175ms)
+✔ invalid UTF8 metadata.json is a data rejection, not I/O (78.792875ms)
+✔ invalid UTF8 manifest.json is a data rejection, not I/O (73.579ms)
+✔ invalid UTF8 data.ndjson is a data rejection, not I/O (80.889958ms)
+✔ invalid UTF8 data.csv is a data rejection, not I/O (79.450667ms)
+✖ metadata policy unsupported CSV policy cannot bypass checker with a new hash (89.797333ms)
+✖ metadata policy unknown encoding selection policy cannot bypass checker with a new hash (87.330416ms)
+✖ metadata policy unknown retained semantic extension cannot bypass checker with a new hash (82.048916ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 14
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1456.328459
+
+✖ failing tests:
+
+test at tests/bundle.test.mjs:19:294
+✖ metadata policy unsupported CSV policy cannot bypass checker with a new hash (89.797333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:19:559)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:19:294
+✖ metadata policy unknown encoding selection policy cannot bypass checker with a new hash (87.330416ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:19:559)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:19:294
+✖ metadata policy unknown retained semantic extension cannot bypass checker with a new hash (82.048916ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:19:559)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,119 @@
+{
+  "report_version": "moonsav.acceptance/1",
+  "status": "passed",
+  "cases": [
+    {
+      "case": "AC01",
+      "status": "supported_pass",
+      "utc": "2026-10-24T06:21:33.069813+00:00",
+      "detail": {
+        "scope": "both compression modes, all source cells/dictionary and independent canonical/CSV consumer",
+        "items": [
+          {
+            "input_sha256": "6f65f455156e07864e573197ff585811db82dfe6abd5eb1dadecdfc1488d755f",
+            "size_bytes": 815,
+            "actual_rows": 5,
+            "logical_variables": 3,
+            "cells_compared": 15,
+            "dictionary_compared": [
+              "names",
+              "order",
+              "type",
+              "width",
+              "variable_labels",
+              "value_labels",
+              "user_missing_definitions",
+              "raw_print_write_formats",
+              "raw_missing_atoms",
+              "measure_display_alignment",
+              "weight_reference",
+              "retained_extension_payloads"
+            ],
+            "differences": [],
+            "normalizations": {
+              "string_trailing_ascii_spaces": 9,
+              "system_missing_to_None": 1,
+              "label_trailing_ascii_spaces": 0
+            },
+            "screening": {
+              "potential_identifier_columns": 0,
+              "raw_redistribution": false,
+              "cell_values_in_evidence": false
+            },
+            "oracle": "ReadStat via pyreadstat 1.3.3",
+            "status": "supported_pass"
+          },
+          {
+            "input_sha256": "992eb0f83031b57d834b7939207f56e2dfeb6d89b449a71e7dfbd9bee000680a",
+            "size_bytes": 783,
+            "actual_rows": 5,
+            "logical_variables": 3,
+            "cells_compared": 15,
+            "dictionary_compared": [
+              "names",
+              "order",
+              "type",
+              "width",
+              "variable_labels",
+              "value_labels",
+              "user_missing_definitions",
+              "raw_print_write_formats",
+              "raw_missing_atoms",
+              "measure_display_alignment",
+              "weight_reference",
+              "retained_extension_payloads"
+            ],
+            "differences": [],
+            "normalizations": {
+              "string_trailing_ascii_spaces": 9,
+              "system_missing_to_None": 1,
+              "label_trailing_ascii_spaces": 0
+            },
+            "screening": {
+              "potential_identifier_columns": 0,
+              "raw_redistribution": false,
+              "cell_values_in_evidence": false
+            },
+            "oracle": "ReadStat via pyreadstat 1.3.3",
+            "status": "supported_pass"
+          }
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "supported_pass": 1,
+    "supported_fail": 0,
+    "expected_rejection": 0,
+    "unexpected_result": 0,
+    "not_run": 0
+  },
+  "versions": {
+    "moon": "moon 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moon\nmoonc v0.10.4+2cc641edf (2026-07-15) ~/.moon/bin/moonc\nmoonrun 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg",
+    "node": "v24.15.0",
+    "python": "Python 3.12.13",
+    "python_dependencies": [
+      "attrs==25.3.0",
+      "jsonschema==4.23.0",
+      "jsonschema-specifications==2024.10.1",
+      "narwhals==2.27.1",
+      "numpy==2.5.4",
+      "pandas==2.3.3",
+      "pyreadstat==1.3.3",
+      "python-dateutil==3.0.0",
+      "pytz==2026.5",
+      "referencing==0.36.2",
+      "rpds-py==0.22.3",
+      "six==1.17.0",
+      "typing_extensions==4.16.0",
+      "tzdata==2026.5"
+    ]
+  },
+  "platform": "macOS-26.4-arm64-arm-64bit",
+  "require_public": false,
+  "require_pspp": false,
+  "remote_ci": "not_run",
+  "external_user_trial": false,
+  "designated_acceptance_chat": "pending independent acceptance",
+  "limits": "resource targets and evidence scopes remain explicit"
+}

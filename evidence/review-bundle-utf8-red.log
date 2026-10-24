@@ -1,0 +1,111 @@
+✔ canonical and multiline CSV validate as one paired bundle (67.471541ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (65.485375ms)
+✔ rehashing CSV that disagrees with canonical fails (63.931ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (57.899084ms)
+✔ missing canonical and symlink metadata reject (119.466708ms)
+✔ rehashing metadata cannot admit duplicate semantic label (64.259625ms)
+✔ rehashing metadata cannot admit bad weight reference (62.942584ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (63.766833ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (64.920292ms)
+✔ canonical bytes parsed after a file swap must still match manifest hash (43.217667ms)
+✖ invalid UTF8 metadata.json is a data rejection, not I/O (61.378083ms)
+✖ invalid UTF8 manifest.json is a data rejection, not I/O (57.62275ms)
+✖ invalid UTF8 data.ndjson is a data rejection, not I/O (64.966625ms)
+✖ invalid UTF8 data.csv is a data rejection, not I/O (63.012833ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 10
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 954.485917
+
+✖ failing tests:
+
+test at tests/bundle.test.mjs:18:77
+✖ invalid UTF8 metadata.json is a data rejection, not I/O (61.378083ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:18:300)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:18:77
+✖ invalid UTF8 manifest.json is a data rejection, not I/O (57.62275ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:18:300)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:18:77
+✖ invalid UTF8 data.ndjson is a data rejection, not I/O (64.966625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:18:300)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:18:77
+✖ invalid UTF8 data.csv is a data rejection, not I/O (63.012833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'IntegrityMismatch'
+  - 'InvalidEncoding'
+       ^
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:18:323)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'IntegrityMismatch',
+    expected: 'InvalidEncoding',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

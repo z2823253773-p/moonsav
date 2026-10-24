@@ -1,0 +1,22 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "z2823253773/moonsav/bridge"
+
+// Values
+pub fn check_end_bridge() -> String
+
+pub fn check_manifest_bridge(String, Int, Int, Int) -> String
+
+pub fn check_row_bridge(String, String, Int) -> String
+
+pub fn check_start_bridge(String, String, Int, Int, Int) -> String
+
+pub fn run(Bytes, String, String, Int, Int, Int) -> String
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

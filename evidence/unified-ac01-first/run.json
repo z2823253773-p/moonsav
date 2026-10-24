@@ -1,0 +1,343 @@
+{
+  "records": [
+    {
+      "utc": "2026-10-24T06:21:32.675051+00:00",
+      "command": [
+        "moon",
+        "version",
+        "--all"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.020062207942828536,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "000-stdout.log",
+      "stderr": "000-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:32.753472+00:00",
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.009839334059506655,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "001-stdout.log",
+      "stderr": "001-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:32.810384+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.005987667012959719,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "002-stdout.log",
+      "stderr": "002-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:32.863661+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.15531724994070828,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "003-stdout.log",
+      "stderr": "003-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:33.069993+00:00",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.07493233308196068,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "004-stdout.log",
+      "stderr": "004-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:33.193358+00:00",
+      "command": [
+        "node",
+        "tools/ac01.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03252354101277888,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "005-stdout.log",
+      "stderr": "005-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:33.274186+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/survey-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none",
+        "--format",
+        "csv",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03380554192699492,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "006-stdout.log",
+      "stderr": "006-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/survey-none.sav": {
+          "sha256": "6f65f455156e07864e573197ff585811db82dfe6abd5eb1dadecdfc1488d755f",
+          "size_bytes": 815
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:33.364143+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.033333083149045706,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "007-stdout.log",
+      "stderr": "007-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none/metadata.json": {
+          "sha256": "0c1e2d4a176a4efde0c06167e4babccc02b127ab0fbc848a4a6eafbb4f2c8355",
+          "size_bytes": 2903
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none/data.csv": {
+          "sha256": "dc46c91b8af716a7d844e77b973c1eeb91e3dbe7fc24f6e1e47089dbe225ffa8",
+          "size_bytes": 147
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none/codebook.md": {
+          "sha256": "a565255f923fe5fd4f8261abadb0c9c4318828f9e3d5e3e7c41034130eab2e2d",
+          "size_bytes": 2140
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none/manifest.json": {
+          "sha256": "187e18e7710980223f0bd430f0c34aa09ac83dcb54ad33bdb2e9c0d2bc4d36f1",
+          "size_bytes": 658
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none/data.ndjson": {
+          "sha256": "00443dd163069763c99e50fe7002cd5471f19742020e37ef076129128b5f5018",
+          "size_bytes": 2039
+        }
+      }
+    },
+    {
+      "utc": "2026-10-24T06:21:33.451764+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "examples/read_bundle.py",
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-none"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.017686208011582494,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "008-stdout.log",
+      "stderr": "008-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:33.517561+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row",
+        "--format",
+        "csv",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03449016693048179,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "009-stdout.log",
+      "stderr": "009-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/survey-row.sav": {
+          "sha256": "992eb0f83031b57d834b7939207f56e2dfeb6d89b449a71e7dfbd9bee000680a",
+          "size_bytes": 783
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-10-24T06:21:33.602391+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.032959541073068976,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "010-stdout.log",
+      "stderr": "010-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row/metadata.json": {
+          "sha256": "7fe01e59c4e009638cb1f8f077252cdefd4b789e4eaa1ceeae9079a5303a9e7b",
+          "size_bytes": 2903
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row/data.csv": {
+          "sha256": "dc46c91b8af716a7d844e77b973c1eeb91e3dbe7fc24f6e1e47089dbe225ffa8",
+          "size_bytes": 147
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row/codebook.md": {
+          "sha256": "a565255f923fe5fd4f8261abadb0c9c4318828f9e3d5e3e7c41034130eab2e2d",
+          "size_bytes": 2140
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row/manifest.json": {
+          "sha256": "2f3cdb7dcccbeb85217258436e77952f05bd4188d7d043989cd9653416c516f6",
+          "size_bytes": 658
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row/data.ndjson": {
+          "sha256": "00443dd163069763c99e50fe7002cd5471f19742020e37ef076129128b5f5018",
+          "size_bytes": 2039
+        }
+      }
+    },
+    {
+      "utc": "2026-10-24T06:21:33.684820+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "examples/read_bundle.py",
+        "/Users/henryz/Desktop/比赛/moonsav/evidence/unified-ac01-first/payloads/bundles/AC01-row"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.017292833887040615,
+      "branch": "implementation",
+      "sha": "8d0319a99f892f13a3d453deedbf133ea9a32167",
+      "dirty": true,
+      "diff_summary": "docs/CODEC_PROFILES.md                  |   4 ++\n fixtures/synthetic/encoding-gb18030.sav | Bin 355 -> 355 bytes\n moon.mod                                |   7 +++-\n node/checker.mjs                        |  18 +++++----\n node/cli.mjs                            |   6 ++-\n node/io.mjs                             |  13 ++++---\n package.json                            |  34 ++++++++++++++++-\n requirements-dev.lock                   |   6 +++\n src/bridge/main.mbt                     |  12 ++++--\n src/bundle.mbt                          |  28 +++++++++++++-\n src/codec.mbt                           |   4 +-\n src/data.mbt                            |   6 ++-\n src/dictionary.mbt                      |  64 ++++++++++++--------------------\n src/json.mbt                            |   2 +\n src/model.mbt                           |  27 +++++++++++++-\n src/semantic_test.mbt                   |   7 ++++\n tests/bundle.test.mjs                   |   9 +++++\n tests/core.test.mjs                     |  10 ++++-\n tools/build.mjs                         |  14 +++++--\n tools/capture.py                        |   5 ++-\n tools/compare_oracle.py                 |   4 +-\n tools/generate_vectors.py               |  26 ++++++++++++-\n 22 files changed, 230 insertions(+), 76 deletions(-)",
+      "status_porcelain": "M docs/CODEC_PROFILES.md\n M fixtures/synthetic/encoding-gb18030.sav\n M moon.mod\n M node/checker.mjs\n M node/cli.mjs\n M node/io.mjs\n M package.json\n M requirements-dev.lock\n M src/bridge/main.mbt\n M src/bundle.mbt\n M src/codec.mbt\n M src/data.mbt\n M src/dictionary.mbt\n M src/json.mbt\n M src/model.mbt\n M src/semantic_test.mbt\n M tests/bundle.test.mjs\n M tests/core.test.mjs\n M tools/build.mjs\n M tools/capture.py\n M tools/compare_oracle.py\n M tools/generate_vectors.py\n?? .github/\n?? .moonignore\n?? LICENSE\n?? README.md\n?? THIRD_PARTY.md\n?? docs/development-sources.json\n?? docs/pspp-conda-explicit.lock\n?? docs/reference-machine.json\n?? evidence/AC02-corrected/\n?? evidence/AC02-first/\n?? evidence/AC10-core-first.log\n?? evidence/AC10-output.log\n?? evidence/AC18-first/\n?? evidence/M2-controls.log\n?? evidence/M2-rejection-summary.json\n?? evidence/M2-rejections/\n?? evidence/M3-final-regression.log\n?? evidence/M3-io-green.log\n?? evidence/M3-io-red.log\n?? evidence/M3-suite-current.log\n?? evidence/U2-U3-current.log\n?? evidence/codec-four-pspp/\n?? evidence/codec-oracles-corrected/\n?? evidence/codec-oracles-v2/\n?? evidence/codec-oracles/\n?? evidence/core-js-current.log\n?? evidence/core-native-current.log\n?? evidence/core-wasm-gc-current.log\n?? evidence/local-ci-smoke.log\n?? evidence/metadata-policy-green.log\n?? evidence/metadata-policy-red.log\n?? evidence/package-corrected/\n?? evidence/package-first/\n?? evidence/pspp-first.log\n?? evidence/pspp-readstat-roundtrip.json\n?? evidence/public1-extended-readstat.json\n?? evidence/public1-pspp-corrected/\n?? evidence/public1-pspp/\n?? evidence/public2-extended-readstat.json\n?? evidence/public2-pspp-corrected/\n?? evidence/public2-pspp/\n?? evidence/review-bom-green.log\n?? evidence/review-bom-red.log\n?? evidence/review-bundle-utf8-green.log\n?? evidence/review-bundle-utf8-red.log\n?? evidence/review-race-green.log\n?? evidence/review-regressions-first.log\n?? evidence/review-regressions-green.log\n?? evidence/review-regressions-red.log\n?? evidence/unified-ac01-first/\n?? fixtures/synthetic/bom.sav\n?? fixtures/synthetic/conflicting-padded-label.sav\n?? fixtures/synthetic/conflicting-zero-label.sav\n?? fixtures/synthetic/controls-unknown.sav\n?? fixtures/synthetic/controls.sav\n?? fixtures/synthetic/date-display.sav\n?? fixtures/synthetic/early-end.sav\n?? fixtures/synthetic/encoding-conflict.sav\n?? fixtures/synthetic/encoding-gb18030-four.sav\n?? fixtures/synthetic/encoding-required.sav\n?? fixtures/synthetic/literal-truncated.sav\n?? fixtures/synthetic/lowest-highest.sav\n?? fixtures/synthetic/midrow-end.sav\n?? fixtures/synthetic/no-vars.sav\n?? fixtures/synthetic/warning.sav\n?? fixtures/synthetic/wide.sav\n?? licenses/\n?? package-lock.json\n?? schemas/\n?? src/bridge/pkg.generated.mbti\n?? src/invariants.mbt\n?? src/limits_test.mbt\n?? src/pkg.generated.mbti\n?? tests/fault-preload.mjs\n?? tests/io.test.mjs\n?? tests/tasks.test.mjs\n?? tools/benchmark.py\n?? tools/ci_smoke.mjs\n?? tools/codec_acceptance.py\n?? tools/package_smoke.py\n?? tools/pspp_oracle.py\n?? tools/raw_dictionary_oracle.py\n?? tools/rejections.py\n?? tools/setup-pspp.sh\n?? tools/verify.py\n?? tools/write_schemas.py",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "011-stdout.log",
+      "stderr": "011-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    }
+  ],
+  "environment": {
+    "moon": "moon 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moon\nmoonc v0.10.4+2cc641edf (2026-07-15) ~/.moon/bin/moonc\nmoonrun 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg",
+    "node": "v24.15.0",
+    "python": "Python 3.12.13",
+    "python_dependencies": [
+      "attrs==25.3.0",
+      "jsonschema==4.23.0",
+      "jsonschema-specifications==2024.10.1",
+      "narwhals==2.27.1",
+      "numpy==2.5.4",
+      "pandas==2.3.3",
+      "pyreadstat==1.3.3",
+      "python-dateutil==3.0.0",
+      "pytz==2026.5",
+      "referencing==0.36.2",
+      "rpds-py==0.22.3",
+      "six==1.17.0",
+      "typing_extensions==4.16.0",
+      "tzdata==2026.5"
+    ]
+  },
+  "summary": "summary.json"
+}

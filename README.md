@@ -1,0 +1,96 @@
+# MoonSav
+
+MoonBit 原生 SPSS `.sav` 字节读取库和离线 CLI。MoonBit 实现格式解析、传统压缩、字典、长字符串重组、标签/缺失语义以及 bundle 序列化和语义校验；Node 只负责文件、哈希、严格编码适配与进程入口。
+
+本地开发版本 0.1.0，尚未公开发布。README 的本地验证范围以 evidence 与 docs/progress 为准；CI 定义不代表远端已通过，开发者复现不称用户试用，独立代理审查不代替指定验收对话。
+
+## 本地安装与第一次运行
+
+CLI 需要 **Node24.15.0 / ICU78.2**，不需要 MoonBit、Python 或 C 编译器。包没有运行依赖，不联网。构建者运行 `node tools/build.mjs` 和 `npm pack --pack-destination dist`；使用者安装已经生成的归档：
+
+```sh
+npm install --offline --ignore-scripts ./dist/moonsav-0.1.0.tgz
+./node_modules/.bin/moonsav --version
+./node_modules/.bin/moonsav inspect ./node_modules/moonsav/fixtures/synthetic/survey-row.sav
+./node_modules/.bin/moonsav validate ./node_modules/moonsav/fixtures/synthetic/survey-row.sav --json
+./node_modules/.bin/moonsav export ./node_modules/moonsav/fixtures/synthetic/survey-row.sav --out first_bundle
+./node_modules/.bin/moonsav check-bundle first_bundle --json
+```
+
+输出目录必须是新目录。保留原 SAV；不存在强制覆盖、自动续传、隐式修复或上传。文件路径含中文/空格时加引号。查看完整单列字典：`moonsav inspect INPUT.sav --variable score --json`。无参数/参数错误退出2，`--help` 退出0。
+
+## 支持和边界
+
+- 小端 IEEE754 `$FL2`，未压缩0和传统字节码1；已知/未知行数；非默认 bias。
+- 1–32767字节字符串，包含13/14长名/分段、21值标签、22用户缺失，跨字节单元/分段后才解码；逻辑宽度内空格保留。字符串没有数值系统缺失。
+- 数值/字符串值标签，离散/闭区间/范围加单值用户缺失，LOWEST/HIGHEST和系统哨兵；值标签从不替换数据，未声明缺失的99仍是合法值。数值保存 IEEE754 位，包含负零。
+- UTF8、Microsoft CP1252、CP936/GBK稳定映射和GB18030稳定映射交集；具体白名单/版本/拒绝变体见 [CODEC_PROFILES](docs/CODEC_PROFILES.md)。不是所有GB18030版本。严格解码也不能证明提供方声明正确；覆盖用 `--encoding` 并产生提示。
+- 日期始终保留原数值和print/write格式；测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
+- 拒绝大端、IBM/VAX浮点、FL3/zlib/ZSAV、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
+
+本地已验证 macOS arm64 / Node24.15.0；JS/native/wasm-gc字节核心用固定MoonBit工具链运行同一UTF8向量。Linux/Windows的CI文件会运行相同语料；在远端证据出现前均标记未验证，不能把macOS运行当作这些平台通过。
+
+资源硬上限：输入256MiB，字典原始/解码各64MiB，逻辑变量100000，物理槽1000000，字符串32767，单标签1MiB，扩展16MiB，行8MiB，完整扫描1000000行；收集模式5000000单元/128MiB计费载荷，所有bundle文件合计512MiB。字典标签另按每项4096字节保守记账（默认最多16384个关联条目），在分配前拒绝；这是根据审查中的紧凑标签攻击收紧的资源策略。上限是应用记账，不是任意输入RSS承诺。
+
+`--max-input-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能见 evidence/AC18-first/results.json，不外推到最大输入。
+
+## 三个用户任务
+
+U1：下方MoonBit API示例按类型和声明消费，过滤两类缺失、查询标签并安全保留旧行。
+
+U2：先inspect理解字典；其 `validation_scope=dictionary_only`、actual_rows=null，尚未扫数据。validate扫完整文件并逐列报告present/user/system计数，每列总和等于实际行数；不输出个体样本。人类摘要最多20变量/10标签，明确显示展示数/总数；JSON完整。错误编码请核对提供方后显式覆盖；截断请重新取得完整文件；资源超限不会偷偷抽样。
+
+U3：export创建配套bundle，然后check-bundle。默认有 `data.ndjson`（权威逐格值/位/原字节/missing）、`data.csv`（UTF8标准CSV视图）、`metadata.json`、`codebook.md`、`manifest.json`。`--format ndjson`仅省略CSV。CSV是逗号/CRLF/双引号，不定义反斜杠缺失token；`NA`、`\N`、前导零、尾空格均是原文。numeric系统缺失CSV固定`""`；字符串空白仍为空格。NUL不能进CSV，需选择NDJSON profile。
+
+```sh
+moonsav check-bundle first_bundle --json
+python3 examples/read_bundle.py first_bundle
+```
+
+Python示例仅使用标准库，逐行读取权威NDJSON，再独立核对CSV，不做类型/NA推断。CSV单独不能普遍恢复源字节与缺失语义；普通表格软件可能推断数字、日期或公式，请按文本导入。日期和标签仍在metadata/codebook。
+
+checker只读，验证版本/文件集合/哈希/大小/类型/原位表示/逐格缺失/源字节解码/CSV一致性/计数。它拒绝INCOMPLETE、缺件、错配、路径逃逸和符号链接；额外普通文件明确未校验。它不是签名或来源认证：一致地改数据、字典和manifest可以形成另一个自洽bundle。
+
+导出排他创建目录，先INCOMPLETE，写文件、关闭、最后manifest，移除INCOMPLETE才提交。提交前常规失败清理本次拥有的文件；中断可能留下未完成目录，换新目录重试。提交后报告失败时bundle可能完整，用checker恢复判断。POSIX新目录0700/文件0600；Windows沿用宿主ACL，不宣称相同权限位。
+
+## MoonBit 集成
+
+固定工具链 moon0.1.20260713 / moonc v0.10.4+2cc641edf。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
+
+```json
+{"name":"example/consumer","deps":{"z2823253773/moonsav":{"path":"../moonsav-source"}}}
+```
+
+包import：`"z2823253773/moonsav"`。完整可编译例子在 `examples/consumer/main.mbt`（包含合成SAV字节，无文件I/O）；从该目录执行 `moon run . --target js`，也可native/wasm-gc。库不读文件、不打印、不退出进程。
+
+```moonbit
+let dataset = @moonsav.read_bytes(bytes)
+let score = dataset.dictionary.variables[0]
+let present = dataset.rows.filter(row => !row[0].is_missing())
+let label = score.value_label_for(dataset.rows[0][0])
+```
+
+`inspect_bytes(Bytes, options?) -> Dictionary raise SavError`；`read_bytes -> Dataset`；`scan_bytes(Bytes, on_dictionary, on_row, options?) -> ScanSummary raise SavError`。回调是同步背压；返回Continue/Stop。Stop得到completed=false和实际处理行数；回调抛错得到ConsumerFailed。后续行不会修改先前返回的行或单元。调用方自行无限缓存不计入库预算。
+
+Options包含limits、encoding_override、DatePolicy::Raw及严格decoder回调；自定义适配器必须同时提供decoder_identity（实现及版本），并自行完成profile验证。默认core只支持UTF8；其他编码必须提供经过验证的Decoder，否则UnsupportedEncoding。Node的 `node/api.mjs` 提供inspectSav/readSav，CLI使用同一编译的MoonBit核心；这个适配层同步且禁止重入。
+
+`Cell`明确区分kind/missing/decimal/ieee754_hex/text/logical_bytes_base64，API有missing_kind/is_missing，Variable有value_label_for。名字保留大小写、按稳定零基index定位；错误结构带code/message/可用时byte_offset、变量/行等上下文。数据定义和schema位于schemas/。
+
+## 错误、验证和开发
+
+成功0；参数2；I/O/目录冲突/输入变化3；损坏/完整性4；不支持/编码要求/CSV表示5；资源6；`--fail-on-warning`拒绝7；内部70。JSON成功stdout一条，失败stderr一条；提示不是损坏，严格export有提示时不会提交。
+
+```sh
+python3.12 -m venv .dev/venv
+.dev/venv/bin/python -m pip install -r requirements-dev.lock
+node tools/build.mjs
+npm test
+moon test src --target js
+moon test src --target native
+moon test src --target wasm-gc
+.dev/venv/bin/python tools/verify.py --all --require-public --require-pspp --output evidence/my-run
+```
+
+公共语料下载到忽略的.cache，依赖和PSPP仅在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
+
+Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。公开推送、发布、报名均未执行；十一月赛事规则与组织方认可没有新证据。

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moonsav.local/schemas/report/1",
+  "type": "object",
+  "properties": {
+    "report_version": {
+      "const": "moonsav.report/1"
+    },
+    "command": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "passed_with_warnings",
+        "failed"
+      ]
+    },
+    "validation_scope": {
+      "enum": [
+        "dictionary_only",
+        "full",
+        "bundle"
+      ]
+    },
+    "declared_rows": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "actual_rows": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "logical_variables": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "warning_code": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "suggested_action": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "warning_code",
+          "scope",
+          "suggested_action"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "byte_offset": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "suggested_action": {
+              "type": "string"
+            },
+            "output_state": {
+              "enum": [
+                "not_created",
+                "incomplete",
+                "committed",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "code",
+            "message",
+            "byte_offset",
+            "suggested_action",
+            "output_state"
+          ],
+          "additionalProperties": true
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "report_version",
+    "command",
+    "status",
+    "validation_scope",
+    "declared_rows",
+    "actual_rows",
+    "logical_variables",
+    "warnings",
+    "error"
+  ],
+  "additionalProperties": true
+}

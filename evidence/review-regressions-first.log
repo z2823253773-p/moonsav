@@ -1,0 +1,65 @@
+✔ canonical and multiline CSV validate as one paired bundle (68.954042ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (68.775708ms)
+✔ rehashing CSV that disagrees with canonical fails (68.766833ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (66.442125ms)
+✔ missing canonical and symlink metadata reject (138.886542ms)
+✔ rehashing metadata cannot admit duplicate semantic label (72.541416ms)
+✔ rehashing metadata cannot admit bad weight reference (75.339125ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (71.321709ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (70.388792ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (5.885834ms)
+✔ string byte widths and all long boundaries preserve every logical byte (15.902333ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.181417ms)
+✔ duplicate names must be rejected rather than shadowed (0.207041ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.552792ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (99.914875ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (130.266917ms)
+✔ row and output budgets reject with resource exit and no committed bundle (73.4315ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (1.071667ms)
+✔ ambiguous padded byte label keys and signed-zero label keys reject (0.576166ms)
+✖ empty dictionaries never validate or commit invented cases (0.676167ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 19
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 731.465875
+
+✖ failing tests:
+
+test at tests/core.test.mjs:14:1
+✖ empty dictionaries never validate or commit invented cases (0.676167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    Comparison {
+  +   code: 'EncodingRequired'
+  -   code: 'InvalidDictionary'
+    }
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:14:79)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: No reliable encoding declaration; confirm source encoding then specify override
+        at dispatch (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:16:19)
+        at readSav (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:23:10)
+        at read (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:2:15)
+        at assert.throws.code (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:14:90)
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:14:79)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1201:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:831:18),
+    expected: { code: 'InvalidDictionary' },
+    operator: 'throws',
+    diff: 'simple'
+  }

@@ -1,1 +1,338 @@
-{"schema_version":"moonsav.corpus/1","frozen_categories":["ReadStat synthetic 0/1","independent GNU-layout vectors","PSPP independent family (pending)","Figshare24792756 CC-BY4 survey","Figshare12459449 CC0 research","corrupt/unsupported/resource vectors"],"policy":"New failures remain in results; expected rejections are separate from supported_pass; public data never distributed in fixture package","synthetic_license":"CC0-1.0","public":[{"article":24792756,"version":1,"file_id":43604517,"sha256":"e2b7f41ad4d0e3cc22c12db41976b755a68058ea706d80c1b0370d129b3814b6","size_bytes":379254,"license":"CC-BY-4.0","author":"Yuanming GUO","download":"https://ndownloader.figshare.com/files/43604517"},{"article":12459449,"version":1,"file_id":23064167,"sha256":"554c037b155276547ec69c4a5e1b3b08d41d2103990e54aef83a5675406c9852","size_bytes":33420,"license":"CC0-1.0","author":"Rosa Vilaseca et al.","download":"https://ndownloader.figshare.com/files/23064167"}]}
+{
+  "schema_version": "moonsav.corpus/1",
+  "frozen_categories": [
+    "ReadStat synthetic 0/1",
+    "independent GNU-layout vectors",
+    "GNU PSPP 2.0.1 independent generator/reader (runtime generated; evidence records its hashes)",
+    "Figshare24792756 CC-BY4 survey",
+    "Figshare12459449 CC0 research",
+    "corrupt/unsupported/resource vectors"
+  ],
+  "policy": "New failures remain in results; expected rejections are separate from supported_pass; public data never distributed in fixture package",
+  "synthetic_license": "CC0-1.0",
+  "public": [
+    {
+      "article": 24792756,
+      "version": 1,
+      "file_id": 43604517,
+      "sha256": "e2b7f41ad4d0e3cc22c12db41976b755a68058ea706d80c1b0370d129b3814b6",
+      "size_bytes": 379254,
+      "license": "CC-BY-4.0",
+      "author": "Yuanming GUO",
+      "download": "https://ndownloader.figshare.com/files/43604517"
+    },
+    {
+      "article": 12459449,
+      "version": 1,
+      "file_id": 23064167,
+      "sha256": "554c037b155276547ec69c4a5e1b3b08d41d2103990e54aef83a5675406c9852",
+      "size_bytes": 33420,
+      "license": "CC0-1.0",
+      "author": "Rosa Vilaseca et al.",
+      "download": "https://ndownloader.figshare.com/files/23064167"
+    }
+  ],
+  "files": [
+    {
+      "path": "synthetic/bad-utf8.sav",
+      "sha256": "8da52b662990d592e42ad1ad93728a16c85ac875bd8b5240e2cd17f6ed121d41",
+      "size_bytes": 293,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/bom.sav",
+      "sha256": "b8581cf9a00d8c7ec9d228dac7dfd418cd76df440aa11d950a828adebe507bc9",
+      "size_bytes": 305,
+      "generator": "independent reviewer handcrafted vector (committed immutable bytes)",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/conflicting-padded-label.sav",
+      "sha256": "edb7515a77e6e3d361b917a93c0812ff7bfe40f113790b321bd32f8dc75786f6",
+      "size_bytes": 395,
+      "generator": "independent reviewer handcrafted vector (committed immutable bytes)",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/conflicting-zero-label.sav",
+      "sha256": "7c865fbbdaebe67b7c870a1f6dbba0e2250cc8ba40d72c441b3cae131fa86f8e",
+      "size_bytes": 369,
+      "generator": "independent reviewer handcrafted vector (committed immutable bytes)",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/controls-unknown.sav",
+      "sha256": "36f324edcc86741108daa3ac807d3cd68ce76e4ec1f550b9e0a06a3b96ec8692",
+      "size_bytes": 349,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/controls.sav",
+      "sha256": "2cf613c25e6f79974490c726f713d1e36d7cd7440fa75bbdb23e69b0236ab5a1",
+      "size_bytes": 349,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/date-display.sav",
+      "sha256": "5e206c357ff045433443d95e3fdc933be66fbc19bce5ac1ce1b824fa284ab69b",
+      "size_bytes": 329,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/duplicate-name.sav",
+      "sha256": "0ecdf50684696cdb073a0baa8c6b5ba3768433252f06a9efba146875a87bcb59",
+      "size_bytes": 333,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/early-end.sav",
+      "sha256": "8919946158d2ee84ea8e27d92b3b93014528dd4aac739a130f4c0074e8638f11",
+      "size_bytes": 325,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/encoding-conflict.sav",
+      "sha256": "79d8e45a0c011cbd79e0b54f43c5f0a014ffe4dd220fbc96b4966e47777fecd8",
+      "size_bytes": 293,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/encoding-gb18030-four.sav",
+      "sha256": "ae4edfa12204c9a7499184dd75fc5ede59733c23428cb49a17bcf2170a550447",
+      "size_bytes": 355,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/encoding-gb18030.sav",
+      "sha256": "ec061401dd90c3d87fe941e76629f368e76321f4dba76fd2b3d3d2ea44e8713e",
+      "size_bytes": 355,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/encoding-gbk.sav",
+      "sha256": "f34ee12e74e602559407e8b9394423aacacbfe2bf04782d54fa584f2bf07488a",
+      "size_bytes": 351,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/encoding-required.sav",
+      "sha256": "ec6d18ed701ec7bd0ff24d6f59030dc295fabaf678a74432b216011cfd9f3912",
+      "size_bytes": 272,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/encoding-utf-8.sav",
+      "sha256": "422d68fd49b434ef7ac7a9abbc139eb9d6599adac8b4fad7414be1f89712abbe",
+      "size_bytes": 357,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/encoding-windows-1252.sav",
+      "sha256": "f7e04dd01bb549b7e309c4f48de5b983256a65cf8a7c55dfddf74b1523f581e9",
+      "size_bytes": 360,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/labeled-99.sav",
+      "sha256": "3b02df1e1fefd97681a59ba7350e5881d2f2dfe182df5e5cfcc9bcef2f70def2",
+      "size_bytes": 337,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/literal-truncated.sav",
+      "sha256": "30a158cbf5c1f41fd04dd572506862a3ed4ac6cbe392ecc8cd4552465ec0dbf0",
+      "size_bytes": 329,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/long-255.sav",
+      "sha256": "5c1177a6734cdc56744101b803abe835a782e8d0e3317acbea61a8828902b0fa",
+      "size_bytes": 1741,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/long-256.sav",
+      "sha256": "4d8512bfdfd275a14bb4a8b162bdcef26d6778e54553f9324f5c6fb97325664b",
+      "size_bytes": 1823,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/long-32767.sav",
+      "sha256": "498d61dd14bb3bca48a82336edb160975041de814eef1aa98c1fc40b00c87e41",
+      "size_bytes": 176357,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/long-504.sav",
+      "sha256": "6a456c3a5ecef89d594e35405a62929911444078a879241853f8509edfaf6da6",
+      "size_bytes": 3127,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/long-505.sav",
+      "sha256": "649ed3192be1aed0bf825b74962aa301b23e2f15990f69cc7fb7774b9d88827e",
+      "size_bytes": 3171,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/lowest-highest.sav",
+      "sha256": "4df35ef85e8ee1c578dfd8deda98f4d92619e6fd30563c0ecaab20b34d6657ff",
+      "size_bytes": 333,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/midrow-end.sav",
+      "sha256": "6144fa40ea26a3a7d1276ce446af784c0fa9ddfe6bbfbf07494f5525ffe972fd",
+      "size_bytes": 325,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/negative-zero.sav",
+      "sha256": "abb325eddd4d3759d4e808002e7959064a47f4139d88d1b132f537bc6d7b3bea",
+      "size_bytes": 309,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/no-vars.sav",
+      "sha256": "79f8173543ecf256b6734099e25360251fd3f60819dda5368ab71276cb2c2117",
+      "size_bytes": 192,
+      "generator": "independent reviewer handcrafted vector (committed immutable bytes)",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/nul.sav",
+      "sha256": "924d8c2d808b11a381ec08692a05c5c43d73a54974a710758f06fbfef73004c9",
+      "size_bytes": 293,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/range.sav",
+      "sha256": "b64bd8c58ace6f6e3b497741b8eb042df6396dcaf1208a5795c0f5075625dc3e",
+      "size_bytes": 357,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/semantics-256.sav",
+      "sha256": "2b03f49d5d11320e0bded982f2e39e7335129879c8950a7c5072c91a59db998e",
+      "size_bytes": 2518,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/semantics-505.sav",
+      "sha256": "6d9470f275c0b4dc1cf24ece1f4fa867c308bab1996176ee87c427defce23020",
+      "size_bytes": 4396,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/semantics-9.sav",
+      "sha256": "99db0f451bbedd6a9bb8b683bdd0ab61ef37afa75c350ae299761c8030ef5f9a",
+      "size_bytes": 646,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/single-missing.sav",
+      "sha256": "6dcb4ec22b35c9c68d46a29f93c941b8291842a4fe3e2b0cdeb447638241c917",
+      "size_bytes": 309,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/survey-none.sav",
+      "sha256": "b724ef2eb9d2f5c4580f4e645314a27a61d4d43cb3aae5fa4f3d7ce6310eb43b",
+      "size_bytes": 815,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/survey-row.sav",
+      "sha256": "d6d788dfe685c6d57edf15dd62239e8609a0e0fccfc7213822da6c79253d0e16",
+      "size_bytes": 783,
+      "generator": "tools/generate.py / ReadStat",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/variant-gb18030.sav",
+      "sha256": "c4ec59e7a0d90f8585c252a3b8d117ae22733a5787481a490eafe6d26b5a7bbd",
+      "size_bytes": 295,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "expected_rejection"
+    },
+    {
+      "path": "synthetic/warning.sav",
+      "sha256": "59c2882222344342c2a188429624ccd465f3f2479e297c2cc854584d957fa7bd",
+      "size_bytes": 322,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/wide.sav",
+      "sha256": "6300ca03c10d02ffe4c30ae60da95a717d177884b920263bae2b840cd5daa3c7",
+      "size_bytes": 1889,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/width-1.sav",
+      "sha256": "a6844cd46ed0d57fa4d052e690424d1a92b210d512162cfa57646c19bb5ce336",
+      "size_bytes": 309,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/width-7.sav",
+      "sha256": "d83db37a4c408c8d36006f713a0ea72578a870dbd4ba822e9ecaf6adab859b79",
+      "size_bytes": 309,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/width-8.sav",
+      "sha256": "ed7be82580195ae2474804da1f9610201db4c351321d811cb08bb4bb349d9542",
+      "size_bytes": 309,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/width-9.sav",
+      "sha256": "fe6362e6504f575361a425356c0afadeebbd48354a14e00a9186cd093a931ba2",
+      "size_bytes": 357,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    },
+    {
+      "path": "synthetic/zero.sav",
+      "sha256": "32d7a3e675fd09c2b60a5a80df42d855c08c1eaa2f918d1249ade3b6fddbe94f",
+      "size_bytes": 293,
+      "generator": "tools/generate_vectors.py / independent GNU-layout writer",
+      "expected": "supported_pass"
+    }
+  ]
+}

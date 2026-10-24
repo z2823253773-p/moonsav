@@ -1,0 +1,127 @@
+{
+  "status": "supported_fail",
+  "records": [
+    {
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "pack",
+        "--pack-destination",
+        "dist",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/usr/local/lib/node_modules/npm/bin/npm-cli.js",
+        "install",
+        "--prefix",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/npm-cache",
+        "/Users/henryz/Desktop/比赛/moonsav/dist/moonsav-0.1.0.tgz"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/bin/moonsav.mjs",
+        "--version"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/bin/moonsav.mjs",
+        "inspect",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/bin/moonsav.mjs",
+        "validate",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/bin/moonsav.mjs",
+        "export",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/bin/moonsav.mjs",
+        "check-bundle",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/node_modules/moonsav/examples/read_bundle.py",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-node-consumer-ped8frdi/first bundle 中文"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "moon",
+        "package",
+        "--frozen"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 101
+    }
+  ],
+  "error": "Package step 10 failed with exit 101"
+}

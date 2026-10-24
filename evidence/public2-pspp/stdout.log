@@ -1,0 +1,25 @@
+/Users/henryz/Desktop/比赛/moonsav/evidence/public2-pspp/payloads/oracle.
+sps:3.1423-3.1428: error: FORMATS: Output format E40.17 specifies 17 decimal
+places, but width 40 allows at most 16 decimals.
+    3 | FORMATS code_id age_months autonomouscommunity cohabiting gender_CH
+diagnosis disability_grade center_earlyintervention specialeduc_school
+ordinary_school shared_schooling special_nursery mother age_M maritalstatus_M
+employmentstatus_M education_M hours_week_M hours_weekend_M father age_F
+maritalstatus_F employmentstatus_F education_F hours_week_F hours_weekend_F
+income other_diagnosis_profess PICC_Afe_M1 PICC_Afe_M2 PICC_Afe_M3 PICC_Afe_M4
+PICC_Afe_M5 PICC_Afe_M6 PICC_Afe_M7 PICC_Rec_M1 PICC_Rec_M2 PICC_Rec_M3
+PICC_Rec_M4 PICC_Rec_M5 PICC_Rec_M6 PICC_Rec_M7 PICC_Enc_M1 PICC_Enc_M2
+PICC_Enc_M3 PICC_Enc_M4 PICC_Enc_M5 PICC_Enc_M6 PICC_Enc_M7 PICC_Teach_M1
+PICC_Teach_M2 PICC_Teach_M3 PICC_Teach_M4 PICC_Teach_M5 PICC_Teach_M6
+PICC_Teach_M7 PICC_Teach_M8 PICC_Afe_F1 PICC_Afe_F2 PICC_Afe_F3 PICC_Afe_F4
+PICC_Afe_F5 PICC_Afe_F6 PICC_Afe_F7 PICC_Rec_F1 PICC_Rec_F2 PICC_Rec_F3
+PICC_Rec_F4 PICC_Rec_F5 PICC_Rec_F6 PICC_Rec_F7 PICC_Enc_F1 PICC_Enc_F2
+PICC_Enc_F3 PICC_Enc_F4 PICC_Enc_F5 PICC_Enc_F6 PICC_Enc_F7 PICC_Teach_F1
+PICC_Teach_F2 PICC_Teach_F3 PICC_Teach_F4 PICC_Teach_F5 PICC_Teach_F6
+PICC_Teach_F7 PICC_Teach_F8 PICC_Afe_M PICC_Rec_M PICC_Enc_M PICC_Teach_M
+PICC_Total_M PICC_Afe_P PICC_Rec_P PICC_Enc_F PICC_Teach_F PICC_Total_P
+MEAN_Afe_M MEAN_Rec_M MEAN_Enc_M MEAN_Teach_M MEAN_Total_M MEAN_Afe_P
+MEAN_Rec_P MEAN_Enc_P MEAN_Teach_P MEAN_Total_P estacivi2_M niveledu4_M
+estacivi2_P niveledu4_P situlabo2_P (E40.17).
+      |
+^~~~~~

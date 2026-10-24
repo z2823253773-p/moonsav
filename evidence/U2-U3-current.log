@@ -1,0 +1,12 @@
+✔ U2 human summaries truncate explicitly, JSON and exact-variable query remain complete (137.215917ms)
+✔ JSON success, warning, strict rejection and malformed input obey channels and exits (199.179833ms)
+✔ strict export rejects warnings before creating any output directory (32.397916ms)
+✔ U3 schema mismatch rejects, extras warn and strict checker refuses warnings (127.987625ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 532.722292

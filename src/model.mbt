@@ -3,6 +3,12 @@ pub(all) struct ErrorInfo {
   code : String
   message : String
   byte_offset : Int?
+  record : Int?
+  subtype : Int?
+  variable_index : Int?
+  row_index : Int?
+  actual : Int?
+  limit : Int?
 } derive(Debug)
 
 ///|
@@ -15,10 +21,36 @@ fn reject(
   code : String,
   message : String,
   offset? : Int = -1,
+  row? : Int = -1,
+  variable? : Int = -1,
+  actual? : Int = -1,
+  maximum? : Int = -1,
 ) -> Unit raise SavError {
   raise SavFailure({
     code,
     message,
+    record: None,
+    subtype: None,
+    variable_index: if variable < 0 {
+      None
+    } else {
+      Some(variable)
+    },
+    row_index: if row < 0 {
+      None
+    } else {
+      Some(row)
+    },
+    actual: if actual < 0 {
+      None
+    } else {
+      Some(actual)
+    },
+    limit: if maximum < 0 {
+      None
+    } else {
+      Some(maximum)
+    },
     byte_offset: if offset < 0 {
       None
     } else {
@@ -68,15 +100,28 @@ pub fn Limits::default() -> Limits {
 }
 
 ///|
+pub(all) enum DatePolicy {
+  Raw
+} derive(Debug, Eq)
+
+///|
 pub(all) struct Options {
+  date_policy : DatePolicy
   limits : Limits
   encoding_override : String?
+  decoder_identity : String?
   decoder : ((Bytes, String) -> String raise SavError)?
 }
 
 ///|
 pub fn Options::default() -> Options {
-  { limits: Limits::default(), encoding_override: None, decoder: None }
+  {
+    date_policy: Raw,
+    limits: Limits::default(),
+    encoding_override: None,
+    decoder_identity: None,
+    decoder: None,
+  }
 }
 
 ///|
@@ -101,7 +146,7 @@ pub(all) struct Atom {
   logical_bytes_base64 : String?
   width : Int
   endpoint : String?
-} derive(Debug, ToJson, Eq)
+} derive(Debug, Eq)
 
 ///|
 pub(all) struct ValueLabel {
@@ -141,6 +186,7 @@ pub(all) struct EncodingInfo {
   selection_source : String
   profile : String
   string_matching_policy : String
+  decoder_identity : String
 } derive(Debug)
 
 ///|
@@ -223,7 +269,15 @@ pub(all) struct ScanSummary {
 ///|
 fn limit(n : Int, max : Int, key : String) -> Unit raise SavError {
   if n < 0 || n > max {
-    reject("ResourceLimit", "\{key}: actual \{n}, limit \{max}")
+    if n < 0 {
+      reject("InvalidLength", "Negative declared length", actual=n)
+    }
+    reject(
+      "ResourceLimit",
+      "\{key}: actual \{n}, limit \{max}",
+      actual=n,
+      maximum=max,
+    )
   }
 }
 
@@ -259,5 +313,45 @@ fn string_atom(
     logical_bytes_base64: Some(@base64.encode(bytes)),
     width: bytes.length(),
     endpoint: None,
+  }
+}
+
+///|
+fn validate_limits(l : Limits) -> Unit raise SavError {
+  let hard = Limits::default()
+  let values = [
+    l.input_bytes,
+    l.dictionary_bytes,
+    l.variables,
+    l.physical_slots,
+    l.string_bytes,
+    l.label_bytes,
+    l.extension_bytes,
+    l.row_bytes,
+    l.rows,
+    l.cells,
+    l.retained_bytes,
+    l.output_bytes,
+  ]
+  let maxima = [
+    hard.input_bytes,
+    hard.dictionary_bytes,
+    hard.variables,
+    hard.physical_slots,
+    hard.string_bytes,
+    hard.label_bytes,
+    hard.extension_bytes,
+    hard.row_bytes,
+    hard.rows,
+    hard.cells,
+    hard.retained_bytes,
+    hard.output_bytes,
+  ]
+  for i = 0; i < values.length(); i = i + 1 {
+    if values[i] <= 0 || values[i] > maxima[i] {
+      reject(
+        "ResourceLimit", "Limits must be positive and can only lower compiled maxima",
+      )
+    }
   }
 }

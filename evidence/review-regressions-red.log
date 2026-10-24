@@ -1,0 +1,167 @@
+✔ canonical and multiline CSV validate as one paired bundle (67.817917ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (64.662083ms)
+✔ rehashing CSV that disagrees with canonical fails (67.252625ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (61.778416ms)
+✔ missing canonical and symlink metadata reject (124.847333ms)
+✖ rehashing metadata cannot admit duplicate semantic label (69.966708ms)
+✖ rehashing metadata cannot admit bad weight reference (68.550958ms)
+✖ rehashing metadata cannot admit invalid discrete endpoint (67.393667ms)
+✖ rehashing metadata cannot admit impossible numeric slot width (72.827541ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (7.346084ms)
+✔ string byte widths and all long boundaries preserve every logical byte (16.511875ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.601792ms)
+✔ duplicate names must be rejected rather than shadowed (0.495292ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.65425ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (98.296875ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (127.557583ms)
+✔ row and output budgets reject with resource exit and no committed bundle (62.762417ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (1.334083ms)
+✖ ambiguous padded byte label keys and signed-zero label keys reject (0.904958ms)
+✖ empty dictionaries never validate or commit invented cases (0.506209ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 14
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 698.928625
+
+✖ failing tests:
+
+test at tests/bundle.test.mjs:16:3
+✖ rehashing metadata cannot admit duplicate semantic label (69.966708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:16:276)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:16:3
+✖ rehashing metadata cannot admit bad weight reference (68.550958ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:16:276)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:16:3
+✖ rehashing metadata cannot admit invalid discrete endpoint (67.393667ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:16:276)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:16:3
+✖ rehashing metadata cannot admit impossible numeric slot width (72.827541ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:16:276)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core.test.mjs:13:1
+✖ ambiguous padded byte label keys and signed-zero label keys reject (0.904958ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:13:155)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'InvalidDictionary' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/core.test.mjs:14:1
+✖ empty dictionaries never validate or commit invented cases (0.506209ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    Comparison {
+  +   code: 'EncodingRequired'
+  -   code: 'InvalidDictionary'
+    }
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:14:79)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: No reliable encoding declaration; confirm source encoding then specify override
+        at dispatch (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:16:19)
+        at readSav (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:23:10)
+        at read (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:2:15)
+        at assert.throws.code (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:14:90)
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/core.test.mjs:14:79)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1201:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:831:18),
+    expected: { code: 'InvalidDictionary' },
+    operator: 'throws',
+    diff: 'simple'
+  }

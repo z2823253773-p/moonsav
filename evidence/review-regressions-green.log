@@ -1,0 +1,28 @@
+✔ canonical and multiline CSV validate as one paired bundle (68.4335ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (67.10225ms)
+✔ rehashing CSV that disagrees with canonical fails (66.92475ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (64.167042ms)
+✔ missing canonical and symlink metadata reject (136.435958ms)
+✔ rehashing metadata cannot admit duplicate semantic label (71.267292ms)
+✔ rehashing metadata cannot admit bad weight reference (71.010541ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (74.955667ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (71.247792ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (5.952125ms)
+✔ string byte widths and all long boundaries preserve every logical byte (15.232042ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.080417ms)
+✔ duplicate names must be rejected rather than shadowed (0.138333ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.552333ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (99.319625ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (133.791291ms)
+✔ row and output budgets reject with resource exit and no committed bundle (70.589292ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (1.038375ms)
+✔ ambiguous padded byte label keys and signed-zero label keys reject (0.617959ms)
+✔ empty dictionaries never validate or commit invented cases (0.09775ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 722.141917

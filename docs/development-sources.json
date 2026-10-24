@@ -1,0 +1,18 @@
+{
+  "pspp-2.0.1.tar.gz": {
+    "sha256": "8edbb0f09e8cf8010cad9e0559e0230d7fc5aae4721c756c350554df33024c00",
+    "size_bytes": 10943885
+  },
+  "CP936.TXT": {
+    "sha256": "b86f601c575e9ab457380b6f7abef03c75499cc6075bdc8b4b27f3f2de74bf6a",
+    "size_bytes": 817310
+  },
+  "index-gb18030-ranges.txt": {
+    "sha256": "874c6b6f6f74cf7d427ad228d5b41ddd9354fffd92a2259bf429f86e6baa7a1e",
+    "size_bytes": 3110
+  },
+  "index-gb18030.txt": {
+    "sha256": "746b3c55f1a8ec4b90b451f384437a17fd37cd51cd668456a28071a758d10784",
+    "size_bytes": 843967
+  }
+}

@@ -1,0 +1,26 @@
+/Users/henryz/Desktop/比赛/moonsav/evidence/public1-pspp/payloads/oracle.
+sps:3.322-3.327: error: FORMATS: Output format E40.17 specifies 17 decimal
+places, but width 40 allows at most 16 decimals.
+    3 | FORMATS 作答时长 contorl1 A1 A2 A3 A4 A5 A6 B1 B2 B3 C1 C2 C3 D1 D2 D3
+E1 E2 E3 F1 F2 F3 G1 G2 G3 H1 I1 I2 I3 I4 J1 J2 K1 K2 K3 K4 L1 L2 L3 M1 M2 M3
+M4 MA1 MA2 MA3 MA4 N1 N2 N3 N4 N5 O1 O2 O3 O4 O5 O6 O7 P1 P2 P3 P4 P5 P6 P7 P8
+GENDER EDU AGE var_gii var_pis var_pes var_pxe var_attcr var_gii_sd var_anx
+var_exp VAR_PSS (E40.17).
+      |
+^~~~~~
+
+/Users/henryz/Desktop/比赛/moonsav/evidence/public1-pspp/payloads/oracle.
+sps:4.16-4.32: error: COMPUTE: Type mismatch invoking MISSING(number) as
+MISSING(string).
+    4 | COMPUTE ZZMSV0=MISSING(开始时间).
+      |                ^~~~~~~~~~~~~~~~~
+
+/Users/henryz/Desktop/比赛/moonsav/evidence/public1-pspp/payloads/oracle.
+sps:4.24-4.31: note: COMPUTE: This argument has type 'string' but 'number' is
+required.
+    4 | COMPUTE ZZMSV0=MISSING(开始时间).
+      |                        ^~~~~~~~
+
+/Users/henryz/Desktop/比赛/moonsav/evidence/public1-pspp/payloads/oracle.sps:5:
+error: Stopping syntax file processing here to avoid a cascade of dependent
+command failures.

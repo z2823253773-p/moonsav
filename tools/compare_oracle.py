@@ -2,6 +2,7 @@
 import json,struct,hashlib,re,sys
 from pathlib import Path
 import pyreadstat
+from raw_dictionary_oracle import audit
 
 def compare(source,bundle):
  source=Path(source);bundle=Path(bundle);df,oracle=pyreadstat.read_sav(str(source),user_missing=True,disable_datetime_conversion=True,apply_value_formats=False,output_format='dict')
@@ -53,7 +54,8 @@ def compare(source,bundle):
     if c['missing']!=expected:diff('missing_kind',i)
    n+=1
  if n!=oracle.number_rows or n!=meta['actual_rows']:diff('actual_rows')
+ differences.extend(audit(source.read_bytes(),meta))
  risk_columns=sum(bool(re.search(r'姓名|电话|手机|IP|邮箱|email|name|address|日期|时间',n,re.I))for n in oracle.column_names)
- return {'input_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'size_bytes':source.stat().st_size,'actual_rows':n,'logical_variables':len(meta['variables']),'cells_compared':compared,'dictionary_compared':['names','order','type','width','variable_labels','value_labels','user_missing_definitions'],'differences':differences,'normalizations':normalizations,'screening':{'potential_identifier_columns':risk_columns,'raw_redistribution':False,'cell_values_in_evidence':False},'oracle':'ReadStat via pyreadstat '+pyreadstat.__version__,'status':'supported_pass'if not differences else'supported_fail'}
+ return {'input_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'size_bytes':source.stat().st_size,'actual_rows':n,'logical_variables':len(meta['variables']),'cells_compared':compared,'dictionary_compared':['names','order','type','width','variable_labels','value_labels','user_missing_definitions','raw_print_write_formats','raw_missing_atoms','measure_display_alignment','weight_reference','retained_extension_payloads'],'differences':differences,'normalizations':normalizations,'screening':{'potential_identifier_columns':risk_columns,'raw_redistribution':False,'cell_values_in_evidence':False},'oracle':'ReadStat via pyreadstat '+pyreadstat.__version__,'status':'supported_pass'if not differences else'supported_fail'}
 if __name__=='__main__':
  r=compare(sys.argv[1],sys.argv[2]);print(json.dumps(r,ensure_ascii=False,indent=2));raise SystemExit(bool(r['differences']))

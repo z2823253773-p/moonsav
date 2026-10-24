@@ -1,5 +1,5 @@
 """Append real process evidence to a run directory. No shell interpolation."""
-import argparse,subprocess,json,datetime,platform,hashlib,time
+import argparse,subprocess,json,datetime,platform,hashlib,time,os
 from pathlib import Path
 
 def capture(command,out,inputs=(),outputs=(),timeout=120,cwd=None):
@@ -7,7 +7,8 @@ def capture(command,out,inputs=(),outputs=(),timeout=120,cwd=None):
  def git(*args):return subprocess.run(['git',*args],cwd=root,capture_output=True,text=True).stdout.strip()
  runfile=out/'run.json';run=json.loads(runfile.read_text())if runfile.exists()else{'records':[]}
  stamp=datetime.datetime.now(datetime.timezone.utc).isoformat();start=time.perf_counter()
- try:r=subprocess.run(command,cwd=cwd,capture_output=True,text=True,timeout=timeout);code=r.returncode;stdout=r.stdout;stderr=r.stderr
+ env=dict(os.environ);env.pop('_',None)
+ try:r=subprocess.run(command,cwd=cwd,env=env,capture_output=True,text=True,timeout=timeout);code=r.returncode;stdout=r.stdout;stderr=r.stderr
  except subprocess.TimeoutExpired as e:code=124;stdout=(e.stdout or b'').decode(errors='replace')if isinstance(e.stdout,bytes)else(e.stdout or'');stderr='TIMEOUT '+str(timeout)+' seconds'
  index=len(run['records']);(out/f'{index:03}-stdout.log').write_text(stdout);(out/f'{index:03}-stderr.log').write_text(stderr)
  def hashes(paths):return {str(p):{'sha256':hashlib.sha256(Path(p).read_bytes()).hexdigest(),'size_bytes':Path(p).stat().st_size}for p in paths if Path(p).is_file()}

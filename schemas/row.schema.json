@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moonsav.local/schemas/row/1",
+  "type": "object",
+  "properties": {
+    "row": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "cells": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "numeric",
+              "string"
+            ]
+          },
+          "missing": {
+            "enum": [
+              "present",
+              "user",
+              "system"
+            ]
+          },
+          "decimal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ieee754_hex": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{16}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "logical_bytes_base64": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "missing",
+          "decimal",
+          "ieee754_hex",
+          "text",
+          "logical_bytes_base64"
+        ],
+        "additionalProperties": false,
+        "oneOf": [
+          {
+            "properties": {
+              "kind": {
+                "const": "numeric"
+              },
+              "missing": {
+                "enum": [
+                  "present",
+                  "user"
+                ]
+              },
+              "decimal": {
+                "type": "string"
+              },
+              "ieee754_hex": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{16}$"
+              },
+              "text": {
+                "type": "null"
+              },
+              "logical_bytes_base64": {
+                "type": "null"
+              }
+            }
+          },
+          {
+            "properties": {
+              "kind": {
+                "const": "numeric"
+              },
+              "missing": {
+                "const": "system"
+              },
+              "decimal": {
+                "type": "null"
+              },
+              "ieee754_hex": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{16}$"
+              },
+              "text": {
+                "type": "null"
+              },
+              "logical_bytes_base64": {
+                "type": "null"
+              }
+            }
+          },
+          {
+            "properties": {
+              "kind": {
+                "const": "string"
+              },
+              "missing": {
+                "enum": [
+                  "present",
+                  "user"
+                ]
+              },
+              "decimal": {
+                "type": "null"
+              },
+              "ieee754_hex": {
+                "type": "null"
+              },
+              "text": {
+                "type": "string"
+              },
+              "logical_bytes_base64": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 100000
+    }
+  },
+  "required": [
+    "row",
+    "cells"
+  ],
+  "additionalProperties": false
+}

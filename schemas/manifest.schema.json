@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://moonsav.local/schemas/manifest/1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "moonsav.bundle/1"
+    },
+    "profile": {
+      "enum": [
+        "csv_with_canonical",
+        "ndjson"
+      ]
+    },
+    "actual_rows": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "logical_variables": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100000
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "size_bytes",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "files": {
+      "type": "object",
+      "properties": {
+        "data.ndjson": {
+          "type": "object",
+          "properties": {
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "size_bytes",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "data.csv": {
+          "type": "object",
+          "properties": {
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "size_bytes",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "metadata.json": {
+          "type": "object",
+          "properties": {
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "size_bytes",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "codebook.md": {
+          "type": "object",
+          "properties": {
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "size_bytes",
+            "sha256"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "data.ndjson",
+        "metadata.json",
+        "codebook.md"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile",
+    "actual_rows",
+    "logical_variables",
+    "input",
+    "files"
+  ],
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "profile": {
+            "const": "csv_with_canonical"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "files": {
+            "required": [
+              "data.csv"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "files": {
+            "not": {
+              "required": [
+                "data.csv"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

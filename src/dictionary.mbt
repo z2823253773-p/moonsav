@@ -64,6 +64,7 @@ pub fn inspect_bytes(
   input : Bytes,
   options? : Options = Options::default(),
 ) -> Dictionary raise SavError {
+  validate_limits(options.limits)
   let l = options.limits
   limit(input.length(), l.input_bytes, "input_bytes")
   ignore(probe_header(input))
@@ -76,7 +77,9 @@ pub fn inspect_bytes(
   if slots < -1 {
     reject("InvalidDictionary", "Case width must be positive", offset=68)
   }
-  if slots > 0 { limit(slots, l.physical_slots, "physical_slots") }
+  if slots > 0 {
+    limit(slots, l.physical_slots, "physical_slots")
+  }
   if slots > l.row_bytes / 8 {
     reject("ResourceLimit", "row_bytes exceeds limit", offset=68)
   }
@@ -98,8 +101,10 @@ pub fn inspect_bytes(
   let file_label = c.take(64)
   ignore(c.take(3))
   let raw : Array[RawVar] = []
+  let by_slot : Map[Int, RawVar] = {}
   let extensions : Array[Extension] = []
   let extras : Array[Extra] = []
+  let mut label_entries = 0
   let mut physical = 0
   let mut continuation = 0
   let mut machine : Int? = None
@@ -112,301 +117,343 @@ pub fn inspect_bytes(
     limit(c.pos - 176, l.dictionary_bytes, "dictionary_bytes")
     let offset = c.pos
     let record = c.i32()
-    match record {
-      2 => {
-        let width = c.i32()
-        let has_label = c.i32()
-        let missing_count = c.i32()
-        let print = c.i32()
-        let write = c.i32()
-        let short = c.take(8)
-        if has_label != 0 && has_label != 1 {
-          reject("InvalidDictionary", "Invalid label flag", offset~)
+    try {
+      match record {
+        2 => {
+          let width = c.i32()
+          let has_label = c.i32()
+          let missing_count = c.i32()
+          let print = c.i32()
+          let write = c.i32()
+          let short = c.take(8)
+          if has_label != 0 && has_label != 1 {
+            reject("InvalidDictionary", "Invalid label flag", offset~)
+          }
+          if missing_count < -3 || missing_count > 3 || missing_count == -1 {
+            reject(
+              "InvalidDictionary",
+              "Invalid missing definition count",
+              offset~,
+            )
+          }
+          let label = if has_label == 1 {
+            let n = c.i32()
+            if n < 0 {
+              reject("InvalidLength", "Negative variable label length", offset~)
+            }
+            limit(n, l.label_bytes, "label_bytes")
+            let b = c.take(n)
+            ignore(c.take((4 - n % 4) % 4))
+            Some(b)
+          } else {
+            None
+          }
+          let missing = []
+          for _i = 0; _i < missing_count.abs(); _i = _i + 1 {
+            missing.push(c.take(8))
+          }
+          if width == -1 {
+            if continuation <= 0 || raw.is_empty() {
+              reject("InvalidDictionary", "Unexpected continuation", offset~)
+            }
+            if has_label != 0 || missing_count != 0 {
+              reject(
+                "InvalidDictionary",
+                "Continuation declares semantic fields",
+                offset~,
+              )
+            }
+            raw[raw.length() - 1].slots += 1
+            continuation -= 1
+          } else {
+            if continuation != 0 {
+              reject(
+                "InvalidDictionary",
+                "Missing continuation record",
+                offset~,
+              )
+            }
+            if width < 0 || width > 255 {
+              reject(
+                "InvalidDictionary",
+                "Invalid physical variable width",
+                offset~,
+              )
+            }
+            if width > 0 && missing_count < 0 {
+              reject(
+                "InvalidDictionary",
+                "String range missing is invalid",
+                offset~,
+              )
+            }
+            limit(raw.length() + 1, l.variables, "variables")
+            raw.push({
+              short,
+              width,
+              slot: physical,
+              offset,
+              print,
+              write,
+              label,
+              missing_count,
+              missing,
+              labels: [],
+              slots: 1,
+            })
+            by_slot[physical] = raw[raw.length() - 1]
+            continuation = if width == 0 { 0 } else { (width + 7) / 8 - 1 }
+          }
+          physical += 1
+          limit(physical, l.physical_slots, "physical_slots")
         }
-        if missing_count < -3 || missing_count > 3 || missing_count == -1 {
-          reject(
-            "InvalidDictionary",
-            "Invalid missing definition count",
-            offset~,
-          )
-        }
-        let label = if has_label == 1 {
+        3 => {
+          if continuation != 0 {
+            reject(
+              "InvalidDictionary",
+              "Unfinished variable continuations",
+              offset~,
+            )
+          }
           let n = c.i32()
           if n < 0 {
-            reject("InvalidLength", "Negative variable label length", offset~)
+            reject("InvalidLength", "Negative label count", offset~)
           }
-          limit(n, l.label_bytes, "label_bytes")
-          let b = c.take(n)
-          ignore(c.take((4 - n % 4) % 4))
-          Some(b)
+          limit(n, l.dictionary_bytes / 4096, "dictionary_label_entries")
+          let labels = []
+          for _i = 0; _i < n; _i = _i + 1 {
+            let value = c.take(8)
+            let len = c.take(1)[0].to_int()
+            let label = c.take(len)
+            ignore(c.take((8 - (len + 1) % 8) % 8))
+            labels.push((value, label))
+          }
+          if c.i32() != 4 {
+            reject(
+              "InvalidDictionary",
+              "Value labels require association record 4",
+              offset=c.pos - 4,
+            )
+          }
+          let nvars = c.i32()
+          if nvars <= 0 || nvars > raw.length() {
+            reject(
+              "InvalidDictionary",
+              "Invalid label association count",
+              offset=c.pos - 4,
+            )
+          }
+          if n > (l.dictionary_bytes / 4096 - label_entries) / nvars {
+            reject(
+              "ResourceLimit", "Dictionary label entry bookkeeping exceeds budget",
+            )
+          }
+          label_entries += n * nvars
+          let mut label_width = -1
+          for _i = 0; _i < nvars; _i = _i + 1 {
+            let index = c.i32() - 1
+            let mut found = false
+            for
+              v in (match by_slot.get(index) {
+                Some(v) => [v]
+                None => []
+              }) {
+              if v.slot == index {
+                if v.width > 8 ||
+                  (label_width != -1 && (label_width == 0) != (v.width == 0)) {
+                  reject(
+                    "InvalidDictionary",
+                    "Incompatible value label association",
+                    offset~,
+                  )
+                }
+                if !v.labels.is_empty() {
+                  reject(
+                    "InvalidDictionary",
+                    "Duplicate label association",
+                    offset~,
+                  )
+                }
+                label_width = v.width
+                for pair in labels {
+                  v.labels.push(pair)
+                }
+                found = true
+              }
+            }
+            if !found {
+              reject(
+                "InvalidDictionary",
+                "Label association points outside a variable start",
+                offset~,
+              )
+            }
+          }
+        }
+        6 => {
+          let n = c.i32()
+          if n < 0 {
+            reject("InvalidLength", "Negative document count", offset~)
+          }
+          if n > l.extension_bytes / 80 {
+            reject("ResourceLimit", "Document record exceeds budget", offset~)
+          }
+          extras.push({
+            record,
+            subtype: None,
+            byte_offset: offset,
+            raw_base64: @base64.encode(c.take(n * 80)),
+          })
+        }
+        7 => {
+          let subtype = c.i32()
+          let size = c.i32()
+          let count = c.i32()
+          if size <= 0 || count < 0 {
+            reject("InvalidLength", "Invalid extension size/count", offset~)
+          }
+          if count > l.extension_bytes / size {
+            reject("ResourceLimit", "Extension payload exceeds budget", offset~)
+          }
+          let bytes = c.take(size * count)
+          let e = Cursor::new(bytes)
+          match subtype {
+            3 => {
+              if size != 4 || count != 8 {
+                reject(
+                  "InvalidDictionary",
+                  "Invalid machine integer record",
+                  offset~,
+                )
+              }
+              ignore(e.i32())
+              ignore(e.i32())
+              ignore(e.i32())
+              ignore(e.i32())
+              let float_rep = e.i32()
+              ignore(e.i32())
+              let endian = e.i32()
+              machine = Some(e.i32())
+              if float_rep != 1 {
+                reject(
+                  "UnsupportedFloat",
+                  "Non IEEE754 representation",
+                  offset~,
+                )
+              }
+              if endian != 2 {
+                reject(
+                  "UnsupportedLayout",
+                  "Machine declares non-little-endian layout",
+                  offset~,
+                )
+              }
+            }
+            4 => {
+              if size != 8 || count != 3 {
+                reject(
+                  "InvalidDictionary",
+                  "Invalid floating information record",
+                  offset~,
+                )
+              }
+              system = e.u64()
+              highest = e.u64()
+              lowest = e.u64()
+              if !finite(system.reinterpret_as_double()) ||
+                !finite(lowest.reinterpret_as_double()) ||
+                !finite(highest.reinterpret_as_double()) {
+                reject("UnsupportedFloat", "Invalid floating sentinel", offset~)
+              }
+            }
+            16 => {
+              if size != 8 || count != 2 {
+                reject(
+                  "InvalidDictionary",
+                  "Invalid extended case count record",
+                  offset~,
+                )
+              }
+              if e.u64() != 1UL {
+                reject(
+                  "UnsupportedExtension",
+                  "Unknown extended case count version",
+                  offset~,
+                )
+              }
+              let n = e.u64()
+              if n != 0xffffffffffffffffUL {
+                if n > 2147483647UL {
+                  reject(
+                    "ResourceLimit",
+                    "Declared case count exceeds index capacity",
+                    offset~,
+                  )
+                }
+                ext_cases = Some(n.to_int())
+              }
+            }
+            20 => {
+              if size != 1 || declared != None {
+                reject(
+                  "InvalidDictionary",
+                  "Invalid duplicate encoding record",
+                  offset~,
+                )
+              }
+              declared = Some(ascii(bytes).trim(chars="\x00 ").to_owned())
+            }
+            11 | 13 | 14 | 21 | 22 =>
+              extensions.push({ subtype, size, count, offset, bytes })
+            5 | 6 | 7 | 8 | 9 | 10 | 12 | 17 | 18 | 19 | 24 =>
+              extras.push({
+                record,
+                subtype: Some(subtype),
+                byte_offset: offset,
+                raw_base64: @base64.encode(bytes),
+              })
+            _ =>
+              reject(
+                "UnsupportedExtension",
+                "Unknown dictionary extension subtype \{subtype}",
+                offset~,
+              )
+          }
+        }
+        999 => {
+          if c.i32() != 0 {
+            reject(
+              "InvalidDictionary",
+              "Invalid dictionary terminator",
+              offset~,
+            )
+          }
+          break
+        }
+        _ =>
+          reject(
+            "InvalidDictionary",
+            "Unexpected dictionary record type \{record}",
+            offset~,
+          )
+      }
+    } catch {
+      SavFailure(e) => {
+        let subtype = if record == 7 && input.length() - offset >= 8 {
+          Some(Cursor::new(input, pos=offset + 4).i32())
         } else {
           None
         }
-        let missing = []
-        for _i = 0; _i < missing_count.abs(); _i = _i + 1 {
-          missing.push(c.take(8))
-        }
-        if width == -1 {
-          if continuation <= 0 || raw.is_empty() {
-            reject("InvalidDictionary", "Unexpected continuation", offset~)
-          }
-          if has_label != 0 || missing_count != 0 {
-            reject(
-              "InvalidDictionary",
-              "Continuation declares semantic fields",
-              offset~,
-            )
-          }
-          raw[raw.length() - 1].slots += 1
-          continuation -= 1
-        } else {
-          if continuation != 0 {
-            reject("InvalidDictionary", "Missing continuation record", offset~)
-          }
-          if width < 0 || width > 255 {
-            reject(
-              "InvalidDictionary",
-              "Invalid physical variable width",
-              offset~,
-            )
-          }
-          if width > 0 && missing_count < 0 {
-            reject(
-              "InvalidDictionary",
-              "String range missing is invalid",
-              offset~,
-            )
-          }
-          limit(raw.length() + 1, l.variables, "variables")
-          raw.push({
-            short,
-            width,
-            slot: physical,
-            offset,
-            print,
-            write,
-            label,
-            missing_count,
-            missing,
-            labels: [],
-            slots: 1,
-          })
-          continuation = if width == 0 { 0 } else { (width + 7) / 8 - 1 }
-        }
-        physical += 1
-        limit(physical, l.physical_slots, "physical_slots")
-      }
-      3 => {
-        if continuation != 0 {
-          reject(
-            "InvalidDictionary",
-            "Unfinished variable continuations",
-            offset~,
-          )
-        }
-        let n = c.i32()
-        if n < 0 {
-          reject("InvalidLength", "Negative label count", offset~)
-        }
-        limit(n, l.dictionary_bytes / 16, "value_labels")
-        let labels = []
-        for _i = 0; _i < n; _i = _i + 1 {
-          let value = c.take(8)
-          let len = c.take(1)[0].to_int()
-          let label = c.take(len)
-          ignore(c.take((8 - (len + 1) % 8) % 8))
-          labels.push((value, label))
-        }
-        if c.i32() != 4 {
-          reject(
-            "InvalidDictionary",
-            "Value labels require association record 4",
-            offset=c.pos - 4,
-          )
-        }
-        let nvars = c.i32()
-        if nvars <= 0 || nvars > raw.length() {
-          reject(
-            "InvalidDictionary",
-            "Invalid label association count",
-            offset=c.pos - 4,
-          )
-        }
-        let mut label_width = -1
-        for _i = 0; _i < nvars; _i = _i + 1 {
-          let index = c.i32() - 1
-          let mut found = false
-          for v in raw {
-            if v.slot == index {
-              if v.width > 8 ||
-                (label_width != -1 && (label_width == 0) != (v.width == 0)) {
-                reject(
-                  "InvalidDictionary",
-                  "Incompatible value label association",
-                  offset~,
-                )
-              }
-              if !v.labels.is_empty() {
-                reject(
-                  "InvalidDictionary",
-                  "Duplicate label association",
-                  offset~,
-                )
-              }
-              label_width = v.width
-              for pair in labels {
-                v.labels.push(pair)
-              }
-              found = true
-            }
-          }
-          if !found {
-            reject(
-              "InvalidDictionary",
-              "Label association points outside a variable start",
-              offset~,
-            )
-          }
-        }
-      }
-      6 => {
-        let n = c.i32()
-        if n < 0 {
-          reject("InvalidLength", "Negative document count", offset~)
-        }
-        if n > l.extension_bytes / 80 {
-          reject("ResourceLimit", "Document record exceeds budget", offset~)
-        }
-        extras.push({
-          record,
-          subtype: None,
-          byte_offset: offset,
-          raw_base64: @base64.encode(c.take(n * 80)),
+        raise SavFailure({
+          ..e,
+          record: Some(record),
+          subtype,
+          byte_offset: match e.byte_offset {
+            Some(n) => Some(n)
+            None => Some(offset)
+          },
         })
       }
-      7 => {
-        let subtype = c.i32()
-        let size = c.i32()
-        let count = c.i32()
-        if size <= 0 || count < 0 {
-          reject("InvalidLength", "Invalid extension size/count", offset~)
-        }
-        if count > l.extension_bytes / size {
-          reject("ResourceLimit", "Extension payload exceeds budget", offset~)
-        }
-        let bytes = c.take(size * count)
-        let e = Cursor::new(bytes)
-        match subtype {
-          3 => {
-            if size != 4 || count != 8 {
-              reject(
-                "InvalidDictionary",
-                "Invalid machine integer record",
-                offset~,
-              )
-            }
-            ignore(e.i32())
-            ignore(e.i32())
-            ignore(e.i32())
-            ignore(e.i32())
-            let float_rep = e.i32()
-            ignore(e.i32())
-            let endian = e.i32()
-            machine = Some(e.i32())
-            if float_rep != 1 {
-              reject("UnsupportedFloat", "Non IEEE754 representation", offset~)
-            }
-            if endian != 2 {
-              reject(
-                "UnsupportedLayout",
-                "Machine declares non-little-endian layout",
-                offset~,
-              )
-            }
-          }
-          4 => {
-            if size != 8 || count != 3 {
-              reject(
-                "InvalidDictionary",
-                "Invalid floating information record",
-                offset~,
-              )
-            }
-            system = e.u64()
-            highest = e.u64()
-            lowest = e.u64()
-            if !finite(system.reinterpret_as_double()) ||
-              !finite(lowest.reinterpret_as_double()) ||
-              !finite(highest.reinterpret_as_double()) {
-              reject("UnsupportedFloat", "Invalid floating sentinel", offset~)
-            }
-          }
-          16 => {
-            if size != 8 || count != 2 {
-              reject(
-                "InvalidDictionary",
-                "Invalid extended case count record",
-                offset~,
-              )
-            }
-            if e.u64() != 1UL {
-              reject(
-                "UnsupportedExtension",
-                "Unknown extended case count version",
-                offset~,
-              )
-            }
-            let n = e.u64()
-            if n != 0xffffffffffffffffUL {
-              if n > 2147483647UL {
-                reject(
-                  "ResourceLimit",
-                  "Declared case count exceeds index capacity",
-                  offset~,
-                )
-              }
-              ext_cases = Some(n.to_int())
-            }
-          }
-          20 => {
-            if size != 1 || declared != None {
-              reject(
-                "InvalidDictionary",
-                "Invalid duplicate encoding record",
-                offset~,
-              )
-            }
-            declared = Some(ascii(bytes).trim(chars="\x00 ").to_owned())
-          }
-          11 | 13 | 14 | 21 | 22 =>
-            extensions.push({ subtype, size, count, offset, bytes })
-          5 | 6 | 7 | 8 | 9 | 10 | 12 | 17 | 18 | 19 | 24 =>
-            extras.push({
-              record,
-              subtype: Some(subtype),
-              byte_offset: offset,
-              raw_base64: @base64.encode(bytes),
-            })
-          _ =>
-            reject(
-              "UnsupportedExtension",
-              "Unknown dictionary extension subtype \{subtype}",
-              offset~,
-            )
-        }
-      }
-      999 => {
-        if c.i32() != 0 {
-          reject("InvalidDictionary", "Invalid dictionary terminator", offset~)
-        }
-        break
-      }
-      _ =>
-        reject(
-          "InvalidDictionary",
-          "Unexpected dictionary record type \{record}",
-          offset~,
-        )
     }
   }
   limit(c.pos - 176, l.dictionary_bytes, "dictionary_bytes")
@@ -423,6 +470,11 @@ pub fn inspect_bytes(
   let rows = match ext_cases {
     Some(n) => Some(n)
     None => if cases < 0 { None } else { Some(cases) }
+  }
+  if raw.is_empty() {
+    reject(
+      "InvalidDictionary", "A supported dataset requires at least one variable",
+    )
   }
   let encoding = encoding_info(declared, machine, options)
   let decoded_bytes : Ref[Int] = { val: 0 }
@@ -591,15 +643,6 @@ pub fn inspect_bytes(
       } else {
         string_atom(value, dec)
       }
-      for previous in labels {
-        if previous.value == atom {
-          reject(
-            "InvalidDictionary",
-            "Duplicate/conflicting label key",
-            offset=r.offset,
-          )
-        }
-      }
       labels.push({
         value: atom,
         label: dec(label),
@@ -661,21 +704,34 @@ pub fn inspect_bytes(
     }
   }
   for key, _ in widths {
-    let mut found = false
-    for v in vars {
-      if v.short_name.to_upper() == key {
-        found = true
-      }
-    }
-    if !found {
+    if !used.contains(key) {
       reject("InvalidDictionary", "Dangling long-width mapping")
     }
   }
   apply_long_semantics(vars, extensions, dec, l)
+  validate_variables(
+    vars,
+    hex_bits(lowest),
+    hex_bits(highest),
+    "InvalidDictionary",
+    l,
+  )
   let mut nominal = 0
-  for v in vars { nominal += if v.type_ == "numeric" {1} else {((if v.width > 255 {255} else {v.width})+7)/8} }
-  if slots > 0 && slots != physical && slots != nominal {reject("InvalidDictionary", "Nominal case width disagrees with both defined conventions")}
-  if physical > l.row_bytes / 8 {reject("ResourceLimit", "Actual row width exceeds byte budget")}
+  for v in vars {
+    nominal += if v.type_ == "numeric" {
+      1
+    } else {
+      ((if v.width > 255 { 255 } else { v.width }) + 7) / 8
+    }
+  }
+  if slots > 0 && slots != physical && slots != nominal {
+    reject(
+      "InvalidDictionary", "Nominal case width disagrees with both defined conventions",
+    )
+  }
+  if physical > l.row_bytes / 8 {
+    reject("ResourceLimit", "Actual row width exceeds byte budget")
+  }
   let weight_variable = if weight == 0 {
     None
   } else {
@@ -744,6 +800,15 @@ fn apply_long_semantics(
   dec : (Bytes) -> String raise SavError,
   limits : Limits,
 ) -> Unit raise SavError {
+  let mut label_entries = 0
+  for v in vars {
+    label_entries += v.value_labels.length()
+  }
+  let by_name : Map[String, Int] = {}
+  for v in vars {
+    by_name[v.name.to_upper()] = v.index
+    by_name[v.short_name.to_upper()] = v.index
+  }
   for ext in extensions {
     if ext.subtype != 21 && ext.subtype != 22 {
       continue
@@ -760,13 +825,7 @@ fn apply_long_semantics(
       let n = c.i32()
       limit(n, limits.label_bytes, "label_bytes")
       let name = dec(c.take(n))
-      let mut index = -1
-      for v in vars {
-        if v.name.to_upper() == name.to_upper() ||
-          v.short_name.to_upper() == name.to_upper() {
-          index = v.index
-        }
-      }
+      let index = by_name.get(name.to_upper()).unwrap_or(-1)
       if index < 0 || vars[index].type_ != "string" {
         reject(
           "InvalidDictionary",
@@ -785,7 +844,15 @@ fn apply_long_semantics(
           )
         }
         let nlabels = c.i32()
-        limit(nlabels, limits.dictionary_bytes / 16, "value_labels")
+        if nlabels < 0 {
+          reject("InvalidLength", "Negative long label count")
+        }
+        if nlabels > limits.dictionary_bytes / 4096 - label_entries {
+          reject(
+            "ResourceLimit", "Dictionary label entry bookkeeping exceeds budget",
+          )
+        }
+        label_entries += nlabels
         for _i = 0; _i < nlabels; _i = _i + 1 {
           let len = c.i32()
           if len < 0 || len > v.width {
@@ -799,15 +866,6 @@ fn apply_long_semantics(
           let length = c.i32()
           limit(length, limits.label_bytes, "label_bytes")
           let label = c.take(length)
-          for old in v.value_labels {
-            if old.value.logical_bytes_base64 == value.logical_bytes_base64 {
-              reject(
-                "InvalidDictionary",
-                "Duplicate long label key",
-                offset=ext.offset,
-              )
-            }
-          }
           v.value_labels.push({
             value,
             label: dec(label),

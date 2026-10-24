@@ -1,0 +1,19 @@
+✔ exclusive concurrent exports have one winner and retain input hash (98.319541ms)
+✔ SIGKILL after-dir produces the declared commit boundary (54.176125ms)
+✔ SIGKILL after-marker produces the declared commit boundary (55.058084ms)
+✔ SIGKILL after-data produces the declared commit boundary (56.220333ms)
+✔ SIGKILL after-metadata produces the declared commit boundary (61.652542ms)
+✔ SIGKILL after-manifest produces the declared commit boundary (61.259125ms)
+✔ SIGKILL after-commit produces the declared commit boundary (66.201917ms)
+✔ disk write failure cleans only owned files and returns I/O error (32.387333ms)
+✔ input modification during bounded read is detected (27.67625ms)
+✔ report failure after commit reports committed and leaves a valid recoverable bundle (68.407083ms)
+✔ total output byte limit accepts exact total and rejects one byte less (107.905917ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 719.22425

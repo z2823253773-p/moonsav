@@ -1,0 +1,44 @@
+✔ exclusive concurrent exports have one winner and retain input hash (97.392417ms)
+✔ SIGKILL after-dir produces the declared commit boundary (53.776292ms)
+✔ SIGKILL after-marker produces the declared commit boundary (55.025917ms)
+✔ SIGKILL after-data produces the declared commit boundary (56.496125ms)
+✔ SIGKILL after-metadata produces the declared commit boundary (57.077625ms)
+✔ SIGKILL after-manifest produces the declared commit boundary (57.933333ms)
+✔ SIGKILL after-commit produces the declared commit boundary (65.393625ms)
+✔ disk write failure cleans only owned files and returns I/O error (30.281625ms)
+✔ input modification during bounded read is detected (26.190708ms)
+✖ report failure after commit reports committed and leaves a valid recoverable bundle (33.770875ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 566.869667
+
+✖ failing tests:
+
+test at tests/io.test.mjs:10:1
+✖ report failure after commit reports committed and leaves a valid recoverable bundle (33.770875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'not_created'
+  - 'committed'
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/io.test.mjs:10:226)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'not_created',
+    expected: 'committed',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

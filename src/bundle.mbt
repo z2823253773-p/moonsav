@@ -162,6 +162,7 @@ pub fn check_manifest(
   text : String,
   options? : Options = Options::default(),
 ) -> Json raise SavError {
+  validate_limits(options.limits)
   let j = parse_json(text)
   if jstr(member(j, "schema_version")) != "moonsav.bundle/1" {
     reject("UnsupportedSchema", "Unsupported manifest schema")
@@ -277,6 +278,38 @@ pub fn BundleChecker::new(
     profile,
     selection_source: jstr(member(enc, "selection_source")),
     string_matching_policy: policy,
+    decoder_identity: jstr(member(enc, "decoder_identity")),
+  }
+  if encoding.selection_source != "override" &&
+    encoding.selection_source != "record20" &&
+    encoding.selection_source != "machine_code" {
+    reject("IntegrityMismatch", "Unknown encoding selection policy")
+  }
+  if encoding.selection_source != "override" {
+    let chosen = encoding_info(encoding.declared, encoding.machine_code, {
+      ..options,
+      encoding_override: None,
+    })
+    if chosen.effective != encoding.effective ||
+      chosen.selection_source != encoding.selection_source {
+      reject(
+        "IntegrityMismatch", "Encoding selection disagrees with declarations",
+      )
+    }
+  }
+  let csv_policy = member(j, "csv")
+  for
+    pair in [
+      ("numeric_system_missing", "empty_field"),
+      ("string_escape", "csv_quotes_only"),
+      ("date_policy", "raw"),
+      ("encoding", "utf-8"),
+      ("record_separator", "CRLF"),
+    ] {
+    let (key, value) = pair
+    if jstr(member(csv_policy, key)) != value {
+      reject("IntegrityMismatch", "Unknown CSV/date representation policy")
+    }
   }
   let dec = fn(b) raise SavError { decode(b, effective, options) }
   let system_missing_hex = jstr(member(j, "system_missing_hex"))
@@ -412,6 +445,49 @@ pub fn BundleChecker::new(
       suggested_action: jstr(member(w, "suggested_action")),
     })
   }
+  let extras = []
+  let mut extra_bytes = 0
+  for e in jarr(member(j, "uninterpreted_metadata")) {
+    let record = jnum(member(e, "record"))
+    let subtype = opt_int(member(e, "subtype"))
+    let offset = jnum(member(e, "byte_offset"))
+    let raw = jstr(member(e, "raw_base64"))
+    let bytes = b64(raw)
+    if record == 7 {
+      match subtype {
+        Some(5 | 6 | 7 | 8 | 9 | 10 | 12 | 17 | 18 | 19 | 24) => ()
+        _ => reject("IntegrityMismatch", "Unknown retained semantic extension")
+      }
+    } else if record != 6 || subtype != None {
+      reject("IntegrityMismatch", "Invalid uninterpreted metadata record")
+    }
+    if bytes.length() > options.limits.extension_bytes ||
+      bytes.length() > options.limits.dictionary_bytes - extra_bytes {
+      reject("ResourceLimit", "Retained metadata exceeds dictionary budget")
+    }
+    extra_bytes += bytes.length()
+    extras.push({ record, subtype, byte_offset: offset, raw_base64: raw })
+  }
+  if !extras.is_empty() &&
+    !warnings.any(w => w.warning_code == "UninterpretedMetadata") {
+    reject("IntegrityMismatch", "Uninterpreted metadata warning is missing")
+  }
+  if encoding.selection_source == "override" &&
+    !warnings.any(w => w.warning_code == "EncodingOverride") {
+    reject("IntegrityMismatch", "Encoding override warning is missing")
+  }
+  validate_variables(
+    variables,
+    lowest_hex,
+    highest_hex,
+    "IntegrityMismatch",
+    options.limits,
+  )
+  let weight = opt_int(member(j, "weight_variable"))
+  if weight is Some(index) &&
+    (index >= variables.length() || variables[index].type_ != "numeric") {
+    reject("IntegrityMismatch", "Invalid weight variable reference")
+  }
   let dictionary : Dictionary = {
     variables,
     declared_rows,
@@ -426,7 +502,7 @@ pub fn BundleChecker::new(
     product: jstr(member(j, "product")),
     weight_variable: opt_int(member(j, "weight_variable")),
     warnings,
-    uninterpreted_metadata: [],
+    uninterpreted_metadata: extras,
     system_missing_hex,
     lowest_hex,
     highest_hex,

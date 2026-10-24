@@ -196,75 +196,79 @@ fn row_cells(
 ) -> Array[Cell] raise SavError {
   let row = []
   for v in d.variables {
-    if v.type_ == "numeric" {
-      let (bytes, opcode) = slots[v.physical_start]
-      if opcode == 254 {
-        reject("InvalidCompression", "Space opcode in numeric variable")
-      }
-      let bits = if opcode == 255 {
-        parse_hex(d.system_missing_hex)
-      } else {
-        raw_bits(bytes)
-      }
-      let system = hex_bits(bits) == d.system_missing_hex
-      if !system && !finite(bits.reinterpret_as_double()) {
-        reject(
-          "UnsupportedNumeric", "Non-sentinel NaN or infinity in numeric data",
-        )
-      }
-      let missing = if system {
-        "system"
-      } else if user_missing(v, Some(bits), None) {
-        "user"
-      } else {
-        "present"
-      }
-      row.push({
-        kind: "numeric",
-        missing,
-        decimal: if system {
-          None
-        } else {
-          Some(decimal(bits))
-        },
-        ieee754_hex: Some(hex_bits(bits)),
-        text: None,
-        logical_bytes_base64: None,
-      })
-    } else {
-      let bytes : Array[Byte] = []
-      for pair in v.segments {
-        let (start, width) = pair
-        for j = 0; j < (width + 7) / 8; j = j + 1 {
-          let (chunk, opcode) = slots[start + j]
-          if opcode != 253 && opcode != 254 {
-            reject("InvalidCompression", "Numeric opcode in string variable")
-          }
-          let n = if width - j * 8 > 8 { 8 } else { width - j * 8 }
-          for k = 0; k < n && bytes.length() < v.width; k = k + 1 {
-            bytes.push(chunk[k])
-          }
+    try {
+      if v.type_ == "numeric" {
+        let (bytes, opcode) = slots[v.physical_start]
+        if opcode == 254 {
+          reject("InvalidCompression", "Space opcode in numeric variable")
         }
-      }
-      if bytes.length() != v.width {
-        reject(
-          "InvalidDictionary", "Logical string reconstruction width mismatch",
-        )
-      }
-      let bytes = Bytes::from_array(bytes)
-      let text = decode(bytes, d.encoding.effective, d.options)
-      row.push({
-        kind: "string",
-        missing: if user_missing(v, None, Some(bytes)) {
+        let bits = if opcode == 255 {
+          parse_hex(d.system_missing_hex)
+        } else {
+          raw_bits(bytes)
+        }
+        let system = hex_bits(bits) == d.system_missing_hex
+        if !system && !finite(bits.reinterpret_as_double()) {
+          reject(
+            "UnsupportedNumeric", "Non-sentinel NaN or infinity in numeric data",
+          )
+        }
+        let missing = if system {
+          "system"
+        } else if user_missing(v, Some(bits), None) {
           "user"
         } else {
           "present"
-        },
-        decimal: None,
-        ieee754_hex: None,
-        text: Some(text),
-        logical_bytes_base64: Some(@base64.encode(bytes)),
-      })
+        }
+        row.push({
+          kind: "numeric",
+          missing,
+          decimal: if system {
+            None
+          } else {
+            Some(decimal(bits))
+          },
+          ieee754_hex: Some(hex_bits(bits)),
+          text: None,
+          logical_bytes_base64: None,
+        })
+      } else {
+        let bytes : Array[Byte] = []
+        for pair in v.segments {
+          let (start, width) = pair
+          for j = 0; j < (width + 7) / 8; j = j + 1 {
+            let (chunk, opcode) = slots[start + j]
+            if opcode != 253 && opcode != 254 {
+              reject("InvalidCompression", "Numeric opcode in string variable")
+            }
+            let n = if width - j * 8 > 8 { 8 } else { width - j * 8 }
+            for k = 0; k < n && bytes.length() < v.width; k = k + 1 {
+              bytes.push(chunk[k])
+            }
+          }
+        }
+        if bytes.length() != v.width {
+          reject(
+            "InvalidDictionary", "Logical string reconstruction width mismatch",
+          )
+        }
+        let bytes = Bytes::from_array(bytes)
+        let text = decode(bytes, d.encoding.effective, d.options)
+        row.push({
+          kind: "string",
+          missing: if user_missing(v, None, Some(bytes)) {
+            "user"
+          } else {
+            "present"
+          },
+          decimal: None,
+          ieee754_hex: None,
+          text: Some(text),
+          logical_bytes_base64: Some(@base64.encode(bytes)),
+        })
+      }
+    } catch {
+      SavFailure(e) => raise SavFailure({ ..e, variable_index: Some(v.index) })
     }
   }
   row
@@ -292,7 +296,9 @@ pub fn scan_bytes(
   let counts = Array::makei(d.variables.length(), _ => [0, 0, 0])
   let mut actual_rows = 0
   while true {
-    let first = reader.next()
+    let first = reader.next() catch {
+      SavFailure(e) => raise SavFailure({ ..e, row_index: Some(actual_rows) })
+    }
     if first == None {
       break
     }
@@ -317,7 +323,9 @@ pub fn scan_bytes(
           )
       }
     }
-    let row = row_cells(d, slots)
+    let row = row_cells(d, slots) catch {
+      SavFailure(e) => raise SavFailure({ ..e, row_index: Some(actual_rows) })
+    }
     for i = 0; i < row.length(); i = i + 1 {
       let j = match row[i].missing {
         "present" => 0

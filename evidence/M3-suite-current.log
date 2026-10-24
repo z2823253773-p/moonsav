@@ -1,0 +1,48 @@
+✔ canonical and multiline CSV validate as one paired bundle (74.190583ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (69.546292ms)
+✔ rehashing CSV that disagrees with canonical fails (69.090375ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (62.562708ms)
+✔ missing canonical and symlink metadata reject (128.492083ms)
+✔ rehashing metadata cannot admit duplicate semantic label (64.806917ms)
+✔ rehashing metadata cannot admit bad weight reference (66.848583ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (65.805125ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (65.085584ms)
+✔ canonical bytes parsed after a file swap must still match manifest hash (43.554667ms)
+✔ invalid UTF8 metadata.json is a data rejection, not I/O (61.214416ms)
+✔ invalid UTF8 manifest.json is a data rejection, not I/O (60.012291ms)
+✔ invalid UTF8 data.ndjson is a data rejection, not I/O (62.7005ms)
+✔ invalid UTF8 data.csv is a data rejection, not I/O (64.617625ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (6.633125ms)
+✔ string byte widths and all long boundaries preserve every logical byte (17.322958ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.368417ms)
+✔ duplicate names must be rejected rather than shadowed (0.182041ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.487791ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (103.69125ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (130.806125ms)
+✔ row and output budgets reject with resource exit and no committed bundle (66.36125ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (0.911ms)
+✔ ambiguous padded byte label keys and signed-zero label keys reject (0.457625ms)
+✔ empty dictionaries never validate or commit invented cases (0.093834ms)
+✔ all compression opcodes, nondefault bias and unknown rows preserve cases (0.715917ms)
+✔ long string extensions21/22 decode only after segment reconstruction (1.687459ms)
+✔ date and display declarations preserve numeric storage and tagged range endpoints (0.423667ms)
+✔ encoding required, reliable conflicts and override warning are distinct (30.573166ms)
+✔ exclusive concurrent exports have one winner and retain input hash (105.803917ms)
+✔ SIGKILL after-dir produces the declared commit boundary (58.399042ms)
+✔ SIGKILL after-marker produces the declared commit boundary (57.090958ms)
+✔ SIGKILL after-data produces the declared commit boundary (60.549875ms)
+✔ SIGKILL after-metadata produces the declared commit boundary (61.338958ms)
+✔ SIGKILL after-manifest produces the declared commit boundary (60.037833ms)
+✔ SIGKILL after-commit produces the declared commit boundary (66.294541ms)
+✔ disk write failure cleans only owned files and returns I/O error (30.512167ms)
+✔ input modification during bounded read is detected (27.439583ms)
+✔ report failure after commit reports committed and leaves a valid recoverable bundle (68.553416ms)
+✔ total output byte limit accepts exact total and rejects one byte less (102.401458ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 990.493417

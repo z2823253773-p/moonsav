@@ -1,0 +1,21 @@
+/Users/henryz/Desktop/比赛/moonsav/evidence/AC02-first/payloads/oracle.
+sps:3.16-3.21: error: FORMATS: Output format E40.17 specifies 17 decimal
+places, but width 40 allows at most 16 decimals.
+    3 | FORMATS score (E40.17).
+      |                ^~~~~~
+
+/Users/henryz/Desktop/比赛/moonsav/evidence/AC02-first/payloads/oracle.
+sps:6.16-6.36: error: COMPUTE: Type mismatch invoking MISSING(number) as
+MISSING(string).
+    6 | COMPUTE ZZMSV1=MISSING(subject_code).
+      |                ^~~~~~~~~~~~~~~~~~~~~
+
+/Users/henryz/Desktop/比赛/moonsav/evidence/AC02-first/payloads/oracle.
+sps:6.24-6.35: note: COMPUTE: This argument has type 'string' but 'number' is
+required.
+    6 | COMPUTE ZZMSV1=MISSING(subject_code).
+      |                        ^~~~~~~~~~~~
+
+/Users/henryz/Desktop/比赛/moonsav/evidence/AC02-first/payloads/oracle.sps:7:
+error: Stopping syntax file processing here to avoid a cascade of dependent
+command failures.

@@ -1,1 +1,33 @@
-{"name":"moonsav","version":"0.1.0","type":"module","description":"MoonBit-native SPSS SAV reader and offline CLI","license":"Apache-2.0","engines":{"node":">=24.15.0 <25"},"bin":{"moonsav":"bin/moonsav.mjs"},"files":["bin","node","lib","fixtures/synthetic","examples/read_bundle.py","schemas","README.md","LICENSE","THIRD_PARTY.md","toolchain.json"],"scripts":{"build":"node tools/build.mjs","test":"node --test tests/*.test.mjs","test:core":"moon test --target js"}}
+{
+  "name": "moonsav",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MoonBit-native SPSS SAV reader and offline CLI",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "24.15.0"
+  },
+  "bin": {
+    "moonsav": "bin/moonsav.mjs"
+  },
+  "files": [
+    "bin",
+    "node",
+    "lib",
+    "fixtures/synthetic/survey-row.sav",
+    "fixtures/synthetic/source.json",
+    "examples/read_bundle.py",
+    "schemas",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "licenses",
+    "toolchain.json",
+    "docs/CODEC_PROFILES.md"
+  ],
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:core": "moon test --target js"
+  }
+}

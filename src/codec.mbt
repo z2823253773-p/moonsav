@@ -28,7 +28,7 @@ fn decode(
           "UnsupportedEncoding", "This backend requires a verified decoder adapter",
         )
       }
-      @utf8.decode(bytes[:], ignore_bom=true) catch {
+      @utf8.decode(bytes[:], ignore_bom=false) catch {
         _ => {
           reject("InvalidEncoding", "Invalid UTF-8 byte sequence")
           ""
@@ -75,7 +75,21 @@ fn encoding_info(
       }
     }
   }
+  let decoder_identity = if options.decoder is Some(_) {
+    match options.decoder_identity {
+      Some(id) => id
+      None => {
+        reject(
+          "UnsupportedEncodingVariant", "A custom decoder must declare its verified identity/version",
+        )
+        ""
+      }
+    }
+  } else {
+    "MoonBit core UTF8 / moonc v0.10.4+2cc641edf"
+  }
   {
+    decoder_identity,
     declared,
     machine_code: machine,
     effective,

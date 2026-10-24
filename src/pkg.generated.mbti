@@ -1,0 +1,215 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "z2823253773/moonsav"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn check_manifest(String, options? : Options) -> Json raise SavError
+
+pub fn codebook(Dictionary) -> String
+
+pub fn csv_header(Dictionary) -> String
+
+pub fn csv_row(Array[Cell]) -> String raise SavError
+
+pub fn inspect_bytes(Bytes, options? : Options) -> Dictionary raise SavError
+
+pub fn metadata_json(Dictionary, Int) -> Json
+
+pub fn probe_header(Bytes) -> Int raise SavError
+
+pub fn read_bytes(Bytes, options? : Options) -> Dataset raise SavError
+
+pub fn row_json(Array[Cell], Int) -> String
+
+pub fn scan_bytes(Bytes, (Dictionary) -> Unit raise, (Array[Cell]) -> ScanControl raise, options? : Options) -> ScanSummary raise SavError
+
+// Errors
+pub(all) suberror SavError {
+  SavFailure(ErrorInfo)
+} derive(@debug.Debug)
+pub fn SavError::info(Self) -> ErrorInfo
+
+// Types and methods
+pub(all) struct Atom {
+  type_ : String
+  decimal : String?
+  ieee754_hex : String?
+  text : String?
+  logical_bytes_base64 : String?
+  width : Int
+  endpoint : String?
+} derive(Eq, @debug.Debug)
+pub impl ToJson for Atom
+
+pub struct BundleChecker {
+  // private fields
+}
+pub fn BundleChecker::dictionary_json(Self) -> Json
+pub fn BundleChecker::finish(Self) -> ScanSummary raise SavError
+pub fn BundleChecker::header(Self, String) -> Unit raise SavError
+pub fn BundleChecker::new(String, Json, options? : Options) -> Self raise SavError
+pub fn BundleChecker::next(Self, String, csv? : String?) -> Unit raise SavError
+
+pub(all) struct Cell {
+  kind : String
+  missing : String
+  decimal : String?
+  ieee754_hex : String?
+  text : String?
+  logical_bytes_base64 : String?
+} derive(@debug.Debug)
+pub fn Cell::is_missing(Self) -> Bool
+pub fn Cell::missing_kind(Self) -> String
+pub impl ToJson for Cell
+
+type Cursor
+
+pub(all) struct Dataset {
+  dictionary : Dictionary
+  rows : Array[Array[Cell]]
+}
+
+pub(all) enum DatePolicy {
+  Raw
+} derive(Eq, @debug.Debug)
+
+pub(all) struct Dictionary {
+  variables : Array[Variable]
+  declared_rows : Int?
+  compression : Int
+  bias : Double
+  physical_slots : Int
+  nominal_case_size : Int
+  encoding : EncodingInfo
+  file_label : String
+  creation_date : String
+  creation_time : String
+  product : String
+  weight_variable : Int?
+  warnings : Array[Warning]
+  uninterpreted_metadata : Array[Extra]
+  system_missing_hex : String
+  lowest_hex : String
+  highest_hex : String
+  // private fields
+}
+pub impl ToJson for Dictionary
+
+pub(all) struct EncodingInfo {
+  declared : String?
+  machine_code : Int?
+  effective : String
+  selection_source : String
+  profile : String
+  string_matching_policy : String
+  decoder_identity : String
+} derive(@debug.Debug)
+pub impl ToJson for EncodingInfo
+
+pub(all) struct ErrorInfo {
+  code : String
+  message : String
+  byte_offset : Int?
+  record : Int?
+  subtype : Int?
+  variable_index : Int?
+  row_index : Int?
+  actual : Int?
+  limit : Int?
+} derive(@debug.Debug)
+pub impl ToJson for ErrorInfo
+
+pub(all) struct Extra {
+  record : Int
+  subtype : Int?
+  byte_offset : Int
+  raw_base64 : String
+} derive(@debug.Debug)
+pub impl ToJson for Extra
+
+pub(all) struct Format {
+  raw : Int
+  code : Int
+  width : Int
+  decimals : Int
+} derive(ToJson, @debug.Debug)
+
+pub(all) struct Limits {
+  input_bytes : Int
+  dictionary_bytes : Int
+  variables : Int
+  physical_slots : Int
+  string_bytes : Int
+  label_bytes : Int
+  extension_bytes : Int
+  row_bytes : Int
+  rows : Int
+  cells : Int
+  retained_bytes : Int
+  output_bytes : Int
+} derive(ToJson, @debug.Debug)
+pub fn Limits::default() -> Self
+
+pub(all) struct Options {
+  date_policy : DatePolicy
+  limits : Limits
+  encoding_override : String?
+  decoder_identity : String?
+  decoder : ((Bytes, String) -> String raise SavError)?
+}
+pub fn Options::default() -> Self
+
+pub(all) enum ScanControl {
+  Continue
+  Stop
+} derive(Eq, @debug.Debug)
+
+pub(all) struct ScanSummary {
+  actual_rows : Int
+  completed : Bool
+  counts : Array[Array[Int]]
+} derive(ToJson, @debug.Debug)
+
+pub(all) struct ValueLabel {
+  value : Atom
+  label : String
+  raw_label_base64 : String
+} derive(ToJson, @debug.Debug)
+
+pub(all) struct Variable {
+  index : Int
+  short_name : String
+  name : String
+  type_ : String
+  width : Int
+  label : String?
+  raw_label_base64 : String?
+  source_offset : Int
+  physical_start : Int
+  physical_slots : Int
+  print_format : Format
+  write_format : Format
+  value_labels : Array[ValueLabel]
+  missing_kind : String
+  missing_values : Array[Atom]
+  measure : Int?
+  display_width : Int?
+  alignment : Int?
+  // private fields
+} derive(@debug.Debug)
+pub fn Variable::value_label_for(Self, Cell) -> String? raise SavError
+pub impl ToJson for Variable
+
+pub(all) struct Warning {
+  warning_code : String
+  scope : String
+  suggested_action : String
+} derive(ToJson, @debug.Debug)
+
+// Type aliases
+
+// Traits
+

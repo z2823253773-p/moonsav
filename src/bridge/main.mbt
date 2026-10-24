@@ -1,4 +1,8 @@
 ///|
+extern "js" fn platform_decoder_identity() -> String =
+  #| () => 'Node TextDecoder '+process.version+' / ICU '+process.versions.icu+' / MoonSav frozen mapping guards v1'
+
+///|
 extern "js" fn platform_decode(bytes : Bytes, encoding : String) -> String =
   #| (bytes, encoding) => globalThis.__moonsavDecode(bytes, encoding)
 
@@ -13,6 +17,12 @@ fn emit(kind : String, payload : String) -> Unit raise @moonsav.SavError {
       code: "ConsumerFailed",
       message: "Output consumer failed",
       byte_offset: None,
+      record: None,
+      subtype: None,
+      variable_index: None,
+      row_index: None,
+      actual: None,
+      limit: None,
     })
   }
 }
@@ -28,6 +38,8 @@ pub fn run(
 ) -> String {
   let limits = @moonsav.Limits::default()
   let options : @moonsav.Options = {
+    date_policy: @moonsav.Raw,
+    decoder_identity: Some(platform_decoder_identity()),
     limits: {
       ..limits,
       rows: max_rows,
@@ -52,6 +64,12 @@ pub fn run(
           },
           message: "Strict decoding failed for selected profile",
           byte_offset: None,
+          record: None,
+          subtype: None,
+          variable_index: None,
+          row_index: None,
+          actual: None,
+          limit: None,
         })
       }
     }),
@@ -140,6 +158,8 @@ fn checker_options(
 ) -> @moonsav.Options {
   let limits = @moonsav.Limits::default()
   {
+    date_policy: @moonsav.Raw,
+    decoder_identity: Some(platform_decoder_identity()),
     limits: {
       ..limits,
       rows: max_rows,
@@ -160,6 +180,12 @@ fn checker_options(
           },
           message: "Strict profile decoding failed",
           byte_offset: None,
+          record: None,
+          subtype: None,
+          variable_index: None,
+          row_index: None,
+          actual: None,
+          limit: None,
         })
       }
     }),
