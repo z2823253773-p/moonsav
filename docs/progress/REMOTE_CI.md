@@ -21,3 +21,9 @@ Independent Linux full entry completed13 supported_pass + AC09 expected rejects,
 Raw second-run jobs, downloaded aggregate artifact, local full failure, reviewer characterization and corrected package logs are in evidence/remote-ci-second. Original delivered archives remain unchanged in dist/history/8ae93f2; dist root currently holds the newer candidate. A final clean committed build/run is still required; intermediate package hashes are not final.
 
 The independent agent rechecked the corrected shell-free smoke, old U1, modern build/source archive and extracted U1 across all three local backends; no further concrete issue found. Evidence: remote-ci-second/reviewer-final/report.json. This is local agent proof only. toolchain.json points to per-run evidence rather than freezing a mutable CI status into each build profile.
+
+## Final verified run
+
+2026-10-24: run40073319985 at0afbe3443a93f6fd13e7211ba41cc970ca0b00a9 completed SUCCESS on all four jobs. Original API state/logs/downloaded aggregate artifact and private repo metadata are in evidence/remote-ci-final. Independent Linux summary has17 supported_pass + AC09 expected_rejection29, zero failures/unexpected/not_run. Windows38 shared + JS/wasm-gc, Linux/macOS49 tests +three core backends and own offline archive smoke all passed. Full local entry also passed with the same source digest and clean build. No conditional omissions are counted as passes.
+
+Downloaded Linux package metadata source_tree_sha256 matches local7a8e46aa59fb754213a574d807b316c42648e9ebcd861f9c5f38526db090869f. Linux dirty=true records generated untracked evidence only; local delivered build dirty=false. Final local archive hashes and independent exact-archive checks are in docs/delivery-manifest.json and evidence/remote-ci-final/independent-artifacts. Current M4/M5/FINAL_HANDOFF replace the earlier pending delivery state. Overall designated acceptance remains separate and pending.

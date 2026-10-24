@@ -1,39 +1,45 @@
-# MoonSav local candidate handoff
+# MoonSav current acceptance handoff
 
-Workspace: `/Users/henryz/Desktop/比赛/moonsav`
-Branch: `implementation`
-Tested product SHA: `8ae93f2b46ab7a81acbf7a120564c493693324fb`
-Source-tree SHA256: `e77cf705f5e878e10a49cbb040336af9d990fb65b2e201ffab1502a29d936bf6`
+Updated2026-10-24 America/Phoenix. Workspace `/Users/henryz/Desktop/比赛/moonsav`, branch `implementation`, private remote [z2823253773-p/moonsav](https://github.com/z2823253773-p/moonsav).
 
-Local M1–M5 delivery candidate is implemented and the AC01–AC18 local entry passed (17 supported_pass + AC09 expected_rejection, zero failures/skips). Overall PRD acceptance is pending remote Linux/Windows runs and the designated acceptance chat. End-of-delivery exact Git SHA/clean state is in dist/delivery-state.json and must be refreshed with `git rev-parse HEAD; git status --short` if the tree changes.
+**Frozen tested source:** `0afbe3443a93f6fd13e7211ba41cc970ca0b00a9`. **Source-tree SHA256:** `7a8e46aa59fb754213a574d807b316c42648e9ebcd861f9c5f38526db090869f`. Later commits are reporting/evidence only; current exact Git HEAD/clean/upstream and hashes are in ignored dist/delivery-state.json and must be checked live before later work.
 
-Start with TASK_STATE.md, docs/progress/M4.md, M5.md, INDEPENDENT_REVIEW.md, docs/delivery-manifest.json and evidence/final-20261023-01/summary.json. The run ledger records the original source SHA, truthful dirty status and commands; later report commits do not replace it. Archives below were actually installed/extracted and tested; they were not published.
+Private repo creation/push/Actions were explicitly authorized. Final [run40073319985](https://github.com/z2823253773-p/moonsav/actions/runs/40073319985) succeeded on all four jobs: Windows2025, Ubuntu24.04, macOS15 and independent Linux oracles. Full local and Linux entries both produced17 supported_pass + AC09 expected_rejection29 vectors, zero failures/unexpected/not_run. **Designated acceptance remains pending**; this implementation has written no approval in docs/acceptance.
 
-- CLI: `dist/moonsav-0.1.0.tgz`, SHA256 `26e79e5f6974551bcbea967090992ad771c91e363f3b30b7e53f0e2f24bfad3e`.
-- Byte library: `dist/moonsav-source-0.1.0.zip`, SHA256 `6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce`.
-- Existing isolated developer Python: `.dev/venv/bin/python` (3.12.13), fixed oracle dependencies in requirements-dev.lock.
-- Existing GNU PSPP: `.dev/pspp/bin/pspp` (2.0.1), independently executed only for development.
+## Exact delivery
 
-## Same-host independent acceptance
+- `dist/moonsav-0.1.0.tgz`: 295135 bytes, SHA256 `9eaeacecd1c599a56a7fa22d392f9bf7dea4f6072b1a3e3250b85e8c6f7d76c5`.
+- `dist/moonsav-source-0.1.0.zip`: 57644 bytes, SHA256 `3b3649ba4c966fbb19c66c325da54549fad92a1535998dc2702dc300fd84cd7c`.
+- Build reports source0afbe34, dirty=false, actual moon0.1.20261023/moonc0.10.17+d971670cd. Original8ae93f2 archives remain unchanged in `dist/history/8ae93f2`; intermediate failed trial archives are not final delivery.
+- Runtime CLI: Node24.15.0/ICU78.2 only; no MoonBit/Python/C compiler/runtime npm dependencies/network. Python consumer separately needs standard-library Python.
 
-Use a new checkout/output directory. The first command clones the committed product and reports, not ignored local archives, public caches or dev environments. To test the existing exact archives, copy them from the original dist and verify their hashes first; rebuilding creates a different build record/tar hash.
+Read TASK_STATE, current docs/delivery-manifest.json, M4/M5, REMOTE_CI and evidence/remote-ci-final/cross-check.json. `evidence/local-ci-final-0af` is the actual clean local full run; `evidence/remote-ci-final/artifact/summary.json` is downloaded Linux proof, bound to the exact remote run/SHA. Full raw Actions logs and first/second failures are retained. Independent agent installed the exact final archives in a fresh directory and ran U1–U3; report under evidence/remote-ci-final/independent-artifacts.
+
+## Reproduce on this host
+
+Use new checkout/output paths. The clone omits ignored dist/dev/cache; copy existing exact archives from the original dist and verify SHA if testing the delivered bytes rather than a rebuild. Rebuilding creates a different build commit/provenance record and may change archive SHA.
 
 ```sh
-git clone --no-hardlinks /Users/henryz/Desktop/比赛/moonsav /tmp/moonsav-independent-acceptance
-cd /tmp/moonsav-independent-acceptance
+git clone --no-hardlinks /Users/henryz/Desktop/比赛/moonsav /tmp/moonsav-acceptance-20261024
+cd /tmp/moonsav-acceptance-20261024
 python3.12 -m venv .dev/venv
 .dev/venv/bin/python -m pip install -r requirements-dev.lock
-MOONSAV_PSPP=/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp .dev/venv/bin/python tools/verify.py --all --require-public --require-pspp --output evidence/independent-run
+PATH="/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin:$PATH" MOONSAV_PSPP="/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp" .dev/venv/bin/python tools/verify.py --all --require-public --require-pspp --output evidence/independent-run
+.dev/venv/bin/python -m unittest discover -s tests -p '*_test.py'
 ```
 
-The public-cache step downloads two frozen licensed files when absent and checks SHA; private data are not required. All evidence payloads remain ignored. Need Node24.15.0/ICU78.2 and moon0.1.20260713/moonc v0.10.4+2cc641edf; do not silently substitute versions. On another host install the declared dev/oracle environment; the supplied macOS arm64 PSPP conda lock is not a Linux/Windows validation result.
+The final unittest also needs a supported Moon on PATH if the shell default is not one of the two declared pairs. Existing default old pair works on this host. New Moon/core were installed only under .dev/moon-ci; the old global installation was not changed. Old official pinned downloads403, so remote CI uses the explicitly fixed downloadable0.10.17+d971670cd pair. Exact versions/hashes/probes are retained. Another OS must install that declared native toolchain/core/Node/dev dependencies/PSPP, not copy macOS binaries.
 
-Acceptance must inspect actual results/diffs, not merely command exit0. Confirm every case and classification, compare source/corpus/artifact hashes, review unsupported variants and decoder identity, test U1–U3 from installed artifacts, and inspect the retained failures. Full public comparison is65449 cells with source-string/one-label trailing-space normalization explained. Extra GB18030 supplementary-plane fixture has a preserved Mac ReadStat/iconv limitation; it passes independent GNU PSPP and mapping/Python checks. No compatibility percentage is inferred.
+On the new source workspace, bundled `examples/consumer` already has native moon.mod/moon.pkg/moon.work. Run `moon run . --target js` there; also native/wasm-gc on declared platforms. Local module resolution is via workspace, with no unpublished registry dependency. Follow README for a separate consumer layout.
 
-## Copy-ready continuation for the designated acceptance chat
+Public data are fetched into ignored cache when absent and checked against frozen SHA. No private samples are required. Two source licenses/provenance and65449-cell full comparison are recorded; space normalizations are explained. The Mac supplementary-plane ReadStat/iconv limitation is preserved; Linux AC06 passed without that limitation. No universal compatibility percentage is inferred.
 
-> 请独立验收 `/Users/henryz/Desktop/比赛/moonsav`，先现场核对分支、HEAD、dirty、docs/delivery-manifest.json、dist/delivery-state.json 和两份归档 SHA。产品测试提交为 `8ae93f2b46ab7a81acbf7a120564c493693324fb`，最终报告提交可能随后出现；先确认差异只含文档/证据。阅读 TASK_STATE、PRD r0.2、M4/M5 和最终 run.json/summary.json，再从全新目录复现同一验收入口及归档 U1–U3，不把实施者自报当批准。按 supported_pass/supported_fail/expected_rejection/unexpected_result/not_run 分类，保留失败输入/命令/exit。验收材料只写 docs/acceptance/；产品由实施对话改，避免双写。重点检查编码非单射边界、长字符串/缺失匹配、重新计算哈希后的恶意 bundle、事务提交与资源限制。当前 Linux/Windows 远端 CI 未运行，独立代理审查不是指定验收或外部用户访谈；必须单列这些缺口。未授权公开推送、发布、报名，不执行这些操作。
+## Evidence scope and pending acceptance
 
-## Additional full clean-environment proof
+Local/Linux/macOS:49 Node tests (38 shared +11 POSIX) and7 byte-core tests on each JS/native/wasm-gc. Windows:38 shared tests,7 each JS/wasm-gc, own actual archive install/Unicode-space smoke. Windows native/POSIX crash/ACL equivalence is not claimed. Each CI platform builds its own archive from source; the exact local downloadable artifacts were independently installed on macOS. The Linux full entry also covers schemas, both oracles, public files, source consumer and workload. These distinctions remain visible in M4.
 
-See docs/progress/FRESH_ENVIRONMENT.md and evidence/clean-full-20261023. Unlike the initial AC13 clone, this run installed a fresh Python venv from the lock and reran all cases with newly downloaded public files. It passed on commit9127428; build dirty=false, identical source digest. Original delivered archives remain unchanged. Host Moon/Node/PSPP were reused; this is still local implementer evidence.
+A later report-only commit uses [skip ci] to avoid duplicate tests; this is not a test pass. Compare its product files with source0afbe34 and the source digest. Overall PRD acceptance requires the original acceptance chat's independent assessment. Agent review is not that approval, a human-user trial, organizer approval or a public release. No npm/Mooncakes release or registration occurred.
+
+## Copy-ready continuation
+
+> 请独立验收 `/Users/henryz/Desktop/比赛/moonsav`。先现场核对 HEAD、dirty、origin 和私有可见性；当前代码冻结提交为 `0afbe3443a93f6fd13e7211ba41cc970ca0b00a9`，后续只允许文档/证据差异，源码摘要应为 `7a8e46aa59fb754213a574d807b316c42648e9ebcd861f9c5f38526db090869f`。核对 docs/delivery-manifest.json、dist/delivery-state.json 和两份最终归档 SHA，读取当前 M4/M5、REMOTE_CI、最终本地与 Linux 下载报告及原始 Actions 日志。远端 run40073319985 四个任务均成功，但不要只凭实施者自报批准。请从新目录复现同一入口和归档 U1–U3，重点检查编码变体/长字符串/缺失、重算哈希后的恶意 bundle、事务与资源边界、不同工具链和消费者工作区。按 supported_pass/supported_fail/expected_rejection/unexpected_result/not_run 分类，保留失败命令/exit/输入。验收材料仅写 docs/acceptance，产品继续由实施对话改，避免双写。Windows 的 POSIX/native未测范围、Mac oracle限制和代理审查身份必须单列。已授权私有 GitHub 推送/CI；未授权公开发布、npm/Mooncakes发行或赛事报名。

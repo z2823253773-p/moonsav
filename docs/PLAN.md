@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-- Work only in this new standalone project; initialize Git here on `implementation`. No remote/push/publish/registration.
+- Work only in this new standalone project; initialize Git here on `implementation`. Private GitHub repository/push/Actions authorized2026-10-24; no public npm/Mooncakes publication or registration.
 - FL2 little endian IEEE754 compression 0/1, 1–32767-byte strings, subtype 13/14/21/22, labels, both missing kinds and raw display/date metadata are required.
 - Four explicit codec profiles; no guessing, lossy decoding or base64 used to excuse incorrect text. Resolve string matching from independent format evidence.
 - Every complete bundle has canonical data.ndjson + metadata.json + codebook.md + manifest.json; default adds RFC4180 data.csv. No private CSV escapes.
@@ -88,3 +88,5 @@ Completed checkboxes below mean the authorized **local** deliverable and capture
 2026-10-23 hardening rulings: retain the stable intersection GB18030 profile and reject ambiguous revision mappings rather than guess; preserve supplementary-plane fixture and record Mac system-iconv oracle limitation separately. Charge associated dictionary labels4096 bytes each (default16384), after the independent reviewer proved a100000-label compact input caused quadratic work and excessive object growth. Preserve BOM consistently across adapters. Source archives use root-anchored legacy include rules because this pinned Moon release did not apply .moonignore as expected; actual archive member inspection is the gate. Python verification subprocesses omit only the invalid inherited `_` last-command environment variable after it made the Moon tool panic; no global environment setting was changed.
 
 2026-10-23 final local run: product8ae93f2, evidence/final-20261023-01.17 supported passes + AC09 expected rejects; zero failures/unexpected/not-run local cases.48 Node tests and7 core tests per three backends pass. Independent final archive reproduction passed after a preserved reviewer harness correction. Final reports and exact artifact manifest are M4/M5/FINAL_HANDOFF; remote Linux/Windows and designated acceptance remain pending. Branch retained, no publication.
+
+2026-10-24 remote completion: private repository created/verified and implementation pushed. First two failing remote runs retained and fixed. Run40073319985 at0afbe34 passed all four jobs (Windows/macOS/Linux platform + full Linux oracles); current full local entry also passed. Final exact clean artifacts and independent artifact review are in current M4/M5/FINAL_HANDOFF and manifest. Designated acceptance remains pending; report-only commits do not alter tested product files.

@@ -1,0 +1,1468 @@
+Warning: `include` in `/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/moon.mod` is deprecated; use `.gitignore` or `.moonignore` to control which files are packaged instead. `.moonignore` overrides `.gitignore` in the same directory.
+Warning: [0035]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:12:4 ]
+    │
+ 12 │ fn member(j : Json, key : String) -> Json raise SavError {
+    │    ───┬──  
+    │       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:13:11 ]
+    │
+ 13 │   match j.value(key) {
+    │           ──┬──  
+    │             ╰──── Warning (deprecated): Suggestion: `if json is Object(obj) { obj.get(key) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:24:11 ]
+    │
+ 24 │   match j.as_string() {
+    │           ────┬────  
+    │               ╰────── Warning (deprecated): Suggestion: `if json is String(s) { Some(s) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:35:11 ]
+    │
+ 35 │   match j.as_number() {
+    │           ────┬────  
+    │               ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:51:11 ]
+    │
+ 51 │   match j.as_array() {
+    │           ────┬───  
+    │               ╰───── Warning (deprecated): Suggestion: `if json is Array(array) { Some(array) } else { None }`
+────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:111:11 ]
+     │
+ 111 │   if jstr(member(j, "type")) != kind {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:116:22 ]
+     │
+ 116 │     decimal: opt_str(member(j, "decimal")),
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:117:26 ]
+     │
+ 117 │     ieee754_hex: opt_str(member(j, "ieee754_hex")),
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:118:19 ]
+     │
+ 118 │     text: opt_str(member(j, "text")),
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:119:35 ]
+     │
+ 119 │     logical_bytes_base64: opt_str(member(j, "logical_bytes_base64")),
+     │                                   ───┬──  
+     │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:120:17 ]
+     │
+ 120 │     width: jnum(member(j, "width")),
+     │                 ───┬──  
+     │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:121:23 ]
+     │
+ 121 │     endpoint: opt_str(member(j, "endpoint")),
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:150:18 ]
+     │
+ 150 │   let raw = jnum(member(j, "raw"))
+     │                  ───┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:152:21 ]
+     │
+ 152 │   if f.code != jnum(member(j, "code")) ||
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:153:21 ]
+     │
+ 153 │     f.width != jnum(member(j, "width")) ||
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:154:24 ]
+     │
+ 154 │     f.decimals != jnum(member(j, "decimals")) {
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:167:11 ]
+     │
+ 167 │   if jstr(member(j, "schema_version")) != "moonsav.bundle/1" {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:170:22 ]
+     │
+ 170 │   let profile = jstr(member(j, "profile"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:174:19 ]
+     │
+ 174 │   let rows = jnum(member(j, "actual_rows"))
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:176:19 ]
+     │
+ 176 │   let cols = jnum(member(j, "logical_variables"))
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:181:15 ]
+     │
+ 181 │   let input = member(j, "input")
+     │               ───┬──  
+     │                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:183:10 ]
+     │
+ 183 │     jnum(member(input, "size_bytes")),
+     │          ───┬──  
+     │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:187:18 ]
+     │
+ 187 │   check_sha(jstr(member(input, "sha256")))
+     │                  ───┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:188:21 ]
+     │
+ 188 │   let files = match member(j, "files").as_object() {
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:188:40 ]
+     │
+ 188 │   let files = match member(j, "files").as_object() {
+     │                                        ────┬────  
+     │                                            ╰────── Warning (deprecated): This function is deprecated.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:192:7 ]
+     │
+ 192 │       Map::new()
+     │       ────┬───  
+     │           ╰───── Warning (deprecated): Use `Map([], capacity=...)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:203:24 ]
+     │
+ 203 │   let mut total = text.to_bytes().length()
+     │                        ────┬───  
+     │                            ╰───── Warning (deprecated): Check `@encoding/utf8.encode`
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:212:18 ]
+     │
+ 212 │     let n = jnum(member(f, "size_bytes"))
+     │                  ───┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:217:20 ]
+     │
+ 217 │     check_sha(jstr(member(f, "sha256")))
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:250:11 ]
+     │
+ 250 │   if jstr(member(j, "schema_version")) != "moonsav.metadata/1" {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:253:11 ]
+     │
+ 253 │   if jstr(member(j, "validation_scope")) != "full" {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:256:28 ]
+     │
+ 256 │   let expected_rows = jnum(member(manifest, "actual_rows"))
+     │                            ───┬──  
+     │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:257:11 ]
+     │
+ 257 │   if jnum(member(j, "actual_rows")) != expected_rows {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:260:31 ]
+     │
+ 260 │   let declared_rows = opt_int(member(j, "declared_rows"))
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:264:13 ]
+     │
+ 264 │   let enc = member(j, "encoding")
+     │             ───┬──  
+     │                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:265:43 ]
+     │
+ 265 │   let effective = canonical_encoding(jstr(member(enc, "effective")))
+     │                                           ───┬──  
+     │                                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:266:22 ]
+     │
+ 266 │   let profile = jstr(member(enc, "profile"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:267:21 ]
+     │
+ 267 │   let policy = jstr(member(enc, "string_matching_policy"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:275:23 ]
+     │
+ 275 │     declared: opt_str(member(enc, "declared")),
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:276:27 ]
+     │
+ 276 │     machine_code: opt_int(member(enc, "machine_code")),
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:279:28 ]
+     │
+ 279 │     selection_source: jstr(member(enc, "selection_source")),
+     │                            ───┬──  
+     │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:281:28 ]
+     │
+ 281 │     decoder_identity: jstr(member(enc, "decoder_identity")),
+     │                            ───┬──  
+     │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:300:20 ]
+     │
+ 300 │   let csv_policy = member(j, "csv")
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:310:13 ]
+     │
+ 310 │     if jstr(member(csv_policy, key)) != value {
+     │             ───┬──  
+     │                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:315:33 ]
+     │
+ 315 │   let system_missing_hex = jstr(member(j, "system_missing_hex"))
+     │                                 ───┬──  
+     │                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:316:25 ]
+     │
+ 316 │   let lowest_hex = jstr(member(j, "lowest_hex"))
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:317:26 ]
+     │
+ 317 │   let highest_hex = jstr(member(j, "highest_hex"))
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:324:36 ]
+     │
+ 324 │   let aliases : Map[String, Int] = {}
+     │                                    ─┬  
+     │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:325:23 ]
+     │
+ 325 │   let var_json = jarr(member(j, "variables"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:326:32 ]
+     │
+ 326 │   if var_json.length() != jnum(member(manifest, "logical_variables")) ||
+     │                                ───┬──  
+     │                                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:327:31 ]
+     │
+ 327 │     var_json.length() != jnum(member(j, "logical_variables")) {
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:332:22 ]
+     │
+ 332 │     let index = jnum(member(item, "index"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:336:21 ]
+     │
+ 336 │     let name = jstr(member(item, "name"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:337:27 ]
+     │
+ 337 │     let short_name = jstr(member(item, "short_name"))
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:347:21 ]
+     │
+ 347 │     let kind = jstr(member(item, "type"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:348:22 ]
+     │
+ 348 │     let width = jnum(member(item, "width"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:355:25 ]
+     │
+ 355 │     let label = opt_str(member(item, "label"))
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:356:36 ]
+     │
+ 356 │     let raw_label_base64 = opt_str(member(item, "raw_label_base64"))
+     │                                    ───┬──  
+     │                                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:364:23 ]
+     │
+ 364 │     for entry in jarr(member(item, "value_labels")) {
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:365:31 ]
+     │
+ 365 │       let value = parsed_atom(member(entry, "value"), kind, dec)
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:366:23 ]
+     │
+ 366 │       let text = jstr(member(entry, "label"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:367:22 ]
+     │
+ 367 │       let raw = jstr(member(entry, "raw_label_base64"))
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:373:19 ]
+     │
+ 373 │     let missing = member(item, "user_missing")
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:374:29 ]
+     │
+ 374 │     let missing_kind = jstr(member(missing, "kind"))
+     │                             ───┬──  
+     │                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:375:31 ]
+     │
+ 375 │     let missing_values = jarr(member(missing, "values")).map(a => {
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:393:31 ]
+     │
+ 393 │     let physical_start = jnum(member(item, "physical_start"))
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:394:31 ]
+     │
+ 394 │     let physical_slots = jnum(member(item, "physical_slots"))
+     │                               ───┬──  
+     │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:412:27 ]
+     │
+ 412 │       source_offset: jnum(member(item, "source_offset")),
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:415:35 ]
+     │
+ 415 │       print_format: parsed_format(member(item, "print_format")),
+     │                                   ───┬──  
+     │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:416:35 ]
+     │
+ 416 │       write_format: parsed_format(member(item, "write_format")),
+     │                                   ───┬──  
+     │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:420:24 ]
+     │
+ 420 │       measure: opt_int(member(item, "measure")),
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:421:30 ]
+     │
+ 421 │       display_width: opt_int(member(item, "display_width")),
+     │                              ───┬──  
+     │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:422:26 ]
+     │
+ 422 │       alignment: opt_int(member(item, "alignment")),
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:426:20 ]
+     │
+ 426 │   if slots != jnum(member(j, "physical_slots")) {
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:429:26 ]
+     │
+ 429 │   let compression = jnum(member(j, "compression"))
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:433:20 ]
+     │
+ 433 │   let bias = match member(j, "bias").as_number() {
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:433:38 ]
+     │
+ 433 │   let bias = match member(j, "bias").as_number() {
+     │                                      ────┬────  
+     │                                          ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:441:17 ]
+     │
+ 441 │   for w in jarr(member(j, "warnings")) {
+     │                 ───┬──  
+     │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:443:26 ]
+     │
+ 443 │       warning_code: jstr(member(w, "warning_code")),
+     │                          ───┬──  
+     │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:444:19 ]
+     │
+ 444 │       scope: jstr(member(w, "scope")),
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:445:30 ]
+     │
+ 445 │       suggested_action: jstr(member(w, "suggested_action")),
+     │                              ───┬──  
+     │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:450:17 ]
+     │
+ 450 │   for e in jarr(member(j, "uninterpreted_metadata")) {
+     │                 ───┬──  
+     │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:451:23 ]
+     │
+ 451 │     let record = jnum(member(e, "record"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:452:27 ]
+     │
+ 452 │     let subtype = opt_int(member(e, "subtype"))
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:453:23 ]
+     │
+ 453 │     let offset = jnum(member(e, "byte_offset"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:454:20 ]
+     │
+ 454 │     let raw = jstr(member(e, "raw_base64"))
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:486:24 ]
+     │
+ 486 │   let weight = opt_int(member(j, "weight_variable"))
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:499:22 ]
+     │
+ 499 │     file_label: jstr(member(j, "file_label")),
+     │                      ───┬──  
+     │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:500:25 ]
+     │
+ 500 │     creation_date: jstr(member(j, "creation_date")),
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:501:25 ]
+     │
+ 501 │     creation_time: jstr(member(j, "creation_time")),
+     │                         ───┬──  
+     │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:502:19 ]
+     │
+ 502 │     product: jstr(member(j, "product")),
+     │                   ───┬──  
+     │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:503:30 ]
+     │
+ 503 │     weight_variable: opt_int(member(j, "weight_variable")),
+     │                              ───┬──  
+     │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:545:11 ]
+     │
+ 545 │   if jnum(member(j, "row")) != self.row {
+     │           ───┬──  
+     │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:548:20 ]
+     │
+ 548 │   let cells = jarr(member(j, "cells"))
+     │                    ───┬──  
+     │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:556:21 ]
+     │
+ 556 │     let kind = jstr(member(j, "kind"))
+     │                     ───┬──  
+     │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:557:24 ]
+     │
+ 557 │     let missing = jstr(member(j, "missing"))
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:562:27 ]
+     │
+ 562 │     let decimal = opt_str(member(j, "decimal"))
+     │                           ───┬──  
+     │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:563:23 ]
+     │
+ 563 │     let hex = opt_str(member(j, "ieee754_hex"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:564:24 ]
+     │
+ 564 │     let text = opt_str(member(j, "text"))
+     │                        ───┬──  
+     │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:565:23 ]
+     │
+ 565 │     let raw = opt_str(member(j, "logical_bytes_base64"))
+     │                       ───┬──  
+     │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:655:15 ]
+     │
+ 655 │   let field = StringBuilder::new()
+     │               ─────────┬────────  
+     │                        ╰────────── Warning (deprecated): Use `StringBuilder()` instead
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/bundle.mbt:661:14 ]
+     │
+ 661 │     if ch == '\x00' {
+     │              ───┬──  
+     │                 ╰──── Warning (deprecated_syntax): The syntax `\x..` in char literal for type Char is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/codec.mbt:107:26 ]
+     │
+ 107 │   let magic = input[0:4].to_bytes()
+     │                          ────┬───  
+     │                              ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+─────╯
+Warning: [0004]
+   ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/cursor.mbt:2:8 ]
+   │
+ 2 │ struct Cursor {
+   │        ───┬──  
+   │           ╰──── Warning (missing_priv): The type 'Cursor' does not occur in public signature of current package, consider marking it as `priv`.
+───╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/cursor.mbt:20:47 ]
+    │
+ 20 │   let out = self.bytes[self.pos:self.pos + n].to_bytes()
+    │                                               ────┬───  
+    │                                                   ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+────╯
+Warning: [0092]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/data.mbt:371:7 ]
+     │
+ 371 │       try {
+     │       ─┬─  
+     │        ╰─── Warning (fragile_catch_all): 
+Found code that can be simplified:
+
+  try <expr> catch {
+    err => {
+      <cleanup code>
+      raise err
+    }
+  }
+
+If <cleanup code> does not mention `err` or perform `return`/`break`/`continue`, rewrite to:
+
+  errdefer <cleanup code>
+  <expr>
+
+Note: `try ... catch` will no longer capture async cancellation in the future, so using `catch` for cleanup is dangerous for async code.
+If your handler need to manipulate or inspect `err`, but contain cleanup code as well,
+it is still recommended to move the cleanup part to `errdefer` as well, leaving only the error inspecting part in `catch`.
+      
+─────╯
+Warning: [0027]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:49:44 ]
+    │
+ 49 │     let item = item.to_owned().trim(chars="\x00 ").to_owned()
+    │                                            ──┬─  
+    │                                              ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0027]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:55:58 ]
+    │
+ 55 │         out.push((a.to_owned(), b.to_owned().trim(chars="\x00 ").to_owned()))
+    │                                                          ──┬─  
+    │                                                            ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:104:36 ]
+     │
+ 104 │   let by_slot : Map[Int, RawVar] = {}
+     │                                    ─┬  
+     │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:404:56 ]
+     │
+ 404 │               declared = Some(ascii(bytes).trim(chars="\x00 ").to_owned())
+     │                                                        ──┬─  
+     │                                                          ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:489:39 ]
+     │
+ 489 │   let raw_names : Map[String, Bool] = {}
+     │                                       ─┬  
+     │                                        ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:491:41 ]
+     │
+ 491 │     let key = dec(r.short).trim(chars=" \x00").to_owned().to_upper()
+     │                                         ──┬─  
+     │                                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:494:37 ]
+     │
+ 494 │   let names : Map[String, String] = {}
+     │                                     ─┬  
+     │                                      ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:495:35 ]
+     │
+ 495 │   let widths : Map[String, Int] = {}
+     │                                   ─┬  
+     │                                    ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:554:33 ]
+     │
+ 554 │   let used : Map[String, Int] = {}
+     │                                 ─┬  
+     │                                  ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:558:43 ]
+     │
+ 558 │     let short = dec(r.short).trim(chars=" \x00").to_owned()
+     │                                           ──┬─  
+     │                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:585:39 ]
+     │
+ 585 │             dec(s.short).trim(chars=" \x00").to_owned().to_upper(),
+     │                                       ──┬─  
+     │                                         ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:605:9 ]
+     │
+ 605 │     for alias in [short, name] {
+     │         ──┬──  
+     │           ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:606:11 ]
+     │
+ 606 │       let alias = alias.to_upper()
+     │           ──┬──  
+     │             ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:606:19 ]
+     │
+ 606 │       let alias = alias.to_upper()
+     │                   ──┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:607:19 ]
+     │
+ 607 │       if used.get(alias) is Some(previous) && previous != vars.length() {
+     │                   ──┬──  
+     │                     ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0035]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:610:12 ]
+     │
+ 610 │       used[alias] = vars.length()
+     │            ──┬──  
+     │              ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:781:50 ]
+     │
+ 781 │     file_label: dec(file_label).trim_end(chars=" \x00").to_owned(),
+     │                                                  ──┬─  
+     │                                                    ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:784:30 ]
+     │
+ 784 │     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
+     │                              ────┬───  
+     │                                  ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+─────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:784:59 ]
+     │
+ 784 │     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
+     │                                                           ──┬─  
+     │                                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0082]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/dictionary.mbt:807:36 ]
+     │
+ 807 │   let by_name : Map[String, Int] = {}
+     │                                    ─┬  
+     │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+─────╯
+Warning: [0082]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/invariants.mbt:65:36 ]
+    │
+ 65 │     let keys : Map[String, Bool] = {}
+    │                                    ─┬  
+    │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+────╯
+Warning: [0020]
+   ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:4:21 ]
+   │
+ 4 │     "type": a.type_.to_json(),
+   │                     ───┬───  
+   │                        ╰───── Warning (deprecated): Use `Json(value)` instead
+───╯
+Warning: [0020]
+   ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:9:22 ]
+   │
+ 9 │     "width": a.width.to_json(),
+   │                      ───┬───  
+   │                         ╰───── Warning (deprecated): Use `Json(value)` instead
+───╯
+Warning: [0079]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:15:1 ]
+    │
+ 15 │ pub impl ToJson for Variable with fn to_json(self : Variable) -> Json {
+    │ ──────────────┬─────────────  
+    │               ╰─────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Variable` are implicit promoted as regular method for `Variable`. This behavior is deprecated and will be removed in the future. Add a `pub extend Variable with ToJson::{to_json}` declaration or manually define regular methods for type `Variable` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:17:25 ]
+    │
+ 17 │     "index": self.index.to_json(),
+    │                         ───┬───  
+    │                            ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:18:23 ]
+    │
+ 18 │     "name": self.name.to_json(),
+    │                       ───┬───  
+    │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:19:35 ]
+    │
+ 19 │     "short_name": self.short_name.to_json(),
+    │                                   ───┬───  
+    │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:20:24 ]
+    │
+ 20 │     "type": self.type_.to_json(),
+    │                        ───┬───  
+    │                           ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:21:25 ]
+    │
+ 21 │     "width": self.width.to_json(),
+    │                         ───┬───  
+    │                            ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:24:41 ]
+    │
+ 24 │     "source_offset": self.source_offset.to_json(),
+    │                                         ───┬───  
+    │                                            ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:25:43 ]
+    │
+ 25 │     "physical_start": self.physical_start.to_json(),
+    │                                           ───┬───  
+    │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:26:43 ]
+    │
+ 26 │     "physical_slots": self.physical_slots.to_json(),
+    │                                           ───┬───  
+    │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:34:28 ]
+    │
+ 34 │           "label": x.label.to_json(),
+    │                            ───┬───  
+    │                               ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:35:50 ]
+    │
+ 35 │           "raw_label_base64": x.raw_label_base64.to_json(),
+    │                                                  ───┬───  
+    │                                                     ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:38:6 ]
+    │
+ 38 │     .to_json(),
+    │      ───┬───  
+    │         ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:41:35 ]
+    │
+ 41 │         "kind": self.missing_kind.to_json(),
+    │                                   ───┬───  
+    │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:42:54 ]
+    │
+ 42 │         "values": self.missing_values.map(atom_json).to_json(),
+    │                                                      ───┬───  
+    │                                                         ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0079]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:51:1 ]
+    │
+ 51 │ pub impl ToJson for Dictionary with fn to_json(self : Dictionary) -> Json {
+    │ ───────────────┬──────────────  
+    │                ╰──────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Dictionary` are implicit promoted as regular method for `Dictionary`. This behavior is deprecated and will be removed in the future. Add a `pub extend Dictionary with ToJson::{to_json}` declaration or manually define regular methods for type `Dictionary` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:57:50 ]
+    │
+ 57 │     "logical_variables": self.variables.length().to_json(),
+    │                                                  ───┬───  
+    │                                                     ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:58:55 ]
+    │
+ 58 │     "variables": self.variables.map(v => v.to_json()).to_json(),
+    │                                                       ───┬───  
+    │                                                          ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:60:35 ]
+    │
+ 60 │     "file_label": self.file_label.to_json(),
+    │                                   ───┬───  
+    │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:61:41 ]
+    │
+ 61 │     "creation_date": self.creation_date.to_json(),
+    │                                         ───┬───  
+    │                                            ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:62:41 ]
+    │
+ 62 │     "creation_time": self.creation_time.to_json(),
+    │                                         ───┬───  
+    │                                            ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:63:29 ]
+    │
+ 63 │     "product": self.product.to_json(),
+    │                             ───┬───  
+    │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:65:37 ]
+    │
+ 65 │     "compression": self.compression.to_json(),
+    │                                     ───┬───  
+    │                                        ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:66:23 ]
+    │
+ 66 │     "bias": self.bias.to_json(),
+    │                       ───┬───  
+    │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:67:43 ]
+    │
+ 67 │     "physical_slots": self.physical_slots.to_json(),
+    │                                           ───┬───  
+    │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:68:49 ]
+    │
+ 68 │     "nominal_case_size": self.nominal_case_size.to_json(),
+    │                                                 ───┬───  
+    │                                                    ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:69:51 ]
+    │
+ 69 │     "system_missing_hex": self.system_missing_hex.to_json(),
+    │                                                   ───┬───  
+    │                                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:70:35 ]
+    │
+ 70 │     "lowest_hex": self.lowest_hex.to_json(),
+    │                                   ───┬───  
+    │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:71:37 ]
+    │
+ 71 │     "highest_hex": self.highest_hex.to_json(),
+    │                                     ───┬───  
+    │                                        ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:72:31 ]
+    │
+ 72 │     "warnings": self.warnings.to_json(),
+    │                               ───┬───  
+    │                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:73:59 ]
+    │
+ 73 │     "uninterpreted_metadata": self.uninterpreted_metadata.to_json(),
+    │                                                           ───┬───  
+    │                                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:92:36 ]
+    │
+ 92 │   obj["actual_rows"] = actual_rows.to_json()
+    │                                    ───┬───  
+    │                                       ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:98:19 ]
+    │
+ 98 │   ({ "row": index.to_json(), "cells": row.to_json() } : Json).stringify() + "\n"
+    │                   ───┬───  
+    │                      ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0020]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:98:43 ]
+    │
+ 98 │   ({ "row": index.to_json(), "cells": row.to_json() } : Json).stringify() + "\n"
+    │                                           ───┬───  
+    │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+────╯
+Warning: [0027]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:133:25 ]
+     │
+ 133 │       if text.contains("\x00") {
+     │                         ──┬─  
+     │                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:161:11 ]
+     │
+ 161 │   let b = StringBuilder::new()
+     │           ─────────┬────────  
+     │                    ╰────────── Warning (deprecated): Use `StringBuilder()` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:201:47 ]
+     │
+ 201 │       md_text(v.missing_values.map(atom_json).to_json().stringify()) +
+     │                                               ───┬───  
+     │                                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:206:17 ]
+     │
+ 206 │       v.measure.to_json().stringify() +
+     │                 ───┬───  
+     │                    ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:208:23 ]
+     │
+ 208 │       v.display_width.to_json().stringify() +
+     │                       ───┬───  
+     │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:210:19 ]
+     │
+ 210 │       v.alignment.to_json().stringify() +
+     │                   ───┬───  
+     │                      ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:249:1 ]
+     │
+ 249 │ pub impl ToJson for ErrorInfo with fn to_json(self : ErrorInfo) -> Json {
+     │ ──────────────┬──────────────  
+     │               ╰──────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for ErrorInfo` are implicit promoted as regular method for `ErrorInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend ErrorInfo with ToJson::{to_json}` declaration or manually define regular methods for type `ErrorInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:251:23 ]
+     │
+ 251 │     "code": self.code.to_json(),
+     │                       ───┬───  
+     │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:252:29 ]
+     │
+ 252 │     "message": self.message.to_json(),
+     │                             ───┬───  
+     │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:264:1 ]
+     │
+ 264 │ pub impl ToJson for Cell with fn to_json(self : Cell) -> Json {
+     │ ────────────┬───────────  
+     │             ╰───────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Cell` are implicit promoted as regular method for `Cell`. This behavior is deprecated and will be removed in the future. Add a `pub extend Cell with ToJson::{to_json}` declaration or manually define regular methods for type `Cell` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:266:23 ]
+     │
+ 266 │     "kind": self.kind.to_json(),
+     │                       ───┬───  
+     │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:267:29 ]
+     │
+ 267 │     "missing": self.missing.to_json(),
+     │                             ───┬───  
+     │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:276:1 ]
+     │
+ 276 │ pub impl ToJson for EncodingInfo with fn to_json(self : EncodingInfo) -> Json {
+     │ ────────────────┬───────────────  
+     │                 ╰───────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for EncodingInfo` are implicit promoted as regular method for `EncodingInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend EncodingInfo with ToJson::{to_json}` declaration or manually define regular methods for type `EncodingInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:280:33 ]
+     │
+ 280 │     "effective": self.effective.to_json(),
+     │                                 ───┬───  
+     │                                    ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:281:47 ]
+     │
+ 281 │     "selection_source": self.selection_source.to_json(),
+     │                                               ───┬───  
+     │                                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:282:29 ]
+     │
+ 282 │     "profile": self.profile.to_json(),
+     │                             ───┬───  
+     │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:283:59 ]
+     │
+ 283 │     "string_matching_policy": self.string_matching_policy.to_json(),
+     │                                                           ───┬───  
+     │                                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:284:47 ]
+     │
+ 284 │     "decoder_identity": self.decoder_identity.to_json(),
+     │                                               ───┬───  
+     │                                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:289:1 ]
+     │
+ 289 │ pub impl ToJson for Extra with fn to_json(self : Extra) -> Json {
+     │ ────────────┬────────────  
+     │             ╰────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Extra` are implicit promoted as regular method for `Extra`. This behavior is deprecated and will be removed in the future. Add a `pub extend Extra with ToJson::{to_json}` declaration or manually define regular methods for type `Extra` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:291:27 ]
+     │
+ 291 │     "record": self.record.to_json(),
+     │                           ───┬───  
+     │                              ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:293:37 ]
+     │
+ 293 │     "byte_offset": self.byte_offset.to_json(),
+     │                                     ───┬───  
+     │                                        ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0020]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:294:35 ]
+     │
+ 294 │     "raw_base64": self.raw_base64.to_json(),
+     │                                   ───┬───  
+     │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/json.mbt:299:1 ]
+     │
+ 299 │ pub impl ToJson for Atom with fn to_json(self : Atom) -> Json {
+     │ ────────────┬───────────  
+     │             ╰───────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Atom` are implicit promoted as regular method for `Atom`. This behavior is deprecated and will be removed in the future. Add a `pub extend Atom with ToJson::{to_json}` declaration or manually define regular methods for type `Atom` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:12:10 ]
+    │
+ 12 │ } derive(Debug)
+    │          ──┬──  
+    │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ErrorInfo` are implicit promoted as regular method for `ErrorInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend ErrorInfo with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ErrorInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+────╯
+Warning: [0079]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:17:10 ]
+    │
+ 17 │ } derive(Debug)
+    │          ──┬──  
+    │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for SavError` are implicit promoted as regular method for `SavError`. This behavior is deprecated and will be removed in the future. Add a `pub extend SavError with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `SavError` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+────╯
+Warning: [0079]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:82:10 ]
+    │
+ 82 │ } derive(Debug, ToJson)
+    │          ──┬──  
+    │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Limits` are implicit promoted as regular method for `Limits`. This behavior is deprecated and will be removed in the future. Add a `pub extend Limits with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Limits` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+────╯
+Warning: [0079]
+    ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:82:17 ]
+    │
+ 82 │ } derive(Debug, ToJson)
+    │                 ───┬──  
+    │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Limits` are implicit promoted as regular method for `Limits`. This behavior is deprecated and will be removed in the future. Add a `pub extend Limits with ToJson::{to_json}` declaration or manually define regular methods for type `Limits` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:105:10 ]
+     │
+ 105 │ } derive(Debug, Eq)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for DatePolicy` are implicit promoted as regular method for `DatePolicy`. This behavior is deprecated and will be removed in the future. Add a `pub extend DatePolicy with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `DatePolicy` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:105:17 ]
+     │
+ 105 │ } derive(Debug, Eq)
+     │                 ─┬  
+     │                  ╰── Warning (implicit_impl_as_method): The methods not_equal, equal from `impl Eq for DatePolicy` are implicit promoted as regular method for `DatePolicy`. This behavior is deprecated and will be removed in the future. Add a `pub extend DatePolicy with Eq::{not_equal, equal}` declaration or manually define regular methods for type `DatePolicy` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:133:10 ]
+     │
+ 133 │ } derive(Debug, ToJson)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Format` are implicit promoted as regular method for `Format`. This behavior is deprecated and will be removed in the future. Add a `pub extend Format with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Format` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:133:17 ]
+     │
+ 133 │ } derive(Debug, ToJson)
+     │                 ───┬──  
+     │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Format` are implicit promoted as regular method for `Format`. This behavior is deprecated and will be removed in the future. Add a `pub extend Format with ToJson::{to_json}` declaration or manually define regular methods for type `Format` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:149:10 ]
+     │
+ 149 │ } derive(Debug, Eq)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Atom` are implicit promoted as regular method for `Atom`. This behavior is deprecated and will be removed in the future. Add a `pub extend Atom with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Atom` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:149:17 ]
+     │
+ 149 │ } derive(Debug, Eq)
+     │                 ─┬  
+     │                  ╰── Warning (implicit_impl_as_method): The methods not_equal, equal from `impl Eq for Atom` are implicit promoted as regular method for `Atom`. This behavior is deprecated and will be removed in the future. Add a `pub extend Atom with Eq::{not_equal, equal}` declaration or manually define regular methods for type `Atom` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:156:10 ]
+     │
+ 156 │ } derive(Debug, ToJson)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ValueLabel` are implicit promoted as regular method for `ValueLabel`. This behavior is deprecated and will be removed in the future. Add a `pub extend ValueLabel with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ValueLabel` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:156:17 ]
+     │
+ 156 │ } derive(Debug, ToJson)
+     │                 ───┬──  
+     │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for ValueLabel` are implicit promoted as regular method for `ValueLabel`. This behavior is deprecated and will be removed in the future. Add a `pub extend ValueLabel with ToJson::{to_json}` declaration or manually define regular methods for type `ValueLabel` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:179:10 ]
+     │
+ 179 │ } derive(Debug)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Variable` are implicit promoted as regular method for `Variable`. This behavior is deprecated and will be removed in the future. Add a `pub extend Variable with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Variable` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:190:10 ]
+     │
+ 190 │ } derive(Debug)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for EncodingInfo` are implicit promoted as regular method for `EncodingInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend EncodingInfo with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `EncodingInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:197:10 ]
+     │
+ 197 │ } derive(Debug, ToJson)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Warning` are implicit promoted as regular method for `Warning`. This behavior is deprecated and will be removed in the future. Add a `pub extend Warning with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Warning` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:197:17 ]
+     │
+ 197 │ } derive(Debug, ToJson)
+     │                 ───┬──  
+     │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Warning` are implicit promoted as regular method for `Warning`. This behavior is deprecated and will be removed in the future. Add a `pub extend Warning with ToJson::{to_json}` declaration or manually define regular methods for type `Warning` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:205:10 ]
+     │
+ 205 │ } derive(Debug)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Extra` are implicit promoted as regular method for `Extra`. This behavior is deprecated and will be removed in the future. Add a `pub extend Extra with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Extra` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:238:10 ]
+     │
+ 238 │ } derive(Debug)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Cell` are implicit promoted as regular method for `Cell`. This behavior is deprecated and will be removed in the future. Add a `pub extend Cell with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Cell` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:260:10 ]
+     │
+ 260 │ } derive(Debug, Eq)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ScanControl` are implicit promoted as regular method for `ScanControl`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanControl with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ScanControl` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:260:17 ]
+     │
+ 260 │ } derive(Debug, Eq)
+     │                 ─┬  
+     │                  ╰── Warning (implicit_impl_as_method): The methods not_equal, equal from `impl Eq for ScanControl` are implicit promoted as regular method for `ScanControl`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanControl with Eq::{not_equal, equal}` declaration or manually define regular methods for type `ScanControl` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:267:10 ]
+     │
+ 267 │ } derive(Debug, ToJson)
+     │          ──┬──  
+     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ScanSummary` are implicit promoted as regular method for `ScanSummary`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanSummary with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ScanSummary` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯
+Warning: [0079]
+     ╭─[ /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-moon-consumer-y4pite0i/src/model.mbt:267:17 ]
+     │
+ 267 │ } derive(Debug, ToJson)
+     │                 ───┬──  
+     │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for ScanSummary` are implicit promoted as regular method for `ScanSummary`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanSummary with ToJson::{to_json}` declaration or manually define regular methods for type `ScanSummary` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+─────╯

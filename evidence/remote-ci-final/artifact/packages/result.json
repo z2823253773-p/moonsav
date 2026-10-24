@@ -1,0 +1,249 @@
+{
+  "status": "supported_pass",
+  "records": [
+    {
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "pack",
+        "--pack-destination",
+        "dist",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/node/24.15.0/x64/bin/node",
+        "/opt/hostedtoolcache/node/24.15.0/x64/lib/node_modules/npm/bin/npm-cli.js",
+        "install",
+        "--prefix",
+        "/tmp/moonsav-node-consumer-8qe1ckwx",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/npm-cache",
+        "/home/runner/work/moonsav/moonsav/dist/moonsav-0.1.0.tgz"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/node/24.15.0/x64/bin/node",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/bin/moonsav.mjs",
+        "--version"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/node/24.15.0/x64/bin/node",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/bin/moonsav.mjs",
+        "inspect",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/node/24.15.0/x64/bin/node",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/bin/moonsav.mjs",
+        "validate",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/node/24.15.0/x64/bin/node",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/bin/moonsav.mjs",
+        "export",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/node/24.15.0/x64/bin/node",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/bin/moonsav.mjs",
+        "check-bundle",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.13/x64/bin/python",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/node_modules/moonsav/examples/read_bundle.py",
+        "/tmp/moonsav-node-consumer-8qe1ckwx/first bundle 中文"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "moon",
+        "package",
+        "--frozen"
+      ],
+      "cwd": ".",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "native"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": "<consumer>",
+      "exit_code": 0
+    }
+  ],
+  "cli_environment": {
+    "PATH": "<node-only>",
+    "moon_on_PATH": false,
+    "python_on_PATH": false,
+    "network": "npm offline; runtime has no network code"
+  },
+  "version": {
+    "product": "moonsav",
+    "version": "0.1.0",
+    "build": {
+      "version": "0.1.0",
+      "git_sha": "0afbe3443a93f6fd13e7211ba41cc970ca0b00a9",
+      "dirty": true,
+      "source_tree_sha256": "7a8e46aa59fb754213a574d807b316c42648e9ebcd861f9c5f38526db090869f",
+      "moon": "0.1.20261023",
+      "moonc": "v0.10.17+d971670cd",
+      "node": "v24.15.0",
+      "icu": "78.2"
+    },
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2",
+    "encodings": [
+      "utf-8",
+      "windows-1252",
+      "gbk/cp936-stable",
+      "gb18030/stable-intersection"
+    ],
+    "schema_major": 1
+  },
+  "npm_members": [
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY.md",
+    "bin/moonsav.mjs",
+    "docs/CODEC_PROFILES.md",
+    "examples/read_bundle.py",
+    "fixtures/synthetic/source.json",
+    "fixtures/synthetic/survey-row.sav",
+    "lib/build.json",
+    "lib/moonsav.js",
+    "licenses/Python-3.12-LICENSE.txt",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "node/api.mjs",
+    "node/checker.mjs",
+    "node/cli.mjs",
+    "node/codec-data.json",
+    "node/codec.mjs",
+    "node/io.mjs",
+    "package.json",
+    "schemas/manifest.schema.json",
+    "schemas/metadata.schema.json",
+    "schemas/report.schema.json",
+    "schemas/row.schema.json",
+    "toolchain.json"
+  ],
+  "source_members": [
+    "examples/consumer/main.mbt",
+    "examples/consumer/moon.mod",
+    "examples/consumer/moon.work",
+    "examples/consumer/moon.pkg",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "licenses/Python-3.12-LICENSE.txt",
+    "LICENSE",
+    "toolchain.json",
+    "moon.mod",
+    "src/bundle.mbt",
+    "src/limits_test.mbt",
+    "src/bridge/pkg.generated.mbti",
+    "src/bridge/main.mbt",
+    "src/bridge/moon.pkg",
+    "src/cursor.mbt",
+    "src/pkg.generated.mbti",
+    "src/dictionary.mbt",
+    "src/header_test.mbt",
+    "src/semantic_test.mbt",
+    "src/invariants.mbt",
+    "src/model.mbt",
+    "src/codec.mbt",
+    "src/moon.pkg",
+    "src/data.mbt",
+    "src/json.mbt",
+    "README.md",
+    "THIRD_PARTY.md",
+    "docs/CODEC_PROFILES.md"
+  ],
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "4eb2c5a09e18b0886116f5ed6328c73288ed05ecd2ab922cbd1595ad3f34bf5b",
+      "size_bytes": 295134
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "332e007b1730e85bd17cf56deedb95d8a4c7164220eb83171557bafafe064e04",
+      "size_bytes": 57644
+    }
+  },
+  "schema_validation": "metadata manifest every row and all successful report commands; jsonschema 4.23.0",
+  "consumer_rows": 5
+}

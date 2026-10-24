@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-24T07:19:33.879500+00:00",
+  "run_sha_matches_local_build": true,
+  "remote_source_hash_matches_local": true,
+  "remote_summary_counts": {
+    "supported_pass": 17,
+    "supported_fail": 0,
+    "expected_rejection": 1,
+    "unexpected_result": 0,
+    "not_run": 0
+  },
+  "private": true,
+  "artifact_hashes": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9eaeacecd1c599a56a7fa22d392f9bf7dea4f6072b1a3e3250b85e8c6f7d76c5",
+      "size_bytes": 295135
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "3b3649ba4c966fbb19c66c325da54549fad92a1535998dc2702dc300fd84cd7c",
+      "size_bytes": 57644
+    }
+  }
+}

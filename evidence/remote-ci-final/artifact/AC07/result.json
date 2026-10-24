@@ -1,0 +1,10 @@
+{
+  "case": "AC07",
+  "status": "supported_pass",
+  "utc": "2026-10-24T07:15:23.635979+00:00",
+  "detail": {
+    "scope": "missing kinds, ranges/endpoints, signed zero, byte label conflicts and invalid nonfinite vectors",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

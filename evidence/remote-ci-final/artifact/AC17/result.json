@@ -1,0 +1,10 @@
+{
+  "case": "AC17",
+  "status": "supported_pass",
+  "utc": "2026-10-24T07:15:29.809207+00:00",
+  "detail": {
+    "scope": "JSON channels/exits, strict export precommit, version and offline first-use archive",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

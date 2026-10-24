@@ -1,31 +1,68 @@
 {
-  "delivery_scope": "local candidate; external platform and designated acceptance pending",
-  "product_git_sha": "8ae93f2b46ab7a81acbf7a120564c493693324fb",
+  "delivery_scope": "verified source candidate; designated acceptance pending",
+  "product_git_sha": "0afbe3443a93f6fd13e7211ba41cc970ca0b00a9",
   "build": {
     "version": "0.1.0",
-    "git_sha": "8ae93f2b46ab7a81acbf7a120564c493693324fb",
-    "dirty": true,
-    "source_tree_sha256": "e77cf705f5e878e10a49cbb040336af9d990fb65b2e201ffab1502a29d936bf6",
-    "moon": "0.1.20260713",
-    "moonc": "v0.10.4+2cc641edf",
+    "git_sha": "0afbe3443a93f6fd13e7211ba41cc970ca0b00a9",
+    "dirty": false,
+    "source_tree_sha256": "7a8e46aa59fb754213a574d807b316c42648e9ebcd861f9c5f38526db090869f",
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
     "node": "v24.15.0",
     "icu": "78.2"
   },
   "artifacts": {
     "moonsav-0.1.0.tgz": {
-      "sha256": "26e79e5f6974551bcbea967090992ad771c91e363f3b30b7e53f0e2f24bfad3e",
-      "size_bytes": 284911
+      "sha256": "9eaeacecd1c599a56a7fa22d392f9bf7dea4f6072b1a3e3250b85e8c6f7d76c5",
+      "size_bytes": 295135
     },
     "moonsav-source-0.1.0.zip": {
-      "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
-      "size_bytes": 56708
+      "sha256": "3b3649ba4c966fbb19c66c325da54549fad92a1535998dc2702dc300fd84cd7c",
+      "size_bytes": 57644
     }
   },
-  "acceptance": "evidence/final-20261023-01/summary.json",
-  "independent_review": "docs/progress/INDEPENDENT_REVIEW.md",
+  "local_acceptance": "evidence/local-ci-final-0af/summary.json",
+  "remote_ci": {
+    "repository": "z2823253773-p/moonsav",
+    "private": true,
+    "run_id": 40073319985,
+    "url": "https://github.com/z2823253773-p/moonsav/actions/runs/40073319985",
+    "head_sha": "0afbe3443a93f6fd13e7211ba41cc970ca0b00a9",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "platform (windows-2025)",
+        "conclusion": "success",
+        "databaseId": 120811258044,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/40073319985/job/120811258044"
+      },
+      {
+        "name": "platform (ubuntu-24.04)",
+        "conclusion": "success",
+        "databaseId": 120811258227,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/40073319985/job/120811258227"
+      },
+      {
+        "name": "independent-oracles",
+        "conclusion": "success",
+        "databaseId": 120811258259,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/40073319985/job/120811258259"
+      },
+      {
+        "name": "platform (macos-15)",
+        "conclusion": "success",
+        "databaseId": 120811258290,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/40073319985/job/120811258290"
+      }
+    ],
+    "independent_oracle_summary": "evidence/remote-ci-final/artifact/summary.json"
+  },
+  "independent_review": "evidence/remote-ci-final/independent-artifacts/report.json",
   "external_gaps": [
-    "Linux x64 Node full corpus CI not_run",
-    "Windows x64 Node CLI/corpus CI not_run",
-    "designated acceptance chat review pending"
-  ]
+    "designated acceptance chat independent approval pending",
+    "no external-human user trial",
+    "Windows native core/POSIX SIGKILL guarantees are not claimed"
+  ],
+  "historical_artifacts": "dist/history/8ae93f2; original hashes preserved",
+  "publication": "private GitHub push authorized and performed; no npm/Mooncakes publication or competition registration"
 }
