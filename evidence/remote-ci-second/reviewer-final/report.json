@@ -1,0 +1,139 @@
+{
+  "scope": "local macOS independent reviewer; no remote pass inferred",
+  "base": "b20b15f",
+  "overlay_files": [
+    "tools/ci_smoke.mjs",
+    "README.md",
+    "moon.mod",
+    "examples/consumer/moon.mod",
+    "examples/consumer/moon.pkg",
+    "examples/consumer/moon.work"
+  ],
+  "records": [
+    {
+      "name": "old-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/source",
+      "exit_code": 0,
+      "elapsed_seconds": 0.2749520828947425
+    },
+    {
+      "name": "shell-free-smoke",
+      "command": [
+        "node",
+        "tools/ci_smoke.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/source",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5456225001253188
+    },
+    {
+      "name": "old-consumer-js",
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/source/examples/consumer",
+      "exit_code": 0,
+      "elapsed_seconds": 0.2236545830965042
+    },
+    {
+      "name": "new-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/source",
+      "exit_code": 0,
+      "elapsed_seconds": 0.2060423749499023
+    },
+    {
+      "name": "new-package",
+      "command": [
+        "moon",
+        "package",
+        "--frozen"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/source",
+      "exit_code": 0,
+      "elapsed_seconds": 0.08954766695387661
+    },
+    {
+      "name": "new-archive-consumer-js",
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/extracted/examples/consumer",
+      "exit_code": 0,
+      "elapsed_seconds": 0.15669708396308124
+    },
+    {
+      "name": "new-archive-consumer-native",
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "native"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/extracted/examples/consumer",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9939609579741955
+    },
+    {
+      "name": "new-archive-consumer-wasm-gc",
+      "command": [
+        "moon",
+        "run",
+        ".",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run02/extracted/examples/consumer",
+      "exit_code": 0,
+      "elapsed_seconds": 0.18950487510301173
+    }
+  ],
+  "source_members": [
+    "moon.mod",
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "licenses/Python-3.12-LICENSE.txt",
+    "docs/CODEC_PROFILES.md",
+    "README.md",
+    "examples/consumer/moon.pkg",
+    "examples/consumer/moon.mod",
+    "examples/consumer/main.mbt",
+    "examples/consumer/moon.work",
+    "toolchain.json",
+    "src/moon.pkg",
+    "src/header_test.mbt",
+    "src/bundle.mbt",
+    "src/model.mbt",
+    "src/semantic_test.mbt",
+    "src/json.mbt",
+    "src/bridge/moon.pkg",
+    "src/bridge/main.mbt",
+    "src/bridge/pkg.generated.mbti",
+    "src/pkg.generated.mbti",
+    "src/dictionary.mbt",
+    "src/codec.mbt",
+    "src/cursor.mbt",
+    "src/invariants.mbt",
+    "src/limits_test.mbt",
+    "src/data.mbt"
+  ],
+  "status": "passed"
+}

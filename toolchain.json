@@ -6,7 +6,7 @@
   "python_dev": "3.12.13",
   "platform_local": "Darwin arm64",
   "cli_schema_major": 1,
-  "remote_ci": "in_progress",
+  "remote_ci": "per-run results in docs/progress/REMOTE_CI.md",
   "supported_builds": [
     {
       "moon": "0.1.20260713",
