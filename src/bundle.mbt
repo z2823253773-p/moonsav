@@ -91,7 +91,7 @@ fn b64(s : String) -> Bytes raise SavError {
 
 ///|
 fn jdecimal(s : String, bits : UInt64) -> Unit raise SavError {
-  let n = @strconv.parse_double(s) catch {
+  let n = @string.parse_double(s) catch {
     _ => {
       reject("IntegrityMismatch", "Invalid decimal representation")
       0.0

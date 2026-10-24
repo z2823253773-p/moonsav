@@ -1,0 +1,2 @@
+Independent Windows checkout rejected error: invalid path fixtures/synthetic/nul.sav
+Portable-path preflight confirms only reserved path: ['fixtures/synthetic/nul.sav']

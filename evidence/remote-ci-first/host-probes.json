@@ -1,0 +1,31 @@
+[
+  {
+    "url": "https://cli.moonbitlang.com/version.json",
+    "status": 200,
+    "length": "428",
+    "content": "{\"items\":[{\"name\":\"moon\",\"version\":\"0.1.20261023 (3778465 2026-10-23)\",\"path\":\"~release-everything/tmp-binaries/linux/x86_64/release/bin/moon\"},{\"name\":\"moonc\",\"version\":\"v0.10.17+d971670cd (2026-10-23)\",\"path\":\"~release-everything/tmp-binaries/linux/x86_64/release/bin/moonc\"},{\"name\":\"moonrun\",\"version\":\"moonrun 0.1.20261023 (3778465 2026-10-23)\",\"path\":\"~release-everything/tmp-binaries/linux/x86_64/release/bin/moonrun\"}]}\n"
+  },
+  {
+    "url": "https://cli.moonbitlang.com/binaries/latest/moonbit-linux-x86_64.tar.gz",
+    "status": 200,
+    "length": "99835794",
+    "content": null
+  },
+  {
+    "url": "https://cli.moonbitlang.com/cores/core-latest.tar.gz",
+    "status": 200,
+    "length": "1956127",
+    "content": null
+  },
+  {
+    "url": "https://cli.moonbitlang.cn/version.json",
+    "status": 200,
+    "length": "428",
+    "content": "{\"items\":[{\"name\":\"moon\",\"version\":\"0.1.20261023 (3778465 2026-10-23)\",\"path\":\"~release-everything/tmp-binaries/linux/x86_64/release/bin/moon\"},{\"name\":\"moonc\",\"version\":\"v0.10.17+d971670cd (2026-10-23)\",\"path\":\"~release-everything/tmp-binaries/linux/x86_64/release/bin/moonc\"},{\"name\":\"moonrun\",\"version\":\"moonrun 0.1.20261023 (3778465 2026-10-23)\",\"path\":\"~release-everything/tmp-binaries/linux/x86_64/release/bin/moonrun\"}]}\n"
+  },
+  {
+    "url": "https://cli.moonbitlang.cn/binaries/0.10.4%2B2cc641edf/moonbit-linux-x86_64.tar.gz",
+    "status": 403,
+    "error_body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message></Error>"
+  }
+]

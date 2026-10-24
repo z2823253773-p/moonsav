@@ -1,0 +1,109 @@
+platform (windows-2025)	Set up job	﻿2026-10-24T06:50:19.9559540Z Current runner version: '2.338.0'
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9616264Z ##[group]Runner Image Provisioner
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9617237Z Hosted Compute Agent
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9617885Z Version: 20261021.618
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9618588Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9619455Z Build Date: 2026-10-21T00:45:21Z
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9620217Z Worker ID: {aeb37dbf-ccab-4ee6-b30a-15e60947275e}
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9621053Z Region: westus
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9621636Z Cloud: Azure
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9622241Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9623905Z ##[group]Operating System
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9624666Z Microsoft Windows Server 2025
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9625679Z 10.0.26100
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9626269Z Datacenter
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9626839Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9627426Z ##[group]Runner Image
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9628112Z Image: windows-2025-vs2026
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9628766Z Version: 20261021.278.1
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9630195Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261021.278/images/windows/Windows2025-VS2026-Readme.md
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9633002Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261021.278
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9634212Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9635542Z ##[group]GITHUB_TOKEN Permissions
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9637513Z Contents: read
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9638237Z Metadata: read
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9638849Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9641079Z Secret source: Actions
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9642082Z Cache mode: write
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9642857Z Prepare workflow directory
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.0027613Z Prepare all required actions
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.0084185Z Getting action download info
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.3799193Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.4969690Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.6375135Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+platform (windows-2025)	Set up job	2026-10-24T06:50:21.0095423Z Getting action download info
+platform (windows-2025)	Set up job	2026-10-24T06:50:21.1602362Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+platform (windows-2025)	Set up job	2026-10-24T06:50:21.5431609Z Complete job name: platform (windows-2025)
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:21.8258749Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8259587Z with:
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8259796Z   repository: z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262028Z   token: ***
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262221Z   ssh-strict: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262411Z   ssh-user: git
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262609Z   persist-credentials: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262827Z   clean: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263025Z   sparse-checkout-cone-mode: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263257Z   fetch-depth: 1
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263466Z   fetch-tags: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263667Z   show-progress: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263857Z   lfs: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264054Z   submodules: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264254Z   set-safe-directory: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264474Z   allow-unsafe-pr-checkout: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264941Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8073795Z Syncing repository: z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8074960Z ##[group]Getting Git version info
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8075300Z Working directory is 'D:\a\moonsav\moonsav'
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8075735Z [command]"C:\Program Files\Git\bin\git.exe" version
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8076014Z git version 2.56.0.windows.2
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8076767Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8079600Z Temporarily overriding HOME='D:\a\_temp\5f1df007-313a-4265-a813-0b7e9b172162' before making global git config changes
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8080183Z Adding repository directory to the temporary git global config as a safe directory
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8082691Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\moonsav\moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8083411Z Deleting the contents of 'D:\a\moonsav\moonsav'
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8083878Z ##[group]Initializing the repository
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8084220Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\moonsav\moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8084599Z Initialized empty Git repository in D:/a/moonsav/moonsav/.git/
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8085345Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8086145Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8086501Z ##[group]Disabling automatic garbage collection
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8086841Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8087705Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8088007Z ##[group]Setting up auth
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8088388Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8089575Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.3904171Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.4236380Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.9486885Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.9806410Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.4868082Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.5206287Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.5207135Z ##[group]Fetching the repository
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.5227400Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6593620Z From https://github.com/z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6606369Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6642868Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6644329Z ##[group]Determining the checkout info
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6671957Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6688416Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.7274318Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.7619775Z ##[group]Checking out the ref
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.7628509Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B implementation refs/remotes/origin/implementation
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.8124861Z ##[error]error: invalid path 'fixtures/synthetic/nul.sav'
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.8177770Z ##[error]The process 'C:\Program Files\Git\bin\git.exe' failed with exit code 128
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:26.8639991Z Post job cleanup.
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0288995Z [command]"C:\Program Files\Git\bin\git.exe" version
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0597466Z git version 2.56.0.windows.2
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0663584Z Temporarily overriding HOME='D:\a\_temp\a2c9abd5-c04a-4b04-9a9a-c1e7b12d57b3' before making global git config changes
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0664632Z Adding repository directory to the temporary git global config as a safe directory
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0672581Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\moonsav\moonsav
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0997243Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.1336575Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.7694401Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.7983809Z http.https://github.com/.extraheader
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.8060009Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.8391801Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:28.4020754Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:28.4357368Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+platform (windows-2025)	Complete job	﻿2026-10-24T06:50:28.9591546Z Cleaning up orphan processes
+platform (windows-2025)	Complete job	2026-10-24T06:50:28.9687090Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

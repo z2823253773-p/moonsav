@@ -1,0 +1,700 @@
+platform (ubuntu-24.04)	Set up job	﻿2026-10-24T06:50:19.4731148Z Current runner version: '2.338.0'
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4809930Z ##[group]Runner Image Provisioner
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4811336Z Hosted Compute Agent
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4812261Z Version: 20261012.601
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4813505Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4815237Z Build Date: 2026-10-12T17:48:21Z
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4816278Z Worker ID: {4fd2fbb8-46af-46a4-8a5b-5703b0b08b00}
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4817381Z Region: northcentralus
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4818481Z Cloud: Azure
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4819360Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4821668Z ##[group]Operating System
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4822680Z Ubuntu
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4844170Z 24.04.5
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4845084Z LTS
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4845937Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4846930Z ##[group]Runner Image
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4847903Z Image: ubuntu-24.04
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4848772Z Version: 20261012.334.1
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4850629Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4853818Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4855405Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4857292Z ##[group]GITHUB_TOKEN Permissions
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4860353Z Contents: read
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4861295Z Metadata: read
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4862280Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4885917Z Secret source: Actions
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4887488Z Cache mode: write
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4888859Z Prepare workflow directory
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.5889631Z Prepare all required actions
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.6022535Z Getting action download info
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.8844557Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.9829876Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.0820195Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.3519137Z Getting action download info
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.4529803Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.6973385Z Complete job name: platform (ubuntu-24.04)
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:20.7888910Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7889947Z with:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7890395Z   repository: z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7895052Z   token: ***
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7895508Z   ssh-strict: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7895955Z   ssh-user: git
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7896435Z   persist-credentials: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7896923Z   clean: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7897367Z   sparse-checkout-cone-mode: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7897885Z   fetch-depth: 1
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7898318Z   fetch-tags: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7898752Z   show-progress: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7899223Z   lfs: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7899634Z   submodules: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7900074Z   set-safe-directory: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7900568Z   allow-unsafe-pr-checkout: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7901388Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9245345Z Syncing repository: z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9248258Z ##[group]Getting Git version info
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9249495Z Working directory is '/home/runner/work/moonsav/moonsav'
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9251016Z [command]/usr/bin/git version
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9273605Z git version 2.55.0
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9292896Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9313271Z Temporarily overriding HOME='/home/runner/work/_temp/4048f4ed-5bb2-46ec-875c-24ea17d6714a' before making global git config changes
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9316388Z Adding repository directory to the temporary git global config as a safe directory
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9318924Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9410153Z Deleting the contents of '/home/runner/work/moonsav/moonsav'
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9434368Z ##[group]Initializing the repository
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9436193Z [command]/usr/bin/git init /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9585070Z hint: Using 'master' as the name for the initial branch. This default branch name
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9587545Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9590395Z hint: to use in all of your new repositories, which will suppress this warning,
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9591529Z hint: call:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9592681Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9595480Z hint: 	git config --global init.defaultBranch <name>
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9597426Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9600806Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9610827Z hint: 'development'. The just-created branch can be renamed via this command:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9615920Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9617556Z hint: 	git branch -m <name>
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9618578Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9620495Z hint: Disable this message with "git config set advice.defaultBranchName false"
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9634148Z Initialized empty Git repository in /home/runner/work/moonsav/moonsav/.git/
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9695219Z [command]/usr/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9698453Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9704223Z ##[group]Disabling automatic garbage collection
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9713986Z [command]/usr/bin/git config --local gc.auto 0
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9717819Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9722615Z ##[group]Setting up auth
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9724874Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9767369Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0236694Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0454729Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0714021Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0742483Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1008272Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1057617Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1059333Z ##[group]Fetching the repository
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1070503Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4904707Z From https://github.com/z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4923788Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4950996Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4953695Z ##[group]Determining the checkout info
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4956157Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4957886Z [command]/usr/bin/git sparse-checkout disable
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5047823Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5115161Z ##[group]Checking out the ref
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5135073Z [command]/usr/bin/git checkout --progress --force -B implementation refs/remotes/origin/implementation
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5735850Z Switched to a new branch 'implementation'
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5744927Z branch 'implementation' set up to track 'origin/implementation'.
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5754720Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5808912Z [command]/usr/bin/git log -1 --format=%H
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5843786Z 45f5ff2f19db8b4be469d6cdecb5df4077837998
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	﻿2026-10-24T06:50:21.6266019Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6267689Z with:
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6268519Z   node-version: 24.15.0
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6269458Z   always-auth: false
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6270369Z   check-latest: false
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6280569Z   token: ***
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6281410Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.7830822Z Attempting to download 24.15.0...
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.7924075Z (node:2073) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.7930803Z (Use `node --trace-deprecation ...` to show where the warning was created)
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:22.5486910Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.1784682Z Extracting ...
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.1900756Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/d7362c29-e755-45f4-af36-1a50c7fee056 -f /home/runner/work/_temp/01872310-8f76-4486-8340-15fb61769d3b
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:24.6924580Z Adding to the cache ...
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.0888277Z ##[group]Environment details
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3621837Z node: v24.15.0
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3622465Z npm: 11.12.1
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3633845Z yarn: 1.22.22
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3645592Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	﻿2026-10-24T06:50:28.3864873Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3865332Z with:
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3865564Z   version: 0.10.4+2cc641edf
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3865826Z   core-version: 0.10.4+2cc641edf
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3866082Z   setup-core: true
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3866323Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3922854Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3980922Z ##[group]Run hustcer/setup-nu@v3.27
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981257Z with:
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981477Z   version: 0.115.1
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981693Z   features: default
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981918Z   check-latest: false
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3982151Z   enable-plugins: false
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3984875Z   github-token: ***
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3985116Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.5325064Z versionSpec: 0.115.1
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.5363848Z resolved version: 0.115.1
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.5365888Z Try to get assets for Nu: arch = x64, platform = linux, feature = default
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.4665553Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8fd3c5d3-3fd2-48bc-9f86-ee454b1fdf57 -f /home/runner/work/_temp/74304751-428f-46ba-8c7d-2ae2f06e460a
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4785002Z Successfully setup Nu 0.115.1, with default features.
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4793627Z Current directory: /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4927706Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=4100]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4930635Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4983085Z ##[group]Run # /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4984176Z ^[[36;1m# /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4984916Z ^[[36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4985341Z ^[[36;1mlet version = '0.10.4+2cc641edf'^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4985667Z ^[[36;1mlet setup_core = 'true' | into bool^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4985977Z ^[[36;1mlet core_version = '0.10.4+2cc641edf'^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4986522Z ^[[36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4990794Z shell: /opt/hostedtoolcache/nushell/0.115.1/x64/nu {0}
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4991357Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7595640Z 
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7597944Z Setup moonbit toolchain of version: ^[[32m0.10.4+2cc641edf^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7606843Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7622292Z Current moon home: ^[[32m/home/runner/.moon^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7642510Z Fetch binaries from ^[[32mhttps://cli.moonbitlang.com/binaries/0.10.4%2B2cc641edf/moonbit-linux-x86_64.tar.gz^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4197519Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4198459Z                                  Dload  Upload   Total   Spent    Left  Speed
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4198736Z 
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9324209Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9325290Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9326159Z curl: (22) The requested URL returned error: 403
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9379529Z ##[error]Process completed with exit code 22.
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9389243Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=failure;conclusion=failure;duration_ms=1445]
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:33.9573712Z Post job cleanup.
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0544173Z [command]/usr/bin/git version
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0619861Z git version 2.55.0
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0704692Z Temporarily overriding HOME='/home/runner/work/_temp/0b49622e-d6eb-46c7-bc1e-2a918cf4aebb' before making global git config changes
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0724125Z Adding repository directory to the temporary git global config as a safe directory
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0741954Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0783896Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0844371Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1201473Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1250596Z http.https://github.com/.extraheader
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1303899Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1348927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1974308Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2045414Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (ubuntu-24.04)	Complete job	﻿2026-10-24T06:50:34.2740114Z Cleaning up orphan processes
+platform (ubuntu-24.04)	Complete job	2026-10-24T06:50:34.3118451Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (windows-2025)	Set up job	﻿2026-10-24T06:50:19.9559540Z Current runner version: '2.338.0'
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9616264Z ##[group]Runner Image Provisioner
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9617237Z Hosted Compute Agent
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9617885Z Version: 20261021.618
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9618588Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9619455Z Build Date: 2026-10-21T00:45:21Z
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9620217Z Worker ID: {aeb37dbf-ccab-4ee6-b30a-15e60947275e}
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9621053Z Region: westus
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9621636Z Cloud: Azure
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9622241Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9623905Z ##[group]Operating System
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9624666Z Microsoft Windows Server 2025
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9625679Z 10.0.26100
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9626269Z Datacenter
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9626839Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9627426Z ##[group]Runner Image
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9628112Z Image: windows-2025-vs2026
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9628766Z Version: 20261021.278.1
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9630195Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261021.278/images/windows/Windows2025-VS2026-Readme.md
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9633002Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261021.278
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9634212Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9635542Z ##[group]GITHUB_TOKEN Permissions
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9637513Z Contents: read
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9638237Z Metadata: read
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9638849Z ##[endgroup]
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9641079Z Secret source: Actions
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9642082Z Cache mode: write
+platform (windows-2025)	Set up job	2026-10-24T06:50:19.9642857Z Prepare workflow directory
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.0027613Z Prepare all required actions
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.0084185Z Getting action download info
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.3799193Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.4969690Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+platform (windows-2025)	Set up job	2026-10-24T06:50:20.6375135Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+platform (windows-2025)	Set up job	2026-10-24T06:50:21.0095423Z Getting action download info
+platform (windows-2025)	Set up job	2026-10-24T06:50:21.1602362Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+platform (windows-2025)	Set up job	2026-10-24T06:50:21.5431609Z Complete job name: platform (windows-2025)
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:21.8258749Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8259587Z with:
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8259796Z   repository: z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262028Z   token: ***
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262221Z   ssh-strict: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262411Z   ssh-user: git
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262609Z   persist-credentials: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8262827Z   clean: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263025Z   sparse-checkout-cone-mode: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263257Z   fetch-depth: 1
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263466Z   fetch-tags: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263667Z   show-progress: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8263857Z   lfs: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264054Z   submodules: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264254Z   set-safe-directory: true
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264474Z   allow-unsafe-pr-checkout: false
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.8264941Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8073795Z Syncing repository: z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8074960Z ##[group]Getting Git version info
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8075300Z Working directory is 'D:\a\moonsav\moonsav'
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8075735Z [command]"C:\Program Files\Git\bin\git.exe" version
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8076014Z git version 2.56.0.windows.2
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8076767Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8079600Z Temporarily overriding HOME='D:\a\_temp\5f1df007-313a-4265-a813-0b7e9b172162' before making global git config changes
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8080183Z Adding repository directory to the temporary git global config as a safe directory
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8082691Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\moonsav\moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8083411Z Deleting the contents of 'D:\a\moonsav\moonsav'
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8083878Z ##[group]Initializing the repository
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8084220Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\moonsav\moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8084599Z Initialized empty Git repository in D:/a/moonsav/moonsav/.git/
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8085345Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8086145Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8086501Z ##[group]Disabling automatic garbage collection
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8086841Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8087705Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8088007Z ##[group]Setting up auth
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8088388Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8089575Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.3904171Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.4236380Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.9486885Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:24.9806410Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.4868082Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.5206287Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.5207135Z ##[group]Fetching the repository
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:25.5227400Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6593620Z From https://github.com/z2823253773-p/moonsav
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6606369Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6642868Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6644329Z ##[group]Determining the checkout info
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6671957Z ##[endgroup]
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.6688416Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.7274318Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.7619775Z ##[group]Checking out the ref
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.7628509Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B implementation refs/remotes/origin/implementation
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.8124861Z ##[error]error: invalid path 'fixtures/synthetic/nul.sav'
+platform (windows-2025)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:26.8177770Z ##[error]The process 'C:\Program Files\Git\bin\git.exe' failed with exit code 128
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:26.8639991Z Post job cleanup.
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0288995Z [command]"C:\Program Files\Git\bin\git.exe" version
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0597466Z git version 2.56.0.windows.2
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0663584Z Temporarily overriding HOME='D:\a\_temp\a2c9abd5-c04a-4b04-9a9a-c1e7b12d57b3' before making global git config changes
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0664632Z Adding repository directory to the temporary git global config as a safe directory
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0672581Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\moonsav\moonsav
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.0997243Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.1336575Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.7694401Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.7983809Z http.https://github.com/.extraheader
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.8060009Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:27.8391801Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:28.4020754Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (windows-2025)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:28.4357368Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+platform (windows-2025)	Complete job	﻿2026-10-24T06:50:28.9591546Z Cleaning up orphan processes
+platform (windows-2025)	Complete job	2026-10-24T06:50:28.9687090Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (macos-15)	Set up job	﻿2026-10-24T06:50:20.1083970Z Current runner version: '2.338.0'
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1104100Z ##[group]Runner Image Provisioner
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1104740Z Hosted Compute Agent
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1105150Z Version: 20260828.587
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1105610Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1106120Z Build Date: 2026-08-28T16:44:25Z
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1106600Z Worker ID: {f4ca01bf-1841-4478-b38d-b84906a2379a}
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1107100Z Azure Region: westus
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1107500Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1108500Z ##[group]Operating System
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1108940Z macOS
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1109320Z 15.7.9
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1109670Z 24G830
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1110010Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1110390Z ##[group]Runner Image
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1110780Z Image: macos-15-arm64
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1111160Z Version: 20260907.0337.1
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1111940Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1113110Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1113810Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1114670Z ##[group]GITHUB_TOKEN Permissions
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1116120Z Contents: read
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1116540Z Metadata: read
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1116920Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1118430Z Secret source: Actions
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1119040Z Cache mode: write
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1119510Z Prepare workflow directory
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1396240Z Prepare all required actions
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1435690Z Getting action download info
+platform (macos-15)	Set up job	2026-10-24T06:50:20.5446090Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+platform (macos-15)	Set up job	2026-10-24T06:50:20.9026450Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+platform (macos-15)	Set up job	2026-10-24T06:50:21.0477830Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+platform (macos-15)	Set up job	2026-10-24T06:50:21.4315650Z Getting action download info
+platform (macos-15)	Set up job	2026-10-24T06:50:21.5690720Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+platform (macos-15)	Set up job	2026-10-24T06:50:21.9281780Z Complete job name: platform (macos-15)
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:21.9898900Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9899620Z with:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9899980Z   repository: z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9902870Z   token: ***
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9903220Z   ssh-strict: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9903570Z   ssh-user: git
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9903920Z   persist-credentials: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9904310Z   clean: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9904670Z   sparse-checkout-cone-mode: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9905180Z   fetch-depth: 1
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9905530Z   fetch-tags: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9905890Z   show-progress: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9906270Z   lfs: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9906600Z   submodules: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9906960Z   set-safe-directory: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9907360Z   allow-unsafe-pr-checkout: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9907890Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4012880Z Syncing repository: z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4014490Z ##[group]Getting Git version info
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4015110Z Working directory is '/Users/runner/work/moonsav/moonsav'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4016680Z [command]/opt/homebrew/bin/git version
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4574790Z git version 2.55.0
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4588460Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4597380Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/90136121-9054-470c-9f75-13ab1029e24b/.gitconfig'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4607570Z Temporarily overriding HOME='/Users/runner/work/_temp/90136121-9054-470c-9f75-13ab1029e24b' before making global git config changes
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4608740Z Adding repository directory to the temporary git global config as a safe directory
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4610430Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4727900Z Deleting the contents of '/Users/runner/work/moonsav/moonsav'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4739480Z ##[group]Initializing the repository
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4740680Z [command]/opt/homebrew/bin/git init /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5279040Z hint: Using 'master' as the name for the initial branch. This default branch name
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5280300Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5281800Z hint: to use in all of your new repositories, which will suppress this warning,
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5283880Z hint: call:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5284490Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5285060Z hint: 	git config --global init.defaultBranch <name>
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5285740Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5286490Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5287330Z hint: 'development'. The just-created branch can be renamed via this command:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5288020Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5288480Z hint: 	git branch -m <name>
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5289020Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5289630Z hint: Disable this message with "git config set advice.defaultBranchName false"
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5291290Z Initialized empty Git repository in /Users/runner/work/moonsav/moonsav/.git/
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5293450Z [command]/opt/homebrew/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5386890Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5387810Z ##[group]Disabling automatic garbage collection
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5388910Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5472800Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5499050Z ##[group]Setting up auth
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5500430Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5547760Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.6811630Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.6882450Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.7665020Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.7724150Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8487340Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8550130Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8551350Z ##[group]Fetching the repository
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8555090Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3752870Z From https://github.com/z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3754100Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3756590Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3757530Z ##[group]Determining the checkout info
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3759440Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3768370Z [command]/opt/homebrew/bin/git sparse-checkout disable
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3898700Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3962340Z ##[group]Checking out the ref
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3964560Z [command]/opt/homebrew/bin/git checkout --progress --force -B implementation refs/remotes/origin/implementation
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5756490Z Switched to a new branch 'implementation'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5769510Z branch 'implementation' set up to track 'origin/implementation'.
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5776900Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5884870Z [command]/opt/homebrew/bin/git log -1 --format=%H
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5951510Z 45f5ff2f19db8b4be469d6cdecb5df4077837998
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	﻿2026-10-24T06:50:23.6213910Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6214850Z with:
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6215260Z   node-version: 24.15.0
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6215750Z   always-auth: false
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6216170Z   check-latest: false
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6224060Z   token: ***
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6224480Z ##[endgroup]
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.7950440Z Attempting to download 24.15.0...
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.8066930Z (node:8166) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.8083080Z (Use `node --trace-deprecation ...` to show where the warning was created)
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:24.6491710Z Acquiring 24.15.0 - arm64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-darwin-arm64.tar.gz
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:25.2046670Z Extracting ...
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:25.2191290Z [command]/usr/bin/tar xz --strip 1 -C /Users/runner/work/_temp/58c7463b-d46a-4159-9d7b-67f1c81b4ecf -f /Users/runner/work/_temp/466cfe3d-399b-4ca6-989e-1e83fa3f23fc
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:26.8573480Z Adding to the cache ...
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.5462440Z ##[group]Environment details
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9298580Z node: v24.15.0
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9299460Z npm: 11.12.1
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9301770Z yarn: 1.22.22
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9330980Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	﻿2026-10-24T06:50:29.9589930Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9590500Z with:
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9590730Z   version: 0.10.4+2cc641edf
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9591000Z   core-version: 0.10.4+2cc641edf
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9591420Z   setup-core: true
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9591620Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9665480Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730170Z ##[group]Run hustcer/setup-nu@v3.27
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730470Z with:
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730620Z   version: 0.115.1
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730790Z   features: default
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730960Z   check-latest: false
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9731160Z   enable-plugins: false
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9733440Z   github-token: ***
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9733630Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.2060980Z versionSpec: 0.115.1
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.2072640Z resolved version: 0.115.1
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.2090740Z Try to get assets for Nu: arch = arm64, platform = darwin, feature = default
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.5622480Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/44357fa1-d440-432f-be27-2395817d13de -f /Users/runner/work/_temp/ef8364bf-0491-4bc1-95d7-fe01ac6d4675
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2799470Z Successfully setup Nu 0.115.1, with default features.
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2814010Z Current directory: /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2881440Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=3321]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2884950Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2935960Z ##[group]Run # /Users/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2998140Z ^[[36;1m# /Users/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2999050Z ^[[36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2999520Z ^[[36;1mlet version = '0.10.4+2cc641edf'^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2999870Z ^[[36;1mlet setup_core = 'true' | into bool^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3000150Z ^[[36;1mlet core_version = '0.10.4+2cc641edf'^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3011510Z ^[[36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3020300Z shell: /Users/runner/hostedtoolcache/nushell/0.115.1/arm64/nu {0}
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3020620Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4332020Z 
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4334140Z Setup moonbit toolchain of version: ^[[32m0.10.4+2cc641edf^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4524030Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4582230Z Current moon home: ^[[32m/Users/runner/.moon^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4650750Z Fetch binaries from ^[[32mhttps://cli.moonbitlang.com/binaries/0.10.4%2B2cc641edf/moonbit-darwin-aarch64.tar.gz^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4744110Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4745980Z                                  Dload  Upload   Total   Spent    Left  Speed
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4747700Z 
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.5145670Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0427390Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0427950Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0428650Z curl: (56) The requested URL returned error: 403
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0457510Z ##[error]Process completed with exit code 56.
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0465970Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=failure;conclusion=failure;duration_ms=758]
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:34.0601820Z Post job cleanup.
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1915020Z [command]/opt/homebrew/bin/git version
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2089580Z git version 2.55.0
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2144750Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/804acdb9-7e96-4dfb-b1e6-5eb15b9d3ec9/.gitconfig'
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2152980Z Temporarily overriding HOME='/Users/runner/work/_temp/804acdb9-7e96-4dfb-b1e6-5eb15b9d3ec9' before making global git config changes
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2155760Z Adding repository directory to the temporary git global config as a safe directory
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2160890Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2344470Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2435220Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3538260Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3621530Z http.https://github.com/.extraheader
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3639010Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3710710Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.4514890Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.4576000Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (macos-15)	Complete job	﻿2026-10-24T06:50:34.5754780Z Cleaning up orphan processes
+platform (macos-15)	Complete job	2026-10-24T06:50:35.0833890Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+independent-oracles	Set up job	﻿2026-10-24T06:50:19.7259035Z Current runner version: '2.338.0'
+independent-oracles	Set up job	2026-10-24T06:50:19.7290769Z ##[group]Runner Image Provisioner
+independent-oracles	Set up job	2026-10-24T06:50:19.7291944Z Hosted Compute Agent
+independent-oracles	Set up job	2026-10-24T06:50:19.7292654Z Version: 20261012.601
+independent-oracles	Set up job	2026-10-24T06:50:19.7293530Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+independent-oracles	Set up job	2026-10-24T06:50:19.7294419Z Build Date: 2026-10-12T17:48:21Z
+independent-oracles	Set up job	2026-10-24T06:50:19.7296136Z Worker ID: {68324d18-2a02-4428-b3c0-25553819b7e7}
+independent-oracles	Set up job	2026-10-24T06:50:19.7296989Z Region: westus3
+independent-oracles	Set up job	2026-10-24T06:50:19.7297617Z Cloud: Azure
+independent-oracles	Set up job	2026-10-24T06:50:19.7298400Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T06:50:19.7299961Z ##[group]Operating System
+independent-oracles	Set up job	2026-10-24T06:50:19.7300864Z Ubuntu
+independent-oracles	Set up job	2026-10-24T06:50:19.7301480Z 24.04.5
+independent-oracles	Set up job	2026-10-24T06:50:19.7302054Z LTS
+independent-oracles	Set up job	2026-10-24T06:50:19.7302884Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T06:50:19.7303583Z ##[group]Runner Image
+independent-oracles	Set up job	2026-10-24T06:50:19.7304406Z Image: ubuntu-24.04
+independent-oracles	Set up job	2026-10-24T06:50:19.7305082Z Version: 20261012.334.1
+independent-oracles	Set up job	2026-10-24T06:50:19.7306597Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+independent-oracles	Set up job	2026-10-24T06:50:19.7308891Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+independent-oracles	Set up job	2026-10-24T06:50:19.7310070Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T06:50:19.7311375Z ##[group]GITHUB_TOKEN Permissions
+independent-oracles	Set up job	2026-10-24T06:50:19.7313845Z Contents: read
+independent-oracles	Set up job	2026-10-24T06:50:19.7314651Z Metadata: read
+independent-oracles	Set up job	2026-10-24T06:50:19.7315339Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T06:50:19.7318759Z Secret source: Actions
+independent-oracles	Set up job	2026-10-24T06:50:19.7319862Z Cache mode: write
+independent-oracles	Set up job	2026-10-24T06:50:19.7321047Z Prepare workflow directory
+independent-oracles	Set up job	2026-10-24T06:50:19.7706841Z Prepare all required actions
+independent-oracles	Set up job	2026-10-24T06:50:19.7762488Z Getting action download info
+independent-oracles	Set up job	2026-10-24T06:50:20.0888961Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+independent-oracles	Set up job	2026-10-24T06:50:20.2754171Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+independent-oracles	Set up job	2026-10-24T06:50:20.4597423Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+independent-oracles	Set up job	2026-10-24T06:50:20.7654581Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+independent-oracles	Set up job	2026-10-24T06:50:20.9536224Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+independent-oracles	Set up job	2026-10-24T06:50:21.3183733Z Getting action download info
+independent-oracles	Set up job	2026-10-24T06:50:21.4317885Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+independent-oracles	Set up job	2026-10-24T06:50:21.9390367Z Complete job name: independent-oracles
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:22.0041053Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0041720Z with:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0042029Z   repository: z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0044447Z   token: ***
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0044733Z   ssh-strict: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0045034Z   ssh-user: git
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0045325Z   persist-credentials: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0045619Z   clean: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0046073Z   sparse-checkout-cone-mode: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0046409Z   fetch-depth: 1
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0046692Z   fetch-tags: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0046983Z   show-progress: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0047260Z   lfs: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0047521Z   submodules: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0047801Z   set-safe-directory: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0048107Z   allow-unsafe-pr-checkout: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.0048565Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1025291Z Syncing repository: z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1027645Z ##[group]Getting Git version info
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1030176Z Working directory is '/home/runner/work/moonsav/moonsav'
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1031177Z [command]/usr/bin/git version
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1692169Z git version 2.55.0
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1716636Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1725885Z Temporarily overriding HOME='/home/runner/work/_temp/ef8cd57c-c8e2-441e-a0a3-f8be56e270c7' before making global git config changes
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1727696Z Adding repository directory to the temporary git global config as a safe directory
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1729140Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1731654Z Deleting the contents of '/home/runner/work/moonsav/moonsav'
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1733025Z ##[group]Initializing the repository
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.1733895Z [command]/usr/bin/git init /home/runner/work/moonsav/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2119565Z hint: Using 'master' as the name for the initial branch. This default branch name
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2120285Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2120873Z hint: to use in all of your new repositories, which will suppress this warning,
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2121291Z hint: call:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2121885Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2122255Z hint: 	git config --global init.defaultBranch <name>
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2122639Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2122988Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2123484Z hint: 'development'. The just-created branch can be renamed via this command:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2124156Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2125027Z hint: 	git branch -m <name>
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2125600Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2126674Z hint: Disable this message with "git config set advice.defaultBranchName false"
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2159498Z Initialized empty Git repository in /home/runner/work/moonsav/moonsav/.git/
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2170583Z [command]/usr/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2218378Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2219426Z ##[group]Disabling automatic garbage collection
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2221441Z [command]/usr/bin/git config --local gc.auto 0
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2253565Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2254733Z ##[group]Setting up auth
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2259154Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2289987Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2578737Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2612302Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2813963Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.2848194Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.3050153Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.3089939Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.3091232Z ##[group]Fetching the repository
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.3098712Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.4847338Z From https://github.com/z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.4848537Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.4851558Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.4852174Z ##[group]Determining the checkout info
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.4852827Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.4866371Z [command]/usr/bin/git sparse-checkout disable
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5032050Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5058232Z ##[group]Checking out the ref
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5063056Z [command]/usr/bin/git checkout --progress --force -B implementation refs/remotes/origin/implementation
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5418701Z Switched to a new branch 'implementation'
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5432380Z branch 'implementation' set up to track 'origin/implementation'.
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5433852Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5736436Z [command]/usr/bin/git log -1 --format=%H
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5764328Z 45f5ff2f19db8b4be469d6cdecb5df4077837998
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	﻿2026-10-24T06:50:23.6007037Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6007393Z with:
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6007564Z   node-version: 24.15.0
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6007756Z   always-auth: false
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6007938Z   check-latest: false
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6010152Z   token: ***
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6010330Z ##[endgroup]
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.7148404Z Attempting to download 24.15.0...
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.7285411Z (node:1989) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.7286822Z (Use `node --trace-deprecation ...` to show where the warning was created)
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:24.7546594Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:25.3781741Z Extracting ...
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:25.3898673Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/27da87b2-d9be-4df7-8b59-f79bb775a215 -f /home/runner/work/_temp/03ddd4be-48cd-4b8b-9407-4cbfc5f6b1c2
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:26.5054398Z Adding to the cache ...
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:34.4667422Z ##[group]Environment details
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:34.7234931Z node: v24.15.0
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:34.7235625Z npm: 11.12.1
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:34.7256225Z yarn: 1.22.22
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:34.7266832Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	﻿2026-10-24T06:50:34.7586550Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7587067Z with:
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7587333Z   version: 0.10.4+2cc641edf
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7587645Z   core-version: 0.10.4+2cc641edf
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7587947Z   setup-core: true
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7588203Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7637803Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7944663Z ##[group]Run hustcer/setup-nu@v3.27
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7944899Z with:
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7945060Z   version: 0.115.1
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7945229Z   features: default
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7945401Z   check-latest: false
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7945586Z   enable-plugins: false
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7947969Z   github-token: ***
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.7948152Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.9062029Z versionSpec: 0.115.1
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.9076304Z resolved version: 0.115.1
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.9082371Z Try to get assets for Nu: arch = x64, platform = linux, feature = default
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:37.4977478Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/226ae380-d69f-4320-b4b0-fc26d950bb2a -f /home/runner/work/_temp/3ae86bdf-bd65-4aea-869c-725a27e67ad8
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.3056976Z Successfully setup Nu 0.115.1, with default features.
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.3066668Z Current directory: /home/runner/work/moonsav/moonsav
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.3165088Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=11552]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.3167936Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5517995Z ##[group]Run # /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5518847Z ^[[36;1m# /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5519410Z ^[[36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5519749Z ^[[36;1mlet version = '0.10.4+2cc641edf'^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5519985Z ^[[36;1mlet setup_core = 'true' | into bool^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5520451Z ^[[36;1mlet core_version = '0.10.4+2cc641edf'^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5520870Z ^[[36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5523789Z shell: /opt/hostedtoolcache/nushell/0.115.1/x64/nu {0}
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.5524041Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8294625Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8296288Z Setup moonbit toolchain of version: ^[[32m0.10.4+2cc641edf^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8310315Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8322599Z Current moon home: ^[[32m/home/runner/.moon^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8338125Z Fetch binaries from ^[[32mhttps://cli.moonbitlang.com/binaries/0.10.4%2B2cc641edf/moonbit-linux-x86_64.tar.gz^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8409486Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8410143Z                                  Dload  Upload   Total   Spent    Left  Speed
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:46.8410449Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:47.3159860Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:47.4401793Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:47.4402535Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:47.4403160Z curl: (22) The requested URL returned error: 403
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:47.4466414Z ##[error]Process completed with exit code 22.
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:47.4472955Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=failure;conclusion=failure;duration_ms=1130]
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	﻿2026-10-24T06:50:47.6787860Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6788379Z with:
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6788643Z   name: compatibility-evidence
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6789305Z   path: evidence/ci-run/summary.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/run.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/**/result.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/**/results.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6790016Z   if-no-files-found: error
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6790306Z   compression-level: 6
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6790568Z   overwrite: false
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6790820Z   include-hidden-files: false
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.6791105Z ##[endgroup]
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.8107707Z (node:2073) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.8109199Z (Use `node --trace-deprecation ...` to show where the warning was created)
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T06:50:47.8156200Z ##[error]No files were found with the provided path: evidence/ci-run/summary.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/run.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/**/result.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/**/results.json. No artifacts will be uploaded.
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:47.9145957Z Post job cleanup.
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0239953Z [command]/usr/bin/git version
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0279321Z git version 2.55.0
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0286338Z Temporarily overriding HOME='/home/runner/work/_temp/ad6c13da-bbd0-431e-aa2f-66312fdd5746' before making global git config changes
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0287615Z Adding repository directory to the temporary git global config as a safe directory
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0288485Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0308522Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.0737931Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.1005527Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.1007160Z http.https://github.com/.extraheader
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.1010045Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.1753669Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.1953088Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:48.1985409Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+independent-oracles	Complete job	﻿2026-10-24T06:50:48.2315524Z Cleaning up orphan processes
+independent-oracles	Complete job	2026-10-24T06:50:48.2593928Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "toolchain.tar.gz",
+    "url": "https://cli.moonbitlang.com/binaries/0.10.17%2Bd971670cd/moonbit-darwin-aarch64.tar.gz",
+    "sha256": "39e02f7730486cea54d12e8e781d83a665f245f6a621d01e17a3a13f104eb437",
+    "size_bytes": 90308536
+  },
+  {
+    "file": "core.tar.gz",
+    "url": "https://cli.moonbitlang.com/cores/core-0.10.17%2Bd971670cd.tar.gz",
+    "sha256": "2d837ecbef5933c09726d63682a7695123d622e6aee13525fbc98c4b49433714",
+    "size_bytes": 1956127
+  }
+]

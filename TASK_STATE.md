@@ -1,8 +1,18 @@
+# Current CI continuation — 2026-10-24
+
+User explicitly authorized private GitHub repository creation, code push and Actions. Repository z2823253773-p/moonsav was created and private=true verified. implementation was pushed at45f5ff2. First run40071770062 failed: Linux/macOS official pinned0.10.4 toolchain downloads403; Windows checkout rejected reserved filename nul.sav. Raw failures are preserved in evidence/remote-ci-first. No platform pass is inferred.
+
+Corrections: rename the unchanged NUL fixture to string-nul.sav; allow exact old/new toolchain pairs and report actual build versions; use common string.parse_double API; pin CI toolchain/core0.10.17+d971670cd after isolated compatibility testing.49 Node tests and7 core tests on each JS/native/wasm-gc passed on BOTH exact toolchains locally. Runner provenance now records actual system/arch/CI run rather than hardcoded macOS/not_run; its end-to-end regression failed before correction and now passes. Original toolchain installation is untouched.
+
+Current code changes await fresh remote rerun and final full acceptance/rebuilt archives. docs/delivery-manifest.json and dist root still refer to the PREVIOUS accepted local candidate8ae93f2; do not treat them as proof of these changes. Publication/Mooncakes/npm/registration remain unauthorized. Designated acceptance chat still owns docs/acceptance and has not approved this candidate.
+
+---
+
 # MoonSav implementation state
 
 Updated2026-10-23 America/Phoenix. PRD r0.2 implementation authorization remains active. Implementation chat is the sole product writer; designated acceptance chat01a168c9-225e-74c2-9868-7ffce7a79cd7 owns docs/acceptance.
 
-- Local M1–M5 delivery candidate is implemented. Branch `implementation`; tested product SHA `8ae93f2b46ab7a81acbf7a120564c493693324fb`; subsequent commit contains only reports/evidence. Exact end-of-delivery HEAD/status is in ignored dist/delivery-state.json; always verify `git rev-parse HEAD` and `git status --short` for current state. No remote configured.
+- Local M1–M5 delivery candidate is implemented. Branch `implementation`; tested product SHA `8ae93f2b46ab7a81acbf7a120564c493693324fb`; subsequent commit contains only reports/evidence. Exact end-of-delivery HEAD/status is in ignored dist/delivery-state.json; always verify `git rev-parse HEAD` and `git status --short` for current state. Private origin is https://github.com/z2823253773-p/moonsav (explicit user authorization2026-10-24).
 - Final unified command `.dev/venv/bin/python tools/verify.py --all --require-public --require-pspp --output evidence/final-20261023-01` exited0.17 supported_pass + AC09 expected_rejection (29 vectors); zero supported_fail/unexpected_result/not_run local cases. Node48/48 no skips; byte-core7/7 each JS/native/wasm-gc. Summary and run.json are authoritative final local proof.
 - Two licensed real public files fully compared with ReadStat/PSPP:634x88 and87x111,65449 cells; no unexplained differences. Space normalization and the Mac ReadStat supplementary-plane limitation are explicit. Public raw/cache/bundles remain ignored; no individual public rows in committed evidence or distributables. Private samples were not used/uploaded.
 - Actual final npm/source archives were inspected, installed offline/extracted and consumed independently. Agent clean-directory artifact review passed; exact report/logs at evidence/independent-artifact-final/run-02. Earlier harness failure/restoration retained in run-01. This is not external-user or designated acceptance.

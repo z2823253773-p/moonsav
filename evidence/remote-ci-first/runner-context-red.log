@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_entry_records_actual_platform_and_ci_run_instead_of_mac_only_text (verify_context_test.VerifyContextTest.test_entry_records_actual_platform_and_ci_run_instead_of_mac_only_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/henryz/Desktop/比赛/moonsav/tests/verify_context_test.py", line 26, in test_entry_records_actual_platform_and_ci_run_instead_of_mac_only_text
+    self.assertTrue(context.get("github_actions"), "CI execution was reported as unrun")
+AssertionError: None is not true : CI execution was reported as unrun
+
+----------------------------------------------------------------------
+Ran 1 test in 1.560s
+
+FAILED (failures=1)

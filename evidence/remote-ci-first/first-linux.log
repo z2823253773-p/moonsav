@@ -1,0 +1,189 @@
+platform (ubuntu-24.04)	Set up job	﻿2026-10-24T06:50:19.4731148Z Current runner version: '2.338.0'
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4809930Z ##[group]Runner Image Provisioner
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4811336Z Hosted Compute Agent
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4812261Z Version: 20261012.601
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4813505Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4815237Z Build Date: 2026-10-12T17:48:21Z
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4816278Z Worker ID: {4fd2fbb8-46af-46a4-8a5b-5703b0b08b00}
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4817381Z Region: northcentralus
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4818481Z Cloud: Azure
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4819360Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4821668Z ##[group]Operating System
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4822680Z Ubuntu
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4844170Z 24.04.5
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4845084Z LTS
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4845937Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4846930Z ##[group]Runner Image
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4847903Z Image: ubuntu-24.04
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4848772Z Version: 20261012.334.1
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4850629Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4853818Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4855405Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4857292Z ##[group]GITHUB_TOKEN Permissions
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4860353Z Contents: read
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4861295Z Metadata: read
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4862280Z ##[endgroup]
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4885917Z Secret source: Actions
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4887488Z Cache mode: write
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.4888859Z Prepare workflow directory
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.5889631Z Prepare all required actions
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.6022535Z Getting action download info
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.8844557Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:19.9829876Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.0820195Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.3519137Z Getting action download info
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.4529803Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+platform (ubuntu-24.04)	Set up job	2026-10-24T06:50:20.6973385Z Complete job name: platform (ubuntu-24.04)
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:20.7888910Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7889947Z with:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7890395Z   repository: z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7895052Z   token: ***
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7895508Z   ssh-strict: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7895955Z   ssh-user: git
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7896435Z   persist-credentials: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7896923Z   clean: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7897367Z   sparse-checkout-cone-mode: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7897885Z   fetch-depth: 1
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7898318Z   fetch-tags: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7898752Z   show-progress: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7899223Z   lfs: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7899634Z   submodules: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7900074Z   set-safe-directory: true
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7900568Z   allow-unsafe-pr-checkout: false
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.7901388Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9245345Z Syncing repository: z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9248258Z ##[group]Getting Git version info
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9249495Z Working directory is '/home/runner/work/moonsav/moonsav'
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9251016Z [command]/usr/bin/git version
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9273605Z git version 2.55.0
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9292896Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9313271Z Temporarily overriding HOME='/home/runner/work/_temp/4048f4ed-5bb2-46ec-875c-24ea17d6714a' before making global git config changes
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9316388Z Adding repository directory to the temporary git global config as a safe directory
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9318924Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9410153Z Deleting the contents of '/home/runner/work/moonsav/moonsav'
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9434368Z ##[group]Initializing the repository
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9436193Z [command]/usr/bin/git init /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9585070Z hint: Using 'master' as the name for the initial branch. This default branch name
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9587545Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9590395Z hint: to use in all of your new repositories, which will suppress this warning,
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9591529Z hint: call:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9592681Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9595480Z hint: 	git config --global init.defaultBranch <name>
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9597426Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9600806Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9610827Z hint: 'development'. The just-created branch can be renamed via this command:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9615920Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9617556Z hint: 	git branch -m <name>
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9618578Z hint:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9620495Z hint: Disable this message with "git config set advice.defaultBranchName false"
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9634148Z Initialized empty Git repository in /home/runner/work/moonsav/moonsav/.git/
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9695219Z [command]/usr/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9698453Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9704223Z ##[group]Disabling automatic garbage collection
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9713986Z [command]/usr/bin/git config --local gc.auto 0
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9717819Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9722615Z ##[group]Setting up auth
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9724874Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:20.9767369Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0236694Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0454729Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0714021Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.0742483Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1008272Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1057617Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1059333Z ##[group]Fetching the repository
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.1070503Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4904707Z From https://github.com/z2823253773-p/moonsav
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4923788Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4950996Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4953695Z ##[group]Determining the checkout info
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4956157Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.4957886Z [command]/usr/bin/git sparse-checkout disable
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5047823Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5115161Z ##[group]Checking out the ref
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5135073Z [command]/usr/bin/git checkout --progress --force -B implementation refs/remotes/origin/implementation
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5735850Z Switched to a new branch 'implementation'
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5744927Z branch 'implementation' set up to track 'origin/implementation'.
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5754720Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5808912Z [command]/usr/bin/git log -1 --format=%H
+platform (ubuntu-24.04)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.5843786Z 45f5ff2f19db8b4be469d6cdecb5df4077837998
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	﻿2026-10-24T06:50:21.6266019Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6267689Z with:
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6268519Z   node-version: 24.15.0
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6269458Z   always-auth: false
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6270369Z   check-latest: false
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6280569Z   token: ***
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.6281410Z ##[endgroup]
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.7830822Z Attempting to download 24.15.0...
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.7924075Z (node:2073) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:21.7930803Z (Use `node --trace-deprecation ...` to show where the warning was created)
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:22.5486910Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.1784682Z Extracting ...
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.1900756Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/d7362c29-e755-45f4-af36-1a50c7fee056 -f /home/runner/work/_temp/01872310-8f76-4486-8340-15fb61769d3b
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:24.6924580Z Adding to the cache ...
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.0888277Z ##[group]Environment details
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3621837Z node: v24.15.0
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3622465Z npm: 11.12.1
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3633845Z yarn: 1.22.22
+platform (ubuntu-24.04)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:28.3645592Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	﻿2026-10-24T06:50:28.3864873Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3865332Z with:
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3865564Z   version: 0.10.4+2cc641edf
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3865826Z   core-version: 0.10.4+2cc641edf
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3866082Z   setup-core: true
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3866323Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3922854Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3980922Z ##[group]Run hustcer/setup-nu@v3.27
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981257Z with:
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981477Z   version: 0.115.1
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981693Z   features: default
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3981918Z   check-latest: false
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3982151Z   enable-plugins: false
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3984875Z   github-token: ***
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.3985116Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.5325064Z versionSpec: 0.115.1
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.5363848Z resolved version: 0.115.1
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:28.5365888Z Try to get assets for Nu: arch = x64, platform = linux, feature = default
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.4665553Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8fd3c5d3-3fd2-48bc-9f86-ee454b1fdf57 -f /home/runner/work/_temp/74304751-428f-46ba-8c7d-2ae2f06e460a
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4785002Z Successfully setup Nu 0.115.1, with default features.
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4793627Z Current directory: /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4927706Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=4100]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4930635Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4983085Z ##[group]Run # /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4984176Z ^[[36;1m# /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4984916Z ^[[36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4985341Z ^[[36;1mlet version = '0.10.4+2cc641edf'^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4985667Z ^[[36;1mlet setup_core = 'true' | into bool^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4985977Z ^[[36;1mlet core_version = '0.10.4+2cc641edf'^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4986522Z ^[[36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4990794Z shell: /opt/hostedtoolcache/nushell/0.115.1/x64/nu {0}
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.4991357Z ##[endgroup]
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7595640Z 
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7597944Z Setup moonbit toolchain of version: ^[[32m0.10.4+2cc641edf^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7606843Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7622292Z Current moon home: ^[[32m/home/runner/.moon^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.7642510Z Fetch binaries from ^[[32mhttps://cli.moonbitlang.com/binaries/0.10.4%2B2cc641edf/moonbit-linux-x86_64.tar.gz^[[0m
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4197519Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4198459Z                                  Dload  Upload   Total   Spent    Left  Speed
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4198736Z 
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9324209Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9325290Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9326159Z curl: (22) The requested URL returned error: 403
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9379529Z ##[error]Process completed with exit code 22.
+platform (ubuntu-24.04)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.9389243Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=failure;conclusion=failure;duration_ms=1445]
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:33.9573712Z Post job cleanup.
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0544173Z [command]/usr/bin/git version
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0619861Z git version 2.55.0
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0704692Z Temporarily overriding HOME='/home/runner/work/_temp/0b49622e-d6eb-46c7-bc1e-2a918cf4aebb' before making global git config changes
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0724125Z Adding repository directory to the temporary git global config as a safe directory
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0741954Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0783896Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.0844371Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1201473Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1250596Z http.https://github.com/.extraheader
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1303899Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1348927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1974308Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (ubuntu-24.04)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2045414Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (ubuntu-24.04)	Complete job	﻿2026-10-24T06:50:34.2740114Z Cleaning up orphan processes
+platform (ubuntu-24.04)	Complete job	2026-10-24T06:50:34.3118451Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

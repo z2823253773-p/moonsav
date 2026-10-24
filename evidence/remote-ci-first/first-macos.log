@@ -1,0 +1,191 @@
+platform (macos-15)	Set up job	﻿2026-10-24T06:50:20.1083970Z Current runner version: '2.338.0'
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1104100Z ##[group]Runner Image Provisioner
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1104740Z Hosted Compute Agent
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1105150Z Version: 20260828.587
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1105610Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1106120Z Build Date: 2026-08-28T16:44:25Z
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1106600Z Worker ID: {f4ca01bf-1841-4478-b38d-b84906a2379a}
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1107100Z Azure Region: westus
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1107500Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1108500Z ##[group]Operating System
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1108940Z macOS
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1109320Z 15.7.9
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1109670Z 24G830
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1110010Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1110390Z ##[group]Runner Image
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1110780Z Image: macos-15-arm64
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1111160Z Version: 20260907.0337.1
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1111940Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1113110Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1113810Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1114670Z ##[group]GITHUB_TOKEN Permissions
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1116120Z Contents: read
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1116540Z Metadata: read
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1116920Z ##[endgroup]
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1118430Z Secret source: Actions
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1119040Z Cache mode: write
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1119510Z Prepare workflow directory
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1396240Z Prepare all required actions
+platform (macos-15)	Set up job	2026-10-24T06:50:20.1435690Z Getting action download info
+platform (macos-15)	Set up job	2026-10-24T06:50:20.5446090Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+platform (macos-15)	Set up job	2026-10-24T06:50:20.9026450Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+platform (macos-15)	Set up job	2026-10-24T06:50:21.0477830Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+platform (macos-15)	Set up job	2026-10-24T06:50:21.4315650Z Getting action download info
+platform (macos-15)	Set up job	2026-10-24T06:50:21.5690720Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+platform (macos-15)	Set up job	2026-10-24T06:50:21.9281780Z Complete job name: platform (macos-15)
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:21.9898900Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9899620Z with:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9899980Z   repository: z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9902870Z   token: ***
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9903220Z   ssh-strict: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9903570Z   ssh-user: git
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9903920Z   persist-credentials: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9904310Z   clean: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9904670Z   sparse-checkout-cone-mode: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9905180Z   fetch-depth: 1
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9905530Z   fetch-tags: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9905890Z   show-progress: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9906270Z   lfs: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9906600Z   submodules: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9906960Z   set-safe-directory: true
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9907360Z   allow-unsafe-pr-checkout: false
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:21.9907890Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4012880Z Syncing repository: z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4014490Z ##[group]Getting Git version info
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4015110Z Working directory is '/Users/runner/work/moonsav/moonsav'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4016680Z [command]/opt/homebrew/bin/git version
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4574790Z git version 2.55.0
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4588460Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4597380Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/90136121-9054-470c-9f75-13ab1029e24b/.gitconfig'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4607570Z Temporarily overriding HOME='/Users/runner/work/_temp/90136121-9054-470c-9f75-13ab1029e24b' before making global git config changes
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4608740Z Adding repository directory to the temporary git global config as a safe directory
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4610430Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4727900Z Deleting the contents of '/Users/runner/work/moonsav/moonsav'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4739480Z ##[group]Initializing the repository
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.4740680Z [command]/opt/homebrew/bin/git init /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5279040Z hint: Using 'master' as the name for the initial branch. This default branch name
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5280300Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5281800Z hint: to use in all of your new repositories, which will suppress this warning,
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5283880Z hint: call:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5284490Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5285060Z hint: 	git config --global init.defaultBranch <name>
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5285740Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5286490Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5287330Z hint: 'development'. The just-created branch can be renamed via this command:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5288020Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5288480Z hint: 	git branch -m <name>
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5289020Z hint:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5289630Z hint: Disable this message with "git config set advice.defaultBranchName false"
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5291290Z Initialized empty Git repository in /Users/runner/work/moonsav/moonsav/.git/
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5293450Z [command]/opt/homebrew/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5386890Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5387810Z ##[group]Disabling automatic garbage collection
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5388910Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5472800Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5499050Z ##[group]Setting up auth
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5500430Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.5547760Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.6811630Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.6882450Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.7665020Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.7724150Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8487340Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8550130Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8551350Z ##[group]Fetching the repository
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:22.8555090Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +45f5ff2f19db8b4be469d6cdecb5df4077837998:refs/remotes/origin/implementation
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3752870Z From https://github.com/z2823253773-p/moonsav
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3754100Z  * [new ref]         45f5ff2f19db8b4be469d6cdecb5df4077837998 -> origin/implementation
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3756590Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3757530Z ##[group]Determining the checkout info
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3759440Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3768370Z [command]/opt/homebrew/bin/git sparse-checkout disable
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3898700Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3962340Z ##[group]Checking out the ref
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.3964560Z [command]/opt/homebrew/bin/git checkout --progress --force -B implementation refs/remotes/origin/implementation
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5756490Z Switched to a new branch 'implementation'
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5769510Z branch 'implementation' set up to track 'origin/implementation'.
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5776900Z ##[endgroup]
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5884870Z [command]/opt/homebrew/bin/git log -1 --format=%H
+platform (macos-15)	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:23.5951510Z 45f5ff2f19db8b4be469d6cdecb5df4077837998
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	﻿2026-10-24T06:50:23.6213910Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6214850Z with:
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6215260Z   node-version: 24.15.0
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6215750Z   always-auth: false
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6216170Z   check-latest: false
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6224060Z   token: ***
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.6224480Z ##[endgroup]
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.7950440Z Attempting to download 24.15.0...
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.8066930Z (node:8166) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:23.8083080Z (Use `node --trace-deprecation ...` to show where the warning was created)
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:24.6491710Z Acquiring 24.15.0 - arm64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-darwin-arm64.tar.gz
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:25.2046670Z Extracting ...
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:25.2191290Z [command]/usr/bin/tar xz --strip 1 -C /Users/runner/work/_temp/58c7463b-d46a-4159-9d7b-67f1c81b4ecf -f /Users/runner/work/_temp/466cfe3d-399b-4ca6-989e-1e83fa3f23fc
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:26.8573480Z Adding to the cache ...
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.5462440Z ##[group]Environment details
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9298580Z node: v24.15.0
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9299460Z npm: 11.12.1
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9301770Z yarn: 1.22.22
+platform (macos-15)	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T06:50:29.9330980Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	﻿2026-10-24T06:50:29.9589930Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9590500Z with:
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9590730Z   version: 0.10.4+2cc641edf
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9591000Z   core-version: 0.10.4+2cc641edf
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9591420Z   setup-core: true
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9591620Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9665480Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730170Z ##[group]Run hustcer/setup-nu@v3.27
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730470Z with:
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730620Z   version: 0.115.1
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730790Z   features: default
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9730960Z   check-latest: false
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9731160Z   enable-plugins: false
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9733440Z   github-token: ***
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:29.9733630Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.2060980Z versionSpec: 0.115.1
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.2072640Z resolved version: 0.115.1
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:30.2090740Z Try to get assets for Nu: arch = arm64, platform = darwin, feature = default
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:32.5622480Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/44357fa1-d440-432f-be27-2395817d13de -f /Users/runner/work/_temp/ef8364bf-0491-4bc1-95d7-fe01ac6d4675
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2799470Z Successfully setup Nu 0.115.1, with default features.
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2814010Z Current directory: /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2881440Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=3321]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2884950Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2935960Z ##[group]Run # /Users/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2998140Z ^[[36;1m# /Users/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2999050Z ^[[36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2999520Z ^[[36;1mlet version = '0.10.4+2cc641edf'^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.2999870Z ^[[36;1mlet setup_core = 'true' | into bool^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3000150Z ^[[36;1mlet core_version = '0.10.4+2cc641edf'^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3011510Z ^[[36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3020300Z shell: /Users/runner/hostedtoolcache/nushell/0.115.1/arm64/nu {0}
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.3020620Z ##[endgroup]
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4332020Z 
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4334140Z Setup moonbit toolchain of version: ^[[32m0.10.4+2cc641edf^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4524030Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4582230Z Current moon home: ^[[32m/Users/runner/.moon^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4650750Z Fetch binaries from ^[[32mhttps://cli.moonbitlang.com/binaries/0.10.4%2B2cc641edf/moonbit-darwin-aarch64.tar.gz^[[0m
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4744110Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4745980Z                                  Dload  Upload   Total   Spent    Left  Speed
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.4747700Z 
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:33.5145670Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0427390Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0427950Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0428650Z curl: (56) The requested URL returned error: 403
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0457510Z ##[error]Process completed with exit code 56.
+platform (macos-15)	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T06:50:34.0465970Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=failure;conclusion=failure;duration_ms=758]
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T06:50:34.0601820Z Post job cleanup.
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.1915020Z [command]/opt/homebrew/bin/git version
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2089580Z git version 2.55.0
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2144750Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/804acdb9-7e96-4dfb-b1e6-5eb15b9d3ec9/.gitconfig'
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2152980Z Temporarily overriding HOME='/Users/runner/work/_temp/804acdb9-7e96-4dfb-b1e6-5eb15b9d3ec9' before making global git config changes
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2155760Z Adding repository directory to the temporary git global config as a safe directory
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2160890Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/moonsav/moonsav
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2344470Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.2435220Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3538260Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3621530Z http.https://github.com/.extraheader
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3639010Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.3710710Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.4514890Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+platform (macos-15)	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T06:50:34.4576000Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+platform (macos-15)	Complete job	﻿2026-10-24T06:50:34.5754780Z Cleaning up orphan processes
+platform (macos-15)	Complete job	2026-10-24T06:50:35.0833890Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

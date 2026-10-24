@@ -1,0 +1,33 @@
+{
+  "has_consumer": true,
+  "members": [
+    "moon.mod",
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "licenses/Unicode-LICENSE.txt",
+    "licenses/WHATWG-Encoding-LICENSE.txt",
+    "licenses/Python-3.12-LICENSE.txt",
+    "docs/CODEC_PROFILES.md",
+    "README.md",
+    "examples/consumer/moon.mod.json",
+    "examples/consumer/moon.pkg.json",
+    "examples/consumer/main.mbt",
+    "toolchain.json",
+    "src/moon.pkg",
+    "src/header_test.mbt",
+    "src/bundle.mbt",
+    "src/model.mbt",
+    "src/semantic_test.mbt",
+    "src/json.mbt",
+    "src/bridge/moon.pkg",
+    "src/bridge/main.mbt",
+    "src/bridge/pkg.generated.mbti",
+    "src/pkg.generated.mbti",
+    "src/dictionary.mbt",
+    "src/codec.mbt",
+    "src/cursor.mbt",
+    "src/invariants.mbt",
+    "src/limits_test.mbt",
+    "src/data.mbt"
+  ]
+}

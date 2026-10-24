@@ -1,0 +1,24 @@
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (7.3125ms)
+✔ string byte widths and all long boundaries preserve every logical byte (20.569917ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.737208ms)
+✔ duplicate names must be rejected rather than shadowed (0.29475ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.790541ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (99.989584ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (130.2865ms)
+✔ row and output budgets reject with resource exit and no committed bundle (66.370208ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (0.922959ms)
+✔ ambiguous padded byte label keys and signed-zero label keys reject (0.665ms)
+✔ empty dictionaries never validate or commit invented cases (0.25425ms)
+✔ all compression opcodes, nondefault bias and unknown rows preserve cases (1.165834ms)
+✔ long string extensions21/22 decode only after segment reconstruction (1.884458ms)
+✔ date and display declarations preserve numeric storage and tagged range endpoints (0.5635ms)
+✔ encoding required, reliable conflicts and override warning are distinct (30.23325ms)
+✔ GB18030 supplementary-plane four-byte sequence remains supported (0.500708ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 412.373083

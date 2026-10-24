@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://cli.moonbitlang.com/binaries/0.10.4%2B2cc641edf/moonbit-linux-x86_64.tar.gz",
+    "status": 403,
+    "error_body": ""
+  },
+  {
+    "url": "https://cli.moonbitlang.com/binaries/0.10.4+2cc641edf/moonbit-linux-x86_64.tar.gz",
+    "status": 403,
+    "error_body": ""
+  },
+  {
+    "url": "https://cli.moonbitlang.com/binaries/0.1.20260713%2B2cc641edf/moonbit-linux-x86_64.tar.gz",
+    "status": 403,
+    "error_body": ""
+  },
+  {
+    "url": "https://cli.moonbitlang.com/cores/core-0.10.4%2B2cc641edf.tar.gz",
+    "status": 403,
+    "error_body": ""
+  }
+]

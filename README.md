@@ -55,7 +55,7 @@ checker只读，验证版本/文件集合/哈希/大小/类型/原位表示/逐�
 
 ## MoonBit 集成
 
-固定工具链 moon0.1.20260713 / moonc v0.10.4+2cc641edf。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
+源构建只接受 toolchain.json 中两组精确配对：原基线 moon0.1.20260713 / moonc v0.10.4+2cc641edf，以及 CI 固定 moon0.1.20261023 / moonc v0.10.17+d971670cd。原版官方归档目前返回403；新版在项目隔离目录验证，两版不混用 core。`--version` 报告实际构建配对。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
 
 ```json
 {"name":"example/consumer","deps":{"z2823253773/moonsav":{"path":"../moonsav-source"}}}
@@ -94,3 +94,5 @@ moon test src --target wasm-gc
 公共语料下载到忽略的.cache，依赖和PSPP仅在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
 
 Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。公开推送、发布、报名均未执行；十一月赛事规则与组织方认可没有新证据。
+
+2026-10-24 已获授权创建私有 GitHub 仓库并运行 CI： https://github.com/z2823253773-p/moonsav 。首轮在工具链下载/Windows保留文件名处失败，完整日志保留；当前平台支持仍以最终远端报告为准，启动过不等于通过。npm/Mooncakes公开发布和赛事报名未执行。

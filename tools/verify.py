@@ -13,9 +13,17 @@ ROOT=Path(__file__).resolve().parents[1]
 IDS=[f'AC{i:02}'for i in range(1,19)]
 class SetupError(Exception):pass
 
+def execution_context():
+ is_ci=os.environ.get('GITHUB_ACTIONS')=='true'
+ server=os.environ.get('GITHUB_SERVER_URL','https://github.com').rstrip('/')
+ repo=os.environ.get('GITHUB_REPOSITORY');run=os.environ.get('GITHUB_RUN_ID')
+ return {'system':platform.system(),'machine':platform.machine(),'github_actions':is_ci,
+         'runner_os':os.environ.get('RUNNER_OS')if is_ci else None,
+         'run_url':f'{server}/{repo}/actions/runs/{run}'if is_ci and repo and run else None}
+
 def main():
  parser=argparse.ArgumentParser();sel=parser.add_mutually_exclusive_group(required=True);sel.add_argument('--all',action='store_true');sel.add_argument('--case',choices=IDS);parser.add_argument('--output',required=True);parser.add_argument('--require-public',action='store_true');parser.add_argument('--require-pspp',action='store_true');a=parser.parse_args()
- out=Path(a.output).resolve();out.mkdir(parents=True,exist_ok=True);payload=out/'payloads';payload.mkdir(exist_ok=True);chosen=IDS if a.all else[a.case];results=[];foundation={}
+ out=Path(a.output).resolve();out.mkdir(parents=True,exist_ok=True);payload=out/'payloads';payload.mkdir(exist_ok=True);chosen=IDS if a.all else[a.case];results=[];foundation={};context=execution_context()
  def cmd(args,inputs=(),outputs=(),cwd=ROOT,timeout=120):
   code,stdout,stderr=capture([str(x)for x in args],out,inputs,outputs,timeout,cwd)
   if code:raise AssertionError(f'Command exit {code}: {args[0:4]} (see run.json)')
@@ -84,7 +92,7 @@ def main():
    return {'profiles':r,'four_byte_pspp':p,'oracle_limitation':limitation,'variants':'A3A0 and malformed tails explicitly rejected by current Node suite'}
   if id=='AC09':
    build();r=reject_vectors(out/'rejections');assert all(x['status']=='expected_rejection'for x in r);return {'scope':'fresh process per corrupt vector, each timeout10s','expected_rejections':len(r),'results':'rejections/results.json'}
-  if id=='AC12':core_suite();p=packages();return {'scope':'actual precompiled Node tarball and standalone MoonBit source archive, three clean consumer backends','artifacts':p['artifacts'],'remote_ci':'not_run'}
+  if id=='AC12':core_suite();p=packages();return {'scope':'actual precompiled Node tarball and standalone MoonBit source archive, three clean consumer backends','artifacts':p['artifacts'],'remote_ci':'this_job_executed'if context['github_actions']else'not_run'}
   if id=='AC13':
    # Clone only committed state, never use an existing lib build or WIP file.
    head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip();clone=Path(tempfile.mkdtemp(prefix='moonsav-clean-repro-'))
@@ -112,7 +120,7 @@ def main():
    results.append(result);save(id+'/result.json',result);print(id+': '+result['status'],flush=True)
  except Exception as e:results.append({'case':'SETUP','status':'not_run','reason':str(e)});versions=locals().get('versions',{})
  passed=all(r['status']in['supported_pass','expected_rejection']for r in results)and len(results)==len(chosen)
- summary={'report_version':'moonsav.acceptance/1','acceptance_scope':'macOS local + JS/native/wasm-gc byte core; CI definitions only','overall_prd_acceptance':'pending remote Linux/Windows runs and designated acceptance chat','required_external_gaps':['Linux x64 Node full corpus CI not_run','Windows x64 Node CLI/corpus CI not_run','designated acceptance chat review pending'],'status':'passed'if passed else'failed','cases':results,'counts':{s:sum(r['status']==s for r in results)for s in['supported_pass','supported_fail','expected_rejection','unexpected_result','not_run']},'versions':versions,'platform':platform.platform(),'require_public':a.require_public,'require_pspp':a.require_pspp,'remote_ci':'not_run','external_user_trial':False,'designated_acceptance_chat':'pending independent acceptance','limits':'resource targets and evidence scopes remain explicit'}
+ summary={'report_version':'moonsav.acceptance/1','acceptance_scope':f"{context['system']} {context['machine']} execution; case-specific core/CLI proof below",'execution_context':context,'overall_prd_acceptance':'pending workflow-level cross-platform review and designated acceptance chat','required_external_gaps':(['other platform jobs require workflow-level assessment','designated acceptance chat review pending']if context['github_actions']else['Linux x64 Node full corpus CI not_run','Windows x64 Node CLI/corpus CI not_run','designated acceptance chat review pending']),'status':'passed'if passed else'failed','cases':results,'counts':{s:sum(r['status']==s for r in results)for s in['supported_pass','supported_fail','expected_rejection','unexpected_result','not_run']},'versions':versions,'platform':platform.platform(),'require_public':a.require_public,'require_pspp':a.require_pspp,'remote_ci':'this_job_executed'if context['github_actions']else'not_run','external_user_trial':False,'designated_acceptance_chat':'pending independent acceptance','limits':'resource targets and evidence scopes remain explicit'}
  save('summary.json',summary)
  runfile=out/'run.json'
  if runfile.exists():
