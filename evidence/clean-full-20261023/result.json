@@ -1,0 +1,567 @@
+{
+  "status": "supported_pass",
+  "clone_sha": "912742888038e85c459a2be12c3d0cd0fd45f0a7",
+  "initial_status_clean": true,
+  "python_environment": "new venv; installed exact requirements-dev.lock",
+  "public_cache": "downloaded fresh and SHA verified by runner",
+  "oracle_scope": "same fixed pre-existing GNU PSPP executable; independently executed",
+  "suite_summary": {
+    "report_version": "moonsav.acceptance/1",
+    "acceptance_scope": "macOS local + JS/native/wasm-gc byte core; CI definitions only",
+    "overall_prd_acceptance": "pending remote Linux/Windows runs and designated acceptance chat",
+    "required_external_gaps": [
+      "Linux x64 Node full corpus CI not_run",
+      "Windows x64 Node CLI/corpus CI not_run",
+      "designated acceptance chat review pending"
+    ],
+    "status": "passed",
+    "cases": [
+      {
+        "case": "AC01",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:23.298112+00:00",
+        "detail": {
+          "scope": "both compression modes, all source cells/dictionary and independent canonical/CSV consumer",
+          "items": [
+            {
+              "input_sha256": "b724ef2eb9d2f5c4580f4e645314a27a61d4d43cb3aae5fa4f3d7ce6310eb43b",
+              "size_bytes": 815,
+              "actual_rows": 5,
+              "logical_variables": 3,
+              "cells_compared": 15,
+              "dictionary_compared": [
+                "names",
+                "order",
+                "type",
+                "width",
+                "variable_labels",
+                "value_labels",
+                "user_missing_definitions",
+                "raw_print_write_formats",
+                "raw_missing_atoms",
+                "measure_display_alignment",
+                "weight_reference",
+                "retained_extension_payloads"
+              ],
+              "differences": [],
+              "normalizations": {
+                "string_trailing_ascii_spaces": 9,
+                "system_missing_to_None": 1,
+                "label_trailing_ascii_spaces": 0
+              },
+              "screening": {
+                "potential_identifier_columns": 0,
+                "raw_redistribution": false,
+                "cell_values_in_evidence": false
+              },
+              "oracle": "ReadStat via pyreadstat 1.3.3",
+              "status": "supported_pass"
+            },
+            {
+              "input_sha256": "d6d788dfe685c6d57edf15dd62239e8609a0e0fccfc7213822da6c79253d0e16",
+              "size_bytes": 783,
+              "actual_rows": 5,
+              "logical_variables": 3,
+              "cells_compared": 15,
+              "dictionary_compared": [
+                "names",
+                "order",
+                "type",
+                "width",
+                "variable_labels",
+                "value_labels",
+                "user_missing_definitions",
+                "raw_print_write_formats",
+                "raw_missing_atoms",
+                "measure_display_alignment",
+                "weight_reference",
+                "retained_extension_payloads"
+              ],
+              "differences": [],
+              "normalizations": {
+                "string_trailing_ascii_spaces": 9,
+                "system_missing_to_None": 1,
+                "label_trailing_ascii_spaces": 0
+              },
+              "screening": {
+                "potential_identifier_columns": 0,
+                "raw_redistribution": false,
+                "cell_values_in_evidence": false
+              },
+              "oracle": "ReadStat via pyreadstat 1.3.3",
+              "status": "supported_pass"
+            }
+          ]
+        }
+      },
+      {
+        "case": "AC02",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:24.244547+00:00",
+        "detail": {
+          "families": [
+            "GNU PSPP",
+            "ReadStat"
+          ],
+          "readstat_to_pspp": {
+            "input_sha256": "d6d788dfe685c6d57edf15dd62239e8609a0e0fccfc7213822da6c79253d0e16",
+            "size_bytes": 783,
+            "actual_rows": 5,
+            "logical_variables": 3,
+            "cells_compared": 15,
+            "dictionary_compared": [
+              "names",
+              "order",
+              "type",
+              "width",
+              "variable_labels",
+              "value_labels",
+              "user_missing_definitions",
+              "raw_print_write_formats",
+              "raw_missing_atoms",
+              "measure_display_alignment",
+              "weight_reference",
+              "retained_extension_payloads"
+            ],
+            "differences": [],
+            "normalizations": {
+              "string_trailing_ascii_spaces": 9,
+              "system_missing_to_None": 1,
+              "label_trailing_ascii_spaces": 0
+            },
+            "screening": {
+              "potential_identifier_columns": 0,
+              "raw_redistribution": false,
+              "cell_values_in_evidence": false
+            },
+            "oracle": "ReadStat via pyreadstat 1.3.3",
+            "status": "supported_pass"
+          },
+          "pspp_generated_to_readstat": {
+            "input_sha256": "16a9028d011280f2cd7177d6b5cef16ca7ded5ef7a098af8c8e3e8e77e5eb258",
+            "size_bytes": 834,
+            "actual_rows": 5,
+            "logical_variables": 3,
+            "cells_compared": 15,
+            "dictionary_compared": [
+              "names",
+              "order",
+              "type",
+              "width",
+              "variable_labels",
+              "value_labels",
+              "user_missing_definitions",
+              "raw_print_write_formats",
+              "raw_missing_atoms",
+              "measure_display_alignment",
+              "weight_reference",
+              "retained_extension_payloads"
+            ],
+            "differences": [],
+            "normalizations": {
+              "string_trailing_ascii_spaces": 9,
+              "system_missing_to_None": 1,
+              "label_trailing_ascii_spaces": 0
+            },
+            "screening": {
+              "potential_identifier_columns": 0,
+              "raw_redistribution": false,
+              "cell_values_in_evidence": false
+            },
+            "oracle": "ReadStat via pyreadstat 1.3.3",
+            "status": "supported_pass"
+          }
+        }
+      },
+      {
+        "case": "AC03",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:24.621359+00:00",
+        "detail": {
+          "scope": "every cell, dictionary and raw print/write/display/retained metadata; public cache not redistributed",
+          "items": [
+            {
+              "input_sha256": "e2b7f41ad4d0e3cc22c12db41976b755a68058ea706d80c1b0370d129b3814b6",
+              "size_bytes": 379254,
+              "actual_rows": 634,
+              "logical_variables": 88,
+              "cells_compared": 55792,
+              "dictionary_compared": [
+                "names",
+                "order",
+                "type",
+                "width",
+                "variable_labels",
+                "value_labels",
+                "user_missing_definitions",
+                "raw_print_write_formats",
+                "raw_missing_atoms",
+                "measure_display_alignment",
+                "weight_reference",
+                "retained_extension_payloads"
+              ],
+              "differences": [],
+              "normalizations": {
+                "string_trailing_ascii_spaces": 5072,
+                "system_missing_to_None": 1202,
+                "label_trailing_ascii_spaces": 1
+              },
+              "screening": {
+                "potential_identifier_columns": 2,
+                "raw_redistribution": false,
+                "cell_values_in_evidence": false
+              },
+              "oracle": "ReadStat via pyreadstat 1.3.3",
+              "status": "supported_pass",
+              "provenance": {
+                "article": 24792756,
+                "version": 1,
+                "file_id": 43604517,
+                "sha256": "e2b7f41ad4d0e3cc22c12db41976b755a68058ea706d80c1b0370d129b3814b6",
+                "size_bytes": 379254,
+                "license": "CC-BY-4.0",
+                "author": "Yuanming GUO",
+                "download": "https://ndownloader.figshare.com/files/43604517"
+              }
+            },
+            {
+              "input_sha256": "554c037b155276547ec69c4a5e1b3b08d41d2103990e54aef83a5675406c9852",
+              "size_bytes": 33420,
+              "actual_rows": 87,
+              "logical_variables": 111,
+              "cells_compared": 9657,
+              "dictionary_compared": [
+                "names",
+                "order",
+                "type",
+                "width",
+                "variable_labels",
+                "value_labels",
+                "user_missing_definitions",
+                "raw_print_write_formats",
+                "raw_missing_atoms",
+                "measure_display_alignment",
+                "weight_reference",
+                "retained_extension_payloads"
+              ],
+              "differences": [],
+              "normalizations": {
+                "string_trailing_ascii_spaces": 0,
+                "system_missing_to_None": 140,
+                "label_trailing_ascii_spaces": 0
+              },
+              "screening": {
+                "potential_identifier_columns": 0,
+                "raw_redistribution": false,
+                "cell_values_in_evidence": false
+              },
+              "oracle": "ReadStat via pyreadstat 1.3.3",
+              "status": "supported_pass",
+              "provenance": {
+                "article": 12459449,
+                "version": 1,
+                "file_id": 23064167,
+                "sha256": "554c037b155276547ec69c4a5e1b3b08d41d2103990e54aef83a5675406c9852",
+                "size_bytes": 33420,
+                "license": "CC0-1.0",
+                "author": "Rosa Vilaseca et al.",
+                "download": "https://ndownloader.figshare.com/files/23064167"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "case": "AC04",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:32.687887+00:00",
+        "detail": {
+          "scope": "all bytecodes, cross-row controls, nondefault bias, known/unknown/zero and malformed endings",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": false
+        }
+      },
+      {
+        "case": "AC05",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:34.016850+00:00",
+        "detail": {
+          "scope": "1/7/8/9/255/256/504/505/32767 widths, UTF8 cross-segment, extensions13/14/21/22",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC06",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:35.669358+00:00",
+        "detail": {
+          "profiles": [
+            {
+              "encoding": "utf-8",
+              "readstat": "supported_pass",
+              "pspp": "supported_pass",
+              "status": "supported_pass"
+            },
+            {
+              "encoding": "windows-1252",
+              "readstat": "supported_pass",
+              "pspp": "supported_pass",
+              "status": "supported_pass"
+            },
+            {
+              "encoding": "gbk",
+              "readstat": "supported_pass",
+              "pspp": "supported_pass",
+              "status": "supported_pass"
+            },
+            {
+              "encoding": "gb18030",
+              "readstat": "supported_pass",
+              "pspp": "supported_pass",
+              "status": "supported_pass"
+            }
+          ],
+          "four_byte_pspp": {
+            "family": "GNU PSPP",
+            "version": "pspp (GNU PSPP) 2.0.1",
+            "command": [
+              "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/pspp/bin/pspp",
+              "--batch",
+              "<generated-syntax>"
+            ],
+            "exit_code": 0,
+            "input_sha256": "ae4edfa12204c9a7499184dd75fc5ede59733c23428cb49a17bcf2170a550447",
+            "actual_rows": 2,
+            "logical_variables": 1,
+            "cells_and_missing_predicates_compared": 2,
+            "differences": [],
+            "difference_count": 0,
+            "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+            "status": "supported_pass"
+          },
+          "oracle_limitation": {
+            "oracle": "Mac ReadStat wheel / system iconv",
+            "exception": "ReadstatError",
+            "message": "Unable to convert string to the requested encoding (invalid byte sequence)",
+            "status": "oracle_unsupported",
+            "input_sha256": "ae4edfa12204c9a7499184dd75fc5ede59733c23428cb49a17bcf2170a550447",
+            "alternative_proof": "PSPP/GNU libiconv + independently authored source, Python codec and primary range mapping"
+          },
+          "variants": "A3A0 and malformed tails explicitly rejected by current Node suite"
+        }
+      },
+      {
+        "case": "AC07",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:36.123976+00:00",
+        "detail": {
+          "scope": "missing kinds, ranges/endpoints, signed zero, byte label conflicts and invalid nonfinite vectors",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC08",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:36.124080+00:00",
+        "detail": {
+          "scope": "canonical plus standard CSV, multiline/NA/backslash/leading zero/trailing spaces, NUL rejection and NDJSON acceptance",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC09",
+        "status": "expected_rejection",
+        "utc": "2026-10-24T06:43:38.655743+00:00",
+        "detail": {
+          "scope": "fresh process per corrupt vector, each timeout10s",
+          "expected_rejections": 29,
+          "results": "rejections/results.json"
+        }
+      },
+      {
+        "case": "AC10",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:39.537691+00:00",
+        "detail": {
+          "scope": "core limits equal/below and CLI output exact/one less; declared label bookkeeping cap",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC11",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:39.537807+00:00",
+        "detail": {
+          "scope": "exclusive concurrent output, ordinary failure, input change, disk failure and six SIGKILL stages, post-commit report recovery",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC12",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:39.537907+00:00",
+        "detail": {
+          "scope": "actual precompiled Node tarball and standalone MoonBit source archive, three clean consumer backends",
+          "artifacts": {
+            "moonsav-0.1.0.tgz": {
+              "sha256": "0265e416c38e1b8faae92a377ceae1fdcefd0b0f1d3ec676c33a8ba3e4440859",
+              "size_bytes": 284910
+            },
+            "moonsav-source-0.1.0.zip": {
+              "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
+              "size_bytes": 56708
+            }
+          },
+          "remote_ci": "not_run"
+        }
+      },
+      {
+        "case": "AC13",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:39.538006+00:00",
+        "detail": {
+          "scope": "clean committed clone reruns the same acceptance entry AC01 with fixed existing dev interpreter; source SHA confirmed",
+          "sha": "912742888038e85c459a2be12c3d0cd0fd45f0a7",
+          "child": "clean-clone-summary.json",
+          "independent_review": "docs/progress/INDEPENDENT_REVIEW.md (agent, not external user acceptance)"
+        }
+      },
+      {
+        "case": "AC14",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:41.440690+00:00",
+        "detail": {
+          "scope": "standalone MoonBit source consumer filters missing, labels and unlabeled legal values, IDs, retains rows, Stop and callback failure",
+          "source_archive": {
+            "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
+            "size_bytes": 56708
+          }
+        }
+      },
+      {
+        "case": "AC15",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:41.440807+00:00",
+        "detail": {
+          "scope": "U2 dictionary/full scope and summaries, exact variables, structured warning/error recovery",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC16",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:41.440910+00:00",
+        "detail": {
+          "scope": "U3 hashes, schemas, rehashed semantic damage, metadata/CSV policy, no canonical, symlinks, TOCTOU and inherited warnings",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC17",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:41.441002+00:00",
+        "detail": {
+          "scope": "JSON channels/exits, strict export precommit, version and offline first-use archive",
+          "proof": "shared current full Node suite; no omitted tests counted as passes",
+          "core_backends": true
+        }
+      },
+      {
+        "case": "AC18",
+        "status": "supported_pass",
+        "utc": "2026-10-24T06:43:41.441088+00:00",
+        "detail": {
+          "scope": "seed20261023 10000x20, both modes x3 validate/export/check, deterministic semantic hashes",
+          "summaries": [
+            {
+              "mode": "none",
+              "task": "validate",
+              "median_seconds": 0.12267654202878475,
+              "peak_rss_bytes": 82231296,
+              "passed": true
+            },
+            {
+              "mode": "none",
+              "task": "export",
+              "median_seconds": 0.5048082910943776,
+              "peak_rss_bytes": 123600896,
+              "passed": true
+            },
+            {
+              "mode": "none",
+              "task": "check-bundle",
+              "median_seconds": 0.5292409169487655,
+              "peak_rss_bytes": 119275520,
+              "passed": true
+            },
+            {
+              "mode": "row",
+              "task": "validate",
+              "median_seconds": 0.12565716612152755,
+              "peak_rss_bytes": 83165184,
+              "passed": true
+            },
+            {
+              "mode": "row",
+              "task": "export",
+              "median_seconds": 0.5096461670473218,
+              "peak_rss_bytes": 124338176,
+              "passed": true
+            },
+            {
+              "mode": "row",
+              "task": "check-bundle",
+              "median_seconds": 0.5295928749255836,
+              "peak_rss_bytes": 118374400,
+              "passed": true
+            }
+          ]
+        }
+      }
+    ],
+    "counts": {
+      "supported_pass": 17,
+      "supported_fail": 0,
+      "expected_rejection": 1,
+      "unexpected_result": 0,
+      "not_run": 0
+    },
+    "versions": {
+      "moon": "moon 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moon\nmoonc v0.10.4+2cc641edf (2026-07-15) ~/.moon/bin/moonc\nmoonrun 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg",
+      "node": "v24.15.0",
+      "python": "Python 3.12.13",
+      "python_dependencies": [
+        "attrs==25.3.0",
+        "jsonschema==4.23.0",
+        "jsonschema-specifications==2024.10.1",
+        "narwhals==2.27.1",
+        "numpy==2.5.4",
+        "pandas==2.3.3",
+        "pyreadstat==1.3.3",
+        "python-dateutil==3.0.0",
+        "pytz==2026.5",
+        "referencing==0.36.2",
+        "rpds-py==0.22.3",
+        "six==1.17.0",
+        "typing_extensions==4.16.0",
+        "tzdata==2026.5"
+      ],
+      "pspp": "pspp (GNU PSPP) 2.0.1\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Ben Pfaff, John Darrington, and Jason Stover."
+    },
+    "platform": "macOS-26.4-arm64-arm-64bit",
+    "require_public": true,
+    "require_pspp": true,
+    "remote_ci": "not_run",
+    "external_user_trial": false,
+    "designated_acceptance_chat": "pending independent acceptance",
+    "limits": "resource targets and evidence scopes remain explicit"
+  },
+  "record": "setup-run.json"
+}

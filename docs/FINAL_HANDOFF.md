@@ -33,3 +33,7 @@ Acceptance must inspect actual results/diffs, not merely command exit0. Confirm 
 ## Copy-ready continuation for the designated acceptance chat
 
 > 请独立验收 `/Users/henryz/Desktop/比赛/moonsav`，先现场核对分支、HEAD、dirty、docs/delivery-manifest.json、dist/delivery-state.json 和两份归档 SHA。产品测试提交为 `8ae93f2b46ab7a81acbf7a120564c493693324fb`，最终报告提交可能随后出现；先确认差异只含文档/证据。阅读 TASK_STATE、PRD r0.2、M4/M5 和最终 run.json/summary.json，再从全新目录复现同一验收入口及归档 U1–U3，不把实施者自报当批准。按 supported_pass/supported_fail/expected_rejection/unexpected_result/not_run 分类，保留失败输入/命令/exit。验收材料只写 docs/acceptance/；产品由实施对话改，避免双写。重点检查编码非单射边界、长字符串/缺失匹配、重新计算哈希后的恶意 bundle、事务提交与资源限制。当前 Linux/Windows 远端 CI 未运行，独立代理审查不是指定验收或外部用户访谈；必须单列这些缺口。未授权公开推送、发布、报名，不执行这些操作。
+
+## Additional full clean-environment proof
+
+See docs/progress/FRESH_ENVIRONMENT.md and evidence/clean-full-20261023. Unlike the initial AC13 clone, this run installed a fresh Python venv from the lock and reran all cases with newly downloaded public files. It passed on commit9127428; build dirty=false, identical source digest. Original delivered archives remain unchanged. Host Moon/Node/PSPP were reused; this is still local implementer evidence.

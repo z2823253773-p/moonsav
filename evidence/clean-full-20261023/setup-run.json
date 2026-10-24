@@ -1,0 +1,86 @@
+{
+  "records": [
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav",
+      "utc": "2026-10-24T06:42:49.985249+00:00",
+      "exit_code": 0,
+      "stdout": "00-stdout.log",
+      "stderr": "00-stderr.log"
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout",
+      "utc": "2026-10-24T06:42:50.154757+00:00",
+      "exit_code": 0,
+      "stdout": "01-stdout.log",
+      "stderr": "01-stderr.log"
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout",
+      "utc": "2026-10-24T06:42:50.177223+00:00",
+      "exit_code": 0,
+      "stdout": "02-stdout.log",
+      "stderr": "02-stderr.log"
+    },
+    {
+      "command": [
+        "python3.12",
+        "-m",
+        "venv",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.dev/venv"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav",
+      "utc": "2026-10-24T06:42:50.186066+00:00",
+      "exit_code": 0,
+      "stdout": "03-stdout.log",
+      "stderr": "03-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.dev/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements-dev.lock"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout",
+      "utc": "2026-10-24T06:42:51.078434+00:00",
+      "exit_code": 0,
+      "stdout": "04-stdout.log",
+      "stderr": "04-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.dev/venv/bin/python",
+        "tools/verify.py",
+        "--all",
+        "--require-public",
+        "--require-pspp",
+        "--output",
+        ".cache/clean-acceptance"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout",
+      "utc": "2026-10-24T06:42:59.206503+00:00",
+      "exit_code": 0,
+      "stdout": "05-stdout.log",
+      "stderr": "05-stderr.log"
+    }
+  ]
+}

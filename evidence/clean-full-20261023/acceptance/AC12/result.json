@@ -1,0 +1,19 @@
+{
+  "case": "AC12",
+  "status": "supported_pass",
+  "utc": "2026-10-24T06:43:39.537907+00:00",
+  "detail": {
+    "scope": "actual precompiled Node tarball and standalone MoonBit source archive, three clean consumer backends",
+    "artifacts": {
+      "moonsav-0.1.0.tgz": {
+        "sha256": "0265e416c38e1b8faae92a377ceae1fdcefd0b0f1d3ec676c33a8ba3e4440859",
+        "size_bytes": 284910
+      },
+      "moonsav-source-0.1.0.zip": {
+        "sha256": "6137341fc0be5e17d7a15bb4f571b9e726e582ba19a02df4f22ecb2411c53cce",
+        "size_bytes": 56708
+      }
+    },
+    "remote_ci": "not_run"
+  }
+}

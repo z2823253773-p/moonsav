@@ -1,0 +1,428 @@
+{
+  "reference_machine": "macOS-26.4-arm64-arm-64bit",
+  "seed": 20261023,
+  "rows": 10000,
+  "variables": 20,
+  "runs": [
+    {
+      "mode": "none",
+      "repeat": 0,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-none.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12267654202878475,
+      "peak_rss_bytes": 82231296,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 0,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-none-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5181008749641478,
+      "peak_rss_bytes": 123600896,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 0,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-none-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5292409169487655,
+      "peak_rss_bytes": 117997568,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 1,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-none.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12323100003413856,
+      "peak_rss_bytes": 82132992,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 1,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-none-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5047791248653084,
+      "peak_rss_bytes": 122896384,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 1,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-none-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.521054333075881,
+      "peak_rss_bytes": 119275520,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 2,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-none.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12185887503437698,
+      "peak_rss_bytes": 81838080,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 2,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-none-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5048082910943776,
+      "peak_rss_bytes": 123011072,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "none",
+      "repeat": 2,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-none-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5350324590690434,
+      "peak_rss_bytes": 118095872,
+      "input_sha256": "5c2aa8d616292ca51bfdb2608e1a0598f114dd3d0aa4c3bcc40e586b93fb869c"
+    },
+    {
+      "mode": "row",
+      "repeat": 0,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-row.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12628720793873072,
+      "peak_rss_bytes": 83050496,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 0,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-row-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5068075840827078,
+      "peak_rss_bytes": 124026880,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 0,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-row-0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5295928749255836,
+      "peak_rss_bytes": 118374400,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 1,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-row.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12527154199779034,
+      "peak_rss_bytes": 83165184,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 1,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-row-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5116201669443399,
+      "peak_rss_bytes": 124338176,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 1,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-row-1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5363672079984099,
+      "peak_rss_bytes": 118194176,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 2,
+      "task": "validate",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-row.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12565716612152755,
+      "peak_rss_bytes": 82821120,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 2,
+      "task": "export",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/perf-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-row-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5096461670473218,
+      "peak_rss_bytes": 123715584,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    },
+    {
+      "mode": "row",
+      "repeat": 2,
+      "task": "check-bundle",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/clean-full-20261023/checkout/.cache/performance/bundle-row-2",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5215842078905553,
+      "peak_rss_bytes": 117981184,
+      "input_sha256": "141c1e4232666bcd3fc0581fe15b1b192e235069c438e031abbabea6670261aa"
+    }
+  ],
+  "summaries": [
+    {
+      "mode": "none",
+      "task": "validate",
+      "median_seconds": 0.12267654202878475,
+      "peak_rss_bytes": 82231296,
+      "passed": true
+    },
+    {
+      "mode": "none",
+      "task": "export",
+      "median_seconds": 0.5048082910943776,
+      "peak_rss_bytes": 123600896,
+      "passed": true
+    },
+    {
+      "mode": "none",
+      "task": "check-bundle",
+      "median_seconds": 0.5292409169487655,
+      "peak_rss_bytes": 119275520,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "validate",
+      "median_seconds": 0.12565716612152755,
+      "peak_rss_bytes": 83165184,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "export",
+      "median_seconds": 0.5096461670473218,
+      "peak_rss_bytes": 124338176,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "check-bundle",
+      "median_seconds": 0.5295928749255836,
+      "peak_rss_bytes": 118374400,
+      "passed": true
+    }
+  ],
+  "semantic_hashes": {
+    "none-0": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e3c0affd7d519e0dc1bc272a886c19df2e4405bdbacc04231a649b5f584cd11a",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "none-1": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e3c0affd7d519e0dc1bc272a886c19df2e4405bdbacc04231a649b5f584cd11a",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "none-2": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "e3c0affd7d519e0dc1bc272a886c19df2e4405bdbacc04231a649b5f584cd11a",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "row-0": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "a3db4db6e48a722dbbf5264ace6f1cc7d4cb70a00e188f35fd3d471d72527e97",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "row-1": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "a3db4db6e48a722dbbf5264ace6f1cc7d4cb70a00e188f35fd3d471d72527e97",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    },
+    "row-2": {
+      "data.ndjson": "e4738d1be819617dff2e9d0e194524685abd228a7f004774bb3d4671b2c68653",
+      "data.csv": "2bed131617cecd1c9aa976e9c8b72bed76f3814dee1b7d51849ee86db940a923",
+      "metadata.json": "a3db4db6e48a722dbbf5264ace6f1cc7d4cb70a00e188f35fd3d471d72527e97",
+      "codebook.md": "ff5d4ced3ad0909de49669a13b7737ab699c7f9b1c2128f6bed3445b48168825"
+    }
+  },
+  "failures": [],
+  "status": "supported_pass"
+}
