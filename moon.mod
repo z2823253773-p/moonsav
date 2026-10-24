@@ -21,7 +21,8 @@ options(
     "/docs/CODEC_PROFILES.md",
     "/toolchain.json",
     "/examples/consumer/main.mbt",
-    "/examples/consumer/moon.mod.json",
-    "/examples/consumer/moon.pkg.json",
+    "/examples/consumer/moon.mod",
+    "/examples/consumer/moon.pkg",
+    "/examples/consumer/moon.work",
   ],
 )

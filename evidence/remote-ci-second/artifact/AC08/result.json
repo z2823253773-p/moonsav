@@ -1,0 +1,7 @@
+{
+  "case": "AC08",
+  "status": "supported_fail",
+  "error_type": "AssertionError",
+  "reason": "Package step 10 failed with exit 255",
+  "utc": "2026-10-24T07:05:43.318209+00:00"
+}

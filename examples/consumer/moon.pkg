@@ -1,0 +1,5 @@
+import {
+  "z2823253773/moonsav",
+}
+
+pkgtype(kind: "executable")

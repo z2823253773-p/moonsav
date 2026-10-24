@@ -1,0 +1,115 @@
+{
+  "head": "b20b15f",
+  "scope": "local macOS reviewer; no remote Windows/Linux proof",
+  "records": [
+    {
+      "name": "old-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 0.3459418329875916
+    },
+    {
+      "name": "node-suite",
+      "command": [
+        "node",
+        "--test",
+        "tests/core.test.mjs",
+        "tests/bundle.test.mjs",
+        "tests/tasks.test.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 1.2379652501549572
+    },
+    {
+      "name": "shell-path-probe",
+      "command": [
+        "node",
+        "review-shell.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 0.4343750001862645
+    },
+    {
+      "name": "new-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 0.23336062510497868
+    },
+    {
+      "name": "new-version",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "--version"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 0.028607333078980446
+    },
+    {
+      "name": "new-core-js",
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "js"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 0.17807758413255215
+    },
+    {
+      "name": "new-core-native",
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "native"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 1.0438128330279142
+    },
+    {
+      "name": "new-core-wasm-gc",
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 0.22512745903804898
+    },
+    {
+      "name": "actual-entry-context-test",
+      "command": [
+        "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "*_test.py"
+      ],
+      "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/reviewer-ci/run01/source",
+      "exit_code": 0,
+      "elapsed": 1.6532377090770751
+    }
+  ]
+}

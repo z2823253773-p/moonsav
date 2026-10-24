@@ -1,0 +1,46 @@
+✔ canonical and multiline CSV validate as one paired bundle (74.31475ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (71.58625ms)
+✔ rehashing CSV that disagrees with canonical fails (69.062375ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (65.174625ms)
+✔ missing canonical and symlink metadata reject (134.286042ms)
+✔ rehashing metadata cannot admit duplicate semantic label (69.760542ms)
+✔ rehashing metadata cannot admit bad weight reference (68.684334ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (67.636875ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (66.183625ms)
+✔ canonical bytes parsed after a file swap must still match manifest hash (45.543ms)
+✔ invalid UTF8 metadata.json is a data rejection, not I/O (62.132667ms)
+✔ invalid UTF8 manifest.json is a data rejection, not I/O (59.710167ms)
+✔ invalid UTF8 data.ndjson is a data rejection, not I/O (66.194709ms)
+✔ invalid UTF8 data.csv is a data rejection, not I/O (65.512625ms)
+✔ metadata policy unsupported CSV policy cannot bypass checker with a new hash (64.860167ms)
+✔ metadata policy unknown encoding selection policy cannot bypass checker with a new hash (65.738125ms)
+✔ metadata policy unknown retained semantic extension cannot bypass checker with a new hash (65.952625ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (6.309458ms)
+✔ string byte widths and all long boundaries preserve every logical byte (17.488709ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.323208ms)
+✔ duplicate names must be rejected rather than shadowed (0.207084ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (0.886958ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (109.090417ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (134.229833ms)
+✔ row and output budgets reject with resource exit and no committed bundle (68.649541ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (1.134542ms)
+✔ ambiguous padded byte label keys and signed-zero label keys reject (0.412333ms)
+✔ empty dictionaries never validate or commit invented cases (0.094541ms)
+✔ all compression opcodes, nondefault bias and unknown rows preserve cases (0.732542ms)
+✔ long string extensions21/22 decode only after segment reconstruction (1.697792ms)
+✔ date and display declarations preserve numeric storage and tagged range endpoints (0.503417ms)
+✔ encoding required, reliable conflicts and override warning are distinct (33.535416ms)
+✔ GB18030 supplementary-plane four-byte sequence remains supported (0.443167ms)
+✔ U2 human summaries truncate explicitly, JSON and exact-variable query remain complete (141.872708ms)
+✔ JSON success, warning, strict rejection and malformed input obey channels and exits (211.516625ms)
+✔ strict export rejects warnings before creating any output directory (29.963916ms)
+✔ U3 schema mismatch rejects, extras warn and strict checker refuses warnings (132.706583ms)
+✔ version reports the actual build compiler instead of a historical toolchain constant (27.316875ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1215.490916

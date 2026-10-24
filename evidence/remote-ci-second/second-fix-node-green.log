@@ -1,0 +1,61 @@
+
+> moonsav@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ canonical and multiline CSV validate as one paired bundle (79.989ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (71.792ms)
+✔ rehashing CSV that disagrees with canonical fails (69.471292ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (65.641916ms)
+✔ missing canonical and symlink metadata reject (138.090791ms)
+✔ rehashing metadata cannot admit duplicate semantic label (67.848167ms)
+✔ rehashing metadata cannot admit bad weight reference (66.593083ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (66.358167ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (67.16325ms)
+✔ canonical bytes parsed after a file swap must still match manifest hash (44.723792ms)
+✔ invalid UTF8 metadata.json is a data rejection, not I/O (61.486625ms)
+✔ invalid UTF8 manifest.json is a data rejection, not I/O (60.682834ms)
+✔ invalid UTF8 data.ndjson is a data rejection, not I/O (66.324666ms)
+✔ invalid UTF8 data.csv is a data rejection, not I/O (65.008792ms)
+✔ metadata policy unsupported CSV policy cannot bypass checker with a new hash (65.550208ms)
+✔ metadata policy unknown encoding selection policy cannot bypass checker with a new hash (65.260625ms)
+✔ metadata policy unknown retained semantic extension cannot bypass checker with a new hash (66.137083ms)
+✔ strict four codec profiles decode data and dictionary, reject malformed and revision ambiguity (6.983459ms)
+✔ string byte widths and all long boundaries preserve every logical byte (18.21975ms)
+✔ numeric range missing and labeled legitimate 99 stay distinct (1.579625ms)
+✔ duplicate names must be rejected rather than shadowed (0.342333ms)
+✔ dictionary-only inspect succeeds where a truncated data scan fails (1.281958ms)
+✔ CSV NUL representation failure is explicit; NDJSON retains it (107.5835ms)
+✔ zero rows and single-column all-system-missing retain exact record counts (135.234709ms)
+✔ row and output budgets reject with resource exit and no committed bundle (67.658834ms)
+✔ legal unknown nominal case width derives actual slots from dictionary (0.86025ms)
+✔ ambiguous padded byte label keys and signed-zero label keys reject (0.738375ms)
+✔ empty dictionaries never validate or commit invented cases (0.2745ms)
+✔ all compression opcodes, nondefault bias and unknown rows preserve cases (1.221ms)
+✔ long string extensions21/22 decode only after segment reconstruction (1.588708ms)
+✔ date and display declarations preserve numeric storage and tagged range endpoints (1.020875ms)
+✔ encoding required, reliable conflicts and override warning are distinct (32.271709ms)
+✔ GB18030 supplementary-plane four-byte sequence remains supported (0.617292ms)
+✔ exclusive concurrent exports have one winner and retain input hash (114.830958ms)
+✔ SIGKILL after-dir produces the declared commit boundary (61.251833ms)
+✔ SIGKILL after-marker produces the declared commit boundary (61.924ms)
+✔ SIGKILL after-data produces the declared commit boundary (63.104333ms)
+✔ SIGKILL after-metadata produces the declared commit boundary (63.365625ms)
+✔ SIGKILL after-manifest produces the declared commit boundary (62.746ms)
+✔ SIGKILL after-commit produces the declared commit boundary (69.806584ms)
+✔ disk write failure cleans only owned files and returns I/O error (32.314042ms)
+✔ input modification during bounded read is detected (28.005167ms)
+✔ report failure after commit reports committed and leaves a valid recoverable bundle (68.537916ms)
+✔ total output byte limit accepts exact total and rejects one byte less (104.590667ms)
+✔ U2 human summaries truncate explicitly, JSON and exact-variable query remain complete (149.911459ms)
+✔ JSON success, warning, strict rejection and malformed input obey channels and exits (213.807875ms)
+✔ strict export rejects warnings before creating any output directory (32.278875ms)
+✔ U3 schema mismatch rejects, extras warn and strict checker refuses warnings (132.497041ms)
+✔ version reports the actual build compiler instead of a historical toolchain constant (28.356125ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1228.552042

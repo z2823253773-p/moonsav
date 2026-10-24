@@ -1,10 +1,14 @@
+# Second CI correction — 2026-10-24
+
+Run40072702661: macOS and Linux platform jobs passed; Windows shared corpus/JS/wasm-gc passed but archive smoke failed from shell argument splitting. Independent Linux oracle job passed13 cases +29 expected rejects; four package-dependent cases failed because modern Moon rejected the example JSON module. Full PRD is not accepted. Fixes invoke npm JS without shell and migrate the source consumer to local moon.work/native manifests. Existing U1 passed locally on old and new tools; full package/CI recheck is ongoing.
+
 # Current CI continuation — 2026-10-24
 
 User explicitly authorized private GitHub repository creation, code push and Actions. Repository z2823253773-p/moonsav was created and private=true verified. implementation was pushed at45f5ff2. First run40071770062 failed: Linux/macOS official pinned0.10.4 toolchain downloads403; Windows checkout rejected reserved filename nul.sav. Raw failures are preserved in evidence/remote-ci-first. No platform pass is inferred.
 
 Corrections: rename the unchanged NUL fixture to string-nul.sav; allow exact old/new toolchain pairs and report actual build versions; use common string.parse_double API; pin CI toolchain/core0.10.17+d971670cd after isolated compatibility testing.49 Node tests and7 core tests on each JS/native/wasm-gc passed on BOTH exact toolchains locally. Runner provenance now records actual system/arch/CI run rather than hardcoded macOS/not_run; its end-to-end regression failed before correction and now passes. Original toolchain installation is untouched.
 
-Current code changes await fresh remote rerun and final full acceptance/rebuilt archives. docs/delivery-manifest.json and dist root still refer to the PREVIOUS accepted local candidate8ae93f2; do not treat them as proof of these changes. Publication/Mooncakes/npm/registration remain unauthorized. Designated acceptance chat still owns docs/acceptance and has not approved this candidate.
+Current code changes await fresh remote rerun and final full acceptance/rebuilt archives. docs/delivery-manifest.json still records the previous local candidate8ae93f2. Its exact original archives are preserved in dist/history/8ae93f2; dist root is a new candidate rebuilt by the verification runner and remains WIP until all gates pass. Do not treat historical hashes as proof of current code. Publication/Mooncakes/npm/registration remain unauthorized. Designated acceptance chat still owns docs/acceptance and has not approved this candidate.
 
 ---
 

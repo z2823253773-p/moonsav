@@ -1,0 +1,2 @@
+// Both modules resolve locally; no registry publication is required.
+members = [".", "../.."]

@@ -1,0 +1,535 @@
+independent-oracles	Set up job	﻿2026-10-24T07:04:32.1792747Z Current runner version: '2.338.0'
+independent-oracles	Set up job	2026-10-24T07:04:32.1814685Z ##[group]Runner Image Provisioner
+independent-oracles	Set up job	2026-10-24T07:04:32.1815490Z Hosted Compute Agent
+independent-oracles	Set up job	2026-10-24T07:04:32.1815974Z Version: 20261021.618
+independent-oracles	Set up job	2026-10-24T07:04:32.1816514Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+independent-oracles	Set up job	2026-10-24T07:04:32.1817194Z Build Date: 2026-10-21T00:45:21Z
+independent-oracles	Set up job	2026-10-24T07:04:32.1817908Z Worker ID: {817863e8-57b7-4847-ac23-5b29b486a815}
+independent-oracles	Set up job	2026-10-24T07:04:32.1818551Z Region: southcentralus
+independent-oracles	Set up job	2026-10-24T07:04:32.1819112Z Cloud: Azure
+independent-oracles	Set up job	2026-10-24T07:04:32.1819541Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T07:04:32.1820915Z ##[group]Operating System
+independent-oracles	Set up job	2026-10-24T07:04:32.1821454Z Ubuntu
+independent-oracles	Set up job	2026-10-24T07:04:32.1821942Z 24.04.5
+independent-oracles	Set up job	2026-10-24T07:04:32.1822372Z LTS
+independent-oracles	Set up job	2026-10-24T07:04:32.1822823Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T07:04:32.1823341Z ##[group]Runner Image
+independent-oracles	Set up job	2026-10-24T07:04:32.1823842Z Image: ubuntu-24.04
+independent-oracles	Set up job	2026-10-24T07:04:32.1824295Z Version: 20261012.334.1
+independent-oracles	Set up job	2026-10-24T07:04:32.1825340Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+independent-oracles	Set up job	2026-10-24T07:04:32.1826869Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+independent-oracles	Set up job	2026-10-24T07:04:32.1827897Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T07:04:32.1829213Z ##[group]GITHUB_TOKEN Permissions
+independent-oracles	Set up job	2026-10-24T07:04:32.1831135Z Contents: read
+independent-oracles	Set up job	2026-10-24T07:04:32.1831696Z Metadata: read
+independent-oracles	Set up job	2026-10-24T07:04:32.1832175Z ##[endgroup]
+independent-oracles	Set up job	2026-10-24T07:04:32.1833907Z Secret source: Actions
+independent-oracles	Set up job	2026-10-24T07:04:32.1834780Z Cache mode: write
+independent-oracles	Set up job	2026-10-24T07:04:32.1835473Z Prepare workflow directory
+independent-oracles	Set up job	2026-10-24T07:04:32.2108281Z Prepare all required actions
+independent-oracles	Set up job	2026-10-24T07:04:32.2149666Z Getting action download info
+independent-oracles	Set up job	2026-10-24T07:04:32.5043511Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+independent-oracles	Set up job	2026-10-24T07:04:32.5951693Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+independent-oracles	Set up job	2026-10-24T07:04:32.7616697Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+independent-oracles	Set up job	2026-10-24T07:04:32.9763822Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+independent-oracles	Set up job	2026-10-24T07:04:33.0958970Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+independent-oracles	Set up job	2026-10-24T07:04:33.3695117Z Getting action download info
+independent-oracles	Set up job	2026-10-24T07:04:33.4674385Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+independent-oracles	Set up job	2026-10-24T07:04:33.8098558Z Complete job name: independent-oracles
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T07:04:33.8593087Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8593623Z with:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8593878Z   repository: z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8595985Z   token: ***
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8596229Z   ssh-strict: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8596493Z   ssh-user: git
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8596745Z   persist-credentials: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8597018Z   clean: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8597272Z   sparse-checkout-cone-mode: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8597565Z   fetch-depth: 1
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8597932Z   fetch-tags: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8598180Z   show-progress: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8598433Z   lfs: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8598673Z   submodules: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8598938Z   set-safe-directory: true
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8599226Z   allow-unsafe-pr-checkout: false
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.8599599Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9447557Z Syncing repository: z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9449490Z ##[group]Getting Git version info
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9450228Z Working directory is '/home/runner/work/moonsav/moonsav'
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9451109Z [command]/usr/bin/git version
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9451572Z git version 2.55.0
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9453025Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9468565Z Temporarily overriding HOME='/home/runner/work/_temp/d6806016-e5c8-46eb-9ef3-f2fedd98e0f7' before making global git config changes
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9475355Z Adding repository directory to the temporary git global config as a safe directory
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9480649Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9542267Z Deleting the contents of '/home/runner/work/moonsav/moonsav'
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9550145Z ##[group]Initializing the repository
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9555044Z [command]/usr/bin/git init /home/runner/work/moonsav/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9713849Z hint: Using 'master' as the name for the initial branch. This default branch name
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9718898Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9726832Z hint: to use in all of your new repositories, which will suppress this warning,
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9727928Z hint: call:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9728420Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9729085Z hint: 	git config --global init.defaultBranch <name>
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9729781Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9730415Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9731389Z hint: 'development'. The just-created branch can be renamed via this command:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9732180Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9732674Z hint: 	git branch -m <name>
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9733226Z hint:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9733917Z hint: Disable this message with "git config set advice.defaultBranchName false"
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9735092Z Initialized empty Git repository in /home/runner/work/moonsav/moonsav/.git/
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9738264Z [command]/usr/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9801239Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9802121Z ##[group]Disabling automatic garbage collection
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9809330Z [command]/usr/bin/git config --local gc.auto 0
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9842051Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9842923Z ##[group]Setting up auth
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9848133Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:33.9889840Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0175055Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0207510Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0380236Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0406820Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0577585Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0611160Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0612331Z ##[group]Fetching the repository
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.0618338Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b20b15f349fd8726f24a0c48e187bcc497889c5f:refs/remotes/origin/implementation
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7149463Z From https://github.com/z2823253773-p/moonsav
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7150999Z  * [new ref]         b20b15f349fd8726f24a0c48e187bcc497889c5f -> origin/implementation
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7155586Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7156928Z ##[group]Determining the checkout info
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7158781Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7162519Z [command]/usr/bin/git sparse-checkout disable
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7203672Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7260487Z ##[group]Checking out the ref
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7263161Z [command]/usr/bin/git checkout --progress --force -B implementation refs/remotes/origin/implementation
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7818818Z Switched to a new branch 'implementation'
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7820635Z branch 'implementation' set up to track 'origin/implementation'.
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7869442Z ##[endgroup]
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7872674Z [command]/usr/bin/git log -1 --format=%H
+independent-oracles	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:04:34.7874250Z b20b15f349fd8726f24a0c48e187bcc497889c5f
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	﻿2026-10-24T07:04:34.8102214Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.8103192Z with:
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.8103701Z   node-version: 24.15.0
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.8104277Z   always-auth: false
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.8104830Z   check-latest: false
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.8110469Z   token: ***
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.8110974Z ##[endgroup]
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.9032013Z Attempting to download 24.15.0...
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.9099179Z (node:1943) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:34.9102257Z (Use `node --trace-deprecation ...` to show where the warning was created)
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:35.7227028Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:36.2754975Z Extracting ...
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:36.2842329Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/2ad0fbac-9894-4aa2-96cf-da9219720470 -f /home/runner/work/_temp/cca3ec3f-0bb2-4d00-8e27-81dfddc70247
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:37.2016355Z Adding to the cache ...
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:40.4890143Z ##[group]Environment details
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:40.6489296Z node: v24.15.0
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:40.6489911Z npm: 11.12.1
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:40.6490405Z yarn: 1.22.22
+independent-oracles	Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020	2026-10-24T07:04:40.6491085Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	﻿2026-10-24T07:04:40.6640949Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6641172Z with:
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6641298Z   version: 0.10.17+d971670cd
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6641443Z   core-version: 0.10.17+d971670cd
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6641577Z   setup-core: true
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6641694Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6678019Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6704770Z ##[group]Run hustcer/setup-nu@v3.27
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6704927Z with:
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6705037Z   version: 0.115.1
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6705148Z   features: default
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6705262Z   check-latest: false
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6705381Z   enable-plugins: false
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6706641Z   github-token: ***
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.6706757Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.7464404Z versionSpec: 0.115.1
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.7471904Z resolved version: 0.115.1
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:40.7476805Z Try to get assets for Nu: arch = x64, platform = linux, feature = default
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:42.9305622Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8cc6f252-5eaf-4883-9a01-e15078c31dff -f /home/runner/work/_temp/25068728-84a4-49f1-9432-e9c7bea566a6
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.0126429Z Successfully setup Nu 0.115.1, with default features.
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.0157881Z Current directory: /home/runner/work/moonsav/moonsav
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.0364769Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=8368]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.0366852Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1481249Z ##[group]Run # /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1481807Z ^[[36;1m# /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1482179Z ^[[36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1482409Z ^[[36;1mlet version = '0.10.17+d971670cd'^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1482569Z ^[[36;1mlet setup_core = 'true' | into bool^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1482907Z ^[[36;1mlet core_version = '0.10.17+d971670cd'^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1483196Z ^[[36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1485290Z shell: /opt/hostedtoolcache/nushell/0.115.1/x64/nu {0}
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1485456Z ##[endgroup]
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1921048Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1921996Z Setup moonbit toolchain of version: ^[[32m0.10.17+d971670cd^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1932452Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1944364Z Current moon home: ^[[32m/home/runner/.moon^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.1963990Z Fetch binaries from ^[[32mhttps://cli.moonbitlang.com/binaries/0.10.17%2Bd971670cd/moonbit-linux-x86_64.tar.gz^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.2038399Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.2038881Z                                  Dload  Upload   Total   Spent    Left  Speed
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.2039102Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:49.8580901Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:50.8716582Z   0 95.2M    0 51691    0     0  78938      0  0:21:04 --:--:--  0:21:04 78917
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:51.8581592Z  37 95.2M   37 35.9M    0     0  21.5M      0  0:00:04  0:00:01  0:00:03 21.5M
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:52.2347128Z  78 95.2M   78 75.1M    0     0  28.2M      0  0:00:03  0:00:02  0:00:01 28.2M
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:52.2348037Z 100 95.2M  100 95.2M    0     0  31.4M      0  0:00:03  0:00:03 --:--:-- 31.4M
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7065939Z OS Info:
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7079480Z ╭────────────────┬───────────────────╮
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7084705Z │ name           │ linux             │
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7090965Z │ arch           │ x86_64            │
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7096313Z │ family         │ unix              │
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7098451Z │ kernel_version │ 6.17.0-1022-azure │
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7098801Z ╰────────────────┴───────────────────╯
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7099331Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7109417Z Contents of /home/runner/.moon/bin:
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7118710Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7134107Z   # |                  name                   |  type   |   size   |   modified   
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7134694Z ----+-----------------------------------------+---------+----------+--------------
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7135300Z   0 | /home/runner/.moon/bin/internal         | dir     |   4.0 kB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7135906Z   1 | /home/runner/.moon/bin/moon             | file    |  10.7 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7136461Z   2 | /home/runner/.moon/bin/moon-cram        | file    |   7.7 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7137193Z   3 | /home/runner/.moon/bin/moon-ide         | file    |  16.3 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7138440Z   4 | /home/runner/.moon/bin/moon-lsp         | file    |  22.9 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7139044Z   5 | /home/runner/.moon/bin/moon-wasm-opt    | file    |  19.3 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7139742Z   6 | /home/runner/.moon/bin/moon_cove.wasm   | file    | 949.6 kB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7140356Z   7 | /home/runner/.moon/bin/moon_cove_report | file    |  10.1 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7140929Z   8 | /home/runner/.moon/bin/moonc            | file    |  23.0 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7141515Z   9 | /home/runner/.moon/bin/moonc-prove      | file    |  35.6 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7142092Z  10 | /home/runner/.moon/bin/mooncake         | file    |   4.8 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7142649Z  11 | /home/runner/.moon/bin/moondoc          | file    |  23.3 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7143228Z  12 | /home/runner/.moon/bin/moonfmt          | file    |   9.5 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7144059Z  13 | /home/runner/.moon/bin/mooninfo         | file    |  12.8 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7144710Z  14 | /home/runner/.moon/bin/moonlex.wasm     | file    | 149.3 kB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7145305Z  15 | /home/runner/.moon/bin/moonrun          | file    |  40.0 MB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7145898Z  16 | /home/runner/.moon/bin/moonx            | symlink |      4 B | now          
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7146496Z  17 | /home/runner/.moon/bin/moonyacc.wasm    | file    | 305.6 kB | 21 hours ago 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7159000Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7161668Z Setup moonbit core of version: ^[[32m0.10.17+d971670cd^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7175868Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7186982Z Fetch core assets from ^[[32mhttps://cli.moonbitlang.com/cores/core-0.10.17%2Bd971670cd.tar.gz^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7226983Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7229852Z                                  Dload  Upload   Total   Spent    Left  Speed
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.7230055Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.8583623Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.8601702Z  87 1910k   87 1678k    0     0  12.0M      0 --:--:-- --:--:-- --:--:-- 12.0M
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.8602282Z 100 1910k  100 1910k    0     0  13.5M      0 --:--:-- --:--:-- --:--:-- 13.5M
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.9116756Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.9117196Z Bundle moonbit core^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:53.9129803Z ^[[32m------------------------------------------------------------------------------------------^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:57.8550323Z Finished. moon: ran 324 tasks, now up to date
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:57.8711272Z 
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:57.8712338Z ^[[32mmoonbit was installed successfully to /home/runner/.moon^[[0m
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:57.8722990Z To verify the downloaded binaries, check https://www.moonbitlang.com/download#verifying-binaries for instructions.
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:57.8735674Z To know how to add shell completions, run 'moon shell-completion --help'
+independent-oracles	Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d	2026-10-24T07:04:57.8797479Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=success;conclusion=success;duration_ms=8842]
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	﻿2026-10-24T07:04:57.8840158Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8840371Z with:
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8840483Z   python-version: 3.12.13
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8840607Z   check-latest: false
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8841830Z   token: ***
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8841942Z   update-environment: true
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8842071Z   allow-prereleases: false
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8842195Z   freethreaded: false
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.8842308Z ##[endgroup]
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.9649913Z ##[group]Installed versions
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.9661991Z Version 3.12.13 was not found in the local cache
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.9732551Z (node:2814) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:57.9733413Z (Use `node --trace-deprecation ...` to show where the warning was created)
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:58.7819518Z Version 3.12.13 is available for downloading
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:58.7820419Z Download from "https://github.com/actions/python-versions/releases/download/3.12.13-27650778726/python-3.12.13-linux-24.04-x64.tar.gz"
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:59.4250323Z Extract downloaded archive
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:04:59.4342737Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/9ed5a21b-1ea2-4332-a40e-74fe8f9ceb10 -f /home/runner/work/_temp/03b52c2a-1e48-4482-a994-57a5db663e0d
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:00.8904192Z Execute installation script
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:00.8984683Z Check if Python hostedtoolcache folder exist...
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:00.8985427Z Create Python 3.12.13 folder
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:00.8994442Z Copy Python binaries to hostedtoolcache folder
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:02.1942981Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:02.1971464Z Upgrading pip...
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.7043193Z Collecting pip
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.7528758Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.7669167Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8479610Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 30.3 MB/s eta 0:00:00
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8480035Z 
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8588548Z Installing collected packages: pip
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8589129Z Attempting uninstall: pip
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8602858Z Found existing installation: pip 25.0.1
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8802680Z Uninstalling pip-25.0.1:
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:08.8839064Z Successfully uninstalled pip-25.0.1
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:09.4414468Z Successfully installed pip-26.2.2
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:09.4793835Z Create complete file
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:09.4826063Z Successfully set up CPython (3.12.13)
+independent-oracles	Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065	2026-10-24T07:05:09.4826683Z ##[endgroup]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	﻿2026-10-24T07:05:09.4991714Z ##[group]Run sudo apt-get update && sudo apt-get install -y pspp time
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.4992004Z ^[[36;1msudo apt-get update && sudo apt-get install -y pspp time^[[0m
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5176968Z shell: /usr/bin/bash -e {0}
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5177117Z env:
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5177267Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5177504Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5177942Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5178183Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5178388Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5178591Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5178760Z ##[endgroup]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.5743321Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.6216568Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.6224285Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.6249052Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.6328677Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.6398305Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.7983116Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [652 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8038994Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1400 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8188388Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [310 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8248230Z Get:14 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [589 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8268208Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1706 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8428366Z Get:15 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8468231Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8488220Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.8585376Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.9228851Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1146 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.9268219Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.9288824Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.9321100Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.9759452Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:09.9812027Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:17.3459541Z Fetched 12.6 MB in 1s (11.7 MB/s)
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:17.8721829Z Reading package lists...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:17.8965431Z Reading package lists...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.0287475Z Building dependency tree...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.0293145Z Reading state information...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1304915Z time is already the newest version (1.9-0.2build1).
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1305803Z The following additional packages will be installed:
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1306846Z   libgsl27 libgslcblas0 libgtksourceview-4-0 libgtksourceview-4-common
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1307546Z   libspread-sheet-widget0
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1309948Z Suggested packages:
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1310348Z   gsl-ref-psdoc | gsl-doc-pdf | gsl-doc-info | gsl-ref-html
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1807082Z The following NEW packages will be installed:
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1808473Z   libgsl27 libgslcblas0 libgtksourceview-4-0 libgtksourceview-4-common
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1809168Z   libspread-sheet-widget0 pspp
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1934329Z 0 upgraded, 6 newly installed, 0 to remove and 99 not upgraded.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1948185Z Need to get 8638 kB of archives.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1957458Z After this operation, 34.3 MB of additional disk space will be used.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.1958847Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.3501474Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgslcblas0 amd64 2.7.1+dfsg-6ubuntu2 [104 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.4855779Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgsl27 amd64 2.7.1+dfsg-6ubuntu2 [987 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.6158985Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgtksourceview-4-common all 4.8.4-5build4 [590 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.6942792Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgtksourceview-4-0 amd64 4.8.4-5build4 [233 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.7374380Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libspread-sheet-widget0 amd64 0.10-4.1build2 [47.2 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:18.7767321Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 pspp amd64 2.0.0-3build2 [6678 kB]
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.1147924Z Fetched 8638 kB in 1s (12.1 MB/s)
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.2672450Z Selecting previously unselected package libgslcblas0:amd64.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3977588Z (Reading database ... 
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3977970Z (Reading database ... 5%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3979787Z (Reading database ... 10%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3980006Z (Reading database ... 15%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3980214Z (Reading database ... 20%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3982989Z (Reading database ... 25%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3983153Z (Reading database ... 30%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3983282Z (Reading database ... 35%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3983411Z (Reading database ... 40%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3983538Z (Reading database ... 45%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.3983686Z (Reading database ... 50%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.4264435Z (Reading database ... 55%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.5286751Z (Reading database ... 60%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.7338504Z (Reading database ... 65%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:19.9391411Z (Reading database ... 70%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.1300022Z (Reading database ... 75%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.3306805Z (Reading database ... 80%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.4921171Z (Reading database ... 85%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.6424409Z (Reading database ... 90%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.7948598Z (Reading database ... 95%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.7949090Z (Reading database ... 100%
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.7949620Z (Reading database ... 203540 files and directories currently installed.)
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.7974712Z Preparing to unpack .../0-libgslcblas0_2.7.1+dfsg-6ubuntu2_amd64.deb ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8092349Z Unpacking libgslcblas0:amd64 (2.7.1+dfsg-6ubuntu2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8318444Z Selecting previously unselected package libgsl27:amd64.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8403345Z Preparing to unpack .../1-libgsl27_2.7.1+dfsg-6ubuntu2_amd64.deb ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8408998Z Unpacking libgsl27:amd64 (2.7.1+dfsg-6ubuntu2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8796028Z Selecting previously unselected package libgtksourceview-4-common.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8884375Z Preparing to unpack .../2-libgtksourceview-4-common_4.8.4-5build4_all.deb ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:20.8894500Z Unpacking libgtksourceview-4-common (4.8.4-5build4) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1070588Z Selecting previously unselected package libgtksourceview-4-0:amd64.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1161386Z Preparing to unpack .../3-libgtksourceview-4-0_4.8.4-5build4_amd64.deb ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1167106Z Unpacking libgtksourceview-4-0:amd64 (4.8.4-5build4) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1358586Z Selecting previously unselected package libspread-sheet-widget0:amd64.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1439643Z Preparing to unpack .../4-libspread-sheet-widget0_0.10-4.1build2_amd64.deb ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1444708Z Unpacking libspread-sheet-widget0:amd64 (0.10-4.1build2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1605110Z Selecting previously unselected package pspp.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1691736Z Preparing to unpack .../5-pspp_2.0.0-3build2_amd64.deb ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.1697175Z Unpacking pspp (2.0.0-3build2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.6956651Z Setting up libgslcblas0:amd64 (2.7.1+dfsg-6ubuntu2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.7006035Z Setting up libgsl27:amd64 (2.7.1+dfsg-6ubuntu2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.7049613Z Setting up libspread-sheet-widget0:amd64 (0.10-4.1build2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.7064852Z Setting up libgtksourceview-4-common (4.8.4-5build4) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.7083393Z Setting up libgtksourceview-4-0:amd64 (4.8.4-5build4) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.7097159Z Setting up pspp (2.0.0-3build2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.7113045Z Processing triggers for install-info (7.1-3build2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:21.9783152Z Processing triggers for hicolor-icon-theme (0.17-2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:22.3091154Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:22.4487539Z Processing triggers for man-db (2.12.0-4build2) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:22.4502487Z Not building database; man-db/auto-update is not 'true'.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:22.4510412Z Processing triggers for shared-mime-info (2.4-4) ...
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8150600Z 
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8151407Z Running kernel seems to be up-to-date.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8151939Z 
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8152246Z No services need to be restarted.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8152548Z 
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8152808Z No containers need to be restarted.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8153110Z 
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8153411Z No user sessions are running outdated binaries.
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8153738Z 
+independent-oracles	Run sudo apt-get update && sudo apt-get install -y pspp time	2026-10-24T07:05:23.8154135Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+independent-oracles	Run python -m pip install -r requirements-dev.lock	﻿2026-10-24T07:05:24.4112784Z ##[group]Run python -m pip install -r requirements-dev.lock
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4113190Z ^[[36;1mpython -m pip install -r requirements-dev.lock^[[0m
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4182189Z shell: /usr/bin/bash -e {0}
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4182421Z env:
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4182656Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4183063Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4183434Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4183775Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4184112Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4184447Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.4184725Z ##[endgroup]
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.7093254Z Collecting attrs==25.3.0 (from -r requirements-dev.lock (line 1))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.7700233Z   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.7987973Z Collecting jsonschema==4.23.0 (from -r requirements-dev.lock (line 2))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.8109760Z   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.8299267Z Collecting jsonschema-specifications==2024.10.1 (from -r requirements-dev.lock (line 3))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.8428339Z   Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl.metadata (3.0 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.8769248Z Collecting narwhals==2.27.1 (from -r requirements-dev.lock (line 4))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:24.8892192Z   Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.0297454Z Collecting numpy==2.5.4 (from -r requirements-dev.lock (line 5))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.0431004Z   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.1068460Z Collecting pandas==2.3.3 (from -r requirements-dev.lock (line 6))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.1192081Z   Downloading pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.1842201Z Collecting pyreadstat==1.3.3 (from -r requirements-dev.lock (line 7))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.1973586Z   Downloading pyreadstat-1.3.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.2 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.2136174Z Collecting python-dateutil==3.0.0 (from -r requirements-dev.lock (line 8))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.2260026Z   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.2576348Z Collecting pytz==2026.5 (from -r requirements-dev.lock (line 9))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.2704734Z   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.2899948Z Collecting referencing==0.36.2 (from -r requirements-dev.lock (line 10))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.3021102Z   Downloading referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.4326767Z Collecting rpds-py==0.22.3 (from -r requirements-dev.lock (line 11))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.4456916Z   Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.4624388Z Collecting six==1.17.0 (from -r requirements-dev.lock (line 12))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.4744635Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.4913552Z Collecting typing_extensions==4.16.0 (from -r requirements-dev.lock (line 13))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5035079Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5200797Z Collecting tzdata==2026.5 (from -r requirements-dev.lock (line 14))
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5325282Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5545565Z Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5695541Z Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5862685Z Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.5998171Z Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.6375502Z Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.8507219Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 78.5 MB/s  0:00:00
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.8632845Z Downloading pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.9696424Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 116.6 MB/s  0:00:00
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:25.9827589Z Downloading pyreadstat-1.3.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.1 MB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.0182316Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 87.5 MB/s  0:00:00
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.0314238Z Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.0462277Z Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.0664110Z Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.0820307Z Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (385 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.1050129Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.1212296Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.1350019Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:26.2641543Z Installing collected packages: pytz, tzdata, typing_extensions, six, rpds-py, numpy, narwhals, attrs, referencing, python-dateutil, pyreadstat, pandas, jsonschema-specifications, jsonschema
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:30.5669053Z 
+independent-oracles	Run python -m pip install -r requirements-dev.lock	2026-10-24T07:05:30.5679605Z Successfully installed attrs-25.3.0 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 narwhals-2.27.1 numpy-2.5.4 pandas-2.3.3 pyreadstat-1.3.3 python-dateutil-3.0.0 pytz-2026.5 referencing-0.36.2 rpds-py-0.22.3 six-1.17.0 typing_extensions-4.16.0 tzdata-2026.5
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	﻿2026-10-24T07:05:30.6242178Z ##[group]Run python -m unittest discover -s tests -p '*_test.py'
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6242605Z ^[[36;1mpython -m unittest discover -s tests -p '*_test.py'^[[0m
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6302349Z shell: /usr/bin/bash -e {0}
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6302580Z env:
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6302913Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6303213Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6303547Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6303861Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6304156Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6304456Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:30.6304692Z ##[endgroup]
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:31.8048736Z .
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:31.8049199Z ----------------------------------------------------------------------
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:31.8049539Z Ran 1 test in 1.110s
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:31.8049830Z 
+independent-oracles	Run python -m unittest discover -s tests -p '*_test.py'	2026-10-24T07:05:31.8049903Z OK
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	﻿2026-10-24T07:05:31.8146358Z ##[group]Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8146875Z ^[[36;1mpython tools/verify.py --all --require-public --require-pspp --output evidence/ci-run^[[0m
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8211816Z shell: /usr/bin/bash -e {0}
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8211968Z env:
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8212122Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8212369Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8212593Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8212798Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8213001Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8213203Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:31.8213378Z ##[endgroup]
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:32.7151079Z AC01: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:32.9755582Z AC02: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:36.3409153Z AC03: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:40.0688782Z AC04: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:42.8721789Z AC05: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:43.3182467Z AC06: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:43.3183054Z AC07: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:44.2657249Z AC08: supported_fail
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:45.2358990Z AC09: expected_rejection
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:45.2364220Z AC10: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:45.2368819Z AC11: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:46.0821768Z AC12: supported_fail
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:47.4368734Z AC13: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:48.2807624Z AC14: supported_fail
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:48.2808689Z AC15: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:48.2809125Z AC16: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:49.1368733Z AC17: supported_fail
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:57.8945088Z AC18: supported_pass
+independent-oracles	Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run	2026-10-24T07:05:57.9447127Z ##[error]Process completed with exit code 1.
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	﻿2026-10-24T07:05:57.9491219Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9491444Z with:
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9491559Z   name: compatibility-evidence
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9491833Z   path: evidence/ci-run/summary.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/run.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/**/result.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	evidence/ci-run/**/results.json
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9492121Z   if-no-files-found: error
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9492251Z   compression-level: 6
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9492364Z   overwrite: false
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9492627Z   include-hidden-files: false
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9492751Z env:
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9492884Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9493115Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9493337Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9493536Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9493735Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9493965Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:57.9494133Z ##[endgroup]
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.0466401Z (node:5592) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.0467306Z (Use `node --trace-deprecation ...` to show where the warning was created)
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.1054635Z With the provided path, there will be 32 files uploaded
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.1055483Z Artifact name is valid!
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.1055874Z Root directory input is valid!
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.3726823Z Beginning upload of artifact content to blob storage
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.4100518Z (node:5592) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.5774236Z Uploaded bytes 24922
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.6157629Z Finished uploading artifact content to blob storage!
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.6158680Z SHA256 digest of uploaded artifact zip is 6837fba64c70e4a44b2706b25410cd2e438bd94898af407a28135c4984d5008b
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:58.6159351Z Finalizing artifact upload
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:59.0701054Z Artifact compatibility-evidence.zip successfully finalized. Artifact ID 12552056778
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:59.0701925Z Artifact compatibility-evidence has been successfully uploaded! Final size is 24922 bytes. Artifact ID is 12552056778
+independent-oracles	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-24T07:05:59.0719021Z Artifact download URL: https://github.com/z2823253773-p/moonsav/actions/runs/40072702661/artifacts/12552056778
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-24T07:05:59.1394150Z Post job cleanup.
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.1955481Z [command]/usr/bin/git version
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.1983378Z git version 2.55.0
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.2062094Z Temporarily overriding HOME='/home/runner/work/_temp/df0943bf-1d15-47d8-97e7-18be68f28886' before making global git config changes
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.2078383Z Adding repository directory to the temporary git global config as a safe directory
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.2089157Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.2801696Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.2840220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.3021945Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.3046100Z http.https://github.com/.extraheader
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.3056533Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.3287442Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.3465838Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+independent-oracles	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-24T07:05:59.3495506Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+independent-oracles	Complete job	﻿2026-10-24T07:05:59.3931793Z Cleaning up orphan processes
+independent-oracles	Complete job	2026-10-24T07:05:59.4152515Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

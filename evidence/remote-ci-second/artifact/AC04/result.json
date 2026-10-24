@@ -1,0 +1,10 @@
+{
+  "case": "AC04",
+  "status": "supported_pass",
+  "utc": "2026-10-24T07:05:36.340762+00:00",
+  "detail": {
+    "scope": "all bytecodes, cross-row controls, nondefault bias, known/unknown/zero and malformed endings",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": false
+  }
+}

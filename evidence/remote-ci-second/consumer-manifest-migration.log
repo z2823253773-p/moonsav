@@ -1,0 +1,2 @@
+Warning: Migrating to moon.mod at module root '/Users/henryz/Desktop/比赛/moonsav/.dev/consumer-migration', deprecated moon.mod.json is removed.
+Error: moon.mod does not support local dependency `z2823253773/moonsav` in `import`; use workspace configuration in `moon.work` instead. See https://docs.moonbitlang.com/en/latest/toolchain/moon/module.html#dependency-management

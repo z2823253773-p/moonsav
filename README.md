@@ -57,9 +57,20 @@ checker只读，验证版本/文件集合/哈希/大小/类型/原位表示/逐�
 
 源构建只接受 toolchain.json 中两组精确配对：原基线 moon0.1.20260713 / moonc v0.10.4+2cc641edf，以及 CI 固定 moon0.1.20261023 / moonc v0.10.17+d971670cd。原版官方归档目前返回403；新版在项目隔离目录验证，两版不混用 core。`--version` 报告实际构建配对。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
 
-```json
-{"name":"example/consumer","deps":{"z2823253773/moonsav":{"path":"../moonsav-source"}}}
+在消费者的 `moon.mod` 声明：
+
+```moonbit
+name = "example/consumer"
+import { "z2823253773/moonsav@0.1.0" }
 ```
+
+在同时包含消费者和解压库的目录写 `moon.work`：
+
+```moonbit
+members = ["consumer", "moonsav-source"]
+```
+
+工作区从本地解析库，不访问尚未发布的包；新版工具链不接受旧 JSON 模块配置。随包示例已提供 `moon.mod`、`moon.pkg`、`moon.work`，两组固定工具链都可运行。参见 [MoonBit 本地依赖说明](https://docs.moonbitlang.com/en/latest/toolchain/moon/module.html#dependency-management)。
 
 包import：`"z2823253773/moonsav"`。完整可编译例子在 `examples/consumer/main.mbt`（包含合成SAV字节，无文件I/O）；从该目录执行 `moon run . --target js`，也可native/wasm-gc。库不读文件、不打印、不退出进程。
 

@@ -1,0 +1,44 @@
+if (options.shell) {
+    validateArgumentNullCheck(options.shell, 'options.shell');
+    if (args.length > 0 && !emittedDEP0190Already) {
+      process.emitWarning(
+        'Passing args to a child process with shell option true can lead to security ' +
+        'vulnerabilities, as the arguments are not escaped, only concatenated.',
+        'DeprecationWarning',
+        'DEP0190');
+      emittedDEP0190Already = true;
+    }
+
+    const command = args.length > 0 ? `${file} ${ArrayPrototypeJoin(args, ' ')}` : file;
+    // Set the shell, switches, and commands.
+    if (process.platform === 'win32') {
+      if (typeof options.shell === 'string')
+        file = options.shell;
+      else
+        file = process.env.comspec || 'cmd.exe';
+      // '/d /s /c' is used only for cmd.exe.
+      if (RegExpPrototypeExec(/^(?:.*\\)?cmd(?:\.exe)?$/i, file) !== null) {
+        args = ['/d', '/s', '/c', `"${command}"`];
+        windowsVerbatimArguments = true;
+      } else {
+        args = ['-c', command];
+      }
+    } else {
+      if (typeof options.shell === 'string')
+        file = options.shell;
+      else if (process.platform === 'android')
+        file = '/system/bin/sh';
+      else
+        file = '/bin/sh';
+      args = ['-c', command];
+    }
+  }
+
+  if (typeof options.argv0 === 'string') {
+    ArrayPrototypeUnshift(args, options.argv0);
+  } else {
+    ArrayPrototypeUnshift(args, file);
+  }
+
+  // Shallow copy to guarantee changes won't impact process.env
+  const env = options.env || { ...pro

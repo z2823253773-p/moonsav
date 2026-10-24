@@ -11,3 +11,11 @@ New build guard permits only the two exact moon/moonc pairs declared in toolchai
 Both local toolchains passed49 Node tests and7 core tests per JS/native/wasm-gc. Source archive inspection still includes its standalone consumer; the suspected modern packaging regression was not reproduced and no packaging workaround was added. Acceptance-runner metadata formerly hardcoded macOS/not_run even when run by Linux Actions; a real entry regression caught this and now passes with actual system/architecture, CI flag/runner label/run URL. Per-job metadata never claims other workflow jobs or designated acceptance passed.
 
 All first-run job state/logs, HTTP probes, isolated archive hashes, local red/green and setup failures are preserved in evidence/remote-ci-first. Current workflow results remain pending until a new run reaches and passes actual product/oracle/install tests. Final artifact hashes and branch state will be updated only after verification.
+
+## Second actual run
+
+Run40072702661 atb20b15f: Ubuntu and macOS platform jobs succeeded. Windows shared corpus and JS/wasm-gc core checks succeeded but first-use npm pack failed EINVALIDTAGNAME because shell mode split the intentional Chinese/space directory; the independent reviewer reproduced the same argument error. Fixed by invoking npm JavaScript CLI through Node with argument arrays and no shell; local real archive smoke passed.
+
+Independent Linux full entry completed13 supported_pass + AC09 expected rejects, with four package-dependent failures (AC08/12/14/17) from modern Moon rejecting consumer moon.mod.json/local path configuration. The same failure was reproduced locally. Migrated only example configuration to native moon.mod/moon.pkg and local moon.work, per official dependency-management docs; root archive includes them. Actual regenerated archive install and extracted consumers on JS/native/wasm-gc passed; direct U1 also passed on both toolchains/three backends. README now uses the workspace contract.
+
+Raw second-run jobs, downloaded aggregate artifact, local full failure, reviewer characterization and corrected package logs are in evidence/remote-ci-second. Original delivered archives remain unchanged in dist/history/8ae93f2; dist root currently holds the newer candidate. A final clean committed build/run is still required; intermediate package hashes are not final.
