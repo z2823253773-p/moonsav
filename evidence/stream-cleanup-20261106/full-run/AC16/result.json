@@ -1,0 +1,10 @@
+{
+  "case": "AC16",
+  "status": "supported_pass",
+  "utc": "2026-11-06T16:02:50.794941+00:00",
+  "detail": {
+    "scope": "U3 hashes, schemas, rehashed semantic damage, metadata/CSV policy, no canonical, symlinks, TOCTOU and inherited warnings",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

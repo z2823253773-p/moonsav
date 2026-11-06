@@ -1,0 +1,10 @@
+{
+  "case": "AC08",
+  "status": "supported_pass",
+  "utc": "2026-11-06T16:02:45.258639+00:00",
+  "detail": {
+    "scope": "canonical plus standard CSV, multiline/NA/backslash/leading zero/trailing spaces, NUL rejection and NDJSON acceptance",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

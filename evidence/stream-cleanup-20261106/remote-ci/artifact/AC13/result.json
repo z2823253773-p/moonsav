@@ -1,0 +1,11 @@
+{
+  "case": "AC13",
+  "status": "supported_pass",
+  "utc": "2026-11-06T16:08:39.889882+00:00",
+  "detail": {
+    "scope": "clean committed clone reruns the same acceptance entry AC01 with fixed existing dev interpreter; source SHA confirmed",
+    "sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
+    "child": "clean-clone-summary.json",
+    "independent_review": "docs/progress/INDEPENDENT_REVIEW.md (agent, not external user acceptance)"
+  }
+}

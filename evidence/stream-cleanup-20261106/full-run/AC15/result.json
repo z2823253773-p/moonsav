@@ -1,0 +1,10 @@
+{
+  "case": "AC15",
+  "status": "supported_pass",
+  "utc": "2026-11-06T16:02:50.794840+00:00",
+  "detail": {
+    "scope": "U2 dictionary/full scope and summaries, exact variables, structured warning/error recovery",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

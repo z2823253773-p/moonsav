@@ -1,11 +1,11 @@
 {
-  "delivery_scope": "contract-repaired candidate; designated re-acceptance pending",
-  "product_git_sha": "a3c4b225008c9af2c4fac3d60a63339ada8c19c7",
+  "delivery_scope": "stream-cleanup repaired candidate; designated re-acceptance pending",
+  "product_git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
   "build": {
     "version": "0.1.0",
-    "git_sha": "a3c4b225008c9af2c4fac3d60a63339ada8c19c7",
+    "git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
     "dirty": false,
-    "source_tree_sha256": "7e73f6a651c53450b84a93a0c65815e91829112fbcb4dea25a0989e3ff6b2ace",
+    "source_tree_sha256": "f1334fe3947b42e0dba4e70a6ac3f5340b25c6498e1da3ca756004fc7cc0dfd7",
     "moon": "0.1.20261023",
     "moonc": "v0.10.17+d971670cd",
     "node": "v24.15.0",
@@ -13,58 +13,59 @@
   },
   "artifacts": {
     "moonsav-0.1.0.tgz": {
-      "sha256": "3be70b3312b6f632d1c03a2aea5106255ed3f71c6a2260666191b70e9371dea0",
-      "size_bytes": 309965
+      "sha256": "9817d55a6880693ecaf615c3ce7da721b4eda951202371c2d410588bb29f5bc7",
+      "size_bytes": 310035
     },
     "moonsav-source-0.1.0.zip": {
-      "sha256": "958968861f79eb08eaaed87368f117bfb95e94420f780ea9a20c3ac283b49517",
-      "size_bytes": 73425
+      "sha256": "a5f7ad5ae55a0a81755d2cbc01e788960c0ba7bdf3a16481f0972f9119b35618",
+      "size_bytes": 73493
     }
   },
-  "local_acceptance": "evidence/contracts-20261105/full-run/summary.json",
-  "archive_challenge": "evidence/contracts-20261105/archive-green-results.json",
+  "local_acceptance": "evidence/stream-cleanup-20261106/full-run/summary.json",
+  "archive_challenge": "evidence/stream-cleanup-20261106/archive-green-results.json",
+  "exact_archive_stream_ownership": "evidence/stream-cleanup-20261106/exact-archive-stream-results.json",
   "remote_ci": {
     "repository": "z2823253773-p/moonsav",
     "private": true,
-    "run_id": 42243643477,
-    "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477",
-    "head_sha": "a3c4b225008c9af2c4fac3d60a63339ada8c19c7",
+    "run_id": 42248646372,
+    "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42248646372",
+    "head_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
     "conclusion": "success",
     "jobs": [
       {
         "name": "independent-oracles",
         "conclusion": "success",
-        "databaseId": 127980099265,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980099265"
-      },
-      {
-        "name": "platform (windows-2025)",
-        "conclusion": "success",
-        "databaseId": 127980099828,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980099828"
-      },
-      {
-        "name": "platform (ubuntu-24.04)",
-        "conclusion": "success",
-        "databaseId": 127980100006,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980100006"
+        "databaseId": 127997454808,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42248646372/job/127997454808"
       },
       {
         "name": "platform (macos-15)",
         "conclusion": "success",
-        "databaseId": 127980100282,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980100282"
+        "databaseId": 127997455434,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42248646372/job/127997455434"
+      },
+      {
+        "name": "platform (windows-2025)",
+        "conclusion": "success",
+        "databaseId": 127997455436,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42248646372/job/127997455436"
+      },
+      {
+        "name": "platform (ubuntu-24.04)",
+        "conclusion": "success",
+        "databaseId": 127997455572,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42248646372/job/127997455572"
       }
     ],
-    "independent_oracle_summary": "evidence/contracts-20261105/remote-ci/artifact/summary.json"
+    "independent_oracle_summary": "evidence/stream-cleanup-20261106/remote-ci/artifact/summary.json"
   },
-  "independent_review": "evidence/contracts-20261105/independent-review/RECHECK-a3c4b22.md",
-  "independent_exact_archive_consumption": "evidence/contracts-20261105/independent-review/archive-consumer-result.json",
+  "independent_review": "evidence/stream-cleanup-20261106/independent-review/REVIEW.md",
+  "independent_exact_archive_consumption": "evidence/stream-cleanup-20261106/independent-review/archive-consumer-result.json",
   "external_gaps": [
     "designated acceptance chat re-approval pending; old CHANGES_REQUIRED retained",
     "no external-human trial",
     "Windows native core/POSIX SIGKILL guarantees not claimed"
   ],
-  "historical_artifacts": "dist/history/0afbe34 and dist/history/8ae93f2; original hashes preserved",
+  "historical_artifacts": "dist/history/a3c4b22,0afbe34,8ae93f2; original hashes preserved",
   "publication": "private GitHub only; no public registry release or competition registration"
 }

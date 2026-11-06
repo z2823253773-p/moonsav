@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9817d55a6880693ecaf615c3ce7da721b4eda951202371c2d410588bb29f5bc7",
+      "size_bytes": 310035,
+      "origin": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/stream-cleanup-20261106/clean-candidate/dist/moonsav-0.1.0.tgz",
+      "tested_copy": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/stream-cleanup-review-20261106/exact-artifacts/moonsav-0.1.0.tgz"
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "a5f7ad5ae55a0a81755d2cbc01e788960c0ba7bdf3a16481f0972f9119b35618",
+      "size_bytes": 73493,
+      "origin": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/stream-cleanup-20261106/clean-candidate/dist/moonsav-source-0.1.0.zip",
+      "tested_copy": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/stream-cleanup-review-20261106/exact-artifacts/moonsav-source-0.1.0.zip"
+    }
+  },
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "version": {
+    "product": "moonsav",
+    "version": "0.1.0",
+    "build": {
+      "version": "0.1.0",
+      "git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
+      "dirty": false,
+      "source_tree_sha256": "f1334fe3947b42e0dba4e70a6ac3f5340b25c6498e1da3ca756004fc7cc0dfd7",
+      "moon": "0.1.20261023",
+      "moonc": "v0.10.17+d971670cd",
+      "node": "v24.15.0",
+      "icu": "78.2"
+    },
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2",
+    "encodings": [
+      "utf-8",
+      "windows-1252",
+      "gbk/cp936-stable",
+      "gb18030/stable-intersection"
+    ],
+    "schema_major": 1
+  },
+  "build_metadata": {
+    "version": "0.1.0",
+    "git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
+    "dirty": false,
+    "source_tree_sha256": "f1334fe3947b42e0dba4e70a6ac3f5340b25c6498e1da3ca756004fc7cc0dfd7",
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "node_cli": {
+    "offline_install": true,
+    "fresh_cache": true,
+    "PATH": "node-only",
+    "moon_on_PATH": false,
+    "python_on_PATH": false,
+    "rows": 5
+  },
+  "source_consumer": {
+    "profiles": [
+      "original",
+      "compatibility"
+    ],
+    "targets": [
+      "js",
+      "native",
+      "wasm-gc"
+    ],
+    "passed": 6
+  }
+}
