@@ -24,10 +24,13 @@ export function checkBundle(directory,options={}) {
  for(const name of entries)if(!expected.has(name)){const stat=fs.lstatSync(path.join(directory,name));if(!stat.isFile()||stat.isSymbolicLink())fail('IntegrityMismatch','Extra bundle entries must be ordinary files');warnings.push({warning_code:'UnverifiedExtraFile',scope:'bundle',suggested_action:'Extra ordinary files were not verified or used as data'})}
  if(o.strict&&warnings.length)fail('WarningRejected','Bundle warnings rejected by --fail-on-warning');
  const streams={};const track=name=>{const h=createHash('sha256');let total=0;streams[name]=()=>{const f=manifest.files[name];if(total!==f.size_bytes||h.digest('hex')!==f.sha256)fail('IntegrityMismatch','Parsed data bytes disagree with manifest')};return b=>{total+=b.length;if(total>manifest.files[name].size_bytes)fail('IntegrityMismatch','Data grew while parsing');h.update(b)}};
- let csv=null;if(manifest.profile==='csv_with_canonical'){csv=csvRecords(regular('data.csv'),o.maxOutputBytes,track('data.csv'));const header=csv.next();if(header.done)fail('IntegrityMismatch','CSV header is missing');checkerCall('check_row_bridge','',header.value,1)}
+ let csv=null;
+ try {
+ if(manifest.profile==='csv_with_canonical'){csv=csvRecords(regular('data.csv'),o.maxOutputBytes,track('data.csv'));const header=csv.next();if(header.done)fail('IntegrityMismatch','CSV header is missing');checkerCall('check_row_bridge','',header.value,1)}
  for(const line of textLines(regular('data.ndjson'),o.maxOutputBytes,track('data.ndjson'))){const view=csv?.next();if(view?.done)fail('IntegrityMismatch','CSV has too few records');checkerCall('check_row_bridge',line,view?.value??'',csv?2:0)}
  if(csv&&!csv.next().done)fail('IntegrityMismatch','CSV has too many records');
  for(const finish of Object.values(streams))finish();
  const summary=checkerCall('check_end_bridge').summary;
  return {report_version:'moonsav.report/1',command:'check-bundle',status:warnings.length?'passed_with_warnings':'passed',validation_scope:'bundle',declared_rows:d.declared_rows,actual_rows:summary.actual_rows,logical_variables:d.logical_variables,warnings,uninterpreted_metadata:d.uninterpreted_metadata,error:null,counts:summary.counts,completed:true,authentication:'not_provided'};
+ } finally {csv?.return()}
 }

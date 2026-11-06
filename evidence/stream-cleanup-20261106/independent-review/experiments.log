@@ -1,0 +1,68 @@
+[
+  {
+    "label": "good",
+    "error": null,
+    "beforeLeaks": 0,
+    "afterLeaks": 0
+  },
+  {
+    "label": "wrong header",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 1,
+    "afterLeaks": 0
+  },
+  {
+    "label": "canonical syntax",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 1,
+    "afterLeaks": 0
+  },
+  {
+    "label": "canonical no final newline",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 1,
+    "afterLeaks": 0
+  },
+  {
+    "label": "CSV too many",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 1,
+    "afterLeaks": 0
+  },
+  {
+    "label": "CSV too few",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 0,
+    "afterLeaks": 0
+  },
+  {
+    "label": "CSV separator LF",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 0,
+    "afterLeaks": 0
+  },
+  {
+    "label": "CSV unterminated quote",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 0,
+    "afterLeaks": 0
+  },
+  {
+    "label": "CSV empty",
+    "error": "IntegrityMismatch",
+    "beforeLeaks": 0,
+    "afterLeaks": 0
+  },
+  {
+    "label": "NDJSON invalid UTF8",
+    "error": "InvalidEncoding",
+    "beforeLeaks": 1,
+    "afterLeaks": 0
+  },
+  {
+    "label": "NDJSON open IO",
+    "error": "EIO",
+    "beforeLeaks": 1,
+    "afterLeaks": 0
+  }
+]

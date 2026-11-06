@@ -240,6 +240,7 @@ stateDiagram-v2
 
 - output_state 是 not_created/incomplete/committed/unknown；旧目录冲突不表示本次创建了有效结果。提交点是移除 INCOMPLETE，不是开始写文件或打印路径。
 - 成功提交的 exporter 产物应能被同版 checker 接受；验收反例包含零行 NUL 名称、编码覆盖、长字符串和大记录。磁盘/外部程序在完成后修改文件不属于 exporter 的自洽保证。
+- bundle 检查器拥有其打开的 CSV/NDJSON 读取器；成功或校验异常返回前均关闭文件句柄，不将失败读取器留给下一次调用。
 - 输入文件按打开句柄/前后状态检查变化；文件哈希绑定实际消费的字节。没有跨多个文件的对抗式原子快照或断电持久化保证；POSIX 权限/进程中断实测与 Windows 宿主 ACL 不混同。
 - JSON Schema 管形状和局部范围，不能独自证明 base64/文本、decimal/bits、缺失定义、物理布局、计数及哈希关系；这些必须运行 checker。机器接口不接受自动修复或默认补造缺字段。
 - 自定义 decoder 是受信任的适配边界：调用方必须提供严格、确定、无损且与声明 profile 一致的实现及身份。库不能识别一个故意谎报身份或返回有损文本的回调，也不能控制其外部副作用。

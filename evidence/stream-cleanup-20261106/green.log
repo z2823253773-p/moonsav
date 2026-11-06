@@ -1,0 +1,12 @@
+✔ failed CSV header check closes every opened data descriptor (46.023583ms)
+✔ failed canonical row check closes every opened data descriptor (37.64425ms)
+✔ failed canonical final newline check closes every opened data descriptor (35.708ms)
+✔ failed extra CSV row check closes every opened data descriptor (34.687917ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 185.667084

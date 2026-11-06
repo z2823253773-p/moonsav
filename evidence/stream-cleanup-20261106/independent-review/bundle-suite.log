@@ -1,0 +1,29 @@
+✔ canonical and multiline CSV validate as one paired bundle (68.7655ms)
+✔ rehashing a wrong missing state cannot bypass semantic checker (68.674041ms)
+✔ rehashing CSV that disagrees with canonical fails (65.801708ms)
+✔ INCOMPLETE always rejects an otherwise completed bundle (59.684583ms)
+✔ missing canonical and symlink metadata reject (124.50425ms)
+✔ rehashing metadata cannot admit duplicate semantic label (67.391625ms)
+✔ rehashing metadata cannot admit bad weight reference (65.85175ms)
+✔ rehashing metadata cannot admit invalid discrete endpoint (64.757417ms)
+✔ rehashing metadata cannot admit impossible numeric slot width (65.724833ms)
+✔ canonical bytes parsed after a file swap must still match manifest hash (44.516875ms)
+✔ invalid UTF8 metadata.json is a data rejection, not I/O (61.604291ms)
+✔ invalid UTF8 manifest.json is a data rejection, not I/O (60.024625ms)
+✔ invalid UTF8 data.ndjson is a data rejection, not I/O (66.570708ms)
+✔ invalid UTF8 data.csv is a data rejection, not I/O (66.342625ms)
+✔ metadata policy unsupported CSV policy cannot bypass checker with a new hash (63.495625ms)
+✔ metadata policy unknown encoding selection policy cannot bypass checker with a new hash (63.905167ms)
+✔ metadata policy unknown retained semantic extension cannot bypass checker with a new hash (68.940292ms)
+✔ failed CSV header check closes every opened data descriptor (35.850167ms)
+✔ failed canonical row check closes every opened data descriptor (38.408292ms)
+✔ failed canonical final newline check closes every opened data descriptor (36.488417ms)
+✔ failed extra CSV row check closes every opened data descriptor (34.843417ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1328.581084

@@ -1,3 +1,9 @@
+# Current follow-up repair — 2026-11-06
+
+A real file-descriptor leak was reproduced when a CSV+canonical bundle check fails after the CSV generator opens. Four boundary cases failed with still-open real descriptors. Explicit iterator ownership finally now closes them; focused4/4 and initial full112/112 Node tests pass. Both profile checks and independent source review are underway; current root dist remains the previously verified a3c4b22 delivery until a fresh committed clone/full entry rebuilds it. Existing private push/CI authorization persists; no public release. Plan: docs/superpowers/plans/2026-11-06-stream-cleanup.md.
+
+---
+
 # MoonSav current state — 2026-11-06
 
 Contract repair source `a3c4b225008c9af2c4fac3d60a63339ada8c19c7`; branch implementation; private repository https://github.com/z2823253773-p/moonsav . Current report HEAD/upstream/status are checked live in ignored dist/delivery-state.json. Later report commits do not change frozen product files.

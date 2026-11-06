@@ -1,0 +1,70 @@
+✖ failed CSV header check closes every opened data descriptor (53.946958ms)
+✖ failed canonical row check closes every opened data descriptor (35.156625ms)
+✖ failed canonical final newline check closes every opened data descriptor (35.48175ms)
+✖ failed extra CSV row check closes every opened data descriptor (35.780208ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 207.791417
+
+✖ failing tests:
+
+test at tests/bundle.test.mjs:23:94
+✖ failed CSV header check closes every opened data descriptor (53.946958ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:34:10)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'IntegrityMismatch' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:23:94
+✖ failed canonical row check closes every opened data descriptor (35.156625ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception: failed check must release its open files
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:36:35)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'EBADF' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:23:94
+✖ failed canonical final newline check closes every opened data descriptor (35.48175ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception: failed check must release its open files
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:36:35)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'EBADF' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/bundle.test.mjs:23:94
+✖ failed extra CSV row check closes every opened data descriptor (35.780208ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception: failed check must release its open files
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/bundle.test.mjs:36:35)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'EBADF' },
+    operator: 'throws',
+    diff: 'simple'
+  }

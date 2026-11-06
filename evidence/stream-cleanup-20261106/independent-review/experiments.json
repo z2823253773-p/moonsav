@@ -1,0 +1,583 @@
+[
+  {
+    "label": "good",
+    "before": {
+      "result": {
+        "status": "passed",
+        "actual_rows": 5
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    },
+    "after": {
+      "result": {
+        "status": "passed",
+        "actual_rows": 5
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "wrong header",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV header/order differs from dictionary"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ]
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV header/order differs from dictionary"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "canonical syntax",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "Invalid JSON structure"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ]
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "Invalid JSON structure"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "canonical no final newline",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "NDJSON requires final newline"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ]
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "NDJSON requires final newline"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "CSV too many",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV has too many records"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ]
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV has too many records"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "CSV too few",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV has too few records"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV has too few records"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "CSV separator LF",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV record separator must be CRLF"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": []
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV record separator must be CRLF"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "CSV unterminated quote",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "Unterminated CSV record"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "Unterminated CSV record"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "CSV empty",
+    "before": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV header is missing"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": []
+    },
+    "after": {
+      "error": {
+        "code": "IntegrityMismatch",
+        "message": "CSV header is missing"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "NDJSON invalid UTF8",
+    "before": {
+      "error": {
+        "code": "InvalidEncoding",
+        "message": "Bundle text contains malformed UTF-8 bytes"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ]
+    },
+    "after": {
+      "error": {
+        "code": "InvalidEncoding",
+        "message": "Bundle text contains malformed UTF-8 bytes"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 12,
+          "file": "data.ndjson"
+        }
+      ],
+      "leaked": []
+    }
+  },
+  {
+    "label": "NDJSON open IO",
+    "before": {
+      "error": {
+        "code": "EIO",
+        "message": "review injected EIO"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ]
+    },
+    "after": {
+      "error": {
+        "code": "EIO",
+        "message": "review injected EIO"
+      },
+      "opened": [
+        {
+          "fd": 11,
+          "file": "data.csv"
+        },
+        {
+          "fd": 11,
+          "file": "data.ndjson"
+        },
+        {
+          "fd": 11,
+          "file": "data.csv"
+        }
+      ],
+      "leaked": []
+    }
+  }
+]
