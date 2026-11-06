@@ -1,0 +1,34 @@
+✔ GNU F warning and strict mode preserve raw numeric data (283.112958ms)
+✔ GNU DATE warning and strict mode preserve raw numeric data (228.9435ms)
+✔ GNU TIME warning and strict mode preserve raw numeric data (231.277458ms)
+✔ GNU DATETIME warning and strict mode preserve raw numeric data (233.956417ms)
+✔ GNU ADATE warning and strict mode preserve raw numeric data (230.201583ms)
+✔ GNU JDATE warning and strict mode preserve raw numeric data (229.660333ms)
+✔ GNU DTIME warning and strict mode preserve raw numeric data (230.843959ms)
+✔ GNU WKDAY warning and strict mode preserve raw numeric data (231.49675ms)
+✔ GNU MONTH warning and strict mode preserve raw numeric data (229.204666ms)
+✔ GNU MOYR warning and strict mode preserve raw numeric data (227.357292ms)
+✔ GNU QYR warning and strict mode preserve raw numeric data (225.004208ms)
+✔ GNU WKYR warning and strict mode preserve raw numeric data (231.716083ms)
+✔ GNU PCT warning and strict mode preserve raw numeric data (269.780875ms)
+✔ GNU DOT warning and strict mode preserve raw numeric data (271.690125ms)
+✔ GNU CCA warning and strict mode preserve raw numeric data (265.180791ms)
+✔ GNU CCB warning and strict mode preserve raw numeric data (269.550916ms)
+✔ GNU CCC warning and strict mode preserve raw numeric data (267.664ms)
+✔ GNU CCD warning and strict mode preserve raw numeric data (267.655208ms)
+✔ GNU CCE warning and strict mode preserve raw numeric data (267.791792ms)
+✔ GNU EDATE warning and strict mode preserve raw numeric data (228.895833ms)
+✔ GNU SDATE warning and strict mode preserve raw numeric data (225.940666ms)
+✔ GNU MTIME warning and strict mode preserve raw numeric data (230.583875ms)
+✔ GNU YMDHMS warning and strict mode preserve raw numeric data (225.360666ms)
+✔ date warning uses print 5 and write 40 once per variable (65.893208ms)
+✔ date warning uses print 41 and write 5 once per variable (63.571792ms)
+✔ date warning uses print 40 and write 41 once per variable (62.821292ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5827.153833

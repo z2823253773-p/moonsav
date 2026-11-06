@@ -1,0 +1,32 @@
+{
+  "url": "https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html",
+  "observed": "official GNU search result full code table; direct page opens timed out twice",
+  "independent_retained_official_source": ".dev/sources/pspp-2.0.1/src/data/format.def",
+  "source_sha256": "c55f06c688aac9250c08ecd2d09ebfbcb50f5e2d9b7b6a36d0c8b7993004ec7a",
+  "date_time_codes": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    38,
+    39,
+    40,
+    41
+  ],
+  "numeric_gap_codes": {
+    "31": "PCT",
+    "32": "DOT",
+    "33": "CCA",
+    "34": "CCB",
+    "35": "CCC",
+    "36": "CCD",
+    "37": "CCE"
+  }
+}

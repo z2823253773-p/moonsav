@@ -1,0 +1,32 @@
+{
+  "verdict": "PASSED_WITH_NOTES",
+  "report": "docs/acceptance/2026-11-06/REPORT.md",
+  "report_sha256": "a1d03cacdcf676d743d51a4eaff5bcbef76a4c3872debda280ef64a3ba7b1878",
+  "review_date": "2026-11-06",
+  "product_git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
+    "dirty": false,
+    "source_tree_sha256": "f1334fe3947b42e0dba4e70a6ac3f5340b25c6498e1da3ca756004fc7cc0dfd7",
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9817d55a6880693ecaf615c3ce7da721b4eda951202371c2d410588bb29f5bc7",
+      "size_bytes": 310035
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "a5f7ad5ae55a0a81755d2cbc01e788960c0ba7bdf3a16481f0972f9119b35618",
+      "size_bytes": 73493
+    }
+  },
+  "notes": [
+    "P3 RawDateFormat category misclassification",
+    "README/current handoff state stale"
+  ],
+  "scope": "designated product technical acceptance only; exact e453463 archives; no contest approval or external-human trial"
+}

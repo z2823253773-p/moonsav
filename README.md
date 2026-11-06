@@ -2,7 +2,7 @@
 
 MoonBit 原生 SPSS `.sav` 字节读取库和离线 CLI。MoonBit 实现格式解析、传统压缩、字典、长字符串重组、标签/缺失语义以及 bundle 序列化和语义校验；Node 只负责文件、哈希、严格编码适配与进程入口。
 
-本地开发版本 0.1.0，尚未公开发布。README 的本地验证范围以 evidence 与 docs/progress 为准；CI 定义不代表远端已通过，开发者复现不称用户试用，独立代理审查不代替指定验收对话。
+版本 0.1.0，尚未公开发布。2026-11-06 原指定验收对冻结源码 `e453463` 及对应精确归档给出 **PASSED_WITH_NOTES（产品技术验收有保留通过）**，原 F1–F5 已复验通过；保留意见是日期提示分类 P3 和文档状态。当前修正日期提示，后续构建的源码、归档哈希、专项验证与新 CI 结果见[交付清单](https://github.com/z2823253773-p/moonsav/blob/implementation/docs/delivery-manifest.json)和[当前交接](https://github.com/z2823253773-p/moonsav/blob/implementation/docs/FINAL_HANDOFF.md)。旧版技术验收结论只覆盖其记录的精确归档，不自动覆盖新包。产品技术验收不代表赛事初审、组织方认可或外部真人试用。
 
 ## 本地安装与第一次运行
 
@@ -27,14 +27,23 @@ npm install --offline --ignore-scripts ./dist/moonsav-0.1.0.tgz
 - 1–32767字节字符串，包含13/14长名/分段、21值标签、22用户缺失，跨字节单元/分段后才解码；逻辑宽度内空格保留。字符串没有数值系统缺失。
 - 数值/字符串值标签，离散/闭区间/范围加单值用户缺失，LOWEST/HIGHEST和系统哨兵；值标签从不替换数据，未声明缺失的99仍是合法值。数值保存 IEEE754 位，包含负零。
 - UTF8、Microsoft CP1252、CP936/GBK稳定映射和GB18030稳定映射交集；具体白名单/版本/拒绝变体见 [CODEC_PROFILES](docs/CODEC_PROFILES.md)。不是所有GB18030版本。严格解码也不能证明提供方声明正确；覆盖用 `--encoding` 并产生提示。
-- 日期始终保留原数值和print/write格式；测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
+- 日期始终保留原数值和print/write格式；数值变量任一格式为 GNU 日期/时间编码20–30或38–41时，每列给一次 RawDateFormat 提示，严格模式拒绝；PCT/DOT/自定义货币31–37不触发日期提示。分类依据 [GNU SAV 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
 - 拒绝大端、IBM/VAX浮点、FL3/zlib/ZSAV、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
 
-本地已验证 macOS arm64 / Node24.15.0；JS/native/wasm-gc字节核心用固定MoonBit工具链运行同一UTF8向量。Linux/Windows的CI文件会运行相同语料；在远端证据出现前均标记未验证，不能把macOS运行当作这些平台通过。
+已执行的跨平台基线为源码 `e453463` 的 [CI42248646372](https://github.com/z2823253773-p/moonsav/actions/runs/42248646372)，四个作业全部通过；新修正版的对应 CI 以交付清单为准。Node24.15.0 / ICU78.2 固定，源码使用 toolchain.json 的完整编译器/core 配对。
+
+| 已验证环境 | 实际范围 |
+| --- | --- |
+| macOS arm64 本地，两套工具链 | 完整 Node 语料；JS/native/wasm-gc 核心；完整兼容性、公开文件和精确归档消费 |
+| Actions macOS15 | 共享及 POSIX Node 语料；JS/native/wasm-gc 核心；自建归档首次使用 |
+| Actions Ubuntu24.04 x64 | 同上；另有完整 AC01–AC18、ReadStat/PSPP、源码消费和参考性能 |
+| Actions Windows2025 x64 | 共享 Node 语料；JS/wasm-gc 核心；自建归档首次使用；不声称 native/POSIX 等价 |
+
+本地与 Linux 完整入口均为17项通过及29个预期拒绝向量；两份公开 SAV 共65449个单元格对照无未解释差异。各 runner 自建归档，精确本地归档的消费另行记录，不能混为同一字节在三系统安装。
 
 资源硬上限：输入256MiB，字典原始/解码各64MiB，逻辑变量100000，物理槽1000000，字符串32767，单标签1MiB，扩展16MiB，行8MiB，完整扫描1000000行；收集模式5000000单元/128MiB计费载荷，所有bundle文件合计512MiB。字典标签另按每项4096字节保守记账（默认最多16384个关联条目），在分配前拒绝；这是根据审查中的紧凑标签攻击收紧的资源策略。上限是应用记账，不是任意输入RSS承诺。
 
-`--max-input-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能见 evidence/AC18-first/results.json，不外推到最大输入。
+`--max-input-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能和完整对照报告由交付清单指向当前证据，不外推到最大输入。
 
 ## 三个用户任务
 
@@ -51,13 +60,15 @@ python3 examples/read_bundle.py first_bundle
 
 Python示例仅使用标准库，逐行读取权威NDJSON，再独立核对CSV，不做类型/NA推断。CSV单独不能普遍恢复源字节与缺失语义；普通表格软件可能推断数字、日期或公式，请按文本导入。日期和标签仍在metadata/codebook。
 
+check-bundle 继承 bundle 元数据中已经记录的提示；旧包的错误提示不会自动重新分类，需要用修正版从原 SAV 重新导出。
+
 checker只读，验证版本/文件集合/哈希/大小/类型/原位表示/逐格缺失/源字节解码/CSV一致性/计数。它拒绝INCOMPLETE、缺件、错配、路径逃逸和符号链接；额外普通文件明确未校验。它不是签名或来源认证：一致地改数据、字典和manifest可以形成另一个自洽bundle。
 
 导出排他创建目录，先INCOMPLETE，写文件、关闭、最后manifest，移除INCOMPLETE才提交。提交前常规失败清理本次拥有的文件；中断可能留下未完成目录，换新目录重试。提交后报告失败时bundle可能完整，用checker恢复判断。POSIX新目录0700/文件0600；Windows沿用宿主ACL，不宣称相同权限位。
 
 ## MoonBit 集成
 
-源构建只接受 toolchain.json 中两组精确配对：原基线 moon0.1.20260713 / moonc v0.10.4+2cc641edf，以及 CI 固定 moon0.1.20261023 / moonc v0.10.17+d971670cd。原版官方归档目前返回403；新版在项目隔离目录验证，两版不混用 core。`--version` 报告实际构建配对。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
+源构建只接受 toolchain.json 中两组精确配对：原基线 moon0.1.20260713 / moonc v0.10.4+2cc641edf，以及 CI 固定 moon0.1.20261023 / moonc v0.10.17+d971670cd。原版官方归档在已记录的安装尝试中返回403；现有原版工具链和项目隔离的新版均已验证，两版不混用 core。`--version` 报告实际构建配对。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
 
 在消费者的 `moon.mod` 声明：
 
@@ -72,7 +83,7 @@ import { "z2823253773/moonsav@0.1.0" }
 members = ["consumer", "moonsav-source"]
 ```
 
-工作区从本地解析库，不访问尚未发布的包；新版工具链不接受旧 JSON 模块配置。随包示例已提供 `moon.mod`、`moon.pkg`、`moon.work`，两组固定工具链都可运行。参见 [MoonBit 本地依赖说明](https://docs.moonbitlang.com/en/latest/toolchain/moon/module.html#dependency-management)。
+工作区从本地解析库，不访问尚未发布的包；新版工具链不接受旧 JSON 模块配置。随包示例已提供 `moon.mod`、`moon.pkg`、`moon.work`，两组固定工具链都可运行。若旧 MoonBit 在源码消费时因环境变量 `_` 含非法 UTF-8 路径崩溃，可只对该进程移除该变量后重试，例如 `env -u _ moon run . --target js`；诊断原文在指定复验材料中保留，这不属于 SAV 读取失败。参见 [MoonBit 本地依赖说明](https://docs.moonbitlang.com/en/latest/toolchain/moon/module.html#dependency-management)。
 
 包import：`"z2823253773/moonsav"`。完整可编译例子在 `examples/consumer/main.mbt`（包含合成SAV字节，无文件I/O）；从该目录执行 `moon run . --target js`，也可native/wasm-gc。库不读文件、不打印、不退出进程。
 
@@ -106,6 +117,4 @@ moon test src --target wasm-gc
 
 公共语料下载到忽略的.cache，依赖和PSPP仅在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
 
-Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。公开推送、发布、报名均未执行；十一月赛事规则与组织方认可没有新证据。
-
-2026-10-24 已获授权创建私有 GitHub 仓库并运行 CI： https://github.com/z2823253773-p/moonsav 。首轮在工具链下载/Windows保留文件名处失败，完整日志保留；当前平台支持仍以最终远端报告为准，启动过不等于通过。npm/Mooncakes公开发布和赛事报名未执行。
+Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[私有 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。

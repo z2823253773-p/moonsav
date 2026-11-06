@@ -141,6 +141,8 @@ limited 宽度约定为：数值变量加 1，字符串变量加 `ceil(min(width
 | string_matching_policy | 固定 source-bytes-space-padded-width-v1 |
 | decoder_identity | 非空白、无 NUL 的实现/版本说明。默认核心使用版本无关的严格 UTF8 适配器身份，构建编译器另在 build 记录；checker 不能认证来源方是否诚实填写 |
 
+RawDateFormat 仅针对数值变量：print_format 或 write_format 的 code 属于20–30或38–41时，每变量最多一个提示；31–37的 PCT/DOT/自定义货币不是日期。依据 [GNU Variable Record 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。提示不换算数据，所有位模式与 print/write 原始格式仍保留；--fail-on-warning 按该提示拒绝。checker 继承已有 metadata 提示，不从旧包重新推断分类；旧错误提示须从原 SAV 重新导出纠正。
+
 Warning 的三个必需 String 字段为 `warning_code/scope/suggested_action`。warning_code 是开放标识，已用 EncodingOverride、RawDateFormat、UninterpretedMetadata；Node 文件适配器还用 UnverifiedExtraFile。非零提示数量影响 passed_with_warnings 和严格模式，不等于解析失败。
 
 Extra 的字段为 `record:Int/subtype:Int?/byte_offset:Int/raw_base64:String`。record6 对应文档，subtype=null；record7 只允许保留未解释的已识别 subtype 5/6/7/8/9/10/12/17/18/19/24。未知语义扩展不能靠 raw_base64 绕过拒绝；保留 Extra 必须有 UninterpretedMetadata 提示。raw 内容不作为已解释含义。

@@ -742,7 +742,8 @@ pub fn inspect_bytes(
     })
   }
   for v in vars {
-    if v.print_format.code >= 20 && v.print_format.code <= 39 {
+    if v.type_ == "numeric" &&
+      (is_datetime_format(v.print_format.code) || is_datetime_format(v.write_format.code)) {
       warnings.push({
         warning_code: "RawDateFormat",
         scope: "variable:\{v.index}",
@@ -866,5 +867,14 @@ fn apply_long_semantics(
         }
       }
     }
+  }
+}
+
+///|
+// GNU PSPP SAV Variable Record codes; currency/PCT/DOT occupy the gap31–37.
+fn is_datetime_format(code : Int) -> Bool {
+  match code {
+    20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 38 | 39 | 40 | 41 => true
+    _ => false
   }
 }

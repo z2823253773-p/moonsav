@@ -74,3 +74,61 @@ test "default core UTF8 preserves initial BOM in labels and string values" {
   assert_eq(d.rows[0][0].text, Some("\uFEFFA"))
   assert_eq(d.dictionary.variables[0].label, Some("\uFEFFlabel"))
 }
+
+///|
+fn format_fixture(print : Int, write : Int) -> Bytes {
+  Bytes::makei(survey_fixture.length(), i => {
+    if i == 194 {
+      print.to_byte()
+    } else if i == 198 {
+      write.to_byte()
+    } else {
+      survey_fixture[i]
+    }
+  })
+}
+
+///|
+test "GNU date warnings classify every print code without changing data" {
+  let expected = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 38, 39, 40, 41]
+  for code = 0; code < 256; code = code + 1 {
+    let d = read_bytes(format_fixture(code, 5))
+    assert_eq(
+      d.dictionary.warnings
+      .filter(w => w.warning_code == "RawDateFormat")
+      .length(),
+      if expected.contains(code) {
+        1
+      } else {
+        0
+      },
+    )
+    assert_eq(d.dictionary.variables[0].print_format.code, code)
+    assert_eq(d.dictionary.variables[0].write_format.code, 5)
+    assert_eq(d.rows[0][0].decimal, Some("1"))
+    assert_eq(d.rows[3][0].missing, "system")
+  }
+}
+
+///|
+test "GNU date warnings inspect write format and do not duplicate" {
+  let expected = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 38, 39, 40, 41]
+  for code = 0; code < 256; code = code + 1 {
+    let d = inspect_bytes(format_fixture(5, code))
+    assert_eq(
+      d.warnings.filter(w => w.warning_code == "RawDateFormat").length(),
+      if expected.contains(code) {
+        1
+      } else {
+        0
+      },
+    )
+    assert_eq(d.variables[0].print_format.code, 5)
+    assert_eq(d.variables[0].write_format.code, code)
+  }
+  let d = inspect_bytes(format_fixture(40, 41))
+  assert_eq(
+    d.warnings.filter(w => w.warning_code == "RawDateFormat").length(),
+    1,
+  )
+}

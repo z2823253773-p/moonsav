@@ -1,0 +1,39 @@
+✔ U2 human summaries truncate explicitly, JSON and exact-variable query remain complete (128.413542ms)
+✔ JSON success, warning, strict rejection and malformed input obey channels and exits (202.732875ms)
+✔ strict export rejects warnings before creating any output directory (29.909792ms)
+✔ U3 schema mismatch rejects, extras warn and strict checker refuses warnings (133.554167ms)
+✔ version reports the actual build compiler instead of a historical toolchain constant (26.042458ms)
+✔ GNU F warning and strict mode preserve raw numeric data (285.832ms)
+✔ GNU DATE warning and strict mode preserve raw numeric data (235.671416ms)
+✔ GNU TIME warning and strict mode preserve raw numeric data (229.565709ms)
+✔ GNU DATETIME warning and strict mode preserve raw numeric data (231.671208ms)
+✔ GNU ADATE warning and strict mode preserve raw numeric data (226.531625ms)
+✔ GNU JDATE warning and strict mode preserve raw numeric data (229.568833ms)
+✔ GNU DTIME warning and strict mode preserve raw numeric data (226.187542ms)
+✔ GNU WKDAY warning and strict mode preserve raw numeric data (228.34925ms)
+✔ GNU MONTH warning and strict mode preserve raw numeric data (230.688291ms)
+✔ GNU MOYR warning and strict mode preserve raw numeric data (228.753583ms)
+✔ GNU QYR warning and strict mode preserve raw numeric data (234.268375ms)
+✔ GNU WKYR warning and strict mode preserve raw numeric data (229.018125ms)
+✔ GNU PCT warning and strict mode preserve raw numeric data (270.237709ms)
+✔ GNU DOT warning and strict mode preserve raw numeric data (269.426ms)
+✔ GNU CCA warning and strict mode preserve raw numeric data (267.402875ms)
+✔ GNU CCB warning and strict mode preserve raw numeric data (270.611083ms)
+✔ GNU CCC warning and strict mode preserve raw numeric data (271.59725ms)
+✔ GNU CCD warning and strict mode preserve raw numeric data (269.67125ms)
+✔ GNU CCE warning and strict mode preserve raw numeric data (268.61675ms)
+✔ GNU EDATE warning and strict mode preserve raw numeric data (228.589291ms)
+✔ GNU SDATE warning and strict mode preserve raw numeric data (227.302ms)
+✔ GNU MTIME warning and strict mode preserve raw numeric data (230.67575ms)
+✔ GNU YMDHMS warning and strict mode preserve raw numeric data (228.07ms)
+✔ date warning uses print 5 and write 40 once per variable (61.692459ms)
+✔ date warning uses print 41 and write 5 once per variable (61.47675ms)
+✔ date warning uses print 40 and write 41 once per variable (61.117666ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6357.760208
