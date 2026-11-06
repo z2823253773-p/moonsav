@@ -1,0 +1,146 @@
+[
+  {
+    "id": "moonsav@0.1.0",
+    "name": "moonsav",
+    "version": "0.1.0",
+    "size": 309965,
+    "unpackedSize": 1243835,
+    "shasum": "c7ae26ae1be966868400b2cf97745b66191a11db",
+    "integrity": "sha512-SPxwv6KazDPfbiO3hAKBh+yATeY4OOgpH2UJ+B811kllFzxn1VcmE95KHsrvrTNpTcM3ug8ZwiYfnV4qphqapw==",
+    "filename": "moonsav-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 11367,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 10408,
+        "mode": 420
+      },
+      {
+        "path": "THIRD_PARTY.md",
+        "size": 2148,
+        "mode": 420
+      },
+      {
+        "path": "bin/moonsav.mjs",
+        "size": 89,
+        "mode": 493
+      },
+      {
+        "path": "docs/CODEC_PROFILES.md",
+        "size": 4251,
+        "mode": 420
+      },
+      {
+        "path": "docs/CONTRACTS.md",
+        "size": 26287,
+        "mode": 420
+      },
+      {
+        "path": "examples/read_bundle.py",
+        "size": 1680,
+        "mode": 420
+      },
+      {
+        "path": "fixtures/synthetic/source.json",
+        "size": 234,
+        "mode": 420
+      },
+      {
+        "path": "fixtures/synthetic/survey-row.sav",
+        "size": 783,
+        "mode": 420
+      },
+      {
+        "path": "lib/build.json",
+        "size": 257,
+        "mode": 420
+      },
+      {
+        "path": "lib/moonsav.js",
+        "size": 664715,
+        "mode": 420
+      },
+      {
+        "path": "licenses/Python-3.12-LICENSE.txt",
+        "size": 13936,
+        "mode": 420
+      },
+      {
+        "path": "licenses/Unicode-LICENSE.txt",
+        "size": 1995,
+        "mode": 420
+      },
+      {
+        "path": "licenses/WHATWG-Encoding-LICENSE.txt",
+        "size": 16315,
+        "mode": 420
+      },
+      {
+        "path": "node/api.mjs",
+        "size": 3354,
+        "mode": 420
+      },
+      {
+        "path": "node/checker.mjs",
+        "size": 4555,
+        "mode": 420
+      },
+      {
+        "path": "node/cli.mjs",
+        "size": 10110,
+        "mode": 420
+      },
+      {
+        "path": "node/codec-data.json",
+        "size": 435535,
+        "mode": 420
+      },
+      {
+        "path": "node/codec.mjs",
+        "size": 2209,
+        "mode": 420
+      },
+      {
+        "path": "node/io.mjs",
+        "size": 3360,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 716,
+        "mode": 420
+      },
+      {
+        "path": "schemas/manifest.schema.json",
+        "size": 3715,
+        "mode": 420
+      },
+      {
+        "path": "schemas/metadata.schema.json",
+        "size": 18808,
+        "mode": 420
+      },
+      {
+        "path": "schemas/report.schema.json",
+        "size": 2519,
+        "mode": 420
+      },
+      {
+        "path": "schemas/row.schema.json",
+        "size": 3814,
+        "mode": 420
+      },
+      {
+        "path": "toolchain.json",
+        "size": 675,
+        "mode": 420
+      }
+    ],
+    "entryCount": 26,
+    "bundled": []
+  }
+]

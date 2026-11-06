@@ -1,0 +1,34 @@
+{
+  "input_sha256": "b724ef2eb9d2f5c4580f4e645314a27a61d4d43cb3aae5fa4f3d7ce6310eb43b",
+  "size_bytes": 815,
+  "actual_rows": 5,
+  "logical_variables": 3,
+  "cells_compared": 15,
+  "dictionary_compared": [
+    "names",
+    "order",
+    "type",
+    "width",
+    "variable_labels",
+    "value_labels",
+    "user_missing_definitions",
+    "raw_print_write_formats",
+    "raw_missing_atoms",
+    "measure_display_alignment",
+    "weight_reference",
+    "retained_extension_payloads"
+  ],
+  "differences": [],
+  "normalizations": {
+    "string_trailing_ascii_spaces": 9,
+    "system_missing_to_None": 1,
+    "label_trailing_ascii_spaces": 0
+  },
+  "screening": {
+    "potential_identifier_columns": 0,
+    "raw_redistribution": false,
+    "cell_values_in_evidence": false
+  },
+  "oracle": "ReadStat via pyreadstat 1.3.3",
+  "status": "supported_pass"
+}

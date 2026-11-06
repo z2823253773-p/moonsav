@@ -1,0 +1,16 @@
+{
+  "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/contracts-20261105/clean-candidate",
+  "command": [
+    "tools/verify.py",
+    "--all",
+    "--require-public",
+    "--require-pspp",
+    "--output",
+    ".cache/contracts-full"
+  ],
+  "python": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "moon_PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin",
+  "MOONSAV_PSPP": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/pspp/bin/pspp",
+  "exit_code": 0,
+  "scope": "fresh committed clone; existing fixed dev interpreter/toolchains and SHA-checked public cache reused; no empty-machine setup claim"
+}

@@ -1,0 +1,10 @@
+{
+  "case": "AC09",
+  "status": "expected_rejection",
+  "utc": "2026-11-06T15:30:29.901162+00:00",
+  "detail": {
+    "scope": "fresh process per corrupt vector, each timeout10s",
+    "expected_rejections": 29,
+    "results": "rejections/results.json"
+  }
+}

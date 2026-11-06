@@ -1,0 +1,1 @@
+{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":2,"actual_rows":2,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[1,1,0]],"completed":true,"authentication":"not_provided"}

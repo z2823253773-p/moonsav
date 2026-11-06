@@ -1,0 +1,8 @@
+{
+  "oracle": "Mac ReadStat wheel / system iconv",
+  "exception": "ReadstatError",
+  "message": "Unable to convert string to the requested encoding (invalid byte sequence)",
+  "status": "oracle_unsupported",
+  "input_sha256": "ae4edfa12204c9a7499184dd75fc5ede59733c23428cb49a17bcf2170a550447",
+  "alternative_proof": "PSPP/GNU libiconv + independently authored source, Python codec and primary range mapping"
+}

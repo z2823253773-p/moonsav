@@ -1,0 +1,12 @@
+{
+  "case": "AC14",
+  "status": "supported_pass",
+  "utc": "2026-11-06T15:32:17.493888+00:00",
+  "detail": {
+    "scope": "standalone MoonBit source consumer filters missing, labels and unlabeled legal values, IDs, retains rows, Stop and callback failure",
+    "source_archive": {
+      "sha256": "b52e70c112eed785dd4359523c1674d01bbfe882379ae30cc38d81d7c28f99fc",
+      "size_bytes": 73425
+    }
+  }
+}

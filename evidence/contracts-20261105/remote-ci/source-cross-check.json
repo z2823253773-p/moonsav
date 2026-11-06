@@ -1,0 +1,68 @@
+{
+  "source_sha": "a3c4b225008c9af2c4fac3d60a63339ada8c19c7",
+  "source_digest": "7e73f6a651c53450b84a93a0c65815e91829112fbcb4dea25a0989e3ff6b2ace",
+  "local_dirty": false,
+  "remote_dirty": true,
+  "remote_dirty_scope": "generated untracked evidence output under evidence/ci-run; not a tracked source change",
+  "local_counts": {
+    "supported_pass": 17,
+    "supported_fail": 0,
+    "expected_rejection": 1,
+    "unexpected_result": 0,
+    "not_run": 0
+  },
+  "remote_counts": {
+    "supported_pass": 17,
+    "supported_fail": 0,
+    "expected_rejection": 1,
+    "unexpected_result": 0,
+    "not_run": 0
+  },
+  "remote_run_url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477",
+  "remote_system": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "github_actions": true,
+    "runner_os": "Linux",
+    "run_url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477"
+  },
+  "exact_local_artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "3be70b3312b6f632d1c03a2aea5106255ed3f71c6a2260666191b70e9371dea0",
+      "size_bytes": 309965
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "958968861f79eb08eaaed87368f117bfb95e94420f780ea9a20c3ac283b49517",
+      "size_bytes": 73425
+    }
+  },
+  "same_source_digest": true,
+  "note": "All four actual job conclusions checked; raw per-entry summaries unchanged.",
+  "workflow_conclusion": "success",
+  "jobs": [
+    {
+      "name": "independent-oracles",
+      "conclusion": "success",
+      "databaseId": 127980099265,
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980099265"
+    },
+    {
+      "name": "platform (windows-2025)",
+      "conclusion": "success",
+      "databaseId": 127980099828,
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980099828"
+    },
+    {
+      "name": "platform (ubuntu-24.04)",
+      "conclusion": "success",
+      "databaseId": 127980100006,
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980100006"
+    },
+    {
+      "name": "platform (macos-15)",
+      "conclusion": "success",
+      "databaseId": 127980100282,
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42243643477/job/127980100282"
+    }
+  ]
+}

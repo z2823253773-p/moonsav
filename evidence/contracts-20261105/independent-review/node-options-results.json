@@ -1,0 +1,38 @@
+[
+  {
+    "api": "inspectSav",
+    "caseName": "inherited-encoding",
+    "observed": "thrown",
+    "className": "TypeError",
+    "code": null,
+    "message": "self.str.substring is not a function"
+  },
+  {
+    "api": "inspectSav",
+    "caseName": "inherited-string-limit",
+    "observed": "accepted"
+  },
+  {
+    "api": "inspectSav",
+    "caseName": "nonenumerable-string-limit",
+    "observed": "accepted"
+  },
+  {
+    "api": "readSav",
+    "caseName": "inherited-encoding",
+    "observed": "thrown",
+    "className": "TypeError",
+    "code": null,
+    "message": "self.str.substring is not a function"
+  },
+  {
+    "api": "readSav",
+    "caseName": "inherited-string-limit",
+    "observed": "accepted"
+  },
+  {
+    "api": "readSav",
+    "caseName": "nonenumerable-string-limit",
+    "observed": "accepted"
+  }
+]

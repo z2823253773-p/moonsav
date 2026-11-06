@@ -1,3 +1,11 @@
+# Current remote CI — 2026-11-06
+
+[run42243643477](https://github.com/z2823253773-p/moonsav/actions/runs/42243643477) passed all four jobs on `a3c4b225008c9af2c4fac3d60a63339ada8c19c7`: Windows2025, Ubuntu24.04, macOS15 and independent Linux oracles. Shared Node corpus97 tests; POSIX adds11; core14 per declared platform/backend. Full Linux entry17 supported_pass +29 expected bad vectors. Downloaded original API state, raw logs and aggregate artifact are evidence/contracts-20261105/remote-ci. Cross-check binds source digest, run URL and actual job conclusions to docs/delivery-manifest.json. Windows native/POSIX remains outside claimed scope.
+
+All earlier runs below are historical and do not validate the contract repair. Designated re-acceptance remains pending.
+
+---
+
 # Remote CI continuation
 
 2026-10-24 America/Phoenix. User explicitly authorized creation of a private MoonSav repository, pushing the current code, and running Actions. GitHub connector and CLI both identify z2823253773-p; connector cannot see the newly created private repo, so gh CLI performs supported repo/Actions operations. No public release or registration is included.

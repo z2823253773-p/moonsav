@@ -1,0 +1,10 @@
+{
+  "case": "AC05",
+  "status": "supported_pass",
+  "utc": "2026-11-06T15:31:54.791460+00:00",
+  "detail": {
+    "scope": "1/7/8/9/255/256/504/505/32767 widths, UTF8 cross-segment, extensions13/14/21/22",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}
