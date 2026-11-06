@@ -30,6 +30,8 @@ fn validate_variables(
   }
   let mut slots = 0
   for v in vars {
+    validate_variable_name(v.name, code)
+    validate_variable_name(v.short_name, code)
     if v.print_format.raw < 0 ||
       v.print_format.raw > 0xffffff ||
       v.write_format.raw < 0 ||
@@ -110,6 +112,33 @@ fn validate_variables(
         }
       }
     }
+  }
+}
+
+///|
+fn validate_variable_name(name : String, code : String) -> Unit raise SavError {
+  if name.is_empty() || name.contains("\x00") {
+    reject(code, "Variable names must be nonempty and cannot contain NUL")
+  }
+}
+
+///|
+fn validate_case_width(
+  nominal : Int,
+  vars : Array[Variable],
+  physical : Int,
+  code : String,
+) -> Unit raise SavError {
+  let mut limited = 0
+  for v in vars {
+    limited += if v.type_ == "numeric" {
+      1
+    } else {
+      ((if v.width > 255 { 255 } else { v.width }) + 7) / 8
+    }
+  }
+  if nominal < -1 || (nominal > 0 && nominal != physical && nominal != limited) {
+    reject(code, "Nominal case width disagrees with both defined conventions")
   }
 }
 

@@ -1,0 +1,277 @@
+{
+  "archive_sha256": "9eaeacecd1c599a56a7fa22d392f9bf7dea4f6072b1a3e3250b85e8c6f7d76c5",
+  "inspected_head": "da4ddb59b030d1f72c1180d382a1526ec086f80b",
+  "node": "v24.15.0",
+  "work": "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red",
+  "records": [
+    {
+      "name": "label-count-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/label-count",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/label-count\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "label-count-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/label-count",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"passed\",\"validation_scope\":\"bundle\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"authentication\":\"not_provided\"}\n",
+      "stderr": "",
+      "expected_exit": 6,
+      "expected_code": "ResourceLimit",
+      "expectation_met": false
+    },
+    {
+      "name": "label-bytes-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/label-bytes",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/label-bytes\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "label-bytes-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/label-bytes",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"passed\",\"validation_scope\":\"bundle\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"authentication\":\"not_provided\"}\n",
+      "stderr": "",
+      "expected_exit": 6,
+      "expected_code": "ResourceLimit",
+      "expectation_met": false
+    },
+    {
+      "name": "nominal-absent-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-absent",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-absent\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-absent-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-absent",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"passed\",\"validation_scope\":\"bundle\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"authentication\":\"not_provided\"}\n",
+      "stderr": "",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": false
+    },
+    {
+      "name": "nominal-type-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-type",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-type\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-type-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-type",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"passed\",\"validation_scope\":\"bundle\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"authentication\":\"not_provided\"}\n",
+      "stderr": "",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": false
+    },
+    {
+      "name": "nominal-width-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-width",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-width\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-width-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nominal-width",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"passed\",\"validation_scope\":\"bundle\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"authentication\":\"not_provided\"}\n",
+      "stderr": "",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": false
+    },
+    {
+      "name": "encoding-override",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/unsupported-declared.sav",
+        "--encoding",
+        "utf-8",
+        "--json"
+      ],
+      "exit_code": 5,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"failed\",\"validation_scope\":\"full\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"UnsupportedEncoding\",\"message\":\"Encoding is outside the explicit whitelist\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Keep the original input; consult supported formats and retry.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": false
+    },
+    {
+      "name": "noncanonical-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/fixtures/synthetic/survey-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/noncanonical",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/noncanonical\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "noncanonical-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/noncanonical",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"passed\",\"validation_scope\":\"bundle\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true,\"authentication\":\"not_provided\"}\n",
+      "stderr": "",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": false
+    },
+    {
+      "name": "nul-name-export",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nul-name.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nul-name-bundle",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nul-name-bundle\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 4,
+      "expected_code": null,
+      "expectation_met": false
+    },
+    {
+      "name": "nul-name-self-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/nul-name-bundle",
+        "--json"
+      ],
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"IntegrityMismatch\",\"message\":\"NUL is not allowed in CSV profile\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Transfer the complete bundle again or export from the original SAV.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": false
+    }
+  ],
+  "all_expectations_met": false
+}

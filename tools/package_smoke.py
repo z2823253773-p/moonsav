@@ -11,7 +11,7 @@ def run(output):
   return r.stdout
  try:
   command(['node','tools/build.mjs']);(root/'dist').mkdir(exist_ok=True);pack=json.loads(command(['npm','pack','--pack-destination','dist','--json']))[0];archive=root/'dist'/pack['filename'];members=[f['path']for f in pack['files']]
-  allowed=['bin/','node/','lib/','fixtures/synthetic/','examples/read_bundle.py','schemas/','docs/CODEC_PROFILES.md','licenses/','README.md','LICENSE','THIRD_PARTY.md','toolchain.json','package.json']
+  allowed=['bin/','node/','lib/','fixtures/synthetic/','examples/read_bundle.py','schemas/','docs/CODEC_PROFILES.md','docs/CONTRACTS.md','licenses/','README.md','LICENSE','THIRD_PARTY.md','toolchain.json','package.json']
   if any(not any(n==p or n.startswith(p)for p in allowed)for n in members):raise RuntimeError('Unexpected npm archive file')
   with tarfile.open(archive)as tar:
    for m in tar.getmembers():

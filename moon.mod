@@ -19,6 +19,7 @@ options(
     "/THIRD_PARTY.md",
     "/licenses/",
     "/docs/CODEC_PROFILES.md",
+    "/docs/CONTRACTS.md",
     "/toolchain.json",
     "/examples/consumer/main.mbt",
     "/examples/consumer/moon.mod",

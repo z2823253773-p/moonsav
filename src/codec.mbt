@@ -51,13 +51,13 @@ fn encoding_info(
     Some(54936) => Some("gb18030")
     _ => None
   }
-  let r = match declared {
-    Some(s) => Some(canonical_encoding(s))
-    None => None
-  }
   let (effective, source) = match options.encoding_override {
     Some(s) => (canonical_encoding(s), "override")
     None => {
+      let r = match declared {
+        Some(s) => Some(canonical_encoding(s))
+        None => None
+      }
       if r is Some(a) && m is Some(b) && a != b {
         reject(
           "EncodingConflict", "Reliable encoding declarations disagree; confirm encoding and use an explicit override",
@@ -77,7 +77,14 @@ fn encoding_info(
   }
   let decoder_identity = if options.decoder is Some(_) {
     match options.decoder_identity {
-      Some(id) => id
+      Some(id) => {
+        if id.trim().is_empty() || id.contains("\x00") {
+          reject(
+            "UnsupportedEncodingVariant", "Custom decoder identity must be nonempty and NUL-free",
+          )
+        }
+        id
+      }
       None => {
         reject(
           "UnsupportedEncodingVariant", "A custom decoder must declare its verified identity/version",
@@ -86,7 +93,7 @@ fn encoding_info(
       }
     }
   } else {
-    "MoonBit core UTF8 / moonc v0.10.4+2cc641edf"
+    "MoonBit core UTF8 / MoonSav strict UTF8 adapter v1"
   }
   {
     decoder_identity,

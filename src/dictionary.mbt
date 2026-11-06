@@ -104,7 +104,7 @@ pub fn inspect_bytes(
   let by_slot : Map[Int, RawVar] = {}
   let extensions : Array[Extension] = []
   let extras : Array[Extra] = []
-  let mut label_entries = 0
+  let budget = DictionaryBudget::new(l)
   let mut physical = 0
   let mut continuation = 0
   let mut machine : Int? = None
@@ -114,7 +114,7 @@ pub fn inspect_bytes(
   let mut highest = 0x7fefffffffffffffUL
   let mut ext_cases : Int? = None
   while true {
-    limit(c.pos - 176, l.dictionary_bytes, "dictionary_bytes")
+    budget.observe_raw(c.pos - 176)
     let offset = c.pos
     let record = c.i32()
     try {
@@ -224,6 +224,7 @@ pub fn inspect_bytes(
           for _i = 0; _i < n; _i = _i + 1 {
             let value = c.take(8)
             let len = c.take(1)[0].to_int()
+            limit(len, l.label_bytes, "label_bytes")
             let label = c.take(len)
             ignore(c.take((8 - (len + 1) % 8) % 8))
             labels.push((value, label))
@@ -243,12 +244,7 @@ pub fn inspect_bytes(
               offset=c.pos - 4,
             )
           }
-          if n > (l.dictionary_bytes / 4096 - label_entries) / nvars {
-            reject(
-              "ResourceLimit", "Dictionary label entry bookkeeping exceeds budget",
-            )
-          }
-          label_entries += n * nvars
+          budget.labels(n, associations=nvars)
           let mut label_width = -1
           for _i = 0; _i < nvars; _i = _i + 1 {
             let index = c.i32() - 1
@@ -456,7 +452,7 @@ pub fn inspect_bytes(
       }
     }
   }
-  limit(c.pos - 176, l.dictionary_bytes, "dictionary_bytes")
+  budget.observe_raw(c.pos - 176)
   if continuation != 0 {
     reject(
       "InvalidDictionary",
@@ -477,13 +473,9 @@ pub fn inspect_bytes(
     )
   }
   let encoding = encoding_info(declared, machine, options)
-  let decoded_bytes : Ref[Int] = { val: 0 }
   let dec = fn(b) raise SavError {
     let text = decode(b, encoding.effective, options)
-    if text.length() > (l.dictionary_bytes - decoded_bytes.val) / 2 {
-      reject("ResourceLimit", "Decoded dictionary budget exceeded")
-    }
-    decoded_bytes.val += text.length() * 2
+    budget.decoded(text)
     text
   }
   let raw_names : Map[String, Bool] = {}
@@ -708,7 +700,7 @@ pub fn inspect_bytes(
       reject("InvalidDictionary", "Dangling long-width mapping")
     }
   }
-  apply_long_semantics(vars, extensions, dec, l)
+  apply_long_semantics(vars, extensions, dec, l, budget)
   validate_variables(
     vars,
     hex_bits(lowest),
@@ -716,19 +708,7 @@ pub fn inspect_bytes(
     "InvalidDictionary",
     l,
   )
-  let mut nominal = 0
-  for v in vars {
-    nominal += if v.type_ == "numeric" {
-      1
-    } else {
-      ((if v.width > 255 { 255 } else { v.width }) + 7) / 8
-    }
-  }
-  if slots > 0 && slots != physical && slots != nominal {
-    reject(
-      "InvalidDictionary", "Nominal case width disagrees with both defined conventions",
-    )
-  }
+  validate_case_width(slots, vars, physical, "InvalidDictionary")
   if physical > l.row_bytes / 8 {
     reject("ResourceLimit", "Actual row width exceeds byte budget")
   }
@@ -799,11 +779,8 @@ fn apply_long_semantics(
   extensions : Array[Extension],
   dec : (Bytes) -> String raise SavError,
   limits : Limits,
+  budget : DictionaryBudget,
 ) -> Unit raise SavError {
-  let mut label_entries = 0
-  for v in vars {
-    label_entries += v.value_labels.length()
-  }
   let by_name : Map[String, Int] = {}
   for v in vars {
     by_name[v.name.to_upper()] = v.index
@@ -847,12 +824,7 @@ fn apply_long_semantics(
         if nlabels < 0 {
           reject("InvalidLength", "Negative long label count")
         }
-        if nlabels > limits.dictionary_bytes / 4096 - label_entries {
-          reject(
-            "ResourceLimit", "Dictionary label entry bookkeeping exceeds budget",
-          )
-        }
-        label_entries += nlabels
+        budget.labels(nlabels)
         for _i = 0; _i < nlabels; _i = _i + 1 {
           let len = c.i32()
           if len < 0 || len > v.width {

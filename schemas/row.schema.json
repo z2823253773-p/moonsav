@@ -27,9 +27,16 @@
             ]
           },
           "decimal": {
-            "type": [
-              "string",
-              "null"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:e[+-]?[0-9]+)?$"
+              },
+              {
+                "type": "null"
+              }
             ]
           },
           "ieee754_hex": {
@@ -78,7 +85,10 @@
                 ]
               },
               "decimal": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:e[+-]?[0-9]+)?$"
               },
               "ieee754_hex": {
                 "type": "string",

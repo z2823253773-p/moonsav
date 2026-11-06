@@ -27,7 +27,8 @@
       "properties": {
         "size_bytes": {
           "type": "integer",
-          "minimum": 0
+          "minimum": 0,
+          "maximum": 268435456
         },
         "sha256": {
           "type": "string",
@@ -48,7 +49,8 @@
           "properties": {
             "size_bytes": {
               "type": "integer",
-              "minimum": 0
+              "minimum": 0,
+              "maximum": 536870912
             },
             "sha256": {
               "type": "string",
@@ -66,7 +68,8 @@
           "properties": {
             "size_bytes": {
               "type": "integer",
-              "minimum": 0
+              "minimum": 0,
+              "maximum": 536870912
             },
             "sha256": {
               "type": "string",
@@ -84,7 +87,8 @@
           "properties": {
             "size_bytes": {
               "type": "integer",
-              "minimum": 0
+              "minimum": 0,
+              "maximum": 536870912
             },
             "sha256": {
               "type": "string",
@@ -102,7 +106,8 @@
           "properties": {
             "size_bytes": {
               "type": "integer",
-              "minimum": 0
+              "minimum": 0,
+              "maximum": 536870912
             },
             "sha256": {
               "type": "string",

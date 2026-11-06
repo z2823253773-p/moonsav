@@ -1,0 +1,435 @@
+✖ F1 zero-row NUL variable name rejects before csv output exists (41.909208ms)
+✖ F1 zero-row NUL variable name rejects before ndjson output exists (32.0065ms)
+✔ F2 associated-label bookkeeping at 16383 entries (216.905291ms)
+✔ F2 associated-label bookkeeping at 16384 entries (200.983167ms)
+✖ F2 associated-label bookkeeping at 16385 entries (207.749083ms)
+✖ F2 associated-label bookkeeping at 17000 entries (207.500417ms)
+✔ F2 variable label raw bytes at 1048576 (153.149917ms)
+✖ F2 variable label raw bytes at 1048577 (152.0195ms)
+✔ F2 value label raw bytes at 1048576 (150.185791ms)
+✖ F2 value label raw bytes at 1048577 (151.602333ms)
+✖ F3 invalid nominal case width undefined rejects (63.03225ms)
+✖ F3 invalid nominal case width invalid-string rejects (61.146333ms)
+✖ F3 invalid nominal case width null rejects (62.698875ms)
+✖ F3 invalid nominal case width -2 rejects (63.092416ms)
+✖ F3 invalid nominal case width 1.5 rejects (62.993917ms)
+✖ F3 invalid nominal case width 999999 rejects (63.694208ms)
+✔ F3 valid nominal width -1 is accepted (63.804583ms)
+✔ F3 valid nominal width 0 is accepted (68.569708ms)
+✔ F3 valid nominal width 1 is accepted (66.015209ms)
+✔ F3 both nominal-width conventions preserve long-256.sav (128.470416ms)
+✔ F3 both nominal-width conventions preserve long-505.sav (132.577584ms)
+✖ F4 supported explicit override supersedes unsupported source declaration and survives self-check (57.050583ms)
+✖ F5 redundant numeric token "01" rejects after rehash (68.847167ms)
+✖ F5 redundant numeric token "+1" rejects after rehash (66.701792ms)
+✖ F5 redundant numeric token "1.0" rejects after rehash (68.085875ms)
+✖ F5 redundant numeric token "1e0" rejects after rehash (67.637166ms)
+✔ F5 redundant numeric token " 1 " rejects after rehash (65.942ms)
+✖ F5 redundant numeric token "1E0" rejects after rehash (69.481625ms)
+✔ F5 canonical round trip -0 (65.214583ms)
+✔ F5 canonical round trip 0 (65.971ms)
+✔ F5 canonical round trip 1e-30 (66.590042ms)
+✔ F5 canonical round trip 1e+30 (67.41ms)
+✔ F5 canonical round trip 5e-324 (67.972541ms)
+✔ F5 canonical round trip 1.7976931348623157e+308 (67.774209ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 16
+ℹ fail 18
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3265.648708
+
+✖ failing tests:
+
+test at tests/contracts.test.mjs:16:37
+✖ F1 zero-row NUL variable name rejects before csv output exists (41.909208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:16:620)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:16:37
+✖ F1 zero-row NUL variable name rejects before ndjson output exists (32.0065ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:16:620)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:17:41
+✖ F2 associated-label bookkeeping at 16385 entries (207.749083ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 6
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:17:238)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:17:41
+✖ F2 associated-label bookkeeping at 17000 entries (207.500417ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 6
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:17:238)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:18:71
+✖ F2 variable label raw bytes at 1048577 (152.0195ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 6
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:18:403)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:18:71
+✖ F2 value label raw bytes at 1048577 (151.602333ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 6
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:18:403)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:19:67
+✖ F3 invalid nominal case width undefined rejects (63.03225ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:19:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:19:67
+✖ F3 invalid nominal case width invalid-string rejects (61.146333ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:19:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:19:67
+✖ F3 invalid nominal case width null rejects (62.698875ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:19:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:19:67
+✖ F3 invalid nominal case width -2 rejects (63.092416ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:19:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:19:67
+✖ F3 invalid nominal case width 1.5 rejects (62.993917ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:19:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:19:67
+✖ F3 invalid nominal case width 999999 rejects (63.694208ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:19:247)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:22:1
+✖ F4 supported explicit override supersedes unsupported source declaration and survives self-check (57.050583ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  5 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:22:366)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 5,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:23:57
+✖ F5 redundant numeric token "01" rejects after rehash (68.847167ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":5,"actual_rows":5,"logical_variables":3,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[3,1,1],[5,0,0],[5,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:23:394)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:23:57
+✖ F5 redundant numeric token "+1" rejects after rehash (66.701792ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":5,"actual_rows":5,"logical_variables":3,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[3,1,1],[5,0,0],[5,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:23:394)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:23:57
+✖ F5 redundant numeric token "1.0" rejects after rehash (68.085875ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":5,"actual_rows":5,"logical_variables":3,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[3,1,1],[5,0,0],[5,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:23:394)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:23:57
+✖ F5 redundant numeric token "1e0" rejects after rehash (67.637166ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":5,"actual_rows":5,"logical_variables":3,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[3,1,1],[5,0,0],[5,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:23:394)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:23:57
+✖ F5 redundant numeric token "1E0" rejects after rehash (69.481625ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":5,"actual_rows":5,"logical_variables":3,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[3,1,1],[5,0,0],[5,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:23:394)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

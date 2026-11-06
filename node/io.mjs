@@ -15,12 +15,27 @@ export function readInput(path,max=268435456) {
   return Buffer.concat(parts,size);
  }finally{fs.closeSync(fd)}
 }
-export function* textLines(path,maxLine=16777216,onChunk=()=>{}) {
- const fd=fs.openSync(path,fs.constants.O_RDONLY|(fs.constants.O_NOFOLLOW??0));let buf=Buffer.alloc(0);
- try{while(true){const chunk=Buffer.alloc(65536);const n=fs.readSync(fd,chunk,0,chunk.length,null);if(!n)break;onChunk(chunk.subarray(0,n));buf=Buffer.concat([buf,chunk.subarray(0,n)]);let pos;while((pos=buf.indexOf(10))>=0){if(pos>maxLine)throw new SavError({code:'ResourceLimit',message:'Record exceeds payload budget'});yield decodeUtf8(buf.subarray(0,pos));buf=buf.subarray(pos+1)}if(buf.length>maxLine)throw new SavError({code:'ResourceLimit',message:'Record exceeds payload budget'})}if(buf.length)throw new SavError({code:'IntegrityMismatch',message:'NDJSON requires final newline'});}finally{fs.closeSync(fd)}
+export function* textLines(path,maxLine=536870912,onChunk=()=>{}) {
+ const fd=fs.openSync(path,fs.constants.O_RDONLY|(fs.constants.O_NOFOLLOW??0));let parts=[],size=0;
+ try {
+  while(true) {
+   const chunk=Buffer.alloc(65536),n=fs.readSync(fd,chunk,0,chunk.length,null);if(!n)break;
+   const bytes=chunk.subarray(0,n);onChunk(bytes);let start=0,pos;
+   while((pos=bytes.indexOf(10,start))>=0) {
+    const part=bytes.subarray(start,pos);size+=part.length;
+    if(size>maxLine)throw new SavError({code:'ResourceLimit',message:'Record exceeds payload budget'});
+    parts.push(part);yield decodeUtf8(Buffer.concat(parts,size));parts=[];size=0;start=pos+1;
+   }
+   if(start<n) {const part=bytes.subarray(start);size+=part.length;
+    if(size>maxLine)throw new SavError({code:'ResourceLimit',message:'Record exceeds payload budget'});
+    parts.push(part);
+   }
+  }
+  if(size)throw new SavError({code:'IntegrityMismatch',message:'NDJSON requires final newline'});
+ } finally {fs.closeSync(fd)}
 }
 // Frames CSV records only. MoonBit validates quoting, fields and semantic values.
-export function* csvRecords(path,maxRecord=16777216,onChunk=()=>{}) {
+export function* csvRecords(path,maxRecord=536870912,onChunk=()=>{}) {
  const fd=fs.openSync(path,fs.constants.O_RDONLY|(fs.constants.O_NOFOLLOW??0));let parts=[],size=0,quoted=false,prev=-1;
  try{while(true){const chunk=Buffer.alloc(65536);const n=fs.readSync(fd,chunk,0,chunk.length,null);if(!n)break;onChunk(chunk.subarray(0,n));let start=0;for(let i=0;i<n;i++){const c=chunk[i];size++;if(size>maxRecord)throw new SavError({code:'ResourceLimit',message:'CSV record exceeds payload budget'});if(c===34)quoted=!quoted;if(c===10&&!quoted){parts.push(chunk.subarray(start,i+1));if(prev!==13)throw new SavError({code:'IntegrityMismatch',message:'CSV record separator must be CRLF'});yield decodeUtf8(Buffer.concat(parts,size));parts=[];size=0;start=i+1;}prev=c;}if(start<n)parts.push(Buffer.from(chunk.subarray(start,n)));}if(size||quoted)throw new SavError({code:'IntegrityMismatch',message:'Unterminated CSV record'});}finally{fs.closeSync(fd)}
 }

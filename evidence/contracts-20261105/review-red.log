@@ -1,0 +1,109 @@
+✖ serialized effective encoding UTF-8 cannot be silently canonicalized (67.803209ms)
+✖ serialized effective encoding utf8 cannot be silently canonicalized (65.952125ms)
+✖ serialized effective encoding GBK cannot be silently canonicalized (63.772125ms)
+✖ Node byte options are validated from one own-property snapshot (6.954208ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 239.355375
+
+✖ failing tests:
+
+test at tests/contracts.test.mjs:43:42
+✖ serialized effective encoding UTF-8 cannot be silently canonicalized (67.803209ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:43:185)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:43:42
+✖ serialized effective encoding utf8 cannot be silently canonicalized (65.952125ms)
+  AssertionError [ERR_ASSERTION]: {"code":0,"out":{"report_version":"moonsav.report/1","command":"check-bundle","status":"passed","validation_scope":"bundle","declared_rows":0,"actual_rows":0,"logical_variables":1,"warnings":[],"uninterpreted_metadata":[],"error":null,"counts":[[0,0,0]],"completed":true,"authentication":"not_provided"},"error":null}
+  
+  0 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:43:185)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:43:42
+✖ serialized effective encoding GBK cannot be silently canonicalized (63.772125ms)
+  AssertionError [ERR_ASSERTION]: {"code":5,"out":null,"error":{"code":"UnsupportedSchema","message":"Unknown encoding profile or string matching policy","byte_offset":null,"record":null,"subtype":null,"variable_index":null,"row_index":null,"actual":null,"limit":null,"suggested_action":"Keep the original input; consult supported formats and retry.","output_state":"not_created"}}
+  
+  5 !== 4
+  
+      at rejected (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:14:91)
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:43:185)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 5,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/contracts.test.mjs:44:1
+✖ Node byte options are validated from one own-property snapshot (6.954208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + Comparison {}
+  - Comparison {
+  -   code: 'Usage'
+  - }
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:44:384)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: self.str.substring is not a function
+        at _M0MPC16string10StringView9to__owned (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/lib/moonsav.js:1599:19)
+        at _M0FP211z28232537737moonsav19canonical__encoding (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/lib/moonsav.js:10222:17)
+        at _M0FP211z28232537737moonsav14encoding__info (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/lib/moonsav.js:10384:23)
+        at _M0FP211z28232537737moonsav22inspect__bytes_2einner (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/lib/moonsav.js:11840:20)
+        at Module._M0FP311z28232537737moonsav6bridge3run (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/lib/moonsav.js:16952:23)
+        at dispatch (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:14:27)
+        at inspectSav (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/node/api.mjs:32:86)
+        at assert.throws.code (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/tests/contracts.test.mjs:44:395)
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24),
+    expected: { code: 'Usage' },
+    operator: 'throws',
+    diff: 'simple'
+  }

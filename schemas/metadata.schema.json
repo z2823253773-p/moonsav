@@ -38,15 +38,18 @@
         "properties": {
           "index": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "maximum": 2147483647
           },
           "name": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "^[^\\u0000]+$"
           },
           "short_name": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "^[^\\u0000]+$"
           },
           "type": {
             "enum": [
@@ -60,24 +63,36 @@
             "maximum": 32767
           },
           "label": {
-            "type": [
-              "string",
-              "null"
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1048576
+              },
+              {
+                "type": "null"
+              }
             ]
           },
           "raw_label_base64": {
-            "type": [
-              "string",
-              "null"
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1398104
+              },
+              {
+                "type": "null"
+              }
             ]
           },
           "source_offset": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "maximum": 2147483647
           },
           "physical_start": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "maximum": 2147483647
           },
           "physical_slots": {
             "type": "integer",
@@ -162,9 +177,16 @@
                       ]
                     },
                     "decimal": {
-                      "type": [
-                        "string",
-                        "null"
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64,
+                          "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:e[+-]?[0-9]+)?$"
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "ieee754_hex": {
@@ -221,7 +243,10 @@
                           "const": "numeric"
                         },
                         "decimal": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64,
+                          "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:e[+-]?[0-9]+)?$"
                         },
                         "ieee754_hex": {
                           "type": "string",
@@ -263,10 +288,12 @@
                   ]
                 },
                 "label": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 1048576
                 },
                 "raw_label_base64": {
-                  "type": "string"
+                  "type": "string",
+                  "maxLength": 1398104
                 }
               },
               "required": [
@@ -276,7 +303,8 @@
               ],
               "additionalProperties": false
             },
-            "minItems": 0
+            "minItems": 0,
+            "maxItems": 16384
           },
           "user_missing": {
             "type": "object",
@@ -300,9 +328,16 @@
                       ]
                     },
                     "decimal": {
-                      "type": [
-                        "string",
-                        "null"
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64,
+                          "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:e[+-]?[0-9]+)?$"
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "ieee754_hex": {
@@ -359,7 +394,10 @@
                           "const": "numeric"
                         },
                         "decimal": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64,
+                          "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:e[+-]?[0-9]+)?$"
                         },
                         "ieee754_hex": {
                           "type": "string",
@@ -414,19 +452,25 @@
             "type": [
               "integer",
               "null"
-            ]
+            ],
+            "minimum": 0,
+            "maximum": 3
           },
           "display_width": {
             "type": [
               "integer",
               "null"
-            ]
+            ],
+            "minimum": 0,
+            "maximum": 2147483647
           },
           "alignment": {
             "type": [
               "integer",
               "null"
-            ]
+            ],
+            "minimum": 0,
+            "maximum": 2
           }
         },
         "required": [
@@ -466,7 +510,9 @@
           "type": [
             "integer",
             "null"
-          ]
+          ],
+          "minimum": -2147483648,
+          "maximum": 2147483647
         },
         "effective": {
           "enum": [
@@ -478,7 +524,8 @@
         },
         "decoder_identity": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[^\\u0000]*\\S[^\\u0000]*$"
         },
         "selection_source": {
           "enum": [
@@ -540,7 +587,8 @@
     },
     "nominal_case_size": {
       "type": "integer",
-      "minimum": -1
+      "minimum": -1,
+      "maximum": 1000000
     },
     "system_missing_hex": {
       "type": "string",
@@ -585,7 +633,8 @@
         "properties": {
           "record": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "maximum": 2147483647
           },
           "subtype": {
             "type": [
@@ -595,7 +644,8 @@
           },
           "byte_offset": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "maximum": 2147483647
           },
           "raw_base64": {
             "type": "string"

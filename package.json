@@ -23,7 +23,8 @@
     "THIRD_PARTY.md",
     "licenses",
     "toolchain.json",
-    "docs/CODEC_PROFILES.md"
+    "docs/CODEC_PROFILES.md",
+    "docs/CONTRACTS.md"
   ],
   "scripts": {
     "build": "node tools/build.mjs",

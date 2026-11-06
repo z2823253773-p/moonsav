@@ -19,6 +19,8 @@ npm install --offline --ignore-scripts ./dist/moonsav-0.1.0.tgz
 
 输出目录必须是新目录。保留原 SAV；不存在强制覆盖、自动续传、隐式修复或上传。文件路径含中文/空格时加引号。查看完整单列字典：`moonsav inspect INPUT.sav --variable score --json`。无参数/参数错误退出2，`--help` 退出0。
 
+完整的对象、字段、默认值、单位、回调所有权、错误、输入输出与状态约束见 [CONTRACTS](docs/CONTRACTS.md)。回调字典与行使用独立快照，集合本身不是语言级深冻结。
+
 ## 支持和边界
 
 - 小端 IEEE754 `$FL2`，未压缩0和传统字节码1；已知/未知行数；非默认 bias。

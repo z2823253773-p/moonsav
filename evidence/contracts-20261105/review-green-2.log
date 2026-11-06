@@ -1,0 +1,12 @@
+✔ serialized effective encoding UTF-8 cannot be silently canonicalized (66.42725ms)
+✔ serialized effective encoding utf8 cannot be silently canonicalized (65.3735ms)
+✔ serialized effective encoding GBK cannot be silently canonicalized (66.855958ms)
+✔ Node byte options are validated from one own-property snapshot (12.59275ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 245.798666

@@ -275,6 +275,21 @@ fn row_cells(
 }
 
 ///|
+fn snapshot_dictionary(d : Dictionary) -> Dictionary {
+  {
+    ..d,
+    variables: d.variables.map(v => {
+      ..v,
+      value_labels: v.value_labels.copy(),
+      missing_values: v.missing_values.copy(),
+      segments: v.segments.copy(),
+    }),
+    warnings: d.warnings.copy(),
+    uninterpreted_metadata: d.uninterpreted_metadata.copy(),
+  }
+}
+
+///|
 pub fn scan_bytes(
   input : Bytes,
   on_dictionary : (Dictionary) -> Unit raise Error,
@@ -282,7 +297,7 @@ pub fn scan_bytes(
   options? : Options = Options::default(),
 ) -> ScanSummary raise SavError {
   let d = inspect_bytes(input, options~)
-  on_dictionary(d) catch {
+  on_dictionary(snapshot_dictionary(d)) catch {
     _ => reject("ConsumerFailed", "Dictionary callback failed")
   }
   let reader : DataReader = {

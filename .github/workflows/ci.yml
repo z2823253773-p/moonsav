@@ -24,7 +24,7 @@ jobs:
       - run: moon version --all
       - run: node tools/build.mjs
       - name: Shared format and task corpus
-        run: node --test tests/core.test.mjs tests/bundle.test.mjs tests/tasks.test.mjs
+        run: node --test tests/core.test.mjs tests/bundle.test.mjs tests/tasks.test.mjs tests/contracts.test.mjs
       - name: POSIX interruption and permission contracts
         if: runner.os != 'Windows'
         run: node --test tests/io.test.mjs

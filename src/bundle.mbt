@@ -20,6 +20,23 @@ fn member(j : Json, key : String) -> Json raise SavError {
 }
 
 ///|
+fn closed(j : Json, allowed : Array[String]) -> Json raise SavError {
+  match j {
+    Object(fields) =>
+      for key, _ in fields {
+        if !allowed.contains(key) {
+          reject(
+            "IntegrityMismatch",
+            "Undocumented field in closed object: " + key,
+          )
+        }
+      }
+    _ => reject("IntegrityMismatch", "Expected JSON object")
+  }
+  j
+}
+
+///|
 fn jstr(j : Json) -> String raise SavError {
   match j.as_string() {
     Some(s) => s
@@ -36,6 +53,25 @@ fn jnum(j : Json) -> Int raise SavError {
     Some(n) => {
       if !finite(n) || n < 0 || n > 2147483647.0 || n.to_int().to_double() != n {
         reject("IntegrityMismatch", "Expected bounded nonnegative integer")
+      }
+      n.to_int()
+    }
+    None => {
+      reject("IntegrityMismatch", "Expected integer")
+      0
+    }
+  }
+}
+
+///|
+fn jsigned(j : Json, minimum? : Double = -2147483648.0) -> Int raise SavError {
+  match j.as_number() {
+    Some(n) => {
+      if !finite(n) ||
+        n < minimum ||
+        n > 2147483647.0 ||
+        n.to_int().to_double() != n {
+        reject("IntegrityMismatch", "Expected bounded signed integer")
       }
       n.to_int()
     }
@@ -91,6 +127,9 @@ fn b64(s : String) -> Bytes raise SavError {
 
 ///|
 fn jdecimal(s : String, bits : UInt64) -> Unit raise SavError {
+  if s.length() > 64 {
+    reject("IntegrityMismatch", "Numeric decimal token exceeds canonical size")
+  }
   let n = @string.parse_double(s) catch {
     _ => {
       reject("IntegrityMismatch", "Invalid decimal representation")
@@ -100,6 +139,33 @@ fn jdecimal(s : String, bits : UInt64) -> Unit raise SavError {
   if !finite(n) || n.reinterpret_as_uint64() != bits {
     reject("IntegrityMismatch", "Numeric decimal and IEEE754 bits disagree")
   }
+  if s != decimal(bits) {
+    reject(
+      "IntegrityMismatch", "Numeric decimal is not the canonical shortest representation",
+    )
+  }
+}
+
+///|
+fn dictionary_b64(
+  s : String,
+  budget : DictionaryBudget,
+  label? : Bool = false,
+  extension? : Bool = false,
+) -> Bytes raise SavError {
+  if s.length() % 4 != 0 {
+    reject("IntegrityMismatch", "Invalid canonical base64 length")
+  }
+  let n = s.length() / 4 * 3 -
+    (if s.has_suffix("==") { 2 } else if s.has_suffix("=") { 1 } else { 0 })
+  if label {
+    limit(n, budget.limits.label_bytes, "label_bytes")
+  }
+  if extension {
+    limit(n, budget.limits.extension_bytes, "extension_bytes")
+  }
+  budget.raw(n)
+  b64(s)
 }
 
 ///|
@@ -107,7 +173,14 @@ fn parsed_atom(
   j : Json,
   kind : String,
   dec : (Bytes) -> String raise SavError,
+  budget : DictionaryBudget,
 ) -> Atom raise SavError {
+  ignore(
+    closed(j, [
+      "type", "decimal", "ieee754_hex", "text", "logical_bytes_base64", "width",
+      "endpoint",
+    ]),
+  )
   if jstr(member(j, "type")) != kind {
     reject("IntegrityMismatch", "Atom type disagrees with variable")
   }
@@ -121,6 +194,7 @@ fn parsed_atom(
     endpoint: opt_str(member(j, "endpoint")),
   }
   if kind == "numeric" {
+    budget.raw(8)
     if atom.width != 8 ||
       atom.text != None ||
       atom.logical_bytes_base64 != None ||
@@ -137,7 +211,7 @@ fn parsed_atom(
       atom.logical_bytes_base64 == None {
       reject("IntegrityMismatch", "Invalid string atom fields")
     }
-    let bytes = b64(atom.logical_bytes_base64.unwrap())
+    let bytes = dictionary_b64(atom.logical_bytes_base64.unwrap(), budget)
     if bytes.length() != atom.width || dec(bytes) != atom.text.unwrap() {
       reject("IntegrityMismatch", "String atom bytes/text/width disagree")
     }
@@ -147,6 +221,7 @@ fn parsed_atom(
 
 ///|
 fn parsed_format(j : Json) -> Format raise SavError {
+  ignore(closed(j, ["raw", "code", "width", "decimals"]))
   let raw = jnum(member(j, "raw"))
   let f = format(raw)
   if f.code != jnum(member(j, "code")) ||
@@ -178,7 +253,7 @@ pub fn check_manifest(
     reject("IntegrityMismatch", "Bundle has no variables")
   }
   limit(cols, options.limits.variables, "variables")
-  let input = member(j, "input")
+  let input = closed(member(j, "input"), ["size_bytes", "sha256"])
   limit(
     jnum(member(input, "size_bytes")),
     options.limits.input_bytes,
@@ -210,6 +285,7 @@ pub fn check_manifest(
       }
     }
     let n = jnum(member(f, "size_bytes"))
+    ignore(closed(f, ["size_bytes", "sha256"]))
     if n > options.limits.output_bytes - total {
       reject("ResourceLimit", "Bundle total bytes exceed limit")
     }
@@ -246,6 +322,9 @@ pub fn BundleChecker::new(
   manifest : Json,
   options? : Options = Options::default(),
 ) -> BundleChecker raise SavError {
+  validate_limits(options.limits)
+  ignore(check_manifest(manifest.stringify(), options~))
+  let budget = DictionaryBudget::new(options.limits)
   let j = parse_json(metadata)
   if jstr(member(j, "schema_version")) != "moonsav.metadata/1" {
     reject("UnsupportedSchema", "Unsupported metadata schema")
@@ -261,8 +340,17 @@ pub fn BundleChecker::new(
   if declared_rows is Some(n) && n != expected_rows {
     reject("IntegrityMismatch", "Declared and actual rows disagree")
   }
-  let enc = member(j, "encoding")
-  let effective = canonical_encoding(jstr(member(enc, "effective")))
+  let enc = closed(member(j, "encoding"), [
+    "declared", "machine_code", "effective", "selection_source", "profile", "string_matching_policy",
+    "decoder_identity",
+  ])
+  let effective_token = jstr(member(enc, "effective"))
+  let effective = canonical_encoding(effective_token)
+  if effective_token != effective {
+    reject(
+      "IntegrityMismatch", "Effective encoding must use its canonical serialized token",
+    )
+  }
   let profile = jstr(member(enc, "profile"))
   let policy = jstr(member(enc, "string_matching_policy"))
   if profile != effective + "/moonsav-1" ||
@@ -273,12 +361,22 @@ pub fn BundleChecker::new(
   }
   let encoding : EncodingInfo = {
     declared: opt_str(member(enc, "declared")),
-    machine_code: opt_int(member(enc, "machine_code")),
+    machine_code: if member(enc, "machine_code") == Json::null() {
+      None
+    } else {
+      Some(jsigned(member(enc, "machine_code")))
+    },
     effective,
     profile,
     selection_source: jstr(member(enc, "selection_source")),
     string_matching_policy: policy,
     decoder_identity: jstr(member(enc, "decoder_identity")),
+  }
+  if encoding.decoder_identity.trim().is_empty() ||
+    encoding.decoder_identity.contains("\x00") {
+    reject(
+      "IntegrityMismatch", "Decoder identity must be nonempty and NUL-free",
+    )
   }
   if encoding.selection_source != "override" &&
     encoding.selection_source != "record20" &&
@@ -297,7 +395,9 @@ pub fn BundleChecker::new(
       )
     }
   }
-  let csv_policy = member(j, "csv")
+  let csv_policy = closed(member(j, "csv"), [
+    "numeric_system_missing", "string_escape", "date_policy", "encoding", "record_separator",
+  ])
   for
     pair in [
       ("numeric_system_missing", "empty_field"),
@@ -311,7 +411,18 @@ pub fn BundleChecker::new(
       reject("IntegrityMismatch", "Unknown CSV/date representation policy")
     }
   }
-  let dec = fn(b) raise SavError { decode(b, effective, options) }
+  let dec = fn(b) raise SavError {
+    let text = decode(b, effective, options)
+    budget.decoded(text)
+    text
+  }
+  for key in ["file_label", "creation_date", "creation_time", "product"] {
+    budget.text(jstr(member(j, key)))
+  }
+  if encoding.declared is Some(text) {
+    budget.text(text)
+  }
+  budget.text(encoding.decoder_identity)
   let system_missing_hex = jstr(member(j, "system_missing_hex"))
   let lowest_hex = jstr(member(j, "lowest_hex"))
   let highest_hex = jstr(member(j, "highest_hex"))
@@ -335,6 +446,8 @@ pub fn BundleChecker::new(
     }
     let name = jstr(member(item, "name"))
     let short_name = jstr(member(item, "short_name"))
+    budget.text(name)
+    budget.text(short_name)
     for key in [name.to_upper(), short_name.to_upper()] {
       if key.is_empty() {
         reject("IntegrityMismatch", "Empty name")
@@ -357,23 +470,27 @@ pub fn BundleChecker::new(
     if (label == None) != (raw_label_base64 == None) {
       reject("IntegrityMismatch", "Label raw/text presence mismatch")
     }
-    if label is Some(text) && dec(b64(raw_label_base64.unwrap())) != text {
+    if label is Some(text) &&
+      dec(dictionary_b64(raw_label_base64.unwrap(), budget, label=true)) != text {
       reject("IntegrityMismatch", "Label raw bytes/text mismatch")
     }
     let labels : Array[ValueLabel] = []
-    for entry in jarr(member(item, "value_labels")) {
-      let value = parsed_atom(member(entry, "value"), kind, dec)
+    let label_json = jarr(member(item, "value_labels"))
+    budget.labels(label_json.length())
+    for entry in label_json {
+      ignore(closed(entry, ["value", "label", "raw_label_base64"]))
+      let value = parsed_atom(member(entry, "value"), kind, dec, budget)
       let text = jstr(member(entry, "label"))
       let raw = jstr(member(entry, "raw_label_base64"))
-      if dec(b64(raw)) != text {
+      if dec(dictionary_b64(raw, budget, label=true)) != text {
         reject("IntegrityMismatch", "Value label raw bytes/text mismatch")
       }
       labels.push({ value, label: text, raw_label_base64: raw })
     }
-    let missing = member(item, "user_missing")
+    let missing = closed(member(item, "user_missing"), ["kind", "values"])
     let missing_kind = jstr(member(missing, "kind"))
     let missing_values = jarr(member(missing, "values")).map(a => {
-      parsed_atom(a, kind, dec)
+      parsed_atom(a, kind, dec, budget)
     })
     if missing_kind == "discrete" {
       if missing_values.length() > 3 {
@@ -426,6 +543,8 @@ pub fn BundleChecker::new(
   if slots != jnum(member(j, "physical_slots")) {
     reject("IntegrityMismatch", "Physical slot total mismatch")
   }
+  let nominal_case_size = jsigned(member(j, "nominal_case_size"), minimum=-1.0)
+  validate_case_width(nominal_case_size, variables, slots, "IntegrityMismatch")
   let compression = jnum(member(j, "compression"))
   if compression > 1 {
     reject("IntegrityMismatch", "Invalid compression metadata")
@@ -437,8 +556,12 @@ pub fn BundleChecker::new(
       0.0
     }
   }
+  if !finite(bias) {
+    reject("IntegrityMismatch", "Compression bias must be finite")
+  }
   let warnings = []
   for w in jarr(member(j, "warnings")) {
+    ignore(closed(w, ["warning_code", "scope", "suggested_action"]))
     warnings.push({
       warning_code: jstr(member(w, "warning_code")),
       scope: jstr(member(w, "scope")),
@@ -448,11 +571,12 @@ pub fn BundleChecker::new(
   let extras = []
   let mut extra_bytes = 0
   for e in jarr(member(j, "uninterpreted_metadata")) {
+    ignore(closed(e, ["record", "subtype", "byte_offset", "raw_base64"]))
     let record = jnum(member(e, "record"))
     let subtype = opt_int(member(e, "subtype"))
     let offset = jnum(member(e, "byte_offset"))
     let raw = jstr(member(e, "raw_base64"))
-    let bytes = b64(raw)
+    let bytes = dictionary_b64(raw, budget, extension=true)
     if record == 7 {
       match subtype {
         Some(5 | 6 | 7 | 8 | 9 | 10 | 12 | 17 | 18 | 19 | 24) => ()
@@ -494,7 +618,7 @@ pub fn BundleChecker::new(
     compression,
     bias,
     physical_slots: slots,
-    nominal_case_size: slots,
+    nominal_case_size,
     encoding,
     file_label: jstr(member(j, "file_label")),
     creation_date: jstr(member(j, "creation_date")),
@@ -541,7 +665,7 @@ pub fn BundleChecker::next(
   if self.row >= self.expected_rows {
     reject("IntegrityMismatch", "Too many canonical rows")
   }
-  let j = parse_json(line)
+  let j = closed(parse_json(line), ["row", "cells"])
   if jnum(member(j, "row")) != self.row {
     reject("IntegrityMismatch", "Canonical row sequence mismatch")
   }
@@ -551,7 +675,9 @@ pub fn BundleChecker::next(
   }
   let visible = []
   for i = 0; i < cells.length(); i = i + 1 {
-    let j = cells[i]
+    let j = closed(cells[i], [
+      "kind", "missing", "decimal", "ieee754_hex", "text", "logical_bytes_base64",
+    ])
     let v = self.dictionary.variables[i]
     let kind = jstr(member(j, "kind"))
     let missing = jstr(member(j, "missing"))
@@ -645,7 +771,11 @@ pub fn BundleChecker::finish(
   if self.row != self.expected_rows {
     reject("IntegrityMismatch", "Canonical row count mismatch")
   }
-  { actual_rows: self.row, completed: true, counts: self.counts }
+  {
+    actual_rows: self.row,
+    completed: true,
+    counts: self.counts.map(row => row.copy()),
+  }
 }
 
 ///|

@@ -1,3 +1,13 @@
+# Current contract repair — 2026-11-05
+
+User asked whether all objects/input/output are explicit and requested continued improvement. Live HEAD da4ddb5 still has designated acceptance CHANGES_REQUIRED (docs/acceptance/2026-10-24/REPORT.md). All F1–F5 counterexamples reproduced against the original tgz in .dev/contracts-20261105/archive-red, exit1. Historical CI and normal-path success do not close these defects.
+
+Candidate repair now passes108 Node tests and14 core tests each JS/native/wasm-gc on both declared toolchains. Contract docs cover all supported public models and boundaries; independent code-review fixes are included. Fresh clean-clone/full/oracle/archive/remote checks are pending.
+
+Current plan: docs/superpowers/plans/2026-11-05-contract-hardening.md. Preserve acceptance-side files read-only/untracked, repair in sole-writer implementation checkout, add boundary regressions and comprehensive object/I/O contract, then rebuild/replay/full oracles/new-SHA CI and independent review. No further design approval or private push approval is needed; public release/registration remain outside scope.
+
+---
+
 # MoonSav current state
 
 Updated2026-10-24 America/Phoenix. User explicitly authorized private repository creation, push and Actions. Repository: https://github.com/z2823253773-p/moonsav ; private=true verified before push and after verification. Branch implementation. Source candidate `0afbe3443a93f6fd13e7211ba41cc970ca0b00a9`; subsequent report commit changes only documentation/evidence. Exact current HEAD/dirty/upstream is in ignored dist/delivery-state.json and must be rechecked live.

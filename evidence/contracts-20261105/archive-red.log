@@ -1,0 +1,16 @@
+label-count-setup: exit=0, expectation_met=True
+label-count-check: exit=0, expectation_met=False
+label-bytes-setup: exit=0, expectation_met=True
+label-bytes-check: exit=0, expectation_met=False
+nominal-absent-setup: exit=0, expectation_met=True
+nominal-absent-check: exit=0, expectation_met=False
+nominal-type-setup: exit=0, expectation_met=True
+nominal-type-check: exit=0, expectation_met=False
+nominal-width-setup: exit=0, expectation_met=True
+nominal-width-check: exit=0, expectation_met=False
+encoding-override: exit=5, expectation_met=False
+noncanonical-setup: exit=0, expectation_met=True
+noncanonical-check: exit=0, expectation_met=False
+nul-name-export: exit=0, expectation_met=False
+nul-name-self-check: exit=4, expectation_met=False
+/Users/henryz/Desktop/比赛/moonsav/.dev/contracts-20261105/archive-red/results.json
