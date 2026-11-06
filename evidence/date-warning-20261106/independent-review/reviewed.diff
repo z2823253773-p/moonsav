@@ -1,0 +1,225 @@
+diff --git a/README.md b/README.md
+index c6845b7..8ff1440 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ MoonBit 原生 SPSS `.sav` 字节读取库和离线 CLI。MoonBit 实现格式解析、传统压缩、字典、长字符串重组、标签/缺失语义以及 bundle 序列化和语义校验；Node 只负责文件、哈希、严格编码适配与进程入口。
+ 
+-本地开发版本 0.1.0，尚未公开发布。README 的本地验证范围以 evidence 与 docs/progress 为准；CI 定义不代表远端已通过，开发者复现不称用户试用，独立代理审查不代替指定验收对话。
++版本 0.1.0，尚未公开发布。2026-11-06 原指定验收对冻结源码 `e453463` 及对应精确归档给出 **PASSED_WITH_NOTES（产品技术验收有保留通过）**，原 F1–F5 已复验通过；保留意见是日期提示分类 P3 和文档状态。当前修正日期提示，后续构建的源码、归档哈希、专项验证与新 CI 结果见[交付清单](https://github.com/z2823253773-p/moonsav/blob/implementation/docs/delivery-manifest.json)和[当前交接](https://github.com/z2823253773-p/moonsav/blob/implementation/docs/FINAL_HANDOFF.md)。旧版技术验收结论只覆盖其记录的精确归档，不自动覆盖新包。产品技术验收不代表赛事初审、组织方认可或外部真人试用。
+ 
+ ## 本地安装与第一次运行
+ 
+@@ -27,14 +27,23 @@ npm install --offline --ignore-scripts ./dist/moonsav-0.1.0.tgz
+ - 1–32767字节字符串，包含13/14长名/分段、21值标签、22用户缺失，跨字节单元/分段后才解码；逻辑宽度内空格保留。字符串没有数值系统缺失。
+ - 数值/字符串值标签，离散/闭区间/范围加单值用户缺失，LOWEST/HIGHEST和系统哨兵；值标签从不替换数据，未声明缺失的99仍是合法值。数值保存 IEEE754 位，包含负零。
+ - UTF8、Microsoft CP1252、CP936/GBK稳定映射和GB18030稳定映射交集；具体白名单/版本/拒绝变体见 [CODEC_PROFILES](docs/CODEC_PROFILES.md)。不是所有GB18030版本。严格解码也不能证明提供方声明正确；覆盖用 `--encoding` 并产生提示。
+-- 日期始终保留原数值和print/write格式；测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
++- 日期始终保留原数值和print/write格式；数值变量任一格式为 GNU 日期/时间编码20–30或38–41时，每列给一次 RawDateFormat 提示，严格模式拒绝；PCT/DOT/自定义货币31–37不触发日期提示。分类依据 [GNU SAV 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
+ - 拒绝大端、IBM/VAX浮点、FL3/zlib/ZSAV、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
+ 
+-本地已验证 macOS arm64 / Node24.15.0；JS/native/wasm-gc字节核心用固定MoonBit工具链运行同一UTF8向量。Linux/Windows的CI文件会运行相同语料；在远端证据出现前均标记未验证，不能把macOS运行当作这些平台通过。
++已执行的跨平台基线为源码 `e453463` 的 [CI42248646372](https://github.com/z2823253773-p/moonsav/actions/runs/42248646372)，四个作业全部通过；新修正版的对应 CI 以交付清单为准。Node24.15.0 / ICU78.2 固定，源码使用 toolchain.json 的完整编译器/core 配对。
++
++| 已验证环境 | 实际范围 |
++| --- | --- |
++| macOS arm64 本地，两套工具链 | 完整 Node 语料；JS/native/wasm-gc 核心；完整兼容性、公开文件和精确归档消费 |
++| Actions macOS15 | 共享及 POSIX Node 语料；JS/native/wasm-gc 核心；自建归档首次使用 |
++| Actions Ubuntu24.04 x64 | 同上；另有完整 AC01–AC18、ReadStat/PSPP、源码消费和参考性能 |
++| Actions Windows2025 x64 | 共享 Node 语料；JS/wasm-gc 核心；自建归档首次使用；不声称 native/POSIX 等价 |
++
++本地与 Linux 完整入口均为17项通过及29个预期拒绝向量；两份公开 SAV 共65449个单元格对照无未解释差异。各 runner 自建归档，精确本地归档的消费另行记录，不能混为同一字节在三系统安装。
+ 
+ 资源硬上限：输入256MiB，字典原始/解码各64MiB，逻辑变量100000，物理槽1000000，字符串32767，单标签1MiB，扩展16MiB，行8MiB，完整扫描1000000行；收集模式5000000单元/128MiB计费载荷，所有bundle文件合计512MiB。字典标签另按每项4096字节保守记账（默认最多16384个关联条目），在分配前拒绝；这是根据审查中的紧凑标签攻击收紧的资源策略。上限是应用记账，不是任意输入RSS承诺。
+ 
+-`--max-input-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能见 evidence/AC18-first/results.json，不外推到最大输入。
++`--max-input-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能和完整对照报告由交付清单指向当前证据，不外推到最大输入。
+ 
+ ## 三个用户任务
+ 
+@@ -51,13 +60,15 @@ python3 examples/read_bundle.py first_bundle
+ 
+ Python示例仅使用标准库，逐行读取权威NDJSON，再独立核对CSV，不做类型/NA推断。CSV单独不能普遍恢复源字节与缺失语义；普通表格软件可能推断数字、日期或公式，请按文本导入。日期和标签仍在metadata/codebook。
+ 
++check-bundle 继承 bundle 元数据中已经记录的提示；旧包的错误提示不会自动重新分类，需要用修正版从原 SAV 重新导出。
++
+ checker只读，验证版本/文件集合/哈希/大小/类型/原位表示/逐格缺失/源字节解码/CSV一致性/计数。它拒绝INCOMPLETE、缺件、错配、路径逃逸和符号链接；额外普通文件明确未校验。它不是签名或来源认证：一致地改数据、字典和manifest可以形成另一个自洽bundle。
+ 
+ 导出排他创建目录，先INCOMPLETE，写文件、关闭、最后manifest，移除INCOMPLETE才提交。提交前常规失败清理本次拥有的文件；中断可能留下未完成目录，换新目录重试。提交后报告失败时bundle可能完整，用checker恢复判断。POSIX新目录0700/文件0600；Windows沿用宿主ACL，不宣称相同权限位。
+ 
+ ## MoonBit 集成
+ 
+-源构建只接受 toolchain.json 中两组精确配对：原基线 moon0.1.20260713 / moonc v0.10.4+2cc641edf，以及 CI 固定 moon0.1.20261023 / moonc v0.10.17+d971670cd。原版官方归档目前返回403；新版在项目隔离目录验证，两版不混用 core。`--version` 报告实际构建配对。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
++源构建只接受 toolchain.json 中两组精确配对：原基线 moon0.1.20260713 / moonc v0.10.4+2cc641edf，以及 CI 固定 moon0.1.20261023 / moonc v0.10.17+d971670cd。原版官方归档在已记录的安装尝试中返回403；现有原版工具链和项目隔离的新版均已验证，两版不混用 core。`--version` 报告实际构建配对。未发布到Mooncakes，使用本地源码归档解压后的路径依赖：
+ 
+ 在消费者的 `moon.mod` 声明：
+ 
+@@ -72,7 +83,7 @@ import { "z2823253773/moonsav@0.1.0" }
+ members = ["consumer", "moonsav-source"]
+ ```
+ 
+-工作区从本地解析库，不访问尚未发布的包；新版工具链不接受旧 JSON 模块配置。随包示例已提供 `moon.mod`、`moon.pkg`、`moon.work`，两组固定工具链都可运行。参见 [MoonBit 本地依赖说明](https://docs.moonbitlang.com/en/latest/toolchain/moon/module.html#dependency-management)。
++工作区从本地解析库，不访问尚未发布的包；新版工具链不接受旧 JSON 模块配置。随包示例已提供 `moon.mod`、`moon.pkg`、`moon.work`，两组固定工具链都可运行。若旧 MoonBit 在源码消费时因环境变量 `_` 含非法 UTF-8 路径崩溃，可只对该进程移除该变量后重试，例如 `env -u _ moon run . --target js`；诊断原文在指定复验材料中保留，这不属于 SAV 读取失败。参见 [MoonBit 本地依赖说明](https://docs.moonbitlang.com/en/latest/toolchain/moon/module.html#dependency-management)。
+ 
+ 包import：`"z2823253773/moonsav"`。完整可编译例子在 `examples/consumer/main.mbt`（包含合成SAV字节，无文件I/O）；从该目录执行 `moon run . --target js`，也可native/wasm-gc。库不读文件、不打印、不退出进程。
+ 
+@@ -106,6 +117,4 @@ moon test src --target wasm-gc
+ 
+ 公共语料下载到忽略的.cache，依赖和PSPP仅在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
+ 
+-Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。公开推送、发布、报名均未执行；十一月赛事规则与组织方认可没有新证据。
+-
+-2026-10-24 已获授权创建私有 GitHub 仓库并运行 CI： https://github.com/z2823253773-p/moonsav 。首轮在工具链下载/Windows保留文件名处失败，完整日志保留；当前平台支持仍以最终远端报告为准，启动过不等于通过。npm/Mooncakes公开发布和赛事报名未执行。
++Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[私有 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。
+diff --git a/docs/CONTRACTS.md b/docs/CONTRACTS.md
+index 994a7cf..0772fea 100644
+--- a/docs/CONTRACTS.md
++++ b/docs/CONTRACTS.md
+@@ -141,6 +141,8 @@ limited 宽度约定为：数值变量加 1，字符串变量加 `ceil(min(width
+ | string_matching_policy | 固定 source-bytes-space-padded-width-v1 |
+ | decoder_identity | 非空白、无 NUL 的实现/版本说明。默认核心使用版本无关的严格 UTF8 适配器身份，构建编译器另在 build 记录；checker 不能认证来源方是否诚实填写 |
+ 
++RawDateFormat 仅针对数值变量：print_format 或 write_format 的 code 属于20–30或38–41时，每变量最多一个提示；31–37的 PCT/DOT/自定义货币不是日期。依据 [GNU Variable Record 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。提示不换算数据，所有位模式与 print/write 原始格式仍保留；--fail-on-warning 按该提示拒绝。checker 继承已有 metadata 提示，不从旧包重新推断分类；旧错误提示须从原 SAV 重新导出纠正。
++
+ Warning 的三个必需 String 字段为 `warning_code/scope/suggested_action`。warning_code 是开放标识，已用 EncodingOverride、RawDateFormat、UninterpretedMetadata；Node 文件适配器还用 UnverifiedExtraFile。非零提示数量影响 passed_with_warnings 和严格模式，不等于解析失败。
+ 
+ Extra 的字段为 `record:Int/subtype:Int?/byte_offset:Int/raw_base64:String`。record6 对应文档，subtype=null；record7 只允许保留未解释的已识别 subtype 5/6/7/8/9/10/12/17/18/19/24。未知语义扩展不能靠 raw_base64 绕过拒绝；保留 Extra 必须有 UninterpretedMetadata 提示。raw 内容不作为已解释含义。
+diff --git a/src/dictionary.mbt b/src/dictionary.mbt
+index 05093dd..6a42cb8 100644
+--- a/src/dictionary.mbt
++++ b/src/dictionary.mbt
+@@ -742,7 +742,8 @@ pub fn inspect_bytes(
+     })
+   }
+   for v in vars {
+-    if v.print_format.code >= 20 && v.print_format.code <= 39 {
++    if v.type_ == "numeric" &&
++      (is_datetime_format(v.print_format.code) || is_datetime_format(v.write_format.code)) {
+       warnings.push({
+         warning_code: "RawDateFormat",
+         scope: "variable:\{v.index}",
+@@ -868,3 +869,12 @@ fn apply_long_semantics(
+     }
+   }
+ }
++
++///|
++// GNU PSPP SAV Variable Record codes; currency/PCT/DOT occupy the gap31–37.
++fn is_datetime_format(code : Int) -> Bool {
++  match code {
++    20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 38 | 39 | 40 | 41 => true
++    _ => false
++  }
++}
+diff --git a/src/semantic_test.mbt b/src/semantic_test.mbt
+index c86a48a..5d61540 100644
+--- a/src/semantic_test.mbt
++++ b/src/semantic_test.mbt
+@@ -74,3 +74,61 @@ test "default core UTF8 preserves initial BOM in labels and string values" {
+   assert_eq(d.rows[0][0].text, Some("\uFEFFA"))
+   assert_eq(d.dictionary.variables[0].label, Some("\uFEFFlabel"))
+ }
++
++///|
++fn format_fixture(print : Int, write : Int) -> Bytes {
++  Bytes::makei(survey_fixture.length(), i => {
++    if i == 194 {
++      print.to_byte()
++    } else if i == 198 {
++      write.to_byte()
++    } else {
++      survey_fixture[i]
++    }
++  })
++}
++
++///|
++test "GNU date warnings classify every print code without changing data" {
++  let expected = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 38, 39, 40, 41]
++  for code = 0; code < 256; code = code + 1 {
++    let d = read_bytes(format_fixture(code, 5))
++    assert_eq(
++      d.dictionary.warnings
++      .filter(w => w.warning_code == "RawDateFormat")
++      .length(),
++      if expected.contains(code) {
++        1
++      } else {
++        0
++      },
++    )
++    assert_eq(d.dictionary.variables[0].print_format.code, code)
++    assert_eq(d.dictionary.variables[0].write_format.code, 5)
++    assert_eq(d.rows[0][0].decimal, Some("1"))
++    assert_eq(d.rows[3][0].missing, "system")
++  }
++}
++
++///|
++test "GNU date warnings inspect write format and do not duplicate" {
++  let expected = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 38, 39, 40, 41]
++  for code = 0; code < 256; code = code + 1 {
++    let d = inspect_bytes(format_fixture(5, code))
++    assert_eq(
++      d.warnings.filter(w => w.warning_code == "RawDateFormat").length(),
++      if expected.contains(code) {
++        1
++      } else {
++        0
++      },
++    )
++    assert_eq(d.variables[0].print_format.code, 5)
++    assert_eq(d.variables[0].write_format.code, code)
++  }
++  let d = inspect_bytes(format_fixture(40, 41))
++  assert_eq(
++    d.warnings.filter(w => w.warning_code == "RawDateFormat").length(),
++    1,
++  )
++}
+diff --git a/tests/tasks.test.mjs b/tests/tasks.test.mjs
+index f140659..55d8bfd 100644
+--- a/tests/tasks.test.mjs
++++ b/tests/tasks.test.mjs
+@@ -5,3 +5,40 @@ test('JSON success, warning, strict rejection and malformed input obey channels
+ test('strict export rejects warnings before creating any output directory',()=>{const out=path.join(tmp,'strict');const r=cli(['export','fixtures/synthetic/warning.sav','--out',out,'--fail-on-warning']);assert.equal(r.status,7);assert.equal(fs.existsSync(out),false)});
+ test('U3 schema mismatch rejects, extras warn and strict checker refuses warnings',()=>{const out=path.join(tmp,'handoff');assert.equal(cli(['export','fixtures/synthetic/survey-row.sav','--out',out]).status,0);fs.writeFileSync(path.join(out,'notes.txt'),'unverified');const r=cli(['check-bundle',out]);assert.equal(r.status,0);assert.ok(JSON.parse(r.stdout).warnings.some(w=>w.warning_code==='UnverifiedExtraFile'));assert.equal(cli(['check-bundle',out,'--fail-on-warning']).status,7);const p=path.join(out,'manifest.json'),m=JSON.parse(fs.readFileSync(p));m.schema_version='moonsav.bundle/2';fs.writeFileSync(p,JSON.stringify(m));const b=cli(['check-bundle',out]);assert.equal(b.status,5);assert.equal(JSON.parse(b.stderr).error.code,'UnsupportedSchema')});
+ test('version reports the actual build compiler instead of a historical toolchain constant',()=>{const r=cli(['--version'],false);assert.equal(r.status,0);const v=JSON.parse(r.stdout),b=JSON.parse(fs.readFileSync('lib/build.json','utf8'));assert.equal(v.moon,b.moon);assert.equal(v.moonc,b.moonc)});
++
++// GNU SAV format codes; literal expected categories are independent of product logic.
++const formats=[
++ [5,'F',12,2,false],[20,'DATE',11,0,true],[21,'TIME',12,2,true],
++ [22,'DATETIME',24,2,true],[23,'ADATE',10,0,true],[24,'JDATE',7,0,true],
++ [25,'DTIME',16,2,true],[26,'WKDAY',9,0,true],[27,'MONTH',9,0,true],
++ [28,'MOYR',8,0,true],[29,'QYR',8,0,true],[30,'WKYR',10,0,true],
++ [31,'PCT',12,2,false],[32,'DOT',12,2,false],[33,'CCA',12,2,false],
++ [34,'CCB',12,2,false],[35,'CCC',12,2,false],[36,'CCD',12,2,false],
++ [37,'CCE',12,2,false],[38,'EDATE',10,0,true],[39,'SDATE',10,0,true],
++ [40,'MTIME',12,2,true],[41,'YMDHMS',24,2,true]
++];
++for(const [code,name,width,decimals,warn]of formats)test(`GNU ${name} warning and strict mode preserve raw numeric data`,async()=>{
++ const source=path.join(tmp,'format-'+name+'.sav'),out=path.join(tmp,'format-'+name),strictOut=out+'-strict';
++ const bytes=fs.readFileSync('fixtures/synthetic/survey-none.sav'),raw=(code<<16)|(width<<8)|decimals;
++ assert.equal(bytes.readInt32LE(176),2);bytes.writeInt32LE(raw,192);bytes.writeInt32LE(raw,196);fs.writeFileSync(source,bytes);
++ const inspected=cli(['inspect',source]);assert.equal(inspected.status,0,inspected.stderr);
++ const dictionary=JSON.parse(inspected.stdout).dictionary;
++ assert.equal(dictionary.warnings.filter(w=>w.warning_code==='RawDateFormat').length,warn?1:0);
++ assert.equal(dictionary.variables[0].print_format.raw,raw);assert.equal(dictionary.variables[0].write_format.raw,raw);
++ const {readSav}=await import('../node/api.mjs');assert.deepEqual(readSav(bytes).rows,readSav(fs.readFileSync('fixtures/synthetic/survey-none.sav')).rows);
++ assert.equal(cli(['validate',source]).status,0);
++ const strict=cli(['validate',source,'--fail-on-warning']);assert.equal(strict.status,warn?7:0,strict.stderr);
++ if(warn)assert.equal(JSON.parse(strict.stderr).error.code,'WarningRejected');
++ assert.equal(cli(['export',source,'--out',out]).status,0);
++ const checked=cli(['check-bundle',out]);assert.equal(checked.status,0,checked.stderr);
++ assert.equal(JSON.parse(checked.stdout).warnings.filter(w=>w.warning_code==='RawDateFormat').length,warn?1:0);
++ assert.equal(cli(['check-bundle',out,'--fail-on-warning']).status,warn?7:0);
++ const exported=cli(['export',source,'--out',strictOut,'--fail-on-warning']);assert.equal(exported.status,warn?7:0,exported.stderr);assert.equal(fs.existsSync(strictOut),!warn);
++ if(!warn)assert.equal(cli(['check-bundle',strictOut,'--fail-on-warning']).status,0);
++});
++for(const [print,write]of[[5,40],[41,5],[40,41]])test(`date warning uses print ${print} and write ${write} once per variable`,()=>{
++ const bytes=fs.readFileSync('fixtures/synthetic/survey-none.sav'),source=path.join(tmp,`mixed-format-${print}-${write}.sav`);
++ bytes.writeInt32LE(print<<16|24<<8,192);bytes.writeInt32LE(write<<16|24<<8,196);fs.writeFileSync(source,bytes);
++ const r=cli(['inspect',source]);assert.equal(r.status,0);const d=JSON.parse(r.stdout).dictionary;assert.equal(d.warnings.filter(w=>w.warning_code==='RawDateFormat').length,1);
++ assert.equal(d.variables[0].print_format.code,print);assert.equal(d.variables[0].write_format.code,write);assert.equal(cli(['validate',source,'--fail-on-warning']).status,7);
++});

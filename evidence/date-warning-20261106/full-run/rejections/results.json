@@ -1,0 +1,292 @@
+[
+  {
+    "case": "fl3",
+    "sha256": "9847a118fcdbde3429f98967d1158e91c62dcc369066feb7bf50205306e78490",
+    "size_bytes": 4,
+    "expected_exit": 5,
+    "actual_exit": 5,
+    "expected_code": "UnsupportedCompression",
+    "actual_code": "UnsupportedCompression",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "bigendian",
+    "sha256": "8bb5eae58faff80669ed039174fd62a2e7f5cf41913ba8c1086178a3ac074caf",
+    "size_bytes": 309,
+    "expected_exit": 5,
+    "actual_exit": 5,
+    "expected_code": "UnsupportedLayout",
+    "actual_code": "UnsupportedLayout",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "other-format",
+    "sha256": "43eecf6731e099da7cf3528661755bc5b3f8dc72c304b013a50147ed5bcf7348",
+    "size_bytes": 14,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "InvalidMagic",
+    "actual_code": "InvalidMagic",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "unknown-extension",
+    "sha256": "a5faeb489d5636d11324cfedca1807ef8856d3d9e219eea7389c595fd1ad6759",
+    "size_bytes": 310,
+    "expected_exit": 5,
+    "actual_exit": 5,
+    "expected_code": "UnsupportedExtension",
+    "actual_code": "UnsupportedExtension",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "nan",
+    "sha256": "80543a4c2c0cbbc5f095fa88a9724a8815384a90c8525d60781e020fc11a6367",
+    "size_bytes": 293,
+    "expected_exit": 5,
+    "actual_exit": 5,
+    "expected_code": "UnsupportedNumeric",
+    "actual_code": "UnsupportedNumeric",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "inf",
+    "sha256": "4dd3892bf76df6f41cd511d1e0f753e78eb76f04ec4a8db39016e61d2fc07d84",
+    "size_bytes": 293,
+    "expected_exit": 5,
+    "actual_exit": 5,
+    "expected_code": "UnsupportedNumeric",
+    "actual_code": "UnsupportedNumeric",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "too-many-slots",
+    "sha256": "39f78c98d6f62975d347978f4f98505b9bd7e717d6478adc1a2ff1f8543b41f8",
+    "size_bytes": 309,
+    "expected_exit": 6,
+    "actual_exit": 6,
+    "expected_code": "ResourceLimit",
+    "actual_code": "ResourceLimit",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "declared-more-rows",
+    "sha256": "d098a543dbce8490d0749d40036292ac3b3b3ccb0549fd5b3a2bf6493a5a7d16",
+    "size_bytes": 309,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "CaseCountMismatch",
+    "actual_code": "CaseCountMismatch",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "declared-less-rows",
+    "sha256": "e8be7d5e1950d539d94666c94e80239f60ab3d1d296770a8a218decf146f60be",
+    "size_bytes": 309,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "CaseCountMismatch",
+    "actual_code": "CaseCountMismatch",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-0",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-1",
+    "sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b",
+    "size_bytes": 1,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-3",
+    "sha256": "cc134e5b22a40c8f59936e338eae1452519dedc667367e8e94be91ecde79076a",
+    "size_bytes": 3,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-4",
+    "sha256": "2e144c808b167fb92266f426c8dc0bde0e96b8a5273663ab45fab6ba76299f52",
+    "size_bytes": 4,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-63",
+    "sha256": "9db2f12a4be3c6732419d6b007d15fbefde2ede88e0cb82bb97fc176dfd095d9",
+    "size_bytes": 63,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-64",
+    "sha256": "5985cb1ceb217e52319b07de5198d0cfa667dfe6ca734374f27481a8a2399773",
+    "size_bytes": 64,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-67",
+    "sha256": "37c9f1b61733795bff1e2c7368b2cdf4e95bbdeb0e3a9c1c83789a00cfe81f68",
+    "size_bytes": 67,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-68",
+    "sha256": "1ff68421d393ff769bcc29951458e3f96016853429d20f53e79f4a7c6a10be07",
+    "size_bytes": 68,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-71",
+    "sha256": "52ceaa65b9f60e48f01dbf4d125adcd1bb42f80d8fd11ba60071835876ed343d",
+    "size_bytes": 71,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-72",
+    "sha256": "853f36ef6c1ba6d565c7729ea7385ba9ecf5820a3bfe88fcec0fef2288e91411",
+    "size_bytes": 72,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-83",
+    "sha256": "0261329de187667f86e0c364c899b5e8b5ae47032bf0c81123eb4e147b9a7c46",
+    "size_bytes": 83,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-91",
+    "sha256": "46fc495818e55807c3a4800270e6c43ba0f31838c02e852c3688429b48bd587b",
+    "size_bytes": 91,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-108",
+    "sha256": "3a22a2f628415899ca90fef6e759ccadff3c5ede1f0c3cd95ca55e3fc22bc1a0",
+    "size_bytes": 108,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-175",
+    "sha256": "b3845d68b74886ff68950016fd76644645233abee9ccdb055f5f3192072a3695",
+    "size_bytes": 175,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-176",
+    "sha256": "a017f4fc8cc52b0076e9443a87fe13ae502fa7483bd140d46a6a13d3ab46da58",
+    "size_bytes": 176,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-179",
+    "sha256": "d0188dbeae43c6c9133253418aecdba94a7e8a56a5ff8fe9d00871a296039e9d",
+    "size_bytes": 179,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-180",
+    "sha256": "270fe4a968dc573f0de4d75952a8e27eaccf05a615beaee77d7515a669e1eb8d",
+    "size_bytes": 180,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-199",
+    "sha256": "9449a789df7bbaa75c3f5464276be26a8576e58987edd7da19fdedbc3eef8666",
+    "size_bytes": 199,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-207",
+    "sha256": "36d54d3619b46202e15225889a645e8a81fa0fd95d5990fce7bce9faa9f074ed",
+    "size_bytes": 207,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  },
+  {
+    "case": "truncate-308",
+    "sha256": "44181e792387fa021a4a15ae5934530da99721b3abbac1a2c24ef1f1e8563ee5",
+    "size_bytes": 308,
+    "expected_exit": 4,
+    "actual_exit": 4,
+    "expected_code": "Truncated",
+    "actual_code": "Truncated",
+    "status": "expected_rejection"
+  }
+]

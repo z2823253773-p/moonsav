@@ -1,0 +1,9 @@
+﻿2026-11-06T16:48:34.1652200Z ##[group]Run moon version --all
+2026-11-06T16:48:34.1653730Z [36;1mmoon version --all[0m
+2026-11-06T16:48:34.1767530Z shell: /bin/bash -e {0}
+2026-11-06T16:48:34.1768240Z ##[endgroup]
+2026-11-06T16:48:34.2765130Z moon 0.1.20261023 (3778465 2026-10-23) ~/.moon/bin/moon
+2026-11-06T16:48:34.2767640Z moonc v0.10.17+d971670cd (2026-10-23) ~/.moon/bin/moonc
+2026-11-06T16:48:34.2769100Z moonrun 0.1.20261023 (3778465 2026-10-23) ~/.moon/bin/moonrun
+2026-11-06T16:48:34.2769750Z 
+2026-11-06T16:48:34.2770720Z Feature flags enabled: rr_moon_mod,rr_moon_pkg

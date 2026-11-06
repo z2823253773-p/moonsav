@@ -1,0 +1,20 @@
+{
+  "workflow_jobs": "all4 success at source5c1ff8d (run.json)",
+  "log_download_failures": [
+    {
+      "job_id": 128022247696,
+      "error": "unexpected EOF on initial API download"
+    },
+    {
+      "job_id": 128022247696,
+      "error": "unexpected EOF on first retry; subsequent Ubuntu log download succeeded"
+    },
+    {
+      "job_id": 128022247902,
+      "error": "API log download timed out after120s; original Python command failed, no product/CI failure"
+    }
+  ],
+  "current_retry": "Mac/Windows per-process GODEBUG=http2client=0 with45s timeout; result JSON beside logs; no global/network repository configuration changed",
+  "final_status": "all4 original job logs retained; Mac obtained by whole-run ZIP fallback after per-job EOF/timeout",
+  "global_configuration_changed": false
+}

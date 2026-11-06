@@ -1,0 +1,92 @@
+﻿2026-11-06T16:48:20.1195860Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+2026-11-06T16:48:20.1196330Z with:
+2026-11-06T16:48:20.1196690Z   version: 0.10.17+d971670cd
+2026-11-06T16:48:20.1197040Z   core-version: 0.10.17+d971670cd
+2026-11-06T16:48:20.1197290Z   setup-core: true
+2026-11-06T16:48:20.1197500Z ##[endgroup]
+2026-11-06T16:48:20.1442450Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+2026-11-06T16:48:20.1502960Z ##[group]Run hustcer/setup-nu@v3.27
+2026-11-06T16:48:20.1503280Z with:
+2026-11-06T16:48:20.1503600Z   version: 0.115.1
+2026-11-06T16:48:20.1503840Z   features: default
+2026-11-06T16:48:20.1504160Z   check-latest: false
+2026-11-06T16:48:20.1504340Z   enable-plugins: false
+2026-11-06T16:48:20.1506590Z   github-token: ***
+2026-11-06T16:48:20.1506840Z ##[endgroup]
+2026-11-06T16:48:20.4471760Z versionSpec: 0.115.1
+2026-11-06T16:48:20.4527670Z resolved version: 0.115.1
+2026-11-06T16:48:20.4533570Z Try to get assets for Nu: arch = arm64, platform = darwin, feature = default
+2026-11-06T16:48:23.4332130Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/bfa59a1f-c32b-4afc-b6cd-ce6ca0f955dc -f /Users/runner/work/_temp/0a6f0b3e-900a-4db7-a76b-febe61027164
+2026-11-06T16:48:24.3707490Z Successfully setup Nu 0.115.1, with default features.
+2026-11-06T16:48:24.4012470Z Current directory: /Users/runner/work/moonsav/moonsav
+2026-11-06T16:48:24.4202000Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=4273]
+2026-11-06T16:48:24.4207870Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+2026-11-06T16:48:24.4331660Z ##[group]Run # /Users/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+2026-11-06T16:48:24.4334410Z [36;1m# /Users/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that[0m
+2026-11-06T16:48:24.4336110Z [36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.[0m
+2026-11-06T16:48:24.4337250Z [36;1mlet version = '0.10.17+d971670cd'[0m
+2026-11-06T16:48:24.4338160Z [36;1mlet setup_core = 'true' | into bool[0m
+2026-11-06T16:48:24.4338950Z [36;1mlet core_version = '0.10.17+d971670cd'[0m
+2026-11-06T16:48:24.4359900Z [36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"[0m
+2026-11-06T16:48:24.4372470Z shell: /Users/runner/hostedtoolcache/nushell/0.115.1/arm64/nu {0}
+2026-11-06T16:48:24.4372920Z ##[endgroup]
+2026-11-06T16:48:24.6363550Z 
+2026-11-06T16:48:24.6367130Z Setup moonbit toolchain of version: [32m0.10.17+d971670cd[0m
+2026-11-06T16:48:24.6560000Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-06T16:48:24.6682280Z Current moon home: [32m/Users/runner/.moon[0m
+2026-11-06T16:48:24.6816160Z Fetch binaries from [32mhttps://cli.moonbitlang.com/binaries/0.10.17%2Bd971670cd/moonbit-darwin-aarch64.tar.gz[0m
+2026-11-06T16:48:24.7144260Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-06T16:48:24.7146320Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-06T16:48:24.7148010Z 
+2026-11-06T16:48:25.4484820Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-06T16:48:26.4448860Z   4 86.1M    4 3949k    0     0  5417k      0  0:00:16 --:--:--  0:00:16 5417k
+2026-11-06T16:48:26.6227640Z  85 86.1M   85 73.3M    0     0  42.3M      0  0:00:02  0:00:01  0:00:01 42.4M
+2026-11-06T16:48:26.6229540Z 100 86.1M  100 86.1M    0     0  45.1M      0  0:00:01  0:00:01 --:--:-- 45.1M
+2026-11-06T16:48:27.7443320Z OS Info:
+2026-11-06T16:48:27.7575580Z ╭────────────────┬─────────╮
+2026-11-06T16:48:27.7577230Z │ name           │ macos   │
+2026-11-06T16:48:27.7579070Z │ arch           │ aarch64 │
+2026-11-06T16:48:27.7579610Z │ family         │ unix    │
+2026-11-06T16:48:27.7581660Z │ kernel_version │ 24.6.0  │
+2026-11-06T16:48:27.7587680Z ╰────────────────┴─────────╯
+2026-11-06T16:48:27.7704860Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-06T16:48:27.7820460Z Contents of /Users/runner/.moon/bin:
+2026-11-06T16:48:27.7957180Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-06T16:48:27.8141620Z   # |                   name                   |  type   |   size   |  modified   
+2026-11-06T16:48:27.8142660Z ----+------------------------------------------+---------+----------+-------------
+2026-11-06T16:48:27.8143390Z   0 | /Users/runner/.moon/bin/internal         | dir     |     96 B | 2 weeks ago 
+2026-11-06T16:48:27.8144220Z   1 | /Users/runner/.moon/bin/moon             | file    |   7.6 MB | 2 weeks ago 
+2026-11-06T16:48:27.8144890Z   2 | /Users/runner/.moon/bin/moon-cram        | file    |   6.5 MB | 2 weeks ago 
+2026-11-06T16:48:27.8145540Z   3 | /Users/runner/.moon/bin/moon-ide         | file    |  13.7 MB | 2 weeks ago 
+2026-11-06T16:48:27.8146490Z   4 | /Users/runner/.moon/bin/moon-lsp         | file    |  18.6 MB | 2 weeks ago 
+2026-11-06T16:48:27.8147160Z   5 | /Users/runner/.moon/bin/moon-wasm-opt    | file    |   1.4 MB | 2 weeks ago 
+2026-11-06T16:48:27.8152030Z   6 | /Users/runner/.moon/bin/moon_cove.wasm   | file    | 949.6 kB | 2 weeks ago 
+2026-11-06T16:48:27.8153720Z   7 | /Users/runner/.moon/bin/moon_cove_report | file    |   8.0 MB | 2 weeks ago 
+2026-11-06T16:48:27.8155350Z   8 | /Users/runner/.moon/bin/moonc            | file    |  20.1 MB | 2 weeks ago 
+2026-11-06T16:48:27.8157090Z   9 | /Users/runner/.moon/bin/moonc-prove      | file    |  31.7 MB | 2 weeks ago 
+2026-11-06T16:48:27.8158820Z  10 | /Users/runner/.moon/bin/mooncake         | file    |   3.5 MB | 2 weeks ago 
+2026-11-06T16:48:27.8160340Z  11 | /Users/runner/.moon/bin/moondoc          | file    |  20.3 MB | 2 weeks ago 
+2026-11-06T16:48:27.8161910Z  12 | /Users/runner/.moon/bin/moonfmt          | file    |   7.5 MB | 2 weeks ago 
+2026-11-06T16:48:27.8163790Z  13 | /Users/runner/.moon/bin/mooninfo         | file    |  10.4 MB | 2 weeks ago 
+2026-11-06T16:48:27.8170210Z  14 | /Users/runner/.moon/bin/moonlex.wasm     | file    | 149.3 kB | 2 weeks ago 
+2026-11-06T16:48:27.8178050Z  15 | /Users/runner/.moon/bin/moonrun          | file    |  31.6 MB | 2 weeks ago 
+2026-11-06T16:48:27.8182470Z  16 | /Users/runner/.moon/bin/moonx            | symlink |      4 B | now         
+2026-11-06T16:48:27.8185140Z  17 | /Users/runner/.moon/bin/moonyacc.wasm    | file    | 305.6 kB | 2 weeks ago 
+2026-11-06T16:48:27.8367350Z 
+2026-11-06T16:48:27.8368670Z Setup moonbit core of version: [32m0.10.17+d971670cd[0m
+2026-11-06T16:48:27.8534580Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-06T16:48:27.8667460Z Fetch core assets from [32mhttps://cli.moonbitlang.com/cores/core-0.10.17%2Bd971670cd.tar.gz[0m
+2026-11-06T16:48:27.8775920Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-06T16:48:27.8779030Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-06T16:48:27.8781080Z 
+2026-11-06T16:48:28.2171720Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-06T16:48:28.2276020Z 100 1910k  100 1910k    0     0  5759k      0 --:--:-- --:--:-- --:--:-- 5771k
+2026-11-06T16:48:28.4671570Z 
+2026-11-06T16:48:28.4672720Z Bundle moonbit core[0m
+2026-11-06T16:48:28.4764610Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-06T16:48:34.0638270Z Finished. moon: ran 324 tasks, now up to date
+2026-11-06T16:48:34.1056280Z 
+2026-11-06T16:48:34.1061630Z [32mmoonbit was installed successfully to /Users/runner/.moon[0m
+2026-11-06T16:48:34.1172210Z To verify the downloaded binaries, check https://www.moonbitlang.com/download#verifying-binaries for instructions.
+2026-11-06T16:48:34.1268250Z To know how to add shell completions, run 'moon shell-completion --help'
+2026-11-06T16:48:34.1531590Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=success;conclusion=success;duration_ms=9726]

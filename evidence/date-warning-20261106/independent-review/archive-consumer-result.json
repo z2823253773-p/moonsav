@@ -1,0 +1,454 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/usr/local/lib/node_modules/npm/bin/npm-cli.js",
+        "install",
+        "--prefix",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/empty-cache",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/archives/moonsav-0.1.0.tgz"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "00-stdout.log",
+      "stderr": "00-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/bin/moonsav.mjs",
+        "--version"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "01-stdout.log",
+      "stderr": "01-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/bin/moonsav.mjs",
+        "inspect",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "02-stdout.log",
+      "stderr": "02-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "03-stdout.log",
+      "stderr": "03-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "04-stdout.log",
+      "stderr": "04-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/first bundle 中文",
+        "--json"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "05-stdout.log",
+      "stderr": "05-stderr.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/node_modules/moonsav/examples/read_bundle.py",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/first bundle 中文"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "06-stdout.log",
+      "stderr": "06-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/installed-probes/probe.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "07-stdout.log",
+      "stderr": "07-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "version",
+        "--all"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-old",
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "08-stdout.log",
+      "stderr": "08-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-old/examples/consumer",
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "09-stdout.log",
+      "stderr": "09-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "native"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-old/examples/consumer",
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "10-stdout.log",
+      "stderr": "10-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/.moon/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-old/examples/consumer",
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "11-stdout.log",
+      "stderr": "11-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin/moon",
+        "version",
+        "--all"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-modern",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "12-stdout.log",
+      "stderr": "12-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "js"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-modern/examples/consumer",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "13-stdout.log",
+      "stderr": "13-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "native"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-modern/examples/consumer",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "14-stdout.log",
+      "stderr": "14-stderr.log"
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin/moon",
+        "run",
+        ".",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/source-modern/examples/consumer",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "15-stdout.log",
+      "stderr": "15-stderr.log"
+    },
+    {
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/installed-probes-logged/probe.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "exit_code": 1,
+      "stdout": "16-stdout.log",
+      "stderr": "16-stderr.log",
+      "harness_failure": true,
+      "reason": "Supplemental logger failed to replace JSON-escaped Unicode base path, reused previous output directories, and correctly got OutputExists; corrected to new isolated directory before replay."
+    },
+    {
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node/node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/installed-probes-logged/probe.mjs"
+      ],
+      "cwd": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node",
+      "PATH": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/fresh-node/only-node",
+      "_present": false,
+      "exit_code": 0,
+      "stdout": "17-stdout.log",
+      "stderr": "17-stderr.log",
+      "purpose": "Supplemental replay retaining every nested CLI command and result"
+    }
+  ],
+  "expected_source_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "original": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/dist/moonsav-0.1.0.tgz",
+      "consumed_copy": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/archives/moonsav-0.1.0.tgz",
+      "sha256": "2d6396266353c5b5f429427a823ed358eebf2ae1403d6abaa36e8c0a9db29ee1",
+      "size_bytes": 311136
+    },
+    "moonsav-source-0.1.0.zip": {
+      "original": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/dist/moonsav-source-0.1.0.zip",
+      "consumed_copy": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/archives/moonsav-source-0.1.0.zip",
+      "sha256": "dc5d7e509582b687018cacaa066461a16ae23ab338065fdfa6a1668269098dff",
+      "size_bytes": 75195
+    }
+  },
+  "environment": {
+    "system": "darwin",
+    "node_only_for_cli": true,
+    "npm_cache_initially_empty": true,
+    "removed_environment_keys": [
+      "_"
+    ]
+  },
+  "tgz_members": [
+    "package/LICENSE",
+    "package/lib/moonsav.js",
+    "package/lib/build.json",
+    "package/node/codec-data.json",
+    "package/schemas/manifest.schema.json",
+    "package/schemas/metadata.schema.json",
+    "package/package.json",
+    "package/schemas/report.schema.json",
+    "package/schemas/row.schema.json",
+    "package/fixtures/synthetic/source.json",
+    "package/toolchain.json",
+    "package/docs/CODEC_PROFILES.md",
+    "package/docs/CONTRACTS.md",
+    "package/README.md",
+    "package/THIRD_PARTY.md",
+    "package/node/api.mjs",
+    "package/node/checker.mjs",
+    "package/node/cli.mjs",
+    "package/node/codec.mjs",
+    "package/node/io.mjs",
+    "package/bin/moonsav.mjs",
+    "package/examples/read_bundle.py",
+    "package/fixtures/synthetic/survey-row.sav",
+    "package/licenses/Python-3.12-LICENSE.txt",
+    "package/licenses/Unicode-LICENSE.txt",
+    "package/licenses/WHATWG-Encoding-LICENSE.txt"
+  ],
+  "version": {
+    "product": "moonsav",
+    "version": "0.1.0",
+    "build": {
+      "version": "0.1.0",
+      "git_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "source_tree_sha256": "be4b72b90a6bdc927b085da3e89e477ce239f45cb2fb388251d5b271d41def71",
+      "moon": "0.1.20261023",
+      "moonc": "v0.10.17+d971670cd",
+      "node": "v24.15.0",
+      "icu": "78.2"
+    },
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2",
+    "encodings": [
+      "utf-8",
+      "windows-1252",
+      "gbk/cp936-stable",
+      "gb18030/stable-intersection"
+    ],
+    "schema_major": 1
+  },
+  "installed_probe_results": {
+    "official_codes": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      38,
+      39,
+      40,
+      41
+    ],
+    "numeric_variants": 512,
+    "string_variants": 15,
+    "mixed_variants": 4,
+    "cli_cases": [
+      {
+        "p": 31,
+        "w": 37,
+        "warn": false,
+        "passed": true
+      },
+      {
+        "p": 5,
+        "w": 40,
+        "warn": true,
+        "passed": true
+      },
+      {
+        "p": 41,
+        "w": 5,
+        "warn": true,
+        "passed": true
+      },
+      {
+        "p": 20,
+        "w": 41,
+        "warn": true,
+        "passed": true
+      }
+    ],
+    "inherited_warning": {
+      "passed": true,
+      "strict_exit": 7
+    },
+    "build": {
+      "version": "0.1.0",
+      "git_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "source_tree_sha256": "be4b72b90a6bdc927b085da3e89e477ce239f45cb2fb388251d5b271d41def71",
+      "moon": "0.1.20261023",
+      "moonc": "v0.10.17+d971670cd",
+      "node": "v24.15.0",
+      "icu": "78.2"
+    }
+  },
+  "source_toolchains": [
+    {
+      "label": "old",
+      "version": "moon 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moon\nmoonc v0.10.4+2cc641edf (2026-07-15) ~/.moon/bin/moonc\nmoonrun 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg\n",
+      "targets": [
+        {
+          "target": "js",
+          "stdout": "U1: labels, unlabeled valid value, ID text, missing filter, retained rows, Stop and consumer failure passed\n",
+          "exit_code": 0
+        },
+        {
+          "target": "native",
+          "stdout": "U1: labels, unlabeled valid value, ID text, missing filter, retained rows, Stop and consumer failure passed\n",
+          "exit_code": 0
+        },
+        {
+          "target": "wasm-gc",
+          "stdout": "U1: labels, unlabeled valid value, ID text, missing filter, retained rows, Stop and consumer failure passed\n",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "label": "modern",
+      "version": "moon 0.1.20261023 (3778465 2026-10-23) ~/Desktop/比赛/moonsav/.dev/moon-ci/bin/moon\nmoonc v0.10.17+d971670cd (2026-10-23) ~/Desktop/比赛/moonsav/.dev/moon-ci/bin/moonc\nmoonrun 0.1.20261023 (3778465 2026-10-23) ~/Desktop/比赛/moonsav/.dev/moon-ci/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg\n",
+      "targets": [
+        {
+          "target": "js",
+          "stdout": "U1: labels, unlabeled valid value, ID text, missing filter, retained rows, Stop and consumer failure passed\n",
+          "exit_code": 0
+        },
+        {
+          "target": "native",
+          "stdout": "U1: labels, unlabeled valid value, ID text, missing filter, retained rows, Stop and consumer failure passed\n",
+          "exit_code": 0
+        },
+        {
+          "target": "wasm-gc",
+          "stdout": "U1: labels, unlabeled valid value, ID text, missing filter, retained rows, Stop and consumer failure passed\n",
+          "exit_code": 0
+        }
+      ]
+    }
+  ],
+  "limits": "Local macOS exact-archive consumption only; not designated acceptance, remote CI verification, external user trial, public release, or organizer approval.",
+  "installed_probe_cli_commands": "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-review-20261106/exact-artifacts/installed-probes-logged/cli-records.json",
+  "final_hash_recheck": "passed",
+  "installed_library_equals_archive_members": true
+}

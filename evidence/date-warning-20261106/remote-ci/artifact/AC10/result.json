@@ -1,0 +1,10 @@
+{
+  "case": "AC10",
+  "status": "supported_pass",
+  "utc": "2026-11-06T16:49:43.204858+00:00",
+  "detail": {
+    "scope": "core limits equal/below and CLI output exact/one less; declared label bookkeeping cap",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

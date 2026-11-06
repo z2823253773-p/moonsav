@@ -1,0 +1,52 @@
+{
+  "case": "AC18",
+  "status": "supported_pass",
+  "utc": "2026-11-06T16:48:16.388436+00:00",
+  "detail": {
+    "scope": "seed20261023 10000x20, both modes x3 validate/export/check, deterministic semantic hashes",
+    "summaries": [
+      {
+        "mode": "none",
+        "task": "validate",
+        "median_seconds": 0.12274249969050288,
+        "peak_rss_bytes": 82247680,
+        "passed": true
+      },
+      {
+        "mode": "none",
+        "task": "export",
+        "median_seconds": 0.3917611250653863,
+        "peak_rss_bytes": 124157952,
+        "passed": true
+      },
+      {
+        "mode": "none",
+        "task": "check-bundle",
+        "median_seconds": 0.4496582909487188,
+        "peak_rss_bytes": 123781120,
+        "passed": true
+      },
+      {
+        "mode": "row",
+        "task": "validate",
+        "median_seconds": 0.12497216695919633,
+        "peak_rss_bytes": 82788352,
+        "passed": true
+      },
+      {
+        "mode": "row",
+        "task": "export",
+        "median_seconds": 0.3926298329606652,
+        "peak_rss_bytes": 124469248,
+        "passed": true
+      },
+      {
+        "mode": "row",
+        "task": "check-bundle",
+        "median_seconds": 0.44672050001099706,
+        "peak_rss_bytes": 123715584,
+        "passed": true
+      }
+    ]
+  }
+}

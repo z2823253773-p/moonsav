@@ -1,0 +1,2 @@
+Warning: `include` in `/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/moon.mod` is deprecated; use `.gitignore` or `.moonignore` to control which files are packaged instead. `.moonignore` overrides `.gitignore` in the same directory.
+Finished. moon: no work to do

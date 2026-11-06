@@ -10,9 +10,11 @@
 - [x] Add code-level all-byte print/write classification tests and CLI valid F/PCT/DOT/currency/date/time positive/negative, strict export precommit, default export/check inherited warnings and raw data preservation tests. Observe RED.
 - [x] Correct classifier and run whole Node suite plus both source profiles/core backends; source review independently checks mapping and data/strict-mode invariants.
 - [x] Update packaged README/CONTRACTS before source freeze: actual platform matrix, baseline technical acceptance/known P3 repair scope, source-consumer `_` environment workaround; no organizer/publication/human-trial claims.
-- [ ] Freeze candidate, clean-clone full AC01–18/oracles, rebuild exact packages, replay both unchanged acceptance scripts, consume final archives, run new-SHA private CI.
-- [ ] Preserve e453463 artifacts/history. Update current manifest/TASK_STATE/M4/M5/handoff with baseline approval versus new candidate evidence; final docs-only private push. No competition submission or public release.
+- [x] Freeze candidate, clean-clone full AC01–18/oracles, rebuild exact packages, replay both unchanged acceptance scripts, consume final archives, run new-SHA private CI.
+- [x] Preserve e453463 artifacts/history. Update current manifest/TASK_STATE/M4/M5/handoff with baseline approval versus new candidate evidence; final docs-only private push. No competition submission or public release.
 
 Ledger2026-11-06: designated P3 archive script exit1 on accepted e453463, observations confirm both false positives and missed codes. New26 Node cases had12 expected failures; two core tests failed semantically (14 prior tests passed). Minimal exact code match + numeric print/write OR fixes them; both profiles138 Node and16 core each3 backend pass. README uses verified e453463 CI matrix/technical baseline plus latest-manifest links, avoiding a circular promise of a not-yet-created run. No arbitrary unknown format conversion or schema change.
 
 Independent source review: no actionable findings.512 numeric code variants,15 string variants, mixed print/write, negative-zero/missing preservation, strict export precommit and inherited bundle warnings pass;31/31 task tests pass. Acceptance exact-byte approval remains scoped to baseline e453463.
+
+Final2026-11-06: clean source5c1ff8d, both toolchains138 Node/16 core each3 backend; full local/Linux17pass+29bad; both unchanged acceptance scripts green against rebuilt exact tgz; independent exact archive consumption passes;CI42255719356 all4 jobs success. README/status synchronized, e453463 exact approved baseline retained, technical freeze prepared without event submission. Original designated verdict is not transferred to new hashes.

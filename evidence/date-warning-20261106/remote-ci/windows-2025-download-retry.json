@@ -1,0 +1,6 @@
+{
+  "job": "windows-2025",
+  "transport": "per-process HTTP1 retry; no Git/repo/global configuration changed",
+  "exit_code": 0,
+  "stderr": ""
+}

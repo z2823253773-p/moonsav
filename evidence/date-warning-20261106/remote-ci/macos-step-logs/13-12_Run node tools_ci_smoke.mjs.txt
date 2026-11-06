@@ -1,0 +1,5 @@
+﻿2026-11-06T16:49:05.6645340Z ##[group]Run node tools/ci_smoke.mjs
+2026-11-06T16:49:05.6645610Z [36;1mnode tools/ci_smoke.mjs[0m
+2026-11-06T16:49:05.6737060Z shell: /bin/bash -e {0}
+2026-11-06T16:49:05.6737320Z ##[endgroup]
+2026-11-06T16:49:07.6976010Z {"status":"passed","rows":5,"platform":"darwin","node":"v24.15.0","path_unicode_and_spaces":true,"archive_install":"offline"}

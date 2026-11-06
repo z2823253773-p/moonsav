@@ -1,0 +1,23 @@
+﻿2026-11-06T16:48:56.1710620Z ##[group]Run node --test tests/io.test.mjs
+2026-11-06T16:48:56.1711240Z [36;1mnode --test tests/io.test.mjs[0m
+2026-11-06T16:48:56.1755960Z shell: /bin/bash -e {0}
+2026-11-06T16:48:56.1756240Z ##[endgroup]
+2026-11-06T16:48:58.2689810Z ✔ exclusive concurrent exports have one winner and retain input hash (237.547459ms)
+2026-11-06T16:48:58.2716200Z ✔ SIGKILL after-dir produces the declared commit boundary (114.778542ms)
+2026-11-06T16:48:58.2738290Z ✔ SIGKILL after-marker produces the declared commit boundary (133.264958ms)
+2026-11-06T16:48:58.2739240Z ✔ SIGKILL after-data produces the declared commit boundary (148.008ms)
+2026-11-06T16:48:58.2740020Z ✔ SIGKILL after-metadata produces the declared commit boundary (150.375125ms)
+2026-11-06T16:48:58.2741550Z ✔ SIGKILL after-manifest produces the declared commit boundary (195.023041ms)
+2026-11-06T16:48:58.2743010Z ✔ SIGKILL after-commit produces the declared commit boundary (193.120417ms)
+2026-11-06T16:48:58.2743820Z ✔ disk write failure cleans only owned files and returns I/O error (125.41225ms)
+2026-11-06T16:48:58.2776120Z ✔ input modification during bounded read is detected (127.968167ms)
+2026-11-06T16:48:58.2777050Z ✔ report failure after commit reports committed and leaves a valid recoverable bundle (213.358417ms)
+2026-11-06T16:48:58.2777990Z ✔ total output byte limit accepts exact total and rejects one byte less (277.329125ms)
+2026-11-06T16:48:58.2795080Z ℹ tests 11
+2026-11-06T16:48:58.2797660Z ℹ suites 0
+2026-11-06T16:48:58.2800580Z ℹ pass 11
+2026-11-06T16:48:58.2801120Z ℹ fail 0
+2026-11-06T16:48:58.2801450Z ℹ cancelled 0
+2026-11-06T16:48:58.2801990Z ℹ skipped 0
+2026-11-06T16:48:58.2802470Z ℹ todo 0
+2026-11-06T16:48:58.2803030Z ℹ duration_ms 1998.515208

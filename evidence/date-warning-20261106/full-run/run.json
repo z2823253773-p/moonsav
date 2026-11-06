@@ -1,0 +1,915 @@
+{
+  "records": [
+    {
+      "utc": "2026-11-06T16:47:57.558028+00:00",
+      "command": [
+        "moon",
+        "version",
+        "--all"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.012669041752815247,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "000-stdout.log",
+      "stderr": "000-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:57.700249+00:00",
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.010205124970525503,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "001-stdout.log",
+      "stderr": "001-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:57.773821+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.007084708195179701,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "002-stdout.log",
+      "stderr": "002-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:57.844135+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.15799316577613354,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "003-stdout.log",
+      "stderr": "003-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.064113+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.047458000015467405,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "004-stdout.log",
+      "stderr": "004-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.175196+00:00",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.2278930409811437,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "005-stdout.log",
+      "stderr": "005-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.469463+00:00",
+      "command": [
+        "node",
+        "tools/ac01.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.034012542106211185,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "006-stdout.log",
+      "stderr": "006-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.567202+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/survey-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none",
+        "--format",
+        "csv",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03510666731745005,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "007-stdout.log",
+      "stderr": "007-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/survey-none.sav": {
+          "sha256": "b724ef2eb9d2f5c4580f4e645314a27a61d4d43cb3aae5fa4f3d7ce6310eb43b",
+          "size_bytes": 815
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.667996+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.039649832993745804,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "008-stdout.log",
+      "stderr": "008-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none/metadata.json": {
+          "sha256": "efc45c7ed282656e060cc095ab9400ae6e534f5a5c02640446bac4cdcddf7ffa",
+          "size_bytes": 2903
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none/data.csv": {
+          "sha256": "dc46c91b8af716a7d844e77b973c1eeb91e3dbe7fc24f6e1e47089dbe225ffa8",
+          "size_bytes": 147
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none/codebook.md": {
+          "sha256": "a565255f923fe5fd4f8261abadb0c9c4318828f9e3d5e3e7c41034130eab2e2d",
+          "size_bytes": 2140
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none/manifest.json": {
+          "sha256": "e68847ee4da33291b52b3fe2bdeb2d210c73b04b54a672a80d98ba33a087a9ab",
+          "size_bytes": 658
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none/data.ndjson": {
+          "sha256": "00443dd163069763c99e50fe7002cd5471f19742020e37ef076129128b5f5018",
+          "size_bytes": 2039
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:47:58.777363+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "examples/read_bundle.py",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-none"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.01926487497985363,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "009-stdout.log",
+      "stderr": "009-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.859824+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row",
+        "--format",
+        "csv",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03641558298841119,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "010-stdout.log",
+      "stderr": "010-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/survey-row.sav": {
+          "sha256": "d6d788dfe685c6d57edf15dd62239e8609a0e0fccfc7213822da6c79253d0e16",
+          "size_bytes": 783
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:58.961031+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.036726582795381546,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "011-stdout.log",
+      "stderr": "011-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row/metadata.json": {
+          "sha256": "460c9c5651de425635e343a107251ca6f7732f65b198b341c91bb8c3dccc59da",
+          "size_bytes": 2903
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row/data.csv": {
+          "sha256": "dc46c91b8af716a7d844e77b973c1eeb91e3dbe7fc24f6e1e47089dbe225ffa8",
+          "size_bytes": 147
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row/codebook.md": {
+          "sha256": "a565255f923fe5fd4f8261abadb0c9c4318828f9e3d5e3e7c41034130eab2e2d",
+          "size_bytes": 2140
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row/manifest.json": {
+          "sha256": "9eed1bcae88b95f43309e0a9b2a8a562157e3dc6bfe8fcd2353303b9479d6f5c",
+          "size_bytes": 658
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row/data.ndjson": {
+          "sha256": "00443dd163069763c99e50fe7002cd5471f19742020e37ef076129128b5f5018",
+          "size_bytes": 2039
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:47:59.061939+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "examples/read_bundle.py",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC01-row"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.018987166229635477,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "012-stdout.log",
+      "stderr": "012-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:59.144542+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/survey-row.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source",
+        "--format",
+        "csv",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03688445780426264,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "013-stdout.log",
+      "stderr": "013-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/survey-row.sav": {
+          "sha256": "d6d788dfe685c6d57edf15dd62239e8609a0e0fccfc7213822da6c79253d0e16",
+          "size_bytes": 783
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:59.251733+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03621566714718938,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "014-stdout.log",
+      "stderr": "014-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source/metadata.json": {
+          "sha256": "460c9c5651de425635e343a107251ca6f7732f65b198b341c91bb8c3dccc59da",
+          "size_bytes": 2903
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source/data.csv": {
+          "sha256": "dc46c91b8af716a7d844e77b973c1eeb91e3dbe7fc24f6e1e47089dbe225ffa8",
+          "size_bytes": 147
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source/codebook.md": {
+          "sha256": "a565255f923fe5fd4f8261abadb0c9c4318828f9e3d5e3e7c41034130eab2e2d",
+          "size_bytes": 2140
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source/manifest.json": {
+          "sha256": "9eed1bcae88b95f43309e0a9b2a8a562157e3dc6bfe8fcd2353303b9479d6f5c",
+          "size_bytes": 658
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-source/data.ndjson": {
+          "sha256": "00443dd163069763c99e50fe7002cd5471f19742020e37ef076129128b5f5018",
+          "size_bytes": 2039
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:47:59.388646+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/AC02-source/pspp/payloads/roundtrip.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated",
+        "--format",
+        "csv",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03709987457841635,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "015-stdout.log",
+      "stderr": "015-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/AC02-source/pspp/payloads/roundtrip.sav": {
+          "sha256": "43b4c306955d0d672038ef66cfdc592cd8821ec27c5b73807c986100864582c0",
+          "size_bytes": 834
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:59.491394+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.036252208054065704,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "016-stdout.log",
+      "stderr": "016-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated/metadata.json": {
+          "sha256": "bcf7f458f6bd0e0ec0323f127826f7a9d4edf97574e102b6c7e092ac58c2d782",
+          "size_bytes": 3184
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated/data.csv": {
+          "sha256": "dc46c91b8af716a7d844e77b973c1eeb91e3dbe7fc24f6e1e47089dbe225ffa8",
+          "size_bytes": 147
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated/codebook.md": {
+          "sha256": "b600baa18b67d58c3fdcc56f365a2750f0e477bfaef1ef9a43e1e1dc01bb946d",
+          "size_bytes": 2140
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated/manifest.json": {
+          "sha256": "ce50acfc5c14e1f6895f018836be84752ff08ac4b307f677bab352403339e62f",
+          "size_bytes": 658
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC02-pspp-generated/data.ndjson": {
+          "sha256": "00443dd163069763c99e50fe7002cd5471f19742020e37ef076129128b5f5018",
+          "size_bytes": 2039
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:47:59.601003+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/public/24792756.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-24792756",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.19818858290091157,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "017-stdout.log",
+      "stderr": "017-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/public/24792756.sav": {
+          "sha256": "e2b7f41ad4d0e3cc22c12db41976b755a68058ea706d80c1b0370d129b3814b6",
+          "size_bytes": 379254
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:47:59.868507+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-24792756",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.1536472081206739,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "018-stdout.log",
+      "stderr": "018-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-24792756/metadata.json": {
+          "sha256": "f08ee06377d60ca2e4786598e7827d1d9dcd8c7766cadf492734613fa4e46e86",
+          "size_bytes": 127157
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-24792756/codebook.md": {
+          "sha256": "0ce9c41b3f798d19db053dbbe3f211f44ff4b9e002c3ea074d3a5b7fa274cbd9",
+          "size_bytes": 87718
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-24792756/manifest.json": {
+          "sha256": "2c9f51aa19a561e534802afc73d54b4ff28c6dcf27b00e0f29f1b7ae718f219f",
+          "size_bytes": 553
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-24792756/data.ndjson": {
+          "sha256": "06e0500084a2cdeccf4b3a6e067e123b5e669098045b135b6486d3e5bca67d3d",
+          "size_bytes": 10009164
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:48:00.373445+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/public/12459449.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-12459449",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.06795649975538254,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "019-stdout.log",
+      "stderr": "019-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/public/12459449.sav": {
+          "sha256": "554c037b155276547ec69c4a5e1b3b08d41d2103990e54aef83a5675406c9852",
+          "size_bytes": 33420
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:00.509160+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-12459449",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.07112700026482344,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "020-stdout.log",
+      "stderr": "020-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-12459449/metadata.json": {
+          "sha256": "f70f9b6824f6b5d147aa50a0a3ca1fb00900c97e3552e17218ceb563e1e2fe83",
+          "size_bytes": 79054
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-12459449/codebook.md": {
+          "sha256": "9324dd643348eb63341134137471ab41d20d3bcdcd5c0283b3c78693a74866f2",
+          "size_bytes": 55981
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-12459449/manifest.json": {
+          "sha256": "5e9b1c4770a0657a535c8bf48be18b44db3a5b92d540b2a40278825c812a674c",
+          "size_bytes": 550
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC03-12459449/data.ndjson": {
+          "sha256": "edfce9dc3ff5ec5d86a502e776e428e1aa867a271686061be29072e9d08a416d",
+          "size_bytes": 1230233
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:48:00.736845+00:00",
+      "command": [
+        "node",
+        "--test",
+        "tests/bundle.test.mjs",
+        "tests/contracts.test.mjs",
+        "tests/core.test.mjs",
+        "tests/io.test.mjs",
+        "tests/tasks.test.mjs"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 7.130701832938939,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "021-stdout.log",
+      "stderr": "021-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:07.937552+00:00",
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "js"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.2290118751116097,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "022-stdout.log",
+      "stderr": "022-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:08.237975+00:00",
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "native"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 1.604470208287239,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "023-stdout.log",
+      "stderr": "023-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:09.924875+00:00",
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "wasm-gc"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.242832541000098,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "024-stdout.log",
+      "stderr": "024-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:10.515191+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/encoding-gb18030-four.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC06-four-byte",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03546016709879041,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "025-stdout.log",
+      "stderr": "025-stderr.log",
+      "inputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/fixtures/synthetic/encoding-gb18030-four.sav": {
+          "sha256": "ae4edfa12204c9a7499184dd75fc5ede59733c23428cb49a17bcf2170a550447",
+          "size_bytes": 355
+        }
+      },
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:10.615488+00:00",
+      "command": [
+        "node",
+        "bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC06-four-byte",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.03593779215589166,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "026-stdout.log",
+      "stderr": "026-stderr.log",
+      "inputs": {},
+      "outputs": {
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC06-four-byte/metadata.json": {
+          "sha256": "f0305c8a08f0df28e1e92cc20a1442f652cd94813e8b4fa08f6bb110c54a0763",
+          "size_bytes": 1677
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC06-four-byte/codebook.md": {
+          "sha256": "60b5fc853289e8e60fc33478dbad520c1d74cc138692cce18ebed04b1f0f8561",
+          "size_bytes": 1174
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC06-four-byte/manifest.json": {
+          "sha256": "647028263131d1f701278292249884100d5756c29f03f0dbdb76895c36002cfd",
+          "size_bytes": 539
+        },
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate/.cache/date-warning-full/payloads/bundles/AC06-four-byte/data.ndjson": {
+          "sha256": "b257af3259aceba16dc72bd6a4df14201103e0d4fdc8122496784fba7f05b3ce",
+          "size_bytes": 295
+        }
+      }
+    },
+    {
+      "utc": "2026-11-06T16:48:13.849921+00:00",
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/clean-candidate",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-clean-repro-3m814ihk"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "seconds": 0.4071324160322547,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "027-stdout.log",
+      "stderr": "027-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:14.327177+00:00",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "<external-consumer>",
+      "exit_code": 0,
+      "seconds": 0.010525624733418226,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "028-stdout.log",
+      "stderr": "028-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:14.404091+00:00",
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "<external-consumer>",
+      "exit_code": 0,
+      "seconds": 0.07177937543019652,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "029-stdout.log",
+      "stderr": "029-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "utc": "2026-11-06T16:48:14.539926+00:00",
+      "command": [
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/venv/bin/python",
+        "tools/verify.py",
+        "--case",
+        "AC01",
+        "--output",
+        "/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-clean-repro-3m814ihk/.cache/repro"
+      ],
+      "cwd": "<external-consumer>",
+      "exit_code": 0,
+      "seconds": 1.7849325421266258,
+      "branch": "implementation",
+      "sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+      "dirty": false,
+      "diff_summary": "",
+      "status_porcelain": "",
+      "platform": "macOS-26.4-arm64-arm-64bit",
+      "stdout": "030-stdout.log",
+      "stderr": "030-stderr.log",
+      "inputs": {},
+      "outputs": {}
+    }
+  ],
+  "environment": {
+    "moon": "moon 0.1.20261023 (3778465 2026-10-23) ~/Desktop/比赛/moonsav/.dev/moon-ci/bin/moon\nmoonc v0.10.17+d971670cd (2026-10-23) ~/Desktop/比赛/moonsav/.dev/moon-ci/bin/moonc\nmoonrun 0.1.20261023 (3778465 2026-10-23) ~/Desktop/比赛/moonsav/.dev/moon-ci/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg",
+    "node": "v24.15.0",
+    "python": "Python 3.12.13",
+    "python_dependencies": [
+      "attrs==25.3.0",
+      "jsonschema==4.23.0",
+      "jsonschema-specifications==2024.10.1",
+      "narwhals==2.27.1",
+      "numpy==2.5.4",
+      "pandas==2.3.3",
+      "pyreadstat==1.3.3",
+      "python-dateutil==3.0.0",
+      "pytz==2026.5",
+      "referencing==0.36.2",
+      "rpds-py==0.22.3",
+      "six==1.17.0",
+      "typing_extensions==4.16.0",
+      "tzdata==2026.5"
+    ],
+    "pspp": "pspp (GNU PSPP) 2.0.1\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Ben Pfaff, John Darrington, and Jason Stover."
+  },
+  "summary": "summary.json"
+}

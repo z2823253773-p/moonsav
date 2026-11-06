@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "error": null,
+  "commands": 16,
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "original": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/date-warning-20261106/clean-candidate/dist/moonsav-0.1.0.tgz",
+      "consumed_copy": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/date-warning-review-20261106/exact-artifacts/archives/moonsav-0.1.0.tgz",
+      "sha256": "2d6396266353c5b5f429427a823ed358eebf2ae1403d6abaa36e8c0a9db29ee1",
+      "size_bytes": 311136
+    },
+    "moonsav-source-0.1.0.zip": {
+      "original": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/date-warning-20261106/clean-candidate/dist/moonsav-source-0.1.0.zip",
+      "consumed_copy": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/date-warning-review-20261106/exact-artifacts/archives/moonsav-source-0.1.0.zip",
+      "sha256": "dc5d7e509582b687018cacaa066461a16ae23ab338065fdfa6a1668269098dff",
+      "size_bytes": 75195
+    }
+  }
+}

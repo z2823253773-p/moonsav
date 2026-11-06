@@ -1,0 +1,1570 @@
+﻿2026-11-06T16:48:34.2864130Z ##[group]Run node tools/build.mjs
+2026-11-06T16:48:34.2864610Z [36;1mnode tools/build.mjs[0m
+2026-11-06T16:48:34.2901920Z shell: /bin/bash -e {0}
+2026-11-06T16:48:34.2902570Z ##[endgroup]
+2026-11-06T16:48:34.4970990Z Warning: `include` in `/Users/runner/work/moonsav/moonsav/moon.mod` is deprecated; use `.gitignore` or `.moonignore` to control which files are packaged instead. `.moonignore` overrides `.gitignore` in the same directory.
+2026-11-06T16:48:34.8177740Z Warning: [0027]
+2026-11-06T16:48:34.8357910Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bridge/main.mbt:56:24 ]
+2026-11-06T16:48:34.8359080Z     │
+2026-11-06T16:48:34.8359550Z  56 │       if s.has_prefix("\x00") {
+2026-11-06T16:48:34.8359990Z     │                        ──┬─  
+2026-11-06T16:48:34.8360830Z     │                          ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8361440Z ────╯
+2026-11-06T16:48:34.8361860Z Warning: [0092]
+2026-11-06T16:48:34.8362800Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bridge/main.mbt:107:45 ]
+2026-11-06T16:48:34.8363220Z      │
+2026-11-06T16:48:34.8363670Z  107 │             let csv = @moonsav.csv_row(row) catch {
+2026-11-06T16:48:34.8364220Z      │                                             ───┬───  
+2026-11-06T16:48:34.8378680Z      │                                                ╰───── Warning (fragile_catch_all): 
+2026-11-06T16:48:34.8379990Z Found code that can be simplified:
+2026-11-06T16:48:34.8382760Z 
+2026-11-06T16:48:34.8382990Z   try <expr> catch {
+2026-11-06T16:48:34.8383600Z     err => {
+2026-11-06T16:48:34.8384040Z       <cleanup code>
+2026-11-06T16:48:34.8384510Z       raise err
+2026-11-06T16:48:34.8385060Z     }
+2026-11-06T16:48:34.8385560Z   }
+2026-11-06T16:48:34.8385870Z 
+2026-11-06T16:48:34.8386870Z If <cleanup code> does not mention `err` or perform `return`/`break`/`continue`, rewrite to:
+2026-11-06T16:48:34.8387750Z 
+2026-11-06T16:48:34.8387950Z   errdefer <cleanup code>
+2026-11-06T16:48:34.8388570Z   <expr>
+2026-11-06T16:48:34.8388800Z 
+2026-11-06T16:48:34.8390310Z Note: `try ... catch` will no longer capture async cancellation in the future, so using `catch` for cleanup is dangerous for async code.
+2026-11-06T16:48:34.8392400Z If your handler need to manipulate or inspect `err`, but contain cleanup code as well,
+2026-11-06T16:48:34.8394630Z it is still recommended to move the cleanup part to `errdefer` as well, leaving only the error inspecting part in `catch`.
+2026-11-06T16:48:34.8395900Z       
+2026-11-06T16:48:34.8396890Z ─────╯
+2026-11-06T16:48:34.8397640Z Warning: [0027]
+2026-11-06T16:48:34.8398720Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bridge/main.mbt:172:27 ]
+2026-11-06T16:48:34.8400350Z      │
+2026-11-06T16:48:34.8401240Z  172 │       if text.has_prefix("\x00") {
+2026-11-06T16:48:34.8402060Z      │                           ──┬─  
+2026-11-06T16:48:34.8404170Z      │                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8405720Z ─────╯
+2026-11-06T16:48:34.8406330Z Warning: [0020]
+2026-11-06T16:48:34.8407290Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/budget.mbt:70:17 ]
+2026-11-06T16:48:34.8408310Z     │
+2026-11-06T16:48:34.8409020Z  70 │   self.raw(text.to_bytes().length())
+2026-11-06T16:48:34.8410020Z     │                 ────┬───  
+2026-11-06T16:48:34.8411260Z     │                     ╰───── Warning (deprecated): Check `@encoding/utf8.encode`
+2026-11-06T16:48:34.8412220Z ────╯
+2026-11-06T16:48:34.8412880Z Warning: [0035]
+2026-11-06T16:48:34.8413810Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:12:4 ]
+2026-11-06T16:48:34.8414730Z     │
+2026-11-06T16:48:34.8415580Z  12 │ fn member(j : Json, key : String) -> Json raise SavError {
+2026-11-06T16:48:34.8416570Z     │    ───┬──  
+2026-11-06T16:48:34.8418070Z     │       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8421420Z ────╯
+2026-11-06T16:48:34.8422030Z Warning: [0020]
+2026-11-06T16:48:34.8423140Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:13:11 ]
+2026-11-06T16:48:34.8424010Z     │
+2026-11-06T16:48:34.8424780Z  13 │   match j.value(key) {
+2026-11-06T16:48:34.8425600Z     │           ──┬──  
+2026-11-06T16:48:34.8426910Z     │             ╰──── Warning (deprecated): Suggestion: `if json is Object(obj) { obj.get(key) } else { None }`
+2026-11-06T16:48:34.8428140Z ────╯
+2026-11-06T16:48:34.8428870Z Warning: [0020]
+2026-11-06T16:48:34.8429860Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:41:11 ]
+2026-11-06T16:48:34.8430880Z     │
+2026-11-06T16:48:34.8431480Z  41 │   match j.as_string() {
+2026-11-06T16:48:34.8432140Z     │           ────┬────  
+2026-11-06T16:48:34.8433390Z     │               ╰────── Warning (deprecated): Suggestion: `if json is String(s) { Some(s) } else { None }`
+2026-11-06T16:48:34.8434440Z ────╯
+2026-11-06T16:48:34.8434860Z Warning: [0020]
+2026-11-06T16:48:34.8435770Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:52:11 ]
+2026-11-06T16:48:34.8436720Z     │
+2026-11-06T16:48:34.8437240Z  52 │   match j.as_number() {
+2026-11-06T16:48:34.8437810Z     │           ────┬────  
+2026-11-06T16:48:34.8439070Z     │               ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+2026-11-06T16:48:34.8440150Z ────╯
+2026-11-06T16:48:34.8440860Z Warning: [0020]
+2026-11-06T16:48:34.8441370Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:68:11 ]
+2026-11-06T16:48:34.8442200Z     │
+2026-11-06T16:48:34.8442400Z  68 │   match j.as_number() {
+2026-11-06T16:48:34.8442650Z     │           ────┬────  
+2026-11-06T16:48:34.8443130Z     │               ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+2026-11-06T16:48:34.8443540Z ────╯
+2026-11-06T16:48:34.8443670Z Warning: [0020]
+2026-11-06T16:48:34.8443990Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:87:11 ]
+2026-11-06T16:48:34.8444310Z     │
+2026-11-06T16:48:34.8444500Z  87 │   match j.as_array() {
+2026-11-06T16:48:34.8444720Z     │           ────┬───  
+2026-11-06T16:48:34.8445230Z     │               ╰───── Warning (deprecated): Suggestion: `if json is Array(array) { Some(array) } else { None }`
+2026-11-06T16:48:34.8445620Z ────╯
+2026-11-06T16:48:34.8445790Z Warning: [0035]
+2026-11-06T16:48:34.8446140Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:184:11 ]
+2026-11-06T16:48:34.8446450Z      │
+2026-11-06T16:48:34.8446710Z  184 │   if jstr(member(j, "type")) != kind {
+2026-11-06T16:48:34.8446980Z      │           ───┬──  
+2026-11-06T16:48:34.8447590Z      │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8448100Z ─────╯
+2026-11-06T16:48:34.8448260Z Warning: [0035]
+2026-11-06T16:48:34.8448590Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:189:22 ]
+2026-11-06T16:48:34.8448880Z      │
+2026-11-06T16:48:34.8449140Z  189 │     decimal: opt_str(member(j, "decimal")),
+2026-11-06T16:48:34.8449480Z      │                      ───┬──  
+2026-11-06T16:48:34.8450110Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8450600Z ─────╯
+2026-11-06T16:48:34.8450760Z Warning: [0035]
+2026-11-06T16:48:34.8451080Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:190:26 ]
+2026-11-06T16:48:34.8451470Z      │
+2026-11-06T16:48:34.8451820Z  190 │     ieee754_hex: opt_str(member(j, "ieee754_hex")),
+2026-11-06T16:48:34.8452150Z      │                          ───┬──  
+2026-11-06T16:48:34.8453020Z      │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8453560Z ─────╯
+2026-11-06T16:48:34.8453740Z Warning: [0035]
+2026-11-06T16:48:34.8454090Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:191:19 ]
+2026-11-06T16:48:34.8454820Z      │
+2026-11-06T16:48:34.8455070Z  191 │     text: opt_str(member(j, "text")),
+2026-11-06T16:48:34.8455340Z      │                   ───┬──  
+2026-11-06T16:48:34.8455980Z      │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8456450Z ─────╯
+2026-11-06T16:48:34.8456600Z Warning: [0035]
+2026-11-06T16:48:34.8456930Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:192:35 ]
+2026-11-06T16:48:34.8457230Z      │
+2026-11-06T16:48:34.8457660Z  192 │     logical_bytes_base64: opt_str(member(j, "logical_bytes_base64")),
+2026-11-06T16:48:34.8458080Z      │                                   ───┬──  
+2026-11-06T16:48:34.8458820Z      │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8459370Z ─────╯
+2026-11-06T16:48:34.8459540Z Warning: [0035]
+2026-11-06T16:48:34.8459930Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:193:17 ]
+2026-11-06T16:48:34.8460210Z      │
+2026-11-06T16:48:34.8460430Z  193 │     width: jnum(member(j, "width")),
+2026-11-06T16:48:34.8460690Z      │                 ───┬──  
+2026-11-06T16:48:34.8461290Z      │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8462310Z ─────╯
+2026-11-06T16:48:34.8462450Z Warning: [0035]
+2026-11-06T16:48:34.8462780Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:194:23 ]
+2026-11-06T16:48:34.8463080Z      │
+2026-11-06T16:48:34.8463330Z  194 │     endpoint: opt_str(member(j, "endpoint")),
+2026-11-06T16:48:34.8463650Z      │                       ───┬──  
+2026-11-06T16:48:34.8464260Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8464780Z ─────╯
+2026-11-06T16:48:34.8464950Z Warning: [0035]
+2026-11-06T16:48:34.8465280Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:225:18 ]
+2026-11-06T16:48:34.8465550Z      │
+2026-11-06T16:48:34.8465760Z  225 │   let raw = jnum(member(j, "raw"))
+2026-11-06T16:48:34.8466040Z      │                  ───┬──  
+2026-11-06T16:48:34.8466640Z      │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8467190Z ─────╯
+2026-11-06T16:48:34.8467360Z Warning: [0035]
+2026-11-06T16:48:34.8467680Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:227:21 ]
+2026-11-06T16:48:34.8467990Z      │
+2026-11-06T16:48:34.8468350Z  227 │   if f.code != jnum(member(j, "code")) ||
+2026-11-06T16:48:34.8468650Z      │                     ───┬──  
+2026-11-06T16:48:34.8469310Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8469800Z ─────╯
+2026-11-06T16:48:34.8469940Z Warning: [0035]
+2026-11-06T16:48:34.8470310Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:228:21 ]
+2026-11-06T16:48:34.8470600Z      │
+2026-11-06T16:48:34.8470850Z  228 │     f.width != jnum(member(j, "width")) ||
+2026-11-06T16:48:34.8471150Z      │                     ───┬──  
+2026-11-06T16:48:34.8471790Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8472320Z ─────╯
+2026-11-06T16:48:34.8472460Z Warning: [0035]
+2026-11-06T16:48:34.8472820Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:229:24 ]
+2026-11-06T16:48:34.8473170Z      │
+2026-11-06T16:48:34.8473480Z  229 │     f.decimals != jnum(member(j, "decimals")) {
+2026-11-06T16:48:34.8473840Z      │                        ───┬──  
+2026-11-06T16:48:34.8474500Z      │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8475530Z ─────╯
+2026-11-06T16:48:34.8475760Z Warning: [0035]
+2026-11-06T16:48:34.8476100Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:242:11 ]
+2026-11-06T16:48:34.8476400Z      │
+2026-11-06T16:48:34.8476710Z  242 │   if jstr(member(j, "schema_version")) != "moonsav.bundle/1" {
+2026-11-06T16:48:34.8477010Z      │           ───┬──  
+2026-11-06T16:48:34.8477960Z      │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8478450Z ─────╯
+2026-11-06T16:48:34.8478610Z Warning: [0035]
+2026-11-06T16:48:34.8478920Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:245:22 ]
+2026-11-06T16:48:34.8479250Z      │
+2026-11-06T16:48:34.8479510Z  245 │   let profile = jstr(member(j, "profile"))
+2026-11-06T16:48:34.8479830Z      │                      ───┬──  
+2026-11-06T16:48:34.8480540Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8481100Z ─────╯
+2026-11-06T16:48:34.8481280Z Warning: [0035]
+2026-11-06T16:48:34.8481630Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:249:19 ]
+2026-11-06T16:48:34.8481960Z      │
+2026-11-06T16:48:34.8482230Z  249 │   let rows = jnum(member(j, "actual_rows"))
+2026-11-06T16:48:34.8482580Z      │                   ───┬──  
+2026-11-06T16:48:34.8483230Z      │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8483720Z ─────╯
+2026-11-06T16:48:34.8483890Z Warning: [0035]
+2026-11-06T16:48:34.8484220Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:251:19 ]
+2026-11-06T16:48:34.8484500Z      │
+2026-11-06T16:48:34.8484790Z  251 │   let cols = jnum(member(j, "logical_variables"))
+2026-11-06T16:48:34.8485110Z      │                   ───┬──  
+2026-11-06T16:48:34.8485710Z      │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8486190Z ─────╯
+2026-11-06T16:48:34.8486350Z Warning: [0035]
+2026-11-06T16:48:34.8486690Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:256:22 ]
+2026-11-06T16:48:34.8486990Z      │
+2026-11-06T16:48:34.8487290Z  256 │   let input = closed(member(j, "input"), ["size_bytes", "sha256"])
+2026-11-06T16:48:34.8487700Z      │                      ───┬──  
+2026-11-06T16:48:34.8488340Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8488850Z ─────╯
+2026-11-06T16:48:34.8489000Z Warning: [0035]
+2026-11-06T16:48:34.8489320Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:258:10 ]
+2026-11-06T16:48:34.8489860Z      │
+2026-11-06T16:48:34.8493330Z  258 │     jnum(member(input, "size_bytes")),
+2026-11-06T16:48:34.8493770Z      │          ───┬──  
+2026-11-06T16:48:34.8494370Z      │             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8494830Z ─────╯
+2026-11-06T16:48:34.8494960Z Warning: [0035]
+2026-11-06T16:48:34.8495300Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:262:18 ]
+2026-11-06T16:48:34.8495600Z      │
+2026-11-06T16:48:34.8495840Z  262 │   check_sha(jstr(member(input, "sha256")))
+2026-11-06T16:48:34.8496120Z      │                  ───┬──  
+2026-11-06T16:48:34.8496720Z      │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8497230Z ─────╯
+2026-11-06T16:48:34.8497500Z Warning: [0035]
+2026-11-06T16:48:34.8497820Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:263:21 ]
+2026-11-06T16:48:34.8498120Z      │
+2026-11-06T16:48:34.8498380Z  263 │   let files = match member(j, "files").as_object() {
+2026-11-06T16:48:34.8498700Z      │                     ───┬──  
+2026-11-06T16:48:34.8499340Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8499820Z ─────╯
+2026-11-06T16:48:34.8499950Z Warning: [0020]
+2026-11-06T16:48:34.8500260Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:263:40 ]
+2026-11-06T16:48:34.8501010Z      │
+2026-11-06T16:48:34.8501280Z  263 │   let files = match member(j, "files").as_object() {
+2026-11-06T16:48:34.8501650Z      │                                        ────┬────  
+2026-11-06T16:48:34.8502110Z      │                                            ╰────── Warning (deprecated): This function is deprecated.
+2026-11-06T16:48:34.8502440Z ─────╯
+2026-11-06T16:48:34.8502570Z Warning: [0020]
+2026-11-06T16:48:34.8502880Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:267:7 ]
+2026-11-06T16:48:34.8503380Z      │
+2026-11-06T16:48:34.8503810Z  267 │       Map::new()
+2026-11-06T16:48:34.8504080Z      │       ────┬───  
+2026-11-06T16:48:34.8504660Z      │           ╰───── Warning (deprecated): Use `Map([], capacity=...)` instead
+2026-11-06T16:48:34.8505050Z ─────╯
+2026-11-06T16:48:34.8505350Z Warning: [0020]
+2026-11-06T16:48:34.8505820Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:278:24 ]
+2026-11-06T16:48:34.8506150Z      │
+2026-11-06T16:48:34.8506520Z  278 │   let mut total = text.to_bytes().length()
+2026-11-06T16:48:34.8506970Z      │                        ────┬───  
+2026-11-06T16:48:34.8517870Z      │                            ╰───── Warning (deprecated): Check `@encoding/utf8.encode`
+2026-11-06T16:48:34.8518210Z ─────╯
+2026-11-06T16:48:34.8518360Z Warning: [0035]
+2026-11-06T16:48:34.8518780Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:287:18 ]
+2026-11-06T16:48:34.8519080Z      │
+2026-11-06T16:48:34.8519340Z  287 │     let n = jnum(member(f, "size_bytes"))
+2026-11-06T16:48:34.8519620Z      │                  ───┬──  
+2026-11-06T16:48:34.8520250Z      │                     ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8522320Z ─────╯
+2026-11-06T16:48:34.8522970Z Warning: [0035]
+2026-11-06T16:48:34.8523520Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:293:20 ]
+2026-11-06T16:48:34.8523840Z      │
+2026-11-06T16:48:34.8524070Z  293 │     check_sha(jstr(member(f, "sha256")))
+2026-11-06T16:48:34.8524360Z      │                    ───┬──  
+2026-11-06T16:48:34.8525170Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8525720Z ─────╯
+2026-11-06T16:48:34.8525900Z Warning: [0035]
+2026-11-06T16:48:34.8526240Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:329:11 ]
+2026-11-06T16:48:34.8527060Z      │
+2026-11-06T16:48:34.8527380Z  329 │   if jstr(member(j, "schema_version")) != "moonsav.metadata/1" {
+2026-11-06T16:48:34.8527690Z      │           ───┬──  
+2026-11-06T16:48:34.8528290Z      │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8528770Z ─────╯
+2026-11-06T16:48:34.8528920Z Warning: [0035]
+2026-11-06T16:48:34.8529240Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:332:11 ]
+2026-11-06T16:48:34.8529540Z      │
+2026-11-06T16:48:34.8529840Z  332 │   if jstr(member(j, "validation_scope")) != "full" {
+2026-11-06T16:48:34.8530130Z      │           ───┬──  
+2026-11-06T16:48:34.8530700Z      │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8531170Z ─────╯
+2026-11-06T16:48:34.8531310Z Warning: [0035]
+2026-11-06T16:48:34.8531620Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:335:28 ]
+2026-11-06T16:48:34.8531910Z      │
+2026-11-06T16:48:34.8532210Z  335 │   let expected_rows = jnum(member(manifest, "actual_rows"))
+2026-11-06T16:48:34.8532640Z      │                            ───┬──  
+2026-11-06T16:48:34.8533300Z      │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8533800Z ─────╯
+2026-11-06T16:48:34.8534260Z Warning: [0035]
+2026-11-06T16:48:34.8534580Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:336:11 ]
+2026-11-06T16:48:34.8534850Z      │
+2026-11-06T16:48:34.8535120Z  336 │   if jnum(member(j, "actual_rows")) != expected_rows {
+2026-11-06T16:48:34.8535410Z      │           ───┬──  
+2026-11-06T16:48:34.8535990Z      │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8536450Z ─────╯
+2026-11-06T16:48:34.8536600Z Warning: [0035]
+2026-11-06T16:48:34.8536900Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:339:31 ]
+2026-11-06T16:48:34.8537190Z      │
+2026-11-06T16:48:34.8537470Z  339 │   let declared_rows = opt_int(member(j, "declared_rows"))
+2026-11-06T16:48:34.8537800Z      │                               ───┬──  
+2026-11-06T16:48:34.8538480Z      │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8539250Z ─────╯
+2026-11-06T16:48:34.8539410Z Warning: [0035]
+2026-11-06T16:48:34.8539720Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:343:20 ]
+2026-11-06T16:48:34.8540000Z      │
+2026-11-06T16:48:34.8540240Z  343 │   let enc = closed(member(j, "encoding"), [
+2026-11-06T16:48:34.8540570Z      │                    ───┬──  
+2026-11-06T16:48:34.8541240Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8541730Z ─────╯
+2026-11-06T16:48:34.8541870Z Warning: [0035]
+2026-11-06T16:48:34.8542170Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:347:30 ]
+2026-11-06T16:48:34.8542440Z      │
+2026-11-06T16:48:34.8542720Z  347 │   let effective_token = jstr(member(enc, "effective"))
+2026-11-06T16:48:34.8543050Z      │                              ───┬──  
+2026-11-06T16:48:34.8543730Z      │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8544350Z ─────╯
+2026-11-06T16:48:34.8544500Z Warning: [0035]
+2026-11-06T16:48:34.8544800Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:354:22 ]
+2026-11-06T16:48:34.8545080Z      │
+2026-11-06T16:48:34.8545320Z  354 │   let profile = jstr(member(enc, "profile"))
+2026-11-06T16:48:34.8545620Z      │                      ───┬──  
+2026-11-06T16:48:34.8546690Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8547660Z ─────╯
+2026-11-06T16:48:34.8547790Z Warning: [0035]
+2026-11-06T16:48:34.8548100Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:355:21 ]
+2026-11-06T16:48:34.8548370Z      │
+2026-11-06T16:48:34.8548650Z  355 │   let policy = jstr(member(enc, "string_matching_policy"))
+2026-11-06T16:48:34.8549030Z      │                     ───┬──  
+2026-11-06T16:48:34.8549880Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8550360Z ─────╯
+2026-11-06T16:48:34.8550500Z Warning: [0035]
+2026-11-06T16:48:34.8550820Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:363:23 ]
+2026-11-06T16:48:34.8551100Z      │
+2026-11-06T16:48:34.8551360Z  363 │     declared: opt_str(member(enc, "declared")),
+2026-11-06T16:48:34.8551710Z      │                       ───┬──  
+2026-11-06T16:48:34.8552390Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8552860Z ─────╯
+2026-11-06T16:48:34.8552990Z Warning: [0035]
+2026-11-06T16:48:34.8553300Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:364:22 ]
+2026-11-06T16:48:34.8553600Z      │
+2026-11-06T16:48:34.8554090Z  364 │     machine_code: if member(enc, "machine_code") == Json::null() {
+2026-11-06T16:48:34.8554460Z      │                      ───┬──  
+2026-11-06T16:48:34.8555080Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8555550Z ─────╯
+2026-11-06T16:48:34.8555680Z Warning: [0035]
+2026-11-06T16:48:34.8555990Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:367:20 ]
+2026-11-06T16:48:34.8556260Z      │
+2026-11-06T16:48:34.8556510Z  367 │       Some(jsigned(member(enc, "machine_code")))
+2026-11-06T16:48:34.8556800Z      │                    ───┬──  
+2026-11-06T16:48:34.8557410Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8557870Z ─────╯
+2026-11-06T16:48:34.8558000Z Warning: [0035]
+2026-11-06T16:48:34.8558300Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:371:28 ]
+2026-11-06T16:48:34.8558570Z      │
+2026-11-06T16:48:34.8558850Z  371 │     selection_source: jstr(member(enc, "selection_source")),
+2026-11-06T16:48:34.8559200Z      │                            ───┬──  
+2026-11-06T16:48:34.8559840Z      │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8560320Z ─────╯
+2026-11-06T16:48:34.8560450Z Warning: [0035]
+2026-11-06T16:48:34.8560750Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:373:28 ]
+2026-11-06T16:48:34.8561330Z      │
+2026-11-06T16:48:34.8561620Z  373 │     decoder_identity: jstr(member(enc, "decoder_identity")),
+2026-11-06T16:48:34.8561960Z      │                            ───┬──  
+2026-11-06T16:48:34.8562610Z      │                               ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8563120Z ─────╯
+2026-11-06T16:48:34.8563260Z Warning: [0027]
+2026-11-06T16:48:34.8563570Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:376:41 ]
+2026-11-06T16:48:34.8563830Z      │
+2026-11-06T16:48:34.8564080Z  376 │     encoding.decoder_identity.contains("\x00") {
+2026-11-06T16:48:34.8564420Z      │                                         ──┬─  
+2026-11-06T16:48:34.8565080Z      │                                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8565560Z ─────╯
+2026-11-06T16:48:34.8565700Z Warning: [0035]
+2026-11-06T16:48:34.8566010Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:398:27 ]
+2026-11-06T16:48:34.8566280Z      │
+2026-11-06T16:48:34.8566550Z  398 │   let csv_policy = closed(member(j, "csv"), [
+2026-11-06T16:48:34.8566920Z      │                           ───┬──  
+2026-11-06T16:48:34.8567560Z      │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8568300Z ─────╯
+2026-11-06T16:48:34.8568430Z Warning: [0035]
+2026-11-06T16:48:34.8568790Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:410:13 ]
+2026-11-06T16:48:34.8569100Z      │
+2026-11-06T16:48:34.8569350Z  410 │     if jstr(member(csv_policy, key)) != value {
+2026-11-06T16:48:34.8569610Z      │             ───┬──  
+2026-11-06T16:48:34.8570290Z      │                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8571020Z ─────╯
+2026-11-06T16:48:34.8571180Z Warning: [0035]
+2026-11-06T16:48:34.8572590Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:420:22 ]
+2026-11-06T16:48:34.8573620Z      │
+2026-11-06T16:48:34.8573850Z  420 │     budget.text(jstr(member(j, key)))
+2026-11-06T16:48:34.8574140Z      │                      ───┬──  
+2026-11-06T16:48:34.8574760Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8575330Z ─────╯
+2026-11-06T16:48:34.8575470Z Warning: [0035]
+2026-11-06T16:48:34.8575810Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:426:33 ]
+2026-11-06T16:48:34.8576140Z      │
+2026-11-06T16:48:34.8576450Z  426 │   let system_missing_hex = jstr(member(j, "system_missing_hex"))
+2026-11-06T16:48:34.8576820Z      │                                 ───┬──  
+2026-11-06T16:48:34.8577480Z      │                                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8578120Z ─────╯
+2026-11-06T16:48:34.8578260Z Warning: [0035]
+2026-11-06T16:48:34.8578560Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:427:25 ]
+2026-11-06T16:48:34.8578890Z      │
+2026-11-06T16:48:34.8579210Z  427 │   let lowest_hex = jstr(member(j, "lowest_hex"))
+2026-11-06T16:48:34.8579510Z      │                         ───┬──  
+2026-11-06T16:48:34.8580160Z      │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8580670Z ─────╯
+2026-11-06T16:48:34.8580810Z Warning: [0035]
+2026-11-06T16:48:34.8581130Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:428:26 ]
+2026-11-06T16:48:34.8581390Z      │
+2026-11-06T16:48:34.8581650Z  428 │   let highest_hex = jstr(member(j, "highest_hex"))
+2026-11-06T16:48:34.8584700Z      │                          ───┬──  
+2026-11-06T16:48:34.8586470Z      │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8587850Z ─────╯
+2026-11-06T16:48:34.8588250Z Warning: [0082]
+2026-11-06T16:48:34.8589160Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:435:36 ]
+2026-11-06T16:48:34.8589910Z      │
+2026-11-06T16:48:34.8590570Z  435 │   let aliases : Map[String, Int] = {}
+2026-11-06T16:48:34.8591360Z      │                                    ─┬  
+2026-11-06T16:48:34.8594810Z      │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8596030Z ─────╯
+2026-11-06T16:48:34.8596180Z Warning: [0035]
+2026-11-06T16:48:34.8597080Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:436:23 ]
+2026-11-06T16:48:34.8597530Z      │
+2026-11-06T16:48:34.8597900Z  436 │   let var_json = jarr(member(j, "variables"))
+2026-11-06T16:48:34.8598260Z      │                       ───┬──  
+2026-11-06T16:48:34.8598950Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8600070Z ─────╯
+2026-11-06T16:48:34.8600220Z Warning: [0035]
+2026-11-06T16:48:34.8600540Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:437:32 ]
+2026-11-06T16:48:34.8600820Z      │
+2026-11-06T16:48:34.8601160Z  437 │   if var_json.length() != jnum(member(manifest, "logical_variables")) ||
+2026-11-06T16:48:34.8601940Z      │                                ───┬──  
+2026-11-06T16:48:34.8602780Z      │                                   ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8604820Z ─────╯
+2026-11-06T16:48:34.8605040Z Warning: [0035]
+2026-11-06T16:48:34.8605410Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:438:31 ]
+2026-11-06T16:48:34.8605710Z      │
+2026-11-06T16:48:34.8606020Z  438 │     var_json.length() != jnum(member(j, "logical_variables")) {
+2026-11-06T16:48:34.8606380Z      │                               ───┬──  
+2026-11-06T16:48:34.8607070Z      │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8607560Z ─────╯
+2026-11-06T16:48:34.8607700Z Warning: [0035]
+2026-11-06T16:48:34.8608010Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:443:22 ]
+2026-11-06T16:48:34.8608290Z      │
+2026-11-06T16:48:34.8608520Z  443 │     let index = jnum(member(item, "index"))
+2026-11-06T16:48:34.8608810Z      │                      ───┬──  
+2026-11-06T16:48:34.8609440Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8609950Z ─────╯
+2026-11-06T16:48:34.8610080Z Warning: [0035]
+2026-11-06T16:48:34.8610380Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:447:21 ]
+2026-11-06T16:48:34.8610650Z      │
+2026-11-06T16:48:34.8610870Z  447 │     let name = jstr(member(item, "name"))
+2026-11-06T16:48:34.8611160Z      │                     ───┬──  
+2026-11-06T16:48:34.8612610Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8614660Z ─────╯
+2026-11-06T16:48:34.8615090Z Warning: [0035]
+2026-11-06T16:48:34.8616790Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:448:27 ]
+2026-11-06T16:48:34.8617740Z      │
+2026-11-06T16:48:34.8618070Z  448 │     let short_name = jstr(member(item, "short_name"))
+2026-11-06T16:48:34.8618950Z      │                           ───┬──  
+2026-11-06T16:48:34.8619620Z      │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8620110Z ─────╯
+2026-11-06T16:48:34.8620260Z Warning: [0035]
+2026-11-06T16:48:34.8620670Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:460:21 ]
+2026-11-06T16:48:34.8620950Z      │
+2026-11-06T16:48:34.8621190Z  460 │     let kind = jstr(member(item, "type"))
+2026-11-06T16:48:34.8621490Z      │                     ───┬──  
+2026-11-06T16:48:34.8622120Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8622600Z ─────╯
+2026-11-06T16:48:34.8622730Z Warning: [0035]
+2026-11-06T16:48:34.8623050Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:461:22 ]
+2026-11-06T16:48:34.8623330Z      │
+2026-11-06T16:48:34.8623580Z  461 │     let width = jnum(member(item, "width"))
+2026-11-06T16:48:34.8623860Z      │                      ───┬──  
+2026-11-06T16:48:34.8624480Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8624960Z ─────╯
+2026-11-06T16:48:34.8625160Z Warning: [0035]
+2026-11-06T16:48:34.8625510Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:468:25 ]
+2026-11-06T16:48:34.8626160Z      │
+2026-11-06T16:48:34.8626420Z  468 │     let label = opt_str(member(item, "label"))
+2026-11-06T16:48:34.8626810Z      │                         ───┬──  
+2026-11-06T16:48:34.8627510Z      │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8628020Z ─────╯
+2026-11-06T16:48:34.8628190Z Warning: [0035]
+2026-11-06T16:48:34.8628510Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:469:36 ]
+2026-11-06T16:48:34.8628890Z      │
+2026-11-06T16:48:34.8629280Z  469 │     let raw_label_base64 = opt_str(member(item, "raw_label_base64"))
+2026-11-06T16:48:34.8629700Z      │                                    ───┬──  
+2026-11-06T16:48:34.8630460Z      │                                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8637210Z ─────╯
+2026-11-06T16:48:34.8637430Z Warning: [0035]
+2026-11-06T16:48:34.8637790Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:478:27 ]
+2026-11-06T16:48:34.8638680Z      │
+2026-11-06T16:48:34.8638950Z  478 │     let label_json = jarr(member(item, "value_labels"))
+2026-11-06T16:48:34.8639310Z      │                           ───┬──  
+2026-11-06T16:48:34.8640020Z      │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8640910Z ─────╯
+2026-11-06T16:48:34.8641040Z Warning: [0035]
+2026-11-06T16:48:34.8641350Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:482:31 ]
+2026-11-06T16:48:34.8641620Z      │
+2026-11-06T16:48:34.8641950Z  482 │       let value = parsed_atom(member(entry, "value"), kind, dec, budget)
+2026-11-06T16:48:34.8642320Z      │                               ───┬──  
+2026-11-06T16:48:34.8642980Z      │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8643560Z ─────╯
+2026-11-06T16:48:34.8643700Z Warning: [0035]
+2026-11-06T16:48:34.8644010Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:483:23 ]
+2026-11-06T16:48:34.8644270Z      │
+2026-11-06T16:48:34.8644510Z  483 │       let text = jstr(member(entry, "label"))
+2026-11-06T16:48:34.8644800Z      │                       ───┬──  
+2026-11-06T16:48:34.8645430Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8645910Z ─────╯
+2026-11-06T16:48:34.8646040Z Warning: [0035]
+2026-11-06T16:48:34.8646340Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:484:22 ]
+2026-11-06T16:48:34.8646610Z      │
+2026-11-06T16:48:34.8646880Z  484 │       let raw = jstr(member(entry, "raw_label_base64"))
+2026-11-06T16:48:34.8647210Z      │                      ───┬──  
+2026-11-06T16:48:34.8648110Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8648590Z ─────╯
+2026-11-06T16:48:34.8648730Z Warning: [0035]
+2026-11-06T16:48:34.8649060Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:490:26 ]
+2026-11-06T16:48:34.8649340Z      │
+2026-11-06T16:48:34.8649670Z  490 │     let missing = closed(member(item, "user_missing"), ["kind", "values"])
+2026-11-06T16:48:34.8650060Z      │                          ───┬──  
+2026-11-06T16:48:34.8650680Z      │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8651140Z ─────╯
+2026-11-06T16:48:34.8651280Z Warning: [0035]
+2026-11-06T16:48:34.8651580Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:491:29 ]
+2026-11-06T16:48:34.8651850Z      │
+2026-11-06T16:48:34.8652110Z  491 │     let missing_kind = jstr(member(missing, "kind"))
+2026-11-06T16:48:34.8652440Z      │                             ───┬──  
+2026-11-06T16:48:34.8653080Z      │                                ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8653560Z ─────╯
+2026-11-06T16:48:34.8653800Z Warning: [0035]
+2026-11-06T16:48:34.8654120Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:492:31 ]
+2026-11-06T16:48:34.8654380Z      │
+2026-11-06T16:48:34.8654690Z  492 │     let missing_values = jarr(member(missing, "values")).map(a => {
+2026-11-06T16:48:34.8655060Z      │                               ───┬──  
+2026-11-06T16:48:34.8655710Z      │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8656200Z ─────╯
+2026-11-06T16:48:34.8656320Z Warning: [0035]
+2026-11-06T16:48:34.8656630Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:510:31 ]
+2026-11-06T16:48:34.8656910Z      │
+2026-11-06T16:48:34.8657200Z  510 │     let physical_start = jnum(member(item, "physical_start"))
+2026-11-06T16:48:34.8657550Z      │                               ───┬──  
+2026-11-06T16:48:34.8658210Z      │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8658680Z ─────╯
+2026-11-06T16:48:34.8658810Z Warning: [0035]
+2026-11-06T16:48:34.8659410Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:511:31 ]
+2026-11-06T16:48:34.8659690Z      │
+2026-11-06T16:48:34.8659980Z  511 │     let physical_slots = jnum(member(item, "physical_slots"))
+2026-11-06T16:48:34.8660320Z      │                               ───┬──  
+2026-11-06T16:48:34.8660970Z      │                                  ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8661470Z ─────╯
+2026-11-06T16:48:34.8661610Z Warning: [0035]
+2026-11-06T16:48:34.8661920Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:529:27 ]
+2026-11-06T16:48:34.8662180Z      │
+2026-11-06T16:48:34.8662450Z  529 │       source_offset: jnum(member(item, "source_offset")),
+2026-11-06T16:48:34.8663560Z      │                           ───┬──  
+2026-11-06T16:48:34.8665490Z      │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8666000Z ─────╯
+2026-11-06T16:48:34.8666130Z Warning: [0035]
+2026-11-06T16:48:34.8666440Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:532:35 ]
+2026-11-06T16:48:34.8666770Z      │
+2026-11-06T16:48:34.8667110Z  532 │       print_format: parsed_format(member(item, "print_format")),
+2026-11-06T16:48:34.8667470Z      │                                   ───┬──  
+2026-11-06T16:48:34.8668210Z      │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8669030Z ─────╯
+2026-11-06T16:48:34.8669170Z Warning: [0035]
+2026-11-06T16:48:34.8669470Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:533:35 ]
+2026-11-06T16:48:34.8669740Z      │
+2026-11-06T16:48:34.8670030Z  533 │       write_format: parsed_format(member(item, "write_format")),
+2026-11-06T16:48:34.8670390Z      │                                   ───┬──  
+2026-11-06T16:48:34.8671070Z      │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8671540Z ─────╯
+2026-11-06T16:48:34.8671680Z Warning: [0035]
+2026-11-06T16:48:34.8671980Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:537:24 ]
+2026-11-06T16:48:34.8672240Z      │
+2026-11-06T16:48:34.8672490Z  537 │       measure: opt_int(member(item, "measure")),
+2026-11-06T16:48:34.8672800Z      │                        ───┬──  
+2026-11-06T16:48:34.8673450Z      │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8673920Z ─────╯
+2026-11-06T16:48:34.8674040Z Warning: [0035]
+2026-11-06T16:48:34.8674350Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:538:30 ]
+2026-11-06T16:48:34.8674620Z      │
+2026-11-06T16:48:34.8674900Z  538 │       display_width: opt_int(member(item, "display_width")),
+2026-11-06T16:48:34.8675250Z      │                              ───┬──  
+2026-11-06T16:48:34.8675900Z      │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8676380Z ─────╯
+2026-11-06T16:48:34.8676520Z Warning: [0035]
+2026-11-06T16:48:34.8676820Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:539:26 ]
+2026-11-06T16:48:34.8677100Z      │
+2026-11-06T16:48:34.8677360Z  539 │       alignment: opt_int(member(item, "alignment")),
+2026-11-06T16:48:34.8677680Z      │                          ───┬──  
+2026-11-06T16:48:34.8678320Z      │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8678790Z ─────╯
+2026-11-06T16:48:34.8678930Z Warning: [0035]
+2026-11-06T16:48:34.8679230Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:543:20 ]
+2026-11-06T16:48:34.8679710Z      │
+2026-11-06T16:48:34.8679970Z  543 │   if slots != jnum(member(j, "physical_slots")) {
+2026-11-06T16:48:34.8680890Z      │                    ───┬──  
+2026-11-06T16:48:34.8683180Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8684750Z ─────╯
+2026-11-06T16:48:34.8684960Z Warning: [0035]
+2026-11-06T16:48:34.8685340Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:546:35 ]
+2026-11-06T16:48:34.8685630Z      │
+2026-11-06T16:48:34.8686040Z  546 │   let nominal_case_size = jsigned(member(j, "nominal_case_size"), minimum=-1.0)
+2026-11-06T16:48:34.8686460Z      │                                   ───┬──  
+2026-11-06T16:48:34.8690520Z      │                                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8691100Z ─────╯
+2026-11-06T16:48:34.8691270Z Warning: [0035]
+2026-11-06T16:48:34.8691620Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:548:26 ]
+2026-11-06T16:48:34.8691940Z      │
+2026-11-06T16:48:34.8692250Z  548 │   let compression = jnum(member(j, "compression"))
+2026-11-06T16:48:34.8692650Z      │                          ───┬──  
+2026-11-06T16:48:34.8693320Z      │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8694440Z ─────╯
+2026-11-06T16:48:34.8694600Z Warning: [0035]
+2026-11-06T16:48:34.8694980Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:552:20 ]
+2026-11-06T16:48:34.8695300Z      │
+2026-11-06T16:48:34.8695570Z  552 │   let bias = match member(j, "bias").as_number() {
+2026-11-06T16:48:34.8695990Z      │                    ───┬──  
+2026-11-06T16:48:34.8696660Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8697180Z ─────╯
+2026-11-06T16:48:34.8697310Z Warning: [0020]
+2026-11-06T16:48:34.8697640Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:552:38 ]
+2026-11-06T16:48:34.8697970Z      │
+2026-11-06T16:48:34.8698240Z  552 │   let bias = match member(j, "bias").as_number() {
+2026-11-06T16:48:34.8698600Z      │                                      ────┬────  
+2026-11-06T16:48:34.8699200Z      │                                          ╰────── Warning (deprecated): Suggestion: `if json is Number(n) { Some(n) } else { None }`
+2026-11-06T16:48:34.8699710Z ─────╯
+2026-11-06T16:48:34.8699850Z Warning: [0035]
+2026-11-06T16:48:34.8700150Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:563:17 ]
+2026-11-06T16:48:34.8700420Z      │
+2026-11-06T16:48:34.8700640Z  563 │   for w in jarr(member(j, "warnings")) {
+2026-11-06T16:48:34.8700920Z      │                 ───┬──  
+2026-11-06T16:48:34.8701610Z      │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8702150Z ─────╯
+2026-11-06T16:48:34.8702310Z Warning: [0035]
+2026-11-06T16:48:34.8702660Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:566:26 ]
+2026-11-06T16:48:34.8702930Z      │
+2026-11-06T16:48:34.8703190Z  566 │       warning_code: jstr(member(w, "warning_code")),
+2026-11-06T16:48:34.8703560Z      │                          ───┬──  
+2026-11-06T16:48:34.8704200Z      │                             ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8704670Z ─────╯
+2026-11-06T16:48:34.8704800Z Warning: [0035]
+2026-11-06T16:48:34.8705100Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:567:19 ]
+2026-11-06T16:48:34.8705370Z      │
+2026-11-06T16:48:34.8705590Z  567 │       scope: jstr(member(w, "scope")),
+2026-11-06T16:48:34.8705860Z      │                   ───┬──  
+2026-11-06T16:48:34.8706900Z      │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8707370Z ─────╯
+2026-11-06T16:48:34.8707500Z Warning: [0035]
+2026-11-06T16:48:34.8707810Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:568:30 ]
+2026-11-06T16:48:34.8708080Z      │
+2026-11-06T16:48:34.8708360Z  568 │       suggested_action: jstr(member(w, "suggested_action")),
+2026-11-06T16:48:34.8708830Z      │                              ───┬──  
+2026-11-06T16:48:34.8709570Z      │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8710050Z ─────╯
+2026-11-06T16:48:34.8710190Z Warning: [0035]
+2026-11-06T16:48:34.8710570Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:573:17 ]
+2026-11-06T16:48:34.8710850Z      │
+2026-11-06T16:48:34.8711170Z  573 │   for e in jarr(member(j, "uninterpreted_metadata")) {
+2026-11-06T16:48:34.8711480Z      │                 ───┬──  
+2026-11-06T16:48:34.8712090Z      │                    ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8712650Z ─────╯
+2026-11-06T16:48:34.8712780Z Warning: [0035]
+2026-11-06T16:48:34.8713090Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:575:23 ]
+2026-11-06T16:48:34.8713370Z      │
+2026-11-06T16:48:34.8713590Z  575 │     let record = jnum(member(e, "record"))
+2026-11-06T16:48:34.8714120Z      │                       ───┬──  
+2026-11-06T16:48:34.8714790Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8715260Z ─────╯
+2026-11-06T16:48:34.8715390Z Warning: [0035]
+2026-11-06T16:48:34.8715720Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:576:27 ]
+2026-11-06T16:48:34.8716070Z      │
+2026-11-06T16:48:34.8716310Z  576 │     let subtype = opt_int(member(e, "subtype"))
+2026-11-06T16:48:34.8716610Z      │                           ───┬──  
+2026-11-06T16:48:34.8717370Z      │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8717930Z ─────╯
+2026-11-06T16:48:34.8718090Z Warning: [0035]
+2026-11-06T16:48:34.8718420Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:577:23 ]
+2026-11-06T16:48:34.8718690Z      │
+2026-11-06T16:48:34.8718930Z  577 │     let offset = jnum(member(e, "byte_offset"))
+2026-11-06T16:48:34.8719230Z      │                       ───┬──  
+2026-11-06T16:48:34.8719930Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8720410Z ─────╯
+2026-11-06T16:48:34.8720550Z Warning: [0035]
+2026-11-06T16:48:34.8721150Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:578:20 ]
+2026-11-06T16:48:34.8721420Z      │
+2026-11-06T16:48:34.8722270Z  578 │     let raw = jstr(member(e, "raw_base64"))
+2026-11-06T16:48:34.8723630Z      │                    ───┬──  
+2026-11-06T16:48:34.8724260Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8724740Z ─────╯
+2026-11-06T16:48:34.8724890Z Warning: [0035]
+2026-11-06T16:48:34.8725200Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:610:24 ]
+2026-11-06T16:48:34.8725460Z      │
+2026-11-06T16:48:34.8725730Z  610 │   let weight = opt_int(member(j, "weight_variable"))
+2026-11-06T16:48:34.8726040Z      │                        ───┬──  
+2026-11-06T16:48:34.8726670Z      │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8727150Z ─────╯
+2026-11-06T16:48:34.8727290Z Warning: [0035]
+2026-11-06T16:48:34.8727590Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:623:22 ]
+2026-11-06T16:48:34.8727850Z      │
+2026-11-06T16:48:34.8728120Z  623 │     file_label: jstr(member(j, "file_label")),
+2026-11-06T16:48:34.8728490Z      │                      ───┬──  
+2026-11-06T16:48:34.8729380Z      │                         ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8730130Z ─────╯
+2026-11-06T16:48:34.8730290Z Warning: [0035]
+2026-11-06T16:48:34.8730670Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:624:25 ]
+2026-11-06T16:48:34.8730940Z      │
+2026-11-06T16:48:34.8731210Z  624 │     creation_date: jstr(member(j, "creation_date")),
+2026-11-06T16:48:34.8731510Z      │                         ───┬──  
+2026-11-06T16:48:34.8732140Z      │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8732720Z ─────╯
+2026-11-06T16:48:34.8732890Z Warning: [0035]
+2026-11-06T16:48:34.8733220Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:625:25 ]
+2026-11-06T16:48:34.8733490Z      │
+2026-11-06T16:48:34.8733740Z  625 │     creation_time: jstr(member(j, "creation_time")),
+2026-11-06T16:48:34.8734130Z      │                         ───┬──  
+2026-11-06T16:48:34.8734760Z      │                            ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8735240Z ─────╯
+2026-11-06T16:48:34.8735380Z Warning: [0035]
+2026-11-06T16:48:34.8735680Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:626:19 ]
+2026-11-06T16:48:34.8735960Z      │
+2026-11-06T16:48:34.8736210Z  626 │     product: jstr(member(j, "product")),
+2026-11-06T16:48:34.8736550Z      │                   ───┬──  
+2026-11-06T16:48:34.8737820Z      │                      ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8739510Z ─────╯
+2026-11-06T16:48:34.8739740Z Warning: [0035]
+2026-11-06T16:48:34.8751300Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:627:30 ]
+2026-11-06T16:48:34.8751810Z      │
+2026-11-06T16:48:34.8752160Z  627 │     weight_variable: opt_int(member(j, "weight_variable")),
+2026-11-06T16:48:34.8752590Z      │                              ───┬──  
+2026-11-06T16:48:34.8753400Z      │                                 ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8753890Z ─────╯
+2026-11-06T16:48:34.8754030Z Warning: [0035]
+2026-11-06T16:48:34.8754350Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:669:11 ]
+2026-11-06T16:48:34.8754740Z      │
+2026-11-06T16:48:34.8755010Z  669 │   if jnum(member(j, "row")) != self.row {
+2026-11-06T16:48:34.8755720Z      │           ───┬──  
+2026-11-06T16:48:34.8756410Z      │              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8756890Z ─────╯
+2026-11-06T16:48:34.8757020Z Warning: [0035]
+2026-11-06T16:48:34.8757330Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:672:20 ]
+2026-11-06T16:48:34.8757600Z      │
+2026-11-06T16:48:34.8757820Z  672 │   let cells = jarr(member(j, "cells"))
+2026-11-06T16:48:34.8758120Z      │                    ───┬──  
+2026-11-06T16:48:34.8758730Z      │                       ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8760190Z ─────╯
+2026-11-06T16:48:34.8760340Z Warning: [0035]
+2026-11-06T16:48:34.8760650Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:682:21 ]
+2026-11-06T16:48:34.8760930Z      │
+2026-11-06T16:48:34.8761150Z  682 │     let kind = jstr(member(j, "kind"))
+2026-11-06T16:48:34.8761450Z      │                     ───┬──  
+2026-11-06T16:48:34.8762080Z      │                        ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8762570Z ─────╯
+2026-11-06T16:48:34.8762730Z Warning: [0035]
+2026-11-06T16:48:34.8763050Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:683:24 ]
+2026-11-06T16:48:34.8763320Z      │
+2026-11-06T16:48:34.8763790Z  683 │     let missing = jstr(member(j, "missing"))
+2026-11-06T16:48:34.8764080Z      │                        ───┬──  
+2026-11-06T16:48:34.8765990Z      │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8767760Z ─────╯
+2026-11-06T16:48:34.8768180Z Warning: [0035]
+2026-11-06T16:48:34.8769050Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:688:27 ]
+2026-11-06T16:48:34.8769860Z      │
+2026-11-06T16:48:34.8770550Z  688 │     let decimal = opt_str(member(j, "decimal"))
+2026-11-06T16:48:34.8770870Z      │                           ───┬──  
+2026-11-06T16:48:34.8771510Z      │                              ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8771980Z ─────╯
+2026-11-06T16:48:34.8772120Z Warning: [0035]
+2026-11-06T16:48:34.8772420Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:689:23 ]
+2026-11-06T16:48:34.8772710Z      │
+2026-11-06T16:48:34.8772960Z  689 │     let hex = opt_str(member(j, "ieee754_hex"))
+2026-11-06T16:48:34.8773290Z      │                       ───┬──  
+2026-11-06T16:48:34.8774060Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8774540Z ─────╯
+2026-11-06T16:48:34.8774680Z Warning: [0035]
+2026-11-06T16:48:34.8775000Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:690:24 ]
+2026-11-06T16:48:34.8775350Z      │
+2026-11-06T16:48:34.8775590Z  690 │     let text = opt_str(member(j, "text"))
+2026-11-06T16:48:34.8775860Z      │                        ───┬──  
+2026-11-06T16:48:34.8776490Z      │                           ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8776960Z ─────╯
+2026-11-06T16:48:34.8777100Z Warning: [0035]
+2026-11-06T16:48:34.8777410Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:691:23 ]
+2026-11-06T16:48:34.8777670Z      │
+2026-11-06T16:48:34.8777940Z  691 │     let raw = opt_str(member(j, "logical_bytes_base64"))
+2026-11-06T16:48:34.8778260Z      │                       ───┬──  
+2026-11-06T16:48:34.8780040Z      │                          ╰──── Warning (reserved_keyword): The word `member` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8781650Z ─────╯
+2026-11-06T16:48:34.8783180Z Warning: [0020]
+2026-11-06T16:48:34.8784050Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:785:15 ]
+2026-11-06T16:48:34.8784800Z      │
+2026-11-06T16:48:34.8785560Z  785 │   let field = StringBuilder::new()
+2026-11-06T16:48:34.8786330Z      │               ─────────┬────────  
+2026-11-06T16:48:34.8787400Z      │                        ╰────────── Warning (deprecated): Use `StringBuilder()` instead
+2026-11-06T16:48:34.8788230Z ─────╯
+2026-11-06T16:48:34.8789310Z Warning: [0027]
+2026-11-06T16:48:34.8790220Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/bundle.mbt:791:14 ]
+2026-11-06T16:48:34.8790960Z      │
+2026-11-06T16:48:34.8791460Z  791 │     if ch == '\x00' {
+2026-11-06T16:48:34.8792030Z      │              ───┬──  
+2026-11-06T16:48:34.8793580Z      │                 ╰──── Warning (deprecated_syntax): The syntax `\x..` in char literal for type Char is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8794790Z ─────╯
+2026-11-06T16:48:34.8795250Z Warning: [0027]
+2026-11-06T16:48:34.8796130Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/codec.mbt:81:49 ]
+2026-11-06T16:48:34.8796870Z     │
+2026-11-06T16:48:34.8797590Z  81 │         if id.trim().is_empty() || id.contains("\x00") {
+2026-11-06T16:48:34.8798540Z     │                                                 ──┬─  
+2026-11-06T16:48:34.8800590Z     │                                                   ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8801510Z ────╯
+2026-11-06T16:48:34.8801680Z Warning: [0020]
+2026-11-06T16:48:34.8802020Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/codec.mbt:114:26 ]
+2026-11-06T16:48:34.8802300Z      │
+2026-11-06T16:48:34.8802520Z  114 │   let magic = input[0:4].to_bytes()
+2026-11-06T16:48:34.8802810Z      │                          ────┬───  
+2026-11-06T16:48:34.8803350Z      │                              ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+2026-11-06T16:48:34.8803780Z ─────╯
+2026-11-06T16:48:34.8803910Z Warning: [0004]
+2026-11-06T16:48:34.8804240Z    ╭─[ /Users/runner/work/moonsav/moonsav/src/cursor.mbt:2:8 ]
+2026-11-06T16:48:34.8804510Z    │
+2026-11-06T16:48:34.8804670Z  2 │ struct Cursor {
+2026-11-06T16:48:34.8804850Z    │        ───┬──  
+2026-11-06T16:48:34.8805460Z    │           ╰──── Warning (missing_priv): The type 'Cursor' does not occur in public signature of current package, consider marking it as `priv`.
+2026-11-06T16:48:34.8805960Z ───╯
+2026-11-06T16:48:34.8806090Z Warning: [0020]
+2026-11-06T16:48:34.8806400Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/cursor.mbt:20:47 ]
+2026-11-06T16:48:34.8806680Z     │
+2026-11-06T16:48:34.8807740Z  20 │   let out = self.bytes[self.pos:self.pos + n].to_bytes()
+2026-11-06T16:48:34.8809220Z     │                                               ────┬───  
+2026-11-06T16:48:34.8811150Z     │                                                   ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+2026-11-06T16:48:34.8816030Z ────╯
+2026-11-06T16:48:34.8816200Z Warning: [0092]
+2026-11-06T16:48:34.8818190Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/data.mbt:386:7 ]
+2026-11-06T16:48:34.8818990Z      │
+2026-11-06T16:48:34.8819440Z  386 │       try {
+2026-11-06T16:48:34.8819900Z      │       ─┬─  
+2026-11-06T16:48:34.8820170Z      │        ╰─── Warning (fragile_catch_all): 
+2026-11-06T16:48:34.8820520Z Found code that can be simplified:
+2026-11-06T16:48:34.8820720Z 
+2026-11-06T16:48:34.8820800Z   try <expr> catch {
+2026-11-06T16:48:34.8820990Z     err => {
+2026-11-06T16:48:34.8821180Z       <cleanup code>
+2026-11-06T16:48:34.8821330Z       raise err
+2026-11-06T16:48:34.8821470Z     }
+2026-11-06T16:48:34.8821590Z   }
+2026-11-06T16:48:34.8821670Z 
+2026-11-06T16:48:34.8822000Z If <cleanup code> does not mention `err` or perform `return`/`break`/`continue`, rewrite to:
+2026-11-06T16:48:34.8822290Z 
+2026-11-06T16:48:34.8822360Z   errdefer <cleanup code>
+2026-11-06T16:48:34.8822540Z   <expr>
+2026-11-06T16:48:34.8822640Z 
+2026-11-06T16:48:34.8823210Z Note: `try ... catch` will no longer capture async cancellation in the future, so using `catch` for cleanup is dangerous for async code.
+2026-11-06T16:48:34.8823960Z If your handler need to manipulate or inspect `err`, but contain cleanup code as well,
+2026-11-06T16:48:34.8824720Z it is still recommended to move the cleanup part to `errdefer` as well, leaving only the error inspecting part in `catch`.
+2026-11-06T16:48:34.8825670Z       
+2026-11-06T16:48:34.8825880Z ─────╯
+2026-11-06T16:48:34.8826050Z Warning: [0027]
+2026-11-06T16:48:34.8826380Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:49:44 ]
+2026-11-06T16:48:34.8826660Z     │
+2026-11-06T16:48:34.8826950Z  49 │     let item = item.to_owned().trim(chars="\x00 ").to_owned()
+2026-11-06T16:48:34.8827310Z     │                                            ──┬─  
+2026-11-06T16:48:34.8827990Z     │                                              ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8828530Z ────╯
+2026-11-06T16:48:34.8828710Z Warning: [0027]
+2026-11-06T16:48:34.8829020Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:55:58 ]
+2026-11-06T16:48:34.8829300Z     │
+2026-11-06T16:48:34.8829640Z  55 │         out.push((a.to_owned(), b.to_owned().trim(chars="\x00 ").to_owned()))
+2026-11-06T16:48:34.8830060Z     │                                                          ──┬─  
+2026-11-06T16:48:34.8830880Z     │                                                            ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8831370Z ────╯
+2026-11-06T16:48:34.8831500Z Warning: [0082]
+2026-11-06T16:48:34.8831830Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:104:36 ]
+2026-11-06T16:48:34.8832110Z      │
+2026-11-06T16:48:34.8832340Z  104 │   let by_slot : Map[Int, RawVar] = {}
+2026-11-06T16:48:34.8832650Z      │                                    ─┬  
+2026-11-06T16:48:34.8834070Z      │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8835010Z ─────╯
+2026-11-06T16:48:34.8835150Z Warning: [0027]
+2026-11-06T16:48:34.8835470Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:400:56 ]
+2026-11-06T16:48:34.8835750Z      │
+2026-11-06T16:48:34.8836070Z  400 │               declared = Some(ascii(bytes).trim(chars="\x00 ").to_owned())
+2026-11-06T16:48:34.8836480Z      │                                                        ──┬─  
+2026-11-06T16:48:34.8837450Z      │                                                          ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8838250Z ─────╯
+2026-11-06T16:48:34.8838380Z Warning: [0082]
+2026-11-06T16:48:34.8838700Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:481:39 ]
+2026-11-06T16:48:34.8838990Z      │
+2026-11-06T16:48:34.8839210Z  481 │   let raw_names : Map[String, Bool] = {}
+2026-11-06T16:48:34.8839520Z      │                                       ─┬  
+2026-11-06T16:48:34.8840940Z      │                                        ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8842130Z ─────╯
+2026-11-06T16:48:34.8842310Z Warning: [0027]
+2026-11-06T16:48:34.8842660Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:483:41 ]
+2026-11-06T16:48:34.8842990Z      │
+2026-11-06T16:48:34.8843300Z  483 │     let key = dec(r.short).trim(chars=" \x00").to_owned().to_upper()
+2026-11-06T16:48:34.8843660Z      │                                         ──┬─  
+2026-11-06T16:48:34.8844320Z      │                                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8844790Z ─────╯
+2026-11-06T16:48:34.8844980Z Warning: [0082]
+2026-11-06T16:48:34.8845580Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:486:37 ]
+2026-11-06T16:48:34.8845960Z      │
+2026-11-06T16:48:34.8846190Z  486 │   let names : Map[String, String] = {}
+2026-11-06T16:48:34.8846480Z      │                                     ─┬  
+2026-11-06T16:48:34.8847930Z      │                                      ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8848880Z ─────╯
+2026-11-06T16:48:34.8849020Z Warning: [0082]
+2026-11-06T16:48:34.8849340Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:487:35 ]
+2026-11-06T16:48:34.8849620Z      │
+2026-11-06T16:48:34.8849840Z  487 │   let widths : Map[String, Int] = {}
+2026-11-06T16:48:34.8851620Z      │                                   ─┬  
+2026-11-06T16:48:34.8855430Z      │                                    ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8859010Z ─────╯
+2026-11-06T16:48:34.8859290Z Warning: [0082]
+2026-11-06T16:48:34.8860160Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:546:33 ]
+2026-11-06T16:48:34.8861300Z      │
+2026-11-06T16:48:34.8861530Z  546 │   let used : Map[String, Int] = {}
+2026-11-06T16:48:34.8861820Z      │                                 ─┬  
+2026-11-06T16:48:34.8863680Z      │                                  ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8866480Z ─────╯
+2026-11-06T16:48:34.8866710Z Warning: [0027]
+2026-11-06T16:48:34.8867630Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:550:43 ]
+2026-11-06T16:48:34.8868730Z      │
+2026-11-06T16:48:34.8869610Z  550 │     let short = dec(r.short).trim(chars=" \x00").to_owned()
+2026-11-06T16:48:34.8870570Z      │                                           ──┬─  
+2026-11-06T16:48:34.8872420Z      │                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8874200Z ─────╯
+2026-11-06T16:48:34.8874750Z Warning: [0027]
+2026-11-06T16:48:34.8876110Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:577:39 ]
+2026-11-06T16:48:34.8876970Z      │
+2026-11-06T16:48:34.8877840Z  577 │             dec(s.short).trim(chars=" \x00").to_owned().to_upper(),
+2026-11-06T16:48:34.8878860Z      │                                       ──┬─  
+2026-11-06T16:48:34.8879670Z      │                                         ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8880180Z ─────╯
+2026-11-06T16:48:34.8880340Z Warning: [0035]
+2026-11-06T16:48:34.8880680Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:597:9 ]
+2026-11-06T16:48:34.8880960Z      │
+2026-11-06T16:48:34.8881480Z  597 │     for alias in [short, name] {
+2026-11-06T16:48:34.8881810Z      │         ──┬──  
+2026-11-06T16:48:34.8882400Z      │           ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8882910Z ─────╯
+2026-11-06T16:48:34.8883060Z Warning: [0035]
+2026-11-06T16:48:34.8883400Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:598:11 ]
+2026-11-06T16:48:34.8883690Z      │
+2026-11-06T16:48:34.8883910Z  598 │       let alias = alias.to_upper()
+2026-11-06T16:48:34.8884470Z      │           ──┬──  
+2026-11-06T16:48:34.8885050Z      │             ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8885550Z ─────╯
+2026-11-06T16:48:34.8885700Z Warning: [0035]
+2026-11-06T16:48:34.8886070Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:598:19 ]
+2026-11-06T16:48:34.8886360Z      │
+2026-11-06T16:48:34.8886570Z  598 │       let alias = alias.to_upper()
+2026-11-06T16:48:34.8886840Z      │                   ──┬──  
+2026-11-06T16:48:34.8887450Z      │                     ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8887930Z ─────╯
+2026-11-06T16:48:34.8888060Z Warning: [0035]
+2026-11-06T16:48:34.8888390Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:599:19 ]
+2026-11-06T16:48:34.8888680Z      │
+2026-11-06T16:48:34.8889010Z  599 │       if used.get(alias) is Some(previous) && previous != vars.length() {
+2026-11-06T16:48:34.8889390Z      │                   ──┬──  
+2026-11-06T16:48:34.8890720Z      │                     ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8891230Z ─────╯
+2026-11-06T16:48:34.8891370Z Warning: [0035]
+2026-11-06T16:48:34.8891690Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:602:12 ]
+2026-11-06T16:48:34.8892010Z      │
+2026-11-06T16:48:34.8892230Z  602 │       used[alias] = vars.length()
+2026-11-06T16:48:34.8892460Z      │            ──┬──  
+2026-11-06T16:48:34.8893140Z      │              ╰──── Warning (reserved_keyword): The word `alias` is reserved for possible future use. Please consider using another name.
+2026-11-06T16:48:34.8893620Z ─────╯
+2026-11-06T16:48:34.8893750Z Warning: [0027]
+2026-11-06T16:48:34.8894080Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:762:50 ]
+2026-11-06T16:48:34.8894580Z      │
+2026-11-06T16:48:34.8902390Z  762 │     file_label: dec(file_label).trim_end(chars=" \x00").to_owned(),
+2026-11-06T16:48:34.8903700Z      │                                                  ──┬─  
+2026-11-06T16:48:34.8904440Z      │                                                    ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8904960Z ─────╯
+2026-11-06T16:48:34.8905110Z Warning: [0020]
+2026-11-06T16:48:34.8905920Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:765:30 ]
+2026-11-06T16:48:34.8906340Z      │
+2026-11-06T16:48:34.8906700Z  765 │     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
+2026-11-06T16:48:34.8907200Z      │                              ────┬───  
+2026-11-06T16:48:34.8907940Z      │                                  ╰───── Warning (deprecated): Use `to_owned` to allocate an owned `Bytes` from a `BytesView`
+2026-11-06T16:48:34.8908410Z ─────╯
+2026-11-06T16:48:34.8908950Z Warning: [0027]
+2026-11-06T16:48:34.8909310Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:765:59 ]
+2026-11-06T16:48:34.8909610Z      │
+2026-11-06T16:48:34.8909950Z  765 │     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
+2026-11-06T16:48:34.8910390Z      │                                                           ──┬─  
+2026-11-06T16:48:34.8911140Z      │                                                             ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8911930Z ─────╯
+2026-11-06T16:48:34.8912070Z Warning: [0082]
+2026-11-06T16:48:34.8912420Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/dictionary.mbt:785:36 ]
+2026-11-06T16:48:34.8912770Z      │
+2026-11-06T16:48:34.8912990Z  785 │   let by_name : Map[String, Int] = {}
+2026-11-06T16:48:34.8913280Z      │                                    ─┬  
+2026-11-06T16:48:34.8914860Z      │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8915870Z ─────╯
+2026-11-06T16:48:34.8916010Z Warning: [0082]
+2026-11-06T16:48:34.8916330Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/invariants.mbt:67:36 ]
+2026-11-06T16:48:34.8916630Z     │
+2026-11-06T16:48:34.8916840Z  67 │     let keys : Map[String, Bool] = {}
+2026-11-06T16:48:34.8917130Z     │                                    ─┬  
+2026-11-06T16:48:34.8918510Z     │                                     ╰── Warning (ambiguous_braces): The `{}` is ambiguous among empty map literal, block expression, empty struct literal and empty JSON object. Use `Map([])` for an empty map, `TypeName::{}` for an empty struct literal, `Json::empty_object()` for an empty JSON object, or `{ () }` for an empty block.
+2026-11-06T16:48:34.8919480Z ────╯
+2026-11-06T16:48:34.8919620Z Warning: [0027]
+2026-11-06T16:48:34.8919950Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/invariants.mbt:120:40 ]
+2026-11-06T16:48:34.8920270Z      │
+2026-11-06T16:48:34.8920560Z  120 │   if name.is_empty() || name.contains("\x00") {
+2026-11-06T16:48:34.8920890Z      │                                        ──┬─  
+2026-11-06T16:48:34.8921620Z      │                                          ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8922670Z ─────╯
+2026-11-06T16:48:34.8922810Z Warning: [0020]
+2026-11-06T16:48:34.8923100Z    ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:4:21 ]
+2026-11-06T16:48:34.8923360Z    │
+2026-11-06T16:48:34.8923570Z  4 │     "type": a.type_.to_json(),
+2026-11-06T16:48:34.8923820Z    │                     ───┬───  
+2026-11-06T16:48:34.8924190Z    │                        ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8924490Z ───╯
+2026-11-06T16:48:34.8924630Z Warning: [0020]
+2026-11-06T16:48:34.8924930Z    ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:9:22 ]
+2026-11-06T16:48:34.8925260Z    │
+2026-11-06T16:48:34.8925480Z  9 │     "width": a.width.to_json(),
+2026-11-06T16:48:34.8925740Z    │                      ───┬───  
+2026-11-06T16:48:34.8926090Z    │                         ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8926370Z ───╯
+2026-11-06T16:48:34.8926510Z Warning: [0079]
+2026-11-06T16:48:34.8926800Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:15:1 ]
+2026-11-06T16:48:34.8927070Z     │
+2026-11-06T16:48:34.8927400Z  15 │ pub impl ToJson for Variable with fn to_json(self : Variable) -> Json {
+2026-11-06T16:48:34.8929010Z     │ ──────────────┬─────────────  
+2026-11-06T16:48:34.8931370Z     │               ╰─────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Variable` are implicit promoted as regular method for `Variable`. This behavior is deprecated and will be removed in the future. Add a `pub extend Variable with ToJson::{to_json}` declaration or manually define regular methods for type `Variable` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.8932980Z ────╯
+2026-11-06T16:48:34.8933120Z Warning: [0020]
+2026-11-06T16:48:34.8933430Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:17:25 ]
+2026-11-06T16:48:34.8933710Z     │
+2026-11-06T16:48:34.8933930Z  17 │     "index": self.index.to_json(),
+2026-11-06T16:48:34.8934210Z     │                         ───┬───  
+2026-11-06T16:48:34.8934580Z     │                            ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8934880Z ────╯
+2026-11-06T16:48:34.8935030Z Warning: [0020]
+2026-11-06T16:48:34.8935390Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:18:23 ]
+2026-11-06T16:48:34.8935670Z     │
+2026-11-06T16:48:34.8935820Z  18 │     "name": self.name.to_json(),
+2026-11-06T16:48:34.8935940Z     │                       ───┬───  
+2026-11-06T16:48:34.8936180Z     │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8936260Z ────╯
+2026-11-06T16:48:34.8936320Z Warning: [0020]
+2026-11-06T16:48:34.8936530Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:19:35 ]
+2026-11-06T16:48:34.8936590Z     │
+2026-11-06T16:48:34.8936750Z  19 │     "short_name": self.short_name.to_json(),
+2026-11-06T16:48:34.8936910Z     │                                   ───┬───  
+2026-11-06T16:48:34.8937170Z     │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8937240Z ────╯
+2026-11-06T16:48:34.8937310Z Warning: [0020]
+2026-11-06T16:48:34.8937510Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:20:24 ]
+2026-11-06T16:48:34.8937570Z     │
+2026-11-06T16:48:34.8937700Z  20 │     "type": self.type_.to_json(),
+2026-11-06T16:48:34.8937830Z     │                        ───┬───  
+2026-11-06T16:48:34.8938070Z     │                           ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8938150Z ────╯
+2026-11-06T16:48:34.8938210Z Warning: [0020]
+2026-11-06T16:48:34.8938410Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:21:25 ]
+2026-11-06T16:48:34.8938470Z     │
+2026-11-06T16:48:34.8938600Z  21 │     "width": self.width.to_json(),
+2026-11-06T16:48:34.8938830Z     │                         ───┬───  
+2026-11-06T16:48:34.8939510Z     │                            ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8939600Z ────╯
+2026-11-06T16:48:34.8939680Z Warning: [0020]
+2026-11-06T16:48:34.8939990Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:24:41 ]
+2026-11-06T16:48:34.8940080Z     │
+2026-11-06T16:48:34.8940270Z  24 │     "source_offset": self.source_offset.to_json(),
+2026-11-06T16:48:34.8940430Z     │                                         ───┬───  
+2026-11-06T16:48:34.8940710Z     │                                            ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8940790Z ────╯
+2026-11-06T16:48:34.8940850Z Warning: [0020]
+2026-11-06T16:48:34.8941050Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:25:43 ]
+2026-11-06T16:48:34.8941130Z     │
+2026-11-06T16:48:34.8941340Z  25 │     "physical_start": self.physical_start.to_json(),
+2026-11-06T16:48:34.8941500Z     │                                           ───┬───  
+2026-11-06T16:48:34.8941820Z     │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8941920Z ────╯
+2026-11-06T16:48:34.8941990Z Warning: [0020]
+2026-11-06T16:48:34.8942220Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:26:43 ]
+2026-11-06T16:48:34.8942290Z     │
+2026-11-06T16:48:34.8942490Z  26 │     "physical_slots": self.physical_slots.to_json(),
+2026-11-06T16:48:34.8942680Z     │                                           ───┬───  
+2026-11-06T16:48:34.8943080Z     │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8943160Z ────╯
+2026-11-06T16:48:34.8943220Z Warning: [0020]
+2026-11-06T16:48:34.8943420Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:34:28 ]
+2026-11-06T16:48:34.8943490Z     │
+2026-11-06T16:48:34.8943630Z  34 │           "label": x.label.to_json(),
+2026-11-06T16:48:34.8943770Z     │                            ───┬───  
+2026-11-06T16:48:34.8944020Z     │                               ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8944100Z ────╯
+2026-11-06T16:48:34.8944160Z Warning: [0020]
+2026-11-06T16:48:34.8944370Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:35:50 ]
+2026-11-06T16:48:34.8944430Z     │
+2026-11-06T16:48:34.8944670Z  35 │           "raw_label_base64": x.raw_label_base64.to_json(),
+2026-11-06T16:48:34.8944890Z     │                                                  ───┬───  
+2026-11-06T16:48:34.8945180Z     │                                                     ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8945270Z ────╯
+2026-11-06T16:48:34.8945330Z Warning: [0020]
+2026-11-06T16:48:34.8945530Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:38:6 ]
+2026-11-06T16:48:34.8945600Z     │
+2026-11-06T16:48:34.8945680Z  38 │     .to_json(),
+2026-11-06T16:48:34.8945770Z     │      ───┬───  
+2026-11-06T16:48:34.8945970Z     │         ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8946060Z ────╯
+2026-11-06T16:48:34.8946120Z Warning: [0020]
+2026-11-06T16:48:34.8946320Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:41:35 ]
+2026-11-06T16:48:34.8946380Z     │
+2026-11-06T16:48:34.8946540Z  41 │         "kind": self.missing_kind.to_json(),
+2026-11-06T16:48:34.8946690Z     │                                   ───┬───  
+2026-11-06T16:48:34.8946940Z     │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8947020Z ────╯
+2026-11-06T16:48:34.8947090Z Warning: [0020]
+2026-11-06T16:48:34.8947280Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:42:54 ]
+2026-11-06T16:48:34.8947350Z     │
+2026-11-06T16:48:34.8947560Z  42 │         "values": self.missing_values.map(atom_json).to_json(),
+2026-11-06T16:48:34.8947740Z     │                                                      ───┬───  
+2026-11-06T16:48:34.8948040Z     │                                                         ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8948350Z ────╯
+2026-11-06T16:48:34.8948420Z Warning: [0079]
+2026-11-06T16:48:34.8948620Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:51:1 ]
+2026-11-06T16:48:34.8948690Z     │
+2026-11-06T16:48:34.8948980Z  51 │ pub impl ToJson for Dictionary with fn to_json(self : Dictionary) -> Json {
+2026-11-06T16:48:34.8949120Z     │ ───────────────┬──────────────  
+2026-11-06T16:48:34.8950900Z     │                ╰──────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Dictionary` are implicit promoted as regular method for `Dictionary`. This behavior is deprecated and will be removed in the future. Add a `pub extend Dictionary with ToJson::{to_json}` declaration or manually define regular methods for type `Dictionary` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.8951130Z ────╯
+2026-11-06T16:48:34.8951200Z Warning: [0020]
+2026-11-06T16:48:34.8951400Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:57:50 ]
+2026-11-06T16:48:34.8951470Z     │
+2026-11-06T16:48:34.8951680Z  57 │     "logical_variables": self.variables.length().to_json(),
+2026-11-06T16:48:34.8951850Z     │                                                  ───┬───  
+2026-11-06T16:48:34.8952140Z     │                                                     ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8952210Z ────╯
+2026-11-06T16:48:34.8952270Z Warning: [0020]
+2026-11-06T16:48:34.8952470Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:58:55 ]
+2026-11-06T16:48:34.8952540Z     │
+2026-11-06T16:48:34.8952760Z  58 │     "variables": self.variables.map(v => v.to_json()).to_json(),
+2026-11-06T16:48:34.8952940Z     │                                                       ───┬───  
+2026-11-06T16:48:34.8953240Z     │                                                          ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8953310Z ────╯
+2026-11-06T16:48:34.8953380Z Warning: [0020]
+2026-11-06T16:48:34.8953640Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:60:35 ]
+2026-11-06T16:48:34.8953720Z     │
+2026-11-06T16:48:34.8953910Z  60 │     "file_label": self.file_label.to_json(),
+2026-11-06T16:48:34.8954050Z     │                                   ───┬───  
+2026-11-06T16:48:34.8954310Z     │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8954380Z ────╯
+2026-11-06T16:48:34.8954440Z Warning: [0020]
+2026-11-06T16:48:34.8954650Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:61:41 ]
+2026-11-06T16:48:34.8954710Z     │
+2026-11-06T16:48:34.8954910Z  61 │     "creation_date": self.creation_date.to_json(),
+2026-11-06T16:48:34.8955110Z     │                                         ───┬───  
+2026-11-06T16:48:34.8955420Z     │                                            ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8955500Z ────╯
+2026-11-06T16:48:34.8955570Z Warning: [0020]
+2026-11-06T16:48:34.8955960Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:62:41 ]
+2026-11-06T16:48:34.8956030Z     │
+2026-11-06T16:48:34.8956210Z  62 │     "creation_time": self.creation_time.to_json(),
+2026-11-06T16:48:34.8956370Z     │                                         ───┬───  
+2026-11-06T16:48:34.8956680Z     │                                            ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8956780Z ────╯
+2026-11-06T16:48:34.8956840Z Warning: [0020]
+2026-11-06T16:48:34.8957050Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:63:29 ]
+2026-11-06T16:48:34.8957120Z     │
+2026-11-06T16:48:34.8957260Z  63 │     "product": self.product.to_json(),
+2026-11-06T16:48:34.8957390Z     │                             ───┬───  
+2026-11-06T16:48:34.8957650Z     │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8957720Z ────╯
+2026-11-06T16:48:34.8957780Z Warning: [0020]
+2026-11-06T16:48:34.8957980Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:65:37 ]
+2026-11-06T16:48:34.8958050Z     │
+2026-11-06T16:48:34.8958220Z  65 │     "compression": self.compression.to_json(),
+2026-11-06T16:48:34.8958380Z     │                                     ───┬───  
+2026-11-06T16:48:34.8958670Z     │                                        ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8958780Z ────╯
+2026-11-06T16:48:34.8958860Z Warning: [0020]
+2026-11-06T16:48:34.8959070Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:66:23 ]
+2026-11-06T16:48:34.8959480Z     │
+2026-11-06T16:48:34.8959720Z  66 │     "bias": self.bias.to_json(),
+2026-11-06T16:48:34.8959900Z     │                       ───┬───  
+2026-11-06T16:48:34.8960170Z     │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8960240Z ────╯
+2026-11-06T16:48:34.8960320Z Warning: [0020]
+2026-11-06T16:48:34.8960550Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:67:43 ]
+2026-11-06T16:48:34.8960620Z     │
+2026-11-06T16:48:34.8960810Z  67 │     "physical_slots": self.physical_slots.to_json(),
+2026-11-06T16:48:34.8960970Z     │                                           ───┬───  
+2026-11-06T16:48:34.8961250Z     │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8961360Z ────╯
+2026-11-06T16:48:34.8961430Z Warning: [0020]
+2026-11-06T16:48:34.8961640Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:68:49 ]
+2026-11-06T16:48:34.8961720Z     │
+2026-11-06T16:48:34.8961920Z  68 │     "nominal_case_size": self.nominal_case_size.to_json(),
+2026-11-06T16:48:34.8962090Z     │                                                 ───┬───  
+2026-11-06T16:48:34.8962390Z     │                                                    ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8962460Z ────╯
+2026-11-06T16:48:34.8962530Z Warning: [0020]
+2026-11-06T16:48:34.8962730Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:69:51 ]
+2026-11-06T16:48:34.8962800Z     │
+2026-11-06T16:48:34.8963030Z  69 │     "system_missing_hex": self.system_missing_hex.to_json(),
+2026-11-06T16:48:34.8963250Z     │                                                   ───┬───  
+2026-11-06T16:48:34.8963570Z     │                                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8963660Z ────╯
+2026-11-06T16:48:34.8963740Z Warning: [0020]
+2026-11-06T16:48:34.8963950Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:70:35 ]
+2026-11-06T16:48:34.8964030Z     │
+2026-11-06T16:48:34.8964230Z  70 │     "lowest_hex": self.lowest_hex.to_json(),
+2026-11-06T16:48:34.8964390Z     │                                   ───┬───  
+2026-11-06T16:48:34.8964670Z     │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8964740Z ────╯
+2026-11-06T16:48:34.8964810Z Warning: [0020]
+2026-11-06T16:48:34.8965010Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:71:37 ]
+2026-11-06T16:48:34.8965400Z     │
+2026-11-06T16:48:34.8965570Z  71 │     "highest_hex": self.highest_hex.to_json(),
+2026-11-06T16:48:34.8965720Z     │                                     ───┬───  
+2026-11-06T16:48:34.8965980Z     │                                        ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8966050Z ────╯
+2026-11-06T16:48:34.8966110Z Warning: [0020]
+2026-11-06T16:48:34.8966310Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:72:31 ]
+2026-11-06T16:48:34.8966390Z     │
+2026-11-06T16:48:34.8966540Z  72 │     "warnings": self.warnings.to_json(),
+2026-11-06T16:48:34.8966680Z     │                               ───┬───  
+2026-11-06T16:48:34.8966960Z     │                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8967040Z ────╯
+2026-11-06T16:48:34.8967130Z Warning: [0020]
+2026-11-06T16:48:34.8967350Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:73:59 ]
+2026-11-06T16:48:34.8967420Z     │
+2026-11-06T16:48:34.8967670Z  73 │     "uninterpreted_metadata": self.uninterpreted_metadata.to_json(),
+2026-11-06T16:48:34.8967880Z     │                                                           ───┬───  
+2026-11-06T16:48:34.8968250Z     │                                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8968350Z ────╯
+2026-11-06T16:48:34.8968430Z Warning: [0020]
+2026-11-06T16:48:34.8968670Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:92:36 ]
+2026-11-06T16:48:34.8968850Z     │
+2026-11-06T16:48:34.8969010Z  92 │   obj["actual_rows"] = actual_rows.to_json()
+2026-11-06T16:48:34.8969150Z     │                                    ───┬───  
+2026-11-06T16:48:34.8969420Z     │                                       ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8969490Z ────╯
+2026-11-06T16:48:34.8969550Z Warning: [0020]
+2026-11-06T16:48:34.8969770Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:98:19 ]
+2026-11-06T16:48:34.8969860Z     │
+2026-11-06T16:48:34.8970130Z  98 │   ({ "row": index.to_json(), "cells": row.to_json() } : Json).stringify() + "\n"
+2026-11-06T16:48:34.8970250Z     │                   ───┬───  
+2026-11-06T16:48:34.8970510Z     │                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8970590Z ────╯
+2026-11-06T16:48:34.8970650Z Warning: [0020]
+2026-11-06T16:48:34.8970850Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:98:43 ]
+2026-11-06T16:48:34.8970920Z     │
+2026-11-06T16:48:34.8971190Z  98 │   ({ "row": index.to_json(), "cells": row.to_json() } : Json).stringify() + "\n"
+2026-11-06T16:48:34.8971360Z     │                                           ───┬───  
+2026-11-06T16:48:34.8971630Z     │                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8971710Z ────╯
+2026-11-06T16:48:34.8971760Z Warning: [0027]
+2026-11-06T16:48:34.8972000Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:133:25 ]
+2026-11-06T16:48:34.8972090Z      │
+2026-11-06T16:48:34.8972220Z  133 │       if text.contains("\x00") {
+2026-11-06T16:48:34.8972340Z      │                         ──┬─  
+2026-11-06T16:48:34.8972840Z      │                           ╰─── Warning (deprecated_syntax): The syntax `\x..` in string literal for type String is deprecated. Use `\u..` instead.
+2026-11-06T16:48:34.8972940Z ─────╯
+2026-11-06T16:48:34.8973010Z Warning: [0020]
+2026-11-06T16:48:34.8973250Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:161:11 ]
+2026-11-06T16:48:34.8973320Z      │
+2026-11-06T16:48:34.8973520Z  161 │   let b = StringBuilder::new()
+2026-11-06T16:48:34.8974540Z      │           ─────────┬────────  
+2026-11-06T16:48:34.8975580Z      │                    ╰────────── Warning (deprecated): Use `StringBuilder()` instead
+2026-11-06T16:48:34.8975810Z ─────╯
+2026-11-06T16:48:34.8976000Z Warning: [0020]
+2026-11-06T16:48:34.8976660Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:201:47 ]
+2026-11-06T16:48:34.8977310Z      │
+2026-11-06T16:48:34.8977860Z  201 │       md_text(v.missing_values.map(atom_json).to_json().stringify()) +
+2026-11-06T16:48:34.8978070Z      │                                               ───┬───  
+2026-11-06T16:48:34.8978380Z      │                                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8978460Z ─────╯
+2026-11-06T16:48:34.8978540Z Warning: [0020]
+2026-11-06T16:48:34.8978760Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:206:17 ]
+2026-11-06T16:48:34.8979080Z      │
+2026-11-06T16:48:34.8979250Z  206 │       v.measure.to_json().stringify() +
+2026-11-06T16:48:34.8979390Z      │                 ───┬───  
+2026-11-06T16:48:34.8979680Z      │                    ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8979770Z ─────╯
+2026-11-06T16:48:34.8979830Z Warning: [0020]
+2026-11-06T16:48:34.8980050Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:208:23 ]
+2026-11-06T16:48:34.8980130Z      │
+2026-11-06T16:48:34.8980290Z  208 │       v.display_width.to_json().stringify() +
+2026-11-06T16:48:34.8980420Z      │                       ───┬───  
+2026-11-06T16:48:34.8980670Z      │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8980740Z ─────╯
+2026-11-06T16:48:34.8980800Z Warning: [0020]
+2026-11-06T16:48:34.8981010Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:210:19 ]
+2026-11-06T16:48:34.8981090Z      │
+2026-11-06T16:48:34.8981240Z  210 │       v.alignment.to_json().stringify() +
+2026-11-06T16:48:34.8981370Z      │                   ───┬───  
+2026-11-06T16:48:34.8981610Z      │                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8981680Z ─────╯
+2026-11-06T16:48:34.8981750Z Warning: [0079]
+2026-11-06T16:48:34.8981960Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:249:1 ]
+2026-11-06T16:48:34.8982020Z      │
+2026-11-06T16:48:34.8982310Z  249 │ pub impl ToJson for ErrorInfo with fn to_json(self : ErrorInfo) -> Json {
+2026-11-06T16:48:34.8982460Z      │ ──────────────┬──────────────  
+2026-11-06T16:48:34.8984550Z      │               ╰──────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for ErrorInfo` are implicit promoted as regular method for `ErrorInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend ErrorInfo with ToJson::{to_json}` declaration or manually define regular methods for type `ErrorInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.8984660Z ─────╯
+2026-11-06T16:48:34.8984740Z Warning: [0020]
+2026-11-06T16:48:34.8985000Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:251:23 ]
+2026-11-06T16:48:34.8985080Z      │
+2026-11-06T16:48:34.8985230Z  251 │     "code": self.code.to_json(),
+2026-11-06T16:48:34.8985390Z      │                       ───┬───  
+2026-11-06T16:48:34.8985670Z      │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8985970Z ─────╯
+2026-11-06T16:48:34.8986040Z Warning: [0020]
+2026-11-06T16:48:34.8986250Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:252:29 ]
+2026-11-06T16:48:34.8986320Z      │
+2026-11-06T16:48:34.8986480Z  252 │     "message": self.message.to_json(),
+2026-11-06T16:48:34.8986620Z      │                             ───┬───  
+2026-11-06T16:48:34.8986880Z      │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8986970Z ─────╯
+2026-11-06T16:48:34.8987030Z Warning: [0079]
+2026-11-06T16:48:34.8987240Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:264:1 ]
+2026-11-06T16:48:34.8987350Z      │
+2026-11-06T16:48:34.8987810Z  264 │ pub impl ToJson for Cell with fn to_json(self : Cell) -> Json {
+2026-11-06T16:48:34.8987960Z      │ ────────────┬───────────  
+2026-11-06T16:48:34.8989630Z      │             ╰───────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Cell` are implicit promoted as regular method for `Cell`. This behavior is deprecated and will be removed in the future. Add a `pub extend Cell with ToJson::{to_json}` declaration or manually define regular methods for type `Cell` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.8989720Z ─────╯
+2026-11-06T16:48:34.8989780Z Warning: [0020]
+2026-11-06T16:48:34.8989990Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:266:23 ]
+2026-11-06T16:48:34.8990180Z      │
+2026-11-06T16:48:34.8990320Z  266 │     "kind": self.kind.to_json(),
+2026-11-06T16:48:34.8990440Z      │                       ───┬───  
+2026-11-06T16:48:34.8990680Z      │                          ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8990760Z ─────╯
+2026-11-06T16:48:34.8990820Z Warning: [0020]
+2026-11-06T16:48:34.8991040Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:267:29 ]
+2026-11-06T16:48:34.8991120Z      │
+2026-11-06T16:48:34.8991260Z  267 │     "missing": self.missing.to_json(),
+2026-11-06T16:48:34.8991400Z      │                             ───┬───  
+2026-11-06T16:48:34.8991660Z      │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8991730Z ─────╯
+2026-11-06T16:48:34.8991790Z Warning: [0079]
+2026-11-06T16:48:34.8992000Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:276:1 ]
+2026-11-06T16:48:34.8992060Z      │
+2026-11-06T16:48:34.8992360Z  276 │ pub impl ToJson for EncodingInfo with fn to_json(self : EncodingInfo) -> Json {
+2026-11-06T16:48:34.8992500Z      │ ────────────────┬───────────────  
+2026-11-06T16:48:34.8996790Z      │                 ╰───────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for EncodingInfo` are implicit promoted as regular method for `EncodingInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend EncodingInfo with ToJson::{to_json}` declaration or manually define regular methods for type `EncodingInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.8997540Z ─────╯
+2026-11-06T16:48:34.8997760Z Warning: [0020]
+2026-11-06T16:48:34.8998440Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:280:33 ]
+2026-11-06T16:48:34.8998650Z      │
+2026-11-06T16:48:34.8998870Z  280 │     "effective": self.effective.to_json(),
+2026-11-06T16:48:34.8999070Z      │                                 ───┬───  
+2026-11-06T16:48:34.8999410Z      │                                    ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.8999490Z ─────╯
+2026-11-06T16:48:34.8999550Z Warning: [0020]
+2026-11-06T16:48:34.9000240Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:281:47 ]
+2026-11-06T16:48:34.9000390Z      │
+2026-11-06T16:48:34.9000630Z  281 │     "selection_source": self.selection_source.to_json(),
+2026-11-06T16:48:34.9000820Z      │                                               ───┬───  
+2026-11-06T16:48:34.9001550Z      │                                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9001630Z ─────╯
+2026-11-06T16:48:34.9001700Z Warning: [0020]
+2026-11-06T16:48:34.9001940Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:282:29 ]
+2026-11-06T16:48:34.9002020Z      │
+2026-11-06T16:48:34.9002230Z  282 │     "profile": self.profile.to_json(),
+2026-11-06T16:48:34.9002400Z      │                             ───┬───  
+2026-11-06T16:48:34.9002790Z      │                                ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9002880Z ─────╯
+2026-11-06T16:48:34.9003090Z Warning: [0020]
+2026-11-06T16:48:34.9009990Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:283:59 ]
+2026-11-06T16:48:34.9010280Z      │
+2026-11-06T16:48:34.9010660Z  283 │     "string_matching_policy": self.string_matching_policy.to_json(),
+2026-11-06T16:48:34.9010980Z      │                                                           ───┬───  
+2026-11-06T16:48:34.9011340Z      │                                                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9011420Z ─────╯
+2026-11-06T16:48:34.9011480Z Warning: [0020]
+2026-11-06T16:48:34.9011790Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:284:47 ]
+2026-11-06T16:48:34.9011870Z      │
+2026-11-06T16:48:34.9012100Z  284 │     "decoder_identity": self.decoder_identity.to_json(),
+2026-11-06T16:48:34.9012840Z      │                                               ───┬───  
+2026-11-06T16:48:34.9013140Z      │                                                  ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9013220Z ─────╯
+2026-11-06T16:48:34.9013280Z Warning: [0079]
+2026-11-06T16:48:34.9013490Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:289:1 ]
+2026-11-06T16:48:34.9013560Z      │
+2026-11-06T16:48:34.9013800Z  289 │ pub impl ToJson for Extra with fn to_json(self : Extra) -> Json {
+2026-11-06T16:48:34.9013950Z      │ ────────────┬────────────  
+2026-11-06T16:48:34.9015910Z      │             ╰────────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Extra` are implicit promoted as regular method for `Extra`. This behavior is deprecated and will be removed in the future. Add a `pub extend Extra with ToJson::{to_json}` declaration or manually define regular methods for type `Extra` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9016010Z ─────╯
+2026-11-06T16:48:34.9016080Z Warning: [0020]
+2026-11-06T16:48:34.9016290Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:291:27 ]
+2026-11-06T16:48:34.9016360Z      │
+2026-11-06T16:48:34.9016510Z  291 │     "record": self.record.to_json(),
+2026-11-06T16:48:34.9016640Z      │                           ───┬───  
+2026-11-06T16:48:34.9016940Z      │                              ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9017440Z ─────╯
+2026-11-06T16:48:34.9017500Z Warning: [0020]
+2026-11-06T16:48:34.9017710Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:293:37 ]
+2026-11-06T16:48:34.9017770Z      │
+2026-11-06T16:48:34.9017950Z  293 │     "byte_offset": self.byte_offset.to_json(),
+2026-11-06T16:48:34.9018100Z      │                                     ───┬───  
+2026-11-06T16:48:34.9018990Z      │                                        ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9019950Z ─────╯
+2026-11-06T16:48:34.9020180Z Warning: [0020]
+2026-11-06T16:48:34.9020820Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:294:35 ]
+2026-11-06T16:48:34.9021030Z      │
+2026-11-06T16:48:34.9021530Z  294 │     "raw_base64": self.raw_base64.to_json(),
+2026-11-06T16:48:34.9022340Z      │                                   ───┬───  
+2026-11-06T16:48:34.9023070Z      │                                      ╰───── Warning (deprecated): Use `Json(value)` instead
+2026-11-06T16:48:34.9023340Z ─────╯
+2026-11-06T16:48:34.9023530Z Warning: [0079]
+2026-11-06T16:48:34.9024160Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/json.mbt:299:1 ]
+2026-11-06T16:48:34.9024370Z      │
+2026-11-06T16:48:34.9025000Z  299 │ pub impl ToJson for Atom with fn to_json(self : Atom) -> Json {
+2026-11-06T16:48:34.9025360Z      │ ────────────┬───────────  
+2026-11-06T16:48:34.9030000Z      │             ╰───────────── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Atom` are implicit promoted as regular method for `Atom`. This behavior is deprecated and will be removed in the future. Add a `pub extend Atom with ToJson::{to_json}` declaration or manually define regular methods for type `Atom` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9030990Z ─────╯
+2026-11-06T16:48:34.9031190Z Warning: [0079]
+2026-11-06T16:48:34.9031770Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:12:10 ]
+2026-11-06T16:48:34.9031990Z     │
+2026-11-06T16:48:34.9032250Z  12 │ } derive(Debug)
+2026-11-06T16:48:34.9032520Z     │          ──┬──  
+2026-11-06T16:48:34.9037810Z     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ErrorInfo` are implicit promoted as regular method for `ErrorInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend ErrorInfo with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ErrorInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9038190Z ────╯
+2026-11-06T16:48:34.9038380Z Warning: [0079]
+2026-11-06T16:48:34.9039000Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:17:10 ]
+2026-11-06T16:48:34.9039200Z     │
+2026-11-06T16:48:34.9039450Z  17 │ } derive(Debug)
+2026-11-06T16:48:34.9039700Z     │          ──┬──  
+2026-11-06T16:48:34.9045060Z     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for SavError` are implicit promoted as regular method for `SavError`. This behavior is deprecated and will be removed in the future. Add a `pub extend SavError with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `SavError` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9045530Z ────╯
+2026-11-06T16:48:34.9045740Z Warning: [0079]
+2026-11-06T16:48:34.9046600Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:82:10 ]
+2026-11-06T16:48:34.9046860Z     │
+2026-11-06T16:48:34.9047210Z  82 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9047460Z     │          ──┬──  
+2026-11-06T16:48:34.9052360Z     │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Limits` are implicit promoted as regular method for `Limits`. This behavior is deprecated and will be removed in the future. Add a `pub extend Limits with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Limits` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9053980Z ────╯
+2026-11-06T16:48:34.9054180Z Warning: [0079]
+2026-11-06T16:48:34.9054750Z     ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:82:17 ]
+2026-11-06T16:48:34.9054960Z     │
+2026-11-06T16:48:34.9055230Z  82 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9055570Z     │                 ───┬──  
+2026-11-06T16:48:34.9060110Z     │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Limits` are implicit promoted as regular method for `Limits`. This behavior is deprecated and will be removed in the future. Add a `pub extend Limits with ToJson::{to_json}` declaration or manually define regular methods for type `Limits` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9060510Z ────╯
+2026-11-06T16:48:34.9060700Z Warning: [0079]
+2026-11-06T16:48:34.9061280Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:105:10 ]
+2026-11-06T16:48:34.9061480Z      │
+2026-11-06T16:48:34.9061740Z  105 │ } derive(Debug, Eq)
+2026-11-06T16:48:34.9062000Z      │          ──┬──  
+2026-11-06T16:48:34.9066960Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for DatePolicy` are implicit promoted as regular method for `DatePolicy`. This behavior is deprecated and will be removed in the future. Add a `pub extend DatePolicy with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `DatePolicy` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9067880Z ─────╯
+2026-11-06T16:48:34.9068080Z Warning: [0079]
+2026-11-06T16:48:34.9068660Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:105:17 ]
+2026-11-06T16:48:34.9069090Z      │
+2026-11-06T16:48:34.9069490Z  105 │ } derive(Debug, Eq)
+2026-11-06T16:48:34.9069600Z      │                 ─┬  
+2026-11-06T16:48:34.9071410Z      │                  ╰── Warning (implicit_impl_as_method): The methods not_equal, equal from `impl Eq for DatePolicy` are implicit promoted as regular method for `DatePolicy`. This behavior is deprecated and will be removed in the future. Add a `pub extend DatePolicy with Eq::{not_equal, equal}` declaration or manually define regular methods for type `DatePolicy` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9071530Z ─────╯
+2026-11-06T16:48:34.9071590Z Warning: [0079]
+2026-11-06T16:48:34.9071850Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:133:10 ]
+2026-11-06T16:48:34.9071930Z      │
+2026-11-06T16:48:34.9072080Z  133 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9072200Z      │          ──┬──  
+2026-11-06T16:48:34.9074130Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Format` are implicit promoted as regular method for `Format`. This behavior is deprecated and will be removed in the future. Add a `pub extend Format with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Format` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9074240Z ─────╯
+2026-11-06T16:48:34.9074530Z Warning: [0079]
+2026-11-06T16:48:34.9074830Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:133:17 ]
+2026-11-06T16:48:34.9074890Z      │
+2026-11-06T16:48:34.9075010Z  133 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9075130Z      │                 ───┬──  
+2026-11-06T16:48:34.9076720Z      │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Format` are implicit promoted as regular method for `Format`. This behavior is deprecated and will be removed in the future. Add a `pub extend Format with ToJson::{to_json}` declaration or manually define regular methods for type `Format` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9077260Z ─────╯
+2026-11-06T16:48:34.9077320Z Warning: [0079]
+2026-11-06T16:48:34.9077540Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:149:10 ]
+2026-11-06T16:48:34.9077600Z      │
+2026-11-06T16:48:34.9077700Z  149 │ } derive(Debug, Eq)
+2026-11-06T16:48:34.9077800Z      │          ──┬──  
+2026-11-06T16:48:34.9079580Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Atom` are implicit promoted as regular method for `Atom`. This behavior is deprecated and will be removed in the future. Add a `pub extend Atom with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Atom` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9079680Z ─────╯
+2026-11-06T16:48:34.9079750Z Warning: [0079]
+2026-11-06T16:48:34.9079960Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:149:17 ]
+2026-11-06T16:48:34.9080040Z      │
+2026-11-06T16:48:34.9080130Z  149 │ } derive(Debug, Eq)
+2026-11-06T16:48:34.9080220Z      │                 ─┬  
+2026-11-06T16:48:34.9081780Z      │                  ╰── Warning (implicit_impl_as_method): The methods not_equal, equal from `impl Eq for Atom` are implicit promoted as regular method for `Atom`. This behavior is deprecated and will be removed in the future. Add a `pub extend Atom with Eq::{not_equal, equal}` declaration or manually define regular methods for type `Atom` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9082000Z ─────╯
+2026-11-06T16:48:34.9082070Z Warning: [0079]
+2026-11-06T16:48:34.9082280Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:156:10 ]
+2026-11-06T16:48:34.9082340Z      │
+2026-11-06T16:48:34.9082470Z  156 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9082560Z      │          ──┬──  
+2026-11-06T16:48:34.9084570Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ValueLabel` are implicit promoted as regular method for `ValueLabel`. This behavior is deprecated and will be removed in the future. Add a `pub extend ValueLabel with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ValueLabel` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9084680Z ─────╯
+2026-11-06T16:48:34.9084760Z Warning: [0079]
+2026-11-06T16:48:34.9085100Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:156:17 ]
+2026-11-06T16:48:34.9085180Z      │
+2026-11-06T16:48:34.9085290Z  156 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9085400Z      │                 ───┬──  
+2026-11-06T16:48:34.9087170Z      │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for ValueLabel` are implicit promoted as regular method for `ValueLabel`. This behavior is deprecated and will be removed in the future. Add a `pub extend ValueLabel with ToJson::{to_json}` declaration or manually define regular methods for type `ValueLabel` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9087330Z ─────╯
+2026-11-06T16:48:34.9087390Z Warning: [0079]
+2026-11-06T16:48:34.9087600Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:179:10 ]
+2026-11-06T16:48:34.9087670Z      │
+2026-11-06T16:48:34.9087760Z  179 │ } derive(Debug)
+2026-11-06T16:48:34.9087850Z      │          ──┬──  
+2026-11-06T16:48:34.9089690Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Variable` are implicit promoted as regular method for `Variable`. This behavior is deprecated and will be removed in the future. Add a `pub extend Variable with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Variable` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9089980Z ─────╯
+2026-11-06T16:48:34.9090040Z Warning: [0079]
+2026-11-06T16:48:34.9090250Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:190:10 ]
+2026-11-06T16:48:34.9090320Z      │
+2026-11-06T16:48:34.9090410Z  190 │ } derive(Debug)
+2026-11-06T16:48:34.9090500Z      │          ──┬──  
+2026-11-06T16:48:34.9092680Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for EncodingInfo` are implicit promoted as regular method for `EncodingInfo`. This behavior is deprecated and will be removed in the future. Add a `pub extend EncodingInfo with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `EncodingInfo` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9092810Z ─────╯
+2026-11-06T16:48:34.9092890Z Warning: [0079]
+2026-11-06T16:48:34.9093110Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:197:10 ]
+2026-11-06T16:48:34.9093180Z      │
+2026-11-06T16:48:34.9093300Z  197 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9093380Z      │          ──┬──  
+2026-11-06T16:48:34.9095230Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Warning` are implicit promoted as regular method for `Warning`. This behavior is deprecated and will be removed in the future. Add a `pub extend Warning with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Warning` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9096060Z ─────╯
+2026-11-06T16:48:34.9096150Z Warning: [0079]
+2026-11-06T16:48:34.9096400Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:197:17 ]
+2026-11-06T16:48:34.9096470Z      │
+2026-11-06T16:48:34.9096590Z  197 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9096710Z      │                 ───┬──  
+2026-11-06T16:48:34.9098530Z      │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for Warning` are implicit promoted as regular method for `Warning`. This behavior is deprecated and will be removed in the future. Add a `pub extend Warning with ToJson::{to_json}` declaration or manually define regular methods for type `Warning` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9098650Z ─────╯
+2026-11-06T16:48:34.9098710Z Warning: [0079]
+2026-11-06T16:48:34.9098950Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:205:10 ]
+2026-11-06T16:48:34.9099030Z      │
+2026-11-06T16:48:34.9099130Z  205 │ } derive(Debug)
+2026-11-06T16:48:34.9099240Z      │          ──┬──  
+2026-11-06T16:48:34.9101070Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Extra` are implicit promoted as regular method for `Extra`. This behavior is deprecated and will be removed in the future. Add a `pub extend Extra with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Extra` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9101160Z ─────╯
+2026-11-06T16:48:34.9101220Z Warning: [0079]
+2026-11-06T16:48:34.9101420Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:238:10 ]
+2026-11-06T16:48:34.9101490Z      │
+2026-11-06T16:48:34.9101570Z  238 │ } derive(Debug)
+2026-11-06T16:48:34.9101650Z      │          ──┬──  
+2026-11-06T16:48:34.9103870Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for Cell` are implicit promoted as regular method for `Cell`. This behavior is deprecated and will be removed in the future. Add a `pub extend Cell with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `Cell` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9104300Z ─────╯
+2026-11-06T16:48:34.9104380Z Warning: [0079]
+2026-11-06T16:48:34.9104610Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:260:10 ]
+2026-11-06T16:48:34.9104680Z      │
+2026-11-06T16:48:34.9104840Z  260 │ } derive(Debug, Eq)
+2026-11-06T16:48:34.9104930Z      │          ──┬──  
+2026-11-06T16:48:34.9106720Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ScanControl` are implicit promoted as regular method for `ScanControl`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanControl with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ScanControl` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9106810Z ─────╯
+2026-11-06T16:48:34.9106870Z Warning: [0079]
+2026-11-06T16:48:34.9107080Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:260:17 ]
+2026-11-06T16:48:34.9107150Z      │
+2026-11-06T16:48:34.9107240Z  260 │ } derive(Debug, Eq)
+2026-11-06T16:48:34.9107350Z      │                 ─┬  
+2026-11-06T16:48:34.9109260Z      │                  ╰── Warning (implicit_impl_as_method): The methods not_equal, equal from `impl Eq for ScanControl` are implicit promoted as regular method for `ScanControl`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanControl with Eq::{not_equal, equal}` declaration or manually define regular methods for type `ScanControl` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9109410Z ─────╯
+2026-11-06T16:48:34.9109490Z Warning: [0079]
+2026-11-06T16:48:34.9109740Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:267:10 ]
+2026-11-06T16:48:34.9109820Z      │
+2026-11-06T16:48:34.9109960Z  267 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9110070Z      │          ──┬──  
+2026-11-06T16:48:34.9112760Z      │            ╰──── Warning (implicit_impl_as_method): The methods to_repr from `impl @moonbitlang/core/debug.Debug for ScanSummary` are implicit promoted as regular method for `ScanSummary`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanSummary with @moonbitlang/core/debug.Debug::{to_repr}` declaration or manually define regular methods for type `ScanSummary` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9112990Z ─────╯
+2026-11-06T16:48:34.9113080Z Warning: [0079]
+2026-11-06T16:48:34.9113380Z      ╭─[ /Users/runner/work/moonsav/moonsav/src/model.mbt:267:17 ]
+2026-11-06T16:48:34.9113450Z      │
+2026-11-06T16:48:34.9113570Z  267 │ } derive(Debug, ToJson)
+2026-11-06T16:48:34.9113960Z      │                 ───┬──  
+2026-11-06T16:48:34.9115670Z      │                    ╰──── Warning (implicit_impl_as_method): The methods to_json from `impl ToJson for ScanSummary` are implicit promoted as regular method for `ScanSummary`. This behavior is deprecated and will be removed in the future. Add a `pub extend ScanSummary with ToJson::{to_json}` declaration or manually define regular methods for type `ScanSummary` instead. If the promotion is not desirable, add `#deprecated` on the `extend` declaration.
+2026-11-06T16:48:34.9115760Z ─────╯
+2026-11-06T16:48:34.9116030Z Finished. moon: ran 3 tasks, now up to date (218 warnings, 0 errors)
+2026-11-06T16:48:34.9116150Z Artifacts:
+2026-11-06T16:48:34.9116510Z   z2823253773/moonsav/bridge  js  /Users/runner/work/moonsav/moonsav/_build/js/release/build/bridge/bridge.js

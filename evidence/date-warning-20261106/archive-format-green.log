@@ -1,0 +1,9 @@
+F strict=False exit=0 expectation_met=True
+F strict=True exit=0 expectation_met=True
+PCT strict=False exit=0 expectation_met=True
+PCT strict=True exit=0 expectation_met=True
+MTIME strict=False exit=0 expectation_met=True
+MTIME strict=True exit=7 expectation_met=True
+YMDHMS strict=False exit=0 expectation_met=True
+YMDHMS strict=True exit=7 expectation_met=True
+/Users/henryz/Desktop/比赛/moonsav/.dev/date-warning-20261106/archive-format-green/results.json

@@ -1,0 +1,18 @@
+{
+  "family": "GNU PSPP",
+  "version": "pspp (GNU PSPP) 2.0.1",
+  "command": [
+    "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/pspp/bin/pspp",
+    "--batch",
+    "<generated-syntax>"
+  ],
+  "exit_code": 0,
+  "input_sha256": "554c037b155276547ec69c4a5e1b3b08d41d2103990e54aef83a5675406c9852",
+  "actual_rows": 87,
+  "logical_variables": 111,
+  "cells_and_missing_predicates_compared": 9657,
+  "differences": [],
+  "difference_count": 0,
+  "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+  "status": "supported_pass"
+}
