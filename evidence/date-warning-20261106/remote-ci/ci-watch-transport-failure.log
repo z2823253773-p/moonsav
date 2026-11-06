@@ -1,0 +1,301 @@
+Refreshing run status every 20 seconds. Press Ctrl+C to quit.
+
+* implementation local-contracts · 42255719356
+Triggered via push about 1 minute ago
+
+JOBS
+* independent-oracles (ID 128022247574)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  ✓ Run sudo apt-get update && sudo apt-get install -y pspp time
+  * Run python -m pip install -r requirements-dev.lock
+  * Run python -m unittest discover -s tests -p '*_test.py'
+  * Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run
+  * Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+  * Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+* platform (ubuntu-24.04) (ID 128022247696)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  * Run moon test src --target native
+  * Run node tools/ci_smoke.mjs
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+* platform (macos-15) (ID 128022247902)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  * POSIX interruption and permission contracts
+  * Run moon test src --target js
+  * Run moon test src --target wasm-gc
+  * Run moon test src --target native
+  * Run node tools/ci_smoke.mjs
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+* platform (windows-2025) (ID 128022248035)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  * Run node tools/build.mjs
+  * Shared format and task corpus
+  * POSIX interruption and permission contracts
+  * Run moon test src --target js
+  * Run moon test src --target wasm-gc
+  * Run moon test src --target native
+  * Run node tools/ci_smoke.mjs
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+Refreshing run status every 20 seconds. Press Ctrl+C to quit.
+
+* implementation local-contracts · 42255719356
+Triggered via push about 1 minute ago
+
+JOBS
+* independent-oracles (ID 128022247574)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  ✓ Run sudo apt-get update && sudo apt-get install -y pspp time
+  ✓ Run python -m pip install -r requirements-dev.lock
+  ✓ Run python -m unittest discover -s tests -p '*_test.py'
+  * Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run
+  * Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+  * Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+✓ platform (ubuntu-24.04) in 58s (ID 128022247696)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  ✓ Run moon test src --target native
+  ✓ Run node tools/ci_smoke.mjs
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+✓ platform (macos-15) in 1m7s (ID 128022247902)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  ✓ Run moon test src --target native
+  ✓ Run node tools/ci_smoke.mjs
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+* platform (windows-2025) (ID 128022248035)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  * Shared format and task corpus
+  * POSIX interruption and permission contracts
+  * Run moon test src --target js
+  * Run moon test src --target wasm-gc
+  * Run moon test src --target native
+  * Run node tools/ci_smoke.mjs
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (ubuntu-24.04): .github#2
+
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (macos-15): .github#2
+
+- Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times.
+platform (macos-15): .github#1
+
+Refreshing run status every 20 seconds. Press Ctrl+C to quit.
+
+* implementation local-contracts · 42255719356
+Triggered via push about 1 minute ago
+
+JOBS
+* independent-oracles (ID 128022247574)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  ✓ Run sudo apt-get update && sudo apt-get install -y pspp time
+  ✓ Run python -m pip install -r requirements-dev.lock
+  ✓ Run python -m unittest discover -s tests -p '*_test.py'
+  * Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run
+  * Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+  * Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+✓ platform (ubuntu-24.04) in 58s (ID 128022247696)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  ✓ Run moon test src --target native
+  ✓ Run node tools/ci_smoke.mjs
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+✓ platform (macos-15) in 1m7s (ID 128022247902)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  ✓ Run moon test src --target native
+  ✓ Run node tools/ci_smoke.mjs
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+* platform (windows-2025) (ID 128022248035)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  * Shared format and task corpus
+  * POSIX interruption and permission contracts
+  * Run moon test src --target js
+  * Run moon test src --target wasm-gc
+  * Run moon test src --target native
+  * Run node tools/ci_smoke.mjs
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (ubuntu-24.04): .github#2
+
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (macos-15): .github#2
+
+- Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times.
+platform (macos-15): .github#1
+
+Refreshing run status every 20 seconds. Press Ctrl+C to quit.
+
+* implementation local-contracts · 42255719356
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ independent-oracles in 1m59s (ID 128022247574)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  ✓ Run sudo apt-get update && sudo apt-get install -y pspp time
+  ✓ Run python -m pip install -r requirements-dev.lock
+  ✓ Run python -m unittest discover -s tests -p '*_test.py'
+  ✓ Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run
+  ✓ Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+  ✓ Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+✓ platform (ubuntu-24.04) in 58s (ID 128022247696)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  ✓ Run moon test src --target native
+  ✓ Run node tools/ci_smoke.mjs
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+✓ platform (macos-15) in 1m7s (ID 128022247902)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  ✓ Shared format and task corpus
+  ✓ POSIX interruption and permission contracts
+  ✓ Run moon test src --target js
+  ✓ Run moon test src --target wasm-gc
+  ✓ Run moon test src --target native
+  ✓ Run node tools/ci_smoke.mjs
+  ✓ Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Complete job
+* platform (windows-2025) (ID 128022248035)
+  ✓ Set up job
+  ✓ Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+  ✓ Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  ✓ Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+  ✓ Run moon version --all
+  ✓ Run node tools/build.mjs
+  * Shared format and task corpus
+  * POSIX interruption and permission contracts
+  * Run moon test src --target js
+  * Run moon test src --target wasm-gc
+  * Run moon test src --target native
+  * Run node tools/ci_smoke.mjs
+  * Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+  * Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (ubuntu-24.04): .github#2
+
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+platform (macos-15): .github#2
+
+- Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times.
+platform (macos-15): .github#1
+
+failed to get run: Get "https://api.github.com/repos/z2823253773-p/moonsav/actions/workflows/394890488": unexpected EOF

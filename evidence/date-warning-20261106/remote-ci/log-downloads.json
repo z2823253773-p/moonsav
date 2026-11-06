@@ -16,5 +16,6 @@
   ],
   "current_retry": "Mac/Windows per-process GODEBUG=http2client=0 with45s timeout; result JSON beside logs; no global/network repository configuration changed",
   "final_status": "all4 original job logs retained; Mac obtained by whole-run ZIP fallback after per-job EOF/timeout",
-  "global_configuration_changed": false
+  "global_configuration_changed": false,
+  "watcher_exit1": "gh run watch failed fetching workflow metadata with unexpected EOF; not used as CI conclusion; exact run.json and4 job logs establish success"
 }
