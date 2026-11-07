@@ -1,0 +1,61 @@
+{
+  "source_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+  "source_digest": "9284c43f6b4fa169869e0a44128c0acc0b44b59aeb7b933fd7551b5a50e96caa",
+  "local_dirty": false,
+  "remote_dirty": true,
+  "remote_dirty_scope": "generated evidence/ci-run; tracked source digest matches",
+  "local_counts": {
+    "supported_pass": 17,
+    "supported_fail": 0,
+    "expected_rejection": 1,
+    "unexpected_result": 0,
+    "not_run": 0
+  },
+  "remote_counts": {
+    "supported_pass": 17,
+    "supported_fail": 0,
+    "expected_rejection": 1,
+    "unexpected_result": 0,
+    "not_run": 0
+  },
+  "workflow_conclusion": "success",
+  "jobs": [
+    {
+      "name": "platform (ubuntu-24.04)",
+      "databaseId": 128438460814,
+      "conclusion": "success",
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460814"
+    },
+    {
+      "name": "platform (windows-2025)",
+      "databaseId": 128438460956,
+      "conclusion": "success",
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460956"
+    },
+    {
+      "name": "platform (macos-15)",
+      "databaseId": 128438460969,
+      "conclusion": "success",
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460969"
+    },
+    {
+      "name": "independent-oracles",
+      "databaseId": 128438460972,
+      "conclusion": "success",
+      "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460972"
+    }
+  ],
+  "exact_local_artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+      "size_bytes": 313794
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "f92ef14cd516f171cd8680e2a2357258869648c2444fe96f7daccbb98c2a4aa5",
+      "size_bytes": 76185
+    }
+  },
+  "independent_commands": 22,
+  "original_accepted_artifacts_unchanged": true,
+  "moonbit_source_unchanged_vs_accepted": true
+}

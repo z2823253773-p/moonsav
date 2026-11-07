@@ -1,0 +1,39 @@
+{
+  "actual_rows": 5,
+  "logical_variables": 3,
+  "columns": [
+    {
+      "index": 0,
+      "name": "score",
+      "type": "numeric",
+      "width": 0,
+      "counts": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 1,
+      "name": "subject_code",
+      "type": "string",
+      "width": 7,
+      "counts": [
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "name": "note",
+      "type": "string",
+      "width": 10,
+      "counts": [
+        5,
+        0,
+        0
+      ]
+    }
+  ]
+}

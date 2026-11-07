@@ -1,0 +1,199 @@
+[
+  {
+    "label": "offline-install",
+    "command": [
+      "/usr/local/bin/node",
+      "/usr/local/lib/node_modules/npm/bin/npm-cli.js",
+      "install",
+      "--prefix",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "--cache",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/empty-cache",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/dist/moonsav-0.1.0.tgz"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "root-esm",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/api.mjs",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/fixtures/synthetic/survey-row.sav"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "root-cjs-legacy",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/api.cjs"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "installed-types",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/node_modules/typescript/bin/tsc",
+      "--strict",
+      "--noEmit",
+      "--module",
+      "NodeNext",
+      "--moduleResolution",
+      "NodeNext",
+      "--target",
+      "ES2022",
+      "--lib",
+      "es2022",
+      "--exactOptionalPropertyTypes",
+      "--noUncheckedIndexedAccess",
+      "consumer.mts"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "example-default",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/examples/read_sav.mjs"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "example-explicit",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/examples/read_sav.mjs",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/\u771f\u5b9e\u8def\u5f84 example.sav"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "cli-version",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/bin/moonsav.mjs",
+      "--version"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "cli-inspect",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/bin/moonsav.mjs",
+      "inspect",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+      "--json"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "cli-validate",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/bin/moonsav.mjs",
+      "validate",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+      "--json"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "cli-export",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/bin/moonsav.mjs",
+      "export",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/fixtures/synthetic/survey-row.sav",
+      "--out",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/bundle \u4e2d\u6587",
+      "--json"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "cli-check",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/bin/moonsav.mjs",
+      "check-bundle",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/bundle \u4e2d\u6587",
+      "--json"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "python-consumer",
+    "command": [
+      "/Users/henryz/.agent-reach-venv/bin/python",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/node_modules/moonsav/examples/read_bundle.py",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587/bundle \u4e2d\u6587"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/offline consumer \u4e2d\u6587",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+      "MOON_HOME": null
+    },
+    "exit_code": 0
+  }
+]

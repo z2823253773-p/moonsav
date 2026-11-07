@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "source_archive_sha256": "f92ef14cd516f171cd8680e2a2357258869648c2444fe96f7daccbb98c2a4aa5",
+  "profiles": {
+    "old": "moon 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moon\nmoonc v0.10.4+2cc641edf (2026-07-15) ~/.moon/bin/moonc\nmoonrun 0.1.20260713 (75c7e1f 2026-07-13) ~/.moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg\n",
+    "new": "moon 0.1.20261023 (3778465 2026-10-23) ~/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moon\nmoonc v0.10.17+d971670cd (2026-10-23) ~/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moonc\nmoonrun 0.1.20261023 (3778465 2026-10-23) ~/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg\n"
+  },
+  "consumer_backend_runs": 6,
+  "all_exits": 0
+}

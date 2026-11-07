@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "reviewer": "fresh Codex subagent /root/node_integration_review",
+  "candidate_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+  "source_tree_sha256": "9284c43f6b4fa169869e0a44128c0acc0b44b59aeb7b933fd7551b5a50e96caa",
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+      "size_bytes": 313794
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "f92ef14cd516f171cd8680e2a2357258869648c2444fe96f7daccbb98c2a4aa5",
+      "size_bytes": 76185
+    }
+  },
+  "node_commands": 12,
+  "source_commands": 8,
+  "supplemental_commands": 2,
+  "all_command_exits": 0,
+  "source_consumers": 6,
+  "limits": "Independent exact archive consumption only; no designated acceptance verdict, publication, submission or source re-review."
+}

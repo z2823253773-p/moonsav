@@ -1,0 +1,10 @@
+{
+  "case": "AC11",
+  "status": "supported_pass",
+  "utc": "2026-11-07T15:02:16.974032+00:00",
+  "detail": {
+    "scope": "exclusive concurrent output, ordinary failure, input change, disk failure and six SIGKILL stages, post-commit report recovery",
+    "proof": "shared current full Node suite; no omitted tests counted as passes",
+    "core_backends": true
+  }
+}

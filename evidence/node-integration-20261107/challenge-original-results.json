@@ -1,0 +1,261 @@
+{
+  "archive_sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+  "inspected_head": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+  "node": "v24.15.0",
+  "work": "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original",
+  "records": [
+    {
+      "name": "label-count-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/label-count",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/label-count\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "label-count-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/label-count",
+        "--json"
+      ],
+      "exit_code": 6,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"ResourceLimit\",\"message\":\"Dictionary label entry bookkeeping exceeds budget\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Use a smaller input or another tool; this version does not silently sample.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 6,
+      "expected_code": "ResourceLimit",
+      "expectation_met": true
+    },
+    {
+      "name": "label-bytes-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/label-bytes",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/label-bytes\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "label-bytes-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/label-bytes",
+        "--json"
+      ],
+      "exit_code": 6,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"ResourceLimit\",\"message\":\"label_bytes: actual 1048577, limit 1048576\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":1048577,\"limit\":1048576,\"suggested_action\":\"Use a smaller input or another tool; this version does not silently sample.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 6,
+      "expected_code": "ResourceLimit",
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-absent-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-absent",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-absent\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-absent-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-absent",
+        "--json"
+      ],
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"IntegrityMismatch\",\"message\":\"Missing required field: nominal_case_size\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Transfer the complete bundle again or export from the original SAV.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-type-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-type",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-type\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-type-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-type",
+        "--json"
+      ],
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"IntegrityMismatch\",\"message\":\"Expected integer\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Transfer the complete bundle again or export from the original SAV.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-width-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/fixtures/synthetic/zero.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-width",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-width\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "nominal-width-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nominal-width",
+        "--json"
+      ],
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"IntegrityMismatch\",\"message\":\"Nominal case width disagrees with both defined conventions\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Transfer the complete bundle again or export from the original SAV.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": true
+    },
+    {
+      "name": "encoding-override",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/unsupported-declared.sav",
+        "--encoding",
+        "utf-8",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed_with_warnings\",\"validation_scope\":\"full\",\"declared_rows\":0,\"actual_rows\":0,\"logical_variables\":1,\"warnings\":[{\"warning_code\":\"EncodingOverride\",\"scope\":\"dictionary_and_data\",\"suggested_action\":\"Confirm selected encoding with the data provider\"}],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[0,0,0]],\"completed\":true}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "noncanonical-setup",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean/fixtures/synthetic/survey-none.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/noncanonical",
+        "--format",
+        "ndjson",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true,\"bundle_path\":\"/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/noncanonical\",\"output_state\":\"committed\"}\n",
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_code": null,
+      "expectation_met": true
+    },
+    {
+      "name": "noncanonical-check",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "check-bundle",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/noncanonical",
+        "--json"
+      ],
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"check-bundle\",\"status\":\"failed\",\"validation_scope\":\"bundle\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"IntegrityMismatch\",\"message\":\"Numeric decimal is not the canonical shortest representation\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Transfer the complete bundle again or export from the original SAV.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 4,
+      "expected_code": "IntegrityMismatch",
+      "expectation_met": true
+    },
+    {
+      "name": "nul-name-export",
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/archive/package/bin/moonsav.mjs",
+        "export",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nul-name.sav",
+        "--out",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-original/nul-name-bundle",
+        "--json"
+      ],
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"export\",\"status\":\"failed\",\"validation_scope\":\"full\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"InvalidDictionary\",\"message\":\"Variable names must be nonempty and cannot contain NUL\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Keep the original input; consult supported formats and retry.\",\"output_state\":\"not_created\"}}\n",
+      "expected_exit": 4,
+      "expected_code": null,
+      "expectation_met": true
+    }
+  ],
+  "all_expectations_met": true
+}

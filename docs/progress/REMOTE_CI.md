@@ -1,3 +1,9 @@
+# Current integration CI — 2026-11-07
+
+[run42384344415](https://github.com/z2823253773-p/moonsav/actions/runs/42384344415) all4 jobs success on `c89ce1aa9fdea8114fe0d8157ee4de043da66583`. Shared Node131, POSIX adds11; core16 per declared target. Dev npm ci installs locked TypeScript; runtime remains Node-only. Linux full17pass+29bad. Original raw log aggregates/artifact/source cross-check in evidence/node-integration-20261107/remote-ci. Previous runs below remain history for old candidates; original5c1ff8d now has designated PASSED, while this new candidate does not inherit that exact-byte approval.
+
+---
+
 # Current CI — date correction2026-11-06
 
 [run42255719356](https://github.com/z2823253773-p/moonsav/actions/runs/42255719356) all4 jobs passed on `5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b`. Shared Node127, POSIX adds11;16 core per declared platform/backend. Linux independent full entry17pass+29 expected bad vectors. Original API state/logs/artifact and source cross-check in evidence/date-warning-20261106/remote-ci. Windows native/POSIX remains unclaimed. The designated e453463 baseline is PASSED_WITH_NOTES; this CI verifies the new date-corrected source, not event approval. Prior entries below remain historical.

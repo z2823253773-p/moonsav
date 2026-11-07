@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+      "size_bytes": 313794
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "f92ef14cd516f171cd8680e2a2357258869648c2444fe96f7daccbb98c2a4aa5",
+      "size_bytes": 76185
+    }
+  },
+  "platform": "macOS-26.4-arm64-arm-64bit",
+  "node": "/usr/local/bin/node",
+  "runtime_path": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+  "typescript": "host dev verifier only; resolves real installed declarations",
+  "runtime_dependencies": [],
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+    "dirty": false,
+    "source_tree_sha256": "9284c43f6b4fa169869e0a44128c0acc0b44b59aeb7b933fd7551b5a50e96caa",
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "cli_version": {
+    "product": "moonsav",
+    "version": "0.1.0",
+    "build": {
+      "version": "0.1.0",
+      "git_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+      "dirty": false,
+      "source_tree_sha256": "9284c43f6b4fa169869e0a44128c0acc0b44b59aeb7b933fd7551b5a50e96caa",
+      "moon": "0.1.20261023",
+      "moonc": "v0.10.17+d971670cd",
+      "node": "v24.15.0",
+      "icu": "78.2"
+    },
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2",
+    "encodings": [
+      "utf-8",
+      "windows-1252",
+      "gbk/cp936-stable",
+      "gb18030/stable-intersection"
+    ],
+    "schema_major": 1
+  },
+  "records": 12
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "encoding": "utf-8",
+    "readstat": "supported_pass",
+    "pspp": "supported_pass",
+    "status": "supported_pass"
+  },
+  {
+    "encoding": "windows-1252",
+    "readstat": "supported_pass",
+    "pspp": "supported_pass",
+    "status": "supported_pass"
+  },
+  {
+    "encoding": "gbk",
+    "readstat": "supported_pass",
+    "pspp": "supported_pass",
+    "status": "supported_pass"
+  },
+  {
+    "encoding": "gb18030",
+    "readstat": "supported_pass",
+    "pspp": "supported_pass",
+    "status": "supported_pass"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "label": "old-version",
+    "command": [
+      "/Users/henryz/.moon/bin/moon",
+      "version",
+      "--all"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-old/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "old-js",
+    "command": [
+      "/Users/henryz/.moon/bin/moon",
+      "run",
+      ".",
+      "--target",
+      "js"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-old/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "old-native",
+    "command": [
+      "/Users/henryz/.moon/bin/moon",
+      "run",
+      ".",
+      "--target",
+      "native"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-old/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "old-wasm-gc",
+    "command": [
+      "/Users/henryz/.moon/bin/moon",
+      "run",
+      ".",
+      "--target",
+      "wasm-gc"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-old/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/.moon/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "new-version",
+    "command": [
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moon",
+      "version",
+      "--all"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-new/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "new-js",
+    "command": [
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moon",
+      "run",
+      ".",
+      "--target",
+      "js"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-new/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "new-native",
+    "command": [
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moon",
+      "run",
+      ".",
+      "--target",
+      "native"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-new/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  },
+  {
+    "label": "new-wasm-gc",
+    "command": [
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin/moon",
+      "run",
+      ".",
+      "--target",
+      "wasm-gc"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/source-new/examples/consumer",
+    "environment": {
+      "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/TeX/texbin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/henryz/.codex/tmp/arg0-macos/codex-arg0GM0cvY:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/henryz/anaconda3/condabin:/Users/henryz/.moon/bin:/Users/henryz/.npm-global/bin:/Users/henryz/.agent-reach-venv/bin:/Users/henryz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+      "MOON_HOME": null,
+      "underscore_removed": true
+    },
+    "exit_code": 0
+  }
+]

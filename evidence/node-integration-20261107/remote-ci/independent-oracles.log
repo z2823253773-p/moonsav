@@ -1,0 +1,547 @@
+﻿2026-11-07T15:01:39.3813173Z Current runner version: '2.338.2'
+2026-11-07T15:01:39.3848554Z ##[group]Runner Image Provisioner
+2026-11-07T15:01:39.3849898Z Hosted Compute Agent
+2026-11-07T15:01:39.3851022Z Version: 20261028.624
+2026-11-07T15:01:39.3852335Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-07T15:01:39.3853549Z Build Date: 2026-10-28T21:51:42Z
+2026-11-07T15:01:39.3854969Z Worker ID: {4e2bb7bd-a71a-4029-b256-211740cac392}
+2026-11-07T15:01:39.3856168Z Region: northcentralus
+2026-11-07T15:01:39.3857223Z Cloud: Azure
+2026-11-07T15:01:39.3858174Z ##[endgroup]
+2026-11-07T15:01:39.3860416Z ##[group]Operating System
+2026-11-07T15:01:39.3861756Z Ubuntu
+2026-11-07T15:01:39.3862673Z 24.04.5
+2026-11-07T15:01:39.3863556Z LTS
+2026-11-07T15:01:39.3864460Z ##[endgroup]
+2026-11-07T15:01:39.3865459Z ##[group]Runner Image
+2026-11-07T15:01:39.3866509Z Image: ubuntu-24.04
+2026-11-07T15:01:39.3867444Z Version: 20261101.360.1
+2026-11-07T15:01:39.3870225Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-07T15:01:39.3873343Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-07T15:01:39.3875107Z ##[endgroup]
+2026-11-07T15:01:39.3877012Z ##[group]GITHUB_TOKEN Permissions
+2026-11-07T15:01:39.3879984Z Contents: read
+2026-11-07T15:01:39.3881003Z Metadata: read
+2026-11-07T15:01:39.3882253Z ##[endgroup]
+2026-11-07T15:01:39.3885249Z Secret source: Actions
+2026-11-07T15:01:39.3886945Z Cache mode: write
+2026-11-07T15:01:39.3888327Z Prepare workflow directory
+2026-11-07T15:01:39.4376884Z Prepare all required actions
+2026-11-07T15:01:39.4448248Z Getting action download info
+2026-11-07T15:01:39.7124465Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-07T15:01:39.8317591Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-07T15:01:39.9305752Z Download action repository 'hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d' (SHA:9165e0d7de62340ee5402e271bc5abc732cef84d)
+2026-11-07T15:01:40.1101114Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-07T15:01:40.2041107Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-07T15:01:40.4138139Z Getting action download info
+2026-11-07T15:01:40.5114818Z Download action repository 'hustcer/setup-nu@v3.27' (SHA:9215c80adb545a85c419d5085b76eb6d082f49e7)
+2026-11-07T15:01:40.8246200Z Complete job name: independent-oracles
+2026-11-07T15:01:40.9349455Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-07T15:01:40.9352003Z with:
+2026-11-07T15:01:40.9352941Z   repository: z2823253773-p/moonsav
+2026-11-07T15:01:40.9362418Z   token: ***
+2026-11-07T15:01:40.9363218Z   ssh-strict: true
+2026-11-07T15:01:40.9364050Z   ssh-user: git
+2026-11-07T15:01:40.9364879Z   persist-credentials: true
+2026-11-07T15:01:40.9365785Z   clean: true
+2026-11-07T15:01:40.9366608Z   sparse-checkout-cone-mode: true
+2026-11-07T15:01:40.9367597Z   fetch-depth: 1
+2026-11-07T15:01:40.9368381Z   fetch-tags: false
+2026-11-07T15:01:40.9369191Z   show-progress: true
+2026-11-07T15:01:40.9370027Z   lfs: false
+2026-11-07T15:01:40.9370786Z   submodules: false
+2026-11-07T15:01:40.9371764Z   set-safe-directory: true
+2026-11-07T15:01:40.9372730Z   allow-unsafe-pr-checkout: false
+2026-11-07T15:01:40.9374053Z ##[endgroup]
+2026-11-07T15:01:41.2784978Z Syncing repository: z2823253773-p/moonsav
+2026-11-07T15:01:41.2789014Z ##[group]Getting Git version info
+2026-11-07T15:01:41.2790502Z Working directory is '/home/runner/work/moonsav/moonsav'
+2026-11-07T15:01:41.2794062Z [command]/usr/bin/git version
+2026-11-07T15:01:41.2983028Z git version 2.56.0
+2026-11-07T15:01:41.3103359Z ##[endgroup]
+2026-11-07T15:01:41.3144443Z Temporarily overriding HOME='/home/runner/work/_temp/72490c67-9af7-454d-939a-71302b366dd5' before making global git config changes
+2026-11-07T15:01:41.3153947Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-07T15:01:41.3157823Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+2026-11-07T15:01:41.3243348Z Deleting the contents of '/home/runner/work/moonsav/moonsav'
+2026-11-07T15:01:41.3264618Z ##[group]Initializing the repository
+2026-11-07T15:01:41.3267292Z [command]/usr/bin/git init /home/runner/work/moonsav/moonsav
+2026-11-07T15:01:41.3358162Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-07T15:01:41.3363594Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-07T15:01:41.3367416Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-07T15:01:41.3370650Z hint: call:
+2026-11-07T15:01:41.3372791Z hint:
+2026-11-07T15:01:41.3423416Z hint: 	git config --global init.defaultBranch <name>
+2026-11-07T15:01:41.3452224Z hint:
+2026-11-07T15:01:41.3454612Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-07T15:01:41.3473423Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-07T15:01:41.3492463Z hint:
+2026-11-07T15:01:41.3512766Z hint: 	git branch -m <name>
+2026-11-07T15:01:41.3532614Z hint:
+2026-11-07T15:01:41.3541115Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-07T15:01:41.3545339Z Initialized empty Git repository in /home/runner/work/moonsav/moonsav/.git/
+2026-11-07T15:01:41.3599749Z [command]/usr/bin/git remote add origin https://github.com/z2823253773-p/moonsav
+2026-11-07T15:01:41.3653275Z ##[endgroup]
+2026-11-07T15:01:41.3673924Z ##[group]Disabling automatic garbage collection
+2026-11-07T15:01:41.3692810Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-07T15:01:41.3735133Z ##[endgroup]
+2026-11-07T15:01:41.3753624Z ##[group]Setting up auth
+2026-11-07T15:01:41.3773619Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-07T15:01:41.3816487Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-07T15:01:41.4903702Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-07T15:01:41.4914980Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-07T15:01:41.5113935Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-07T15:01:41.5149005Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-07T15:01:41.5544532Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-07T15:01:41.5550517Z ##[endgroup]
+2026-11-07T15:01:41.5553172Z ##[group]Fetching the repository
+2026-11-07T15:01:41.5558161Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c89ce1aa9fdea8114fe0d8157ee4de043da66583:refs/remotes/origin/feature/node-integration
+2026-11-07T15:01:42.2363409Z From https://github.com/z2823253773-p/moonsav
+2026-11-07T15:01:42.2382827Z  * [new ref]         c89ce1aa9fdea8114fe0d8157ee4de043da66583 -> origin/feature/node-integration
+2026-11-07T15:01:42.2406470Z ##[endgroup]
+2026-11-07T15:01:42.2407963Z ##[group]Determining the checkout info
+2026-11-07T15:01:42.2409616Z ##[endgroup]
+2026-11-07T15:01:42.2410790Z [command]/usr/bin/git sparse-checkout disable
+2026-11-07T15:01:42.2449602Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-07T15:01:42.2494036Z ##[group]Checking out the ref
+2026-11-07T15:01:42.2499480Z [command]/usr/bin/git checkout --progress --force -B feature/node-integration refs/remotes/origin/feature/node-integration
+2026-11-07T15:01:42.3831107Z Switched to a new branch 'feature/node-integration'
+2026-11-07T15:01:42.3846654Z branch 'feature/node-integration' set up to track 'origin/feature/node-integration'.
+2026-11-07T15:01:42.3852759Z ##[endgroup]
+2026-11-07T15:01:42.3908767Z [command]/usr/bin/git log -1 --format=%H
+2026-11-07T15:01:42.3947551Z c89ce1aa9fdea8114fe0d8157ee4de043da66583
+2026-11-07T15:01:42.4270866Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-11-07T15:01:42.4271712Z with:
+2026-11-07T15:01:42.4272144Z   node-version: 24.15.0
+2026-11-07T15:01:42.4272579Z   always-auth: false
+2026-11-07T15:01:42.4272996Z   check-latest: false
+2026-11-07T15:01:42.4275970Z   token: ***
+2026-11-07T15:01:42.4276379Z ##[endgroup]
+2026-11-07T15:01:42.6171251Z Attempting to download 24.15.0...
+2026-11-07T15:01:42.6324663Z (node:2130) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-07T15:01:42.6338803Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-07T15:01:43.4275712Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+2026-11-07T15:01:44.0253761Z Extracting ...
+2026-11-07T15:01:44.0406553Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ca4630be-426a-4647-966d-8a90676f8d99 -f /home/runner/work/_temp/2e381e10-5308-4997-b180-824e67ccb62f
+2026-11-07T15:01:45.3863208Z Adding to the cache ...
+2026-11-07T15:01:47.6163416Z ##[group]Environment details
+2026-11-07T15:01:47.9092660Z node: v24.15.0
+2026-11-07T15:01:47.9093177Z npm: 11.12.1
+2026-11-07T15:01:47.9093655Z yarn: 1.22.22
+2026-11-07T15:01:47.9094427Z ##[endgroup]
+2026-11-07T15:01:47.9317232Z ##[group]Run hustcer/setup-moonbit@9165e0d7de62340ee5402e271bc5abc732cef84d
+2026-11-07T15:01:47.9317676Z with:
+2026-11-07T15:01:47.9317895Z   version: 0.10.17+d971670cd
+2026-11-07T15:01:47.9318159Z   core-version: 0.10.17+d971670cd
+2026-11-07T15:01:47.9318409Z   setup-core: true
+2026-11-07T15:01:47.9318618Z ##[endgroup]
+2026-11-07T15:01:47.9375088Z ##[start-action display=Setup Nu;id=__hustcer_setup-moonbit.__hustcer_setup-nu]
+2026-11-07T15:01:47.9419609Z ##[group]Run hustcer/setup-nu@v3.27
+2026-11-07T15:01:47.9419895Z with:
+2026-11-07T15:01:47.9420091Z   version: 0.115.1
+2026-11-07T15:01:47.9420301Z   features: default
+2026-11-07T15:01:47.9420513Z   check-latest: false
+2026-11-07T15:01:47.9420738Z   enable-plugins: false
+2026-11-07T15:01:47.9423728Z   github-token: ***
+2026-11-07T15:01:47.9423971Z ##[endgroup]
+2026-11-07T15:01:48.0858038Z versionSpec: 0.115.1
+2026-11-07T15:01:48.0872206Z resolved version: 0.115.1
+2026-11-07T15:01:48.0882654Z Try to get assets for Nu: arch = x64, platform = linux, feature = default
+2026-11-07T15:01:50.0812394Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/be2e4d3d-b39c-4956-bf5f-1acd519a880c -f /home/runner/work/_temp/768d958e-e86f-4875-a771-bb3695428e2c
+2026-11-07T15:01:52.7991337Z Successfully setup Nu 0.115.1, with default features.
+2026-11-07T15:01:52.9872241Z Current directory: /home/runner/work/moonsav/moonsav
+2026-11-07T15:01:53.0024468Z ##[end-action id=__hustcer_setup-moonbit.__hustcer_setup-nu;outcome=success;conclusion=success;duration_ms=5064]
+2026-11-07T15:01:53.0027488Z ##[start-action display=Setup MoonBit;id=__hustcer_setup-moonbit.__run]
+2026-11-07T15:01:53.0355614Z ##[group]Run # /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that
+2026-11-07T15:01:53.0357479Z [36;1m# /home/runner/work/_actions/hustcer/setup-moonbit/9165e0d7de62340ee5402e271bc5abc732cef84d expands to a host-side path that[0m
+2026-11-07T15:01:53.0358823Z [36;1m# doesn't exist inside container jobs. Use $env.GITHUB_ACTION_PATH.[0m
+2026-11-07T15:01:53.0359540Z [36;1mlet version = '0.10.17+d971670cd'[0m
+2026-11-07T15:01:53.0360298Z [36;1mlet setup_core = 'true' | into bool[0m
+2026-11-07T15:01:53.0360838Z [36;1mlet core_version = '0.10.17+d971670cd'[0m
+2026-11-07T15:01:53.0362066Z [36;1m^nu $"($env.GITHUB_ACTION_PATH)/nu/moonbit.nu" $version $"--setup-core=($setup_core)" $"--core-version=($core_version)"[0m
+2026-11-07T15:01:53.0366631Z shell: /opt/hostedtoolcache/nushell/0.115.1/x64/nu {0}
+2026-11-07T15:01:53.0367196Z ##[endgroup]
+2026-11-07T15:01:53.1322372Z 
+2026-11-07T15:01:53.1323707Z Setup moonbit toolchain of version: [32m0.10.17+d971670cd[0m
+2026-11-07T15:01:53.1342523Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-07T15:01:53.1361981Z Current moon home: [32m/home/runner/.moon[0m
+2026-11-07T15:01:53.1378207Z Fetch binaries from [32mhttps://cli.moonbitlang.com/binaries/0.10.17%2Bd971670cd/moonbit-linux-x86_64.tar.gz[0m
+2026-11-07T15:01:53.1510706Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-07T15:01:53.1513403Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-07T15:01:53.1513900Z 
+2026-11-07T15:01:53.8263127Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-07T15:01:53.8264642Z 100 95.2M  100 95.2M    0     0   140M      0 --:--:-- --:--:-- --:--:--  141M
+2026-11-07T15:01:56.0097319Z OS Info:
+2026-11-07T15:01:56.0121854Z ╭────────────────┬──────────────────╮
+2026-11-07T15:01:56.0127480Z │ name           │ linux            │
+2026-11-07T15:01:56.0128498Z │ arch           │ x86_64           │
+2026-11-07T15:01:56.0132789Z │ family         │ unix             │
+2026-11-07T15:01:56.0133734Z │ kernel_version │ 7.0.0-1017-azure │
+2026-11-07T15:01:56.0134644Z ╰────────────────┴──────────────────╯
+2026-11-07T15:01:56.0144918Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-07T15:01:56.0163550Z Contents of /home/runner/.moon/bin:
+2026-11-07T15:01:56.0183927Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-07T15:01:56.0207821Z   # |                  name                   |  type   |   size   |  modified   
+2026-11-07T15:01:56.0209024Z ----+-----------------------------------------+---------+----------+-------------
+2026-11-07T15:01:56.0210157Z   0 | /home/runner/.moon/bin/internal         | dir     |   4.0 kB | 2 weeks ago 
+2026-11-07T15:01:56.0211268Z   1 | /home/runner/.moon/bin/moon             | file    |  10.7 MB | 2 weeks ago 
+2026-11-07T15:01:56.0212700Z   2 | /home/runner/.moon/bin/moon-cram        | file    |   7.7 MB | 2 weeks ago 
+2026-11-07T15:01:56.0213995Z   3 | /home/runner/.moon/bin/moon-ide         | file    |  16.3 MB | 2 weeks ago 
+2026-11-07T15:01:56.0215164Z   4 | /home/runner/.moon/bin/moon-lsp         | file    |  22.9 MB | 2 weeks ago 
+2026-11-07T15:01:56.0216648Z   5 | /home/runner/.moon/bin/moon-wasm-opt    | file    |  19.3 MB | 2 weeks ago 
+2026-11-07T15:01:56.0218043Z   6 | /home/runner/.moon/bin/moon_cove.wasm   | file    | 949.6 kB | 2 weeks ago 
+2026-11-07T15:01:56.0228363Z   7 | /home/runner/.moon/bin/moon_cove_report | file    |  10.1 MB | 2 weeks ago 
+2026-11-07T15:01:56.0229601Z   8 | /home/runner/.moon/bin/moonc            | file    |  23.0 MB | 2 weeks ago 
+2026-11-07T15:01:56.0230790Z   9 | /home/runner/.moon/bin/moonc-prove      | file    |  35.6 MB | 2 weeks ago 
+2026-11-07T15:01:56.0232357Z  10 | /home/runner/.moon/bin/mooncake         | file    |   4.8 MB | 2 weeks ago 
+2026-11-07T15:01:56.0233572Z  11 | /home/runner/.moon/bin/moondoc          | file    |  23.3 MB | 2 weeks ago 
+2026-11-07T15:01:56.0234761Z  12 | /home/runner/.moon/bin/moonfmt          | file    |   9.5 MB | 2 weeks ago 
+2026-11-07T15:01:56.0235920Z  13 | /home/runner/.moon/bin/mooninfo         | file    |  12.8 MB | 2 weeks ago 
+2026-11-07T15:01:56.0237069Z  14 | /home/runner/.moon/bin/moonlex.wasm     | file    | 149.3 kB | 2 weeks ago 
+2026-11-07T15:01:56.0238342Z  15 | /home/runner/.moon/bin/moonrun          | file    |  40.0 MB | 2 weeks ago 
+2026-11-07T15:01:56.0239953Z  16 | /home/runner/.moon/bin/moonx            | symlink |      4 B | now         
+2026-11-07T15:01:56.0260100Z  17 | /home/runner/.moon/bin/moonyacc.wasm    | file    | 305.6 kB | 2 weeks ago 
+2026-11-07T15:01:56.0260919Z 
+2026-11-07T15:01:56.0261968Z Setup moonbit core of version: [32m0.10.17+d971670cd[0m
+2026-11-07T15:01:56.0263441Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-07T15:01:56.0280017Z Fetch core assets from [32mhttps://cli.moonbitlang.com/cores/core-0.10.17%2Bd971670cd.tar.gz[0m
+2026-11-07T15:01:56.0335874Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-07T15:01:56.0340809Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-07T15:01:56.0341923Z 
+2026-11-07T15:01:56.0792342Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-07T15:01:56.0802759Z 100 1910k  100 1910k    0     0  40.7M      0 --:--:-- --:--:-- --:--:-- 41.4M
+2026-11-07T15:01:56.1603494Z 
+2026-11-07T15:01:56.1604603Z Bundle moonbit core[0m
+2026-11-07T15:01:56.1624560Z [32m------------------------------------------------------------------------------------------[0m
+2026-11-07T15:02:03.5462668Z Finished. moon: ran 324 tasks, now up to date
+2026-11-07T15:02:03.5708866Z 
+2026-11-07T15:02:03.5710118Z [32mmoonbit was installed successfully to /home/runner/.moon[0m
+2026-11-07T15:02:03.5772947Z To verify the downloaded binaries, check https://www.moonbitlang.com/download#verifying-binaries for instructions.
+2026-11-07T15:02:03.5779791Z To know how to add shell completions, run 'moon shell-completion --help'
+2026-11-07T15:02:03.5824349Z ##[end-action id=__hustcer_setup-moonbit.__run;outcome=success;conclusion=success;duration_ms=10579]
+2026-11-07T15:02:03.5863956Z ##[group]Run npm ci --ignore-scripts
+2026-11-07T15:02:03.5864318Z [36;1mnpm ci --ignore-scripts[0m
+2026-11-07T15:02:03.5886948Z shell: /usr/bin/bash -e {0}
+2026-11-07T15:02:03.5887212Z ##[endgroup]
+2026-11-07T15:02:04.3632230Z 
+2026-11-07T15:02:04.3633559Z added 1 package, and audited 2 packages in 710ms
+2026-11-07T15:02:04.3649989Z 
+2026-11-07T15:02:04.3650400Z found 0 vulnerabilities
+2026-11-07T15:02:04.4313351Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-07T15:02:04.4313774Z with:
+2026-11-07T15:02:04.4313994Z   python-version: 3.12.13
+2026-11-07T15:02:04.4314233Z   check-latest: false
+2026-11-07T15:02:04.4316747Z   token: ***
+2026-11-07T15:02:04.4316967Z   update-environment: true
+2026-11-07T15:02:04.4317209Z   allow-prereleases: false
+2026-11-07T15:02:04.4317435Z   freethreaded: false
+2026-11-07T15:02:04.4317651Z ##[endgroup]
+2026-11-07T15:02:04.5840947Z ##[group]Installed versions
+2026-11-07T15:02:04.5865594Z Version 3.12.13 was not found in the local cache
+2026-11-07T15:02:04.6013467Z (node:3010) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-07T15:02:04.6015421Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-07T15:02:05.3050585Z Version 3.12.13 is available for downloading
+2026-11-07T15:02:05.3052396Z Download from "https://github.com/actions/python-versions/releases/download/3.12.13-27650778726/python-3.12.13-linux-24.04-x64.tar.gz"
+2026-11-07T15:02:05.9932735Z Extract downloaded archive
+2026-11-07T15:02:06.0099163Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/d0c8756f-dff6-422b-bf12-f6fbe43d2e33 -f /home/runner/work/_temp/7d21b4a2-aeee-4b3d-ad4f-2b1439b8e250
+2026-11-07T15:02:08.2101713Z Execute installation script
+2026-11-07T15:02:08.2238666Z Check if Python hostedtoolcache folder exist...
+2026-11-07T15:02:08.2240042Z Create Python 3.12.13 folder
+2026-11-07T15:02:08.2259071Z Copy Python binaries to hostedtoolcache folder
+2026-11-07T15:02:08.8937978Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-11-07T15:02:08.8979145Z Upgrading pip...
+2026-11-07T15:02:11.3622947Z Collecting pip
+2026-11-07T15:02:11.4336989Z Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+2026-11-07T15:02:11.4507589Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-07T15:02:11.4927554Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 130.8 MB/s eta 0:00:00
+2026-11-07T15:02:11.4928324Z 
+2026-11-07T15:02:11.5137979Z Installing collected packages: pip
+2026-11-07T15:02:11.5139147Z Attempting uninstall: pip
+2026-11-07T15:02:11.5162746Z Found existing installation: pip 25.0.1
+2026-11-07T15:02:11.5513068Z Uninstalling pip-25.0.1:
+2026-11-07T15:02:11.5570907Z Successfully uninstalled pip-25.0.1
+2026-11-07T15:02:12.6082247Z Successfully installed pip-26.3
+2026-11-07T15:02:12.6742809Z Create complete file
+2026-11-07T15:02:12.6782319Z Successfully set up CPython (3.12.13)
+2026-11-07T15:02:12.6783575Z ##[endgroup]
+2026-11-07T15:02:12.7008369Z ##[group]Run sudo apt-get update && sudo apt-get install -y pspp time
+2026-11-07T15:02:12.7008930Z [36;1msudo apt-get update && sudo apt-get install -y pspp time[0m
+2026-11-07T15:02:12.7030516Z shell: /usr/bin/bash -e {0}
+2026-11-07T15:02:12.7030763Z env:
+2026-11-07T15:02:12.7031042Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:12.7031778Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-11-07T15:02:12.7032223Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:12.7032626Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:12.7033039Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:12.7033430Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-11-07T15:02:12.7033763Z ##[endgroup]
+2026-11-07T15:02:12.7963168Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-07T15:02:12.8259062Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-07T15:02:12.8755652Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-07T15:02:12.8798465Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-07T15:02:12.8887480Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-07T15:02:12.8948834Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-07T15:02:13.0716082Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [675 kB]
+2026-11-07T15:02:13.0973843Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [743 kB]
+2026-11-07T15:02:13.2099145Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1425 kB]
+2026-11-07T15:02:13.2263785Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [313 kB]
+2026-11-07T15:02:13.2292972Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1711 kB]
+2026-11-07T15:02:13.2502790Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [344 kB]
+2026-11-07T15:02:13.2562845Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1840 kB]
+2026-11-07T15:02:13.2803007Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [420 kB]
+2026-11-07T15:02:13.2912764Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+2026-11-07T15:02:13.2914806Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-11-07T15:02:13.3757701Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1157 kB]
+2026-11-07T15:02:13.3833080Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [234 kB]
+2026-11-07T15:02:13.4354080Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-07T15:02:13.4494893Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-07T15:02:13.4516749Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1721 kB]
+2026-11-07T15:02:13.4692881Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [394 kB]
+2026-11-07T15:02:13.4747344Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+2026-11-07T15:02:13.4766286Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+2026-11-07T15:02:17.1659948Z Fetched 13.0 MB in 2s (7742 kB/s)
+2026-11-07T15:02:18.3693969Z Reading package lists...
+2026-11-07T15:02:18.4115936Z Reading package lists...
+2026-11-07T15:02:18.6313981Z Building dependency tree...
+2026-11-07T15:02:18.6322772Z Reading state information...
+2026-11-07T15:02:18.7794097Z time is already the newest version (1.9-0.2build1).
+2026-11-07T15:02:18.7795907Z The following additional packages will be installed:
+2026-11-07T15:02:18.7797115Z   libgsl27 libgslcblas0 libgtksourceview-4-0 libgtksourceview-4-common
+2026-11-07T15:02:18.7798621Z   libspread-sheet-widget0
+2026-11-07T15:02:18.7805599Z Suggested packages:
+2026-11-07T15:02:18.7806281Z   gsl-ref-psdoc | gsl-doc-pdf | gsl-doc-info | gsl-ref-html
+2026-11-07T15:02:18.7984071Z The following NEW packages will be installed:
+2026-11-07T15:02:18.7986068Z   libgsl27 libgslcblas0 libgtksourceview-4-0 libgtksourceview-4-common
+2026-11-07T15:02:18.7989267Z   libspread-sheet-widget0 pspp
+2026-11-07T15:02:18.8200652Z 0 upgraded, 6 newly installed, 0 to remove and 27 not upgraded.
+2026-11-07T15:02:18.8202388Z Need to get 8638 kB of archives.
+2026-11-07T15:02:18.8203488Z After this operation, 34.3 MB of additional disk space will be used.
+2026-11-07T15:02:18.8204572Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-07T15:02:18.8619729Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgslcblas0 amd64 2.7.1+dfsg-6ubuntu2 [104 kB]
+2026-11-07T15:02:18.8873836Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgsl27 amd64 2.7.1+dfsg-6ubuntu2 [987 kB]
+2026-11-07T15:02:18.9266917Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgtksourceview-4-common all 4.8.4-5build4 [590 kB]
+2026-11-07T15:02:18.9586727Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgtksourceview-4-0 amd64 4.8.4-5build4 [233 kB]
+2026-11-07T15:02:18.9897205Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libspread-sheet-widget0 amd64 0.10-4.1build2 [47.2 kB]
+2026-11-07T15:02:19.0129425Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 pspp amd64 2.0.0-3build2 [6678 kB]
+2026-11-07T15:02:19.3808700Z Fetched 8638 kB in 0s (28.9 MB/s)
+2026-11-07T15:02:19.4079332Z Selecting previously unselected package libgslcblas0:amd64.
+2026-11-07T15:02:19.4384619Z (Reading database ... 
+2026-11-07T15:02:19.4385158Z (Reading database ... 5%
+2026-11-07T15:02:19.4385633Z (Reading database ... 10%
+2026-11-07T15:02:19.4386083Z (Reading database ... 15%
+2026-11-07T15:02:19.4387930Z (Reading database ... 20%
+2026-11-07T15:02:19.4388371Z (Reading database ... 25%
+2026-11-07T15:02:19.4388804Z (Reading database ... 30%
+2026-11-07T15:02:19.4389227Z (Reading database ... 35%
+2026-11-07T15:02:19.4389650Z (Reading database ... 40%
+2026-11-07T15:02:19.4391133Z (Reading database ... 45%
+2026-11-07T15:02:19.4391740Z (Reading database ... 50%
+2026-11-07T15:02:19.4432169Z (Reading database ... 55%
+2026-11-07T15:02:19.5917320Z (Reading database ... 60%
+2026-11-07T15:02:19.7877251Z (Reading database ... 65%
+2026-11-07T15:02:19.9973712Z (Reading database ... 70%
+2026-11-07T15:02:20.1588868Z (Reading database ... 75%
+2026-11-07T15:02:20.2963011Z (Reading database ... 80%
+2026-11-07T15:02:20.4384955Z (Reading database ... 85%
+2026-11-07T15:02:20.6049111Z (Reading database ... 90%
+2026-11-07T15:02:20.7473834Z (Reading database ... 95%
+2026-11-07T15:02:20.7474452Z (Reading database ... 100%
+2026-11-07T15:02:20.7475353Z (Reading database ... 215960 files and directories currently installed.)
+2026-11-07T15:02:20.7523669Z Preparing to unpack .../0-libgslcblas0_2.7.1+dfsg-6ubuntu2_amd64.deb ...
+2026-11-07T15:02:20.7572994Z Unpacking libgslcblas0:amd64 (2.7.1+dfsg-6ubuntu2) ...
+2026-11-07T15:02:20.7867316Z Selecting previously unselected package libgsl27:amd64.
+2026-11-07T15:02:20.8013229Z Preparing to unpack .../1-libgsl27_2.7.1+dfsg-6ubuntu2_amd64.deb ...
+2026-11-07T15:02:20.8024961Z Unpacking libgsl27:amd64 (2.7.1+dfsg-6ubuntu2) ...
+2026-11-07T15:02:20.8443255Z Selecting previously unselected package libgtksourceview-4-common.
+2026-11-07T15:02:20.8591805Z Preparing to unpack .../2-libgtksourceview-4-common_4.8.4-5build4_all.deb ...
+2026-11-07T15:02:20.8600971Z Unpacking libgtksourceview-4-common (4.8.4-5build4) ...
+2026-11-07T15:02:21.0730677Z Selecting previously unselected package libgtksourceview-4-0:amd64.
+2026-11-07T15:02:21.0880871Z Preparing to unpack .../3-libgtksourceview-4-0_4.8.4-5build4_amd64.deb ...
+2026-11-07T15:02:21.0892321Z Unpacking libgtksourceview-4-0:amd64 (4.8.4-5build4) ...
+2026-11-07T15:02:21.1211187Z Selecting previously unselected package libspread-sheet-widget0:amd64.
+2026-11-07T15:02:21.1359209Z Preparing to unpack .../4-libspread-sheet-widget0_0.10-4.1build2_amd64.deb ...
+2026-11-07T15:02:21.1372835Z Unpacking libspread-sheet-widget0:amd64 (0.10-4.1build2) ...
+2026-11-07T15:02:21.1646836Z Selecting previously unselected package pspp.
+2026-11-07T15:02:21.1821200Z Preparing to unpack .../5-pspp_2.0.0-3build2_amd64.deb ...
+2026-11-07T15:02:21.1832204Z Unpacking pspp (2.0.0-3build2) ...
+2026-11-07T15:02:21.4834663Z Setting up libgslcblas0:amd64 (2.7.1+dfsg-6ubuntu2) ...
+2026-11-07T15:02:21.4919230Z Setting up libgsl27:amd64 (2.7.1+dfsg-6ubuntu2) ...
+2026-11-07T15:02:21.4992534Z Setting up libspread-sheet-widget0:amd64 (0.10-4.1build2) ...
+2026-11-07T15:02:21.5017961Z Setting up libgtksourceview-4-common (4.8.4-5build4) ...
+2026-11-07T15:02:21.5047804Z Setting up libgtksourceview-4-0:amd64 (4.8.4-5build4) ...
+2026-11-07T15:02:21.5075398Z Setting up pspp (2.0.0-3build2) ...
+2026-11-07T15:02:21.5106322Z Processing triggers for install-info (7.1-3build2) ...
+2026-11-07T15:02:23.0814714Z Processing triggers for hicolor-icon-theme (0.17-2) ...
+2026-11-07T15:02:24.0914651Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-11-07T15:02:24.1274461Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-11-07T15:02:24.1302274Z Not building database; man-db/auto-update is not 'true'.
+2026-11-07T15:02:24.1321005Z Processing triggers for shared-mime-info (2.4-4) ...
+2026-11-07T15:02:25.6805306Z 
+2026-11-07T15:02:25.6806198Z Running kernel seems to be up-to-date.
+2026-11-07T15:02:25.6806858Z 
+2026-11-07T15:02:25.6810592Z No services need to be restarted.
+2026-11-07T15:02:25.6811085Z 
+2026-11-07T15:02:25.6811696Z No containers need to be restarted.
+2026-11-07T15:02:25.6812231Z 
+2026-11-07T15:02:25.6812637Z No user sessions are running outdated binaries.
+2026-11-07T15:02:25.6813113Z 
+2026-11-07T15:02:25.6813726Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-07T15:02:26.7470618Z ##[group]Run python -m pip install -r requirements-dev.lock
+2026-11-07T15:02:26.7472386Z [36;1mpython -m pip install -r requirements-dev.lock[0m
+2026-11-07T15:02:26.7502845Z shell: /usr/bin/bash -e {0}
+2026-11-07T15:02:26.7503293Z env:
+2026-11-07T15:02:26.7503773Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:26.7504644Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-11-07T15:02:26.7505473Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:26.7506205Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:26.7506957Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:26.7507702Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-11-07T15:02:26.7508310Z ##[endgroup]
+2026-11-07T15:02:27.1927162Z Collecting attrs==25.3.0 (from -r requirements-dev.lock (line 1))
+2026-11-07T15:02:27.2394779Z   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+2026-11-07T15:02:27.2680644Z Collecting jsonschema==4.23.0 (from -r requirements-dev.lock (line 2))
+2026-11-07T15:02:27.2720392Z   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-07T15:02:27.2847096Z Collecting jsonschema-specifications==2024.10.1 (from -r requirements-dev.lock (line 3))
+2026-11-07T15:02:27.2881819Z   Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl.metadata (3.0 kB)
+2026-11-07T15:02:27.3230638Z Collecting narwhals==2.27.1 (from -r requirements-dev.lock (line 4))
+2026-11-07T15:02:27.3264232Z   Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+2026-11-07T15:02:27.5414253Z Collecting numpy==2.5.4 (from -r requirements-dev.lock (line 5))
+2026-11-07T15:02:27.5450803Z   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-11-07T15:02:27.6660735Z Collecting pandas==2.3.3 (from -r requirements-dev.lock (line 6))
+2026-11-07T15:02:27.6770956Z   Downloading pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-11-07T15:02:27.7673205Z Collecting pyreadstat==1.3.3 (from -r requirements-dev.lock (line 7))
+2026-11-07T15:02:27.7722645Z   Downloading pyreadstat-1.3.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.2 kB)
+2026-11-07T15:02:27.7872470Z Collecting python-dateutil==3.0.0 (from -r requirements-dev.lock (line 8))
+2026-11-07T15:02:27.7916517Z   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+2026-11-07T15:02:27.8231863Z Collecting pytz==2026.5 (from -r requirements-dev.lock (line 9))
+2026-11-07T15:02:27.8267143Z   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+2026-11-07T15:02:27.8487871Z Collecting referencing==0.36.2 (from -r requirements-dev.lock (line 10))
+2026-11-07T15:02:27.8520432Z   Downloading referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+2026-11-07T15:02:28.1050255Z Collecting rpds-py==0.22.3 (from -r requirements-dev.lock (line 11))
+2026-11-07T15:02:28.1100826Z   Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+2026-11-07T15:02:28.1220616Z Collecting six==1.17.0 (from -r requirements-dev.lock (line 12))
+2026-11-07T15:02:28.1256123Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-11-07T15:02:28.1409258Z Collecting typing_extensions==4.16.0 (from -r requirements-dev.lock (line 13))
+2026-11-07T15:02:28.1442314Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-07T15:02:28.1577894Z Collecting tzdata==2026.5 (from -r requirements-dev.lock (line 14))
+2026-11-07T15:02:28.1609929Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-11-07T15:02:28.1969550Z Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+2026-11-07T15:02:28.2028561Z Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+2026-11-07T15:02:28.2082089Z Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+2026-11-07T15:02:28.2131233Z Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+2026-11-07T15:02:28.2208318Z Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-11-07T15:02:28.2847775Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 281.6 MB/s  0:00:00
+2026-11-07T15:02:28.2905781Z Downloading pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+2026-11-07T15:02:28.3326562Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 296.2 MB/s  0:00:00
+2026-11-07T15:02:28.3391576Z Downloading pyreadstat-1.3.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.1 MB)
+2026-11-07T15:02:28.3606285Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 156.0 MB/s  0:00:00
+2026-11-07T15:02:28.3638497Z Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+2026-11-07T15:02:28.3691619Z Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-11-07T15:02:28.3756283Z Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+2026-11-07T15:02:28.3810964Z Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (385 kB)
+2026-11-07T15:02:28.3871776Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-11-07T15:02:28.3924056Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-07T15:02:28.3978244Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-11-07T15:02:28.5784564Z Installing collected packages: pytz, tzdata, typing_extensions, six, rpds-py, numpy, narwhals, attrs, referencing, python-dateutil, pyreadstat, pandas, jsonschema-specifications, jsonschema
+2026-11-07T15:02:36.5932085Z 
+2026-11-07T15:02:36.5944412Z Successfully installed attrs-25.3.0 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 narwhals-2.27.1 numpy-2.5.4 pandas-2.3.3 pyreadstat-1.3.3 python-dateutil-3.0.0 pytz-2026.5 referencing-0.36.2 rpds-py-0.22.3 six-1.17.0 typing_extensions-4.16.0 tzdata-2026.5
+2026-11-07T15:02:36.6702785Z ##[group]Run python -m unittest discover -s tests -p '*_test.py'
+2026-11-07T15:02:36.6703332Z [36;1mpython -m unittest discover -s tests -p '*_test.py'[0m
+2026-11-07T15:02:36.6724890Z shell: /usr/bin/bash -e {0}
+2026-11-07T15:02:36.6725139Z env:
+2026-11-07T15:02:36.6725405Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:36.6725843Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-11-07T15:02:36.6726303Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:36.6726700Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:36.6727096Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:36.6727483Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-11-07T15:02:36.6727810Z ##[endgroup]
+2026-11-07T15:02:38.9321971Z .
+2026-11-07T15:02:38.9323096Z ----------------------------------------------------------------------
+2026-11-07T15:02:38.9323985Z Ran 1 test in 2.170s
+2026-11-07T15:02:38.9324367Z 
+2026-11-07T15:02:38.9324656Z OK
+2026-11-07T15:02:38.9459914Z ##[group]Run python tools/verify.py --all --require-public --require-pspp --output evidence/ci-run
+2026-11-07T15:02:38.9461242Z [36;1mpython tools/verify.py --all --require-public --require-pspp --output evidence/ci-run[0m
+2026-11-07T15:02:38.9493984Z shell: /usr/bin/bash -e {0}
+2026-11-07T15:02:38.9494409Z env:
+2026-11-07T15:02:38.9494861Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:38.9495678Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-11-07T15:02:38.9496458Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:38.9497155Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:38.9497869Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:02:38.9498568Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-11-07T15:02:38.9499162Z ##[endgroup]
+2026-11-07T15:02:40.6498843Z AC01: supported_pass
+2026-11-07T15:02:41.1435023Z AC02: supported_pass
+2026-11-07T15:02:44.9803059Z AC03: supported_pass
+2026-11-07T15:03:20.5536332Z AC04: supported_pass
+2026-11-07T15:03:32.8614301Z AC05: supported_pass
+2026-11-07T15:03:33.5157842Z AC06: supported_pass
+2026-11-07T15:03:33.5165109Z AC07: supported_pass
+2026-11-07T15:03:38.3766507Z AC08: supported_pass
+2026-11-07T15:03:40.1140692Z AC09: expected_rejection
+2026-11-07T15:03:40.1159136Z AC10: supported_pass
+2026-11-07T15:03:40.1159661Z AC11: supported_pass
+2026-11-07T15:03:40.1160170Z AC12: supported_pass
+2026-11-07T15:03:42.6966109Z AC13: supported_pass
+2026-11-07T15:03:42.6967113Z AC14: supported_pass
+2026-11-07T15:03:42.6969508Z AC15: supported_pass
+2026-11-07T15:03:42.6972136Z AC16: supported_pass
+2026-11-07T15:03:42.6974415Z AC17: supported_pass
+2026-11-07T15:04:00.8300374Z AC18: supported_pass
+2026-11-07T15:04:00.8985469Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-11-07T15:04:00.8985899Z with:
+2026-11-07T15:04:00.8986143Z   name: compatibility-evidence
+2026-11-07T15:04:00.8986882Z   path: evidence/ci-run/summary.json
+evidence/ci-run/run.json
+evidence/ci-run/**/result.json
+evidence/ci-run/**/results.json
+
+2026-11-07T15:04:00.8987447Z   if-no-files-found: error
+2026-11-07T15:04:00.8987687Z   compression-level: 6
+2026-11-07T15:04:00.8987901Z   overwrite: false
+2026-11-07T15:04:00.8988118Z   include-hidden-files: false
+2026-11-07T15:04:00.8988366Z env:
+2026-11-07T15:04:00.8988614Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:04:00.8989052Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-11-07T15:04:00.8989471Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:04:00.8989846Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:04:00.8990255Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-11-07T15:04:00.8990637Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-11-07T15:04:00.8990955Z ##[endgroup]
+2026-11-07T15:04:01.0882008Z (node:8584) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-07T15:04:01.0883796Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-07T15:04:01.2128723Z With the provided path, there will be 32 files uploaded
+2026-11-07T15:04:01.2130096Z Artifact name is valid!
+2026-11-07T15:04:01.2131069Z Root directory input is valid!
+2026-11-07T15:04:01.4477961Z Beginning upload of artifact content to blob storage
+2026-11-07T15:04:01.5430658Z (node:8584) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-07T15:04:01.6838706Z Uploaded bytes 26870
+2026-11-07T15:04:01.7189720Z Finished uploading artifact content to blob storage!
+2026-11-07T15:04:01.7191754Z SHA256 digest of uploaded artifact zip is 389c3d4e20f5e537c0949f67fdf254a05cf6d6d5572ed329c50a5206b835cb07
+2026-11-07T15:04:01.7193225Z Finalizing artifact upload
+2026-11-07T15:04:02.1172012Z Artifact compatibility-evidence.zip successfully finalized. Artifact ID 13578328334
+2026-11-07T15:04:02.1174302Z Artifact compatibility-evidence has been successfully uploaded! Final size is 26870 bytes. Artifact ID is 13578328334
+2026-11-07T15:04:02.1181192Z Artifact download URL: https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/artifacts/13578328334
+2026-11-07T15:04:02.1396671Z Post job cleanup.
+2026-11-07T15:04:02.2780267Z (node:8596) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-07T15:04:02.2782868Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-07T15:04:02.3015111Z Post job cleanup.
+2026-11-07T15:04:02.4785040Z (node:8604) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-07T15:04:02.4792000Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-07T15:04:02.5127112Z Post job cleanup.
+2026-11-07T15:04:02.6339496Z [command]/usr/bin/git version
+2026-11-07T15:04:02.6422040Z git version 2.56.0
+2026-11-07T15:04:02.6498501Z Temporarily overriding HOME='/home/runner/work/_temp/2b822a29-1894-4407-b6c2-8785776d0d7e' before making global git config changes
+2026-11-07T15:04:02.6507766Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-07T15:04:02.6525191Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonsav/moonsav
+2026-11-07T15:04:02.6603491Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-07T15:04:02.6724021Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-07T15:04:02.7159631Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-07T15:04:02.7245500Z http.https://github.com/.extraheader
+2026-11-07T15:04:02.7250214Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-07T15:04:02.7327532Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-07T15:04:02.7780887Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-07T15:04:02.7834990Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-07T15:04:02.8292272Z Cleaning up orphan processes
+2026-11-07T15:04:02.8652792Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

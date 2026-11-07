@@ -1,0 +1,22 @@
+{
+  "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/integration-clean",
+  "preparation": [
+    "npm",
+    "ci",
+    "--offline",
+    "--ignore-scripts"
+  ],
+  "command": [
+    "tools/verify.py",
+    "--all",
+    "--require-public",
+    "--require-pspp",
+    "--output",
+    ".cache/integration-full"
+  ],
+  "python": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/venv/bin/python",
+  "Moon_PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/moon-ci/bin",
+  "PSPP": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/pspp/bin/pspp",
+  "exit_code": 0,
+  "scope": "fresh committed clone; locked npm dev dependency, fixed existing Python/Moon/PSPP and SHA-checked public cache reused; not a clean-machine setup claim"
+}

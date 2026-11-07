@@ -1,0 +1,24 @@
+[
+  {
+    "label": "actual-runtime",
+    "command": [
+      "/usr/local/bin/node",
+      "-p",
+      "JSON.stringify({node:process.version,icu:process.versions.icu,platform:process.platform,arch:process.arch})"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts",
+    "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+    "exit_code": 0
+  },
+  {
+    "label": "host-ts-version",
+    "command": [
+      "/usr/local/bin/node",
+      "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/node_modules/typescript/bin/tsc",
+      "--version"
+    ],
+    "cwd": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts",
+    "PATH": "/Users/henryz/Desktop/\u6bd4\u8d5b/moonsav/.dev/integration-20261107/worktree/.dev/node-integration-review/exact-artifacts/only-node",
+    "exit_code": 0
+  }
+]

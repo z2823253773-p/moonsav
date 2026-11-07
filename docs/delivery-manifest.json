@@ -1,6 +1,26 @@
 {
-  "delivery_scope": "Node integration candidate; committed clean artifacts and new CI pending",
-  "product_git_sha": null,
+  "delivery_scope": "Node integration candidate on feature branch; accepted baseline unchanged",
+  "product_git_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+    "dirty": false,
+    "source_tree_sha256": "9284c43f6b4fa169869e0a44128c0acc0b44b59aeb7b933fd7551b5a50e96caa",
+    "moon": "0.1.20261023",
+    "moonc": "v0.10.17+d971670cd",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+      "size_bytes": 313794
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "f92ef14cd516f171cd8680e2a2357258869648c2444fe96f7daccbb98c2a4aa5",
+      "size_bytes": 76185
+    }
+  },
   "accepted_baseline": {
     "date": "2026-11-06",
     "verdict": "PASSED",
@@ -38,16 +58,57 @@
     "report_sha256": "3011e6d223ecb5ca4ab37b3b9dc31e06e01520ca789e42cbfcbcde458afff3d2",
     "record_scope": "snapshot of designated accepted baseline; not a new verdict for feature/node-integration"
   },
-  "runtime": "Node24.15.0/ICU78.2; no runtime npm dependencies",
-  "new_surface": [
-    "root SavError/inspectSav/readSav",
-    "shipped TypeScript declarations",
-    "installed missing-count example"
+  "integration_surface": [
+    "package root ESM/CJS SavError/inspectSav/readSav",
+    "shipped strict NodeNext declarations and nullable discriminants",
+    "installed Node missing-count example"
   ],
-  "local_verification": {
-    "node_each_toolchain": 142,
-    "core_each_backend_each_toolchain": 16,
-    "package_consumer": "4/4; corrected legacy alias regression included"
+  "development_only_dependency": "TypeScript5.9.3, pinned lockfile; no runtime npm dependency",
+  "local_acceptance": "evidence/node-integration-20261107/full-run/summary.json",
+  "date_challenge": "evidence/node-integration-20261107/challenge-date-results.json",
+  "original_challenge": "evidence/node-integration-20261107/challenge-original-results.json",
+  "remote_ci": {
+    "repository": "z2823253773-p/moonsav",
+    "private": true,
+    "run_id": 42384344415,
+    "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415",
+    "head_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "platform (ubuntu-24.04)",
+        "conclusion": "success",
+        "databaseId": 128438460814,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460814"
+      },
+      {
+        "name": "platform (windows-2025)",
+        "conclusion": "success",
+        "databaseId": 128438460956,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460956"
+      },
+      {
+        "name": "platform (macos-15)",
+        "conclusion": "success",
+        "databaseId": 128438460969,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460969"
+      },
+      {
+        "name": "independent-oracles",
+        "conclusion": "success",
+        "databaseId": 128438460972,
+        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415/job/128438460972"
+      }
+    ],
+    "linux_summary": "evidence/node-integration-20261107/remote-ci/artifact/summary.json"
   },
-  "publication": "private feature branch only; no merge/public release/event submission"
+  "independent_review": "evidence/node-integration-20261107/independent-review/REPORT.md",
+  "review_finding": "P2 wildcard exports regression fixed by main/types-only design; real installed regression RED→GREEN",
+  "independent_exact_archive_consumption": "evidence/node-integration-20261107/independent-review/exact-artifacts/result.json",
+  "candidate_designated_acceptance": "not issued; baseline PASSED applies only5c1ff8d exact bytes",
+  "branch": "feature/node-integration",
+  "worktree": "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree",
+  "original_checkout": "/Users/henryz/Desktop/比赛/moonsav",
+  "merge_performed": false,
+  "publication": "private feature branch only; no public release/event registration/submission"
 }

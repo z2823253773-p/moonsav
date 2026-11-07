@@ -1,0 +1,147 @@
+{
+  "archive_sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+  "source_url": "https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html",
+  "observations": [
+    {
+      "format": "F",
+      "strict": false,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/F.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "expected_date_warning": false,
+      "expectation_met": true,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true}\n",
+      "stderr": ""
+    },
+    {
+      "format": "F",
+      "strict": true,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/F.sav",
+        "--json",
+        "--fail-on-warning"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "expected_date_warning": false,
+      "expectation_met": true,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true}\n",
+      "stderr": ""
+    },
+    {
+      "format": "PCT",
+      "strict": false,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/PCT.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "expected_date_warning": false,
+      "expectation_met": true,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true}\n",
+      "stderr": ""
+    },
+    {
+      "format": "PCT",
+      "strict": true,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/PCT.sav",
+        "--json",
+        "--fail-on-warning"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "expected_date_warning": false,
+      "expectation_met": true,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true}\n",
+      "stderr": ""
+    },
+    {
+      "format": "MTIME",
+      "strict": false,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/MTIME.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "expected_date_warning": true,
+      "expectation_met": true,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed_with_warnings\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[{\"warning_code\":\"RawDateFormat\",\"scope\":\"variable:0\",\"suggested_action\":\"Date/time values remain numeric; consult print/write format\"}],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true}\n",
+      "stderr": ""
+    },
+    {
+      "format": "MTIME",
+      "strict": true,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/MTIME.sav",
+        "--json",
+        "--fail-on-warning"
+      ],
+      "exit_code": 7,
+      "expected_exit": 7,
+      "expected_date_warning": true,
+      "expectation_met": true,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"failed\",\"validation_scope\":\"full\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"WarningRejected\",\"message\":\"Warnings rejected by --fail-on-warning; no completed output was created\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Keep the original input; consult supported formats and retry.\",\"output_state\":\"not_created\"}}\n"
+    },
+    {
+      "format": "YMDHMS",
+      "strict": false,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/YMDHMS.sav",
+        "--json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "expected_date_warning": true,
+      "expectation_met": true,
+      "stdout": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"passed_with_warnings\",\"validation_scope\":\"full\",\"declared_rows\":5,\"actual_rows\":5,\"logical_variables\":3,\"warnings\":[{\"warning_code\":\"RawDateFormat\",\"scope\":\"variable:0\",\"suggested_action\":\"Date/time values remain numeric; consult print/write format\"}],\"uninterpreted_metadata\":[],\"error\":null,\"counts\":[[3,1,1],[5,0,0],[5,0,0]],\"completed\":true}\n",
+      "stderr": ""
+    },
+    {
+      "format": "YMDHMS",
+      "strict": true,
+      "argv": [
+        "node",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/archive/package/bin/moonsav.mjs",
+        "validate",
+        "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/.dev/integration/challenge-date/YMDHMS.sav",
+        "--json",
+        "--fail-on-warning"
+      ],
+      "exit_code": 7,
+      "expected_exit": 7,
+      "expected_date_warning": true,
+      "expectation_met": true,
+      "stdout": "",
+      "stderr": "{\"report_version\":\"moonsav.report/1\",\"command\":\"validate\",\"status\":\"failed\",\"validation_scope\":\"full\",\"declared_rows\":null,\"actual_rows\":null,\"logical_variables\":null,\"warnings\":[],\"error\":{\"code\":\"WarningRejected\",\"message\":\"Warnings rejected by --fail-on-warning; no completed output was created\",\"byte_offset\":null,\"record\":null,\"subtype\":null,\"variable_index\":null,\"row_index\":null,\"actual\":null,\"limit\":null,\"suggested_action\":\"Keep the original input; consult supported formats and retry.\",\"output_state\":\"not_created\"}}\n"
+    }
+  ],
+  "all_expectations_met": true
+}
