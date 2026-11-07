@@ -1,0 +1,8 @@
+{
+  "success": 32,
+  "rejected": 11,
+  "cells": 175,
+  "atoms": 45,
+  "node": "v24.15.0",
+  "icu": "78.2"
+}

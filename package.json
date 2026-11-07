@@ -24,11 +24,17 @@
     "licenses",
     "toolchain.json",
     "docs/CODEC_PROFILES.md",
-    "docs/CONTRACTS.md"
+    "docs/CONTRACTS.md",
+    "examples/read_sav.mjs"
   ],
   "scripts": {
     "build": "node tools/build.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:core": "moon test --target js"
-  }
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "main": "./node/index.mjs",
+  "types": "./node/api.d.mts"
 }

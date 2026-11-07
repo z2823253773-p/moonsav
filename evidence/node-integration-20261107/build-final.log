@@ -1,0 +1,4 @@
+Warning: `include` in `/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/moon.mod` is deprecated; use `.gitignore` or `.moonignore` to control which files are packaged instead. `.moonignore` overrides `.gitignore` in the same directory.
+Finished. moon: no work to do
+Artifacts:
+  z2823253773/moonsav/bridge  js  /Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/_build/js/release/build/bridge/bridge.js

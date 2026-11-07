@@ -2,7 +2,7 @@
 
 MoonBit 原生 SPSS `.sav` 字节读取库和离线 CLI。MoonBit 实现格式解析、传统压缩、字典、长字符串重组、标签/缺失语义以及 bundle 序列化和语义校验；Node 只负责文件、哈希、严格编码适配与进程入口。
 
-版本 0.1.0，尚未公开发布。2026-11-06 原指定验收对冻结源码 `e453463` 及对应精确归档给出 **PASSED_WITH_NOTES（产品技术验收有保留通过）**，原 F1–F5 已复验通过；保留意见是日期提示分类 P3 和文档状态。当前修正日期提示，后续构建的源码、归档哈希、专项验证与新 CI 结果见[交付清单](https://github.com/z2823253773-p/moonsav/blob/implementation/docs/delivery-manifest.json)和[当前交接](https://github.com/z2823253773-p/moonsav/blob/implementation/docs/FINAL_HANDOFF.md)。旧版技术验收结论只覆盖其记录的精确归档，不自动覆盖新包。产品技术验收不代表赛事初审、组织方认可或外部真人试用。
+版本 0.1.0，尚未公开发布。2026-11-06 原指定验收对冻结源码 `5c1ff8d` 和对应精确归档给出 **PASSED（产品技术验收通过）**，覆盖原 F1–F5、日期提示分类和文档同步；历史报告保留。当前独立 `feature/node-integration` 分支补齐 Node 标准入口、类型声明和集成示例，属于新候选，不能复用旧包的精确哈希验收结论。当前候选源码、归档哈希及 CI 见[交付清单](https://github.com/z2823253773-p/moonsav/blob/feature/node-integration/docs/delivery-manifest.json)。技术验收不代表赛事初审、组织方认可或外部真人试用。
 
 ## 本地安装与第一次运行
 
@@ -21,6 +21,33 @@ npm install --offline --ignore-scripts ./dist/moonsav-0.1.0.tgz
 
 完整的对象、字段、默认值、单位、回调所有权、错误、输入输出与状态约束见 [CONTRACTS](docs/CONTRACTS.md)。回调字典与行使用独立快照，集合本身不是语言级深冻结。
 
+## Node 程序集成
+
+安装归档后可直接从包名导入；Node 运行时不需要 TypeScript 或其它 npm 运行依赖：
+
+```js
+import {readFileSync} from 'node:fs';
+import {inspectSav, readSav, SavError} from 'moonsav';
+
+const bytes = readFileSync('survey.sav');
+const dictionary = inspectSav(bytes); // 只检查字典；actual_rows=null
+const dataset = readSav(bytes);       // 完整扫描成功后才返回收集的行
+console.log({declared: dictionary.declared_rows, actual: dataset.rows.length});
+```
+
+固定 Node24.15.0 也可以 `const {readSav} = require('moonsav')`。根入口仅导出 `SavError/inspectSav/readSav`；原 `moonsav/node/api.mjs` 及其它包内文件路径保持可访问，内部桥接接口不因此成为稳定 API。
+
+随包声明支持 TypeScript 严格 NodeNext 检查，不引入运行依赖。Cell 和 Atom 使用判别联合，系统缺失的 decimal 为 null；声明行数也可能为 null。先判断 `cell.kind` 和 `cell.missing` 后消费值。选项显式 undefined 使用默认值，未知键及非法参数仍由运行时拒绝；类型检查不替代文件校验。返回集合是可修改快照，没有深冻结承诺。开放错误 code 需要未知值回退。
+
+可直接运行不打印个体值的集成示例，输出实际行列数及每列 `[present,user,system]` 计数：
+
+```sh
+node node_modules/moonsav/examples/read_sav.mjs
+node node_modules/moonsav/examples/read_sav.mjs "你的问卷.sav"
+```
+
+省略路径时使用随包合成样例。示例不猜测99/空白/NA的含义，不换算日期。readSav 会收集数据，小内存或逐行处理需求仍应使用 MoonBit scan_bytes 或 CLI 成套导出流程。完整类型与所有权定义见 CONTRACTS。
+
 ## 支持和边界
 
 - 小端 IEEE754 `$FL2`，未压缩0和传统字节码1；已知/未知行数；非默认 bias。
@@ -30,7 +57,7 @@ npm install --offline --ignore-scripts ./dist/moonsav-0.1.0.tgz
 - 日期始终保留原数值和print/write格式；数值变量任一格式为 GNU 日期/时间编码20–30或38–41时，每列给一次 RawDateFormat 提示，严格模式拒绝；PCT/DOT/自定义货币31–37不触发日期提示。分类依据 [GNU SAV 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
 - 拒绝大端、IBM/VAX浮点、FL3/zlib/ZSAV、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
 
-已执行的跨平台基线为源码 `e453463` 的 [CI42248646372](https://github.com/z2823253773-p/moonsav/actions/runs/42248646372)，四个作业全部通过；新修正版的对应 CI 以交付清单为准。Node24.15.0 / ICU78.2 固定，源码使用 toolchain.json 的完整编译器/core 配对。
+已执行的跨平台基线为源码 `5c1ff8d` 的 [CI42255719356](https://github.com/z2823253773-p/moonsav/actions/runs/42255719356)，四个作业全部通过；新修正版的对应 CI 以交付清单为准。Node24.15.0 / ICU78.2 固定，源码使用 toolchain.json 的完整编译器/core 配对。
 
 | 已验证环境 | 实际范围 |
 | --- | --- |
@@ -107,6 +134,7 @@ Options包含limits、encoding_override、DatePolicy::Raw及严格decoder回调�
 ```sh
 python3.12 -m venv .dev/venv
 .dev/venv/bin/python -m pip install -r requirements-dev.lock
+npm ci --ignore-scripts
 node tools/build.mjs
 npm test
 moon test src --target js
@@ -115,6 +143,6 @@ moon test src --target wasm-gc
 .dev/venv/bin/python tools/verify.py --all --require-public --require-pspp --output evidence/my-run
 ```
 
-公共语料下载到忽略的.cache，依赖和PSPP仅在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
+TypeScript5.9.3只用于开发测试；先执行 npm ci --ignore-scripts。运行已安装的CLI/API不需要它。公共语料下载到忽略的.cache，Python/PSPP验证环境在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
 
 Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[私有 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。

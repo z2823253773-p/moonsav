@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "node/api.mjs": {
+      "ok": true,
+      "type": "object"
+    },
+    "schemas/metadata.schema.json": {
+      "ok": true,
+      "type": "object"
+    },
+    "schemas/metadata.schema": {
+      "ok": true,
+      "type": "object"
+    },
+    "lib/moonsav": {
+      "ok": true,
+      "type": "object"
+    }
+  },
+  "candidate": {
+    "node/api.mjs": {
+      "ok": true,
+      "type": "object"
+    },
+    "schemas/metadata.schema.json": {
+      "ok": true,
+      "type": "object"
+    },
+    "schemas/metadata.schema": {
+      "ok": false,
+      "code": "MODULE_NOT_FOUND"
+    },
+    "lib/moonsav": {
+      "ok": false,
+      "code": "MODULE_NOT_FOUND"
+    }
+  }
+}

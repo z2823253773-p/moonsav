@@ -1,0 +1,17 @@
+{
+  "root": {
+    "ok": false,
+    "code": "ERR_MODULE_NOT_FOUND",
+    "message": "Cannot find package '/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/consumer/node_modules/moonsav/index.js' imported from /Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/consumer/[eval1]"
+  },
+  "documentedPath": {
+    "ok": true,
+    "exports": [
+      "SavError",
+      "checkerCall",
+      "dispatch",
+      "inspectSav",
+      "readSav"
+    ]
+  }
+}

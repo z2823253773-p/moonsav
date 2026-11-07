@@ -52,7 +52,7 @@ flowchart LR
 
 ### Node 稳定字节 API
 
-`node/api.mjs` 的稳定入口是 `inspectSav(input, options?)`、`readSav(input, options?)` 和 `SavError`。
+标准包入口 `import {inspectSav, readSav, SavError} from 'moonsav'` 与固定 Node24 的 `require('moonsav')` 提供这三个稳定值；原 `moonsav/node/api.mjs` 路径保留。入口不导出 dispatch/checkerCall。随包 node/api.d.mts 声明描述相同的 JSON 对象、nullable 字段、Cell/Atom 判别联合和可选错误上下文；错误 code 保持开放。声明只描述支持域，运行时验证仍是最终边界，数组不被声明为深冻结。TypeScript5.9.3仅用于开发验证，不是运行依赖。
 
 - input 必须为 Node 当前环境的 `Uint8Array` 或 `Buffer`；`ArrayBuffer` 须显式包装。调用返回前不得修改、共享写入或 detach 输入。
 - options 默认为 `{}`，只接受普通自有数据字段对象（Object.prototype 或 null 原型），拒绝自定义继承、Proxy、访问器和 symbol 键；不可枚举的数据字段同样检查并只读取一次。只接受 `encoding`、`maxRows`、`maxInputBytes`、`maxOutputBytes`。未知键、null/数组选项对象、错误类型、空编码为 Usage；合法整数超限或非正为 ResourceLimit；不支持的非空编码由核心报 UnsupportedEncoding。

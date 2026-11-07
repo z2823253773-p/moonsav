@@ -1,0 +1,50 @@
+✖ fixed Node24 CommonJS can load the same synchronous package API (27.862083ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 394.454542
+
+✖ failing tests:
+
+test at tests/package.test.mjs:24:1
+✖ fixed Node24 CommonJS can load the same synchronous package API (27.862083ms)
+  AssertionError [ERR_ASSERTION]: node:internal/modules/cjs/loader:692
+        throw e;
+        ^
+  
+  Error: Cannot find module '/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 BUVuxt/node_modules/moonsav/schemas/metadata.schema'
+      at createEsmNotFoundErr (node:internal/modules/cjs/loader:1513:15)
+      at finalizeEsmResolution (node:internal/modules/cjs/loader:1502:9)
+      at resolveExports (node:internal/modules/cjs/loader:685:14)
+      at Module._findPath (node:internal/modules/cjs/loader:752:31)
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1461:27)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+      at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+      at Module._load (node:internal/modules/cjs/loader:1262:25)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:255:19) {
+    code: 'MODULE_NOT_FOUND',
+    path: '/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 BUVuxt/node_modules/moonsav'
+  }
+  
+  Node.js v24.15.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/.dev/integration-20261107/worktree/tests/package.test.mjs:25:433)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

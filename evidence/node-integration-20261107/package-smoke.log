@@ -1,0 +1,16 @@
+/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree/tools/package_smoke.py:46: DeprecationWarning: Accessing jsonschema.__version__ is deprecated and will be removed in a future release. Use importlib.metadata directly to query for jsonschema's version.
+  result={'status':'supported_pass','records':records,'cli_environment':{'PATH':'<node-only>','moon_on_PATH':False,'python_on_PATH':False,'network':'npm offline; runtime has no network code'},'version':version,'npm_members':members,'source_members':source_members,'artifacts':artifacts,'schema_validation':'metadata manifest every row and all successful report commands; jsonschema '+jsonschema.__version__,'consumer_rows':5}
+{
+  "status": "supported_pass",
+  "error": null,
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "7715082538f7fb57ca7ea2397b295f78a88b39f1d31c7268337d4ff595efa9bf",
+      "size_bytes": 313771
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "cb0043a30428f00fc27e98614e486770862a8ae60dded13fd7cbfb551c388ba5",
+      "size_bytes": 76137
+    }
+  }
+}

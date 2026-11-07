@@ -1,0 +1,169 @@
+✖ installed package root exposes only the stable API and preserves legacy imports (21.738792ms)
+✖ fixed Node24 CommonJS can load the same synchronous package API (17.870583ms)
+✖ installed declarations support strict NodeNext narrowing and reject wrong calls (121.621875ms)
+✖ installed Node example reports real missing counts without individual values (20.814625ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 556.431042
+
+✖ failing tests:
+
+test at tests/package.test.mjs:17:1
+✖ installed package root exposes only the stable API and preserves legacy imports (21.738792ms)
+  AssertionError [ERR_ASSERTION]: node:internal/modules/esm/resolve:201
+    const resolvedOption = FSLegacyMainResolve(pkgPath, packageConfig.main, baseStringified);
+                           ^
+  
+  Error: Cannot find package '/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/node_modules/moonsav/index.js' imported from /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/consumer.mjs
+      at legacyMainResolve (node:internal/modules/esm/resolve:201:26)
+      at packageResolve (node:internal/modules/esm/resolve:774:12)
+      at moduleResolve (node:internal/modules/esm/resolve:855:18)
+      at defaultResolve (node:internal/modules/esm/resolve:988:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:697:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:714:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:746:52)
+      at #resolve (node:internal/modules/esm/loader:679:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:599:35)
+      at ModuleJob.syncLink (node:internal/modules/esm/module_job:162:33) {
+    code: 'ERR_MODULE_NOT_FOUND'
+  }
+  
+  Node.js v24.15.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/.dev/integration-20261107/worktree/tests/package.test.mjs:22:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/package.test.mjs:24:1
+✖ fixed Node24 CommonJS can load the same synchronous package API (17.870583ms)
+  AssertionError [ERR_ASSERTION]: node:internal/modules/cjs/loader:1479
+    throw err;
+    ^
+  
+  Error: Cannot find module 'moonsav'
+  Require stack:
+  - /private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/consumer.cjs
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+      at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+      at Module._load (node:internal/modules/cjs/loader:1262:25)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+      at Module.require (node:internal/modules/cjs/loader:1576:12)
+      at require (node:internal/modules/helpers:153:16)
+      at Object.<anonymous> (/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/consumer.cjs:1:48)
+      at Module._compile (node:internal/modules/cjs/loader:1830:14) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/consumer.cjs'
+    ]
+  }
+  
+  Node.js v24.15.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/.dev/integration-20261107/worktree/tests/package.test.mjs:25:295)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/package.test.mjs:27:1
+✖ installed declarations support strict NodeNext narrowing and reject wrong calls (121.621875ms)
+  AssertionError [ERR_ASSERTION]: consumer.mts(1,90): error TS2307: Cannot find module 'moonsav' or its corresponding type declarations.
+  consumer.mts(2,37): error TS7016: Could not find a declaration file for module 'moonsav/node/api.mjs'. '/private/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/node_modules/moonsav/node/api.mjs' implicitly has an 'any' type.
+    Try `npm i --save-dev @types/moonsav` if it exists or add a new declaration (.d.ts) file containing `declare module 'moonsav/node/api.mjs';`
+  consumer.mts(14,3): error TS2578: Unused '@ts-expect-error' directive.
+  consumer.mts(18,3): error TS2578: Unused '@ts-expect-error' directive.
+  consumer.mts(27,81): error TS18046: 'error' is of type 'unknown'.
+  consumer.mts(27,127): error TS18046: 'error' is of type 'unknown'.
+  consumer.mts(28,1): error TS2578: Unused '@ts-expect-error' directive.
+  consumer.mts(30,1): error TS2578: Unused '@ts-expect-error' directive.
+  consumer.mts(32,1): error TS2578: Unused '@ts-expect-error' directive.
+  consumer.mts(34,1): error TS2578: Unused '@ts-expect-error' directive.
+  consumer.mts(38,1): error TS2578: Unused '@ts-expect-error' directive.
+  
+  
+  2 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/.dev/integration-20261107/worktree/tests/package.test.mjs:29:266)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/package.test.mjs:31:1
+✖ installed Node example reports real missing counts without individual values (20.814625ms)
+  AssertionError [ERR_ASSERTION]: node:internal/modules/cjs/loader:1479
+    throw err;
+    ^
+  
+  Error: Cannot find module '/var/folders/l0/z510jl1d0rxc2cpk2jkvmks80000gn/T/moonsav-package 中文 cjLGHn/node_modules/moonsav/examples/read_sav.mjs'
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+      at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+      at Module._load (node:internal/modules/cjs/loader:1262:25)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+      at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+      at node:internal/main/run_main_module:33:47 {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: []
+  }
+  
+  Node.js v24.15.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/henryz/Desktop/%E6%AF%94%E8%B5%9B/moonsav/.dev/integration-20261107/worktree/tests/package.test.mjs:32:83)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

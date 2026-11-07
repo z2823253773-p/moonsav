@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-06",
+  "verdict": "PASSED",
+  "scope": "v0.1 product technical acceptance within declared support matrix; no event approval implied",
+  "product_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+  "head": "50104a8658755ad8126afebc677dce2c560f6a2b",
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "2d6396266353c5b5f429427a823ed358eebf2ae1403d6abaa36e8c0a9db29ee1",
+      "size_bytes": 311136
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "dc5d7e509582b687018cacaa066461a16ae23ab338065fdfa6a1668269098dff",
+      "size_bytes": 75195
+    }
+  },
+  "report": "2026-11-06-final/REPORT.md",
+  "previous": "2026-11-06/REPORT.md",
+  "previous_verdict": "PASSED_WITH_NOTES",
+  "closed_findings": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "R1 RawDateFormat classification",
+    "README platform/status synchronization"
+  ],
+  "known_blocking_findings": [],
+  "next_action": "Keep frozen candidate; practical user walkthrough and official event/material verification separately",
+  "product_changed_during_acceptance": false,
+  "public_release": false,
+  "organizer_acceptance": "not_established",
+  "external_human_trial": "not_performed",
+  "report_sha256": "3011e6d223ecb5ca4ab37b3b9dc31e06e01520ca789e42cbfcbcde458afff3d2",
+  "record_scope": "snapshot of designated accepted baseline; not a new verdict for feature/node-integration"
+}

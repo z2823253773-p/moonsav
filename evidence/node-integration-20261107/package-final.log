@@ -1,0 +1,12 @@
+✔ installed package root exposes only the stable API and preserves legacy imports (34.508959ms)
+✔ fixed Node24 CommonJS can load the same synchronous package API (25.769708ms)
+✔ installed declarations support strict NodeNext narrowing and reject wrong calls (125.946458ms)
+✔ installed Node example reports real missing counts without individual values (89.332834ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 681.091459

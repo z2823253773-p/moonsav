@@ -1,110 +1,53 @@
 {
-  "delivery_scope": "date-warning corrected technical freeze candidate; no contest submission",
-  "product_git_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
-  "build": {
-    "version": "0.1.0",
-    "git_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
-    "dirty": false,
-    "source_tree_sha256": "be4b72b90a6bdc927b085da3e89e477ce239f45cb2fb388251d5b271d41def71",
-    "moon": "0.1.20261023",
-    "moonc": "v0.10.17+d971670cd",
-    "node": "v24.15.0",
-    "icu": "78.2"
-  },
-  "artifacts": {
-    "moonsav-0.1.0.tgz": {
-      "sha256": "2d6396266353c5b5f429427a823ed358eebf2ae1403d6abaa36e8c0a9db29ee1",
-      "size_bytes": 311136
-    },
-    "moonsav-source-0.1.0.zip": {
-      "sha256": "dc5d7e509582b687018cacaa066461a16ae23ab338065fdfa6a1668269098dff",
-      "size_bytes": 75195
-    }
-  },
-  "technical_acceptance_baseline": {
-    "verdict": "PASSED_WITH_NOTES",
-    "report": "docs/acceptance/2026-11-06/REPORT.md",
-    "report_sha256": "a1d03cacdcf676d743d51a4eaff5bcbef76a4c3872debda280ef64a3ba7b1878",
-    "review_date": "2026-11-06",
-    "product_git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
-    "build": {
-      "version": "0.1.0",
-      "git_sha": "e453463ae8206fffb8a6fae860168d4a2be8c6ae",
-      "dirty": false,
-      "source_tree_sha256": "f1334fe3947b42e0dba4e70a6ac3f5340b25c6498e1da3ca756004fc7cc0dfd7",
-      "moon": "0.1.20261023",
-      "moonc": "v0.10.17+d971670cd",
-      "node": "v24.15.0",
-      "icu": "78.2"
-    },
+  "delivery_scope": "Node integration candidate; committed clean artifacts and new CI pending",
+  "product_git_sha": null,
+  "accepted_baseline": {
+    "date": "2026-11-06",
+    "verdict": "PASSED",
+    "scope": "v0.1 product technical acceptance within declared support matrix; no event approval implied",
+    "product_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
+    "head": "50104a8658755ad8126afebc677dce2c560f6a2b",
     "artifacts": {
       "moonsav-0.1.0.tgz": {
-        "sha256": "9817d55a6880693ecaf615c3ce7da721b4eda951202371c2d410588bb29f5bc7",
-        "size_bytes": 310035
+        "sha256": "2d6396266353c5b5f429427a823ed358eebf2ae1403d6abaa36e8c0a9db29ee1",
+        "size_bytes": 311136
       },
       "moonsav-source-0.1.0.zip": {
-        "sha256": "a5f7ad5ae55a0a81755d2cbc01e788960c0ba7bdf3a16481f0972f9119b35618",
-        "size_bytes": 73493
+        "sha256": "dc5d7e509582b687018cacaa066461a16ae23ab338065fdfa6a1668269098dff",
+        "size_bytes": 75195
       }
     },
-    "notes": [
-      "P3 RawDateFormat category misclassification",
-      "README/current handoff state stale"
+    "report": "2026-11-06-final/REPORT.md",
+    "previous": "2026-11-06/REPORT.md",
+    "previous_verdict": "PASSED_WITH_NOTES",
+    "closed_findings": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "R1 RawDateFormat classification",
+      "README platform/status synchronization"
     ],
-    "scope": "designated product technical acceptance only; exact e453463 archives; no contest approval or external-human trial"
+    "known_blocking_findings": [],
+    "next_action": "Keep frozen candidate; practical user walkthrough and official event/material verification separately",
+    "product_changed_during_acceptance": false,
+    "public_release": false,
+    "organizer_acceptance": "not_established",
+    "external_human_trial": "not_performed",
+    "report_sha256": "3011e6d223ecb5ca4ab37b3b9dc31e06e01520ca789e42cbfcbcde458afff3d2",
+    "record_scope": "snapshot of designated accepted baseline; not a new verdict for feature/node-integration"
   },
-  "corrected_candidate_assessment": {
-    "date_warning_P3": "fixed; unchanged acceptance counterexample now exit0",
-    "full_local_and_linux": "17 supported_pass plus29 expected rejection vectors",
-    "designated_new_archive_verdict": "not issued; baseline approval is exact e453463 only",
-    "competition_preliminary_approval": false,
-    "external_human_trial": false
-  },
-  "local_acceptance": "evidence/date-warning-20261106/full-run/summary.json",
-  "date_warning_challenge": "evidence/date-warning-20261106/archive-format-green-results.json",
-  "original_challenge": "evidence/date-warning-20261106/archive-original-green-results.json",
-  "remote_ci": {
-    "repository": "z2823253773-p/moonsav",
-    "private": true,
-    "run_id": 42255719356,
-    "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42255719356",
-    "head_sha": "5c1ff8dc7fa6ea8ea65b9849f5bb921db602856b",
-    "conclusion": "success",
-    "jobs": [
-      {
-        "name": "independent-oracles",
-        "conclusion": "success",
-        "databaseId": 128022247574,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42255719356/job/128022247574"
-      },
-      {
-        "name": "platform (ubuntu-24.04)",
-        "conclusion": "success",
-        "databaseId": 128022247696,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42255719356/job/128022247696"
-      },
-      {
-        "name": "platform (macos-15)",
-        "conclusion": "success",
-        "databaseId": 128022247902,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42255719356/job/128022247902"
-      },
-      {
-        "name": "platform (windows-2025)",
-        "conclusion": "success",
-        "databaseId": 128022248035,
-        "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42255719356/job/128022248035"
-      }
-    ],
-    "independent_oracle_summary": "evidence/date-warning-20261106/remote-ci/artifact/summary.json"
-  },
-  "independent_review": "evidence/date-warning-20261106/independent-review/REVIEW.md",
-  "independent_exact_archive_consumption": "evidence/date-warning-20261106/independent-review/archive-consumer-result.json",
-  "technical_freeze_directory": "dist/submission/moonsav-0.1.0-20261106-5c1ff8d",
-  "historical_artifacts": "dist/history/e453463,a3c4b22,0afbe34,8ae93f2; original bytes preserved",
-  "platform_limits": [
-    "Windows native/POSIX equivalence not claimed",
-    "Mac ReadStat supplementary-plane oracle limitation retained"
+  "runtime": "Node24.15.0/ICU78.2; no runtime npm dependencies",
+  "new_surface": [
+    "root SavError/inspectSav/readSav",
+    "shipped TypeScript declarations",
+    "installed missing-count example"
   ],
-  "publication": "authorized private push/CI only; no public npm/Mooncakes release, contest registration or submission"
+  "local_verification": {
+    "node_each_toolchain": 142,
+    "core_each_backend_each_toolchain": 16,
+    "package_consumer": "4/4; corrected legacy alias regression included"
+  },
+  "publication": "private feature branch only; no merge/public release/event submission"
 }
