@@ -1,5 +1,5 @@
 {
-  "delivery_scope": "Node integration candidate on feature branch; accepted baseline unchanged",
+  "delivery_scope": "Node-integrated designated technical acceptance PASSED; public repository; no event approval",
   "product_git_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
   "build": {
     "version": "0.1.0",
@@ -69,7 +69,7 @@
   "original_challenge": "evidence/node-integration-20261107/challenge-original-results.json",
   "remote_ci": {
     "repository": "z2823253773-p/moonsav",
-    "private": true,
+    "private": false,
     "run_id": 42384344415,
     "url": "https://github.com/z2823253773-p/moonsav/actions/runs/42384344415",
     "head_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
@@ -110,5 +110,13 @@
   "worktree": "/Users/henryz/Desktop/比赛/moonsav/.dev/integration-20261107/worktree",
   "original_checkout": "/Users/henryz/Desktop/比赛/moonsav",
   "merge_performed": false,
-  "publication": "private feature branch only; no public release/event registration/submission"
+  "publication": "private feature branch only; no public release/event registration/submission",
+  "repository_visibility": "public",
+  "designated_acceptance": {
+    "verdict": "PASSED",
+    "date": "2026-11-13",
+    "report": "docs/ACCEPTANCE_STATUS.md",
+    "evidence": "evidence/reacceptance-20261113/summary.json",
+    "exact_artifacts": true
+  }
 }

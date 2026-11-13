@@ -2,7 +2,7 @@
 
 MoonBit 原生 SPSS `.sav` 字节读取库和离线 CLI。MoonBit 实现格式解析、传统压缩、字典、长字符串重组、标签/缺失语义以及 bundle 序列化和语义校验；Node 只负责文件、哈希、严格编码适配与进程入口。
 
-版本 0.1.0，尚未公开发布。2026-11-06 原指定验收对冻结源码 `5c1ff8d` 和对应精确归档给出 **PASSED（产品技术验收通过）**，覆盖原 F1–F5、日期提示分类和文档同步；历史报告保留。当前独立 `feature/node-integration` 分支补齐 Node 标准入口、类型声明和集成示例，属于新候选，不能复用旧包的精确哈希验收结论。当前候选源码、归档哈希及 CI 见[交付清单](https://github.com/z2823253773-p/moonsav/blob/feature/node-integration/docs/delivery-manifest.json)。技术验收不代表赛事初审、组织方认可或外部真人试用。
+版本 0.1.0。仓库已公开，当前默认分支包含 Node 包名导入、TypeScript 类型声明和安装后消费示例。冻结产品源码 `c89ce1a` 及其精确归档已于 2026-11-13 通过指定技术复验；旧封存版本与失败记录保留。当前源码、归档哈希、验证范围见[技术验收状态](docs/ACCEPTANCE_STATUS.md)和[交付清单](docs/delivery-manifest.json)。尚未公开发行到 npm/Mooncakes，技术验收不代表赛事审核或外部真人试用。
 
 ## 本地安装与第一次运行
 
@@ -145,4 +145,4 @@ moon test src --target wasm-gc
 
 TypeScript5.9.3只用于开发测试；先执行 npm ci --ignore-scripts。运行已安装的CLI/API不需要它。公共语料下载到忽略的.cache，Python/PSPP验证环境在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
 
-Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[私有 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。
+Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[公开 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、公开、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。

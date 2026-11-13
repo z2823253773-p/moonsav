@@ -1,3 +1,5 @@
+> Current2026-11-13: integrated into implementation and designated exact-artifact PASSED. See docs/ACCEPTANCE_STATUS.md. The following is the historical integration work record.
+
 # Node integration completion — 2026-11-07
 
 Source `c89ce1aa9fdea8114fe0d8157ee4de043da66583`, digest `9284c43f6b4fa169869e0a44128c0acc0b44b59aeb7b933fd7551b5a50e96caa`. User selected package import/types/examples; original v0.1 mandatory features already had designated PASSED for5c1ff8d. This is an additional integration candidate, not new SAV support.

@@ -1,0 +1,97 @@
+{
+  "review_date": "2026-11-13",
+  "verdict": "PASSED",
+  "product_git_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+  "artifacts": {
+    "moonsav-0.1.0.tgz": {
+      "sha256": "9366c3d597d5c4b846d0caa6c3741a62186428187b0378b0f59c7b89d5b33b8e",
+      "size_bytes": 313794
+    },
+    "moonsav-source-0.1.0.zip": {
+      "sha256": "f92ef14cd516f171cd8680e2a2357258869648c2444fe96f7daccbb98c2a4aa5",
+      "size_bytes": 76185
+    }
+  },
+  "node_tests": {
+    "passed": 142,
+    "failed": 0
+  },
+  "modern_core_tests": {
+    "js": 16,
+    "native": 16,
+    "wasm-gc": 16
+  },
+  "matrix_combined": {
+    "supported_pass": 17,
+    "expected_rejection_cases": 1,
+    "bad_vectors": 29,
+    "source": "full-run-02 AC01-AC17 plus identical AC18 rerun with host RSS measurement"
+  },
+  "public_cells": 65449,
+  "public_comparison": "no unexplained difference; normalizations retained",
+  "exact_consumer_top_level_commands": 19,
+  "exact_consumer_passed": true,
+  "performance_summaries": [
+    {
+      "mode": "none",
+      "task": "validate",
+      "median_seconds": 0.11894691688939929,
+      "peak_rss_bytes": 82345984,
+      "passed": true
+    },
+    {
+      "mode": "none",
+      "task": "export",
+      "median_seconds": 0.383863584138453,
+      "peak_rss_bytes": 123912192,
+      "passed": true
+    },
+    {
+      "mode": "none",
+      "task": "check-bundle",
+      "median_seconds": 0.44024858297780156,
+      "peak_rss_bytes": 123797504,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "validate",
+      "median_seconds": 0.1229349160566926,
+      "peak_rss_bytes": 82919424,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "export",
+      "median_seconds": 0.3922474579885602,
+      "peak_rss_bytes": 124911616,
+      "passed": true
+    },
+    {
+      "mode": "row",
+      "task": "check-bundle",
+      "median_seconds": 0.44335745833814144,
+      "peak_rss_bytes": 123879424,
+      "passed": true
+    }
+  ],
+  "remote_ci": {
+    "run_id": 42384344415,
+    "head_sha": "c89ce1aa9fdea8114fe0d8157ee4de043da66583",
+    "all_four_jobs": "success"
+  },
+  "environment_failures_retained": [
+    "global npm cache sandbox EPERM",
+    "time -l sysctl sandbox restriction"
+  ],
+  "scope": "technical acceptance, not competition eligibility, no real-human trial or registry release",
+  "post_integration": {
+    "node_passed": 142,
+    "baseline_core": {
+      "js": 16,
+      "native": 16,
+      "wasm-gc": 16
+    },
+    "failed": 0
+  }
+}

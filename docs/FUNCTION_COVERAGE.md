@@ -1,3 +1,5 @@
+> Current2026-11-13: integrated into implementation and designated exact-artifact PASSED. See docs/ACCEPTANCE_STATUS.md. The following is the historical integration work record.
+
 # MoonSav 当前功能覆盖与下一轮集成 — 2026-11-07
 
 指定验收 CURRENT 的结论已是 PASSED，适用于冻结源码5c1ff8d及其精确CLI/source归档。原始报告由验收对话保管，当前分支的 evidence/node-integration-20261107/accepted-baseline.json记录了结论、范围、归档和报告SHA。不要把旧设计文档的“未实现”表格当作当前状态；原始PRD是历史需求基线，当前实现契约见CONTRACTS。
