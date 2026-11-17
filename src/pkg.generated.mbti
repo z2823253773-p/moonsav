@@ -139,6 +139,7 @@ pub(all) struct Format {
 
 pub(all) struct Limits {
   input_bytes : Int
+  inflated_bytes : Int
   dictionary_bytes : Int
   variables : Int
   physical_slots : Int
@@ -159,6 +160,7 @@ pub(all) struct Options {
   encoding_override : String?
   decoder_identity : String?
   decoder : ((Bytes, String) -> String raise SavError)?
+  inflater : ((Bytes, Int) -> Bytes raise SavError)?
 }
 pub fn Options::default() -> Self
 

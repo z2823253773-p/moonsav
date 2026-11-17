@@ -50,12 +50,12 @@ node node_modules/moonsav/examples/read_sav.mjs "你的问卷.sav"
 
 ## 支持和边界
 
-- 小端 IEEE754 `$FL2`，未压缩0和传统字节码1；已知/未知行数；非默认 bias。
+- 小端 IEEE754 `$FL2` 未压缩0、传统字节码1，以及 `$FL3` ZLIB/ZSAV压缩2；已知/未知行数；非默认 bias。ZSAV容器、块目录和字节码由MoonBit解析，Node仅提供内置zlib原语。原生/wasm-gc调用方须提供受限RFC1950 inflater；未提供时扫描ZSAV明确拒绝，inspect仍可读字典。
 - 1–32767字节字符串，包含13/14长名/分段、21值标签、22用户缺失，跨字节单元/分段后才解码；逻辑宽度内空格保留。字符串没有数值系统缺失。
 - 数值/字符串值标签，离散/闭区间/范围加单值用户缺失，LOWEST/HIGHEST和系统哨兵；值标签从不替换数据，未声明缺失的99仍是合法值。数值保存 IEEE754 位，包含负零。
 - UTF8、Microsoft CP1252、CP936/GBK稳定映射和GB18030稳定映射交集；具体白名单/版本/拒绝变体见 [CODEC_PROFILES](docs/CODEC_PROFILES.md)。不是所有GB18030版本。严格解码也不能证明提供方声明正确；覆盖用 `--encoding` 并产生提示。
 - 日期始终保留原数值和print/write格式；数值变量任一格式为 GNU 日期/时间编码20–30或38–41时，每列给一次 RawDateFormat 提示，严格模式拒绝；PCT/DOT/自定义货币31–37不触发日期提示。分类依据 [GNU SAV 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
-- 拒绝大端、IBM/VAX浮点、FL3/zlib/ZSAV、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
+- 拒绝大端、IBM/VAX浮点、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
 
 已执行的跨平台基线为源码 `5c1ff8d` 的 [CI42255719356](https://github.com/z2823253773-p/moonsav/actions/runs/42255719356)，四个作业全部通过；新修正版的对应 CI 以交付清单为准。Node24.15.0 / ICU78.2 固定，源码使用 toolchain.json 的完整编译器/core 配对。
 
@@ -68,9 +68,9 @@ node node_modules/moonsav/examples/read_sav.mjs "你的问卷.sav"
 
 本地与 Linux 完整入口均为17项通过及29个预期拒绝向量；两份公开 SAV 共65449个单元格对照无未解释差异。各 runner 自建归档，精确本地归档的消费另行记录，不能混为同一字节在三系统安装。
 
-资源硬上限：输入256MiB，字典原始/解码各64MiB，逻辑变量100000，物理槽1000000，字符串32767，单标签1MiB，扩展16MiB，行8MiB，完整扫描1000000行；收集模式5000000单元/128MiB计费载荷，所有bundle文件合计512MiB。字典标签另按每项4096字节保守记账（默认最多16384个关联条目），在分配前拒绝；这是根据审查中的紧凑标签攻击收紧的资源策略。上限是应用记账，不是任意输入RSS承诺。
+资源硬上限：输入256MiB；ZSAV累计解压字节码256MiB，单块压缩/解压各16MiB，最多65536块；字典原始/解码各64MiB，逻辑变量100000，物理槽1000000，字符串32767，单标签1MiB，扩展16MiB，行8MiB，完整扫描1000000行；收集模式5000000单元/128MiB计费载荷，所有bundle文件合计512MiB。字典标签另按每项4096字节保守记账（默认最多16384个关联条目），在分配前拒绝；这是根据审查中的紧凑标签攻击收紧的资源策略。上限是应用记账，不是任意输入RSS承诺。
 
-`--max-input-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能和完整对照报告由交付清单指向当前证据，不外推到最大输入。
+`--max-input-bytes N`、`--max-inflated-bytes N`、`--max-rows N`、`--max-output-bytes N` 只能下调正数。输入仍是受限内存字节，scan是逐行消费，**不是流式文件输入**。10,000×20参考性能和完整对照报告由交付清单指向当前证据，不外推到最大输入。
 
 ## 三个用户任务
 
@@ -146,3 +146,16 @@ moon test src --target wasm-gc
 TypeScript5.9.3只用于开发测试；先执行 npm ci --ignore-scripts。运行已安装的CLI/API不需要它。公共语料下载到忽略的.cache，Python/PSPP验证环境在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
 
 Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[公开 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、公开、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。
+
+## ZSAV整改阶段（2026-11-17）
+
+此阶段新增ZSAV读取，未完成IBM SPSS26完整兼容目标，也未获得赛事复审结论。完整目标与剩余差距见[兼容范围](docs/COMPATIBILITY_TARGET.md)。当前代码的本地验证报告见[ZSAV阶段报告](docs/progress/ZSAV-20261117.md)。
+
+```sh
+npm run build
+npm test
+# 需requirements-dev.lock开发依赖及GNU PSPP；输出目录须不存在
+python tools/verify_zsav.py --output evidence/zsav-fresh
+```
+
+生成器仅创建合成数据，固定合成文件头时间以便逐字节复现。ReadStat与PSPP各算一个解析器家族；一个手工13字节压缩块/非默认bias边界样例出现ReadStat行数错误，PSPP与MoonSav结果一致，报告保留此分歧。原版IBM26生成/回读证据仍缺失。

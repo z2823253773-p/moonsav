@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "command": ".dev/venv/bin/python; import generate_zsav; generate to fresh directory; compare all provenance hashes",
+  "files": 6,
+  "all_bytes_identical": true
+}

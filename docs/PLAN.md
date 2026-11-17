@@ -1,3 +1,5 @@
+> 2026-11-17续作：以下r0.2计划为已完成的历史子集范围。当前完整兼容目标见[COMPATIBILITY_TARGET](COMPATIBILITY_TARGET.md)，首个增量ZSAV计划见[plans/2026-11-17-zsav.md](plans/2026-11-17-zsav.md)。旧勾选项不能证明新目标完成。
+
 # MoonSav Implementation Plan
 
 > **For agentic workers:** Execute inline using superpowers:executing-plans; the user already authorized direct execution. Track the steps below and retain failed runs. No further plan approval is needed.

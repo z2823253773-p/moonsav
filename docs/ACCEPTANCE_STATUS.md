@@ -1,3 +1,5 @@
+> 2026-11-17：工作区已增加ZSAV开发阶段，见[阶段报告](progress/ZSAV-20261117.md)。以下PASSED只指冻结的c89ce1a旧归档；新增源码及IBM26完整目标尚未通过指定验收。
+
 # MoonSav current acceptance — 2026-11-13
 
 The Node integration candidate has completed designated technical reacceptance and is integrated into `implementation`. This extends the accepted 5c1ff8d baseline with standard package-root imports, precise TypeScript declarations and an installed Node consumption example. No new SAV format or conversion policy is introduced.

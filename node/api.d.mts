@@ -6,6 +6,8 @@ export interface SavOptions {
   maxRows?: number | undefined;
   /** Positive integer, at most268,435,456 bytes. */
   maxInputBytes?: number | undefined;
+  /** Total ZSAV inflated bytecode budget, at most268,435,456 bytes. */
+  maxInflatedBytes?: number | undefined;
   /** Positive integer, at most536,870,912 bytes. */
   maxOutputBytes?: number | undefined;
 }
@@ -52,7 +54,7 @@ export interface SavDictionary {
   declared_rows: number | null; actual_rows: null; logical_variables: number;
   variables: SavVariable[]; encoding: SavEncoding;
   file_label: string; creation_date: string; creation_time: string; product: string;
-  weight_variable: number | null; compression: 0 | 1; bias: number;
+  weight_variable: number | null; compression: 0 | 1 | 2; bias: number;
   physical_slots: number; nominal_case_size: number;
   system_missing_hex: string; lowest_hex: string; highest_hex: string;
   warnings: SavWarning[]; uninterpreted_metadata: SavExtra[]; csv: SavCsvPolicy;

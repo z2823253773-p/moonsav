@@ -1,6 +1,7 @@
 import * as core from '../lib/moonsav.js';
 import {strictDecode} from './codec.mjs';
 import {types as utilTypes} from 'node:util';
+import {inflateSync} from 'node:zlib';
 let active=false;
 export class SavError extends Error {
  constructor(info) {super(info.message);Object.assign(this,info);}
@@ -9,21 +10,28 @@ export function dispatch(input,command,options={},sink=()=>{}) {
  if(active) throw new SavError({code:'ConsumerFailed',message:'Node adapter calls cannot be reentered'});
  active=true;
  globalThis.__moonsavDecode=(b,e)=>{try{return '\0'+strictDecode(b,e)}catch(x){return x.code==='UnsupportedEncodingVariant'?x.code:'InvalidEncoding'}};
+ globalThis.__moonsavInflate=(bytes,maximum)=>{
+  try {
+   const result=inflateSync(bytes,{maxOutputLength:Math.max(1,maximum),info:true});
+   if(result.engine.bytesWritten!==bytes.length||result.buffer.length!==maximum)return new Uint8Array(0);
+   const out=new Uint8Array(result.buffer.length+1);out[0]=1;out.set(result.buffer,1);return out;
+  } catch {return new Uint8Array(0);}
+ };
  let sinkError;
  globalThis.__moonsavEmit=(k,s)=>{try{sink(k,s)}catch(e){sinkError=e;throw e}};
  try {
-  const r=JSON.parse(core.run(input,command,options.encoding??'',options.maxRows??1000000,options.maxInputBytes??268435456,options.maxOutputBytes??536870912));
+  const r=JSON.parse(core.run(input,command,options.encoding??'',options.maxRows??1000000,options.maxInputBytes??268435456,options.maxOutputBytes??536870912,options.maxInflatedBytes??268435456));
   if(sinkError)throw sinkError;
   if(!r.ok) throw new SavError(r.error);
   return r;
- } finally {active=false;delete globalThis.__moonsavEmit;delete globalThis.__moonsavDecode;}
+ } finally {active=false;delete globalThis.__moonsavEmit;delete globalThis.__moonsavDecode;delete globalThis.__moonsavInflate;}
 }
 function validateByteCall(input,options) {
  if(!ArrayBuffer.isView(input)||!(input instanceof Uint8Array))throw new SavError({code:'Usage',message:'Input must be Uint8Array or Buffer'});
  if(!options||typeof options!=='object'||Array.isArray(options)||utilTypes.isProxy(options))throw new SavError({code:'Usage',message:'Options must be an ordinary data object'});
  const prototype=Object.getPrototypeOf(options);
  if(prototype!==Object.prototype&&prototype!==null)throw new SavError({code:'Usage',message:'Options cannot inherit custom properties'});
- const maxima={maxRows:1000000,maxInputBytes:268435456,maxOutputBytes:536870912};
+ const maxima={maxRows:1000000,maxInputBytes:268435456,maxOutputBytes:536870912,maxInflatedBytes:268435456};
  const normalized=Object.create(null),properties=Object.getOwnPropertyDescriptors(options);
  for(const key of Reflect.ownKeys(properties)) {
   if(typeof key!=='string'||(key!=='encoding'&&!Object.hasOwn(maxima,key)))throw new SavError({code:'Usage',message:'Unknown byte API option'});

@@ -24,6 +24,11 @@ test('installed package root exposes only the stable API and preserves legacy im
 test('fixed Node24 CommonJS can load the same synchronous package API',()=>{
  const p=script('consumer.cjs',`const assert=require('node:assert/strict'),api=require('moonsav'),legacy=require('moonsav/node/api.mjs');assert.deepEqual(Object.keys(api).sort(),['SavError','inspectSav','readSav']);assert.equal(api.inspectSav,legacy.inspectSav);assert.equal(require('moonsav/schemas/metadata.schema').type,'object');assert.equal(typeof require('moonsav/lib/moonsav').run,'function');console.log('passed');`);assert.equal(p.status,0,p.stderr);assert.equal(p.stdout.trim(),'passed');
 });
+test('installed package reads ZSAV with built-in zlib and enforces its inflation budget',()=>{
+ fs.copyFileSync(path.join(root,'fixtures/synthetic/zsav-survey-zlib.zsav'),path.join(temp,'sample.zsav'));
+ const p=script('zsav-consumer.mjs',`import assert from 'node:assert/strict';import fs from 'node:fs';import {readSav,inspectSav} from 'moonsav';const b=fs.readFileSync(new URL('./sample.zsav',import.meta.url));assert.equal(inspectSav(b).compression,2);const d=readSav(b);assert.equal(d.rows.length,3);assert.deepEqual(d.rows.map(r=>r[2].missing),['present','user','system']);assert.equal(d.rows[0][4].text,'问卷备注'.repeat(140)+'0');assert.throws(()=>readSav(b,{maxInflatedBytes:1}),{code:'ResourceLimit'});console.log('passed');`);
+ assert.equal(p.status,0,p.stderr);assert.equal(p.stdout.trim(),'passed');
+});
 test('installed declarations support strict NodeNext narrowing and reject wrong calls',()=>{
  fs.copyFileSync(path.join(root,'tests/types/consumer.mts'),path.join(temp,'consumer.mts'));
  const p=command([path.join(root,'node_modules/typescript/bin/tsc'),'--strict','--noEmit','--module','NodeNext','--moduleResolution','NodeNext','--target','ES2022','--lib','es2022','--exactOptionalPropertyTypes','--noUncheckedIndexedAccess','consumer.mts']);assert.equal(p.status,0,p.stdout+p.stderr);

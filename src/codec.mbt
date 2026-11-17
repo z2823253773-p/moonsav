@@ -112,11 +112,8 @@ pub fn probe_header(input : Bytes) -> Int raise SavError {
     reject("Truncated", "Missing SAV magic", offset=0)
   }
   let magic = input[0:4].to_bytes()
-  if magic == b"$FL3" {
-    reject("UnsupportedCompression", "FL3/zlib is unsupported", offset=0)
-  }
-  if magic != b"$FL2" {
-    reject("InvalidMagic", "Expected FL2 system file", offset=0)
+  if magic != b"$FL2" && magic != b"$FL3" {
+    reject("InvalidMagic", "Expected FL2 or FL3 system file", offset=0)
   }
   if input.length() < 176 {
     reject("Truncated", "Incomplete 176-byte SAV header", offset=input.length())

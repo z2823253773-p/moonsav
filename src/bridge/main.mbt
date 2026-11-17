@@ -6,6 +6,23 @@ extern "js" fn platform_decoder_identity() -> String =
 extern "js" fn platform_decode(bytes : Bytes, encoding : String) -> String =
   #| (bytes, encoding) => globalThis.__moonsavDecode(bytes, encoding)
 
+///| One status byte precedes the primitive's result; failures cannot masquerade as empty streams.
+extern "js" fn platform_inflate(bytes : Bytes, maximum : Int) -> Bytes =
+  #| (bytes, maximum) => globalThis.__moonsavInflate(bytes, maximum)
+
+///|
+fn inflate(bytes : Bytes, maximum : Int) -> Bytes raise @moonsav.SavError {
+  let out = platform_inflate(bytes, maximum)
+  if out.length() == 0 || out[0] != b'\x01' {
+    raise @moonsav.SavFailure({
+      code: "InvalidCompression", message: "Invalid, truncated, oversized or trailing ZLIB stream",
+      byte_offset: None, record: None, subtype: None, variable_index: None,
+      row_index: None, actual: None, limit: None,
+    })
+  }
+  out[1:].to_bytes()
+}
+
 ///|
 extern "js" fn platform_emit(kind : String, payload : String) -> String =
   #| (kind, payload) => { try { globalThis.__moonsavEmit(kind, payload); return ''; } catch (_) { return 'Sink failed'; } }
@@ -35,6 +52,7 @@ pub fn run(
   max_rows : Int,
   max_input : Int,
   max_output : Int,
+  max_inflated : Int,
 ) -> String {
   let limits = @moonsav.Limits::default()
   let options : @moonsav.Options = {
@@ -45,7 +63,9 @@ pub fn run(
       rows: max_rows,
       input_bytes: max_input,
       output_bytes: max_output,
+      inflated_bytes: max_inflated,
     },
+    inflater: Some(inflate),
     encoding_override: if encoding == "" {
       None
     } else {
@@ -159,6 +179,7 @@ fn checker_options(
   let limits = @moonsav.Limits::default()
   {
     date_policy: @moonsav.Raw,
+    inflater: None,
     decoder_identity: Some(platform_decoder_identity()),
     limits: {
       ..limits,

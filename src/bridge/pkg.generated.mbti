@@ -10,7 +10,7 @@ pub fn check_row_bridge(String, String, Int) -> String
 
 pub fn check_start_bridge(String, String, Int, Int, Int) -> String
 
-pub fn run(Bytes, String, String, Int, Int, Int) -> String
+pub fn run(Bytes, String, String, Int, Int, Int, Int) -> String
 
 // Errors
 

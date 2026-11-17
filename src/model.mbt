@@ -68,6 +68,7 @@ pub fn SavError::info(self : SavError) -> ErrorInfo {
 ///|
 pub(all) struct Limits {
   input_bytes : Int
+  inflated_bytes : Int
   dictionary_bytes : Int
   variables : Int
   physical_slots : Int
@@ -85,6 +86,7 @@ pub(all) struct Limits {
 pub fn Limits::default() -> Limits {
   {
     input_bytes: 268435456,
+    inflated_bytes: 268435456,
     dictionary_bytes: 67108864,
     variables: 100000,
     physical_slots: 1000000,
@@ -111,6 +113,7 @@ pub(all) struct Options {
   encoding_override : String?
   decoder_identity : String?
   decoder : ((Bytes, String) -> String raise SavError)?
+  inflater : ((Bytes, Int) -> Bytes raise SavError)?
 }
 
 ///|
@@ -121,6 +124,7 @@ pub fn Options::default() -> Options {
     encoding_override: None,
     decoder_identity: None,
     decoder: None,
+    inflater: None,
   }
 }
 
@@ -321,6 +325,7 @@ fn validate_limits(l : Limits) -> Unit raise SavError {
   let hard = Limits::default()
   let values = [
     l.input_bytes,
+    l.inflated_bytes,
     l.dictionary_bytes,
     l.variables,
     l.physical_slots,
@@ -335,6 +340,7 @@ fn validate_limits(l : Limits) -> Unit raise SavError {
   ]
   let maxima = [
     hard.input_bytes,
+    hard.inflated_bytes,
     hard.dictionary_bytes,
     hard.variables,
     hard.physical_slots,

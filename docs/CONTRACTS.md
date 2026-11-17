@@ -1,6 +1,6 @@
 # MoonSav 对象与输入输出契约
 
-更新：2026-11-06。适用于本仓库 v0.1 候选版。以公开 MoonBit 接口、四份 JSON Schema、实际校验器和回归共同约束；原 PRD 中的设计伪签名不是现行调用语法。
+更新：2026-11-17（新增ZSAV阶段；完整IBM26兼容仍未验收）。适用于本仓库 v0.1 候选版。以公开 MoonBit 接口、四份 JSON Schema、实际校验器和回归共同约束；原 PRD 中的设计伪签名不是现行调用语法。
 
 本文描述全部受支持的对象及入口，也明确哪些是调用前提、哪些会由程序检查。它不代表指定验收对话已批准。字段类型中的 `?` 是 MoonBit `Option`；对应可序列化字段在 JSON 中为显式 `null`，不等同于省略字段。
 
@@ -18,7 +18,7 @@ flowchart LR
 ```
 
 - MoonBit 负责二进制格式、字典、压缩、编码选择、缺失/标签、规范表示和 bundle 语义。
-- Node 负责本地文件、严格 codec、SHA256、分帧、进程通道与排他目录事务。Python/ReadStat/PSPP 仅作开发对照。
+- Node 负责本地文件、严格 codec、受限RFC1950/zlib原语、SHA256、分帧、进程通道与排他目录事务。Python/ReadStat/PSPP 仅作开发对照。
 - `inspect` 只检查字典，不能证明数据区完整。只有扫描到结束且行数一致的结果才是全文件通过。
 - 字节解析入口不读取文件、不打印、不退出进程；CLI 文件入口只读取本地普通文件。不是流式文件解析器，完整 SAV 输入仍在内存。
 
@@ -55,7 +55,7 @@ flowchart LR
 标准包入口 `import {inspectSav, readSav, SavError} from 'moonsav'` 与固定 Node24 的 `require('moonsav')` 提供这三个稳定值；原 `moonsav/node/api.mjs` 路径保留。入口不导出 dispatch/checkerCall。随包 node/api.d.mts 声明描述相同的 JSON 对象、nullable 字段、Cell/Atom 判别联合和可选错误上下文；错误 code 保持开放。声明只描述支持域，运行时验证仍是最终边界，数组不被声明为深冻结。TypeScript5.9.3仅用于开发验证，不是运行依赖。
 
 - input 必须为 Node 当前环境的 `Uint8Array` 或 `Buffer`；`ArrayBuffer` 须显式包装。调用返回前不得修改、共享写入或 detach 输入。
-- options 默认为 `{}`，只接受普通自有数据字段对象（Object.prototype 或 null 原型），拒绝自定义继承、Proxy、访问器和 symbol 键；不可枚举的数据字段同样检查并只读取一次。只接受 `encoding`、`maxRows`、`maxInputBytes`、`maxOutputBytes`。未知键、null/数组选项对象、错误类型、空编码为 Usage；合法整数超限或非正为 ResourceLimit；不支持的非空编码由核心报 UnsupportedEncoding。
+- options 默认为 `{}`，只接受普通自有数据字段对象（Object.prototype 或 null 原型），拒绝自定义继承、Proxy、访问器和 symbol 键；不可枚举的数据字段同样检查并只读取一次。只接受 `encoding`、`maxRows`、`maxInputBytes`、`maxInflatedBytes`、`maxOutputBytes`。未知键、null/数组选项对象、错误类型、空编码为 Usage；合法整数超限或非正为 ResourceLimit；不支持的非空编码由核心报 UnsupportedEncoding。
 - 三个整数上限分别为 1000000、268435456、536870912，均只可下调；省略或已知字段显式 undefined 使用默认值；未知键即便是 undefined 也拒绝。不支持把字符串数字当整数。
 - inspectSav 返回字典的普通 JS 对象；readSav 返回 `{dictionary, rows}`，rows 为按列排列的 Cell 对象数组。均同步执行，异常为带 code/message 的 SavError；没有 Node 扫描回调 API。
 - `dispatch`、`checkerCall`、`node/checker.mjs`、`node/io.mjs` 的导出是 CLI 内部适配接口，不是稳定通用 API；需要规范化参数和专用桥接状态。Node 桥接调用不可重入。
@@ -77,6 +77,7 @@ flowchart LR
 
 | Limits 字段 | 默认上限 | 单位/检查对象 |
 | --- | ---: | --- |
+| inflated_bytes | 268435456 | ZSAV所有块解压后的字节码总数；逐块消费，单块压缩/解压各最多16777216字节、最多65536块 |
 | input_bytes | 268435456 | SAV 输入字节；manifest 中原输入的声明大小也受限 |
 | dictionary_bytes | 67108864 | 原始字典与解码字典两项独立预算；不是两者相加后的共享额度 |
 | variables | 100000 | 逻辑变量数上限 |
@@ -100,7 +101,7 @@ bundle 的 base64 原始长度和单标签/扩展上限先检查，再解码、�
 | --- | --- |
 | variables | Array[Variable]，至少一个；顺序、index、逻辑列序一致 |
 | declared_rows | Int?；原声明 -1 转 None；非负声明不等于已扫描行数，full 时必须等于实际行数 |
-| compression / bias | Int 0/1、有限 Double；bias 不被固定假设为 100 |
+| compression / bias | Int 0/1/2、有限 Double；bias 不被固定假设为 100 |
 | physical_slots | Int，每行实际 8-byte 槽数；须等于各变量槽数之和 |
 | nominal_case_size | 原始有符号 Int；-1/0 为允许的未知约定，正值须等于实际物理槽数或下述 limited 约定；不静默重建 |
 | encoding | EncodingInfo；字典与行文本使用同一有效 profile |
@@ -256,3 +257,9 @@ stateDiagram-v2
 - `tests/io.test.mjs`：排他并发、输入变化、写失败、六个进程中断阶段、提交后报告失败及输出总额边界。
 - `tests/tasks.test.mjs`：摘要截断/完整 JSON、严格模式、通道/退出码、构建版本。
 - `tools/verify.py --all --require-public --require-pspp`：完整独立对照与公开文件；仍须对新归档运行指定验收反例，不用旧全绿替代。
+
+## ZSAV inflater接口与错误位置
+
+`Options.inflater : ((Bytes, Int) -> Bytes raise SavError)?` 默认为None。回调接收一个完整RFC1950压缩块及目录声明的解压长度，必须将该长度作为分配上限，拒绝截断、校验和错误、尾随字节和串接流，并返回精确长度的Bytes。回调是可信平台原语：核心可以检查返回长度，无法阻止自定义回调内部自行进行超额分配。Node适配器用inflateSync的maxOutputLength和实际已消费压缩字节数实现此约束；不调用外部SAV解析器。
+
+inspect只读字典，不要求inflater，也不验证ZSAV尾部目录或数据区。scan/read先校验整个块目录、偏移连续性、总预算，再按需逐块解压。主动Stop只证明已消费部分。块目录/解压错误给出原文件位置；已解压字节码中的错误位置使用相同未压缩字节码文件的逻辑偏移（以原data_offset为起点），不伪称该值是压缩文件中的精确字节位置。原始输入仍是受限完整Bytes。

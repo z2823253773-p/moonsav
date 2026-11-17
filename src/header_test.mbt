@@ -1,12 +1,12 @@
 ///|
-test "reject FL3 by actual magic not extension" {
+test "short FL3 is recognized but truncated" {
   let error = try {
     ignore(probe_header(b"$FL3"))
     None
   } catch {
     SavFailure(e) => Some(e)
   }
-  assert_eq(error.unwrap().code, "UnsupportedCompression")
+  assert_eq(error.unwrap().code, "Truncated")
 }
 
 ///|

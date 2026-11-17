@@ -546,7 +546,7 @@ pub fn BundleChecker::new(
   let nominal_case_size = jsigned(member(j, "nominal_case_size"), minimum=-1.0)
   validate_case_width(nominal_case_size, variables, slots, "IntegrityMismatch")
   let compression = jnum(member(j, "compression"))
-  if compression > 1 {
+  if compression > 2 {
     reject("IntegrityMismatch", "Invalid compression metadata")
   }
   let bias = match member(j, "bias").as_number() {

@@ -83,12 +83,15 @@ pub fn inspect_bytes(
   if slots > l.row_bytes / 8 {
     reject("ResourceLimit", "row_bytes exceeds limit", offset=68)
   }
-  if compression != 0 && compression != 1 {
+  if compression != 0 && compression != 1 && compression != 2 {
     reject(
       "UnsupportedCompression",
-      "Only compression 0 and 1 are supported",
+      "Unknown SAV compression mode",
       offset=72,
     )
+  }
+  if (input[0:4].to_bytes() == b"$FL3") != (compression == 2) {
+    reject("InvalidCompression", "Magic and compression declaration disagree", offset=72)
   }
   if cases < -1 {
     reject("InvalidDictionary", "Invalid declared row count", offset=80)

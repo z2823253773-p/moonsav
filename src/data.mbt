@@ -1,6 +1,7 @@
 ///|
 priv struct DataReader {
   c : Cursor
+  zlib : ZsavReader?
   compression : Int
   bias : Double
   mut codes : Bytes
@@ -9,24 +10,44 @@ priv struct DataReader {
 }
 
 ///|
+fn DataReader::take(self : DataReader, n : Int) -> Bytes raise SavError {
+  match self.zlib {
+    Some(z) => {
+      let b = z.take(n)
+      self.c.pos = z.pos
+      b
+    }
+    None => self.c.take(n)
+  }
+}
+
+///|
+fn DataReader::at_end(self : DataReader) -> Bool raise SavError {
+  match self.zlib {
+    Some(z) => z.at_end()
+    None => self.c.pos == self.c.bytes.length()
+  }
+}
+
+///|
 fn DataReader::next(self : DataReader) -> (Bytes, Int)? raise SavError {
   if self.ended {
     return None
   }
   if self.compression == 0 {
-    if self.c.pos == self.c.bytes.length() {
+    if self.at_end() {
       self.ended = true
       return None
     }
-    return Some((self.c.take(8), 253))
+    return Some((self.take(8), 253))
   }
   while true {
     if self.code_index == 8 {
-      if self.c.pos == self.c.bytes.length() {
+      if self.at_end() {
         self.ended = true
         return None
       }
-      self.codes = self.c.take(8)
+      self.codes = self.take(8)
       self.code_index = 0
     }
     let code = self.codes[self.code_index].to_int()
@@ -43,7 +64,7 @@ fn DataReader::next(self : DataReader) -> (Bytes, Int)? raise SavError {
             )
           }
         }
-        if self.c.pos != self.c.bytes.length() {
+        if !self.at_end() {
           reject(
             "InvalidCompression",
             "Bytes after compressed end marker",
@@ -53,7 +74,7 @@ fn DataReader::next(self : DataReader) -> (Bytes, Int)? raise SavError {
         self.ended = true
         return None
       }
-      253 => return Some((self.c.take(8), code))
+      253 => return Some((self.take(8), code))
       254 => return Some((b"        ", code))
       255 => return Some((bits_bytes(0xffefffffffffffffUL), code))
       _ =>
@@ -302,6 +323,7 @@ pub fn scan_bytes(
   }
   let reader : DataReader = {
     c: Cursor::new(input, pos=d.data_offset),
+    zlib: if d.compression == 2 { Some(ZsavReader::new(input, d)) } else { None },
     compression: d.compression,
     bias: d.bias,
     codes: b"",

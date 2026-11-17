@@ -1,0 +1,34 @@
+{
+  "producer": "pyreadstat/ReadStat; multiblock: independent Python GNU-layout writer",
+  "not_ibm_proof": true,
+  "pyreadstat": "1.3.3",
+  "python": "3.12.13",
+  "zlib": "1.2.12",
+  "multiblock_data_offset": 317,
+  "fixtures": {
+    "zsav-survey-none.sav": {
+      "sha256": "cff63f473265f2175f3a16a6cadef55ba72956f007dcccdcf0599c6a6e2899f6",
+      "bytes": 13089
+    },
+    "zsav-survey-row.sav": {
+      "sha256": "4b1ce3c87c79397442b2ddf9075677d01b5ecad3e3f32d323a225b97d06d1fd6",
+      "bytes": 13641
+    },
+    "zsav-survey-zlib.zsav": {
+      "sha256": "6bc8945bd1d339303ee0a56bd91c473141adc3c7e4b300995ebe41f97f292a21",
+      "bytes": 8162
+    },
+    "zsav-zero.zsav": {
+      "sha256": "d559f5cc03cf6ed85a29d8c5f819d49fadf5fbcd9ab51ec28bc75407a144974c",
+      "bytes": 439
+    },
+    "zsav-produced-multi.zsav": {
+      "sha256": "b36dacc8399d3b0ed1735abfae46dc383c892b1354e7d1d6f66ffbbfb6e6423d",
+      "bytes": 73994
+    },
+    "zsav-multi.zsav": {
+      "sha256": "6617864eaa1fa7fc7afa680bd06b17bcd2477173cd90423f15e5ee8f38e22fdc",
+      "bytes": 488
+    }
+  }
+}

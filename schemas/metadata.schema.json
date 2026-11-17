@@ -574,7 +574,8 @@
     "compression": {
       "enum": [
         0,
-        1
+        1,
+        2
       ]
     },
     "bias": {
