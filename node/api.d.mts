@@ -50,6 +50,7 @@ export interface SavCsvPolicy {
 }
 /** A dictionary snapshot; actual_rows stays null even in a collected read result. */
 export interface SavDictionary {
+  byte_order: 'little' | 'big';
   schema_version: 'moonsav.metadata/1'; validation_scope: 'dictionary_only';
   declared_rows: number | null; actual_rows: null; logical_variables: number;
   variables: SavVariable[]; encoding: SavEncoding;

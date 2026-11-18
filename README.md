@@ -50,12 +50,12 @@ node node_modules/moonsav/examples/read_sav.mjs "你的问卷.sav"
 
 ## 支持和边界
 
-- 小端 IEEE754 `$FL2` 未压缩0、传统字节码1，以及 `$FL3` ZLIB/ZSAV压缩2；已知/未知行数；非默认 bias。ZSAV容器、块目录和字节码由MoonBit解析，Node仅提供内置zlib原语。原生/wasm-gc调用方须提供受限RFC1950 inflater；未提供时扫描ZSAV明确拒绝，inspect仍可读字典。
+- 大小端整数与同字节序IEEE754：`$FL2` 未压缩0、传统字节码1，以及 `$FL3` ZLIB/ZSAV压缩2；已知/未知行数；非默认 bias。ZSAV容器、块目录和字节码由MoonBit解析，Node仅提供内置zlib原语。原生/wasm-gc调用方须提供受限RFC1950 inflater；未提供时扫描ZSAV明确拒绝，inspect仍可读字典。
 - 1–32767字节字符串，包含13/14长名/分段、21值标签、22用户缺失，跨字节单元/分段后才解码；逻辑宽度内空格保留。字符串没有数值系统缺失。
 - 数值/字符串值标签，离散/闭区间/范围加单值用户缺失，LOWEST/HIGHEST和系统哨兵；值标签从不替换数据，未声明缺失的99仍是合法值。数值保存 IEEE754 位，包含负零。
 - UTF8、Microsoft CP1252、CP936/GBK稳定映射和GB18030稳定映射交集；具体白名单/版本/拒绝变体见 [CODEC_PROFILES](docs/CODEC_PROFILES.md)。不是所有GB18030版本。严格解码也不能证明提供方声明正确；覆盖用 `--encoding` 并产生提示。
 - 日期始终保留原数值和print/write格式；数值变量任一格式为 GNU 日期/时间编码20–30或38–41时，每列给一次 RawDateFormat 提示，严格模式拒绝；PCT/DOT/自定义货币31–37不触发日期提示。分类依据 [GNU SAV 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
-- 拒绝大端、IBM/VAX浮点、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
+- 拒绝IBM/VAX浮点、混合整数/浮点字节序、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
 
 已执行的跨平台基线为源码 `5c1ff8d` 的 [CI42255719356](https://github.com/z2823253773-p/moonsav/actions/runs/42255719356)，四个作业全部通过；新修正版的对应 CI 以交付清单为准。Node24.15.0 / ICU78.2 固定，源码使用 toolchain.json 的完整编译器/core 配对。
 
@@ -159,3 +159,9 @@ python tools/verify_zsav.py --output evidence/zsav-fresh
 ```
 
 生成器仅创建合成数据，固定合成文件头时间以便逐字节复现。ReadStat与PSPP各算一个解析器家族；一个手工13字节压缩块/非默认bias边界样例出现ReadStat行数错误，PSPP与MoonSav结果一致，报告保留此分歧。原版IBM26生成/回读证据仍缺失。
+
+## 大小端整改阶段（2026-11-17）
+
+当前开发代码支持大小端匹配的IEEE754 SAV/ZSAV，元数据新增byte_order。原始数值hex保持按数值高位优先的规范形式，字符串字节不翻转；旧bundle未含byte_order时按历史小端范围读取。参见[阶段报告](docs/progress/ENDIAN-20261117.md)。复现：`python tools/verify_endian.py --output evidence/endian-fresh`（目录须不存在，需开发依赖与PSPP）。
+
+15组同源调查/边界文件完成等价验证。极值HIGHEST/LOWEST作为数据时ReadStat与PSPP/MoonSav存在缺失语义分歧，原比较失败保留、不计作ReadStat通过。IBM26原版行为及完整兼容目标仍未验证。

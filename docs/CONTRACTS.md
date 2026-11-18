@@ -1,6 +1,6 @@
 # MoonSav 对象与输入输出契约
 
-更新：2026-11-17（新增ZSAV阶段；完整IBM26兼容仍未验收）。适用于本仓库 v0.1 候选版。以公开 MoonBit 接口、四份 JSON Schema、实际校验器和回归共同约束；原 PRD 中的设计伪签名不是现行调用语法。
+更新：2026-11-17（新增ZSAV及大小端阶段；完整IBM26兼容仍未验收）。适用于本仓库 v0.1 候选版。以公开 MoonBit 接口、四份 JSON Schema、实际校验器和回归共同约束；原 PRD 中的设计伪签名不是现行调用语法。
 
 本文描述全部受支持的对象及入口，也明确哪些是调用前提、哪些会由程序检查。它不代表指定验收对话已批准。字段类型中的 `?` 是 MoonBit `Option`；对应可序列化字段在 JSON 中为显式 `null`，不等同于省略字段。
 
@@ -100,6 +100,7 @@ bundle 的 base64 原始长度和单标签/扩展上限先检查，再解码、�
 | Dictionary 字段 | 类型/单位/不变量 |
 | --- | --- |
 | variables | Array[Variable]，至少一个；顺序、index、逻辑列序一致 |
+| byte_order | String little/big；源整数及IEEE754字节序。旧bundle省略时按历史小端兼容；非法枚举拒绝 |
 | declared_rows | Int?；原声明 -1 转 None；非负声明不等于已扫描行数，full 时必须等于实际行数 |
 | compression / bias | Int 0/1/2、有限 Double；bias 不被固定假设为 100 |
 | physical_slots | Int，每行实际 8-byte 槽数；须等于各变量槽数之和 |
@@ -263,3 +264,9 @@ stateDiagram-v2
 `Options.inflater : ((Bytes, Int) -> Bytes raise SavError)?` 默认为None。回调接收一个完整RFC1950压缩块及目录声明的解压长度，必须将该长度作为分配上限，拒绝截断、校验和错误、尾随字节和串接流，并返回精确长度的Bytes。回调是可信平台原语：核心可以检查返回长度，无法阻止自定义回调内部自行进行超额分配。Node适配器用inflateSync的maxOutputLength和实际已消费压缩字节数实现此约束；不调用外部SAV解析器。
 
 inspect只读字典，不要求inflater，也不验证ZSAV尾部目录或数据区。scan/read先校验整个块目录、偏移连续性、总预算，再按需逐块解压。主动Stop只证明已消费部分。块目录/解压错误给出原文件位置；已解压字节码中的错误位置使用相同未压缩字节码文件的逻辑偏移（以原data_offset为起点），不伪称该值是压缩文件中的精确字节位置。原始输入仍是受限完整Bytes。
+
+## 大小端解析范围
+
+从layout_code独立识别大小端，传播到头部、字典整数、数值缺失/标签、扩展11/16/21/22及ZSAV目录。字符串/文本/bytecode控制字节不变；数值hex为不依赖源端序的规范表示。机器记录声明与头部矛盾时InvalidDictionary；非IEEE754仍UnsupportedFloat。标准100 bias若按相反端序解释才为100，作为未支持的混合整数/浮点格式明确拒绝；不声称能够识别任意非标准bias的混合端序格式。
+
+source_offset等描述原文件位置；不同源字节序的opaque额外载荷可能不同，不能因此要求完整metadata字节相同。byte_order是源描述，不是数据真实性凭证；仅持有bundle不能验证其原文件声明是否真实，仍需原文件SHA及外部来源核对。

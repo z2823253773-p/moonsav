@@ -76,11 +76,11 @@ fn DataReader::next(self : DataReader) -> (Bytes, Int)? raise SavError {
       }
       253 => return Some((self.take(8), code))
       254 => return Some((b"        ", code))
-      255 => return Some((bits_bytes(0xffefffffffffffffUL), code))
+      255 => return Some((bits_bytes(0xffefffffffffffffUL, big_endian=self.c.big_endian), code))
       _ =>
         return Some(
           (
-            bits_bytes((code.to_double() - self.bias).reinterpret_as_uint64()),
+            bits_bytes((code.to_double() - self.bias).reinterpret_as_uint64(), big_endian=self.c.big_endian),
             code,
           ),
         )
@@ -226,7 +226,7 @@ fn row_cells(
         let bits = if opcode == 255 {
           parse_hex(d.system_missing_hex)
         } else {
-          raw_bits(bytes)
+          raw_bits(bytes, big_endian=d.byte_order == "big")
         }
         let system = hex_bits(bits) == d.system_missing_hex
         if !system && !finite(bits.reinterpret_as_double()) {
@@ -322,7 +322,7 @@ pub fn scan_bytes(
     _ => reject("ConsumerFailed", "Dictionary callback failed")
   }
   let reader : DataReader = {
-    c: Cursor::new(input, pos=d.data_offset),
+    c: Cursor::new(input, pos=d.data_offset, big_endian=d.byte_order == "big"),
     zlib: if d.compression == 2 { Some(ZsavReader::new(input, d)) } else { None },
     compression: d.compression,
     bias: d.bias,

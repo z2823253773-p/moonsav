@@ -211,6 +211,7 @@ pub(all) struct Extra {
 ///|
 pub(all) struct Dictionary {
   variables : Array[Variable]
+  byte_order : String
   declared_rows : Int?
   compression : Int
   bias : Double

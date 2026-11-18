@@ -39,8 +39,12 @@ def compare(source,bundle,output):
     expected=[x['text'].rstrip(' ')for x in v['user_missing']['values']]
     if len(actual)!=len(expected)or any(not any(a['lo']==a['hi']==x for a in actual)for x in expected):differences.append({'field':'string_missing_definition','variable_index':i})
   with csvpath.open(newline='',encoding='utf-8')as f,(bundle/'data.ndjson').open()as canonical:
-   rows=csv.DictReader(f)
-   for raw,line in zip(rows,canonical,strict=True):
+   # DictReader drops empty records. PSPP emits a single empty string as a
+   # blank CSV record, which is a real case and must remain in the comparison.
+   rows=csv.reader(f);names=next(rows)
+   for values,line in zip(rows,canonical,strict=True):
+    if not values and len(names)==1:values=['']
+    raw=dict(zip(names,values,strict=True))
     row=json.loads(line)
     for i,(v,c)in enumerate(zip(metadata['variables'],row['cells'])):
      actual=next(value for key,value in raw.items()if key.casefold()==v['name'].casefold());system=v['type']=='numeric'and float(raw[f'ZZSYS{i}'])==1

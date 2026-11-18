@@ -3,6 +3,7 @@ import {readSav as legacyRead} from 'moonsav/node/api.mjs';
 declare const bytes: Uint8Array;
 const dictionary=inspectSav(bytes,{encoding:undefined,maxRows:undefined,maxInputBytes:undefined,maxOutputBytes:undefined});
 const scope:'dictionary_only'=dictionary.validation_scope;
+const byteOrder:'little'|'big'=dictionary.byte_order;
 const actual:null=dictionary.actual_rows;
 const declared:number|null=dictionary.declared_rows;
 const dataset:SavDataset=readSav(bytes,{encoding:'UTF8',maxRows:5});

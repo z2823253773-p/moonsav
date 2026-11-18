@@ -28,7 +28,8 @@ fn zsav_offset(c : Cursor, maximum : Int) -> Int raise SavError {
 
 ///|
 fn ZsavReader::new(input : Bytes, d : Dictionary) -> ZsavReader raise SavError {
-  let c = Cursor::new(input, pos=d.data_offset)
+  let big_endian = d.byte_order == "big"
+  let c = Cursor::new(input, pos=d.data_offset, big_endian~)
   let base = zsav_offset(c, input.length())
   let trailer = zsav_offset(c, input.length())
   let length = zsav_offset(c, input.length())
@@ -41,7 +42,7 @@ fn ZsavReader::new(input : Bytes, d : Dictionary) -> ZsavReader raise SavError {
   // Budget the directory before allocating its descriptors.
   limit(length, d.options.limits.dictionary_bytes, "ZSAV directory bytes")
   limit(count, 65536, "ZSAV blocks")
-  let t = Cursor::new(input, pos=trailer)
+  let t = Cursor::new(input, pos=trailer, big_endian~)
   let int_bias = t.u64().reinterpret_as_int64()
   let zero = t.u64()
   let size = t.i32()

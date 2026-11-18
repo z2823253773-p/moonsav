@@ -546,6 +546,13 @@ pub fn BundleChecker::new(
   let nominal_case_size = jsigned(member(j, "nominal_case_size"), minimum=-1.0)
   validate_case_width(nominal_case_size, variables, slots, "IntegrityMismatch")
   let compression = jnum(member(j, "compression"))
+  let byte_order = match j.value("byte_order") {
+    Some(value) => jstr(value)
+    None => "little"
+  }
+  if byte_order != "little" && byte_order != "big" {
+    reject("IntegrityMismatch", "Unknown byte_order metadata")
+  }
   if compression > 2 {
     reject("IntegrityMismatch", "Invalid compression metadata")
   }
@@ -614,6 +621,7 @@ pub fn BundleChecker::new(
   }
   let dictionary : Dictionary = {
     variables,
+    byte_order,
     declared_rows,
     compression,
     bias,

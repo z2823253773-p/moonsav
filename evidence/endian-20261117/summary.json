@@ -1,0 +1,1681 @@
+{
+  "status": "milestone_developer_verified_with_explicit_oracle_disagreement",
+  "full_ibm26_compatibility": "not_accepted",
+  "base_sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+  "branch": "implementation",
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+    "dirty": true,
+    "source_tree_sha256": "8bbd3fd8a95c4385500bb28c2335f27499ae7c5afb04250169a8840183251e8c",
+    "moon": "0.1.20260713",
+    "moonc": "v0.10.4+2cc641edf",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "node_tests": {
+    "passed": 159,
+    "failed": 0
+  },
+  "core_tests": {
+    "js": {
+      "passed": 19,
+      "failed": 0
+    },
+    "native": {
+      "passed": 19,
+      "failed": 0
+    },
+    "wasm-gc": {
+      "passed": 19,
+      "failed": 0
+    }
+  },
+  "rejection_vectors": 29,
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "seconds": 7.19939895812422,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "baseline",
+      "local_log": "baseline/run.json"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14121054206043482,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "final-build",
+      "local_log": "final-build/run.json"
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "seconds": 7.542445249855518,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "final-node",
+      "local_log": "final-node/run.json"
+    },
+    {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7867984157055616,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "core-js",
+      "local_log": "core-js/run.json"
+    },
+    {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "exit_code": 0,
+      "seconds": 2.261439834255725,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "core-native",
+      "local_log": "core-native/run.json"
+    },
+    {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "exit_code": 0,
+      "seconds": 0.43661674996837974,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "core-wasm",
+      "local_log": "core-wasm/run.json"
+    },
+    {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/rejections.py",
+        "evidence/endian-20261117/rejections"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4822809579782188,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "final-rejections",
+      "local_log": "final-rejections/run.json"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/endian.test.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 0.27336766570806503,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "endian-focused-v2",
+      "local_log": "endian-focused-v2/run.json"
+    },
+    {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_endian.py",
+        "--output",
+        "evidence/endian-20261117/oracles-v3"
+      ],
+      "exit_code": 0,
+      "seconds": 7.181022208184004,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "oracle-command-v3",
+      "local_log": "oracle-command-v3/run.json"
+    },
+    {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_zsav.py",
+        "--output",
+        "evidence/endian-20261117/zsav-regression-result"
+      ],
+      "exit_code": 0,
+      "seconds": 3.1118829171173275,
+      "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "group": "zsav-regression",
+      "local_log": "zsav-regression/run.json"
+    }
+  ],
+  "oracles": {
+    "milestone": "matching integer/IEEE754 little and big endian",
+    "pairs_equal": 15,
+    "results": [
+      {
+        "fixture": "zsav-survey-none.sav",
+        "readstat": {
+          "input_sha256": "cff63f473265f2175f3a16a6cadef55ba72956f007dcccdcf0599c6a6e2899f6",
+          "size_bytes": 13089,
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_compared": 18,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-zsav-survey-none.sav",
+        "readstat": {
+          "input_sha256": "cec644e1049a3602d4f9f6ba403194597e9ff1e67a4d12c4e3b100f0806f2051",
+          "size_bytes": 13089,
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_compared": 18,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "cec644e1049a3602d4f9f6ba403194597e9ff1e67a4d12c4e3b100f0806f2051",
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_and_missing_predicates_compared": 18,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "zsav-survey-row.sav",
+        "readstat": {
+          "input_sha256": "4b1ce3c87c79397442b2ddf9075677d01b5ecad3e3f32d323a225b97d06d1fd6",
+          "size_bytes": 13641,
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_compared": 18,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-zsav-survey-row.sav",
+        "readstat": {
+          "input_sha256": "5d0439165d4a8eae08db4c58c985001a424fae5bb270ae5c626947d277bd5dd8",
+          "size_bytes": 13641,
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_compared": 18,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "5d0439165d4a8eae08db4c58c985001a424fae5bb270ae5c626947d277bd5dd8",
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_and_missing_predicates_compared": 18,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "zsav-survey-zlib.zsav",
+        "readstat": {
+          "input_sha256": "6bc8945bd1d339303ee0a56bd91c473141adc3c7e4b300995ebe41f97f292a21",
+          "size_bytes": 8162,
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_compared": 18,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-zsav-survey-zlib.zsav",
+        "readstat": {
+          "input_sha256": "2bf6f17d117ecf6dc7377c91a860a31072d4b4d2221ce53ef6804a6e43f914c5",
+          "size_bytes": 8163,
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_compared": 18,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "2bf6f17d117ecf6dc7377c91a860a31072d4b4d2221ce53ef6804a6e43f914c5",
+          "actual_rows": 3,
+          "logical_variables": 6,
+          "cells_and_missing_predicates_compared": 18,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "controls.sav",
+        "readstat": {
+          "input_sha256": "2cf613c25e6f79974490c726f713d1e36d7cd7440fa75bbdb23e69b0236ab5a1",
+          "size_bytes": 349,
+          "actual_rows": 3,
+          "logical_variables": 2,
+          "cells_compared": 6,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-controls.sav",
+        "readstat": {
+          "input_sha256": "637f64a26a8bf1cb484398f6966415d33a3882fca224667554369ab1072535be",
+          "size_bytes": 349,
+          "actual_rows": 3,
+          "logical_variables": 2,
+          "cells_compared": 6,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "637f64a26a8bf1cb484398f6966415d33a3882fca224667554369ab1072535be",
+          "actual_rows": 3,
+          "logical_variables": 2,
+          "cells_and_missing_predicates_compared": 6,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "controls-unknown.sav",
+        "readstat": {
+          "input_sha256": "36f324edcc86741108daa3ac807d3cd68ce76e4ec1f550b9e0a06a3b96ec8692",
+          "size_bytes": 349,
+          "actual_rows": 3,
+          "logical_variables": 2,
+          "cells_compared": 6,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-controls-unknown.sav",
+        "readstat": {
+          "input_sha256": "18700176f8a220f85994c3ef0a5c3425fa8775caa11d26555ab1ae8b6d385354",
+          "size_bytes": 349,
+          "actual_rows": 3,
+          "logical_variables": 2,
+          "cells_compared": 6,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "18700176f8a220f85994c3ef0a5c3425fa8775caa11d26555ab1ae8b6d385354",
+          "actual_rows": 3,
+          "logical_variables": 2,
+          "cells_and_missing_predicates_compared": 6,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "negative-zero.sav",
+        "readstat": {
+          "input_sha256": "abb325eddd4d3759d4e808002e7959064a47f4139d88d1b132f537bc6d7b3bea",
+          "size_bytes": 309,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [
+            {
+              "field": "system_value",
+              "variable_index": 0
+            },
+            {
+              "field": "missing_kind",
+              "variable_index": 0
+            },
+            {
+              "field": "system_value",
+              "variable_index": 0
+            },
+            {
+              "field": "missing_kind",
+              "variable_index": 0
+            }
+          ],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 2,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_fail",
+          "classification": "oracle_disagreement",
+          "reason": "HIGHEST/LOWEST data values: ReadStat tags missing; MoonSav preserves raw finite bits. IBM26 behavior unverified."
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-negative-zero.sav",
+        "readstat": {
+          "input_sha256": "79bacb52afc21809d8e1a8a390e10f670ee70b8b7ac89fa4cee0b6bb19aed405",
+          "size_bytes": 309,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [
+            {
+              "field": "system_value",
+              "variable_index": 0
+            },
+            {
+              "field": "missing_kind",
+              "variable_index": 0
+            },
+            {
+              "field": "system_value",
+              "variable_index": 0
+            },
+            {
+              "field": "missing_kind",
+              "variable_index": 0
+            }
+          ],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 2,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_fail",
+          "classification": "oracle_disagreement",
+          "reason": "HIGHEST/LOWEST data values: ReadStat tags missing; MoonSav preserves raw finite bits. IBM26 behavior unverified."
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "79bacb52afc21809d8e1a8a390e10f670ee70b8b7ac89fa4cee0b6bb19aed405",
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 3,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "range.sav",
+        "readstat": {
+          "input_sha256": "b64bd8c58ace6f6e3b497741b8eb042df6396dcaf1208a5795c0f5075625dc3e",
+          "size_bytes": 357,
+          "actual_rows": 6,
+          "logical_variables": 1,
+          "cells_compared": 6,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-range.sav",
+        "readstat": {
+          "input_sha256": "71295750febc04c53498b6e324458c878496b55f0daf8f6d7bb64a94b648ad6a",
+          "size_bytes": 357,
+          "actual_rows": 6,
+          "logical_variables": 1,
+          "cells_compared": 6,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "71295750febc04c53498b6e324458c878496b55f0daf8f6d7bb64a94b648ad6a",
+          "actual_rows": 6,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 6,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "lowest-highest.sav",
+        "readstat": {
+          "input_sha256": "4df35ef85e8ee1c578dfd8deda98f4d92619e6fd30563c0ecaab20b34d6657ff",
+          "size_bytes": 333,
+          "actual_rows": 4,
+          "logical_variables": 1,
+          "cells_compared": 4,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-lowest-highest.sav",
+        "readstat": {
+          "input_sha256": "0af691aa0dc524addf69555f1396624b39c9b14cdd236ab24f9db611de3c2d69",
+          "size_bytes": 333,
+          "actual_rows": 4,
+          "logical_variables": 1,
+          "cells_compared": 4,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "0af691aa0dc524addf69555f1396624b39c9b14cdd236ab24f9db611de3c2d69",
+          "actual_rows": 4,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 4,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "date-display.sav",
+        "readstat": {
+          "input_sha256": "5e206c357ff045433443d95e3fdc933be66fbc19bce5ac1ce1b824fa284ab69b",
+          "size_bytes": 329,
+          "actual_rows": 2,
+          "logical_variables": 1,
+          "cells_compared": 2,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-date-display.sav",
+        "readstat": {
+          "input_sha256": "b4e29271756e754911355a3ad9075241a8a0cf6c2166ca8e12fe34222e0901c2",
+          "size_bytes": 329,
+          "actual_rows": 2,
+          "logical_variables": 1,
+          "cells_compared": 2,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "b4e29271756e754911355a3ad9075241a8a0cf6c2166ca8e12fe34222e0901c2",
+          "actual_rows": 2,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 2,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "semantics-9.sav",
+        "readstat": {
+          "input_sha256": "99db0f451bbedd6a9bb8b683bdd0ab61ef37afa75c350ae299761c8030ef5f9a",
+          "size_bytes": 646,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 1,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-semantics-9.sav",
+        "readstat": {
+          "input_sha256": "680526e99f918d30c70095141f599c8b6cb0f5123799cbe22d11dfbc340545b3",
+          "size_bytes": 646,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 1,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "680526e99f918d30c70095141f599c8b6cb0f5123799cbe22d11dfbc340545b3",
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 3,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "semantics-256.sav",
+        "readstat": {
+          "input_sha256": "2b03f49d5d11320e0bded982f2e39e7335129879c8950a7c5072c91a59db998e",
+          "size_bytes": 2518,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 1,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-semantics-256.sav",
+        "readstat": {
+          "input_sha256": "81cba6b1beb9b22e5d22004596c2154e5b4ff90b91c7ccc352bef86394f50d76",
+          "size_bytes": 2518,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 1,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "81cba6b1beb9b22e5d22004596c2154e5b4ff90b91c7ccc352bef86394f50d76",
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 3,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "semantics-505.sav",
+        "readstat": {
+          "input_sha256": "6d9470f275c0b4dc1cf24ece1f4fa867c308bab1996176ee87c427defce23020",
+          "size_bytes": 4396,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 1,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-semantics-505.sav",
+        "readstat": {
+          "input_sha256": "aebeaf3f468d9da469c582b6a02afbc69b877aafde00e7f0dc70653775256c4b",
+          "size_bytes": 4396,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 2,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 1,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "aebeaf3f468d9da469c582b6a02afbc69b877aafde00e7f0dc70653775256c4b",
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 3,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "zsav-zero.zsav",
+        "readstat": {
+          "input_sha256": "d559f5cc03cf6ed85a29d8c5f819d49fadf5fbcd9ab51ec28bc75407a144974c",
+          "size_bytes": 439,
+          "actual_rows": 0,
+          "logical_variables": 1,
+          "cells_compared": 0,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-zsav-zero.zsav",
+        "readstat": {
+          "input_sha256": "e2d2d1187819236036e2d744020113240f2e003b5c0da3037dbf9369b412463e",
+          "size_bytes": 439,
+          "actual_rows": 0,
+          "logical_variables": 1,
+          "cells_compared": 0,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "endian-extra-le.sav",
+        "readstat": {
+          "input_sha256": "0df8f5ccaa06f12565fe1d45fcb472b2b79711bb8d781f5f4878fec4d757ada8",
+          "size_bytes": 477,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-endian-extra-le.sav",
+        "readstat": {
+          "input_sha256": "ef1a965bd2ea39826ed4e5b33c13e4273f423c66f419d17699f171d2a65cacaa",
+          "size_bytes": 477,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 1,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "ef1a965bd2ea39826ed4e5b33c13e4273f423c66f419d17699f171d2a65cacaa",
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 3,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      },
+      {
+        "fixture": "endian-signed-zero-le.sav",
+        "readstat": {
+          "input_sha256": "a3ac9682d1a86c95b452fdcf13a0412a167781dabfd6f626870b3435aa44fd7a",
+          "size_bytes": 309,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "status": "not_run",
+          "reason": "PSPP gate targets nonempty BE counterparts; no inferred pass"
+        }
+      },
+      {
+        "fixture": "be-endian-signed-zero-le.sav",
+        "readstat": {
+          "input_sha256": "18301fae2e10f712a9fe3b8305f7f3949f8dfd31b71fe12ff7eb98cd7d9e5029",
+          "size_bytes": 309,
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_compared": 3,
+          "dictionary_compared": [
+            "names",
+            "order",
+            "type",
+            "width",
+            "variable_labels",
+            "value_labels",
+            "user_missing_definitions",
+            "raw_print_write_formats",
+            "raw_missing_atoms",
+            "measure_display_alignment",
+            "weight_reference",
+            "retained_extension_payloads"
+          ],
+          "differences": [],
+          "normalizations": {
+            "string_trailing_ascii_spaces": 0,
+            "system_missing_to_None": 0,
+            "label_trailing_ascii_spaces": 0
+          },
+          "screening": {
+            "potential_identifier_columns": 0,
+            "raw_redistribution": false,
+            "cell_values_in_evidence": false
+          },
+          "oracle": "ReadStat via pyreadstat 1.3.3",
+          "status": "supported_pass"
+        },
+        "pspp": {
+          "family": "GNU PSPP",
+          "version": "pspp (GNU PSPP) 2.0.1",
+          "command": [
+            "/Users/henryz/Desktop/比赛/moonsav/.dev/pspp/bin/pspp",
+            "--batch",
+            "<generated-syntax>"
+          ],
+          "exit_code": 0,
+          "input_sha256": "18301fae2e10f712a9fe3b8305f7f3949f8dfd31b71fe12ff7eb98cd7d9e5029",
+          "actual_rows": 3,
+          "logical_variables": 1,
+          "cells_and_missing_predicates_compared": 3,
+          "differences": [],
+          "difference_count": 0,
+          "scope": "all values and numeric missing predicates; string missing definitions verified separately through PSPP roundtrip, numeric formats neutralized; no cell values in report",
+          "status": "supported_pass"
+        }
+      }
+    ],
+    "pyreadstat": "1.3.3",
+    "sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+    "build": {
+      "version": "0.1.0",
+      "git_sha": "6654d47459ca12bf8eb07ff4fe4a2500dff07d15",
+      "dirty": true,
+      "source_tree_sha256": "8bbd3fd8a95c4385500bb28c2335f27499ae7c5afb04250169a8840183251e8c",
+      "moon": "0.1.20260713",
+      "moonc": "v0.10.4+2cc641edf",
+      "node": "v24.15.0",
+      "icu": "78.2"
+    },
+    "not_proven": [
+      "IBM26 original producer/readback",
+      "IBM/VAX and arbitrary mixed integer/float order",
+      "all IBM26 encodings/dictionary semantics/password protection",
+      "new remote CI",
+      "organizer acceptance"
+    ]
+  },
+  "review": {
+    "task": "endian_review_20261117",
+    "material_findings": [],
+    "independent_test": "node --test tests/endian.test.mjs;6/6",
+    "limits": "read-only diff and focused test only"
+  },
+  "failures_retained": [
+    "initial converter offset defect",
+    "initial big-endian UnsupportedLayout",
+    "ReadStat extreme-value semantic disagreement",
+    "PSPP oracle DictReader skipped single empty string row",
+    "absence of encoding declaration rejected as required"
+  ],
+  "remaining": [
+    "IBM26 original producer/readback",
+    "IBM/VAX and arbitrary mixed integer/float order",
+    "all IBM26 encodings/dictionary semantics/password protection",
+    "new remote CI",
+    "organizer acceptance"
+  ],
+  "remote_ci": "definition_updated_not_run",
+  "push_release_submission": "not_performed"
+}

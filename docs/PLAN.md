@@ -1,3 +1,5 @@
+> 2026-11-17大小端阶段：[plans/2026-11-17-endian.md](plans/2026-11-17-endian.md)；本地开发验证完成后仍须继续完整编码/字典/密码及原版验证。
+
 > 2026-11-17续作：以下r0.2计划为已完成的历史子集范围。当前完整兼容目标见[COMPATIBILITY_TARGET](COMPATIBILITY_TARGET.md)，首个增量ZSAV计划见[plans/2026-11-17-zsav.md](plans/2026-11-17-zsav.md)。旧勾选项不能证明新目标完成。
 
 # MoonSav Implementation Plan

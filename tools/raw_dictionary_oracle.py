@@ -3,15 +3,21 @@ No source cell values are reported. Reads original sequential record boundaries.
 """
 import struct,base64
 
+def byte_order(data):
+ if struct.unpack_from('<i',data,64)[0] in (2,3):return '<'
+ if struct.unpack_from('>i',data,64)[0] in (2,3):return '>'
+ raise ValueError('Unknown audit layout')
+
 def fields(data):
+ order=byte_order(data)
  pos=176;slot=0;raw={};extensions={};logical=[]
  def i32():
   nonlocal pos
-  n=struct.unpack_from('<i',data,pos)[0];pos+=4;return n
+  n=struct.unpack_from(order+'i',data,pos)[0];pos+=4;return n
  while True:
   offset=pos;record=i32()
   if record==2:
-   width,flag,count,pr,wr=struct.unpack_from('<iiiii',data,pos);pos+=20;name=data[pos:pos+8];pos+=8;label=None
+   width,flag,count,pr,wr=struct.unpack_from(order+'iiiii',data,pos);pos+=20;name=data[pos:pos+8];pos+=8;label=None
    if flag:n=i32();label=data[pos:pos+n];pos+=(n+3)//4*4
    missing=[data[pos+i*8:pos+(i+1)*8]for i in range(abs(count))];pos+=8*abs(count)
    if width>=0:raw[slot]={'offset':offset,'width':width,'name':name,'label':label,'missing_count':count,'missing':missing,'print':pr,'write':wr,'logical':len(logical)};logical.append(slot)
@@ -30,7 +36,9 @@ def fields(data):
  return raw,extensions
 
 def audit(data,meta):
+ order=byte_order(data)
  raw,extensions=fields(data);differences=[]
+ if meta.get('byte_order','little')!=('big'if order=='>'else'little'):differences.append({'field':'byte_order'})
  for i,v in enumerate(meta['variables']):
   r=raw.get(v['physical_start'])
   if r is None:differences.append({'field':'raw_variable_start','variable_index':i});continue
@@ -38,13 +46,13 @@ def audit(data,meta):
    if actual!=expected:differences.append({'field':key,'variable_index':i})
   if r['missing_count']and v['type']=='numeric':
    for a,b in zip(v['user_missing']['values'],r['missing']):
-    if a['ieee754_hex']!=struct.unpack('<Q',b)[0].to_bytes(8,'big').hex():differences.append({'field':'raw_missing_atom','variable_index':i})
+    if a['ieee754_hex']!=struct.unpack(order+'Q',b)[0].to_bytes(8,'big').hex():differences.append({'field':'raw_missing_atom','variable_index':i})
   if 11 in extensions:
-   size,count,payload=extensions[11];stride=count//len(raw);vals=struct.unpack('<'+'i'*count,payload);start=r['logical']*stride
+   size,count,payload=extensions[11];stride=count//len(raw);vals=struct.unpack(order+'i'*count,payload);start=r['logical']*stride
    expected=[vals[start],vals[start+1]if stride==3 else None,vals[start+stride-1]]
    if [v['measure'],v['display_width'],v['alignment']]!=expected:differences.append({'field':'display_measure_alignment','variable_index':i})
   elif any(v[k]is not None for k in ['measure','display_width','alignment']):differences.append({'field':'undeclared_display','variable_index':i})
- weight=struct.unpack_from('<i',data,76)[0];idx=meta['weight_variable']
+ weight=struct.unpack_from(order+'i',data,76)[0];idx=meta['weight_variable']
  if (weight==0)!=(idx is None)or idx is not None and meta['variables'][idx]['physical_start']!=weight-1:differences.append({'field':'weight_reference'})
  for e in meta['uninterpreted_metadata']:
   if e['record']==7:

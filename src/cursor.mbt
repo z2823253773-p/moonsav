@@ -2,11 +2,12 @@
 struct Cursor {
   bytes : Bytes
   mut pos : Int
+  big_endian : Bool
 }
 
 ///|
-fn Cursor::new(bytes : Bytes, pos? : Int = 0) -> Cursor {
-  { bytes, pos }
+fn Cursor::new(bytes : Bytes, pos? : Int = 0, big_endian? : Bool = false) -> Cursor {
+  { bytes, pos, big_endian }
 }
 
 ///|
@@ -25,6 +26,11 @@ fn Cursor::take(self : Cursor, n : Int) -> Bytes raise SavError {
 ///|
 fn Cursor::i32(self : Cursor) -> Int raise SavError {
   let b = self.take(4)
+  if self.big_endian {
+    return (b[0].to_int() << 24) |
+      (b[1].to_int() << 16) |
+      (b[2].to_int() << 8) | b[3].to_int()
+  }
   b[0].to_int() |
   (b[1].to_int() << 8) |
   (b[2].to_int() << 16) |
@@ -36,7 +42,8 @@ fn Cursor::u64(self : Cursor) -> UInt64 raise SavError {
   let b = self.take(8)
   let mut bits = 0UL
   for i = 0; i < 8; i = i + 1 {
-    bits = bits | (b[i].to_uint64() << (i * 8))
+    let shift = if self.big_endian { (7 - i) * 8 } else { i * 8 }
+    bits = bits | (b[i].to_uint64() << shift)
   }
   bits
 }
@@ -47,8 +54,11 @@ fn Cursor::f64(self : Cursor) -> Double raise SavError {
 }
 
 ///|
-fn bits_bytes(bits : UInt64) -> Bytes {
-  Bytes::makei(8, i => ((bits >> (i * 8)) & 255UL).to_byte())
+fn bits_bytes(bits : UInt64, big_endian? : Bool = false) -> Bytes {
+  Bytes::makei(8, i => {
+    let shift = if big_endian { (7 - i) * 8 } else { i * 8 }
+    ((bits >> shift) & 255UL).to_byte()
+  })
 }
 
 ///|
@@ -58,8 +68,8 @@ fn hex_bits(bits : UInt64) -> String {
 }
 
 ///|
-fn raw_bits(bytes : Bytes) -> UInt64 raise SavError {
-  Cursor::new(bytes).u64()
+fn raw_bits(bytes : Bytes, big_endian? : Bool = false) -> UInt64 raise SavError {
+  Cursor::new(bytes, big_endian~).u64()
 }
 
 ///|

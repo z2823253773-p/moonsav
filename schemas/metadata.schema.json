@@ -689,6 +689,12 @@
         "record_separator"
       ],
       "additionalProperties": false
+    },
+    "byte_order": {
+      "enum": [
+        "little",
+        "big"
+      ]
     }
   },
   "required": [

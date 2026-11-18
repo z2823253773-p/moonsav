@@ -107,7 +107,7 @@ fn encoding_info(
 }
 
 ///|
-pub fn probe_header(input : Bytes) -> Int raise SavError {
+fn header_order(input : Bytes) -> Bool raise SavError {
   if input.length() < 4 {
     reject("Truncated", "Missing SAV magic", offset=0)
   }
@@ -121,10 +121,16 @@ pub fn probe_header(input : Bytes) -> Int raise SavError {
   let c = Cursor::new(input, pos=64)
   let layout = c.i32()
   if layout == 0x02000000 || layout == 0x03000000 {
-    reject("UnsupportedLayout", "Big endian layout is unsupported", offset=64)
+    return true
   }
   if layout != 2 && layout != 3 {
     reject("UnsupportedLayout", "Unknown SAV layout", offset=64)
   }
-  layout
+  false
+}
+
+///|
+pub fn probe_header(input : Bytes) -> Int raise SavError {
+  let big_endian = header_order(input)
+  Cursor::new(input, pos=64, big_endian~).i32()
 }

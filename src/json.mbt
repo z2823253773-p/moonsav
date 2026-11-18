@@ -50,6 +50,7 @@ pub impl ToJson for Variable with fn to_json(self : Variable) -> Json {
 ///|
 pub impl ToJson for Dictionary with fn to_json(self : Dictionary) -> Json {
   {
+    "byte_order": self.byte_order,
     "schema_version": "moonsav.metadata/1",
     "validation_scope": "dictionary_only",
     "declared_rows": optional(self.declared_rows),
@@ -161,6 +162,9 @@ pub fn codebook(d : Dictionary) -> String {
   let b = StringBuilder::new()
   b.write_string(
     "# MoonSav codebook\n\nCanonical data.ndjson preserves source bits/bytes and missing kinds. CSV is a standard text view; use metadata types and the supplied reader. Numeric system missing is an empty CSV field; strings NA, \\N, leading zeroes and spaces are text. Value labels never replace values. Dates retain raw numeric values and print/write formats. Spreadsheet import may infer numbers/dates or formulas: import as text. Hash checks are not source authentication.\n\n",
+  )
+  b.write_string(
+    "Source byte order: " + md_text(d.byte_order) + ".\n\n",
   )
   b.write_string(
     "Encoding: " +

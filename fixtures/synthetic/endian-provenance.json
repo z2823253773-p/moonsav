@@ -1,0 +1,98 @@
+{
+  "producer": "independent Python GNU-layout endian conversion of synthetic fixtures",
+  "not_ibm_proof": true,
+  "python": "3.12.13",
+  "zlib": "1.2.12",
+  "pairs": [
+    {
+      "source": "zsav-survey-none.sav",
+      "big_endian": "be-zsav-survey-none.sav",
+      "source_sha256": "cff63f473265f2175f3a16a6cadef55ba72956f007dcccdcf0599c6a6e2899f6",
+      "big_endian_sha256": "cec644e1049a3602d4f9f6ba403194597e9ff1e67a4d12c4e3b100f0806f2051"
+    },
+    {
+      "source": "zsav-survey-row.sav",
+      "big_endian": "be-zsav-survey-row.sav",
+      "source_sha256": "4b1ce3c87c79397442b2ddf9075677d01b5ecad3e3f32d323a225b97d06d1fd6",
+      "big_endian_sha256": "5d0439165d4a8eae08db4c58c985001a424fae5bb270ae5c626947d277bd5dd8"
+    },
+    {
+      "source": "zsav-survey-zlib.zsav",
+      "big_endian": "be-zsav-survey-zlib.zsav",
+      "source_sha256": "6bc8945bd1d339303ee0a56bd91c473141adc3c7e4b300995ebe41f97f292a21",
+      "big_endian_sha256": "2bf6f17d117ecf6dc7377c91a860a31072d4b4d2221ce53ef6804a6e43f914c5"
+    },
+    {
+      "source": "controls.sav",
+      "big_endian": "be-controls.sav",
+      "source_sha256": "2cf613c25e6f79974490c726f713d1e36d7cd7440fa75bbdb23e69b0236ab5a1",
+      "big_endian_sha256": "637f64a26a8bf1cb484398f6966415d33a3882fca224667554369ab1072535be"
+    },
+    {
+      "source": "controls-unknown.sav",
+      "big_endian": "be-controls-unknown.sav",
+      "source_sha256": "36f324edcc86741108daa3ac807d3cd68ce76e4ec1f550b9e0a06a3b96ec8692",
+      "big_endian_sha256": "18700176f8a220f85994c3ef0a5c3425fa8775caa11d26555ab1ae8b6d385354"
+    },
+    {
+      "source": "negative-zero.sav",
+      "big_endian": "be-negative-zero.sav",
+      "source_sha256": "abb325eddd4d3759d4e808002e7959064a47f4139d88d1b132f537bc6d7b3bea",
+      "big_endian_sha256": "79bacb52afc21809d8e1a8a390e10f670ee70b8b7ac89fa4cee0b6bb19aed405"
+    },
+    {
+      "source": "range.sav",
+      "big_endian": "be-range.sav",
+      "source_sha256": "b64bd8c58ace6f6e3b497741b8eb042df6396dcaf1208a5795c0f5075625dc3e",
+      "big_endian_sha256": "71295750febc04c53498b6e324458c878496b55f0daf8f6d7bb64a94b648ad6a"
+    },
+    {
+      "source": "lowest-highest.sav",
+      "big_endian": "be-lowest-highest.sav",
+      "source_sha256": "4df35ef85e8ee1c578dfd8deda98f4d92619e6fd30563c0ecaab20b34d6657ff",
+      "big_endian_sha256": "0af691aa0dc524addf69555f1396624b39c9b14cdd236ab24f9db611de3c2d69"
+    },
+    {
+      "source": "date-display.sav",
+      "big_endian": "be-date-display.sav",
+      "source_sha256": "5e206c357ff045433443d95e3fdc933be66fbc19bce5ac1ce1b824fa284ab69b",
+      "big_endian_sha256": "b4e29271756e754911355a3ad9075241a8a0cf6c2166ca8e12fe34222e0901c2"
+    },
+    {
+      "source": "semantics-9.sav",
+      "big_endian": "be-semantics-9.sav",
+      "source_sha256": "99db0f451bbedd6a9bb8b683bdd0ab61ef37afa75c350ae299761c8030ef5f9a",
+      "big_endian_sha256": "680526e99f918d30c70095141f599c8b6cb0f5123799cbe22d11dfbc340545b3"
+    },
+    {
+      "source": "semantics-256.sav",
+      "big_endian": "be-semantics-256.sav",
+      "source_sha256": "2b03f49d5d11320e0bded982f2e39e7335129879c8950a7c5072c91a59db998e",
+      "big_endian_sha256": "81cba6b1beb9b22e5d22004596c2154e5b4ff90b91c7ccc352bef86394f50d76"
+    },
+    {
+      "source": "semantics-505.sav",
+      "big_endian": "be-semantics-505.sav",
+      "source_sha256": "6d9470f275c0b4dc1cf24ece1f4fa867c308bab1996176ee87c427defce23020",
+      "big_endian_sha256": "aebeaf3f468d9da469c582b6a02afbc69b877aafde00e7f0dc70653775256c4b"
+    },
+    {
+      "source": "zsav-zero.zsav",
+      "big_endian": "be-zsav-zero.zsav",
+      "source_sha256": "d559f5cc03cf6ed85a29d8c5f819d49fadf5fbcd9ab51ec28bc75407a144974c",
+      "big_endian_sha256": "e2d2d1187819236036e2d744020113240f2e003b5c0da3037dbf9369b412463e"
+    },
+    {
+      "source": "endian-extra-le.sav",
+      "big_endian": "be-endian-extra-le.sav",
+      "source_sha256": "0df8f5ccaa06f12565fe1d45fcb472b2b79711bb8d781f5f4878fec4d757ada8",
+      "big_endian_sha256": "ef1a965bd2ea39826ed4e5b33c13e4273f423c66f419d17699f171d2a65cacaa"
+    },
+    {
+      "source": "endian-signed-zero-le.sav",
+      "big_endian": "be-endian-signed-zero-le.sav",
+      "source_sha256": "a3ac9682d1a86c95b452fdcf13a0412a167781dabfd6f626870b3435aa44fd7a",
+      "big_endian_sha256": "18301fae2e10f712a9fe3b8305f7f3949f8dfd31b71fe12ff7eb98cd7d9e5029"
+    }
+  ]
+}

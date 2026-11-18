@@ -67,13 +67,16 @@ pub fn inspect_bytes(
   validate_limits(options.limits)
   let l = options.limits
   limit(input.length(), l.input_bytes, "input_bytes")
-  ignore(probe_header(input))
-  let c = Cursor::new(input, pos=68)
+  let big_endian = header_order(input)
+  let c = Cursor::new(input, pos=68, big_endian~)
   let slots = c.i32()
   let compression = c.i32()
   let weight = c.i32()
   let cases = c.i32()
   let bias = c.f64()
+  if bias != 100.0 && Cursor::new(input, pos=84, big_endian=!big_endian).f64() == 100.0 {
+    reject("UnsupportedFloat", "Mixed integer and IEEE754 byte order is unsupported", offset=84)
+  }
   if slots < -1 {
     reject("InvalidDictionary", "Case width must be positive", offset=68)
   }
@@ -315,7 +318,7 @@ pub fn inspect_bytes(
             reject("ResourceLimit", "Extension payload exceeds budget", offset~)
           }
           let bytes = c.take(size * count)
-          let e = Cursor::new(bytes)
+          let e = Cursor::new(bytes, big_endian~)
           match subtype {
             3 => {
               if size != 4 || count != 8 {
@@ -340,10 +343,10 @@ pub fn inspect_bytes(
                   offset~,
                 )
               }
-              if endian != 2 {
+              if endian != (if big_endian { 1 } else { 2 }) {
                 reject(
-                  "UnsupportedLayout",
-                  "Machine declares non-little-endian layout",
+                  "InvalidDictionary",
+                  "Machine byte order contradicts header layout",
                   offset~,
                 )
               }
@@ -439,7 +442,7 @@ pub fn inspect_bytes(
     } catch {
       SavFailure(e) => {
         let subtype = if record == 7 && input.length() - offset >= 8 {
-          Some(Cursor::new(input, pos=offset + 4).i32())
+          Some(Cursor::new(input, pos=offset + 4, big_endian~).i32())
         } else {
           None
         }
@@ -541,7 +544,7 @@ pub fn inspect_bytes(
           offset=ext.offset,
         )
       }
-      let e = Cursor::new(ext.bytes)
+      let e = Cursor::new(ext.bytes, big_endian~)
       display = Array::makei(ext.count, _ => e.i32())
     }
   }
@@ -608,7 +611,7 @@ pub fn inspect_bytes(
     let is_numeric = r.width == 0
     for j = 0; j < r.missing.length(); j = j + 1 {
       if is_numeric {
-        let bits = raw_bits(r.missing[j])
+        let bits = raw_bits(r.missing[j], big_endian~)
         let endpoint = if r.missing_count < 0 && j < 2 {
           if bits == lowest {
             Some("lowest")
@@ -626,15 +629,15 @@ pub fn inspect_bytes(
       }
     }
     if r.missing_count < 0 &&
-      raw_bits(r.missing[0]).reinterpret_as_double() >
-      raw_bits(r.missing[1]).reinterpret_as_double() {
+      raw_bits(r.missing[0], big_endian~).reinterpret_as_double() >
+      raw_bits(r.missing[1], big_endian~).reinterpret_as_double() {
       reject("InvalidDictionary", "Reversed missing range", offset=r.offset)
     }
     let labels : Array[ValueLabel] = []
     for pair in r.labels {
       let (value, label) = pair
       let atom = if is_numeric {
-        numeric_atom(raw_bits(value))
+        numeric_atom(raw_bits(value, big_endian~))
       } else {
         string_atom(value, dec)
       }
@@ -703,7 +706,7 @@ pub fn inspect_bytes(
       reject("InvalidDictionary", "Dangling long-width mapping")
     }
   }
-  apply_long_semantics(vars, extensions, dec, l, budget)
+  apply_long_semantics(vars, extensions, dec, l, budget, big_endian)
   validate_variables(
     vars,
     hex_bits(lowest),
@@ -756,6 +759,7 @@ pub fn inspect_bytes(
   }
   {
     variables: vars,
+    byte_order: if big_endian { "big" } else { "little" },
     declared_rows: rows,
     compression,
     bias,
@@ -784,6 +788,7 @@ fn apply_long_semantics(
   dec : (Bytes) -> String raise SavError,
   limits : Limits,
   budget : DictionaryBudget,
+  big_endian : Bool,
 ) -> Unit raise SavError {
   let by_name : Map[String, Int] = {}
   for v in vars {
@@ -801,7 +806,7 @@ fn apply_long_semantics(
         offset=ext.offset,
       )
     }
-    let c = Cursor::new(ext.bytes)
+    let c = Cursor::new(ext.bytes, big_endian~)
     while c.pos < ext.bytes.length() {
       let n = c.i32()
       limit(n, limits.label_bytes, "label_bytes")

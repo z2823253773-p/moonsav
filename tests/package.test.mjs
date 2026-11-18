@@ -29,6 +29,12 @@ test('installed package reads ZSAV with built-in zlib and enforces its inflation
  const p=script('zsav-consumer.mjs',`import assert from 'node:assert/strict';import fs from 'node:fs';import {readSav,inspectSav} from 'moonsav';const b=fs.readFileSync(new URL('./sample.zsav',import.meta.url));assert.equal(inspectSav(b).compression,2);const d=readSav(b);assert.equal(d.rows.length,3);assert.deepEqual(d.rows.map(r=>r[2].missing),['present','user','system']);assert.equal(d.rows[0][4].text,'问卷备注'.repeat(140)+'0');assert.throws(()=>readSav(b,{maxInflatedBytes:1}),{code:'ResourceLimit'});console.log('passed');`);
  assert.equal(p.status,0,p.stderr);assert.equal(p.stdout.trim(),'passed');
 });
+test('installed API and CLI read the big-endian survey without external parsers',()=>{
+ fs.copyFileSync(path.join(root,'fixtures/synthetic/be-zsav-survey-zlib.zsav'),path.join(temp,'big.zsav'));
+ const p=script('big-consumer.mjs',`import assert from 'node:assert/strict';import fs from 'node:fs';import {readSav} from 'moonsav';const d=readSav(fs.readFileSync(new URL('./big.zsav',import.meta.url)));assert.equal(d.dictionary.byte_order,'big');assert.deepEqual(d.rows.map(r=>r[2].missing),['present','user','system']);assert.equal(d.rows[0][4].text,'问卷备注'.repeat(140)+'0');console.log('passed');`);
+ assert.equal(p.status,0,p.stderr);
+ const r=command([path.join(pkg,'bin/moonsav.mjs'),'validate',path.join(temp,'big.zsav'),'--json']);assert.equal(r.status,0,r.stderr);assert.equal(JSON.parse(r.stdout).actual_rows,3);
+});
 test('installed declarations support strict NodeNext narrowing and reject wrong calls',()=>{
  fs.copyFileSync(path.join(root,'tests/types/consumer.mts'),path.join(temp,'consumer.mts'));
  const p=command([path.join(root,'node_modules/typescript/bin/tsc'),'--strict','--noEmit','--module','NodeNext','--moduleResolution','NodeNext','--target','ES2022','--lib','es2022','--exactOptionalPropertyTypes','--noUncheckedIndexedAccess','consumer.mts']);assert.equal(p.status,0,p.stdout+p.stderr);

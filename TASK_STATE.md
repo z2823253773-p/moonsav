@@ -1,13 +1,13 @@
 # MoonSav task state · 2026-11-17
 
-Phase: ZSAV milestone developer-verified locally; IBM SPSS26 full-compatibility endpoint remains incomplete and unaccepted.
-Branch: implementation. Test base HEAD b3774372eef8447703d0f5231ca4301393d931ec, dirty=true; tested source fingerprint/build and exact commands: evidence/zsav-20261117/summary.json. Resolve latest local commit with git rev-parse HEAD.
+Phase: ZSAV and matching integer/IEEE754 endian milestones locally developer-verified; full IBM26 compatibility remains incomplete/unaccepted.
+Branch: implementation. Endian test base6654d47459ca12bf8eb07ff4fe4a2500dff07d15,dirty=true; resolve latest local feature commit with git rev-parse HEAD. Build fingerprint and commands: evidence/endian-20261117/summary.json.
 
-Verified: Node152/152; core18/18 each JS/native/wasm-gc;29 expected corrupt-input rejections; installed offline API/CLI reads ZSAV; same3×6 survey equal across three storage forms;3000 producer long strings recovered. ReadStat5 fixture comparisons and PSPP5 comparisons pass; handcrafted13-byte-block vector remains a recorded ReadStat oracle disagreement, not a pass. Fresh reviewer: noP0/P1/P2. Synthetic fixtures reproducible by SHA.
+Verified: Node159/159;core19/19 each JS/native/wasm-gc;29 expected corrupt-input rejections;15 endian pairs equal, same survey2orders×3storage modes. ReadStat28file passes+2explicit HIGHEST/LOWEST data semantics disagreements;PSPP14nonempty BE files pass. ZSAV regression retained. Installed offline API/CLI handles BE ZSAV; old bundles missing byte_order remain readable. Fresh reviewer noP0/P1/P2; independently ran focused6/6.
 
-Architecture: MoonBit owns FL3 directory/blocks/bytecode/semantics; Node built-in bounded zlib primitive only. Total inflation256MiB, block16MiB,65536blocks. Portable core needs caller inflater for data scans. Full local logs retained under evidence/zsav-20261117; compact tracked report docs/progress/ZSAV-20261117.md.
+Implementation: MoonBit owns all format/bytecode/order/semantics;Node bounded zlib only. Dictionary.byte_order preserved, numeric hex canonical. IBM/VAX/arbitrary mixed float order unproven. Portable core needs caller inflater for ZSAV data. New remoteCI definitions unrun; old sealed archives and owner acceptance pointer unchanged. No public push/release/registration. Do not bulk-stage docs/acceptance or personal docs/submission.
 
-Remaining: freeze IBM26 records/codepages/save-option inventory; big-endian propagation; remaining codecs/dictionary semantics/password protection; IBM26 original producer/readback when legitimately available. User has no IBM; independent tools first. New remoteCI/full product archive/designated acceptance not run. Old c89ce1a PASSED applies only to frozen historical subset. No public push, release or organizer submission this stage. Do not bulk-stage owner-maintained docs/acceptance or personal docs/submission.
+Remaining: freeze IBM26 save-option/codepage/record inventory; remaining codecs and full dictionary semantics; password protection; IBM26 original producer/readback; full new archive and designated acceptance. User has no IBM; independent tools first. Keep ReadStat semantic and tiny-ZSAV-block disagreements explicit.
 
 Next command: git status --short
-Next action: follow docs/COMPATIBILITY_TARGET.md stage2 and prepare endian equivalence cases; preserve ZSAV regression and old evidence. Plan: docs/plans/2026-11-17-zsav.md. Reproduce ZSAV: .dev/venv/bin/python tools/verify_zsav.py --output evidence/zsav-NEW (NEW directory must not exist).
+Next action: compatibility stage3 encoding/dictionary inventory then implementation; docs/COMPATIBILITY_TARGET.md. Current report: docs/progress/ENDIAN-20261117.md. Reproduce: .dev/venv/bin/python tools/verify_endian.py --output evidence/endian-NEW (new directory).
