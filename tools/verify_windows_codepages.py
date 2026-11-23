@@ -17,10 +17,10 @@ from raw_dictionary_oracle import audit
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def readstat_cp1258(source, bundle, rows, metadata):
+def compare_buffered_codepage(source, bundle, rows, metadata, codepage):
     """Verify parser output with Latin-1 as a reversible byte transport.
 
-    Some iconv implementations buffer CP1258 characters while looking for
+    Some iconv implementations buffer CP1255 and CP1258 characters while looking for
     combining marks. ReadStat's converter does not flush at the end of a
     field. A reversible transport keeps the binary format comparison
     independent of that decoder.
@@ -31,7 +31,7 @@ def readstat_cp1258(source, bundle, rows, metadata):
     )
 
     def decode(text):
-        return text.encode("latin1").decode("cp1258")
+        return text.encode("latin1").decode(f"cp{codepage}")
 
     assert reference.column_names == ["ID", "SCORE", "NOTE"]
     assert reference.number_rows == len(rows) == 3
@@ -52,19 +52,25 @@ def readstat_cp1258(source, bundle, rows, metadata):
         }
     assert not audit(source.read_bytes(), metadata)
     _, default = pyreadstat.read_sav(str(source), metadataonly=True, user_missing=True)
-    if default.column_names != reference.column_names:
-        return {
+    if codepage == 1258 and default.column_names != reference.column_names:
+        result = {
             "status": "oracle_disagreement",
             "classification": "readstat_default_cp1258_names_disagree",
             "expected_variable_names": reference.column_names,
             "actual_variable_names": default.column_names,
-            "independent_byte_transport": "supported_pass",
-            "transport_encoding": "ISO-8859-1",
-            "decoder": "CPython strict cp1258",
             "oracle": "ReadStat via pyreadstat " + pyreadstat.__version__,
         }
-    result = compare(source, bundle)
-    result["independent_byte_transport"] = "supported_pass"
+    else:
+        result = compare(source, bundle)
+        differences = [(d["field"], d["variable_index"]) for d in result["differences"]]
+        if codepage == 1255 and differences == [
+            ("variable_label", 1), ("value_label", 1), ("variable_label", 2),
+            ("string_text", 2), ("string_text", 0), ("string_text", 2),
+            ("string_text", 0), ("string_text", 2),
+        ]:
+            result["classification"] = "readstat_default_cp1255_text_disagrees"
+    result.update(independent_byte_transport="supported_pass", transport_encoding="ISO-8859-1",
+                  decoder=f"CPython strict cp{codepage}")
     return result
 
 
@@ -112,12 +118,13 @@ def main():
         assert [(r[0]["text"].rstrip(" "), r[1]["decimal"], r[1]["missing"], r[2]["text"]) for r in rows] == [
             ("0012", "88", "present", expected), ("NA", "99", "user", expected), ("\\N", None, "system", expected)
         ]
-        is_cp1258 = fixture["profile"] == "windows-1258"
+        buffered_codepage = fixture["codepage"] if fixture["profile"] in ("windows-1255", "windows-1258") else None
         pspp_result = compare_pspp(source, bundle, report / "pspp",
-                                   reference_encoding="ISO-8859-1" if is_cp1258 else None)
-        if is_cp1258:
+                                   reference_encoding="ISO-8859-1" if buffered_codepage else None)
+        if buffered_codepage == 1258:
             classify_pspp(pspp_result, expected, report / "pspp/payloads/oracle.csv")
-        readstat = readstat_cp1258(source, bundle, rows, metadata) if is_cp1258 else compare(source, bundle)
+        readstat = (compare_buffered_codepage(source, bundle, rows, metadata, buffered_codepage)
+                    if buffered_codepage else compare(source, bundle))
         results.append({
             "file": source.name,
             "profile": fixture["profile"],
@@ -129,7 +136,8 @@ def main():
     disagreements = [r["file"] for r in results if r["pspp"].get("classification")]
     readstat_disagreements = [r["file"] for r in results if
                               r["readstat"].get("independent_byte_transport") == "supported_pass"
-                              and r["readstat"].get("classification") == "readstat_default_cp1258_names_disagree"]
+                              and r["readstat"].get("classification") in (
+                                  "readstat_default_cp1258_names_disagree", "readstat_default_cp1255_text_disagrees")]
     summary = {"build": json.loads((ROOT / "lib/build.json").read_text()), "python": sys.version.split()[0],
                "pspp": subprocess.check_output([binary(), "--version"], text=True).splitlines()[0],
                "files": len(results), "pairs": len(results) // 2, "passed": passed,
