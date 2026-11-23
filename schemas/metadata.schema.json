@@ -517,7 +517,16 @@
         "effective": {
           "enum": [
             "utf-8",
+            "windows-874",
+            "windows-1250",
+            "windows-1251",
             "windows-1252",
+            "windows-1253",
+            "windows-1254",
+            "windows-1255",
+            "windows-1256",
+            "windows-1257",
+            "windows-1258",
             "gbk",
             "gb18030"
           ]

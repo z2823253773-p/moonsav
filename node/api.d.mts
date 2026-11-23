@@ -11,7 +11,8 @@ export interface SavOptions {
   /** Positive integer, at most536,870,912 bytes. */
   maxOutputBytes?: number | undefined;
 }
-export type SavEncodingName = 'utf-8' | 'windows-1252' | 'gbk' | 'gb18030';
+export type SavEncodingName = 'utf-8' | 'gbk' | 'gb18030' |
+  `windows-${874 | 1250 | 1251 | 1252 | 1253 | 1254 | 1255 | 1256 | 1257 | 1258}`;
 export interface SavEncoding {
   declared: string | null;
   machine_code: number | null;

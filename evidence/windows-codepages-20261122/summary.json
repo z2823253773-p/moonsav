@@ -1,0 +1,363 @@
+{
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+    "dirty": true,
+    "source_tree_sha256": "f85eb4c4788727fc21adb9c12c15142df04ae8280a11adc86a4d600a7af4e309",
+    "moon": "0.1.20260713",
+    "moonc": "v0.10.4+2cc641edf",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "python": "3.12.13",
+  "pspp": "pspp (GNU PSPP) 2.0.1",
+  "files": 18,
+  "pairs": 9,
+  "passed": {
+    "readstat": 18,
+    "pspp": 17
+  },
+  "pspp_disagreements": [
+    "windows-1258.sav"
+  ],
+  "date": "2026-11-22",
+  "node_tests": 163,
+  "core_per_backend": 19,
+  "legacy_codec_profiles": [
+    {
+      "encoding": "utf-8",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "status": "supported_pass"
+    },
+    {
+      "encoding": "windows-1252",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "status": "supported_pass"
+    },
+    {
+      "encoding": "gbk",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "status": "supported_pass"
+    },
+    {
+      "encoding": "gb18030",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "status": "supported_pass"
+    }
+  ],
+  "files_compared": [
+    {
+      "file": "windows-874.sav",
+      "profile": "windows-874",
+      "sha256": "53c045a41f29262c044e658f78b173e0b4106e217364747eeead6362242fe905",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-874-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "db1f4333b534e2c28e8a5ad43f55f7f6f69c065636756a9d58ab4742f3714a11",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1250.sav",
+      "profile": "windows-1250",
+      "sha256": "ccf8bfd8e203fca29be0d06af0a85b755894c7ed5dbea2e7c9176b89231607e4",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1250-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "4bcade955585e49bd9a2f9288102fcdffd2e3fdc60504fc58600779b00e091ed",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1251.sav",
+      "profile": "windows-1251",
+      "sha256": "6409e3213a0664e232c389347d535e7951f46e6c5b5cd0383d2abc95a3431494",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1251-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "f6bbad16a7ace2cf2253c34a3ceb35fb109b46cfc394ba9de92d99328b854968",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1253.sav",
+      "profile": "windows-1253",
+      "sha256": "41d147479e9cae31c39c307bd1c3bcfb56564a751a2daf1372b8f92846ce17e7",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1253-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "4e1eeb7c2137232fb28a9bf2eae971123f4d4e63a981721f20c12f596b96c8c1",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1254.sav",
+      "profile": "windows-1254",
+      "sha256": "429c129c26fc226e5a1263ce07faf3f79136fc1829c32b3c8b370c139840eeb1",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1254-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "dc5691b57e07d0200962f53198c2c4a74446ccd636f4958808eb751a35ca1bd8",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1255.sav",
+      "profile": "windows-1255",
+      "sha256": "ca6a9497fe17fc7f9bf1e54b8e390dc64c13a8ca806eca9fe7b0501e93a9629f",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1255-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "c57de8401c59f23e1591fa4dde63cc30ae3db708eb7f1ae67622c9d53dee0d37",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1256.sav",
+      "profile": "windows-1256",
+      "sha256": "c4a9e68a5147a5ce26c448a69a5432536df040d7cd428c71f42fff39bd4ee78a",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1256-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "ec76aa3aab0e710344a85f4e6a351f27197f39afea27812d1ce5686034c89067",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1257.sav",
+      "profile": "windows-1257",
+      "sha256": "c67a40f686f289b9f63af23313c023176e5b03092fda9932bdb4c1a597272555",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1257-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "6d2aef5a8366505ffba34e768db74ec84cca42711a401c6df4a08126a1e7a670",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    },
+    {
+      "file": "windows-1258.sav",
+      "profile": "windows-1258",
+      "sha256": "3dc73256be9a885c1e18168f95f0ad639aac4c9b4aa19d02f780f863a64d810a",
+      "readstat": "supported_pass",
+      "pspp": "supported_fail",
+      "pspp_exit": 0,
+      "pspp_differences": [
+        {
+          "field": "value",
+          "variable_index": 2,
+          "row": 0
+        },
+        {
+          "field": "value",
+          "variable_index": 2,
+          "row": 1
+        },
+        {
+          "field": "value",
+          "variable_index": 2,
+          "row": 2
+        }
+      ],
+      "classification": "oracle_normalizes_cp1258_to_nfc"
+    },
+    {
+      "file": "windows-1258-utf8.sav",
+      "profile": "utf-8",
+      "sha256": "621a420a093ea236d08b01fa702c8ae138d64267fd52980b0370d42aabceca33",
+      "readstat": "supported_pass",
+      "pspp": "supported_pass",
+      "pspp_exit": 0,
+      "pspp_differences": []
+    }
+  ],
+  "commands": {
+    "red": {
+      "command": [
+        "node",
+        "--test",
+        "tests/windows-codepages.test.mjs"
+      ],
+      "exit_code": 1,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 0.1594575410708785
+    },
+    "build-final": {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 0.2962436662055552
+    },
+    "node-final": {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 14.117589042056352
+    },
+    "core-final-js": {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 0.28752266615629196
+    },
+    "core-final-native": {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 0.30846779188141227
+    },
+    "core-final-wasm-gc": {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 0.09003845835104585
+    },
+    "oracle-command": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_windows_codepages.py",
+        "--output",
+        ".dev/windows-codepages-20261122/oracles"
+      ],
+      "exit_code": 1,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 8.585402583237737
+    },
+    "oracle-exact": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_windows_codepages.py",
+        "--output",
+        ".dev/windows-codepages-20261122/oracles-exact"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 12.118519000243396
+    },
+    "legacy-codec": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/codec_acceptance.py",
+        ".dev/windows-codepages-20261122/legacy-result"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 2.4642147081904113
+    },
+    "old-zsav": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_zsav.py",
+        "--output",
+        ".dev/windows-codepages-20261122/zsav-result"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 7.449696541763842
+    },
+    "repro": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/generate_windows_codepages.py"
+      ],
+      "exit_code": 0,
+      "sha": "050869b03a010412ad84bba4402ccf8a8ed70daa",
+      "dirty": true,
+      "seconds": 0.031611917074769735
+    }
+  },
+  "raw_log_root": ".dev/windows-codepages-20261122",
+  "ibm26_original_file_comparison": "pending",
+  "remote_ci": "workflow defined, not run for this change"
+}

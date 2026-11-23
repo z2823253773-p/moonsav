@@ -16,7 +16,7 @@ IBM 的 SAVE /VERSION=3 是默认现代保存格式选项；/VERSION=2 用于旧
 | --- | --- | --- |
 | 存储方式 | UNCOMPRESSED、COMPRESSED、ZCOMPRESSED 三种，按内容识别而非扩展名判断 | 当前开发代码支持三种；旧冻结v0.1仍只支持前两种，新增ZSAV只有本地阶段验证 |
 | 字节序与数值 | 目标现代格式允许的整数/IEEE754大小端组合，数值位与哨兵正确还原 | 当前开发代码支持匹配的整数/IEEE754大小端；IBM/VAX及任意混合端序尚未支持，原版IBM26证据仍缺 |
-| 编码 | 目标版本合法输出的Unicode及本地代码页；严格按声明解码并保留来源，不以四项白名单为终点 | 四项有边界profile不能证明完整编码覆盖 |
+| 编码 | 目标版本合法输出的Unicode及本地代码页；严格按声明解码并保留来源，不以四项白名单为终点 | 现已验证 UTF-8、Windows-874、Windows-1250 至 Windows-1258 及既有中文编码配置。其余平台代码页与 IBM 26 原版证据待补 |
 | 变量与字符串 | 数值、短/长字符串、延续/分段、长名、标签、编码后的逻辑字节宽度 | 原范围大部已有，须在新增存储组合上交叉复验 |
 | 缺失与格式 | 系统缺失、用户离散/范围/范围加单值、字符串缺失、原始print/write日期和数值格式 | 原范围已有；新增压缩/端序/编码下需重证 |
 | 版本字典 | 文件和变量说明、权重引用、测量/显示、变量集合、多重响应集合、文件/变量属性等目标版本合法字典信息 | 若干记录目前只保留raw载荷；不能因此声称相应语义完整 |
@@ -64,3 +64,18 @@ IBM 的 SAVE /VERSION=3 是默认现代保存格式选项；/VERSION=2 用于旧
 4. 密码保护与指定原版：完成合法保存选项审计/实现，后补IBM26原版合成数据对照，重新生成完整归档后独立验收。
 
 旧冻结包不随工作区源码改变；阶段通过不等于申报终点通过。
+
+
+## IBM 26 保存方式与编码的证据范围
+
+IBM 26 的 SAVE 文档列出 `VERSION=3`、三种压缩选项与 `PASSPROTECT`。IBM 26 用户指南说明本地编码 SAV 取决于当前 locale，ZSAV 使用 UTF-8。验收矩阵应按实际保存形式取样，不能要求一个 IBM 26 ZSAV 同时使用本地代码页。[命令参考](https://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/26.0/en/client/Manuals/IBM_SPSS_Statistics_Command_Syntax_Reference.pdf) · [用户指南](https://www.ibm.com/docs/SSLVMB_26.0.0/pdf/en/IBM_SPSS_Statistics_Core_System_User_Guide.pdf)
+
+| 证据范围 | 进度 |
+| --- | --- |
+| 已观察到的 Windows 单字节 SAV 编码 | Windows-874、1250–1258 已实现严格配置。Windows-1252 沿用既有测试，其余九项分别配对 UTF-8 样例 |
+| ISO 系列与其他单字节文件 | PSPP 格式资料记录 ISO-8859-1、ISO-8859-2、ISO-8859-15 等。支持与可产出范围待逐项验证 |
+| 东亚代码页 | 既有 GBK 与 GB18030 稳定映射覆盖部分输入。CP932、CP949、CP950、EUC-KR 与歧义映射待验证 |
+| IBM 26 生产者 | Windows 和适用服务器环境的完整 locale 清单、编码声明、可保存组合及原版回读待核实 |
+| 其余字典与加密 | 文本记录、文件和变量属性、变量集、多重响应的结构与支持矩阵待补。密码保护待独立验收 |
+
+PSPP 的已观察编码帮助选取样例，其清单并不界定 IBM 26 可产生的全部文件。[GNU PSPP 系统文件格式](https://pspp.benpfaff.org/manual/system-file.html)

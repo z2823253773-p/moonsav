@@ -1,6 +1,6 @@
 ///|
 extern "js" fn platform_decoder_identity() -> String =
-  #| () => 'Node TextDecoder '+process.version+' / ICU '+process.versions.icu+' / MoonSav frozen mapping guards v1'
+  #| () => 'Node '+process.version+' / ICU '+process.versions.icu+' / MoonSav strict codecs v2'
 
 ///|
 extern "js" fn platform_decode(bytes : Bytes, encoding : String) -> String =

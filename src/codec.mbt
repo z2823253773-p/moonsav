@@ -2,7 +2,16 @@
 fn canonical_encoding(name : String) -> String raise SavError {
   match name.to_lower().trim().to_owned() {
     "utf-8" | "utf8" | "65001" => "utf-8"
+    "windows-874" | "cp874" | "874" => "windows-874"
+    "windows-1250" | "cp1250" | "1250" => "windows-1250"
+    "windows-1251" | "cp1251" | "1251" => "windows-1251"
     "windows-1252" | "cp1252" | "1252" => "windows-1252"
+    "windows-1253" | "cp1253" | "1253" => "windows-1253"
+    "windows-1254" | "cp1254" | "1254" => "windows-1254"
+    "windows-1255" | "cp1255" | "1255" => "windows-1255"
+    "windows-1256" | "cp1256" | "1256" => "windows-1256"
+    "windows-1257" | "cp1257" | "1257" => "windows-1257"
+    "windows-1258" | "cp1258" | "1258" => "windows-1258"
     "gbk" | "cp936" | "936" => "gbk"
     "gb18030" | "54936" => "gb18030"
     _ => {
@@ -46,7 +55,9 @@ fn encoding_info(
 ) -> EncodingInfo raise SavError {
   let m = match machine {
     Some(65001) => Some("utf-8")
-    Some(1252) => Some("windows-1252")
+    Some(874) => Some("windows-874")
+    Some(code) if code >= 1250 && code <= 1258 =>
+      Some("windows-" + code.to_string())
     Some(936) => Some("gbk")
     Some(54936) => Some("gb18030")
     _ => None

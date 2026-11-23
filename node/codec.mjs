@@ -1,10 +1,22 @@
 import tables from './codec-data.json' with {type:'json'};
+import windows from './windows-codepages.json' with {type:'json'};
 const gbTwo=Buffer.from(tables.gb18030_two,'base64');
 const decoders=Object.fromEntries(['utf-8','windows-1252','gbk','gb18030'].map(e=>[e,new TextDecoder(e,{fatal:true,ignoreBOM:true})]));
+export const windowsCodepages = [...Object.keys(windows.upper_half), 'windows-1252'].sort();
 const variant=()=>{const e=new Error('Ambiguous or unsupported code page variant');e.code='UnsupportedEncodingVariant';throw e;};
 const invalid=()=>{const e=new Error('Illegal encoding bytes');e.code='InvalidEncoding';throw e;};
 export function strictDecode(bytes,encoding) {
- if(!decoders[encoding])variant();
+ if(Object.hasOwn(windows.upper_half, encoding)) {
+  const table = windows.upper_half[encoding];
+  const text = [];
+  for(const byte of bytes) {
+   const codePoint = byte < 128 ? byte : table[byte - 128];
+   if(codePoint === null) invalid();
+   text.push(String.fromCodePoint(codePoint));
+  }
+  return text.join('');
+ }
+ if(!Object.hasOwn(decoders, encoding))variant();
  if(encoding==='utf-8')return decoders[encoding].decode(bytes);
  if(encoding==='windows-1252') {
   // Microsoft CP1252 defines no character at these five byte positions.

@@ -39,6 +39,20 @@ test('installed declarations support strict NodeNext narrowing and reject wrong 
  fs.copyFileSync(path.join(root,'tests/types/consumer.mts'),path.join(temp,'consumer.mts'));
  const p=command([path.join(root,'node_modules/typescript/bin/tsc'),'--strict','--noEmit','--module','NodeNext','--moduleResolution','NodeNext','--target','ES2022','--lib','es2022','--exactOptionalPropertyTypes','--noUncheckedIndexedAccess','consumer.mts']);assert.equal(p.status,0,p.stdout+p.stderr);
 });
+test('installed CLI exports and checks a Windows-1251 survey with bundled mappings and notices',()=>{
+ const cli=path.join(pkg,'bin/moonsav.mjs');
+ const source=path.join(root,'fixtures/synthetic/windows-codepages/windows-1251.sav');
+ const bundle=path.join(temp,'cp1251');
+ const exported=command([cli,'export',source,'--out',bundle,'--json']);
+ assert.equal(exported.status,0,exported.stderr);
+ const checked=command([cli,'check-bundle',bundle,'--json']);
+ assert.equal(checked.status,0,checked.stderr);
+ const metadata=JSON.parse(fs.readFileSync(path.join(bundle,'metadata.json')));
+ assert.equal(metadata.encoding.effective,'windows-1251');
+ assert.equal(metadata.variables[1].label,'Москва');
+ assert.match(fs.readFileSync(path.join(pkg,'THIRD_PARTY.md'),'utf8'),/windows-codepages\.json/);
+ assert.match(fs.readFileSync(path.join(pkg,'licenses/Python-3.12-LICENSE.txt'),'utf8'),/PYTHON SOFTWARE FOUNDATION/);
+});
 test('installed Node example reports real missing counts without individual values',()=>{
  const example=path.join(pkg,'examples/read_sav.mjs'),p=command([example]);assert.equal(p.status,0,p.stderr);const r=JSON.parse(p.stdout);assert.equal(r.actual_rows,5);assert.equal(r.logical_variables,3);assert.deepEqual(r.columns.map(c=>c.counts),[[3,1,1],[5,0,0],[5,0,0]]);assert.deepEqual(r.columns.map(c=>c.name),['score','subject_code','note']);assert.equal(p.stderr,'');
  const source=path.join(temp,'问卷 example.sav');fs.copyFileSync(path.join(pkg,'fixtures/synthetic/survey-row.sav'),source);const explicit=command([example,source]);assert.equal(explicit.status,0,explicit.stderr);assert.deepEqual(JSON.parse(explicit.stdout),r);

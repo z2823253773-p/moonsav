@@ -53,7 +53,7 @@ node node_modules/moonsav/examples/read_sav.mjs "你的问卷.sav"
 - 大小端整数与同字节序IEEE754：`$FL2` 未压缩0、传统字节码1，以及 `$FL3` ZLIB/ZSAV压缩2；已知/未知行数；非默认 bias。ZSAV容器、块目录和字节码由MoonBit解析，Node仅提供内置zlib原语。原生/wasm-gc调用方须提供受限RFC1950 inflater；未提供时扫描ZSAV明确拒绝，inspect仍可读字典。
 - 1–32767字节字符串，包含13/14长名/分段、21值标签、22用户缺失，跨字节单元/分段后才解码；逻辑宽度内空格保留。字符串没有数值系统缺失。
 - 数值/字符串值标签，离散/闭区间/范围加单值用户缺失，LOWEST/HIGHEST和系统哨兵；值标签从不替换数据，未声明缺失的99仍是合法值。数值保存 IEEE754 位，包含负零。
-- UTF8、Microsoft CP1252、CP936/GBK稳定映射和GB18030稳定映射交集；具体白名单/版本/拒绝变体见 [CODEC_PROFILES](docs/CODEC_PROFILES.md)。不是所有GB18030版本。严格解码也不能证明提供方声明正确；覆盖用 `--encoding` 并产生提示。
+- Node 支持 UTF-8、Windows-874、Windows-1250 至 Windows-1258、CP936/GBK 稳定映射及 GB18030 稳定映射交集。编码按文件声明或可靠机器代码选择。已知源编码需要覆盖时可运行 `moonsav inspect survey.sav --encoding windows-1251 --json`，输出会保留覆盖警告。支持范围与未定义字节行为见 [编码说明](docs/CODEC_PROFILES.md)。
 - 日期始终保留原数值和print/write格式；数值变量任一格式为 GNU 日期/时间编码20–30或38–41时，每列给一次 RawDateFormat 提示，严格模式拒绝；PCT/DOT/自定义货币31–37不触发日期提示。分类依据 [GNU SAV 格式表](https://www.gnu.org/software/pspp/pspp-dev/html_node/Variable-Record.html)。测量/宽度/对齐按声明保留。已识别但未解释的文档/属性保留载荷并提示，未知扩展拒绝。
 - 拒绝IBM/VAX浮点、混合整数/浮点字节序、POR、未知编码/扩展、非哨兵NaN/Infinity及损坏输入。扩展名不能绕过检测。不写SAV，不统计分析，不自动替换标签/日期，不提供GUI/批量转换。
 
@@ -145,7 +145,7 @@ moon test src --target wasm-gc
 
 TypeScript5.9.3只用于开发测试；先执行 npm ci --ignore-scripts。运行已安装的CLI/API不需要它。公共语料下载到忽略的.cache，Python/PSPP验证环境在.dev。`tools/setup-pspp.sh`提供本机源码构建步骤；也可设MOONSAV_PSPP使用独立安装。ReadStat/PSPP两家族、两份公开实际文件全量比较与失败分类均写入run.json/summary.json，不能用单测通过替代它们。Mac系统iconv对GB18030补充平面向量的已知oracle限制单独保留；相应四字节向量由GNU PSPP+独立Python/一手映射对照，不把oracle失败算产品通过或悄悄删除用例。
 
-Apache-2.0；第三方映射许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[公开 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、公开、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。
+项目采用 [Apache-2.0](LICENSE)。第三方映射来源与许可见 [THIRD_PARTY](THIRD_PARTY.md)。原始私有数据只读且不默认上传/入库。[公开 GitHub 仓库](https://github.com/z2823253773-p/moonsav)创建、公开、推送和 Actions 已获授权并执行；历史失败日志与成功结果分别保留。没有执行公开 npm/Mooncakes 发行、赛事报名或提交；赛事规则与初审认可需另按官方要求核对，没有外部真人试用反馈。
 
 ## ZSAV整改阶段（2026-11-17）
 

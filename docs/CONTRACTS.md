@@ -137,7 +137,7 @@ limited 宽度约定为：数值变量加 1，字符串变量加 `ceil(min(width
 | --- | --- |
 | declared | 原 record20 文本或 null；覆盖时仍保留，即使原声明不受支持 |
 | machine_code | 原 machine 整数或 null，保留有符号 32-bit 原值；只有明确识别的正码可作为可靠编码来源 |
-| effective | 序列化的闭枚举 utf-8 / windows-1252 / gbk / gb18030，不将别名静默改写；用户 encoding 参数可用支持的别名。具体稳定映射白名单见 CODEC_PROFILES |
+| effective | 序列化枚举 utf-8、windows-874、windows-1250 至 windows-1258、gbk、gb18030。用户 encoding 参数接受受支持的别名。原始声明仍保存在 declared。映射规则详见 CODEC_PROFILES |
 | selection_source | 闭枚举 override / record20 / machine_code；override 最高优先，其后可靠声明冲突拒绝，不能无依据猜编码 |
 | profile | `effective + /moonsav-1`；不是所有 GB18030 修订版的通用承诺 |
 | string_matching_policy | 固定 source-bytes-space-padded-width-v1 |
