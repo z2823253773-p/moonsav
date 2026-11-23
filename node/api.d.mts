@@ -49,6 +49,24 @@ export interface SavCsvPolicy {
   numeric_system_missing: 'empty_field'; string_escape: 'csv_quotes_only';
   date_policy: 'raw'; encoding: 'utf-8'; record_separator: 'CRLF';
 }
+export interface SavAttribute {name: string; values: string[];}
+export interface SavMultipleResponseSet {
+  name: string;
+  kind: 'category' | 'dichotomy';
+  category_labels: 'variable_labels' | 'counted_values' | null;
+  label_source: 'variable_label' | null;
+  counted_value: string | null;
+  label: string | null;
+  variable_indices: number[];
+}
+export interface SavDictionaryAnnotations {
+  document_lines: string[];
+  variable_sets: {name: string; variable_indices: number[]}[];
+  file_attributes: SavAttribute[];
+  variable_attributes: {variable_index: number; attributes: SavAttribute[]}[];
+  multiple_response_sets: SavMultipleResponseSet[];
+  sources: SavExtra[];
+}
 /** A dictionary snapshot; actual_rows stays null even in a collected read result. */
 export interface SavDictionary {
   byte_order: 'little' | 'big';
@@ -59,6 +77,7 @@ export interface SavDictionary {
   weight_variable: number | null; compression: 0 | 1 | 2; bias: number;
   physical_slots: number; nominal_case_size: number;
   system_missing_hex: string; lowest_hex: string; highest_hex: string;
+  dictionary_annotations: SavDictionaryAnnotations;
   warnings: SavWarning[]; uninterpreted_metadata: SavExtra[]; csv: SavCsvPolicy;
 }
 export interface SavNumericCell {

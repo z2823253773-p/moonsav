@@ -76,11 +76,17 @@ fn DataReader::next(self : DataReader) -> (Bytes, Int)? raise SavError {
       }
       253 => return Some((self.take(8), code))
       254 => return Some((b"        ", code))
-      255 => return Some((bits_bytes(0xffefffffffffffffUL, big_endian=self.c.big_endian), code))
+      255 =>
+        return Some(
+          (bits_bytes(0xffefffffffffffffUL, big_endian=self.c.big_endian), code),
+        )
       _ =>
         return Some(
           (
-            bits_bytes((code.to_double() - self.bias).reinterpret_as_uint64(), big_endian=self.c.big_endian),
+            bits_bytes(
+              (code.to_double() - self.bias).reinterpret_as_uint64(),
+              big_endian=self.c.big_endian,
+            ),
             code,
           ),
         )
@@ -305,6 +311,27 @@ fn snapshot_dictionary(d : Dictionary) -> Dictionary {
       missing_values: v.missing_values.copy(),
       segments: v.segments.copy(),
     }),
+    dictionary_annotations: {
+      document_lines: d.dictionary_annotations.document_lines.copy(),
+      variable_sets: d.dictionary_annotations.variable_sets.map(v => {
+        ..v,
+        variable_indices: v.variable_indices.copy(),
+      }),
+      file_attributes: d.dictionary_annotations.file_attributes.map(v => {
+        ..v,
+        values: v.values.copy(),
+      }),
+      variable_attributes: d.dictionary_annotations.variable_attributes.map(v => {
+        ..v,
+        attributes: v.attributes.map(a => { ..a, values: a.values.copy() }),
+      }),
+      multiple_response_sets: d.dictionary_annotations.multiple_response_sets.map(v => {
+          ..v,
+          variable_indices: v.variable_indices.copy(),
+        },
+      ),
+      sources: d.dictionary_annotations.sources.copy(),
+    },
     warnings: d.warnings.copy(),
     uninterpreted_metadata: d.uninterpreted_metadata.copy(),
   }
@@ -323,7 +350,11 @@ pub fn scan_bytes(
   }
   let reader : DataReader = {
     c: Cursor::new(input, pos=d.data_offset, big_endian=d.byte_order == "big"),
-    zlib: if d.compression == 2 { Some(ZsavReader::new(input, d)) } else { None },
+    zlib: if d.compression == 2 {
+      Some(ZsavReader::new(input, d))
+    } else {
+      None
+    },
     compression: d.compression,
     bias: d.bias,
     codes: b"",

@@ -1,4 +1,4 @@
-> 2026-11-17：工作区已增加ZSAV及大小端开发阶段，见[阶段报告](progress/ZSAV-20261117.md)。以下PASSED只指冻结的c89ce1a旧归档；新增源码及IBM26完整目标尚未通过指定验收。
+> 当前开发状态见 [字典补充记录验证](progress/DICTIONARY-ANNOTATIONS-20261122.md)。下文的 PASSED 对应冻结归档 c89ce1a。IBM 26 完整目标仍待验收。
 
 # MoonSav current acceptance — 2026-11-13
 

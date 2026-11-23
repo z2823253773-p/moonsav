@@ -224,6 +224,7 @@ pub(all) struct Dictionary {
   product : String
   weight_variable : Int?
   warnings : Array[Warning]
+  dictionary_annotations : DictionaryAnnotations
   uninterpreted_metadata : Array[Extra]
   system_missing_hex : String
   lowest_hex : String

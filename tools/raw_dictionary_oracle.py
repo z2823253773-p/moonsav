@@ -58,4 +58,15 @@ def audit(data,meta):
   if e['record']==7:
    payload=extensions.get(e['subtype'])
    if not payload or base64.b64decode(e['raw_base64'])!=payload[2]:differences.append({'field':'uninterpreted_payload'})
+ for e in meta.get('dictionary_annotations',{}).get('sources',[]):
+  pos=e['byte_offset']; record=struct.unpack_from(order+'i',data,pos)[0]
+  if record==6:
+   count=struct.unpack_from(order+'i',data,pos+4)[0]; payload=data[pos+8:pos+8+80*count]
+   subtype=None
+  elif record==7:
+   subtype,size,count=struct.unpack_from(order+'iii',data,pos+4); payload=data[pos+16:pos+16+size*count]
+  else:
+   differences.append({'field':'annotation_record'});continue
+  if record!=e['record']or subtype!=e['subtype']or base64.b64decode(e['raw_base64'])!=payload:
+   differences.append({'field':'annotation_payload'})
  return differences

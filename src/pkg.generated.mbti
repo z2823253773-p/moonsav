@@ -91,6 +91,7 @@ pub(all) struct Dictionary {
   product : String
   weight_variable : Int?
   warnings : Array[Warning]
+  dictionary_annotations : DictionaryAnnotations
   uninterpreted_metadata : Array[Extra]
   system_missing_hex : String
   lowest_hex : String
@@ -98,6 +99,15 @@ pub(all) struct Dictionary {
   // private fields
 }
 pub impl ToJson for Dictionary
+
+pub(all) struct DictionaryAnnotations {
+  document_lines : Array[String]
+  variable_sets : Array[SavVariableSet]
+  file_attributes : Array[SavAttribute]
+  variable_attributes : Array[SavVariableAttributes]
+  multiple_response_sets : Array[SavMultipleResponseSet]
+  sources : Array[Extra]
+} derive(ToJson)
 
 pub(all) struct EncodingInfo {
   declared : String?
@@ -164,6 +174,32 @@ pub(all) struct Options {
   inflater : ((Bytes, Int) -> Bytes raise SavError)?
 }
 pub fn Options::default() -> Self
+
+pub(all) struct SavAttribute {
+  name : String
+  values : Array[String]
+} derive(ToJson)
+
+pub(all) struct SavMultipleResponseSet {
+  name : String
+  kind : String
+  category_labels : String?
+  label_source : String?
+  counted_value : String?
+  label : String?
+  variable_indices : Array[Int]
+}
+pub impl ToJson for SavMultipleResponseSet
+
+pub(all) struct SavVariableAttributes {
+  variable_index : Int
+  attributes : Array[SavAttribute]
+} derive(ToJson)
+
+pub(all) struct SavVariableSet {
+  name : String
+  variable_indices : Array[Int]
+} derive(ToJson)
 
 pub(all) enum ScanControl {
   Continue

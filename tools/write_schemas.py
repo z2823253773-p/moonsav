@@ -17,6 +17,21 @@ var=obj({'index':integer,'name':name,'short_name':name,'type':{'enum':['numeric'
 extra=obj({'record':integer,'subtype':{'type':['integer','null']},'byte_offset':integer,'raw_base64':string})
 metadata=obj({'schema_version':{'const':'moonsav.metadata/1'},'validation_scope':{'enum':['dictionary_only','full']},'declared_rows':{'type':['integer','null'],'minimum':0},'actual_rows':{'type':['integer','null'],'minimum':0},'logical_variables':{'type':'integer','minimum':1,'maximum':100000},'variables':array(var,1,100000),'encoding':obj({'declared':nullable_string,'machine_code':{'type':['integer','null'],'minimum':-2147483648,'maximum':2147483647},'effective':{'enum':['utf-8','windows-874',*[f'windows-{code}' for code in range(1250,1259)],'gbk','gb18030']},'decoder_identity':{'type':'string','minLength':1,'pattern':r'^[^\u0000]*\S[^\u0000]*$'},'selection_source':{'enum':['record20','machine_code','override']},'profile':string,'string_matching_policy':{'const':'source-bytes-space-padded-width-v1'}}),'file_label':string,'creation_date':string,'creation_time':string,'product':string,'weight_variable':{'type':['integer','null'],'minimum':0},'compression':{'enum':[0,1,2]},'bias':{'type':'number'},'physical_slots':{'type':'integer','minimum':1,'maximum':1000000},'nominal_case_size':{'type':'integer','minimum':-1,'maximum':1000000},'system_missing_hex':hex16,'lowest_hex':hex16,'highest_hex':hex16,'warnings':array(warning),'uninterpreted_metadata':array(extra),'csv':obj({'numeric_system_missing':{'const':'empty_field'},'string_escape':{'const':'csv_quotes_only'},'date_policy':{'const':'raw'},'encoding':{'const':'utf-8'},'record_separator':{'const':'CRLF'}})},extra=True)
 metadata['properties']['byte_order']={'enum':['little','big']}  # optional for historical little-endian bundles
+attribute=obj({'name':name,'values':array(string,1)})
+response_set=obj({
+ 'name':name,'kind':{'enum':['category','dichotomy']},
+ 'category_labels':{'enum':['variable_labels','counted_values',None]},
+ 'label_source':{'enum':['variable_label',None]},
+ 'counted_value':nullable_string,'label':nullable_string,'variable_indices':array(integer),
+})
+metadata['properties']['dictionary_annotations']=obj({
+ 'document_lines':array(string),
+ 'variable_sets':array(obj({'name':name,'variable_indices':array(integer)})),
+ 'file_attributes':array(attribute),
+ 'variable_attributes':array(obj({'variable_index':integer,'attributes':array(attribute,1)})),
+ 'multiple_response_sets':array(response_set),
+ 'sources':array(extra),
+})
 write('metadata',metadata)
 cell={**obj({'kind':{'enum':['numeric','string']},'missing':{'enum':['present','user','system']},'decimal':{'anyOf':[decimal,{'type':'null'}]},'ieee754_hex':{'anyOf':[hex16,{'type':'null'}]},'text':nullable_string,'logical_bytes_base64':nullable_string}),'oneOf':[{'properties':{'kind':{'const':'numeric'},'missing':{'enum':['present','user']},'decimal':decimal,'ieee754_hex':hex16,'text':{'type':'null'},'logical_bytes_base64':{'type':'null'}}},{'properties':{'kind':{'const':'numeric'},'missing':{'const':'system'},'decimal':{'type':'null'},'ieee754_hex':hex16,'text':{'type':'null'},'logical_bytes_base64':{'type':'null'}}},{'properties':{'kind':{'const':'string'},'missing':{'enum':['present','user']},'decimal':{'type':'null'},'ieee754_hex':{'type':'null'},'text':string,'logical_bytes_base64':string}}]}
 write('row',obj({'row':{'type':'integer','minimum':0,'maximum':999999},'cells':array(cell,1,100000)}))

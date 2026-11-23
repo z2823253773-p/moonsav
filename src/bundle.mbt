@@ -619,6 +619,35 @@ pub fn BundleChecker::new(
     (index >= variables.length() || variables[index].type_ != "numeric") {
     reject("IntegrityMismatch", "Invalid weight variable reference")
   }
+  let annotations = DictionaryAnnotations::empty()
+  if j.value("dictionary_annotations") is Some(serialized) {
+    let sources = jarr(member(serialized, "sources"))
+    let indices = if sources.is_empty() {
+      Map([])
+    } else {
+      annotation_indices(variables)
+    }
+    for item in sources {
+      ignore(closed(item, ["record", "subtype", "byte_offset", "raw_base64"]))
+      let source : Extra = {
+        record: jnum(member(item, "record")),
+        subtype: opt_int(member(item, "subtype")),
+        byte_offset: jnum(member(item, "byte_offset")),
+        raw_base64: jstr(member(item, "raw_base64")),
+      }
+      let bytes = dictionary_b64(source.raw_base64, budget, extension=true)
+      parse_annotation(annotations, source, bytes, indices, dec, budget) catch {
+        SavFailure(info) if info.code == "ResourceLimit" =>
+          raise SavFailure(info)
+        _ => reject("IntegrityMismatch", "Invalid dictionary annotation source")
+      }
+    }
+    if annotations.to_json() != serialized {
+      reject(
+        "IntegrityMismatch", "Dictionary annotations differ from source records",
+      )
+    }
+  }
   let dictionary : Dictionary = {
     variables,
     byte_order,
@@ -634,6 +663,7 @@ pub fn BundleChecker::new(
     product: jstr(member(j, "product")),
     weight_variable: opt_int(member(j, "weight_variable")),
     warnings,
+    dictionary_annotations: annotations,
     uninterpreted_metadata: extras,
     system_missing_hex,
     lowest_hex,

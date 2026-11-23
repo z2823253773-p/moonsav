@@ -74,8 +74,13 @@ pub fn inspect_bytes(
   let weight = c.i32()
   let cases = c.i32()
   let bias = c.f64()
-  if bias != 100.0 && Cursor::new(input, pos=84, big_endian=!big_endian).f64() == 100.0 {
-    reject("UnsupportedFloat", "Mixed integer and IEEE754 byte order is unsupported", offset=84)
+  if bias != 100.0 &&
+    Cursor::new(input, pos=84, big_endian=!big_endian).f64() == 100.0 {
+    reject(
+      "UnsupportedFloat",
+      "Mixed integer and IEEE754 byte order is unsupported",
+      offset=84,
+    )
   }
   if slots < -1 {
     reject("InvalidDictionary", "Case width must be positive", offset=68)
@@ -87,14 +92,14 @@ pub fn inspect_bytes(
     reject("ResourceLimit", "row_bytes exceeds limit", offset=68)
   }
   if compression != 0 && compression != 1 && compression != 2 {
-    reject(
-      "UnsupportedCompression",
-      "Unknown SAV compression mode",
-      offset=72,
-    )
+    reject("UnsupportedCompression", "Unknown SAV compression mode", offset=72)
   }
   if (input[0:4].to_bytes() == b"$FL3") != (compression == 2) {
-    reject("InvalidCompression", "Magic and compression declaration disagree", offset=72)
+    reject(
+      "InvalidCompression",
+      "Magic and compression declaration disagree",
+      offset=72,
+    )
   }
   if cases < -1 {
     reject("InvalidDictionary", "Invalid declared row count", offset=80)
@@ -110,6 +115,7 @@ pub fn inspect_bytes(
   let by_slot : Map[Int, RawVar] = {}
   let extensions : Array[Extension] = []
   let extras : Array[Extra] = []
+  let annotation_records : Array[(Int, Int?, Int, Bytes)] = []
   let budget = DictionaryBudget::new(l)
   let mut physical = 0
   let mut continuation = 0
@@ -300,12 +306,7 @@ pub fn inspect_bytes(
           if n > l.extension_bytes / 80 {
             reject("ResourceLimit", "Document record exceeds budget", offset~)
           }
-          extras.push({
-            record,
-            subtype: None,
-            byte_offset: offset,
-            raw_base64: @base64.encode(c.take(n * 80)),
-          })
+          annotation_records.push((record, None, offset, c.take(n * 80)))
         }
         7 => {
           let subtype = c.i32()
@@ -407,6 +408,8 @@ pub fn inspect_bytes(
             }
             11 | 13 | 14 | 21 | 22 =>
               extensions.push({ subtype, size, count, offset, bytes })
+            5 | 7 | 17 | 18 | 19 if size == 1 =>
+              annotation_records.push((record, Some(subtype), offset, bytes))
             5 | 6 | 7 | 8 | 9 | 10 | 12 | 17 | 18 | 19 | 24 =>
               extras.push({
                 record,
@@ -732,6 +735,26 @@ pub fn inspect_bytes(
     }
     found
   }
+  let annotations = DictionaryAnnotations::empty()
+  let indices = if annotation_records.is_empty() {
+    Map([])
+  } else {
+    annotation_indices(vars)
+  }
+  for item in annotation_records {
+    let (record, subtype, byte_offset, bytes) = item
+    let source = {
+      record,
+      subtype,
+      byte_offset,
+      raw_base64: @base64.encode(bytes),
+    }
+    parse_annotation(annotations, source, bytes, indices, dec, budget) catch {
+      SavFailure(info) if info.code == "InvalidAnnotation" =>
+        extras.push(source)
+      error => raise error
+    }
+  }
   let warnings = []
   if encoding.selection_source == "override" {
     warnings.push({
@@ -749,7 +772,10 @@ pub fn inspect_bytes(
   }
   for v in vars {
     if v.type_ == "numeric" &&
-      (is_datetime_format(v.print_format.code) || is_datetime_format(v.write_format.code)) {
+      (
+        is_datetime_format(v.print_format.code) ||
+        is_datetime_format(v.write_format.code)
+      ) {
       warnings.push({
         warning_code: "RawDateFormat",
         scope: "variable:\{v.index}",
@@ -759,7 +785,11 @@ pub fn inspect_bytes(
   }
   {
     variables: vars,
-    byte_order: if big_endian { "big" } else { "little" },
+    byte_order: if big_endian {
+      "big"
+    } else {
+      "little"
+    },
     declared_rows: rows,
     compression,
     bias,
@@ -772,6 +802,7 @@ pub fn inspect_bytes(
     product: dec(input[4:64].to_bytes()).trim_end(chars=" \x00").to_owned(),
     weight_variable,
     warnings,
+    dictionary_annotations: annotations,
     uninterpreted_metadata: extras,
     system_missing_hex: hex_bits(system),
     lowest_hex: hex_bits(lowest),
@@ -882,7 +913,8 @@ fn apply_long_semantics(
 // GNU PSPP SAV Variable Record codes; currency/PCT/DOT occupy the gap31–37.
 fn is_datetime_format(code : Int) -> Bool {
   match code {
-    20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 38 | 39 | 40 | 41 => true
+    20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 38 | 39 | 40 | 41 =>
+      true
     _ => false
   }
 }

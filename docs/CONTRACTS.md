@@ -270,3 +270,18 @@ inspect只读字典，不要求inflater，也不验证ZSAV尾部目录或数据�
 从layout_code独立识别大小端，传播到头部、字典整数、数值缺失/标签、扩展11/16/21/22及ZSAV目录。字符串/文本/bytecode控制字节不变；数值hex为不依赖源端序的规范表示。机器记录声明与头部矛盾时InvalidDictionary；非IEEE754仍UnsupportedFloat。标准100 bias若按相反端序解释才为100，作为未支持的混合整数/浮点格式明确拒绝；不声称能够识别任意非标准bias的混合端序格式。
 
 source_offset等描述原文件位置；不同源字节序的opaque额外载荷可能不同，不能因此要求完整metadata字节相同。byte_order是源描述，不是数据真实性凭证；仅持有bundle不能验证其原文件声明是否真实，仍需原文件SHA及外部来源核对。
+
+## 文档行、集合与属性
+
+`dictionary_annotations` 是 metadata/1 的可选新增字段。读取和导出总会生成它，旧包可省略。字段包括以下内容。
+
+| 字段 | 含义 |
+| --- | --- |
+| `document_lines` | 逐条解码类型 6 固定 80 字节文档行，保留填充空格 |
+| `variable_sets` | subtype 5 的集合名和零基变量索引。支持空集合 |
+| `multiple_response_sets` | subtype 7/19 的 C/D/E 模式、计数值原文本、标签模式、标签和变量索引。无值时字段为 null |
+| `file_attributes` | subtype 17 的属性名及有序值数组 |
+| `variable_attributes` | subtype 18 的零基变量索引及属性列表。保留系统属性原名和值 |
+| `sources` | 已解析记录的类型、subtype、源偏移和原始 base64 |
+
+记录使用文件选定的严格编码。多个属性值按源顺序保留。无法解释的语法变体和无法解析的变量引用保留原字节并产生警告，`--fail-on-warning` 可将它们视为失败。无效编码与资源超限返回错误。结构化字段共用字典的字节和条目计费。检查器从 `sources` 重新解析字段并校验一致性。

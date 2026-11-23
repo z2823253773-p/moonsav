@@ -1,0 +1,185 @@
+{
+  "pspp": "pspp (GNU PSPP) 2.0.1",
+  "build": {
+    "version": "0.1.0",
+    "git_sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+    "dirty": true,
+    "source_tree_sha256": "a97ddcc9c5e78ee6b38e8baf5aee621222d14d9b5c86951653ddab7b004635e5",
+    "moon": "0.1.20260713",
+    "moonc": "v0.10.4+2cc641edf",
+    "node": "v24.15.0",
+    "icu": "78.2"
+  },
+  "files": [
+    {
+      "file": "annotations-pspp.sav",
+      "sha256": "85df6356247d2bd1f135260f78e0190a63cc00c8c80e4c6544d0530e2695278f",
+      "readstat_values_and_dictionary": "supported_pass",
+      "decoded_records": [
+        [
+          6,
+          null
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          7,
+          18
+        ]
+      ]
+    },
+    {
+      "file": "annotations-varsets.sav",
+      "sha256": "ba9ed2c25371f47def8faa484ff5ade9712b032f9446788180095b76c76e0865",
+      "readstat_values_and_dictionary": "supported_pass",
+      "decoded_records": [
+        [
+          7,
+          5
+        ]
+      ]
+    },
+    {
+      "file": "annotations-mrsets.sav",
+      "sha256": "985bcc4029489d9a38cd71860640e2fc6355b9d4e6bc09f0acd0cab6ef50a719",
+      "readstat_values_and_dictionary": "supported_pass",
+      "decoded_records": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          19
+        ]
+      ]
+    }
+  ],
+  "ibm26_oracle": "pending",
+  "commands": {
+    "final-node": {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 14.134416083339602
+    },
+    "final-js": {
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "js"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 1.0719415000639856
+    },
+    "final-native": {
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "native"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 3.8709101248532534
+    },
+    "final-wasm": {
+      "command": [
+        "moon",
+        "test",
+        "src",
+        "--target",
+        "wasm-gc"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 2.3170722918584943
+    },
+    "final-oracles": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_annotations.py",
+        "--output",
+        ".dev/dictionary-annotations/evidence-final"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 2.632332250010222
+    },
+    "windows": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_windows_codepages.py",
+        "--output",
+        ".dev/dictionary-annotations/windows"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 18.55871604057029
+    },
+    "endian": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_endian.py",
+        "--output",
+        ".dev/dictionary-annotations/endian"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 24.074438292067498
+    },
+    "zsav": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/verify_zsav.py",
+        "--output",
+        ".dev/dictionary-annotations/zsav"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 10.742889292072505
+    },
+    "rejections": {
+      "command": [
+        ".dev/venv/bin/python",
+        "tools/rejections.py",
+        ".dev/dictionary-annotations/rejections"
+      ],
+      "exit_code": 0,
+      "sha": "02da84711e5b4560dae6f498f969d3f6880a7423",
+      "dirty": true,
+      "seconds": 4.139829250052571
+    }
+  },
+  "node_tests": 168,
+  "core_tests_per_backend": 19,
+  "expected_corrupt_input_rejections": 29,
+  "fixture_origin": {
+    "annotations-pspp.sav": "GNU PSPP 2.0.1 with normalized producer date fields",
+    "annotations-varsets.sav": "synthetic format grammar",
+    "annotations-mrsets.sav": "synthetic format grammar"
+  },
+  "readback": "PSPP matches notes, attributes, and MRSET label from its generated SAV file",
+  "local_log_dir": ".dev/dictionary-annotations"
+}

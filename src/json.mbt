@@ -48,6 +48,21 @@ pub impl ToJson for Variable with fn to_json(self : Variable) -> Json {
 }
 
 ///|
+pub impl ToJson for SavMultipleResponseSet with fn to_json(
+  s : SavMultipleResponseSet,
+) -> Json {
+  {
+    "name": s.name.to_json(),
+    "kind": s.kind.to_json(),
+    "category_labels": optional(s.category_labels),
+    "label_source": optional(s.label_source),
+    "counted_value": optional(s.counted_value),
+    "label": optional(s.label),
+    "variable_indices": s.variable_indices.to_json(),
+  }
+}
+
+///|
 pub impl ToJson for Dictionary with fn to_json(self : Dictionary) -> Json {
   {
     "byte_order": self.byte_order,
@@ -72,6 +87,7 @@ pub impl ToJson for Dictionary with fn to_json(self : Dictionary) -> Json {
     "highest_hex": self.highest_hex.to_json(),
     "warnings": self.warnings.to_json(),
     "uninterpreted_metadata": self.uninterpreted_metadata.to_json(),
+    "dictionary_annotations": self.dictionary_annotations.to_json(),
     "csv": (
       {
         "numeric_system_missing": "empty_field",
@@ -163,9 +179,7 @@ pub fn codebook(d : Dictionary) -> String {
   b.write_string(
     "# MoonSav codebook\n\nCanonical data.ndjson preserves source bits/bytes and missing kinds. CSV is a standard text view; use metadata types and the supplied reader. Numeric system missing is an empty CSV field; strings NA, \\N, leading zeroes and spaces are text. Value labels never replace values. Dates retain raw numeric values and print/write formats. Spreadsheet import may infer numbers/dates or formulas: import as text. Hash checks are not source authentication.\n\n",
   )
-  b.write_string(
-    "Source byte order: " + md_text(d.byte_order) + ".\n\n",
-  )
+  b.write_string("Source byte order: " + md_text(d.byte_order) + ".\n\n")
   b.write_string(
     "Encoding: " +
     md_text(d.encoding.effective) +

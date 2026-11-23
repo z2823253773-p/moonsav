@@ -704,6 +704,225 @@
         "little",
         "big"
       ]
+    },
+    "dictionary_annotations": {
+      "type": "object",
+      "properties": {
+        "document_lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "variable_sets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\u0000]+$"
+              },
+              "variable_indices": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 2147483647
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "name",
+              "variable_indices"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "file_attributes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\u0000]+$"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "name",
+              "values"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "variable_attributes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "variable_index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              "attributes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[^\\u0000]+$"
+                    },
+                    "values": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "values"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "variable_index",
+              "attributes"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "multiple_response_sets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\u0000]+$"
+              },
+              "kind": {
+                "enum": [
+                  "category",
+                  "dichotomy"
+                ]
+              },
+              "category_labels": {
+                "enum": [
+                  "variable_labels",
+                  "counted_values",
+                  null
+                ]
+              },
+              "label_source": {
+                "enum": [
+                  "variable_label",
+                  null
+                ]
+              },
+              "counted_value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "variable_indices": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 2147483647
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "name",
+              "kind",
+              "category_labels",
+              "label_source",
+              "counted_value",
+              "label",
+              "variable_indices"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "record": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              "subtype": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "byte_offset": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              },
+              "raw_base64": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "record",
+              "subtype",
+              "byte_offset",
+              "raw_base64"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "document_lines",
+        "variable_sets",
+        "file_attributes",
+        "variable_attributes",
+        "multiple_response_sets",
+        "sources"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

@@ -25,7 +25,7 @@ jobs:
       - run: moon version --all
       - run: node tools/build.mjs
       - name: Shared format and task corpus
-        run: node --test tests/core.test.mjs tests/bundle.test.mjs tests/tasks.test.mjs tests/contracts.test.mjs tests/package.test.mjs tests/zsav.test.mjs tests/endian.test.mjs tests/windows-codepages.test.mjs
+        run: node --test tests/core.test.mjs tests/bundle.test.mjs tests/tasks.test.mjs tests/contracts.test.mjs tests/package.test.mjs tests/zsav.test.mjs tests/endian.test.mjs tests/windows-codepages.test.mjs tests/annotations.test.mjs
       - name: POSIX interruption and permission contracts
         if: runner.os != 'Windows'
         run: node --test tests/io.test.mjs
@@ -56,6 +56,7 @@ jobs:
       - run: python tools/verify_zsav.py --output evidence/ci-zsav
       - run: python tools/verify_endian.py --output evidence/ci-endian
       - run: python tools/verify_windows_codepages.py --output evidence/ci-windows-codepages
+      - run: python tools/verify_annotations.py --output evidence/ci-annotations
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -73,4 +74,6 @@ jobs:
             evidence/ci-endian/**/result.json
             evidence/ci-windows-codepages/summary.json
             evidence/ci-windows-codepages/**/run.json
+            evidence/ci-annotations/summary.json
+            evidence/ci-annotations/**/run.json
           if-no-files-found: error
