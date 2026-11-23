@@ -14,9 +14,9 @@ def binary():
  if not p:raise RuntimeError('PSPP executable unavailable; use tools/setup-pspp.sh or set MOONSAV_PSPP')
  return p
 
-def compare(source,bundle,output):
+def compare(source,bundle,output,*,reference_encoding=None):
  source=Path(source).resolve();bundle=Path(bundle).resolve();out=Path(output).resolve();out.mkdir(parents=True,exist_ok=True);payloads=out/'payloads';payloads.mkdir(exist_ok=True)
- _,ref=pyreadstat.read_sav(str(source),metadataonly=True,user_missing=True,disable_datetime_conversion=True)
+ _,ref=pyreadstat.read_sav(str(source),metadataonly=True,user_missing=True,disable_datetime_conversion=True,encoding=reference_encoding)
  metadata=json.loads((bundle/'metadata.json').read_text());numeric=[n for n,t in ref.readstat_variable_types.items()if t!='string'];count=len(ref.column_names)
  # Avoid date display conversion and independently expose missing predicates.
  aux=[];commands=["SET DECIMAL=DOT.",f"GET FILE='{str(source).replace(chr(39),chr(39)*2)}'."]
